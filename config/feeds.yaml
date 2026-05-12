@@ -1,0 +1,70 @@
+# Feed definitions.
+#
+# Each feed defines which papers belong in it. A paper can land in multiple
+# feeds. The `everything` feed gets every accepted paper.
+#
+# Routing rules (a paper lands in a feed iff ALL conditions hold):
+#   arxiv_categories:    paper has at least one of these arXiv categories
+#                        (omit to skip this check)
+#   sources:             paper's source is in this list (omit to allow all)
+#   keywords_any:        paper title+abstract contains at least one of these
+#                        (case-insensitive; omit to skip this check)
+#   exclude_if_keyword:  paper is excluded if title contains any of these
+#                        (e.g. "survey", "tutorial" — drop noise)
+
+feeds:
+  - id: frontier-llm
+    title: "Paper Radar — Frontier LLMs & Reasoning"
+    description: "New foundation models, scaling, training methods, reasoning advances."
+    arxiv_categories: [cs.CL, cs.LG, cs.AI]
+    keywords_any: [
+      "language model", "llm", "reasoning", "scaling", "pretraining",
+      "fine-tuning", "post-training", "mixture-of-experts", "moe",
+      "chain-of-thought", "agent", "tool use", "instruction",
+    ]
+    exclude_if_keyword: ["survey", "tutorial", "lecture notes"]
+
+  - id: alignment-safety
+    title: "Paper Radar — Alignment, Safety & Interpretability"
+    description: "RLHF, interpretability, evaluations, red-teaming, model behavior."
+    arxiv_categories: [cs.LG, cs.AI, cs.CL]
+    keywords_any: [
+      "alignment", "interpretability", "rlhf", "rlaif", "constitutional ai",
+      "safety", "red-team", "red team", "jailbreak", "sycophancy",
+      "deception", "sleeper", "sparse autoencoder", "circuit",
+      "monosemantic", "feature visualization", "scalable oversight",
+      "honesty", "harmlessness", "refusal", "model spec",
+    ]
+    exclude_if_keyword: ["survey", "tutorial"]
+
+  - id: vision-multimodal
+    title: "Paper Radar — Vision & Multimodal"
+    description: "VLMs, diffusion, video gen, 3D, perception."
+    arxiv_categories: [cs.CV]
+    keywords_any: []   # everything in cs.CV from allowlist labs
+    exclude_if_keyword: ["survey", "tutorial"]
+
+  - id: robotics-embodied
+    title: "Paper Radar — Robotics & Embodied AI"
+    description: "Manipulation, locomotion, VLA models, world models, real-robot work."
+    arxiv_categories: [cs.RO]
+    keywords_any: []
+    exclude_if_keyword: ["survey", "tutorial"]
+
+  - id: ai-science
+    title: "Paper Radar — AI for Science"
+    description: "Protein/genome/weather/materials — AI applied to fundamental science."
+    arxiv_categories: [q-bio.BM, q-bio.QM, q-bio.GN, physics.ao-ph, physics.chem-ph, cs.LG]
+    keywords_any: [
+      "protein", "alphafold", "genome", "dna sequence", "molecule",
+      "weather forecasting", "climate", "materials discovery",
+      "drug discovery", "biology",
+    ]
+    exclude_if_keyword: ["survey"]
+
+  - id: everything
+    title: "Paper Radar — Everything"
+    description: "Every accepted paper. Firehose."
+    arxiv_categories: []   # no category filter
+    keywords_any: []
+    exclude_if_keyword: []

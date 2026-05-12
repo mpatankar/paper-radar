@@ -1,0 +1,78 @@
+# Institution allowlist.
+#
+# Two tiers. Tier 1 = frontier corporate/research labs where almost every paper
+# is high signal. Tier 2 = elite academic labs where we want senior-author work
+# specifically (their grad students publish a LOT, much of it noise).
+#
+# Each entry has:
+#   name:           canonical short name we use in feeds and logs
+#   match:          list of substrings (case-insensitive) to match in OpenAlex
+#                   institution.display_name or in raw affiliation strings.
+#                   Matching is OR within the list.
+#   country:        ISO alpha-2 (informational only; helps with disambiguation)
+#
+# Derived empirically from the citation-graph analysis at the repo root
+# (the top-30 institutions by citation-slot reach + frontier startups that
+# punch above their citation weight despite low publication volume).
+
+tier_1_frontier_labs:
+  - {name: "Google DeepMind",        match: ["google deepmind", "deepmind", "google brain", "google research", "google (united states)"], country: "US"}
+  - {name: "OpenAI",                 match: ["openai"], country: "US"}
+  - {name: "Anthropic",              match: ["anthropic"], country: "US"}
+  - {name: "Meta FAIR",              match: ["meta ai", "meta fair", "facebook ai research", "facebook ai", "meta platforms"], country: "US"}
+  - {name: "Microsoft Research",     match: ["microsoft research"], country: "US"}
+  - {name: "NVIDIA Research",        match: ["nvidia research", "nvidia corporation", "nvidia (united states)"], country: "US"}
+  - {name: "Apple ML Research",      match: ["apple ml", "apple inc", "apple (united states)"], country: "US"}
+  - {name: "xAI",                    match: ["xai", "x.ai"], country: "US"}
+  - {name: "Mistral AI",             match: ["mistral ai", "mistral"], country: "FR"}
+  - {name: "DeepSeek",               match: ["deepseek"], country: "CN"}
+  - {name: "Alibaba Qwen / DAMO",    match: ["alibaba", "damo academy", "qwen"], country: "CN"}
+  - {name: "Cohere",                 match: ["cohere", "cohere for ai"], country: "CA"}
+  - {name: "Thinking Machines",      match: ["thinking machines"], country: "US"}
+  - {name: "Physical Intelligence",  match: ["physical intelligence"], country: "US"}
+  - {name: "Goodfire",               match: ["goodfire"], country: "US"}
+  - {name: "SSI",                    match: ["safe superintelligence", "ssi inc"], country: "US"}
+  - {name: "Reka AI",                match: ["reka ai", "reka inc"], country: "US"}
+  - {name: "Arc Institute",          match: ["arc institute"], country: "US"}
+  - {name: "Allen Institute for AI", match: ["allen institute for ai", "ai2"], country: "US"}
+  - {name: "Tencent AI Lab",         match: ["tencent ai lab", "tencent"], country: "CN"}
+  - {name: "ByteDance Seed",         match: ["bytedance", "bytedance seed"], country: "CN"}
+  - {name: "Moonshot AI",            match: ["moonshot ai"], country: "CN"}
+  - {name: "Shanghai AI Lab",        match: ["shanghai artificial intelligence laboratory", "shanghai ai lab"], country: "CN"}
+  - {name: "Toyota Research Institute", match: ["toyota research institute"], country: "US"}
+
+tier_2_academic_labs:
+  - {name: "Stanford",        match: ["stanford university"], country: "US"}
+  - {name: "MIT",             match: ["massachusetts institute of technology"], country: "US"}
+  - {name: "UC Berkeley",     match: ["university of california, berkeley", "uc berkeley"], country: "US"}
+  - {name: "CMU",             match: ["carnegie mellon university"], country: "US"}
+  - {name: "Princeton",       match: ["princeton university"], country: "US"}
+  - {name: "NYU",             match: ["new york university"], country: "US"}
+  - {name: "U Washington",    match: ["university of washington"], country: "US"}
+  - {name: "U Toronto",       match: ["university of toronto"], country: "CA"}
+  - {name: "MILA",            match: ["mila"], country: "CA"}
+  - {name: "U Montreal",      match: ["universite de montreal", "university of montreal", "université de montréal"], country: "CA"}
+  - {name: "U Oxford",        match: ["university of oxford"], country: "GB"}
+  - {name: "U Cambridge",     match: ["university of cambridge"], country: "GB"}
+  - {name: "Imperial College",match: ["imperial college london"], country: "GB"}
+  - {name: "U Edinburgh",     match: ["university of edinburgh"], country: "GB"}
+  - {name: "ETH Zürich",      match: ["eth zurich", "eth zürich"], country: "CH"}
+  - {name: "EPFL",            match: ["epfl", "ecole polytechnique fédérale de lausanne"], country: "CH"}
+  - {name: "TU Munich",       match: ["technical university of munich", "tu munich"], country: "DE"}
+  - {name: "Max Planck",      match: ["max planck"], country: "DE"}
+  - {name: "Tsinghua",        match: ["tsinghua university"], country: "CN"}
+  - {name: "Peking U",        match: ["peking university"], country: "CN"}
+  - {name: "CUHK",            match: ["chinese university of hong kong"], country: "HK"}
+  - {name: "HKUST",           match: ["hong kong university of science and technology"], country: "HK"}
+  - {name: "KAIST",           match: ["korea advanced institute"], country: "KR"}
+  - {name: "NUS",             match: ["national university of singapore"], country: "SG"}
+  - {name: "Caltech",         match: ["california institute of technology", "caltech"], country: "US"}
+  - {name: "Cornell",         match: ["cornell university"], country: "US"}
+  - {name: "U Michigan",      match: ["university of michigan"], country: "US"}
+  - {name: "Harvard",         match: ["harvard university"], country: "US"}
+  - {name: "Columbia",        match: ["columbia university"], country: "US"}
+  - {name: "Georgia Tech",    match: ["georgia institute of technology"], country: "US"}
+  - {name: "Tel Aviv U",      match: ["tel aviv university"], country: "IL"}
+  - {name: "Hebrew U",        match: ["hebrew university of jerusalem"], country: "IL"}
+  - {name: "Weizmann",        match: ["weizmann institute"], country: "IL"}
+  - {name: "Technion",        match: ["technion"], country: "IL"}

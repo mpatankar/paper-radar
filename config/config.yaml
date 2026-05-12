@@ -1,0 +1,75 @@
+# paper-radar main configuration.
+#
+# All knobs are here. Adjust by editing this file and pushing; the next daily
+# run picks up the change. Each option has a short comment on what it does.
+
+# --- Sources ----------------------------------------------------------------
+
+arxiv:
+  enabled: true
+  # arXiv set specs (OAI-PMH). Each maps roughly to one arXiv category.
+  sets: ["cs:cs:AI", "cs:cs:LG", "cs:cs:CV", "cs:cs:RO", "cs:cs:CL", "stat:stat:ML"]
+  # How many days back to fetch on each run (1 = previous calendar day in UTC).
+  days_back: 1
+  # Hard cap on records fetched per run (safety against pathological days).
+  max_records: 5000
+
+blogs:
+  enabled: true
+  # Toggle individual adapters. Edit src/paper_radar/sources/blogs/__init__.py
+  # to add new ones; each adapter is a small self-contained scraper.
+  enabled_adapters:
+    - anthropic
+    - openai
+    - google_deepmind
+    - meta_ai
+    - transformer_circuits
+    - physical_intelligence
+    - thinking_machines
+    - goodfire
+    - nvidia_research
+    - mistral
+    - microsoft_research
+    - arc_institute
+
+# --- Filtering --------------------------------------------------------------
+
+filter:
+  # Tier 1 = frontier corporate labs. Always included if any author matches.
+  tier_1_mode: any_author
+
+  # Tier 2 = elite academic labs. Only senior-authored papers pass.
+  # senior author = h-index >= senior_h_index_threshold OR cited_by_count >= senior_cite_threshold
+  tier_2_mode: senior_only          # any_author | senior_only | first_or_last_senior | disabled
+  senior_h_index_threshold: 30
+  senior_cite_threshold: 5000
+  # Which author positions count as "senior" — almost always first author OR
+  # last author (the PI). Middle authors are rarely the senior researcher.
+  senior_positions: [first, last]
+
+# --- Enrichment -------------------------------------------------------------
+
+enrich:
+  resolve_affiliations: true        # hit OpenAlex per arXiv paper
+  resolve_h_index: true             # hit OpenAlex per author (cached aggressively)
+  # If we can't resolve any author (OpenAlex hasn't indexed the paper yet),
+  # accept the paper iff any author NAME is in the manual_must_include list.
+  manual_must_include: []           # e.g., ["Chris Olah", "Pieter Abbeel"]
+
+# --- Output -----------------------------------------------------------------
+
+output:
+  feeds_dir: feeds_out              # where RSS XML is written
+  state_dir: data                   # SQLite caches go here
+  publish_landing_page: true        # build index.html in feeds_dir
+  # Suppress papers we emitted in a previous run (avoids v1/v2/v3 of same arXiv id)
+  dedupe_across_runs: true
+  # If a paper qualifies for multiple feeds, also include in `everything`.
+  always_emit_everything: true
+  # RSS items keep at most this many entries (older fall off).
+  feed_max_items: 200
+
+logging:
+  level: INFO                       # DEBUG | INFO | WARNING
+  # Per-paper Decision records are written here as JSONL for grep / diff.
+  decisions_jsonl: data/decisions.jsonl
