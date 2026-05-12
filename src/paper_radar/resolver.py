@@ -67,6 +67,10 @@ class Resolver:
         self._init_schema()
         # Live counters for stats / introspection (atomic enough for our purposes)
         self.stats = {"cache_hits": 0, "openalex_hits": 0, "unresolved": 0, "paper_lookups": 0}
+        # When OpenAlex tells us the daily quota is exhausted (429 with long
+        # Retry-After), we set this flag and stop hitting them for the rest of
+        # the run. Tomorrow's run, with a warm cache, will finish what's left.
+        self._quota_exhausted = False
 
     def __enter__(self):
         return self
@@ -254,6 +258,9 @@ class Resolver:
     # --- low-level HTTP ------------------------------------------------------
 
     def _get_json(self, url: str, retries: int = 4) -> dict | None:
+        # Short-circuit if today's quota is gone.
+        if self._quota_exhausted:
+            return None
         for attempt in range(retries):
             try:
                 r = self.session.get(url, timeout=30)
@@ -262,10 +269,20 @@ class Resolver:
                 if r.status_code == 404:
                     return None
                 if r.status_code == 429:
-                    # OpenAlex daily quota or burst limit. Honor Retry-After
-                    # if present; otherwise back off aggressively.
+                    # 429 from OpenAlex. Two sub-cases:
+                    #   - burst limit: Retry-After is small (< 60s); honor it
+                    #   - daily quota: Retry-After is hours; sleeping that long
+                    #     is worse than returning None and continuing. We set a
+                    #     run-scoped flag so subsequent author lookups in the
+                    #     same run skip OpenAlex entirely.
                     retry_after = int(r.headers.get("Retry-After", "0") or 0)
-                    wait = max(retry_after, min(120, 5 * (2 ** attempt)))
+                    if retry_after > 60:
+                        if not self._quota_exhausted:
+                            log.warning("openalex 429 Retry-After=%ds — daily quota exhausted; "
+                                        "skipping remaining OpenAlex calls this run", retry_after)
+                            self._quota_exhausted = True
+                        return None
+                    wait = max(retry_after, min(60, 5 * (2 ** attempt)))
                     log.warning("openalex 429; sleeping %ds", wait)
                     time.sleep(wait)
                     continue
