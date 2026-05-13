@@ -36,7 +36,13 @@ jobs:
       - name: restore state from artifact (optional)
         uses: actions/cache@v4
         with:
-          path: data
+          # data/ holds the SQLite caches (author_cache + seen) and decisions log.
+          # feeds_out/ holds yesterday's published RSS XML so write_feed can
+          # accumulate items across runs instead of overwriting the file with
+          # only this run's new papers.
+          path: |
+            data
+            feeds_out
           # Per-day cache so SQLite caches survive across runs; bumping the
           # version part forces a clean rebuild.
           key: paper-radar-data-v1-${{ github.run_id }}

@@ -11,14 +11,20 @@ Each feed item shows:
   - description (HTML; abstract + tier match + senior authors)
   - guid (paper id)
 
+Feeds ACCUMULATE across runs: each run reads the existing feed file (if any),
+merges new items in (dedup by guid), sorts newest-first, and caps at
+feed_max_items. This way subscribers see a rolling N-item history rather
+than only the deltas from the most recent run.
+
 The landing page is one self-contained HTML file listing each feed with its
 RSS URL and last-update count.
 """
 from __future__ import annotations
 import html
 import logging
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
-from email.utils import formatdate
+from email.utils import formatdate, parsedate_to_datetime
 from pathlib import Path
 from typing import Iterable
 
@@ -75,15 +81,32 @@ def _description_html(paper: Paper, decision: Decision) -> str:
 def write_feed(feed: FeedSpec, items: list[tuple[Paper, Decision]],
                out_dir: Path, *, max_items: int = 200,
                site_base_url: str = "https://example.github.io/paper-radar/feeds_out") -> Path:
-    """Write feeds_out/<id>.xml. Returns the path."""
+    """Write feeds_out/<id>.xml, accumulating prior items.
+
+    Strategy:
+      1. Read the existing file (if present) and parse its <item>s.
+      2. Build new items from this run.
+      3. Merge: new items take precedence on guid collision. Then sort by
+         pubDate desc and cap at max_items.
+      4. Write.
+
+    Returns the path.
+    """
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    # Newest first.
-    items = sorted(
-        items,
-        key=lambda pd: pd[0].published_at or datetime.now(timezone.utc),
-        reverse=True,
-    )[:max_items]
+    path = out_dir / f"{feed.id}.xml"
+
+    new_serialized = [_serialize_item(p, d) for p, d in items]
+    new_guids = {it["guid"] for it in new_serialized}
+
+    # Load prior items, drop any guid that's also in this run (the new render wins).
+    prior_items = _load_existing_items(path) if path.exists() else []
+    prior_items = [it for it in prior_items if it.get("guid") not in new_guids]
+
+    merged = new_serialized + prior_items
+    # Sort newest first (fall back to "epoch" for any item missing a parseable pubDate).
+    merged.sort(key=lambda it: it.get("_pub_ts") or 0.0, reverse=True)
+    merged = merged[:max_items]
 
     now_rfc = _rfc822(None)
     xml_parts: list[str] = []
@@ -98,26 +121,73 @@ def write_feed(feed: FeedSpec, items: list[tuple[Paper, Decision]],
     xml_parts.append(f"    <lastBuildDate>{now_rfc}</lastBuildDate>")
     xml_parts.append("    <generator>paper-radar 0.1</generator>")
 
-    for paper, decision in items:
-        body = _description_html(paper, decision)
-        pub = _rfc822(paper.published_at)
+    for it in merged:
         xml_parts.append("    <item>")
-        xml_parts.append(f"      <title>{html.escape(paper.title)}</title>")
-        xml_parts.append(f"      <link>{html.escape(paper.url)}</link>")
-        xml_parts.append(f'      <guid isPermaLink="false">{html.escape(paper.id)}</guid>')
-        xml_parts.append(f"      <pubDate>{pub}</pubDate>")
-        for c in paper.categories:
+        xml_parts.append(f"      <title>{html.escape(it['title'])}</title>")
+        xml_parts.append(f"      <link>{html.escape(it['link'])}</link>")
+        xml_parts.append(f'      <guid isPermaLink="false">{html.escape(it["guid"])}</guid>')
+        xml_parts.append(f"      <pubDate>{it['pubDate']}</pubDate>")
+        for c in it.get("categories", []):
             xml_parts.append(f"      <category>{html.escape(c)}</category>")
-        xml_parts.append(f"      <description><![CDATA[{body}]]></description>")
+        xml_parts.append(f"      <description><![CDATA[{it['description']}]]></description>")
         xml_parts.append("    </item>")
 
     xml_parts.append("  </channel>")
     xml_parts.append("</rss>")
 
-    path = out_dir / f"{feed.id}.xml"
     path.write_text("\n".join(xml_parts), encoding="utf-8")
-    log.info("wrote %d items to %s", len(items), path)
+    log.info("wrote %d items to %s (%d new this run, %d carried over)",
+             len(merged), path, len(new_serialized),
+             max(0, len(merged) - len(new_serialized)))
     return path
+
+
+def _serialize_item(paper: Paper, decision: Decision) -> dict:
+    """Turn a (Paper, Decision) into the dict we render and persist in XML."""
+    pub_dt = paper.published_at or datetime.now(timezone.utc)
+    return {
+        "title": paper.title,
+        "link": paper.url,
+        "guid": paper.id,
+        "pubDate": _rfc822(pub_dt),
+        "_pub_ts": pub_dt.timestamp(),
+        "categories": list(paper.categories),
+        "description": _description_html(paper, decision),
+    }
+
+
+def _load_existing_items(path: Path) -> list[dict]:
+    """Parse an existing RSS 2.0 feed and return items in our internal dict shape."""
+    try:
+        tree = ET.parse(path)
+    except ET.ParseError as e:
+        log.warning("can't parse existing %s (%s); starting fresh", path, e)
+        return []
+    root = tree.getroot()
+    channel = root.find("channel")
+    if channel is None:
+        return []
+    out: list[dict] = []
+    for item in channel.findall("item"):
+        guid_el = item.find("guid")
+        pub_el = item.find("pubDate")
+        # Parse pubDate to timestamp for sorting; tolerate missing/malformed.
+        ts = 0.0
+        if pub_el is not None and pub_el.text:
+            try:
+                ts = parsedate_to_datetime(pub_el.text).timestamp()
+            except (TypeError, ValueError):
+                ts = 0.0
+        out.append({
+            "title": (item.findtext("title") or ""),
+            "link": (item.findtext("link") or ""),
+            "guid": (guid_el.text if guid_el is not None else "") or "",
+            "pubDate": (pub_el.text if pub_el is not None else _rfc822(None)),
+            "_pub_ts": ts,
+            "categories": [c.text or "" for c in item.findall("category")],
+            "description": (item.findtext("description") or ""),
+        })
+    return out
 
 
 def write_landing_page(feeds: list[FeedSpec], out_dir: Path,
