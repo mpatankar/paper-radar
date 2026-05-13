@@ -194,10 +194,28 @@ class Filter:
         if feed.id == "everything":
             return True, ""
 
-        if feed.arxiv_categories and not any(c in feed.arxiv_categories for c in paper.categories):
-            # Exception: non-arXiv sources don't have arXiv cats — route by source instead.
+        # Category gate.
+        if feed.arxiv_categories:
             if paper.source == "arxiv":
-                return False, "no arxiv category match"
+                if not any(c in feed.arxiv_categories for c in paper.categories):
+                    return False, "no arxiv category match"
+            else:
+                # Non-arXiv (blog post). It has no arXiv categories. Three ways
+                # such a paper can land in a topical feed:
+                #   1. The feed has `keywords_any` and the post's title/abstract
+                #      matches one (handled below).
+                #   2. The blog adapter tagged the post with the feed's topic
+                #      stem (e.g., Physical Intelligence sets categories=["blog",
+                #      "robotics"] which matches "robotics-embodied").
+                #   3. The feed lists this source explicitly in feed.sources.
+                # Without ANY of these, we exclude — otherwise Arc Institute
+                # biology posts end up in the robotics feed.
+                topic_stem = feed.id.split("-")[0].lower()
+                paper_cat_text = " ".join((c or "").lower() for c in (paper.categories or []))
+                in_source_list = bool(feed.sources) and paper.source in feed.sources
+                tagged_for_topic = topic_stem and topic_stem in paper_cat_text
+                if not (feed.keywords_any or in_source_list or tagged_for_topic):
+                    return False, f"non-arxiv post lacks '{topic_stem}' tag and no keyword discriminator"
 
         if feed.sources and paper.source not in feed.sources:
             return False, "source not in feed.sources"

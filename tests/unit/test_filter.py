@@ -168,6 +168,49 @@ def test_manual_must_include_overrides_rejection(config):
 
 # --- explain output ----------------------------------------------------------
 
+def test_blog_post_without_topic_tag_excluded_from_topical_feed(config):
+    """Arc Institute biology blogs must NOT land in robotics-embodied."""
+    paper = make_paper(
+        title="The Language of Chromatin, Decoded",
+        abstract="We sequenced gene expression in...",
+        categories=["blog", "biology"],
+        source="arc_institute",
+        authors=[Author(name="X", affiliations=[aff("Arc Institute")])],
+    )
+    decision = Filter(config).evaluate(paper)
+    assert decision.accepted
+    assert "robotics-embodied" not in decision.feeds
+    assert "vision-multimodal" not in decision.feeds
+
+
+def test_blog_post_with_topic_tag_lands_in_matching_feed(config):
+    """Physical Intelligence robotics blogs SHOULD land in robotics-embodied."""
+    paper = make_paper(
+        title="π0.7: a Steerable Model with Emergent Capabilities",
+        abstract="Robot manipulation system trained on diverse data...",
+        categories=["blog", "robotics"],
+        source="physical_intelligence",
+        authors=[Author(name="X", affiliations=[aff("Physical Intelligence")])],
+    )
+    decision = Filter(config).evaluate(paper)
+    assert decision.accepted
+    assert "robotics-embodied" in decision.feeds
+
+
+def test_blog_post_matches_alignment_via_keyword(config):
+    """Goodfire interpretability post with no topic tag still hits via keyword."""
+    paper = make_paper(
+        title="Sparse autoencoders for interpretability",
+        abstract="Mechanistic interpretability via SAE features.",
+        categories=["blog", "interpretability"],
+        source="goodfire",
+        authors=[Author(name="X", affiliations=[aff("Goodfire")])],
+    )
+    decision = Filter(config).evaluate(paper)
+    assert decision.accepted
+    assert "alignment-safety" in decision.feeds
+
+
 def test_explain_renders_readable_output(config):
     paper = make_paper(authors=[
         Author(name="Senior Prof", affiliations=[aff("Stanford University")],

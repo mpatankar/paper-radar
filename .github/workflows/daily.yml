@@ -45,9 +45,12 @@ jobs:
             feeds_out
           # Per-day cache so SQLite caches survive across runs; bumping the
           # version part forces a clean rebuild.
-          key: paper-radar-data-v1-${{ github.run_id }}
+          # v2 = post-fix for non-arxiv routing bug (Arc bio in robotics feed).
+          # Bumping the version invalidates any prior cache, forcing a clean
+          # rebuild so the polluted feeds get re-written from scratch.
+          key: paper-radar-data-v2-${{ github.run_id }}
           restore-keys: |
-            paper-radar-data-v1-
+            paper-radar-data-v2-
 
       - name: run pipeline
         run: paper-radar run
