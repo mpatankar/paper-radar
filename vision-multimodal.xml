@@ -5,8 +5,84 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Wed, 13 May 2026 17:18:56 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 05:19:15 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Aligning Forest and Trees in Images &amp; Long Captions for Visually Grounded Understanding</title>
+      <link>https://arxiv.org/abs/2602.02977</link>
+      <guid isPermaLink="false">arxiv:2602.02977</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Michigan — Stella X. Yu</p>
+<p><b>Authors:</b> Byeongju Woo, Zilin Wang, Byeonghyun Pak, Sangwoo Mo, Stella X. Yu</p>
+<p>Vision-language models such as CLIP often struggle to faithfully understand long, detail-rich captions, relying on dominant scene cues while overlooking fine-grained visual evidence. We propose a hierarchical vision-language learning principle for understanding scenes as part-to-whole compositions: before forming a whole-scene representation, a model should uncover what semantic parts appear where in the image. To this end, we propose CAFT (Cross-domain Alignment of Forests and Trees), a vision-language model that jointly learns local text-region alignment at intermediate representations and global image-text alignment at the final representation. Exploiting the organization of long captions, where local descriptions often correspond to scene parts, CAFT employs a fine-to-coarse image encoder and a part-whole text encoder to discover localized part semantics and progressively compose them into a global image-text representation. Trained on 30M image-text pairs, CAFT achieves state-of-the-art performance on six long-text retrieval benchmarks and exhibits strong scaling behavior. Experiments show that CAFT learns fine-grained representations that localize textual semantics in image regions without explicit region-level supervision.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2602.02977'>page</a> · <a href='https://arxiv.org/pdf/2602.02977'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Skill-Conditioned Visual Geolocation for Vision-Language Models</title>
+      <link>https://arxiv.org/abs/2604.09025</link>
+      <guid isPermaLink="false">arxiv:2604.09025</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Chenjie Yang</p>
+<p><b>Authors:</b> Chenjie Yang, Yutian Jiang, Yutong Deng, Chenyu Wu</p>
+<p>Vision-language models (VLMs) have shown a promising ability in image geolocation, but they still lack structured geographic reasoning and the capacity for autonomous self-evolution. Existing methods predominantly rely on implicit parametric memory, which often exploits outdated knowledge and generates hallucinated reasoning. Furthermore, current inference is a &quot;one-off&quot; process, lacking the feedback loops necessary for self-evolution based on reasoning outcomes. To address these issues, we propose GeoSkill, a training-free framework based on an evolving Skill-Graph. We first initialize the graph by refining human expert trajectories into atomic, natural-language skills. For execution, GeoSkill employs an inference model to perform direct reasoning guided by the current Skill-Graph. For continuous growth, an Autonomous Evolution mechanism leverages a larger model to conduct multiple reasoning rollouts on image-coordinate pairs sourced from web-scale data and verified real-world reasoning. By analyzing both successful and failed trajectories from these rollouts, the mechanism iteratively synthesizes and prunes skills, effectively expanding the Skill-Graph and correcting geographic biases without any parameter updates. Experiments demonstrate that GeoSkill achieves promising performance in both geolocation accuracy and reasoning faithfulness on GeoRC, while maintaining superior generalization across diverse external datasets. Furthermore, our autonomous evolution fosters the emergence of novel, verifiable skills, significantly enhancing the system&#x27;s cognition of real-world geographic knowledge beyond isolated case studies.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2604.09025'>page</a> · <a href='https://arxiv.org/pdf/2604.09025'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AmaraSpatial-10K: A Spatially and Semantically Aligned 3D Dataset for Spatial Computing and Embodied AI</title>
+      <link>https://arxiv.org/abs/2604.23018</link>
+      <guid isPermaLink="false">arxiv:2604.23018</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Imperial College — Raymond Wong</p>
+<p><b>Authors:</b> Mohammad Sadegh Salehi, Alex Perkins, Igor Maurell, Ashkan Dabbagh, Raymond Wong</p>
+<p>Web-scale 3D asset collections are abundant but rarely deployment-ready, suffering from arbitrary metric scaling, incorrect pivots, brittle geometry, and incomplete textures, defects that limit their use in embodied AI, robotics, and spatial computing. We present AmaraSpatial-10K, a dataset of over 10,000 synthetic 3D assets optimised for zero-shot deployment. Each asset ships as a metric-scaled, deterministically anchored .glb with separated PBR maps, a convex collision hull, a paired reference image, and multi-sentence text metadata. Alongside the dataset we introduce a reusable evaluation suite for 3D asset banks, a continuous Scale Plausibility Score (SPS), an LLM Concept Density metric, anchor-error auditing, and a cross-modal CLIP coherence protocol, and apply it to AmaraSpatial-10K alongside matched subsets of Objaverse, HSSD, ABO, and GSO. AmaraSpatial-10K improves CLIP Recall@5 by $3.4\times$ over Objaverse ($0.612$ vs. $0.181$, median rank $267 \rightarrow 3$), achieves a $99.1\%$ physics-stability rate under Habitat-Sim with $\sim 20\times$ wall-time speed-up, and produces zero-overlap scenes when used as a drop-in asset bank for Holodeck. Controlled ablations on the same asset bank attribute the retrieval gain to description richness.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2604.23018'>page</a> · <a href='https://arxiv.org/pdf/2604.23018'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>COHERENCE: Benchmarking Fine-Grained Image-Text Alignment in Interleaved Multimodal Contexts</title>
+      <link>https://arxiv.org/abs/2604.27389</link>
+      <guid isPermaLink="false">arxiv:2604.27389</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> NYU — (senior)</p>
+<p><b>Authors:</b> Bingli Wang, Huanze Tang, Haijun Lv, Zhishan Lin, Lixin Gu, Lei Feng, Qipeng Guo, Kai Chen</p>
+<p>In recent years, Multimodal Large Language Models (MLLMs) have achieved remarkable progress on a wide range of multimodal benchmarks. Despite these advances, most existing benchmarks mainly focus on single-image or multi-image comprehension. In real-world scenarios such as document reading, information is often presented as interleaved multimodel contexts. This requires MLLMs not only to recognize the content of individual images, but also to identify relevant textual and visual evidence, establish fine-grained alignments between them, and reason over these aligned signals in interleaved contexts based on contextual evidence. However, there is still a lack of systematic benchmarks for quantifying the fine-grained understanding ability of MLLMs in interleaved image-text contexts. To fill this gap, we propose COHERENCE, a benchmark designed to evaluate the ability of MLLMs to recover fine-grained image-text correspondences in interleaved multimodal contexts. COHERENCE covers interleaved image-text content from four representative domains and contains 6,161 high-quality questions. Moreover, we perform a six-type error analysis, enabling fine-grained attribution of failures in interleaved image-text understanding to the specific capabilities missing in current MLLMs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2604.27389'>page</a> · <a href='https://arxiv.org/pdf/2604.27389'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Unmasking Puppeteers: Leveraging Biometric Leakage to Expose Impersonation in AI-Based Videoconferencing</title>
+      <link>https://arxiv.org/abs/2510.03548</link>
+      <guid isPermaLink="false">arxiv:2510.03548</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> Danial Samadi Vahdati, Tai Duc Nguyen, Ekta Prashnani, Koki Nagano, David Luebke, Orazio Gallo, Matthew Stamm</p>
+<p>AI-based talking-head videoconferencing systems reduce bandwidth by sending a compact pose-expression latent and re-synthesizing RGB at the receiver, but this latent can be puppeteered, letting an attacker hijack a victim&#x27;s likeness in real time. Because every frame is synthetic, deepfake and synthetic video detectors fail outright. To address this security problem, we exploit a key observation: the pose-expression latent inherently contains biometric information of the driving identity. Therefore, we introduce the first biometric leakage defense without ever looking at the reconstructed RGB video: a pose-conditioned, large-margin contrastive encoder that isolates persistent identity cues inside the transmitted latent while cancelling transient pose and expression. A simple cosine test on this disentangled embedding flags illicit identity swaps as the video is rendered. Our experiments on multiple talking-head generation models show that our method consistently outperforms existing puppeteering defenses, operates in real-time, and shows strong generalization to out-of-distribution scenarios.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2510.03548'>page</a> · <a href='https://arxiv.org/pdf/2510.03548'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Deep Delta Learning</title>
+      <link>https://arxiv.org/abs/2601.00417</link>
+      <guid isPermaLink="false">arxiv:2601.00417</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Tsinghua — Yifan Zhang</p>
+<p><b>Authors:</b> Yifan Zhang, Yifeng Liu, Mengdi Wang, Quanquan Gu</p>
+<p>Transformer residual streams evolve by additive accumulation: each layer appends a feature update to a shared hidden state, but has no direct mechanism for replacing content that has become obsolete or conflicting. We introduce Deep Delta Learning (DDL), a residual update rule that preserves the identity path while giving every layer the ability to selectively rewrite residual content. DDL reads the current state along a learned direction, compares it with a learned target value, and writes back a gated correction along the same direction. When the gate is closed, the update reduces to the identity; when the gate is fully open, the selected component is overwritten, yielding a depth-wise delta-rule generalization of standard residual addition. We integrate DDL in decoder-only language models with both scalar and expanded residual states, while keeping attention and MLP sublayers at the original compute width. Controlled pretraining and downstream evaluations show that residual rewrite operations improve language modeling quality relative to pure additive accumulation introduced in ResNet, suggesting that a learned delta-rule update is an effective mechanism for managing Transformer residual streams.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL, cs.CV · <a href='https://arxiv.org/abs/2601.00417'>page</a> · <a href='https://arxiv.org/pdf/2601.00417'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Selective LoRA for Visual Tokens and Attention Heads</title>
       <link>https://arxiv.org/abs/2512.19219</link>
