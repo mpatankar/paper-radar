@@ -5,8 +5,41 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 14 May 2026 05:19:15 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 05:20:54 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>AgenticEval: Toward Agentic and Self-Evolving Safety Evaluation of Large Language Models</title>
+      <link>https://arxiv.org/abs/2509.26100</link>
+      <guid isPermaLink="false">arxiv:2509.26100</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U — Yingchun Wang</p>
+<p><b>Authors:</b> Yixu Wang, Xin Wang, Yang Yao, Xinyuan Li, Xibang Yang, Yan Teng, Xingjun Ma, Yingchun Wang</p>
+<p>The rapid integration of Large Language Models (LLMs) into high-stakes domains necessitates reliable safety and compliance evaluation. However, existing static benchmarks are ill-equipped to address the dynamic nature of AI risks and evolving regulations, creating a critical safety gap. This paper introduces a new paradigm of agentic safety evaluation, reframing evaluation as a continuous and self-evolving process rather than a one-time audit. We then propose a novel multi-agent framework AgenticEval, which autonomously ingests unstructured policy documents to generate and perpetually evolve a comprehensive safety benchmark. AgenticEval leverages a synergistic pipeline of specialized agents and incorporates a Self-evolving Evaluation loop, where the system learns from evaluation results to craft progressively more sophisticated and targeted test cases. Our experiments demonstrate the effectiveness of AgenticEval, showing a consistent decline in model safety as the evaluation hardens. For instance, GPT-5&#x27;s safety rate on the EU AI Act drops from 72.50% to 36.36% over successive iterations. These findings reveal the limitations of static assessments and highlight our framework&#x27;s ability to uncover deep vulnerabilities missed by traditional methods, underscoring the urgent need for dynamic evaluation ecosystems to ensure the safe and responsible deployment of advanced AI.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2509.26100'>page</a> · <a href='https://arxiv.org/pdf/2509.26100'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems</title>
+      <link>https://arxiv.org/abs/2605.01758</link>
+      <guid isPermaLink="false">arxiv:2605.01758</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Yue Ma</p>
+<p><b>Authors:</b> Yue Ma, Ziyuan Yang, Yi Zhang</p>
+<p>Large multimodal model-based Multi-Agent Systems (MASs) enable collaborative complex problem solving through specialized agents. However, MASs are vulnerable to infectious jailbreak, where compromising a single agent can spread to others, leading to widespread compromise. Existing defenses counter this by training a more contagious cure factor, biasing agents to retrieve it over virus adversarial examples (VirAEs). However, this homogenizes agent responses, providing only superficial suppression rather than true recovery. We revisit these defenses, which operate globally via a shared cure factor, while infectious jailbreak arise from localized interaction behaviors. This mismatch limits their effectiveness. To address this, we propose a training-free Foresight-Guided Local Purification (FLP) framework, where each agent reasons over future interactions to track behavioral evolution and eliminate infections. Specifically, each agent simulates future behavioral trajectories over subsequent chat rounds. To reflect diversity in MASs, we introduce a multi-persona simulation strategy for robust prediction across interaction contexts. We then use response diversity as a diagnostic signal to detect infection by analyzing inconsistencies across persona-based predictions at both retrieval-result and semantic levels. For infected agents, we apply localized purification: recent infections are mitigated via immediate album rollback, while long-term infections are handled using Recursive Binary Diagnosis (RBD), which recursively partitions the image album and applies the same diagnosis strategy to localize and eliminate VirAEs. Experiments show that FLP reduces the maximum cumulative infection rate from over 95% to below 5.47%. Moreover, retrieval and semantic metrics closely match benign baselines, indicating effective preservation of interaction diversity.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2605.01758'>page</a> · <a href='https://arxiv.org/pdf/2605.01758'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Attractor Geometry of Transformer Memory: From Conflict Arbitration to Confident Hallucination</title>
+      <link>https://arxiv.org/abs/2605.05686</link>
+      <guid isPermaLink="false">arxiv:2605.05686</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MIT — Ila Fiete</p>
+<p><b>Authors:</b> Qiyao Liang, Risto Miikkulainen, Ila Fiete</p>
+<p>Language models draw on two knowledge sources: facts baked into weights (parametric memory, PM) and information in context (working memory, WM). We study two mechanistically distinct failure modes--conflict, when PM and WM disagree and interfere; and hallucination, when the queried fact was never learned. Both produce confident output regardless, making output-based monitoring blind by design. We show both failures share a unified geometric account. In the hidden-state space of autoregressive generation, learned facts form attractor basins. Conflict is basin competition: WM disrupts convergence to the correct basin without raising output entropy. Hallucination is basin absence: the hidden state drifts freely when no memorized basin exists. The frozen LM head, designed for next-token prediction, cannot distinguish these cases and fires confidently either way. We verify this account in a controlled synthetic task-entity identifiers mapped to unique codes with PM installed via LoRA adapters--where ground truth is exact and component roles can be causally isolated through targeted adapter placement. Geometric margin--the hidden state&#x27;s distance to the nearest memorized basin--reads this geometry directly and separates correct recall from hallucination far more cleanly than output entropy, with zero false refusals where entropy-based detection cannot avoid rejecting the vast majority of correct outputs. The separation holds on natural-language factual queries from the pretrained model with no adaptation, confirming attractor geometry is structural rather than a fine-tuning artifact. The fraction of confident hallucinations follows a scaling law $C = \exp(-c/\barΔ)$, growing with scale even as overall error rates fall. Hidden states reliably encode epistemic state; the frozen output head systematically erases it--and this erasure worsens with scale.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2605.05686'>page</a> · <a href='https://arxiv.org/pdf/2605.05686'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Test-Time Alignment for Large Language Models via Textual Model Predictive Control</title>
       <link>https://research.nvidia.com/publication/2026-04_test-time-alignment-large-language-models-textual-model-predictive-control</link>
@@ -340,6 +373,56 @@
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/team/alignment'>page</a></p>]]></description>
     </item>
     <item>
+      <title>Training and Evaluating Language Models with Template-based Data Generation</title>
+      <link>https://arxiv.org/abs/2411.18104</link>
+      <guid isPermaLink="false">arxiv:2411.18104</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yifan Zhang</p>
+<p><b>Authors:</b> Yifan Zhang</p>
+<p>The rapid advancement of large language models (LLMs) such as GPT-3, PaLM, and Llama has significantly transformed natural language processing, showcasing remarkable capabilities in understanding and generating language. However, a fundamental bottleneck persists: these models often struggle with tasks requiring complex, multi-step reasoning, particularly in mathematical problem-solving. This deficiency stems from the critical scarcity of large-scale, high-quality, domain-specific datasets necessary for cultivating sophisticated reasoning abilities. To overcome this challenge, we introduce Template-based Data Generation (TDG), a novel and scalable paradigm that harnesses frontier LLMs (GPT-4) to automatically generate parameterized meta-templates, which in turn synthesize a virtually infinite stream of high-quality problems and solutions. Using this paradigm, we create TemplateMath Part I: TemplateGSM, a foundational dataset of over 7 million synthetically generated grade school math problems. Each problem is accompanied by a programmatically verifiable solution, offering an unprecedented level of quality at scale. This resource not only resolves the data scarcity issue for supervised fine-tuning but also provides a robust mechanism for model alignment through Reinforcement Learning with Verifiable Rewards (RLVR). Our approach elevates data augmentation by leveraging GPT-4 to generate meta-templates, ensuring diverse and complex problem structures. By providing a scalable solution to the data and verification bottleneck, TDG and TemplateGSM pave the way for a new generation of LLMs with powerful, reliable reasoning skills.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2411.18104'>page</a> · <a href='https://arxiv.org/pdf/2411.18104'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>A cross-species neural foundation model for end-to-end speech decoding</title>
+      <link>https://arxiv.org/abs/2511.21740</link>
+      <guid isPermaLink="false">arxiv:2511.21740</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia, Stanford — Liam Paninski</p>
+<p><b>Authors:</b> Yizi Zhang, Linyang He, Chaofei Fan, Tingkai Liu, Han Yu, Trung Le, Jingyuan Li, Scott Linderman, … <i>(+4 more)</i></p>
+<p>Speech brain-computer interfaces (BCIs) aim to restore communication for people with paralysis by translating neural activity into text. Most systems use cascaded frameworks that decode phonemes before assembling sentences with an n-gram language model (LM), preventing joint optimization of all stages simultaneously. Here, we introduce an end-to-end BraIn-to-Text (BIT) framework that translates neural activity into coherent sentences using a single differentiable neural network. Central to our approach is a cross-task, cross-species pretrained neural encoder, whose representations transfer to both attempted and imagined speech. In a cascaded setting with an n-gram LM, the pretrained encoder establishes a new state-of-the-art (SOTA) on the Brain-to-Text &#x27;24 and &#x27;25 benchmarks. Integrated end-to-end with audio large language models (LLMs) and trained with contrastive learning for cross-modal alignment, BIT reduces the word error rate (WER) of the prior end-to-end method from 24.69% to 10.22%. Notably, we find that small-scale audio LLMs markedly improve end-to-end decoding. Beyond record-setting performance, BIT aligns attempted and imagined speech embeddings to enable cross-task generalization. Altogether, our approach advances the integration of large, diverse neural datasets, paving the way for an end-to-end decoding framework that supports seamless, differentiable optimization.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <a href='https://arxiv.org/abs/2511.21740'>page</a> · <a href='https://arxiv.org/pdf/2511.21740'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AI-Driven Optimization under Uncertainty for Mineral Processing Operations</title>
+      <link>https://arxiv.org/abs/2512.01977</link>
+      <guid isPermaLink="false">arxiv:2512.01977</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>eess.SY</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Jef K. Caers</p>
+<p><b>Authors:</b> William Xu, Amir Eskanlou, Mansur Arief, David Zhen Yin, Jef K. Caers</p>
+<p>The global capacity for mineral processing must expand rapidly to meet the demand for critical minerals, which are essential for building the clean energy technologies necessary to mitigate climate change. However, the efficiency of mineral processing is severely limited by uncertainty, which arises from both the variability of feedstock and the complexity of process dynamics. To optimize mineral processing circuits under uncertainty, we introduce an AI-driven approach that formulates mineral processing as a Partially Observable Markov Decision Process (POMDP). We demonstrate the capabilities of this approach in handling both feedstock uncertainty and process model uncertainty to optimize the operation of a simulated, simplified flotation cell as an example. We show that by integrating the process of information gathering (i.e., uncertainty reduction) and process optimization, this approach has the potential to consistently perform better than traditional approaches at maximizing an overall objective, such as net present value (NPV). Our methodological demonstration of this optimization-under-uncertainty approach for a synthetic case provides a mathematical and computational framework for later real-world application, with the potential to improve both the laboratory-scale design of experiments and industrial-scale operation of mineral processing circuits without any additional hardware.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.AI, cs.SY · <a href='https://arxiv.org/abs/2512.01977'>page</a> · <a href='https://arxiv.org/pdf/2512.01977'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Do Language Models Align with Brains? Prediction Scores Are Not Enough</title>
+      <link>https://arxiv.org/abs/2605.14025</link>
+      <guid isPermaLink="false">arxiv:2605.14025</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <category>q-bio.NC</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Xiao Jia</p>
+<p><b>Authors:</b> Xiao Jia</p>
+<p>Brain-language model comparisons often interpret neural prediction scores as evidence that model representations capture brain-relevant language computation. We asked whether language models align with brains, and whether prediction scores are enough to support that claim, using L-PACT, a source-audited framework that evaluates predictive, relational, mechanism-stripping, and reliability-bounded evidence. Across primary naturalistic language neural datasets and derived language-model representations, L-PACT compared real model features with nuisance baselines and severe controls, tested whether model-to-brain profiles reproduced brain-to-brain patterns, recomputed held-out scores after mechanism stripping, and normalized evidence against brain-brain ceilings. The locked analysis set contains 414 predictive-control rows, 2304 relational profile rows, 4320 mechanism-stripping rows, 420 brain-brain ceiling rows, and 146 integrated decision rows. Assay-sensitivity checks showed that brain-brain reliability, brain-as-model run-to-run relational profiles, independent low-level neural and WAV-derived acoustic-envelope gates, and a deterministic implanted-signal simulation can produce positive evidence when expected. Nevertheless, no real model row passed the predictive, relational, mechanism-stripping, or operational Turing-bounded reliability gates; all 146 integrated rows were control-explained. Less stringent single-criterion rules would have counted raw positive predictive, relational, stripping-delta, and ceiling-normalized effects, but L-PACT downgraded them because controls explained the apparent evidence. In the analyzed derived artifact set, the tested language-model representations do not satisfy L-PACT alignment gates; apparent positives are converted into an auditable control-explained taxonomy rather than treated as structural alignment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI · <a href='https://arxiv.org/abs/2605.14025'>page</a> · <a href='https://arxiv.org/pdf/2605.14025'>pdf</a></p>]]></description>
+    </item>
+    <item>
       <title>AI Safety Landscape for Large Language Models: Taxonomy, State-of-the-art, and Future Directions</title>
       <link>https://arxiv.org/abs/2408.12935</link>
       <guid isPermaLink="false">arxiv:2408.12935</guid>
@@ -481,6 +564,19 @@
 <p>&lt;p&gt;Safe agents don’t guarantee a safe ecosystem of interconnected agents. Microsoft Research examines what breaks when AI agents interact and why network-level risks require new approaches.&lt;/p&gt;
 &lt;p&gt;The post &lt;a href=&quot;https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/&quot;&gt;Red-teaming a network of agents: Understanding what breaks when AI agents interact at scale&lt;/a&gt; appeared first on &lt;a href=&quot;https://www.microsoft.com/en-us/research&quot;&gt;Microsoft Research&lt;/a&gt;.&lt;/p&gt;</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>BiSpikCLM: A Spiking Language Model integrating Softmax-Free Spiking Attention and Spike-Aware Alignment Distillation</title>
+      <link>https://arxiv.org/abs/2605.13859</link>
+      <guid isPermaLink="false">arxiv:2605.13859</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <category>cs.NE</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech, Peking U — Zhengyu Ma</p>
+<p><b>Authors:</b> Sihang Guo, Chenlin Zhou, Jiaqi Wang, Kehai Chen, Qingyan Meng, Zhengyu Ma</p>
+<p>Spiking Neural Networks (SNNs) offer promising energy-efficient alternatives to large language models (LLMs) due to their event-driven nature and ultra-low power consumption. However, to preserve capacity, most existing spiking LLMs still incur intensive floating-point matrix multiplication (MatMul) and nonlinearities, or training difficulties arising from the complex spatiotemporal dynamics. To address these challenges, we propose BiSpikCLM, the first fully binary spiking MatMul-free causal language model. BiSpikCLM introduces Softmax-Free Spiking Attention (SFSA), eliminating softmax and floating-point operations in autoregressive language modeling. For efficient training, we introduce Spike-Aware Alignment Distillation (SpAD), which aligns ANN teacher and SNN student across embeddings, attention maps, intermediate features, and output logits. SpAD framework allows BiSpikCLM to reach comparable performance to ANN counterparts using substantially fewer training tokens (e.g., only 5.6% of the tokens for the 1.3B model). As a result, BiSpikCLM achieves competitive performance at only 4.16% - 5.87% of the computational cost on natural language generation tasks. Our results highlight the feasibility and effectiveness of fully binary spike-driven LLMs and establish the distillation as a promising pathway for brain-inspired spiking NLP.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.NE, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2605.13859'>page</a> · <a href='https://arxiv.org/pdf/2605.13859'>pdf</a></p>]]></description>
     </item>
     <item>
       <title>Synthesis of discrete-continuous quantum circuits with multimodal diffusion models</title>
