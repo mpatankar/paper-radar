@@ -5,8 +5,93 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Sun, 17 May 2026 05:18:25 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 05:25:12 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>RAR: Retrieving And Ranking Augmented MLLMs for Visual Recognition</title>
+      <link>https://arxiv.org/abs/2403.13805</link>
+      <guid isPermaLink="false">arxiv:2403.13805</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, Cornell, Peking U — Jiaqi Wang</p>
+<p><b>Authors:</b> Ziyu Liu, Zeyi Sun, Yuhang Zang, Wei Li, Pan Zhang, Xiaoyi Dong, Yuanjun Xiong, Dahua Lin, … <i>(+1 more)</i></p>
+<p>CLIP (Contrastive Language-Image Pre-training) uses contrastive learning from noise image-text pairs to excel at recognizing a wide array of candidates, yet its focus on broad associations hinders the precision in distinguishing subtle differences among fine-grained items. Conversely, Multimodal Large Language Models (MLLMs) excel at classifying fine-grained categories, thanks to their substantial knowledge from pre-training on web-level corpora. However, the performance of MLLMs declines with an increase in category numbers, primarily due to growing complexity and constraints of limited context window size. To synergize the strengths of both approaches and enhance the few-shot/zero-shot recognition abilities for datasets characterized by extensive and fine-grained vocabularies, this paper introduces RAR, a Retrieving And Ranking augmented method for MLLMs. We initially establish a multi-modal retriever based on CLIP to create and store explicit memory for different categories beyond the immediate context window. During inference, RAR retrieves the top-k similar results from the memory and uses MLLMs to rank and make the final predictions. Our proposed approach not only addresses the inherent limitations in fine-grained recognition but also preserves the model&#x27;s comprehensive knowledge base, significantly boosting accuracy across a range of vision-language recognition tasks. Notably, our approach demonstrates a significant improvement in performance on 5 fine-grained visual recognition benchmarks, 11 few-shot image recognition datasets, and the 2 object detection datasets under the zero-shot recognition setting.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2403.13805'>page</a> · <a href='https://arxiv.org/pdf/2403.13805'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Dynamic-TreeRPO: Breaking the Independent Trajectory Bottleneck with Structured Sampling</title>
+      <link>https://arxiv.org/abs/2509.23352</link>
+      <guid isPermaLink="false">arxiv:2509.23352</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Xiaolong Fu, Lichen Ma, Zipeng Guo, ShiPing Dong, Lan Yang, Tan Lit Sin, Gaojing Zhou, Yu He, … <i>(+4 more)</i></p>
+<p>The integration of Reinforcement Learning (RL) into flow matching models for text-to-image (T2I) generation has driven substantial advances in generation quality. However, these gains often come at the cost of exhaustive exploration and inefficient sampling strategies due to slight variation in the sampling group. Building on this insight, we propose Dynamic-TreeRPO, which implements the sliding-window sampling strategy as a tree-structured search with dynamic noise intensities along depth. We perform GRPO-guided optimization and constrained Stochastic Differential Equation (SDE) sampling within this tree structure. By sharing prefix paths of the tree, our design effectively amortizes the computational overhead of trajectory search. With well-designed noise intensities for each tree layer, Dynamic-TreeRPO can enhance the variation of exploration without any extra computational cost. Furthermore, we seamlessly integrate Supervised Fine-Tuning (SFT) and RL paradigm within Dynamic-TreeRPO to construct our proposed LayerTuning-RL, reformulating the loss function of SFT as a dynamically weighted Progress Reward Model (PRM) rather than a separate pretraining method. By associating this weighted PRM with dynamic-adaptive clipping bounds, the disruption of exploration process in Dynamic-TreeRPO is avoided. Benefiting from the tree-structured sampling and the LayerTuning-RL paradigm, our model dynamically explores a diverse search space along effective directions. Compared to existing baselines, our approach demonstrates significant superiority in terms of semantic consistency, visual fidelity, and human preference alignment on established benchmarks, including HPS-v2.1, PickScore, and ImageReward. In particular, our model outperforms SoTA by $4.9\%$, $5.91\%$, and $8.66\%$ on those benchmarks, respectively, while improving the training efficiency by nearly $50\%$.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2509.23352'>page</a> · <a href='https://arxiv.org/pdf/2509.23352'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Tuning-free Instruction-based Video Editing Via Structural Noise Initialization and Guidance</title>
+      <link>https://arxiv.org/abs/2605.15533</link>
+      <guid isPermaLink="false">arxiv:2605.15533</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Song Wu</p>
+<p><b>Authors:</b> Song Wu, Xinyu Chen, Qian Wang, Liang Li, Zili Yi, Junlan Feng</p>
+<p>Video editing poses a significant challenge. While a series of tuning-free methods circumvent the need for extensive data collection and model training, they often underutilize the rich information embedded within noisy latent, leading to unsatisfactory results. To address this, we propose a \textit{tuning-free, instruction-based} video editing framework. We approach video editing from the perspective of noisy latent: we design a Structural Noise Initialization Strategy (SNIS) to secure a superior editing starting point by assigning higher noise levels to edited regions (to facilitate content change) and lower noise levels to unedited regions (to maintain content consistency). We introduce a Noise Guidance Mechanism (NGM), which leverages the video prior in the generative model and effectively integrates rich information within the noisy latent to guide the denoising process, thereby preserving unedited content and overall visual coherence. Experiments show that our proposed method achieves better visual quality and state-of-the-art performance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2605.15533'>page</a> · <a href='https://arxiv.org/pdf/2605.15533'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>UAM: A Dual-Stream Perspective on Forgetting in VLA Training</title>
+      <link>https://arxiv.org/abs/2605.15735</link>
+      <guid isPermaLink="false">arxiv:2605.15735</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST — Jianyu Chen</p>
+<p><b>Authors:</b> Jianke Zhang, Yuanfei Luo, Yucheng Hu, Xiaoyu Chen, Yanjiang Guo, Ziyang Liu, Hongbin Xu, Tian Lan, … <i>(+1 more)</i></p>
+<p>Vision--language--action (VLA) models are typically built by fine-tuning a pretrained vision--language model (VLM) on action data. However, we show that this standard recipe systematically erodes the VLM&#x27;s multimodal competence, a side effect we call the embodiment tax. But do VLAs have to forget? Inspired by the two-stream organization of biological vision, we trace this degradation to a structural bottleneck: current VLAs ask a single encoder to support both language-grounded semantics and control-relevant visual features, whereas biological vision separates recognition and visuomotor control into distinct pathways. Building on this view, we propose the Unified Action Model (UAM), which adds a parallel Dorsal Expert, an analog of the brain&#x27;s dorsal pathway. To make the Dorsal Expert an effective second pathway and reduce the control-learning burden on the VLM, we initialize it from a pretrained generative model and train it with a mid-level reasoning objective that predicts visual dynamics. This design allows us to train the whole VLA end-to-end on action data alone: with no parameter freezing, no gradient stopping, and no auxiliary VL co-training, UAM retains over $95\%$ of the underlying VLM&#x27;s multimodal capability and at the same time achieves the highest average success rate among baselines on a variety of manipulation tasks that probe out-of-distribution generalization, including unseen objects, novel object--target compositions, and instruction variation. Together, these results suggest that semantic preservation in VLAs can emerge from architectural separation itself, rather than being enforced by frozen weights or auxiliary data replay, and that this preserved semantic capability can naturally transfer from VLMs to semantic generalization in actions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2605.15735'>page</a> · <a href='https://arxiv.org/pdf/2605.15735'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Attribute-Grounded Selective Reasoning for Artwork Emotion Understanding with Multimodal Large Language Models</title>
+      <link>https://arxiv.org/abs/2605.15755</link>
+      <guid isPermaLink="false">arxiv:2605.15755</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Cheng Zhang</p>
+<p><b>Authors:</b> Cheng Zhang, Yuer Liu, Zhiyu Zhou, Hongxia Xie, Wen-Huang Cheng</p>
+<p>Multimodal large language models (MLLMs) can produce fluent artwork emotion explanations, but they often suffer from attribute flooding: they enumerate many visible formal attributes without identifying which cues actually support the affective judgment. We therefore formulate artwork emotion understanding as Attribute-Grounded Selective Reasoning (AGSR), where predefined formal attributes serve as evidence units and only emotionally operative attributes should enter the final interpretation. To make this problem measurable, we extend EmoArt, originally introduced at ACM MM 2025 as a 132,664-artwork resource with content, formal-attribute, valence-arousal, and emotion annotations, by adding a 1,400-artwork human salience extension annotated by 15 art-trained annotators. This extension provides instance-level supervision for distinguishing attributes that are merely present from those that are emotionally salient. We further propose FAB-G (Formal-Attribute Bottleneck-Guided reasoning), a supervised multi-agent framework that first predicts attribute-level salience and then constrains downstream emotional analysis to the retained cues. Experiments show that FAB-G yields consistent gains in emotion, arousal, and valence prediction, achieves stronger agreement with human-marked salient attributes under Dice and Tversky metrics, and produces substantially more compact final explanations than prompting-based baselines. Cross-dataset evaluation further suggests that attribute-grounded salience selection transfers beyond the source distribution of EmoArt, while also revealing attribute-specific boundary cases. The dataset and project page are available at https://zhiliangzhang.github.io/EmoArt-130k/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV · <a href='https://arxiv.org/abs/2605.15755'>page</a> · <a href='https://arxiv.org/pdf/2605.15755'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rethinking and Red-Teaming Protective Perturbation in Personalized Diffusion Models</title>
+      <link>https://arxiv.org/abs/2406.18944</link>
+      <guid isPermaLink="false">arxiv:2406.18944</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Lichao Sun</p>
+<p><b>Authors:</b> Yixin Liu, Ruoxi Chen, Xun Chen, Lichao Sun</p>
+<p>Personalized diffusion models (PDMs) have become prominent for adapting pre-trained text-to-image models to generate images of specific subjects using minimal training data. However, PDMs are susceptible to minor adversarial perturbations, leading to significant degradation when fine-tuned on corrupted datasets. These vulnerabilities are exploited to create protective perturbations that prevent unauthorized image generation. Existing purification methods attempt to red-team the protective perturbation to break the protection but often over-purify images, resulting in information loss. In this work, we conduct an in-depth analysis of the fine-tuning process of PDMs through the lens of shortcut learning. We hypothesize and empirically demonstrate that adversarial perturbations induce a latent-space misalignment between images and their text prompts in the CLIP embedding space. This misalignment causes the model to erroneously associate noisy patterns with unique identifiers during fine-tuning, resulting in poor generalization. Based on these insights, we propose a systematic red-teaming framework that includes data purification and contrastive decoupling learning. We first employ off-the-shelf image restoration techniques to realign images with their original semantic content in latent space. Then, we introduce contrastive decoupling learning with noise tokens to decouple the learning of personalized concepts from spurious noise patterns. Our study not only uncovers shortcut learning vulnerabilities in PDMs but also provides a thorough evaluation framework for developing stronger protection. Our extensive evaluation demonstrates its advantages over existing purification methods and its robustness against adaptive perturbations.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CR · <a href='https://arxiv.org/abs/2406.18944'>page</a> · <a href='https://arxiv.org/pdf/2406.18944'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Causal-Adapter: Taming Text-to-Image Diffusion for Faithful Counterfactual Generation</title>
+      <link>https://arxiv.org/abs/2509.24798</link>
+      <guid isPermaLink="false">arxiv:2509.24798</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, Georgia Tech, Tsinghua, U Edinburgh, UC Berkeley — Lei Tong, Chen Jin</p>
+<p><b>Authors:</b> Lei Tong, Zhihua Liu, Chaochao Lu, Dino Oglic, Tom Diethe, Philip Teare, Sotirios A. Tsaftaris, Chen Jin</p>
+<p>We present Causal-Adapter, a modular framework that adapts frozen text-to-image diffusion backbones for counterfactual image generation. Our method supports causal interventions on target attributes and consistently propagates their effects to causal dependents while preserving the core identity of the image. Unlike prior approaches that rely on prompt engineering without explicit causal structure, Causal-Adapter leverages structural causal modeling with two attribute-regularization strategies: (i) prompt-aligned injection, which aligns causal attributes with textual embeddings for precise semantic control, and (ii) a conditioned token contrastive loss that disentangles attribute factors and reduces spurious correlations. Causal-Adapter achieves state-of-the-art performance on both synthetic and real-world datasets, including up to a 91% reduction in MAE on Pendulum for accurate attribute control and up to an 87% reduction in FID on ADNI for high-fidelity MRI generation. These results demonstrate robust, generalizable counterfactual editing with faithful attribute modification and strong identity preservation. Code and models will be released at: https://leitong02.github.io/causaladapter/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2509.24798'>page</a> · <a href='https://arxiv.org/pdf/2509.24798'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Mixture-of-Visual-Thoughts: Exploring Context-Adaptive Reasoning Mode Selection for General Visual Reasoning</title>
       <link>https://arxiv.org/abs/2509.22746</link>
