@@ -52,6 +52,20 @@ jobs:
           restore-keys: |
             paper-radar-data-v2-
 
+      - name: sync feeds from live gh-pages (source of truth)
+        # The accumulator merges this run's new items with whatever's already
+        # in feeds_out/. The cache restore handles the common case, but if
+        # someone migrates feeds directly on gh-pages (e.g., pubDate re-stamp),
+        # we want THAT version, not the cached one. So overwrite feeds_out
+        # with the live versions. A 404 on a feed (e.g., first run ever) is
+        # tolerated via `|| true`.
+        run: |
+          mkdir -p feeds_out
+          for feed in frontier-llm alignment-safety vision-multimodal robotics-embodied ai-science everything; do
+            curl -fsSL "https://mpatankar.github.io/paper-radar/${feed}.xml" -o "feeds_out/${feed}.xml" || true
+          done
+          ls -la feeds_out/
+
       - name: run pipeline
         run: paper-radar run
         env:
