@@ -67,36 +67,45 @@ def _description_html(paper: Paper, decision: Decision) -> str:
     if paper.abstract:
         parts.append(f"<p>{html.escape(paper.abstract)}</p>")
 
-    # Links + categories.
+    # Links + categories + arxiv deposit date (preserved here since pubDate
+    # now reflects when paper-radar surfaced the paper, not when arXiv got it).
     cats = ", ".join(html.escape(c) for c in paper.categories) if paper.categories else "—"
-    parts.append(f"<p style='color:#888;font-size:0.85em'>"
-                 f"<b>Categories:</b> {cats}"
-                 f" · <a href='{html.escape(paper.url)}'>page</a>"
-                 + (f" · <a href='{html.escape(paper.pdf_url)}'>pdf</a>" if paper.pdf_url else "")
-                 + "</p>")
+    extras = [f"<b>Categories:</b> {cats}"]
+    if paper.published_at:
+        extras.append(f"<b>arXiv submitted:</b> {paper.published_at.date().isoformat()}")
+    extras.append(f"<a href='{html.escape(paper.url)}'>page</a>")
+    if paper.pdf_url:
+        extras.append(f"<a href='{html.escape(paper.pdf_url)}'>pdf</a>")
+    parts.append("<p style='color:#888;font-size:0.85em'>" + " · ".join(extras) + "</p>")
 
     return "\n".join(parts)
 
 
 def write_feed(feed: FeedSpec, items: list[tuple[Paper, Decision]],
                out_dir: Path, *, max_items: int = 200,
-               site_base_url: str = "https://example.github.io/paper-radar/feeds_out") -> Path:
+               site_base_url: str = "https://example.github.io/paper-radar/feeds_out",
+               emit_time: datetime | None = None) -> Path:
     """Write feeds_out/<id>.xml, accumulating prior items.
 
     Strategy:
       1. Read the existing file (if present) and parse its <item>s.
-      2. Build new items from this run.
+      2. Build new items from this run. Each gets <pubDate> = `emit_time`
+         (when paper-radar first surfaced it), NOT arXiv's deposit date —
+         otherwise old papers that arXiv re-lists today sort under their
+         original deposit date and look stale in the reader.
       3. Merge: new items take precedence on guid collision. Then sort by
          pubDate desc and cap at max_items.
       4. Write.
 
-    Returns the path.
+    Returns the path. `emit_time` is parameterized so tests can be
+    deterministic; production always defaults to `now`.
     """
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{feed.id}.xml"
 
-    new_serialized = [_serialize_item(p, d) for p, d in items]
+    emit_time = emit_time or datetime.now(timezone.utc)
+    new_serialized = [_serialize_item(p, d, emit_time) for p, d in items]
     new_guids = {it["guid"] for it in new_serialized}
 
     # Load prior items, drop any guid that's also in this run (the new render wins).
@@ -142,15 +151,20 @@ def write_feed(feed: FeedSpec, items: list[tuple[Paper, Decision]],
     return path
 
 
-def _serialize_item(paper: Paper, decision: Decision) -> dict:
-    """Turn a (Paper, Decision) into the dict we render and persist in XML."""
-    pub_dt = paper.published_at or datetime.now(timezone.utc)
+def _serialize_item(paper: Paper, decision: Decision, emit_time: datetime) -> dict:
+    """Turn a (Paper, Decision) into the dict we render and persist in XML.
+
+    `pubDate` is the emit time — when paper-radar surfaced this item — so
+    readers sort the freshly-added items at the top regardless of when
+    arXiv originally received the paper. The original arXiv deposit date,
+    if present, is preserved in the description body.
+    """
     return {
         "title": paper.title,
         "link": paper.url,
         "guid": paper.id,
-        "pubDate": _rfc822(pub_dt),
-        "_pub_ts": pub_dt.timestamp(),
+        "pubDate": _rfc822(emit_time),
+        "_pub_ts": emit_time.timestamp(),
         "categories": list(paper.categories),
         "description": _description_html(paper, decision),
     }

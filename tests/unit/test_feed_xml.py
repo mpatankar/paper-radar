@@ -83,16 +83,49 @@ def test_accumulates_across_runs(tmp_path: Path):
         d = Decision(paper_id=p.id, title=p.title, accepted=True)
         return p, d
 
-    # Yesterday's run emits papers 1, 2, 3 (May 1)
-    write_feed(feed, [mk(1, 1), mk(2, 1), mk(3, 1)], tmp_path)
-    # Today's run emits papers 4, 5 (May 2). Should not drop 1, 2, 3.
-    path = write_feed(feed, [mk(4, 2), mk(5, 2)], tmp_path)
+    # Yesterday's run emits papers 1, 2, 3 — emit_time = May 1
+    write_feed(feed, [mk(1, 1), mk(2, 1), mk(3, 1)], tmp_path,
+               emit_time=datetime(2026, 5, 1, 12, 0, tzinfo=timezone.utc))
+    # Today's run emits papers 4, 5 — emit_time = May 2. Should not drop 1, 2, 3.
+    path = write_feed(feed, [mk(4, 2), mk(5, 2)], tmp_path,
+                      emit_time=datetime(2026, 5, 2, 12, 0, tzinfo=timezone.utc))
     items = ET.fromstring(path.read_text()).find("channel").findall("item")
     guids = [i.findtext("guid") for i in items]
     assert set(guids) == {"arxiv:1", "arxiv:2", "arxiv:3", "arxiv:4", "arxiv:5"}
-    # Newest (May 2) should come first.
+    # Newest emit_time (May 2) should come first.
     assert guids[0] in ("arxiv:4", "arxiv:5")
     assert guids[-1] in ("arxiv:1", "arxiv:2", "arxiv:3")
+
+
+def test_pubdate_is_emit_time_not_arxiv_date(tmp_path: Path):
+    """A paper arXiv-dated months ago should still get pubDate = emit time.
+
+    This is the actual fix: NetNewsWire was burying freshly emitted items
+    under their arXiv deposit dates and the user saw "no updates."
+    """
+    feed = FeedSpec(id="emit", title="t", description="t")
+    old_paper = Paper(
+        id="arxiv:2403.13805",
+        source="arxiv",
+        title="An older paper just re-listed today",
+        abstract="",
+        authors=[],
+        categories=["cs.CV"],
+        url="https://arxiv.org/abs/2403.13805",
+        published_at=datetime(2024, 3, 22, tzinfo=timezone.utc),
+    )
+    d = Decision(paper_id=old_paper.id, title=old_paper.title, accepted=True)
+    emit = datetime(2026, 5, 18, 5, 25, tzinfo=timezone.utc)
+    path = write_feed(feed, [(old_paper, d)], tmp_path, emit_time=emit)
+
+    items = ET.fromstring(path.read_text()).find("channel").findall("item")
+    pub = items[0].findtext("pubDate") or ""
+    # pubDate should reflect emit time (May 2026), not the arXiv date (March 2024)
+    assert "2026" in pub
+    assert "May" in pub
+    # The body should still surface the original arXiv deposit date for users.
+    desc = items[0].findtext("description") or ""
+    assert "2024-03-22" in desc
 
 
 def test_new_run_overwrites_same_guid(tmp_path: Path):
