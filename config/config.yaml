@@ -8,7 +8,12 @@
 arxiv:
   enabled: true
   # arXiv set specs (OAI-PMH). Each maps roughly to one arXiv category.
-  sets: ["cs:cs:AI", "cs:cs:LG", "cs:cs:CV", "cs:cs:RO", "cs:cs:CL", "stat:stat:ML"]
+  # Added 2026-05-18:
+  #   cs:cs:MA   multi-agent systems (agentic AI, MARL)
+  #   cs:cs:NE   neural and evolutionary computing (architectures)
+  #   eess:eess:SY  systems and control (robotics-adjacent)
+  sets: ["cs:cs:AI", "cs:cs:LG", "cs:cs:CV", "cs:cs:RO", "cs:cs:CL", "stat:stat:ML",
+         "cs:cs:MA", "cs:cs:NE", "eess:eess:SY"]
   # How many days back to fetch on each run (1 = previous calendar day in UTC).
   days_back: 1
   # Hard cap on records fetched per run (safety against pathological days).
@@ -31,6 +36,12 @@ blogs:
     - mistral
     - microsoft_research
     - arc_institute
+    # Tier 1+2 additions 2026-05-18
+    - huggingface_papers     # community-curated frontier arxiv aggregator
+    - ai2                    # Allen Institute (OLMo / Tülu / Molmo)
+    - apple_ml               # Apple Machine Learning Research (RSS)
+    - boston_dynamics        # humanoid + quadruped real-world
+    - figure_ai              # humanoid robotics company
 
 # --- Filtering --------------------------------------------------------------
 

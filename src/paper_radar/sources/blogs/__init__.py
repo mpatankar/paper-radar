@@ -24,6 +24,7 @@ from . import (
     anthropic, openai_blog, deepmind, transformer_circuits,
     physical_intelligence, thinking_machines, goodfire,
     meta_ai, nvidia_research, mistral, microsoft_research, arc_institute,
+    huggingface_papers, ai2, apple_ml, boston_dynamics, figure_ai,
 )
 
 log = logging.getLogger(__name__)
@@ -44,6 +45,11 @@ ADAPTERS: dict[str, Callable[[], Iterable[Paper]]] = {
     "mistral":               mistral.fetch,
     "microsoft_research":    microsoft_research.fetch,
     "arc_institute":         arc_institute.fetch,
+    "huggingface_papers":    huggingface_papers.fetch,
+    "ai2":                   ai2.fetch,
+    "apple_ml":              apple_ml.fetch,
+    "boston_dynamics":       boston_dynamics.fetch,
+    "figure_ai":             figure_ai.fetch,
 }
 
 
