@@ -5,8 +5,396 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/robotics-embodied.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Manipulation, locomotion, VLA models, world models, real-robot work.</description>
-    <lastBuildDate>Mon, 18 May 2026 15:37:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 05:23:37 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies</title>
+      <link>https://arxiv.org/abs/2505.07813</link>
+      <guid isPermaLink="false">arxiv:2505.07813</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU — Deepak Pathak</p>
+<p><b>Authors:</b> Tony Tao, Mohan Kumar Srirama, Jason Jingzhou Liu, Kenneth Shaw, Deepak Pathak</p>
+<p>Large-scale, diverse robot datasets have emerged as a promising path toward enabling dexterous manipulation policies to generalize to novel environments, but acquiring such datasets presents many challenges. While teleoperation provides high-fidelity datasets, its high cost limits its scalability. Instead, what if people could use their own hands, just as they do in everyday life, to collect data? In DexWild, a diverse team of data collectors uses their hands to collect hours of interactions across a multitude of environments and objects. To record this data, we create DexWild-System, a low-cost, mobile, and easy-to-use device. The DexWild learning framework co-trains on both human and robot demonstrations, leading to improved performance compared to training on each dataset individually. This combination results in robust robot policies capable of generalizing to novel environments, tasks, and embodiments with minimal additional robot-specific data. Experimental results demonstrate that DexWild significantly improves performance, achieving a 68.5% success rate in unseen environments-nearly four times higher than policies trained with robot data only-and offering 5.8x better cross-embodiment generalization. Video results, codebases, and instructions at https://dexwild.github.io</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.LG, cs.SY, eess.SY · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2505.07813'>page</a> · <a href='https://arxiv.org/pdf/2505.07813'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DriveMoE: Mixture-of-Experts for Vision-Language-Action Model in End-to-End Autonomous Driving</title>
+      <link>https://arxiv.org/abs/2505.16278</link>
+      <guid isPermaLink="false">arxiv:2505.16278</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Caltech, Cornell, Peking U, UC Berkeley — Zhenjie Yang</p>
+<p><b>Authors:</b> Zhenjie Yang, Yilin Chai, Xiaosong Jia, Qifeng Li, Yuqian Shao, Xuekai Zhu, Haisheng Su, Junchi Yan</p>
+<p>End-to-end autonomous driving (E2E-AD) demands effective processing of multi-view sensory data and robust handling of diverse and complex driving scenarios, particularly rare maneuvers such as aggressive turns. Recent success of Mixture-of-Experts (MoE) architecture in Large Language Models (LLMs) demonstrates that specialization of parameters enables strong scalability. In this work, we propose DriveMoE, a novel MoE-based E2E-AD framework, with a Scene-Specialized Vision MoE and a Skill-Specialized Action MoE. DriveMoE is built upon our $π_0$ Vision-Language-Action (VLA) baseline (originally from the embodied AI field), called Drive-$π_0$. Specifically, we add Vision MoE to Drive-$π_0$ by training a router to select relevant cameras according to the driving context dynamically. This design mirrors human driving cognition, where drivers selectively attend to crucial visual cues rather than exhaustively processing all visual information. In addition, we add Action MoE by training another router to activate specialized expert modules for different driving behaviors. Through explicit behavioral specialization, DriveMoE is able to handle diverse scenarios without suffering from modes averaging like existing models. In Bench2Drive closed-loop evaluation experiments, DriveMoE achieves state-of-the-art (SOTA) performance, demonstrating the effectiveness of combining vision and action MoE in autonomous driving tasks. We will release our code and models of DriveMoE and Drive-$π_0$.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2505.16278'>page</a> · <a href='https://arxiv.org/pdf/2505.16278'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Geometry-aware 4D Video Generation for Robot Manipulation</title>
+      <link>https://arxiv.org/abs/2507.01099</link>
+      <guid isPermaLink="false">arxiv:2507.01099</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Toyota Research Institute · <b>Tier-2 senior:</b> Columbia, HKUST, Peking U, Stanford, U Michigan — Shuran Song</p>
+<p><b>Authors:</b> Zeyi Liu, Shuang Li, Eric Cousineau, Siyuan Feng, Benjamin Burchfiel, Shuran Song</p>
+<p>Understanding and predicting dynamics of the physical world can enhance a robot&#x27;s ability to plan and interact effectively in complex environments. While recent video generation models have shown strong potential in modeling dynamic scenes, generating videos that are both temporally coherent and geometrically consistent across camera views remains a significant challenge. To address this, we propose a 4D video generation model that enforces multi-view 3D consistency of generated videos by supervising the model with cross-view pointmap alignment during training. Through this geometric supervision, the model learns a shared 3D scene representation, enabling it to generate spatio-temporally aligned future video sequences from novel viewpoints given a single RGB-D image per view, and without relying on camera poses as input. Compared to existing baselines, our method produces more visually stable and spatially aligned predictions across multiple simulated and real-world robotic datasets. We further show that the predicted 4D videos can be used to recover robot end-effector trajectories using an off-the-shelf 6DoF pose tracker, yielding robot manipulation policies that generalize well to novel camera viewpoints.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2507.01099'>page</a> · <a href='https://arxiv.org/pdf/2507.01099'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Beyond Policy Optimization: A Data Curation Flywheel for Sparse-Reward Long-Horizon Planning</title>
+      <link>https://arxiv.org/abs/2508.03018</link>
+      <guid isPermaLink="false">arxiv:2508.03018</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS, Peking U — Yutong Wang</p>
+<p><b>Authors:</b> Yutong Wang, Pengliang Ji, Kaixin Li, Baolong Bi, Tao Feng, Guillaume Sartoretti</p>
+<p>Large Language Reasoning Models have demonstrated remarkable success on static tasks, yet their application to multi-round agentic planning in interactive environments faces two fundamental challenges. First, the intractable credit assignment problem renders conventional reinforcement learning ineffective in sparse-reward settings. Second, the computational overhead of verbose, step-by-step reasoning histories is prohibitive. To address these challenges, we propose BPO, a three-stage framework (bootstrapping, extrapolation, and refinement) that establishes a self-improving data flywheel to develop robust reasoning models for long-horizon, sparse-reward environments. Our framework first bootstraps efficient reasoning using the proposed planning quaternions with long-short chain-of-thought fusion. It then extrapolates to out-of-distribution tasks through complexity-stratified curriculum learning. Finally, the model iteratively refines itself by learning exclusively on experiences selected via reward-gated rejection sampling. Experiments on ALFWorld, ScienceWorld, and WebShop demonstrate that our approach achieves state-of-the-art with significant token efficiency, providing a new recipe for reasoning models in agentic planning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-05-16 · <a href='https://arxiv.org/abs/2508.03018'>page</a> · <a href='https://arxiv.org/pdf/2508.03018'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>What Drives Success in Physical Planning with Joint-Embedding Predictive World Models?</title>
+      <link>https://arxiv.org/abs/2512.24497</link>
+      <guid isPermaLink="false">arxiv:2512.24497</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.RO</category>
+      <category>stat.ML</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NYU — Yann LeCun</p>
+<p><b>Authors:</b> Basile Terver, Tsung-Yen Yang, Jean Ponce, Adrien Bardes, Yann LeCun</p>
+<p>A long-standing challenge in AI is to develop agents capable of solving a wide range of physical tasks and generalizing to new, unseen tasks and environments. A popular recent approach involves training a world model from state-action trajectories and subsequently use it with a planning algorithm to solve new tasks. Planning is commonly performed in the input space, but a recent family of methods has introduced planning algorithms that optimize in the learned representation space of the world model, with the promise that abstracting irrelevant details yields more efficient planning. In this work, we characterize models from this family as JEPA-WMs and investigate the technical choices that make algorithms from this class work. We propose a comprehensive study of several key components with the objective of finding the optimal approach within the family. We conducted experiments using both simulated environments and real-world robotic data, and studied how the model architecture, the training objective, and the planning algorithm affect planning success. We combine our findings to propose a model that outperforms two established baselines, DINO-WM and V-JEPA-2-AC, in both navigation and manipulation tasks. Code, data and checkpoints are available at https://github.com/facebookresearch/jepa-wms.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG, cs.RO, stat.ML · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2512.24497'>page</a> · <a href='https://arxiv.org/pdf/2512.24497'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Training A Humanoid Robot For Hard Work</title>
+      <link>https://bostondynamics.com/blog/training-a-humanoid-robot-for-hard-work/</link>
+      <guid isPermaLink="false">boston_dynamics:e8d4a533af</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/training-a-humanoid-robot-for-hard-work/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Ask A Roboticist Meet Ethan</title>
+      <link>https://bostondynamics.com/blog/ask-a-roboticist-meet-ethan/</link>
+      <guid isPermaLink="false">boston_dynamics:d5dd3d64dc</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/ask-a-roboticist-meet-ethan/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Aivi Learning Now Powered Google Gemini Robotics</title>
+      <link>https://bostondynamics.com/blog/aivi-learning-now-powered-google-gemini-robotics/</link>
+      <guid isPermaLink="false">boston_dynamics:9be52e64a6</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/aivi-learning-now-powered-google-gemini-robotics/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Tools For Your To Do List With Spot And Gemini Robotics</title>
+      <link>https://bostondynamics.com/blog/tools-for-your-to-do-list-with-spot-and-gemini-robotics/</link>
+      <guid isPermaLink="false">boston_dynamics:1bdd4a9c81</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/tools-for-your-to-do-list-with-spot-and-gemini-robotics/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling New Career Heights With Stretch</title>
+      <link>https://bostondynamics.com/blog/scaling-new-career-heights-with-stretch/</link>
+      <guid isPermaLink="false">boston_dynamics:26a4365e0c</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/scaling-new-career-heights-with-stretch/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Atlas Evolution From Research Robot To Industrial Humanoid</title>
+      <link>https://bostondynamics.com/blog/atlas-evolution-from-research-robot-to-industrial-humanoid/</link>
+      <guid isPermaLink="false">boston_dynamics:85439701ea</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/atlas-evolution-from-research-robot-to-industrial-humanoid/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>A New Perspective For Facilities Inspection</title>
+      <link>https://bostondynamics.com/blog/a-new-perspective-for-facilities-inspection/</link>
+      <guid isPermaLink="false">boston_dynamics:3f33891631</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/a-new-perspective-for-facilities-inspection/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Retrospective On Boston Dynamics Spot Robot Uses</title>
+      <link>https://bostondynamics.com/blog/retrospective-on-boston-dynamics-spot-robot-uses/</link>
+      <guid isPermaLink="false">boston_dynamics:15e48753fb</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/retrospective-on-boston-dynamics-spot-robot-uses/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Enterprise Robotics Redefined</title>
+      <link>https://bostondynamics.com/blog/enterprise-robotics-redefined/</link>
+      <guid isPermaLink="false">boston_dynamics:b532735d05</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/enterprise-robotics-redefined/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Boston Dynamics Google Deepmind Form New Ai Partnership</title>
+      <link>https://bostondynamics.com/blog/boston-dynamics-google-deepmind-form-new-ai-partnership/</link>
+      <guid isPermaLink="false">boston_dynamics:5c60ad30d1</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/boston-dynamics-google-deepmind-form-new-ai-partnership/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Boston Dynamics Unveils New Atlas Robot To Revolutionize Industry</title>
+      <link>https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/</link>
+      <guid isPermaLink="false">boston_dynamics:d2bb39923c</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Stage Manager To Robotics</title>
+      <link>https://bostondynamics.com/blog/from-stage-manager-to-robotics/</link>
+      <guid isPermaLink="false">boston_dynamics:8e4e60284f</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/from-stage-manager-to-robotics/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Introducing Helix 02: Full-Body Autonomy</title>
+      <link>https://www.figure.ai/news/helix-02</link>
+      <guid isPermaLink="false">figure_ai:1af31b7e46</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/helix-02'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Introducing Figure 03</title>
+      <link>https://www.figure.ai/news/introducing-figure-03</link>
+      <guid isPermaLink="false">figure_ai:4fbdade2db</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/introducing-figure-03'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Ramping Figure 03 Production</title>
+      <link>https://www.figure.ai/news/ramping-figure-03-production</link>
+      <guid isPermaLink="false">figure_ai:957e16020c</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/ramping-figure-03-production'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Helix-02 Bedroom Tidy</title>
+      <link>https://www.figure.ai/news/helix-02-bedroom-tidy</link>
+      <guid isPermaLink="false">figure_ai:88547a1e27</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/helix-02-bedroom-tidy'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Helix 02 Living Room Tidy</title>
+      <link>https://www.figure.ai/news/helix-02-living-room-tidy</link>
+      <guid isPermaLink="false">figure_ai:ae004383da</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/helix-02-living-room-tidy'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>F.02 Contributed to the Production of 30,000 Cars at BMW</title>
+      <link>https://www.figure.ai/news/production-at-bmw</link>
+      <guid isPermaLink="false">figure_ai:79406c8974</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/production-at-bmw'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Project Go-Big: Internet-Scale Humanoid Pretraining and Direct Human-to-Robot Transfer</title>
+      <link>https://www.figure.ai/news/project-go-big</link>
+      <guid isPermaLink="false">figure_ai:c8bef3e840</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/project-go-big'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Figure Announces Strategic Partnership with Brookfield</title>
+      <link>https://www.figure.ai/news/figure-announces-strategic-partnership-with-brookfield</link>
+      <guid isPermaLink="false">figure_ai:7bf1cca3a4</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/figure-announces-strategic-partnership-with-brookfield'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Figure Exceeds $1B in Series C Funding at $39B Post-Money Valuation</title>
+      <link>https://www.figure.ai/news/series-c</link>
+      <guid isPermaLink="false">figure_ai:ed2e3857d5</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/series-c'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Helix Loads the Dishwasher</title>
+      <link>https://www.figure.ai/news/helix-loads-the-dishwasher</link>
+      <guid isPermaLink="false">figure_ai:aac04751d0</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/helix-loads-the-dishwasher'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Helix Learns to Fold Laundry</title>
+      <link>https://www.figure.ai/news/helix-learns-to-fold-laundry</link>
+      <guid isPermaLink="false">figure_ai:6aaa7f5e2d</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/helix-learns-to-fold-laundry'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>F.03 Battery Development</title>
+      <link>https://www.figure.ai/news/f-03-battery-development</link>
+      <guid isPermaLink="false">figure_ai:9f89adc273</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/f-03-battery-development'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling Helix: a New State of the Art in Humanoid Logistics</title>
+      <link>https://www.figure.ai/news/scaling-helix-logistics</link>
+      <guid isPermaLink="false">figure_ai:4935142414</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/scaling-helix-logistics'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Natural Humanoid Walk Using Reinforcement Learning</title>
+      <link>https://www.figure.ai/news/reinforcement-learning-walking</link>
+      <guid isPermaLink="false">figure_ai:b8f78f24f3</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/reinforcement-learning-walking'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>BotQ: A High-Volume Manufacturing Facility for Humanoid Robots</title>
+      <link>https://www.figure.ai/news/botq</link>
+      <guid isPermaLink="false">figure_ai:5ecae2c8f8</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/botq'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Helix Accelerating Real-World Logistics</title>
+      <link>https://www.figure.ai/news/helix-logistics</link>
+      <guid isPermaLink="false">figure_ai:69164d3e17</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/helix-logistics'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Helix: A Vision-Language-Action Model for Generalist Humanoid Control</title>
+      <link>https://www.figure.ai/news/helix</link>
+      <guid isPermaLink="false">figure_ai:bd8faaad39</guid>
+      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/helix'>page</a></p>]]></description>
+    </item>
     <item>
       <title>VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing</title>
       <link>https://arxiv.org/abs/2510.05213</link>
