@@ -5,8 +5,46 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/robotics-embodied.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Manipulation, locomotion, VLA models, world models, real-robot work.</description>
-    <lastBuildDate>Tue, 19 May 2026 05:23:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 05:23:54 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Foundation models on the bridge: Semantic hazard detection and safety maneuvers for maritime autonomy with vision-language models</title>
+      <link>https://arxiv.org/abs/2512.24470</link>
+      <guid isPermaLink="false">arxiv:2512.24470</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> Stanford — (senior)</p>
+<p><b>Authors:</b> Kim Alexander Christensen, Andreas Gudahl Tufte, Alexey Gusev, Rohan Sinha, Milan Ganai, Ole Andreas Alsos, Marco Pavone, Martin Steinert</p>
+<p>The draft IMO MASS Code requires autonomous and remotely supervised maritime vessels to detect departures from their operational design domain, enter a predefined fallback that notifies the operator, permit immediate human override, and avoid changing the voyage plan without approval. Meeting these obligations in the alert-to-takeover gap calls for a short-horizon, human-overridable fallback maneuver. Classical maritime autonomy stacks struggle when the correct action depends on meaning (e.g., diver-down flag means people in the water, fire close by means hazard). We argue (i) that vision-language models (VLMs) provide semantic awareness for such out-of-distribution situations, and (ii) that a fast-slow anomaly pipeline with a short-horizon, human-overridable fallback maneuver makes this practical in the handover window. We introduce Semantic Lookout, a camera-only, candidate-constrained VLM fallback maneuver selector that selects one cautious action (or station-keeping) from water-valid, world-anchored trajectories under continuous human authority. On 40 harbor scenes we measure per-call scene understanding and latency, alignment with human consensus (model majority-of-three voting), short-horizon risk-relief on fire hazard scenes, and an on-water alert-&gt;fallback maneuver-&gt;operator handover. Sub-10 s models retain most of the awareness of slower state-of-the-art models. The fallback maneuver selector outperforms geometry-only baselines and increases standoff distance on fire scenes. A field run verifies end-to-end operation. These results support VLMs as semantic fallback maneuver selectors compatible with the draft IMO MASS Code, within practical latency budgets, and motivate future work on domain-adapted, hybrid autonomy that pairs foundation-model semantics with multi-sensor bird&#x27;s-eye-view perception and short-horizon replanning. Website: kimachristensen.github.io/bridge_policy</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-01-05 · <a href='https://arxiv.org/abs/2512.24470'>page</a> · <a href='https://arxiv.org/pdf/2512.24470'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>R$^3$L: Reasoning 3D Layouts from Relative Spatial Relations</title>
+      <link>https://arxiv.org/abs/2605.06758</link>
+      <guid isPermaLink="false">arxiv:2605.06758</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Bing Wang</p>
+<p><b>Authors:</b> Zhifeng Gu, Yuqi Wang, Bing Wang</p>
+<p>Relative spatial relations provide a compact representation of spatial structure and are fundamental to relative spatial reasoning in 3D layout generation. Recent works leverage Multimodal Large Language Models (MLLMs) to infer such relations, but the inferred relations are often unreliable and are typically handled with post-hoc heuristics. In this paper, we propose R$^3$L, a general framework that improves the reliability and consistency of relative spatial reasoning for 3D layout generation. Our key motivation is that multi-hop reasoning requires repeated reference-frame transformations, which accumulate errors in inferred relations and lead to semantic and metric drift. To mitigate this, we propose invariant spatial decomposition to break coupled relation chains, and consistent spatial imagination to promote self-consistency through an imagine-and-revise loop. We further introduce supportive spatial optimization to ease pose optimization via global-to-local coordinate re-parameterization. Extensive experiments across diverse scene types and instructions demonstrate that R$^3$L produces more physically feasible and semantically consistent layouts. Notably, our analysis shows that resolving frame-induced inconsistencies is crucial for reliable multi-hop relative spatial reasoning. The code is available at https://github.com/Neal2020GitHub/R3L.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.06758'>page</a> · <a href='https://arxiv.org/pdf/2605.06758'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>KG-ASG: Collision-Knowledge-Guided Closed-Loop Adversarial Scenario Generation With Primary-Support Attribution</title>
+      <link>https://arxiv.org/abs/2605.18895</link>
+      <guid isPermaLink="false">arxiv:2605.18895</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech, Tsinghua, U Michigan, U Oxford, UC Berkeley — Cheng Wang, Qiang Liu</p>
+<p><b>Authors:</b> Cheng Wang, Chen Xiong, Ziwen Wang, Yuchen Zhou, Qiang Liu</p>
+<p>Safety validation of autonomous driving systems requires high-risk scenario coverage, clear collision semantics, executable trajectories, and attributable multi-vehicle interactions. Existing safety-critical scenario generation methods often rely on low-level trajectory perturbations, collision-proxy optimization, or single-adversary search, which may produce adversarial samples with ambiguous collision causes or uncontrolled multi-vehicle collisions. This paper proposes KG-ASG, a collision-knowledge-guided closed-loop adversarial scenario generation framework with primary-support attribution. KG-ASG constructs a structured collision knowledge base and trains a lightweight Collision Expert to infer the target collision mode, the unique primary adversary, support vehicles, and their interaction roles. Guided by this semantic prior, multi-vehicle adversarial generation is formulated as a primary-support process, where the primary adversary induces the main conflict and support vehicles shape the surrounding risk structure without becoming additional colliders. Rule, physical, interaction-safety, and single-collider constraints are imposed as hard gates to filter non-executable samples. To handle reactive ego behaviors, planner-controller feedback is further used for failure diagnosis, candidate re-ranking, and terminal refinement. Experiments on WOMD scenarios reconstructed in MetaDrive show that KG-ASG achieves strong adversarial effectiveness while improving Valid Primary Attack, reducing multi-collision, and obtaining closed-loop recovery gains under IDM, Cruise, and Expert controllers. These results demonstrate that collision-knowledge guidance and primary-support single-collider reasoning improve adversarial effectiveness, interpretability, and executability for autonomous driving safety validation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2605.18895'>page</a> · <a href='https://arxiv.org/pdf/2605.18895'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies</title>
       <link>https://arxiv.org/abs/2505.07813</link>

@@ -5,8 +5,84 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Tue, 19 May 2026 05:23:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 05:23:54 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Slot-MLLM: Object-Centric Visual Tokenization for Multimodal LLM</title>
+      <link>https://arxiv.org/abs/2505.17726</link>
+      <guid isPermaLink="false">arxiv:2505.17726</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST, U Washington, UC Berkeley — Sungwoong Kim</p>
+<p><b>Authors:</b> Donghwan Chi, Hyomin Kim, Yoonjin Oh, Yongjin Kim, Donghoon Lee, Daejin Jo, Jongmin Kim, Junyeob Baek, … <i>(+2 more)</i></p>
+<p>Recently, multimodal large language models (MLLMs) have emerged as a key approach in achieving artificial general intelligence. In particular, vision-language MLLMs have been developed to generate not only text but also visual outputs from multimodal inputs. This advancement requires efficient image tokens that LLMs can process effectively both in input and output. However, existing image tokenization methods for MLLMs typically capture only global abstract concepts or uniformly segmented image patches, restricting MLLMs&#x27; capability to effectively understand or generate detailed visual content, particularly at the object level. To address this limitation, we propose an object-centric visual tokenizer based on Slot Attention specifically for MLLMs. In particular, based on the Q-Former encoder, diffusion decoder, and residual vector quantization, our proposed discretized slot tokens can encode local visual details while maintaining high-level semantics, and also align with textual data to be integrated seamlessly within a unified next-token prediction framework of LLMs. The resulting Slot-MLLM demonstrates significant performance improvements over baselines with previous visual tokenizers across various vision-language tasks that entail local detailed comprehension and generation. Notably, this work is the first demonstration of the feasibility of object-centric slot attention performed with MLLMs and in-the-wild natural images.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2505.17726'>page</a> · <a href='https://arxiv.org/pdf/2505.17726'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Enabling Real-Time Colonoscopic Polyp Segmentation on Commodity CPUs via Ultra-Lightweight Architecture</title>
+      <link>https://arxiv.org/abs/2602.04381</link>
+      <guid isPermaLink="false">arxiv:2602.04381</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Lan Ma</p>
+<p><b>Authors:</b> Weihao Gao, Zhuo Deng, Zheng Gong, Lan Ma</p>
+<p>Real-time polyp segmentation is essential for early colorectal cancer detection, yet clinical deployment remains blocked by GPU dependency. We introduce the UltraSeg family, a set of CPU-native segmentation models operating below 0.3M parameters. UltraSeg-108K (0.108M) establishes the extreme-compression frontier, while UltraSeg-130K (0.130M) integrates cross-layer lightweight fusion for enhanced multi-center generalization. The architecture replaces parameter-heavy components with grouped multi-rate dilated convolutions and attention-gated cross-layer fusion, achieving real-time throughput on a single CPU core (exceeding 50 FPS at 256*256 and 30 FPS at 352*352) without sacrificing clinical-grade accuracy. Evaluated on seven public datasets, UltraSeg-130K attains Dice scores exceeding 0.8 at both resolutions, substantially outperforming all existing sub-0.3M competitors. Notably, it approaches or exceeds UNet-Medium (7.76M parameters) on zero-shot external validations while using only 1.7% of its parameters, establishing the first strong baseline for CPU-native real-time polyp segmentation. When scaled to 4.38M parameters, UltraSeg achieves accuracy competitive with heavyweight state-of-the-art models while maintaining an order-of-magnitude parameter advantage, demonstrating that the proposed design principles yield intrinsic representational gains across the entire efficiency spectrum. By delivering the first clinically deployable, CPU-native real-time solution, this work provides an immediately usable tool for resource-limited settings and a reproducible blueprint for real-time medical AI beyond endoscopy. Source code is publicly available.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2602.04381'>page</a> · <a href='https://arxiv.org/pdf/2602.04381'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DLEBench: Evaluating Small-scale Object Editing Ability for Instruction-based Image Editing Model</title>
+      <link>https://arxiv.org/abs/2602.23622</link>
+      <guid isPermaLink="false">arxiv:2602.23622</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST — Yixin Cao</p>
+<p><b>Authors:</b> Shibo Hong, Boxian Ai, Jun Kuang, Wei Wang, FengJiao Chen, Zhongyuan Peng, Chenhao Huang, Yixin Cao</p>
+<p>Significant progress has been made in the field of Instruction-based Image Editing Models (IIEMs). However, while these models demonstrate plausible adherence to instructions and strong reasoning ability on current benchmarks, their ability to edit small objects remains underexplored, despite its importance for precise local editing and refining details in both real and generated images. In this paper, we introduce DeepLookEditBench (DLEBench), the first benchmark dedicated to assessing the abilities of IIEMs in editing small-scale objects. Specifically, we construct a challenging testbed comprising 1889 samples across seven instruction types. In these samples, target objects occupy only 1%-10% of the image area, covering complex scenarios such as partial occlusion and multi-object editing. To ensure robust evaluation on this benchmark, we propose an evaluation protocol with refined score rubrics to minimize subjectivity and ambiguity in two criteria: Instruction Following and Visual Consistency. This protocol also introduces a dual-mode evaluation framework (Tool-driven and Oracle-guided Modes) addressing the misalignment between LMM-as-a-Judge and human judgements on DLEBench. Empirical results on 10 IIEMs reveal significant performance gaps in small-scale object editing, highlighting the need for specialized benchmarks to advance this ability.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2602.23622'>page</a> · <a href='https://arxiv.org/pdf/2602.23622'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>R$^3$L: Reasoning 3D Layouts from Relative Spatial Relations</title>
+      <link>https://arxiv.org/abs/2605.06758</link>
+      <guid isPermaLink="false">arxiv:2605.06758</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Bing Wang</p>
+<p><b>Authors:</b> Zhifeng Gu, Yuqi Wang, Bing Wang</p>
+<p>Relative spatial relations provide a compact representation of spatial structure and are fundamental to relative spatial reasoning in 3D layout generation. Recent works leverage Multimodal Large Language Models (MLLMs) to infer such relations, but the inferred relations are often unreliable and are typically handled with post-hoc heuristics. In this paper, we propose R$^3$L, a general framework that improves the reliability and consistency of relative spatial reasoning for 3D layout generation. Our key motivation is that multi-hop reasoning requires repeated reference-frame transformations, which accumulate errors in inferred relations and lead to semantic and metric drift. To mitigate this, we propose invariant spatial decomposition to break coupled relation chains, and consistent spatial imagination to promote self-consistency through an imagine-and-revise loop. We further introduce supportive spatial optimization to ease pose optimization via global-to-local coordinate re-parameterization. Extensive experiments across diverse scene types and instructions demonstrate that R$^3$L produces more physically feasible and semantically consistent layouts. Notably, our analysis shows that resolving frame-induced inconsistencies is crucial for reliable multi-hop relative spatial reasoning. The code is available at https://github.com/Neal2020GitHub/R3L.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.06758'>page</a> · <a href='https://arxiv.org/pdf/2605.06758'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RELO: Reinforcement Learning to Localize for Visual Object Tracking</title>
+      <link>https://arxiv.org/abs/2605.07379</link>
+      <guid isPermaLink="false">arxiv:2605.07379</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab</p>
+<p><b>Authors:</b> Xin Chen, Chuanyu Sun, Jiao Xu, Houwen Peng, Dong Wang, Huchuan Lu, Kede Ma</p>
+<p>Conventional visual object trackers localize targets using handcrafted spatial priors, often in the form of heatmaps. Such priors provide only surrogate supervision and are poorly aligned with tracking optimization and evaluation metrics, such as intersection over union (IoU) and area under the success curve (AUC). Here, we introduce RELO, a REinforcement-learning-to-LOcalize method for visual object tracking that formulates target localization as a Markov decision process. Specifically, RELO replaces handcrafted spatial priors with a localization policy learned over spatial positions via reinforcement learning, with rewards combining frame-level IoU and sequence-level AUC. We additionally introduce layer-aligned temporal token propagation to improve semantic consistency across frames, with negligible computational overhead. Across multiple benchmarks, RELO achieves superior results, attaining 57.5% AUC on LaSOText without template updates. This confirms that reward-driven localization provides an effective alternative to prior-driven localization for visual object tracking.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.07379'>page</a> · <a href='https://arxiv.org/pdf/2605.07379'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DarkLLM: Learning Language-Driven Adversarial Attacks with Large Language Models</title>
+      <link>https://arxiv.org/abs/2605.18868</link>
+      <guid isPermaLink="false">arxiv:2605.18868</guid>
+      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
+      <category>cs.CR</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> NUS, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Ye Sun, Xin Wang, Jiaming Zhang, Yifeng Gao, Yixu Wang, Yifan Ding, Qixian Zhang, Henghui Ding, … <i>(+2 more)</i></p>
+<p>While vision and multimodal foundation models underpin critical tasks from perception to complex reasoning, they remain highly vulnerable to adversarial attacks. However, traditional adversarial attacks are typically limited to single, predefined objectives, tightly coupling each attack to a specific model or task, which restricts their scalability and flexibility in real-world scenarios. In this work, we present DarkLLM, a novel attack framework that trains an LLM to translate natural-language attack instructions into latent attack vectors, which are then decoded into visual adversarial perturbations. By leveraging natural-language instruction tuning, DarkLLM not only unifies targeted, untargeted, segmentation, and multi-model attacks within a single framework, but also achieves flexible and controllable adversarial generation, enabling each instruction to produce a perturbation that induces desired behaviors across heterogeneous models. Through extensive experiments across 4 tasks, 13 datasets, and 15 models, we demonstrate that DarkLLM with only 1B parameters can follow attacker instructions and generate highly effective attacks against CLIP, SAM, and frontier LLMs, revealing a systemic vulnerability in modern foundation models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-05-15 · <a href='https://arxiv.org/abs/2605.18868'>page</a> · <a href='https://arxiv.org/pdf/2605.18868'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies</title>
       <link>https://arxiv.org/abs/2505.07813</link>
