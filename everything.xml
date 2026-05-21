@@ -5,8 +5,52 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Thu, 21 May 2026 05:26:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 07:24:27 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>You Only Need Minimal RLVR Training: Extrapolating LLMs via Rank-1 Trajectories</title>
+      <link>https://huggingface.co/papers/2605.21468</link>
+      <guid isPermaLink="false">arxiv:2605.21468</guid>
+      <pubDate>Thu, 21 May 2026 07:24:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhepei Wei, Xinyu Zhu, Wei-Lin Chen, Chengsong Huang, Jiaxin Huang, Yu Meng, Hugging Face Daily Papers (curated)</p>
+<p>Reinforcement learning with verifiable rewards (RLVR) has become a dominant paradigm for improving reasoning in large language models (LLMs), yet the underlying geometry of the resulting parameter trajectories remains underexplored. In this work, we demonstrate that RLVR weight trajectories are extremely low-rank and highly predictable. Specifically, we find that the majority of downstream performance gains are captured by a rank-1 approximation of the parameter deltas, where the magnitude of this projection evolves near-linearly with training steps. Motivated by this, we propose a simple and compute-efficient method RELEX (REinforcement Learning EXtrapolation), which estimates the rank-1 subspace from a short observation window and extrapolates future checkpoints via linear regression, with no learned model required. Across three models (i.e., Qwen2.5-Math-1.5B, Qwen3-4B-Base, and Qwen3-8B-Base), RELEX produces checkpoints that match or exceed RLVR performance on both in-domain and out-of-domain benchmarks, requiring as few as 15% steps of full RLVR training. Remarkably, RELEX is able to extrapolate far beyond the observation window at no training cost, predicting checkpoints up to 10-20times beyond the observed prefix with continued improvement (e.g., observe only the first 50 steps and extrapolate to 1000 steps). Our ablation analysis confirms the minimalist sufficiency of RELEX: neither increasing the subspace rank nor employing non-linear modeling yields further gains in extrapolation. Finally, we show that RELEX&#x27;s success stems from a &quot;denoising&quot; effect: by projecting updates onto the rank-1 subspace, the model discards stochastic optimization noise that would otherwise degrade performance during extrapolation. Our code is available at https://github.com/weizhepei/RELEX.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://huggingface.co/papers/2605.21468'>page</a> · <a href='https://arxiv.org/pdf/2605.21468'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized GUI Agent Pretraining</title>
+      <link>https://huggingface.co/papers/2605.14747</link>
+      <guid isPermaLink="false">arxiv:2605.14747</guid>
+      <pubDate>Thu, 21 May 2026 07:24:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> U Oxford — (senior)</p>
+<p><b>Authors:</b> Weimin Xiong, Shuhao Gu, Bowen Ye, Zihao Yue, Lei Li, Feifan Song, Sujian Li, Hao Tian, … <i>(+1 more)</i></p>
+<p>Recent advances in multimodal large language models have driven growing interest in graphical user interface (GUI) agents, yet their generalization remains constrained by the scarcity of large-scale training data spanning diverse real-world applications. Existing datasets rely heavily on costly manual annotations and are typically confined to narrow domains. To address this challenge, we propose Video2GUI, a fully automated framework that extracts grounded GUI interaction trajectories directly from unlabeled Internet videos. Video2GUI employs a coarse-to-fine filtering strategy to identify high-quality GUI tutorial videos and convert them into structured agent trajectories. Applying this pipeline to 500 million video metadata entries, we construct WildGUI, a large-scale dataset containing 12 million interaction trajectories spanning over 1,500 applications and websites. Pre-training Qwen2.5-VL and Mimo-VL on WildGUI yields consistent improvements of 5-20% across multiple GUI grounding and action benchmarks, matching or surpassing state-of-the-art performance. We will release both the WildGUI dataset and the Video2GUI pipeline to support future research of GUI agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-14 · <a href='https://huggingface.co/papers/2605.14747'>page</a> · <a href='https://arxiv.org/pdf/2605.14747'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mix-Quant: Quantized Prefilling, Precise Decoding for Agentic LLMs</title>
+      <link>https://huggingface.co/papers/2605.20315</link>
+      <guid isPermaLink="false">arxiv:2605.20315</guid>
+      <pubDate>Thu, 21 May 2026 07:24:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS — (senior)</p>
+<p><b>Authors:</b> Haiquan Lu, Zigeng Chen, Gongfan Fang, Xinyin Ma, Xinchao Wang, Hugging Face Daily Papers (curated)</p>
+<p>LLM agents have recently emerged as a powerful paradigm for solving complex tasks through planning, tool use, memory retrieval, and multi-step interaction. However, these agentic workflows often introduce substantial input-side overhead, making the compute-intensive prefilling stage a key bottleneck in long-context, multi-turn inference. In this work, we propose Mix-Quant, a simple and effective phase-aware quantization framework for fast agentic inference. We first investigate FP4 quantization in agentic LLM workflows and observe that quantizing the entire inference process can incur significant performance degradation. In contrast, the prefilling stage exhibits substantial quantization redundancy and can therefore be quantized with minimal accuracy loss, despite being the dominant source of computation. Based on this insight, we apply high-throughput NVFP4 quantization to the prefilling phase while preserving BF16 precision for decoding. By decoupling prefilling acceleration from decoding quality, Mix-Quant combines phase-aware algorithmic quantization with hardware-efficient NVFP4 execution to alleviate the inference bottleneck in LLM agents. Extensive experiments across long-context and agentic benchmarks demonstrate that Mix-Quant largely preserves task performance while delivering significant efficiency improvements, achieving up to a 3x speedup during prefilling.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2605.20315'>page</a> · <a href='https://arxiv.org/pdf/2605.20315'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>CutVerse: A Compositional GUI Agents Benchmark for Media Post-Production Editing</title>
+      <link>https://huggingface.co/papers/2605.19484</link>
+      <guid isPermaLink="false">arxiv:2605.19484</guid>
+      <pubDate>Thu, 21 May 2026 07:24:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS — (senior)</p>
+<p><b>Authors:</b> Haobo Hu, Xiangwu Guo, Zhiheng Chen, Difei Gao, Haotian Liu, Libiao Jin, Qi Mao, Hugging Face Daily Papers (curated)</p>
+<p>While GUI agents have made significant progress in web navigation and basic operating system tasks, their capabilities in professional creative workflows remain largely underexplored. To bridge this gap, we introduce Cutverse, a benchmark designed to systematically evaluate autonomous GUI agents in realistic media post-production environments. We curate expert demonstrations across 7 professional applications (e.g., Premiere Pro, Photoshop), covering 186 complex, long-horizon tasks grounded in authentic editing workflows, involving dense multimodal interfaces and tightly coupled interaction sequences. To support scalable evaluation, we develop a lightweight parser that transforms raw screen recordings and low-level interaction logs into structured, compositional GUI action trajectories with precise grounding. Extensive evaluations reveal that existing agents achieve only 36.0\% task success on realistic media editing tasks, underscoring the challenges posed by complex, long-horizon media post-production workflows in our benchmark.While current models demonstrate promising spatial grounding, multimodal alignment, and coordinated action execution, they remain limited in long-horizon reliability and domain-specific planning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2605.19484'>page</a> · <a href='https://arxiv.org/pdf/2605.19484'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>LLMs on the Line: Data Determines Loss-to-Loss Scaling Laws</title>
       <link>https://arxiv.org/abs/2502.12120</link>
