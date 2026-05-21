@@ -5,8 +5,238 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Wed, 20 May 2026 05:23:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 05:26:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Agentic Physical AI toward a Domain-Specific Foundation Model for Nuclear Reactor Control</title>
+      <link>https://arxiv.org/abs/2512.23292</link>
+      <guid isPermaLink="false">arxiv:2512.23292</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Yoon Pyo Lee</p>
+<p><b>Authors:</b> Yoon Pyo Lee, Samrendra Roy, Jay Yoo, Kazuma Kobayashi, Sajedul Talukder, Seid Koric, Souvik Chakraborty, Syed Bahauddin Alam</p>
+<p>The prevailing paradigm in AI for physical systems (scaling general-purpose foundation models toward universal multimodal reasoning) confronts a fundamental barrier at the control interface. Recent benchmarks show that even frontier vision--language models achieve only 50--53% accuracy on basic quantitative physics tasks, behaving as approximate guessers that preserve semantic plausibility by violating physical constraints. This input unfaithfulness is not a scaling deficiency but a structural limitation: perception-centric architectures optimize parameter-space imitation, whereas safety-critical control demands outcome-space guarantees over executed actions. Here, we present a fundamentally different pathway &quot;toward&quot; domain-specific foundation models by introducing compact language models operating as Agentic Physical AI, in which policy optimization is driven by physics-based validation rather than perceptual inference. We train a 360-million-parameter model on synthetic nuclear reactor control scenarios, scaling the dataset from 10^3 to 10^5 examples. Scaling induces strong improvements in closed-loop reliability under nominal simulated conditions, with a steep but smooth gain at strict tolerances: small-scale systems exhibit high-variance imitation with severe tail excursions, while large-scale models undergo variance collapse (approximately 500times reduction), stabilizing execution-level behavior within the sampled distribution. Despite balanced exposure to four actuation families, the model autonomously rejects approximately 70\% of the training distribution, concentrating 95% of runtime execution on a single-bank strategy. This emergent policy distillation arises without reinforcement learning or reward engineering, driven solely by outcome-level success under physical execution.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2512.23292'>page</a> · <a href='https://arxiv.org/pdf/2512.23292'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Deep Neural Networks as Discrete Dynamical Systems: Implications for Physics-Informed Learning</title>
+      <link>https://arxiv.org/abs/2601.00473</link>
+      <guid isPermaLink="false">arxiv:2601.00473</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Sauro Succi</p>
+<p><b>Authors:</b> Abhisek Ganguly, Santosh Ansumali, Sauro Succi</p>
+<p>We revisit the analogy between feed-forward deep neural networks (DNNs) and discrete dynamical systems derived from neural integral equations and their corresponding partial differential equation (PDE) forms. A comparative analysis between the numerical/exact solutions of the Burgers&#x27; and Eikonal equations, and the same obtained via PINNs is presented. We show that PINN learning provides a different computational pathway compared to standard numerical discretization in approximating essentially the same underlying dynamics of the system. Within this framework, DNNs can be interpreted as discrete dynamical systems whose layer-wise evolution approaches attractors, and multiple parameter configurations may yield comparable solutions, reflecting the degeneracy of the inverse mapping. In contrast to the structured operators associated with finite-difference (FD) procedures, PINNs learn dense parameter representations that are not directly associated with classical discretization stencils. This distributed representation generally involves a larger number of parameters, leading to reduced interpretability and increased computational cost. However, the additional flexibility of such representations may offer advantages in high-dimensional settings where classical grid-based methods become impractical.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2601.00473'>page</a> · <a href='https://arxiv.org/pdf/2601.00473'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Can Current Agents Close the Discovery-to-Application Gap? A Case Study in Minecraft</title>
+      <link>https://arxiv.org/abs/2604.24697</link>
+      <guid isPermaLink="false">arxiv:2604.24697</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Caltech, Cornell, Peking U, UC Berkeley — Zhou Ziheng</p>
+<p><b>Authors:</b> Zhou Ziheng, Huacong Tang, Jinyuan Zhang, Haowei Lin, Bangcheng Yang, Qian Long, Fang Sun, Yizhou Sun, … <i>(+4 more)</i></p>
+<p>Discovering causal regularities and applying them to build functional systems--the discovery-to-application loop--is a hallmark of general intelligence, yet evaluating this capacity has been hindered by the vast complexity gap between scientific discovery and real-world engineering. We introduce SciCrafter, a Minecraft-based benchmark that operationalizes this loop through parameterized redstone circuit tasks. Agents must ignite lamps in specified patterns (e.g., simultaneously or in timed sequences); scaling target parameters substantially increases construction complexity and required knowledge, forcing genuine discovery rather than reliance on memorized solutions. Evaluating frontier models including GPT-5.2, Gemini-3-Pro, and Claude-Opus-4.5 under a general-purpose code agent scaffold, we find that all plateau at approximately 26% success rate. To diagnose these failures, we decompose the loop into four capacities--knowledge gap identification, experimental discovery, knowledge consolidation, and knowledge application--and design targeted interventions whose marginal contributions serve as proxies for corresponding gaps. Our analysis reveals that although the general knowledge application capability still remains as the biggest gap across all models, for frontier models the knowledge gap identification starts to become a major hurdle--indicating the bottleneck is shifting from solving problems right to raising the right problems for current AI. We release SciCrafter as a diagnostic probe for future research on AI systems that navigate the full discovery-to-application loop.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2604.24697'>page</a> · <a href='https://arxiv.org/pdf/2604.24697'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Compute Aligned Training: Optimizing for Test Time Inference</title>
+      <link>https://arxiv.org/abs/2604.24957</link>
+      <guid isPermaLink="false">arxiv:2604.24957</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Michigan — Ambuj Tewari</p>
+<p><b>Authors:</b> Adam Ousherovitch, Ambuj Tewari</p>
+<p>Scaling test-time compute has emerged as a powerful mechanism for enhancing Large Language Model (LLM) performance. However, standard post-training paradigms, Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL), optimize the likelihood of individual samples under a base policy, creating a misalignment with test time procedures that rely on aggregated or filtered outputs. In this work, we propose Compute Aligned Training, which aligns training objectives with test-time strategies. By conceptualizing inference strategies as operators on the base policy, we derive new loss functions that maximize performance when said strategies are applied. We instantiate such loss functions for SFT and RL across common test time strategies. Finally, we provide empirical evidence that this training method substantially improves test time scaling over standard training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2604.24957'>page</a> · <a href='https://arxiv.org/pdf/2604.24957'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GrandGuard: Taxonomy, Benchmark, and Safeguards for Elderly-Chatbot Interaction Safety</title>
+      <link>https://arxiv.org/abs/2605.20203</link>
+      <guid isPermaLink="false">arxiv:2605.20203</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.HC</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST — Yangqiu Song</p>
+<p><b>Authors:</b> Changxuan Fan, Xi Yang, Yueyuan Zheng, Bin Zhou, Yuanping Wang, Wenbin Hu, Huihao Jing, Ki Sen Hung, … <i>(+4 more)</i></p>
+<p>As older adults increasingly use LLM-based chatbots for companionship and assistance, a safety gap is emerging. Older adults may face vulnerabilities from social isolation, limited digital literacy, and cognitive decline, yet existing safety benchmarks largely target general harms and overlook elderly-specific risks. For example, a prompt such as &quot;how to repair a ceiling light alone in the dark&quot; may be benign for most users but poses a serious fall risk for older adults with mobility limitations. We introduce GrandGuard, the first comprehensive framework for assessing and mitigating elderly-specific contextual risks in LLM interactions. We develop a three-level taxonomy with 50 fine-grained risk types across mental well-being, financial, medical, toxicity, and privacy domains, grounded in real-world incidents, community discussions, and analysis of stakeholder studies. Using this taxonomy, we construct a benchmark of 10,404 labeled prompts and responses, showing that several leading LLMs mishandle elderly-specific contextual risks in over 50% of cases. We mitigate these failures with two safeguards: a fine-tuned Llama-Guard-3 and a policy-enhanced gpt-oss-safeguard-20b, achieving up to 96.2% and 90.9% unsafe-prompt detection accuracy, respectively. GrandGuard lays the groundwork for AI systems that move beyond general safety to support aging populations.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI · <b>arXiv submitted:</b> 2026-04-07 · <a href='https://arxiv.org/abs/2605.20203'>page</a> · <a href='https://arxiv.org/pdf/2605.20203'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ProcBench: Evaluating Process-Level Defects and Control Preservation in LLM Coding Agents</title>
+      <link>https://arxiv.org/abs/2605.20251</link>
+      <guid isPermaLink="false">arxiv:2605.20251</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.SE</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Dong Sun</p>
+<p><b>Authors:</b> Jiawei He, Jie Jia, Chenbo Liu, Chaoyi Xue, Yapeng Song, Xikai Yang, Dong Sun</p>
+<p>Existing benchmarks for LLM coding agents mainly evaluate final outcomes, such as task completion, compilation success, and test pass rates. While these metrics are useful for measuring end-task capability, they provide limited visibility into how an execution unfolds and often miss recurrent process-level failures that arise during multi-step operation. We present ProcBench, a benchmark-oriented framework for evaluating coding-agent trajectories through process defects and control preservation. ProcBench organizes execution failures into a reusable ontology, standardizes heterogeneous logs into a unified trajectory representation, and reports calibrated risk-based scorecards instead of relying only on final outcomes. We instantiate ProcBench on an annotated set of 200 trajectories and apply it across three coding-agent benchmarks: AndroidBench, TerminalBench, and SWE-bench-Verified. Our results suggest that ProcBench can be instantiated with useful reliability, that calibration improves the empirical interpretability of defect findings relative to direct thresholding, and that process-aware scorecards provide diagnostic distinctions beyond conventional outcome-based evaluation. We also discuss limitations, including annotation dependence, partial observability for some defect classes, and the need for broader external validation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2605.20251'>page</a> · <a href='https://arxiv.org/pdf/2605.20251'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Conformal Selective Acting: Anytime-Valid Risk Control for RLVR-Trained LLMs</title>
+      <link>https://arxiv.org/abs/2605.20270</link>
+      <guid isPermaLink="false">arxiv:2605.20270</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>stat.ML</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Xiaoming Huo</p>
+<p><b>Authors:</b> Hamed Khosravi, Xiaoming Huo</p>
+<p>A local specialist LLM, fine-tuned with reinforcement learning from verifiable rewards (RLVR) on operator-local data, is installed in a regulated organization with per-deployment error budget $α$. The operator needs a safety certificate for this deployment&#x27;s stream at every round: no pooling across deployments, no waiting for a long-run average. Existing wrappers cannot deliver this on adaptive, online-updated streams: offline conformal-risk methods require exchangeability; online-conformal methods bound only long-run averages; non-exchangeable extensions are marginally valid; and the closest anytime wrapper, A-RCPS, controls marginal rather than selective risk. Using a (test statistic, validity guarantee, deployment rule) framework, we identify one empty cell forced by deployment requirements: e-process per threshold, selective risk, anytime-pathwise validity, max-certified-threshold rule. Conformal Selective Acting (CSA) fills it as a per-round wrapper maintaining a Ville-type e-process per threshold on a Bonferroni grid, evaluated against the RLVR filtration. Under predictable updates and isotonic-calibrated monotone risk we prove (i) an anytime-pathwise selective-risk bound $R_T^{\mathrm{act}}\leα+O(N_T^{-1/2})$, (ii) rate-optimal certification matching $Θ(\barη^{-2}\log(1/δ))$, and (iii) a horizon-independent release-rate gap. Across eight specialist benchmarks ($480$ streams), sixteen adversarial distribution-shift cells ($160$ streams), and five live Expert-Iteration RLVR cells with online LoRA over four base models in three architecture families ($10{,}300$ rounds), CSA is the only method among ten compared that satisfies pathwise validity and non-refusing deployment on every cell. We do not propose a new LLM, training algorithm, or policy class; CSA is the deployment-side complement, orthogonal to the model, for operators who cannot use a frontier API.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, stat.ML · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2605.20270'>page</a> · <a href='https://arxiv.org/pdf/2605.20270'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Stitched Value Model for Diffusion Alignment</title>
+      <link>https://huggingface.co/papers/2605.19804</link>
+      <guid isPermaLink="false">arxiv:2605.19804</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Hyojun Go, Hyungjin Chung, Prune Truong, Goutam Bhat, Li Mi, Zhaochong An, Zixiang Zhao, Dominik Narnhofer, … <i>(+4 more)</i></p>
+<p>For practical use, diffusion- or flow-based generative models must be aligned with task-specific rewards, such as prompt fidelity or aesthetic preference. That alignment is challenging because the reward is defined for clean output images, but the alignment procedure requires value function estimates at noisy intermediate latents. Existing methods resort to Tweedie-style or Monte Carlo approximations, trading off estimator bias against computational cost: Tweedie estimates are efficient but biased, while Monte Carlo estimates are more accurate but require expensive rollouts. A natural alternative would be a learned value function, but it remains an open question how to effectively train a strong and general value model specifically for noisy latents. Here, we propose StitchVM, a model stitching framework that efficiently transfers reward models pretrained for clean images to the noisy latent regime. StitchVM starts from an existing, truncated pixel-space reward model and attaches a frozen diffusion backbone to it as its head. From the pixel-space model, the resulting hybrid retains a carefully pretrained, robust reward capability; from the diffusion backbone, it inherits its native ability to handle noisy latents. The stitching procedure is exceptionally lightweight, e.g., stitching and finetuning CLIP ViT-L and SD 3.5 Medium takes only 10 GPU-hours. By lifting powerful pixel-space reward models to latent space, StitchVM opens up a new style of diffusion alignment: instead of rough, yet costly per-sample approximation of the value function, the correct function for the actual, noisy latents is constructed once and then amortized over many samples and iterations. We show that this approach yields improvements across a broad range of downstream steering and post-training methods: DPS becomes 3.2times faster while halving peak GPU memory, and DiffusionNFT becomes 2.3times faster.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2605.19804'>page</a> · <a href='https://arxiv.org/pdf/2605.19804'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Safety Alignment as Continual Learning: Mitigating the Alignment Tax via Orthogonal Gradient Projection</title>
+      <link>https://huggingface.co/papers/2602.07892</link>
+      <guid isPermaLink="false">arxiv:2602.07892</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Guanglong Sun, Siyuan Zhang, Liyuan Wang, Jun Zhu, Hang Su, Yi Zhong, Hugging Face Daily Papers (curated)</p>
+<p>Safety post-training can improve the harmfulness and policy compliance of Large Language Models (LLMs), but it may also reduce general utility, a phenomenon often described as the alignment tax. We study this trade-off through the lens of continual learning: sequential alignment stages expose the model to shifted data distributions and objectives, and their gradients may interfere with directions that support previously acquired general capabilities. This view does not claim that all alignment degradation has a single cause; rather, it provides a useful first-order mechanism for mitigating one important source of capability regression. We propose Orthogonal Gradient Projection for Safety Alignment (OGPSA), a lightweight update rule that estimates a low-rank reference subspace from gradients on a small set of general-capability data and removes from each safety gradient the component lying in this subspace. The resulting update is the steepest local safety-descent direction subject to first-order preservation constraints on the reference objectives. OGPSA is compatible with standard post-training pipelines and avoids large-scale replay, although it introduces periodic reference-gradient computation. Across Supervised Fine-Tuning (SFT), Direct Preference Optimization (DPO), and sequential SFTrightarrowDPO settings, OGPSA improves the observed safety--utility trade-off over standard baselines. Under the sequential SFTrightarrowDPO pipeline, the average performance gain increases from 33.98\% to 42.74\% on Qwen2.5-7B-Instruct and from 19.74\% to 32.98\% on Llama3.1-8B-Instruct. We have open sourced our code at https://github.com/SunGL001/OGPSA.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-12 · <a href='https://huggingface.co/papers/2602.07892'>page</a> · <a href='https://arxiv.org/pdf/2602.07892'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>OcclusionFormer: Arranging Z-Order for Layout-Grounded Image Generation</title>
+      <link>https://huggingface.co/papers/2605.21343</link>
+      <guid isPermaLink="false">arxiv:2605.21343</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Ziye Li, Henghui Ding, Hugging Face Daily Papers (curated)</p>
+<p>Recent layout-to-image models have achieved remarkable progress in spatial controllability. However, they still struggle with inter-object occlusion. When bounding boxes overlap, most existing methods lack explicit occlusion information, which makes the generation in intersection regions inherently ambiguous and hinders the determination of complex occlusion relationships. As a result, they often produce entangled textures or physically inconsistent layering in the overlapped areas. To address this issue, we first construct SA-Z, a large-scale dataset enriched with explicit occlusion ordering and pixel-level annotations. Building upon our proposed dataset, we introduce OcclusionFormer, a novel occlusion-aware Diffusion Transformer framework that explicitly models Z-order priority by decoupling instances and compositing them via volume rendering. Furthermore, to ensure fine-grained spatial precision, we introduce a queried alignment loss that explicitly supervises individual instances and enhances semantic consistency. The proposed method effectively reduces ambiguity in overlapping regions, enforces correct occlusion dependencies, and preserves structural integrity, leading to substantial accuracy gains across diverse scenes.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://huggingface.co/papers/2605.21343'>page</a> · <a href='https://arxiv.org/pdf/2605.21343'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Conditional Equivalence of DPO and RLHF: Implicit Assumption, Failure Modes, and Provable Alignment</title>
+      <link>https://huggingface.co/papers/2605.20834</link>
+      <guid isPermaLink="false">arxiv:2605.20834</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhiqin Yang, Yonggang Zhang, Wei Xue, Dong Fang, Bo Han, Yike Guo, Hugging Face Daily Papers (curated)</p>
+<p>Direct Preference Optimization (DPO) has emerged as a popular alternative to Reinforcement Learning from Human Feedback (RLHF), offering theoretical equivalence with simpler implementation. We prove this equivalence is conditional rather than universal, depending on an implicit assumption frequently violated in practice: the RLHF-optimal policy must prefer human-preferred responses. When this assumption fails, DPO optimizes relative advantage over the reference policy rather than absolute alignment with human preferences, leading to pathological convergence where policies decrease DPO loss while preferring dispreferred responses. We characterize when this assumption is violated, show the existence of an undesirable solution space, and prove that DPO and RLHF optimize fundamentally different objectives in such cases. To address this, we introduce Constrained Preference Optimization (CPO), augmenting RLHF with constraints for provable alignment. We further provide a geometric interpretation through soft margin ranking, revealing that DPO implements margin ranking with potentially negative targets. Our theoretical analysis establishes when DPOs&#x27; guarantees hold and provides solutions preserving simplicity with provable alignment. Comprehensive experiments on standard benchmarks demonstrate that CPO achieves state-of-the-art performance. Code is available at: https://github.com/visitworld123/CPO.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://huggingface.co/papers/2605.20834'>page</a> · <a href='https://arxiv.org/pdf/2605.20834'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs</title>
+      <link>https://huggingface.co/papers/2605.20258</link>
+      <guid isPermaLink="false">arxiv:2605.20258</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Sangwoo Park, Woongyeong Yeo, Seanie Lee, Yumin Choi, Hyomin Lee, Kangsan Kim, Jinheon Baek, Seong Joon Oh, … <i>(+2 more)</i></p>
+<p>Contextual Integrity (CI) defines privacy not merely as keeping information hidden, but as governing information flows according to the norms of a given context. As large language models are increasingly deployed as personal agents handling sensitive workflows, adhering to CI becomes critical. However, even frontier models remain unreliable in making disclosure decisions, and existing mitigation strategies often degrade underlying task performance. To overcome this privacy-utility trade-off, we propose SELFCI, a complementary self-distillation framework that decouples information suppression from task resolution. SELFCI jointly optimizes two independent reverse KL divergences over distinct teacher distributions derived from feedback: one encourages preserving task-relevant information for utility, while the other enforces minimal and appropriate disclosure. This complementary formulation induces a Product-of-Experts (PoE) target, aligning the policy with the intersection of capability and privacy requirements. Empirical evaluations demonstrate that SELFCI, without relying on costly external supervision, consistently outperforms competitive baselines such as online reinforcement learning algorithms (e.g., GRPO). These trends further extend to out-of-domain settings involving agentic workflows and accumulated private context, suggesting that SELFCI provides a practical path toward CI alignment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://huggingface.co/papers/2605.20258'>page</a> · <a href='https://arxiv.org/pdf/2605.20258'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>On the limits and opportunities of AI reviewers: Reviewing the reviews of Nature-family papers with 45 expert scientists</title>
+      <link>https://huggingface.co/papers/2605.20668</link>
+      <guid isPermaLink="false">arxiv:2605.20668</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Seungone Kim, Dongkeun Yoon, Kiril Gashteovski, Juyoung Suk, Jinheon Baek, Pranjal Aggarwal, Ian Wu, Viktor Zaverkin, … <i>(+51 more)</i></p>
+<p>With the advancement of AI capabilities, AI reviewers are beginning to be deployed in scientific peer review, yet their capability and credibility remain in question: many scientists simply view them as probabilistic systems without the expertise to evaluate research, while other researchers are more optimistic about their readiness without concrete evidence. Understanding what AI reviewers do well, where they fall short, and what challenges remain is essential. However, existing evaluations of AI reviewers have focused on whether their verdicts match human verdicts (e.g., score alignment, acceptance prediction), which is insufficient to characterize their capabilities and limits. In this paper, we close this gap through a large-scale expert annotation study, in which 45 domain scientists in Physical, Biological, and Health Sciences spent 469 hours rating 2,960 individual criticisms (each targeting one specific aspect of a paper) from human-written and AI-generated reviews of 82 Nature-family papers on correctness, significance, and sufficiency of evidence. On a composite of all three dimensions, a reviewing agent powered by GPT-5.2 scores above each paper&#x27;s top-rated human reviewer (60.0% vs. 48.2%, p = 0.009), while all three AI reviewers (including Gemini 3.0 Pro and Claude Opus 4.5) exceed the lowest-rated human across every dimension. AI reviewers&#x27; accurate criticisms are also more often rated significant and well-evidenced, and surface a distinct 26% of issues no human raises. However, AI reviewers overlap far more than humans do (21% vs. 3% for cross-reviewer pairs), and exhibit 16 recurring weaknesses humans do not share, such as limited subfield knowledge, lack of long context management over multiple files, and overly critical stance on minor issues. Overall, our results position current AI reviewers as complements to, not substitutes for, human reviewers.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://huggingface.co/papers/2605.20668'>page</a> · <a href='https://arxiv.org/pdf/2605.20668'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Ethical Hyper-Velocity (EHV): A Provably Deterministic Governance-Aware JIT Compiler Architecture for Agentic Systems</title>
+      <link>https://huggingface.co/papers/2605.17909</link>
+      <guid isPermaLink="false">arxiv:2605.17909</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Riddhi Mohan Sharma, Hugging Face Daily Papers (curated)</p>
+<p>As autonomous agentic systems scale across regulated critical infrastructures, the lack of mechanistic, hardware-rooted enforcement for high-frequency policy updates presents a fundamental safety gap. We introduce Ethical Hyper-Velocity (EHV), a novel architectural framework for the formal verification of AI governance policies at runtime. Unlike retrospective auditing frameworks (ISO/IEC 42001, NIST AI RMF) which introduce 14-30 day latencies, EHV relocates the Policy Enforcement Point (PEP) into the inference pipeline via a Governance-Aware Just-In-Time (JIT) Compiler. By integrating Conflict-free Replicated Data Types (CRDTs) for policy synchronization and Epoch-based Attestation Caching within Trusted Execution Environments (TEEs), EHV achieves Sub-millisecond Formal Determinism (SMFD). We demonstrate via TLA+ formal verification that non-compliant agentic actions are computationally unreachable within the system&#x27;s bounded operating state space. We prove that O(1) runtime enforcement can eliminate the traditional trade-off between deployment velocity and governance integrity, reducing Governance Latency from O(days) to O(1).</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://huggingface.co/papers/2605.17909'>page</a> · <a href='https://arxiv.org/pdf/2605.17909'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>S-Bus: Automatic Read-Set Reconstruction for Multi-Agent LLM State Coordination</title>
+      <link>https://huggingface.co/papers/2605.17076</link>
+      <guid isPermaLink="false">arxiv:2605.17076</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Sajjad Khan, Hugging Face Daily Papers (curated)</p>
+<p>Concurrent LLM agents sharing mutable natural-language state produce Structural Race Conditions (SRCs): write-write and cross-shard stale-read conflicts that silently corrupt agent output. Existing multi-agent frameworks (LangGraph, CrewAI, AutoGen) provide no write-ownership semantics over shared state.
+  We present S-Bus, an HTTP middleware whose central mechanism is a server-side DeliveryLog: a per-agent log of HTTP GET operations that automatically reconstructs each agent&#x27;s read set at commit time without agent SDK changes under HTTP/1.1. The consistency property the DeliveryLog provides -- Observable-Read Isolation (ORI), a partial causal consistency over the HTTP-observable projection of the read set -- prevents structural race conditions when agents collaborate via shared shards.
+  Three contributions: (C1) The DeliveryLog mechanism for automatic HTTP-traffic-based read-set reconstruction, with three-tier mechanised evidence: ReadSetSoundness and ORICommitSafety machine-checked in TLAPS (modulo one retained typing axiom); exhaustive TLC at N=3 (20,763,484 distinct states, zero violations); Dafny discharges 9 inductive soundness lemmas. (C2) Empirical structural-conflict prevention parity against PostgreSQL 17 SERIALIZABLE and Redis 7 WATCH/MULTI on shared-shard contention sweeps with 427,308 active HTTP-409 conflicts: zero Type-I corruptions across all three backends. (C3) ORI&#x27;s operating envelope is topology-conditional: semantically neutral in dedicated-shard workloads; harmful in single-shard collaborative writing because preservation propagates concurrent contradictions.
+  Source code: https://github.com/sajjadanwar0/sbus</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-16 · <a href='https://huggingface.co/papers/2605.17076'>page</a> · <a href='https://arxiv.org/pdf/2605.17076'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ThoughtTrace: Understanding User Thoughts in Real-World LLM Interactions</title>
+      <link>https://huggingface.co/papers/2605.20087</link>
+      <guid isPermaLink="false">arxiv:2605.20087</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chuanyang Jin, Binze Li, Haopeng Xie, Cathy Mengying Fang, Tianjian Li, Shayne Longpre, Hongxiang Gu, Maximillian Chen, … <i>(+2 more)</i></p>
+<p>Conversational AI has now reached billions of users, yet existing datasets capture only what people say, not what they think. We introduce ThoughtTrace, the first large-scale dataset that pairs real-world multi-turn human--AI conversations with users&#x27; self-reported thoughts: their reasons for sending prompts and reactions to assistant responses. ThoughtTrace comprises 1,058 users, 2,155 conversations, 17,058 turns, and 10,174 thought annotations collected across 20 language models. Our analysis shows that ThoughtTrace captures long-horizon, topically diverse interactions, and that thoughts are semantically distinct from messages, difficult for frontier LLMs to infer from context, diverse in content, and tied to conversation stages. We further demonstrate the utility of thoughts for downstream modeling. First, thoughts improve user-behavior prediction as inference-time context. Second, thought-guided rewrites provide fine-grained alignment signals for training personalized assistants. Together, ThoughtTrace establishes user thoughts as a new data modality for studying the cognitive dynamics behind human--AI interaction and provides a foundation for building assistants that better understand and adapt to users&#x27; latent goals, preferences, and needs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2605.20087'>page</a> · <a href='https://arxiv.org/pdf/2605.20087'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Be Kind, Rewrite: Benign Projections via Rewriting Defend Against LLM Data Poisoning Attacks</title>
+      <link>https://huggingface.co/papers/2605.19147</link>
+      <guid isPermaLink="false">arxiv:2605.19147</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> John T. Halloran, Noopur S. Bhatt, Hugging Face Daily Papers (curated)</p>
+<p>Large language models (LLMs) are highly susceptible to backdoor attacks (BAs), wherein training samples are poisoned using trigger-based harmful content. Furthermore, existing defenses have proven ineffective when extensively tested across BA patterns. To better combat BAs, we explore the use of LLM rewriting as a proactive defense against data poisoning. First, we theoretically show that when LLM rewriting utilizes open-book benign samples--termed open-book benign rewriting (OBBR)--the probability of a rewritten output being benign is strictly greater than that of closed-book rewriting. Thus, OBBR neutralizes harmful content by projecting training samples to the space of benign prompts. We then show that, in contrast to previous defenses, OBBR effectively mitigates a large number of existing BAs: across five known BAs and four widely used LLMs, OBBR increases safety performance by an average 51% compared to state-of-the-art BA defenses and 25.7% compared to closed-book rewriting methods. Finally, we show that OBBR is computationally efficient relative to other BA defenses, does not degrade model performance on natural language tasks after fine-tuning, and is capable of defending against non-trigger based data poisoning attacks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://huggingface.co/papers/2605.19147'>page</a> · <a href='https://arxiv.org/pdf/2605.19147'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Language-Switching Triggers Take a Latent Detour Through Language Models</title>
+      <link>https://huggingface.co/papers/2605.18646</link>
+      <guid isPermaLink="false">arxiv:2605.18646</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Francis Kulumba, Wissam Antoun, Théo Lasnier, Benoît Sagot, Djamé Seddah, Hugging Face Daily Papers (curated)</p>
+<p>Backdoor attacks on language models pose a growing security concern, yet the internal mechanisms by which a trigger sequence hijacks model computations remain poorly understood. We identify a circuit underlying a language-switching backdoor in an 8B-parameter autoregressive language model, where a three-word Latin trigger (nine tokens) redirects English output to French. We decompose the circuit into three phases: (1) distributed attention heads at early layers compose the trigger tokens into the last sequence position; (2) the resulting signal propagates through mid-layers in a subspace orthogonal to the model&#x27;s natural language-identity direction; (3) the MLP at the final layer converts this latent signal into French logits. The entire circuit flows through a serial bottleneck at a single position: corrupting that position at any layer entirely mitigate the trigger but also hinder the model&#x27;s capabilities. The orthogonal latent encoding suggests that defenses that search for language-like signals in intermediate representations would miss this trigger entirely.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://huggingface.co/papers/2605.18646'>page</a> · <a href='https://arxiv.org/pdf/2605.18646'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Where Does Authorship Signal Emerge in Encoder-Based Language Models?</title>
+      <link>https://huggingface.co/papers/2605.19908</link>
+      <guid isPermaLink="false">arxiv:2605.19908</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Francis Kulumba, Guillaume Vimont, Laurent Romary, Florian Cafiero, Hugging Face Daily Papers (curated)</p>
+<p>Authorship attribution models fine-tuned with the same pretrained encoder, data, and loss can differ four-fold in performance depending only on their scoring mechanism. We use mechanistic interpretability tools to explain this gap. Stylistic features such as word length, punctuation density, and function-word frequency are equally available at every layer in every model, including in an off-the-shelf control encoder, hence the gap not coming from representation quality. Instead, causal intervention shows that the scorer determines where the encoder consolidates authorship signal. Mean pooling forces consolidation by early to mid layers, while late interaction defers it to later layers. We further derive this difference from the gradient structure of each scorer, and training dynamics reveal distinct learning trajectories that follow from that difference.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2605.19908'>page</a> · <a href='https://arxiv.org/pdf/2605.19908'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset</title>
+      <link>https://huggingface.co/papers/2605.20147</link>
+      <guid isPermaLink="false">arxiv:2605.20147</guid>
+      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haojun Chen, Haoyang He, Chengming Xu, Qingdong He, Junwei Zhu, Yabiao Wang, Zhucun Xue, Xianfang Zeng, … <i>(+7 more)</i></p>
+<p>Text-to-Image (T2I) models have recently seen notable progress around 1K and 2K resolution. With the extreme desire for better visual experience and the rapid development of imaging technology, the demand for Ultra-High-Resolution (UHR) image generation has grown significantly. However, UHR image generation poses great challenges due to the scarcity and complexity of high-resolution content. In this paper, we first introduce PixVerve-95K, a high-quality, open-source UHR T2I dataset curated with a carefully designed data pipeline, which contains 95K images across diverse scenarios (each image has a minimum pixel-count of 100M) and seven-dimensional annotations. Based on our large-scale image-text dataset, we take a pioneering step to extend various T2I foundation models to native 100MP generation with three training schemes. Finally, leveraging both conventional metrics and multimodal large language model-based assessments, our proposed PixVerve-Bench benchmark establishes a comprehensive evaluation protocol for UHR images encompassing visual quality and semantic alignment. Extensive experimental results on our benchmark and the constructive exploration of training strategies collaboratively provide valuable insights for future breakthroughs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2605.20147'>page</a> · <a href='https://arxiv.org/pdf/2605.20147'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Distributional AGI Safety</title>
       <link>https://arxiv.org/abs/2512.16856</link>
