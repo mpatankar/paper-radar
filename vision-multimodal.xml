@@ -5,8 +5,96 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Thu, 21 May 2026 07:24:27 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 05:23:13 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>QKFormer: Hierarchical Spiking Transformer using Q-K Attention</title>
+      <link>https://arxiv.org/abs/2403.16552</link>
+      <guid isPermaLink="false">arxiv:2403.16552</guid>
+      <pubDate>Fri, 22 May 2026 05:23:13 GMT</pubDate>
+      <category>cs.NE</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech, Peking U — Chenlin Zhou, Yonghong Tian</p>
+<p><b>Authors:</b> Chenlin Zhou, Han Zhang, Zhaokun Zhou, Liutao Yu, Liwei Huang, Xiaopeng Fan, Li Yuan, Zhengyu Ma, … <i>(+2 more)</i></p>
+<p>Spiking Transformers, which integrate Spiking Neural Networks (SNNs) with Transformer architectures, have attracted significant attention due to their potential for energy efficiency and high performance. However, existing models in this domain still suffer from suboptimal performance. We introduce several innovations to improve the performance: i) We propose a novel spike-form Q-K attention mechanism, tailored for SNNs, which efficiently models the importance of token or channel dimensions through binary vectors with linear complexity. ii) We incorporate the hierarchical structure, which significantly benefits the performance of both the brain and artificial neural networks, into spiking transformers to obtain multi-scale spiking representation. iii) We design a versatile and powerful patch embedding module with a deformed shortcut specifically for spiking transformers. Together, we develop QKFormer, a hierarchical spiking transformer based on Q-K attention with direct training. QKFormer shows significantly superior performance over existing state-of-the-art SNN models on various mainstream datasets. Notably, with comparable size to Spikformer (66.34 M, 74.81%), QKFormer (64.96 M) achieves a groundbreaking top-1 accuracy of 85.65% on ImageNet-1k, substantially outperforming Spikformer by 10.84%. To our best knowledge, this is the first time that directly training SNNs have exceeded 85% accuracy on ImageNet-1K. The code and models are publicly available at https://github.com/zhouchenlin2096/QKFormer</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.NE, cs.AI, cs.CV · <b>arXiv submitted:</b> 2024-10-08 · <a href='https://arxiv.org/abs/2403.16552'>page</a> · <a href='https://arxiv.org/pdf/2403.16552'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Circle-RoPE: Cone-like Decoupled Rotary Positional Embedding for Large Vision-Language Models</title>
+      <link>https://arxiv.org/abs/2505.16416</link>
+      <guid isPermaLink="false">arxiv:2505.16416</guid>
+      <pubDate>Fri, 22 May 2026 05:23:13 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Kai Han</p>
+<p><b>Authors:</b> Chengcheng Wang, Jianyuan Guo, Hongguang Li, Yuchuan Tian, Ying Nie, Chang Xu, Kai Han</p>
+<p>Rotary Position Embedding (RoPE) is widely adopted in large language models, but when applied to vision-language models (VLMs) it couples text and image position indices and can introduce spurious cross-modal relative-position bias. We propose Per-Token Distance (PTD) to quantify cross-modal positional disentanglement, and prove that PTD = 0 is a sufficient condition to eliminate the geometric attention bias induced by RoPE. Guided by this criterion, we introduce Circle-RoPE, which remaps 2D image-token coordinates onto an annulus orthogonal to the text position axis, yielding a cone-like geometry where each text token is equidistant to all image tokens while preserving intra-image spatial structure. We further propose Alternating Geometry Encoding (AGE) to combine complementary geometric priors by alternating the decoupled geometry of Circle-RoPE and the grid-based prior of standard RoPE across layers. This design enables cross-modal positional disentanglement while preserving fine-grained intra-image spatial structure. Experiments on diverse VLM backbones and multimodal benchmarks show consistent gains in spatial grounding and visual reasoning. The code is available at https://github.com/lose4578/CircleRoPE.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-21 · <a href='https://arxiv.org/abs/2505.16416'>page</a> · <a href='https://arxiv.org/pdf/2505.16416'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VDE Bench: Evaluating The Capability of Image Editing Models to Modify Visual Documents</title>
+      <link>https://arxiv.org/abs/2602.00122</link>
+      <guid isPermaLink="false">arxiv:2602.00122</guid>
+      <pubDate>Fri, 22 May 2026 05:23:13 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.MM</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> CUHK, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Hongzhu Yi, Yujia Yang, Yuanxiang Wang, Tong Li, Zhenyu Guan, Tianyu Zong, Jiahuan Chen, Chenxi Bao, … <i>(+13 more)</i></p>
+<p>In recent years, image editing models have made significant progress, enabling users to manipulate visual content in a flexible and interactive manner through natural language instructions. However, an important yet underexplored research direction remains dense visual document image editing, which involves modifying textual content within images while faithfully preserving the original text style and background context. Existing methods primarily focus on English scenarios and images with relatively sparse text, and thus cannot adequately address dense, structurally complex documents or non-Latin scripts such as Chinese. To bridge this gap, we propose VDE Bench (Visual Doc Edit Bench), a rigorously human annotated and evaluated benchmark specifically designed to assess the performance of image editing models on bilingual Chinese-English and complex visual document editing tasks. The benchmark comprises a high quality dataset of 942 instruction based image editing samples, whose seed images encompass dense Chinese and English text documents including academic papers, posters, presentation slides, examination materials, and newspapers. Furthermore, we introduce a novel evaluation framework that systematically quantifies editing performance at the OCR parsing level, thereby enabling fine grained assessment of text modification accuracy. Based on this benchmark, we conduct a comprehensive evaluation of representative image editing models. Human verification demonstrates a high degree of consistency between human judgments and automated evaluation metrics. VDE Bench constitutes the first systematic benchmark for evaluating the performance of image editing models on bilingual dense text visual documents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.MM · <b>arXiv submitted:</b> 2026-05-21 · <a href='https://arxiv.org/abs/2602.00122'>page</a> · <a href='https://arxiv.org/pdf/2602.00122'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Flat-Pack Bench: Evaluating Spatio-Temporal Understanding in Large Vision-Language Models through Furniture Assembly</title>
+      <link>https://arxiv.org/abs/2605.21625</link>
+      <guid isPermaLink="false">arxiv:2605.21625</guid>
+      <pubDate>Fri, 22 May 2026 05:23:13 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, Columbia, Cornell — Bharath Hariharan</p>
+<p><b>Authors:</b> Aditya Chetan, Eric Cai, Peeyush Kushwaha, Bharath Raj Nagoor Kani, Utkarsh Mall, Qianqian Wang, Noah Snavely, Bharath Hariharan</p>
+<p>The emergence of Large Vision-Language Models (LVLMs) has significantly advanced video understanding capabilities. However, existing benchmarks focus predominantly on coarse-grained tasks such as action segmentation, classification, captioning, and retrieval. Furthermore, these benchmarks often rely on entities that can be easily identified verbally, like household objects, animals, human subjects, etc., limiting their applicability to complex, in-the-wild video scenarios. But, many applications such as furniture assembly, cooking, etc., require step-by-step fine-grained spatio-temporal understanding of the video, which is not sufficiently evaluated in current benchmarks. To address this gap, we introduce Flat-Pack Bench, a novel benchmark centered on furniture assembly tasks. Our benchmark evaluates LVLMs on nuanced tasks, including temporal ordering of assembly actions, temporal localization of assembly state, understanding part mating, and tracking, using multiple-choice questions paired with visual prompts highlighting relevant parts as references for fine-grained questions. Our experiments reveal that state-of-the-art LVLMs struggle significantly with fine-grained spatio-temporal reasoning, highlighting their limitations in effectively leveraging temporal information from videos, limited tracking ability, and understanding of spatial interactions like physical contact.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2605.21625'>page</a> · <a href='https://arxiv.org/pdf/2605.21625'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Learning Emergent Modular Representations in Multi-modality Medical Vision Foundation Models</title>
+      <link>https://arxiv.org/abs/2605.21861</link>
+      <guid isPermaLink="false">arxiv:2605.21861</guid>
+      <pubDate>Fri, 22 May 2026 05:23:13 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, Peking U, U Michigan — Shuo Li</p>
+<p><b>Authors:</b> Yuting He, Chenyu You, Shuo Li</p>
+<p>Multi-modality medical vision (MV) foundation models (FM) are fundamentally challenged by pronounced Non-IID feature statistics across heterogeneous imaging modalities. Monolithic self-supervised optimization on such data induces conflicting gradients, driving representations to collapse toward modality-dominant shortcuts. This work reframes this failure as an imbalance between specialization and coordination in emergent modularity, and proposes Director-Experts (DEX), a modular network that explicitly regulates these dynamics in stacked modules. Each DEX module comprises a pool of experts, dynamically adapted by our image-wise activation strategy, autonomously specializing in modality-dominant statistics, together with a director, updated via our group exponential moving average, which distills multi-expert knowledge into a shared space for semantic integration across modalities, thus driving the emergence of modular representations. We curate a new benchmark, Medical Vision Universe, over 4 million images across 10 modalities, which provides a FM-level pre-training with the broadest coverage of distinct imaging modalities to our DEX. Extensive evaluations on 26 downstream tasks demonstrate improved optimization behavior and transferability, indicating DEX as a principled step toward general-purpose multi-modality medical AI. Our code and dataset will be opened at https://github.com/YutingHe-list/DEX.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-21 · <a href='https://arxiv.org/abs/2605.21861'>page</a> · <a href='https://arxiv.org/pdf/2605.21861'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Two-Stage Multimodal Framework for Emotion Mimicry Intensity Prediction</title>
+      <link>https://arxiv.org/abs/2605.21869</link>
+      <guid isPermaLink="false">arxiv:2605.21869</guid>
+      <pubDate>Fri, 22 May 2026 05:23:13 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.HC</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Suranga Nanayakkara</p>
+<p><b>Authors:</b> Dinithi Dissanayake, Shaveen Silva, Ovindu Atukorala, Prasanth Sasikumar, Suranga Nanayakkara</p>
+<p>We present our submission to the Hume-ABAW10 Emotional Mimicry Intensity (EMI) Challenge, which aims to predict six continuous emotion intensity dimensions: Admiration, Amusement, Determination, Empathic Pain, Excitement, and Joy, from in-the-wild multimodal video clips. We propose a staged multimodal framework that combines textual, acoustic, and visual representations, with an optional motion branch. Our approach first trains modality-specific encoders independently and then fuses their learned representations through a lightweight regressor with modality dropout and controlled encoder adaptation. Across our submitted systems, the best validation performance is obtained by the text--audio--vision--motion fusion model under the expanded 4:1 split, achieving an average Pearson correlation of 0.4722. Although the motion branch yields only very slight gains, its behavior can be interesting to study. Our team was placed third in the EMI challenge, achieving an average Pearson correlation of 0.57 for the test set. Overall, we provide a practical and reproducible baseline for EMI prediction.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.HC · <b>arXiv submitted:</b> 2026-05-21 · <a href='https://arxiv.org/abs/2605.21869'>page</a> · <a href='https://arxiv.org/pdf/2605.21869'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MLLMs Know When Before Speaking: Revealing and Recovering Temporal Grounding via Attention Cues</title>
+      <link>https://arxiv.org/abs/2605.21954</link>
+      <guid isPermaLink="false">arxiv:2605.21954</guid>
+      <pubDate>Fri, 22 May 2026 05:23:13 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> HKUST, Peking U — Song Guo</p>
+<p><b>Authors:</b> Dazhao Du, Liao Duan, Jian Liu, Tao Han, Yujia Zhang, Eric Liu, Xi Chen, Song Guo</p>
+<p>Video temporal grounding (VTG), which localizes the start and end times of a queried event in an untrimmed video, is a key test of whether multimodal large language models (MLLMs) understand not only what happens but also when it happens. Although modern MLLMs describe video content fluently, their timestamp predictions remain unreliable, while existing remedies either require costly post-training on temporal annotations or rely on coarse training-free heuristics. In this work, we probe the cross-modal attention of MLLMs and uncover a perception-generation gap. Our key finding is that MLLMs often know the target interval during prefill, but lose this signal when generating the final answer. In the prefill stage, a sparse set of attention heads, which we call \emph{Temporal Grounding Heads} (TG-Heads), concentrates query-to-video attention on the ground-truth interval. During autoregressive decoding, however, the answer tokens shift attention away from this interval toward visually salient but query-irrelevant segments. This observation motivates an inference-time read-then-regenerate framework. We first convert TG-Head prefill attention into a debiased frame-level relevance signal and extract the high-attention interval it highlights. We then re-invoke the MLLM with visual context restricted to this interval, using video cropping or attention masking to suppress distractors. Without parameter updates and architectural changes, our framework consistently improves MiMo-VL-7B, Qwen3-VL-8B, and TimeLens-8B on three VTG benchmarks, with gains of up to +3.5 mIoU. The project website can be found at https://ddz16.github.io/mllmsknowwhen.github.io/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-21 · <a href='https://arxiv.org/abs/2605.21954'>page</a> · <a href='https://arxiv.org/pdf/2605.21954'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence</title>
       <link>https://arxiv.org/abs/2510.23538</link>
