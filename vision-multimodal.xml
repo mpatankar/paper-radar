@@ -5,8 +5,72 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Sun, 24 May 2026 05:21:12 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 05:34:08 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Visually-Guided Policy Optimization for Multimodal Reasoning</title>
+      <link>https://arxiv.org/abs/2604.09349</link>
+      <guid isPermaLink="false">arxiv:2604.09349</guid>
+      <pubDate>Mon, 25 May 2026 05:34:08 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> Georgia Tech, Tsinghua, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Zengbin Wang, Feng Xiong, Liang Lin, Xuecai Hu, Yong Wang, Yanlin Wang, Man Zhang, Xiangxiang Chu</p>
+<p>Reinforcement learning with verifiable rewards (RLVR) has significantly advanced the reasoning ability of vision-language models (VLMs). However, the inherent text-dominated nature of VLMs often leads to insufficient visual faithfulness, characterized by sparse attention activation to visual tokens. More importantly, our empirical analysis reveals that temporal visual forgetting along reasoning steps exacerbates this deficiency. To bridge this gap, we propose Visually-Guided Policy Optimization (VGPO), a novel framework to reinforce visual focus during policy optimization. Specifically, VGPO initially introduces a Visual Attention Compensation mechanism that leverages visual similarity to localize and amplify visual cues, while progressively elevating visual expectations in later steps to counteract visual forgetting. Building on this mechanism, we implement a dual-grained advantage re-weighting strategy: the intra-trajectory level highlights tokens exhibiting relatively high visual activation, while the inter-trajectory level prioritizes trajectories demonstrating superior visual accumulation. Extensive experiments demonstrate that VGPO achieves better visual activation and superior performance in mathematical multimodal reasoning and visual-dependent tasks. The code has been released at https://github.com/wzb-bupt/VGPO.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://arxiv.org/abs/2604.09349'>page</a> · <a href='https://arxiv.org/pdf/2604.09349'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MedExpMem: Adapting Experience Memory for Differential Diagnosis</title>
+      <link>https://arxiv.org/abs/2605.22872</link>
+      <guid isPermaLink="false">arxiv:2605.22872</guid>
+      <pubDate>Mon, 25 May 2026 05:34:08 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind, Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, Peking U — Qi Dou</p>
+<p><b>Authors:</b> Qianhan Feng, Zhongzhen Huang, Yakun Zhu, Yannian Gu, Winnie Chiu Wing Chu, Xiaofan Zhang, Qi Dou</p>
+<p>Experienced physicians develop diagnostic expertise through clinical practice, acquiring not only disease knowledge but also the ability to differentiate confusable conditions. Current medical vision-language models (VLMs) lack this capability -- their parameters encode static knowledge that does not evolve across diagnostic encounters. We propose MedExpMem, an experience memory framework enabling VLM-based diagnostic agents to accumulate differential diagnosis expertise. Unlike retrieval-augmented generation, which retrieves encyclopedic disease descriptions, MedExpMem memorizes discriminative experience derived from the agent&#x27;s own diagnostic failures and organizes them as pairwise differential notes encoding key discriminators, actionable decision rules and reasoning error patterns. The framework adopts a two-phase construction process mirroring physician learning: initial practice exposes knowledge gaps, and reflective re-diagnosis refines understanding. When encountering new cases, the agent retrieves experience memory to guide differential reasoning. We evaluate MedExpMem on a radiology benchmark spanning 11 subspecialties. Results demonstrate consistent accuracy improvements, maximum 7.0%, across diverse models and scales. Analytical experiments validate experience quality and robustness, demonstrating MedExpMem as a competitive method addresses medical adaptation needs beyond the reach of parameteric learning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2605.22872'>page</a> · <a href='https://arxiv.org/pdf/2605.22872'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Seeing without Looking: Do Vision-Language Benchmarks Really Test Vision?</title>
+      <link>https://arxiv.org/abs/2605.22903</link>
+      <guid isPermaLink="false">arxiv:2605.22903</guid>
+      <pubDate>Mon, 25 May 2026 05:34:08 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Jiawei Zhou</p>
+<p><b>Authors:</b> Zixuan Lan, Luzhe Sun, Matthew R. Walter, Jiawei Zhou</p>
+<p>Benchmark accuracy is often implicitly assumed to reflect grounded visual understanding in vision-language models (VLMs), yet it remains unclear to what extent such scores truly reflect reliance on visual evidence. Motivated by a surprising observation that removing a substantial fraction of image tokens only degrades model performance very slightly on a widely used hallucination benchmark, we systematically investigate this mismatch in a set of open-source VLMs. Our analysis spans multiple levels of granularity, spanning global visual degradation, localized occlusion, question reformulation, answer-space expansion, and decision-level analyses beyond standard accuracy. We further complement these behavioral results with a layer-wise analysis of vision-token geometry. Throughout the experiments, we find that although VLMs do incorporate visual input, their predictions are less sensitive to the loss of fine-grained visual evidence that standard accuracy should have suggested. Even when the final prediction remains unchanged, the model&#x27;s internal support for the correct answer may already be weakened. We further complement a representation-level analysis, which shows increasing similarity among visual tokens in deeper layers, providing a possible explanation for our findings. Together, these results suggest that current benchmarks are not sufficient to reliably evaluate fine-grained visual grounding in VLMs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-21 · <a href='https://arxiv.org/abs/2605.22903'>page</a> · <a href='https://arxiv.org/pdf/2605.22903'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ChainFlow-VLA: Causal Flow Planning with Vision-Language Models</title>
+      <link>https://arxiv.org/abs/2605.23270</link>
+      <guid isPermaLink="false">arxiv:2605.23270</guid>
+      <pubDate>Mon, 25 May 2026 05:34:08 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Mu Yang</p>
+<p><b>Authors:</b> Xiyang Wang, Xinlin Wang, Tingguang Zhou, Gong Chen, Xingtai Gui, Zhi Xu, Xiaolei Wu, Feiyang Tan, … <i>(+2 more)</i></p>
+<p>Current end-to-end autonomous driving systems are fundamentally limited by a mismatch between temporal causal reasoning and global trajectory consistency. Autoregressive (AR) models capture interaction-aware temporal dependencies via causal factorization, but their step-wise decoding leads to error accumulation and suboptimal global structure. In contrast, diffusion models optimize trajectories globally but lack explicit causal constraints, making them unreliable in interactive and safety-critical scenarios. This dichotomy reveals a deeper issue: existing methods treat causal modeling and global optimization as separate paradigms, without a principled way to unify them within a single trajectory distribution. To address this, we propose ChainFlow-VLA, which unifies causal generation and global refinement within a unified probabilistic framework. We formulate planning as a mixture over AR-induced modes and learn Vision-Language Model (VLM)-conditioned residual distributions over these modes. An autoregressive generator (Chain) produces a discrete set of causal trajectory modes, followed by a diffusion-based refiner (Flow) that leverages VLM hidden states as semantic priors to perform mode-conditioned correction in residual space while preserving causal structure. This straightforward conditioning seamlessly injects high-level scene understanding into fine-grained trajectory adjustments. Experiments demonstrate that ChainFlow-VLA achieves robust planning in ambiguous and long-tail scenarios, achieving a state-of-the-art score of 94.85 on the NAVSIM v1 leaderboard, matching human-level performance (94.8). Code will be available at https://github.com/AFARI-Research/ChainFlow-VLA.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://arxiv.org/abs/2605.23270'>page</a> · <a href='https://arxiv.org/pdf/2605.23270'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EvalVerse: Pipeline-Aware and Expert-Calibrated Benchmarking for Professional Cinematic Video Generation</title>
+      <link>https://arxiv.org/abs/2605.23271</link>
+      <guid isPermaLink="false">arxiv:2605.23271</guid>
+      <pubDate>Mon, 25 May 2026 05:34:08 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST, Peking U, Stanford, U Michigan — Anyi Rao</p>
+<p><b>Authors:</b> Songlin Yang, Haobin Zhong, Ruilin Zhang, Xiaotong Zhao, Shuai Li, Kai Zheng, Xuyi Yang, Zhe Wang, … <i>(+18 more)</i></p>
+<p>The rapid evolution of generative video foundation models has propelled the field toward professional-grade cinematic synthesis. To achieve such demanding quality, the community transitions towards Reinforcement Learning (RL) and agentic workflows. However, reliable evaluation has emerged as a critical bottleneck. Existing benchmarks predominantly evaluate &#x27;&#x27;whether it is right&#x27;&#x27; (basic prompt-following) while fundamentally neglecting &#x27;&#x27;whether it is good&#x27;&#x27; (cinematic quality, acting, and aesthetics). Furthermore, current automated metrics lack the domain-specific rigor required to provide trustworthy signals, creating a severe credibility gap between human aesthetic perception and machine scoring. To bridge this gap, we introduce EvalVerse, a comprehensive, pipeline-aware, and expert-calibrated evaluation framework. We treat video generation assessment not merely as an engineering task, but as a core scientific problem: the systematic digitization of subjective cinematic expertise. First, we organize domain knowledge into an evaluation taxonomy aligned with the professional filmmaking workflow (pre-production, production, and post-production). Second, we distill human expert judgments into a curated dataset with large-scale human annotations. Third, we inject this knowledge into Vision-Language Models (VLMs) through an expert-calibrated fine-tuning strategy, enabling the VLM to perform explicit Chain-of-Thought reasoning. Compared to previous works, EvalVerse not only retains compatibility with foundational &#x27;&#x27;rightness&#x27;&#x27; metrics, but also significantly expands the criteria to &#x27;&#x27;goodness&#x27;&#x27; and broaden the task coverage to complex multi-shot sequencing and audio-visual integration. Consequently, by providing granular diagnostic signals, EvalVerse transcends a static leaderboard and establishes a fundamental infrastructure for future work, such as reward models and evaluator agent.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://arxiv.org/abs/2605.23271'>page</a> · <a href='https://arxiv.org/pdf/2605.23271'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>QKFormer: Hierarchical Spiking Transformer using Q-K Attention</title>
       <link>https://arxiv.org/abs/2403.16552</link>
