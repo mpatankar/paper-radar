@@ -5,8 +5,115 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 25 May 2026 05:34:08 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 05:21:56 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Uni-DPO: A Unified Paradigm for Dynamic Preference Optimization of LLMs</title>
+      <link>https://arxiv.org/abs/2506.10054</link>
+      <guid isPermaLink="false">arxiv:2506.10054</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> CUHK, MIT, Peking U — Min Zhang</p>
+<p><b>Authors:</b> Shangpin Peng, Weinong Wang, Zhuotao Tian, Senqiao Yang, Xing Wu, Haotian Xu, Chengquan Zhang, Takashi Isobe, … <i>(+2 more)</i></p>
+<p>Direct Preference Optimization (DPO) has emerged as a cornerstone of reinforcement learning from human feedback (RLHF) due to its simplicity and efficiency. However, existing DPO-based methods typically treat all preference pairs equally, overlooking substantial variations in data quality and learning difficulty, which leads to inefficient data utilization and suboptimal performance. To address this limitation, we propose Uni-DPO, a unified dynamic preference optimization framework that jointly considers (a) the inherent quality of preference pairs and (b) the model&#x27;s evolving performance during training. By adaptively reweighting samples based on both factors, Uni-DPO enables more effective use of preference data and achieves superior performance. Extensive experiments across models and benchmarks demonstrate the effectiveness and generalization of Uni-DPO. On textual tasks, Gemma-2-9B-IT fine-tuned with Uni-DPO surpasses the leading LLM, Claude 3 Opus, by 6.7 points on Arena-Hard. On mathematical and multimodal tasks, Uni-DPO consistently outperforms baseline methods across all benchmarks, providing strong empirical evidence of its effectiveness and robustness.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-05-23 · <a href='https://arxiv.org/abs/2506.10054'>page</a> · <a href='https://arxiv.org/pdf/2506.10054'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MCPXKIT: The Unified Toolkit for Analyzing Model Context Protocol Security</title>
+      <link>https://arxiv.org/abs/2508.12538</link>
+      <guid isPermaLink="false">arxiv:2508.12538</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.CR</category>
+      <category>cs.AI</category>
+      <category>cs.SE</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich, Tsinghua — Sheng Wen</p>
+<p><b>Authors:</b> Yongjian Guo, Puzhuo Liu, Wanlun Ma, Zehang Deng, Xiaogang Zhu, Peng Di, Xi Xiao, Sheng Wen</p>
+<p>The Model Context Protocol (MCP) has emerged as a universal standard that enables AI agents to seamlessly connect with external tools, significantly enhancing their functionality. However, while MCP brings notable benefits, it also introduces significant vulnerabilities, such as Tool Poisoning Attacks (TPA), where hidden malicious instructions exploit the sycophancy of large language models (LLMs) to manipulate agent behavior. Despite these risks, current academic research on MCP security remains limited, with most studies focusing on narrow or qualitative analyses that fail to capture the diversity of real-world threats. To address this gap, we present the MCP eXploit Toolkit (MCPXKIT), which categorizes and implements 31 distinct attack methods under four key classifications: direct tool injection, indirect tool injection, malicious user attacks, and LLM inherent attack. We further conduct a quantitative analysis of the efficacy of each attack. Our experiments reveal key insights into MCP vulnerabilities, including agents&#x27; blind reliance on tool descriptions, sensitivity to file-based attacks, chain attacks exploiting shared context, and difficulty distinguishing external data from executable commands. These insights, validated through attack experiments, underscore the urgency for robust defense strategies and informed MCP design. Our contributions include 1) constructing a comprehensive MCP attack taxonomy, 2) introducing a unified attack framework, MCPXKIT, and 3) conducting empirical vulnerability analysis to enhance MCP security mechanisms. This work provides a foundational framework, supporting the secure evolution of MCP ecosystems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI, cs.SE · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2508.12538'>page</a> · <a href='https://arxiv.org/pdf/2508.12538'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Dynamic Relational Priming Improves Transformer in Multivariate Time Series</title>
+      <link>https://arxiv.org/abs/2509.12196</link>
+      <guid isPermaLink="false">arxiv:2509.12196</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Corey Clark</p>
+<p><b>Authors:</b> Hunjae Lee, Corey Clark</p>
+<p>Standard attention mechanisms in transformers employ static token representations that remain unchanged across all pair-wise computations in each layer. This limits their representational alignment with the potentially diverse relational dynamics of each token-pair interaction. While they excel in domains with relatively homogeneous relationships, standard attention&#x27;s static relational learning struggles to capture the diverse, heterogeneous inter-channel dependencies of multivariate time series (MTS) data--where different channel-pair interactions within a single system may be governed by entirely different physical laws or temporal dynamics. To better align the attention mechanism for such domain phenomena, we propose attention with dynamic relational priming (prime attention). Unlike standard attention where each token presents an identical representation across all of its pair-wise interactions, prime attention tailors each token dynamically (or per interaction) through learnable modulations to best capture the unique relational dynamics of each token pair, optimizing each pair-wise interaction for that specific relationship. This representational plasticity of prime attention enables effective extraction of relationship-specific information in MTS while maintaining the same asymptotic computational complexity as standard attention. Our results demonstrate that prime attention consistently outperforms standard attention across benchmarks, achieving up to 6.5\% improvement in forecasting accuracy. In addition, we find that prime attention achieves comparable or superior performance using up to 40\% less sequence length compared to standard attention, further demonstrating its superior relational modeling capabilities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-23 · <a href='https://arxiv.org/abs/2509.12196'>page</a> · <a href='https://arxiv.org/pdf/2509.12196'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DeepEN: A Deep Reinforcement Learning Framework for Personalized Enteral Nutrition in Critical Care</title>
+      <link>https://arxiv.org/abs/2510.08350</link>
+      <guid isPermaLink="false">arxiv:2510.08350</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Mengling Feng</p>
+<p><b>Authors:</b> Daniel Jason Tan, Jiayang Chen, Dilruk Perera, Kay Choong See, Mengling Feng</p>
+<p>Objective: Enteral nutrition (EN) delivery in the ICU remains suboptimal due to limited personalization and uncertainty regarding appropriate calorie, protein, and fluid targets under dynamic metabolic demands. We introduce DeepEN, a reinforcement learning (RL) framework for personalized EN optimization using electronic health record data. Methods: DeepEN was trained on over 11,000 ICU patients from MIMIC-IV to generate 4-hourly, patient-specific caloric, protein, and fluid targets. The state representation incorporated demographics, comorbidities, vital signs, laboratory values, and recent interventions. A physiologically aligned reward framework balanced biomarker stability with long-term survival. Policy learning employed a dueling double deep Q-network with Conservative Q-Learning regularization to enable safe offline training. Results: DeepEN achieved the highest estimated policy value ($V^π= 9.48$) and the lowest calibrated mortality (18.8 +/- 1.0%), representing a 4.0 percentage-point absolute reduction compared with clinician practice (22.8%). The policy also demonstrated superior metabolic stability, achieving the highest proportion of glucose, phosphate, and sodium values within target range. Furthermore, deviation from the DeepEN policy was independently associated with increased mortality and biomarker instability, whereas deviation from a random policy showed no such association. Interpretability analyses further indicated that recommendations were conditioned on physiologically relevant markers of organ function and metabolic status rather than static dosing heuristics. Conclusion: DeepEN demonstrates the feasibility of conservative offline RL for safe, individualized EN optimization, highlighting the potential of data-driven personalization to complement guideline-based approaches in critical care.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2510.08350'>page</a> · <a href='https://arxiv.org/pdf/2510.08350'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Voting with the Graph: Stable RLAIF via Topological Consistency Maximization</title>
+      <link>https://arxiv.org/abs/2510.15514</link>
+      <guid isPermaLink="false">arxiv:2510.15514</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> NYU, Peking U, Tsinghua, U Toronto — (senior)</p>
+<p><b>Authors:</b> Boyin Liu, Zhuo Zhang, Sen Huang, Lipeng Xie, Qingxu Fu, Haoran Chen, LI YU, Tianyi Hu, … <i>(+3 more)</i></p>
+<p>Reinforcement Learning from AI Feedback (RLAIF) relies on LLM judges as preference measurement instruments, yet these instruments are fundamentally limited by random measurement errors -- stochastic fluctuations that manifest as preference cycles (e.g., $A \succ B \succ C \succ A$), occurring in 5-9% of evaluations across state-of-the-art models. While repeated sampling mitigates noise by averaging multiple judgments, it treats each comparison in isolation and fails to exploit the structural constraints that distinguish systematic signals from random noise. We introduce Topological Consensus Rewards (TCR), a framework that leverages transitivity as a denoising mechanism via topological majority voting: systematic signals reinforce each other through transitive chains, while random errors cluster into topologically exposed cycles. TCR approximates the Maximum Acyclic Subgraph to filter stochastic noise from preference signals. We also propose Cycle Incidence Rate (CIR) as a diagnostic metric that measures the proportion of samples containing preference cycles. Under our noise model, these cycles arise primarily from stochastic measurement errors rather than genuine intransitivity. Experiments on Arena-Hard, MT-Bench, and WritingBench demonstrate that TCR consistently outperforms pairwise baselines and classical ranking algorithms, while exhibiting robust performance across different judge models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-24 · <a href='https://arxiv.org/abs/2510.15514'>page</a> · <a href='https://arxiv.org/pdf/2510.15514'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AGI Requires a Coordination Layer on Top of Pattern Repositories</title>
+      <link>https://arxiv.org/abs/2512.05765</link>
+      <guid isPermaLink="false">arxiv:2512.05765</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Edward Y. Chang</p>
+<p><b>Authors:</b> Edward Y. Chang</p>
+<p>In this paper we argue that influential critiques dismissing Large Language Models (LLMs) as a dead end for AGI misidentify the bottleneck: they confuse the ocean with the net. Pattern repositories are the necessary System-1 substrate; the missing component is a System-2 coordination layer that recruits relevant patterns, verifies their use, preserves state, and governs convergence. We separate two uses of control that are often conflated. Semantic anchoring, formalized by UCCT (Unified Contextual Control Theory), binds labels and task intent to learned pattern regions through a phase transition governed by effective support (rho_d), representational mismatch (d_r), and an adaptive anchoring budget (gamma log k). Trace-answer verification, implemented by Recursive Causal Audit (RCA), tests whether a final causal judgment is warranted by its own reasoning trace under pressure. We translate these ideas into MACI, a multi-agent coordination stack that integrates diversity and control via baiting (PID-modulated debate), filtering (Socratic and causal audit), and persistence (transactional memory). Empirical validation on causal judgment and the sycophancy-paranoia trade-off demonstrates that static prompting fails where adaptive control succeeds. By reframing common objections as testable coordination failures, we argue that the path to AGI runs through LLMs, not around them. Capability is not coordination.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-24 · <a href='https://arxiv.org/abs/2512.05765'>page</a> · <a href='https://arxiv.org/pdf/2512.05765'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Characterizing Linear Alignment Across Language Models</title>
+      <link>https://arxiv.org/abs/2603.18908</link>
+      <guid isPermaLink="false">arxiv:2603.18908</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Suman Jana</p>
+<p><b>Authors:</b> Matt Gorbett, Suman Jana</p>
+<p>Language models increasingly appear to learn similar representations, despite differences in training objectives, architectures, and data modalities. This emerging compatibility between independently trained models introduces new opportunities for cross-model alignment to downstream objectives. Moreover, this capability unlocks new potential application domains, such as settings where security, privacy, or competitive constraints prohibit direct data or model sharing. In this work, we investigate the extent to which representational convergence enables practical linear alignment between large language models. Specifically, we learn affine transformations between the final hidden states of independent models and empirically evaluate these mappings across text generation, embedding classification, and out-of-distribution detection. We find that performance is largely preserved across model pairs, and show for the first time that linear alignment sometimes enables text generation across independently trained models. We further highlight a potential application of linear alignment for privacy-preserving cross-silo inference. The framework learns an affine transformation over a shared public dataset and uses homomorphic encryption to protect client queries. By encrypting only the linear classification operation, the method achieves sub-second inference latency.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2603.18908'>page</a> · <a href='https://arxiv.org/pdf/2603.18908'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>StepAudio 2.5 Technical Report</title>
+      <link>https://huggingface.co/papers/2605.23463</link>
+      <guid isPermaLink="false">arxiv:2605.23463</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bin Lin, Bo Zhao, Boyong Wu, Chao Yan, Chen Wu, Cheng Yi, Chengyuan Yao, Daijiao Liu, … <i>(+94 more)</i></p>
+<p>Unified audio-language modeling has emerged as a prominent trend in modern speech systems, promising to bring the reasoning capabilities of large language models to auditory tasks. However, existing unified foundations often struggle to match the depth of specialized systems across automatic speech recognition (ASR), text-to-speech synthesis (TTS), and realtime spoken interaction. Bridging this gap remains an open challenge. This report presents StepAudio 2.5, a unified audio-language foundation model that matches or exceeds specialized systems across all three capabilities. Rather than treating these tasks as architecturally distinct, we operate on the premise that once text and audio share a multimodal representational space, task specialization becomes a matter of operational regimes: data construction, optimization targets, and decoding constraints. Guided by this insight, we advance the post-training paradigm from standard supervised learning to task-tailored Reinforcement Learning from Human Feedback (RLHF), using it as the primary mechanism to define complex optimization targets. We leverage this RLHF-centric alignment, alongside specialized decoding, to shape a shared backbone into three distinct operational modes. Concretely, the ASR branch advances transcription efficiency via verifiable multi-token decoding; the TTS branch achieves controllable, expressive synthesis through preference-based RLHF and context-rich supervision; and the Realtime branch realizes low-latency, persona-consistent dialogue via generative reward modeling within an RLHF framework. On standard benchmarks, StepAudio 2.5 achieves state-of-the-art results across ASR, TTS, and Realtime, demonstrating that a singular audio-language foundation can successfully internalize the distinct deployment objectives of speech understanding, generation, and live interaction.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://huggingface.co/papers/2605.23463'>page</a> · <a href='https://arxiv.org/pdf/2605.23463'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>See What I Mean: Aligning Vision and Language Representations for Video Fine-grained Object Understanding</title>
+      <link>https://huggingface.co/papers/2605.18018</link>
+      <guid isPermaLink="false">arxiv:2605.18018</guid>
+      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Boyuan Sun, Bowen Yin, Yuanming Li, Xihan Wei, Qibin Hou, Hugging Face Daily Papers (curated)</p>
+<p>We present SWIM (See What I Mean), a novel training strategy that aligns vision and language representations to enable fine-grained object understanding solely from textual prompts. Unlike existing approaches that require explicit visual prompts, such as masks or points, SWIM leverages mask supervision only during training to guide cross-modal attention, allowing the model to automatically attend to the user-specified object at inference. Our cross-attention analysis of pretrained multimodal large languagemodels (MLLMs) reveals a systematic discrepancy: Attribute words produce sharp, localized activations in the visual modality, whereas object nouns yield diffuse and scattered patterns due to semantic reference bias and distributed high-level representations. To address this misalignment, we construct NL-Refer, an enriched dataset, in which each object mask is paired with a precise natural language referring expression. SWIM extracts multi-layer cross-attention maps from object nouns and enforces spatial consistency with ground-truth masks. Experimental results demonstrate that SWIM substantially improves text-visual alignment and achieves superior performance over visual-prompt-based methods on fine-grained object understanding benchmarks. The code and data are available at https://github.com/HumanMLLM/SWIM{https://github.com/HumanMLLM/SWIM}.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://huggingface.co/papers/2605.18018'>page</a> · <a href='https://arxiv.org/pdf/2605.18018'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Safe Reinforcement Learning with Preference-based Constraint Inference</title>
       <link>https://arxiv.org/abs/2603.23565</link>
