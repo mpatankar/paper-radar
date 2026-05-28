@@ -5,8 +5,102 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Wed, 27 May 2026 05:32:01 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 05:27:21 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Structured Agent Distillation for Large Language Model</title>
+      <link>https://arxiv.org/abs/2505.13820</link>
+      <guid isPermaLink="false">arxiv:2505.13820</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Peking U, Tsinghua, U Washington — Jun Liu</p>
+<p><b>Authors:</b> Jun Liu, Zhenglun Kong, Peiyan Dong, Changdi Yang, Tianqi Li, Hao Tang, Geng Yuan, Wei Niu, … <i>(+5 more)</i></p>
+<p>Large language models (LLMs) exhibit strong capabilities as decision-making agents by interleaving reasoning and actions, as seen in ReAct-style frameworks. Yet, their practical deployment is constrained by high inference costs and large model sizes. We propose Structured Agent Distillation, a framework that compresses large LLM-based agents into smaller student models while preserving both reasoning fidelity and action consistency. Unlike standard token-level distillation, our method segments trajectories into [REASON] and [ACT] spans, applying segment-specific losses to align each component with the teacher&#x27;s behavior. This structure-aware supervision enables compact agents to better replicate the teacher&#x27;s decision process. Experiments on ALFWorld, HotPotQA-ReAct, and WebShop show that our approach consistently outperforms token-level and imitation learning baselines, achieving significant compression with minimal performance drop. Scaling and ablation results further highlight the importance of span-level alignment for efficient and deployable agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2505.13820'>page</a> · <a href='https://arxiv.org/pdf/2505.13820'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Script is All You Need: An Agentic Framework for Long-Horizon Dialogue-to-Cinematic Video Generation</title>
+      <link>https://arxiv.org/abs/2601.17737</link>
+      <guid isPermaLink="false">arxiv:2601.17737</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> Harvard, U Washington — Linus</p>
+<p><b>Authors:</b> Chenyu Mu, Xin He, Qu Yang, Wanshun Chen, Jiadi Yao, Huang Liu, Zihao Yi, Bo Zhao, … <i>(+8 more)</i></p>
+<p>Recent advances in video generation have produced models capable of synthesizing stunning visual content from simple text prompts. However, these models struggle to generate long-form, coherent narratives from high-level concepts like dialogue, revealing a ``semantic gap&#x27;&#x27; between a creative idea and its cinematic execution. To bridge this gap, we introduce a novel, end-to-end agentic framework for dialogue-to-cinematic-video generation. Central to our framework is ScripterAgent, a model trained to translate coarse dialogue into a fine-grained, executable cinematic script. To enable this, we construct ScriptBench, a new large-scale benchmark with rich multimodal context, annotated via an expert-guided pipeline. The generated script then guides DirectorAgent, which orchestrates state-of-the-art video models using a cross-scene continuous generation strategy to ensure long-horizon coherence. Our comprehensive evaluation, featuring an AI-powered CriticAgent and a new Visual-Script Alignment (VSA) metric, shows our framework significantly improves script faithfulness and temporal fidelity across all tested video models. Furthermore, our analysis uncovers a crucial trade-off in current SOTA models between visual spectacle and strict script adherence, providing valuable insights for the future of automated filmmaking.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2601.17737'>page</a> · <a href='https://arxiv.org/pdf/2601.17737'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Probability-Entropy Calibration: An Elastic Indicator for Adaptive Fine-tuning</title>
+      <link>https://arxiv.org/abs/2602.01745</link>
+      <guid isPermaLink="false">arxiv:2602.01745</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST, Peking U — Irwin King, Wenhao Yu</p>
+<p><b>Authors:</b> Wenhao Yu, Shaohang Wei, Jiahong Liu, Yifan Li, Minda Hu, Aiwei Liu, Hao Zhang, Irwin King</p>
+<p>Token-level reweighting is a simple yet effective mechanism for controlling supervised fine-tuning, but common indicators are largely one-dimensional: the ground-truth probability reflects downstream alignment, while token entropy reflects intrinsic uncertainty induced by the pre-training prior. Ignoring entropy can misidentify noisy or easily replaceable tokens as learning-critical, while ignoring probability fails to reflect target-specific alignment. RankTuner introduces a probability--entropy calibration signal, the Relative Rank Indicator, which compares the rank of the ground-truth token with its expected rank under the prediction distribution. The inverse indicator is used as a token-wise Relative Scale to reweight the fine-tuning objective, focusing updates on truly under-learned tokens without over-penalizing intrinsically uncertain positions. Experiments on multiple backbones show consistent improvements on mathematical reasoning benchmarks, transfer gains on out-of-distribution reasoning, and pre code generation performance over probability-only or entropy-only reweighting baselines.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2602.01745'>page</a> · <a href='https://arxiv.org/pdf/2602.01745'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Aligning Language Model Benchmarks with Pairwise Preferences</title>
+      <link>https://arxiv.org/abs/2602.02898</link>
+      <guid isPermaLink="false">arxiv:2602.02898</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CUHK, Harvard, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Marco Gutierrez, Xinyi Leng, Hannah Cyberey, Jonathan Richard Schwarz, Ahmed Alaa, Thomas Hartvigsen</p>
+<p>Language model benchmarks are pervasive and computationally-efficient proxies for real-world performance. However, many recent works find that benchmarks often fail to predict real utility. Towards bridging this gap, we introduce benchmark alignment, where we use limited amounts of information about model performance to automatically update offline benchmarks, aiming to produce new static benchmarks that predict model pairwise preferences in given test settings. We then propose BenchAlign, the first solution to this problem, which learns preference-aligned weight- ings for benchmark questions using the question-level performance of language models alongside ranked pairs of models that could be collected during deployment, producing new benchmarks that rank previously unseen models according to these preferences. Our experiments show that our aligned benchmarks can accurately rank unseen models according to models of human preferences, even across different sizes, while remaining interpretable. Overall, our work provides insights into the limits of aligning benchmarks with practical human preferences, which stands to accelerate model development towards real utility.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2602.02898'>page</a> · <a href='https://arxiv.org/pdf/2602.02898'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Capture Timing-Attention of Events in Clinical Time Series</title>
+      <link>https://arxiv.org/abs/2602.10385</link>
+      <guid isPermaLink="false">arxiv:2602.10385</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Jia Li</p>
+<p><b>Authors:</b> Jia Li, Yu Hou, Rui Zhang</p>
+<p>Automatically discovering personalized trajectories (i.e., sequential event patterns) from longitudinal EHR data is crucial for enabling precision medicine in clinical research, yet it remains a formidable challenge even for contemporary AI models. For example, while the attention mechanism of transformers can capture rich associations, it is largely agnostic to event timing and ordering, thereby bypassing potential causal reasoning. Intuitively, we need a method capable of evaluating the ``degree of alignment&#x27;&#x27; among patient-specific trajectories and identifying their shared patterns, that is, the significant events in a consistent sequence. This necessitates treating timing as a true **computable** dimension, allowing models to assign ``relative timestamps&#x27;&#x27; to candidate events beyond their observed physical times. In this work, we introduce LITT (Individual-Level Time Transformation), a novel architecture that enables temporary alignment of sequential events on a virtual ``relative timeline&#x27;&#x27;, thereby enabling **event-timing-focused attention** and personalized interpretations of clinical trajectories. Its interpretability and effectiveness are validated on real-world longitudinal EHR data from 3,276 breast cancer patients to predict the onset timing of cardiotoxicity-induced heart disease. Furthermore, LITT outperforms both the benchmark and state-of-the-art survival analysis methods on public datasets, positioning it as a significant step forward for precision medicine in clinical AI.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2602.10385'>page</a> · <a href='https://arxiv.org/pdf/2602.10385'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Pixels to Words -- Towards Native One-Vision Models at Scale</title>
+      <link>https://huggingface.co/papers/2605.28820</link>
+      <guid isPermaLink="false">arxiv:2605.28820</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haiwen Diao, Jiahao Wang, Penghao Wu, Yuhao Dong, Yuwei Niu, Yue Zhu, Zhongang Cai, Weichen Fan, … <i>(+14 more)</i></p>
+<p>Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames and scatters early pixel-word interactions. In parallel, native VLMs, despite impressive performance on single images, remain largely unexplored in multi-image, video understanding, and spatial intelligence. Hence, we introduce NEO-ov, a native foundation model that learns cross-frame and pixel-word correspondence end-to-end, without any external encoders, auxiliary adapters, or post-hoc fusion. By eliminating module boundaries entirely, NEO-ov enables fine-grained and unified spatiotemporal modeling to emerge natively inside the model. Notably, NEO-ov largely narrows the gap to modular counterparts while excelling at fine-grained visual perception, validating that native &quot;one-vision&quot; architectures are not only feasible but competitive at scale. Beyond empirical performance, we unveil systematic architectural analyses and detailed training recipes to facilitate subsequent native multimodal modeling. Our code and models are publicly available at: https://github.com/EvolvingLMMs-Lab/NEO.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://huggingface.co/papers/2605.28820'>page</a> · <a href='https://arxiv.org/pdf/2605.28820'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>D^2-Monitor: Dynamic Safety Monitoring for Diffusion LLMs via Hesitation-Aware Routing</title>
+      <link>https://huggingface.co/papers/2605.25893</link>
+      <guid isPermaLink="false">arxiv:2605.25893</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Aoxi Liu, Yupeng Chen, James Oldfield, Guanzhe Hong, Junchi Yu, Baoyuan Wu, Philip Torr, Adel Bibi, … <i>(+1 more)</i></p>
+<p>Despite the emergence of diffusion large language models (D-LLMs) as an alternative to autoregressive large language models (AR-LLMs), safety monitoring for D-LLMs remains largely unexplored. Unlike AR-LLMs, D-LLMs generate text through a multi-step denoising process, exposing intermediate hidden representations that may contain safety-relevant information unavailable in standard single-step monitoring setups. Motivated by the suitability of lightweight probes for always-on monitoring, we analyze which trajectory-level signals best indicate when such probes are likely to struggle. We find that the most informative signal is safety hesitation: intermediate hidden states repeatedly falling within a small margin of the probe&#x27;s decision boundary. The number of such hesitation steps in D-LLM&#x27;s trajectory predicts probe failure effectively, providing a proxy of sample difficulty. Building on this analysis, we propose D^2-Monitor, a bi-level safety monitor for D-LLMs. D^2-Monitor adopts a lightweight probe as an always-on monitor to jointly estimate hesitation and perform base classification. When the hesitation level exceeds a threshold, a more expressive but computationally heavier probe is activated. This dynamic routing mechanism allocates monitoring resources efficiently at test time. Evaluated on 3 datasets (WildguardMix, ToxicChat, OpenAI-Moderation) across 4 D-LLMs, D^2-Monitor achieves state-of-the-art performance with a compact parameter footprint (leq 0.85M parameters), and exhibits the best trade-off between effectiveness and efficiency relative to 8 baselines.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://huggingface.co/papers/2605.25893'>page</a> · <a href='https://arxiv.org/pdf/2605.25893'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MemTrace: Tracing and Attributing Errors in Large Language Model Memory Systems</title>
+      <link>https://huggingface.co/papers/2605.28732</link>
+      <guid isPermaLink="false">arxiv:2605.28732</guid>
+      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xinle Deng, Ruobin Zhong, Hujin Peng, Xiaoben Lu, Yanzhe Wu, Guang Li, Buqiang Xu, Yunzhi Yao, … <i>(+11 more)</i></p>
+<p>Memory is essential for enabling large language models to support long-horizon reasoning, yet existing memory systems remain unreliable and difficult to debug. Tracing memory&#x27;s dynamic evolution is crucial to understand how information is synthesized, propagated, or corrupted over time. In this work, we study the new problem of error tracing and attribution in LLM memory systems. We propose a novel framework that transforms memory pipelines into executable memory evolution graphs, enabling fine-grained tracing of operational information flow. We then construct MemTraceBench, a benchmark collected from representative memory systems such as Long-Context, RAG, Mem0, and EverMemOS, to systematically study memory failure modes. We further introduce an automatic attribution method that iteratively traces operation subgraphs to pinpoint the root cause of any failed case. Our analysis reveals that memory failures are systematic, stemming from operation-level issues like information loss and retrieval misalignment. Crucially, we leverage these fine-grained attribution signals to guide downstream prompt optimization, establishing a closed-loop system that automatically corrects faults and boosts end-task performance by up to 7.62%. Code will be released at https://github.com/zjunlp/MemTrace.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://huggingface.co/papers/2605.28732'>page</a> · <a href='https://arxiv.org/pdf/2605.28732'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>PICACO: Pluralistic In-Context Value Alignment of LLMs via Total Correlation Optimization</title>
       <link>https://arxiv.org/abs/2507.16679</link>
