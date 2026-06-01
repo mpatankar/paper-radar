@@ -5,8 +5,105 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 31 May 2026 05:31:53 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 05:39:12 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Who Gets Credit or Blame? Attributing Accountability in Modern AI Systems</title>
+      <link>https://arxiv.org/abs/2506.00175</link>
+      <guid isPermaLink="false">arxiv:2506.00175</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Himabindu Lakkaraju</p>
+<p><b>Authors:</b> Shichang Zhang, Hongzhe Du, Jiaqi W. Ma, Himabindu Lakkaraju</p>
+<p>Modern AI systems are typically developed through multiple stages-pretraining, fine-tuning rounds, and subsequent adaptation or alignment, where each stage builds on the previous ones and updates the model in distinct ways. This raises a critical question of accountability: when a deployed model succeeds or fails, which stage is responsible, and to what extent? We pose the accountability attribution problem for tracing model behavior back to specific stages of the model development process. To address this challenge, we propose a general framework that answers counterfactual questions about stage effects: how would the model&#x27;s behavior have changed if the updates from a particular stage had not occurred? Within this framework, we introduce estimators that efficiently quantify stage effects without retraining the model, accounting for both the data and key aspects of model optimization dynamics, including learning rate schedules, momentum, and weight decay. We demonstrate that our approach successfully quantifies the accountability of each stage to the model&#x27;s behavior. Based on the attribution results, our method can identify and remove spurious correlations learned during image classification and text toxicity detection tasks that were developed across multiple stages. Our approach provides a practical tool for model analysis and represents a significant step toward more accountable AI development.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2506.00175'>page</a> · <a href='https://arxiv.org/pdf/2506.00175'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Target-Agnostic Calibration under Distribution Shift with Frequency-Aware Gradient Rectification</title>
+      <link>https://arxiv.org/abs/2508.19830</link>
+      <guid isPermaLink="false">arxiv:2508.19830</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Peking U, U Michigan — Yilin Zhang, Wei Zhao</p>
+<p><b>Authors:</b> Yilin Zhang, Cai Xu, You Wu, Ziyu Guan, Wei Zhao</p>
+<p>Real-world model deployments inevitably encounter distribution shifts, rendering the confidence estimates of deep neural networks highly unreliable, posing severe risks in safety-critical applications. Existing methods improve calibration via training-time regularization or post-hoc adjustment, but often rely on access to (or simulation of) target domains, limiting practicality. We propose Frequency-aware Gradient Rectification (FGR), a target-agnostic training framework for robust calibration. From a frequency perspective, FGR applies low-pass filtering to a subset of training images to diminish spurious high-frequency cues and encourage the learning of domain-invariant features. However, the associated information loss can degrade In-Distribution (ID) calibration. To resolve this trade-off, FGR treats ID calibration as a hard constraint and rectifies conflicting parameter updates via geometric projection. This ensures a first-order non-increase in the ID calibration objective without introducing an additional loss-balancing coefficient. Extensive experiments on synthetic, real-world, and semantic shift datasets demonstrate that FGR significantly improves calibration under diverse shifts while preserving ID performance, and it remains compatible with post-hoc calibration methods. Our code is available at https://github.com/YilinZhang107/FGR-Calib.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2508.19830'>page</a> · <a href='https://arxiv.org/pdf/2508.19830'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Towards Atoms of Large Language Models</title>
+      <link>https://arxiv.org/abs/2509.20784</link>
+      <guid isPermaLink="false">arxiv:2509.20784</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua, U Oxford — Jun Zhao</p>
+<p><b>Authors:</b> Chenhui Hu, Pengfei Cao, Yubo Chen, Kang Liu, Jun Zhao</p>
+<p>The fundamental representational units (FRUs) of large language models (LLMs) remain undefined, limiting further understanding of their underlying mechanisms. In this paper, we introduce Atom Theory to systematically define, evaluate, and identify such FRUs, which we term atoms. Building on the atomic inner product (AIP), a non-Euclidean metric that captures the underlying geometry of LLM representations, we formally define atoms and propose two key criteria for ideal atoms: faithfulness ($R^2$) and stability ($q^*$). We further prove that atoms are identifiable under threshold-activated sparse autoencoders (TSAEs). Empirically, we uncover a pervasive representation shift in LLMs and demonstrate that the AIP corrects this shift to capture the underlying representational geometry. We find that two widely used units, neurons and features, fail to qualify as ideal atoms: neurons are faithful ($R^2=1$) but unstable ($q^*=0.5\%$), while features are more stable ($q^*=68.2\%$) but unfaithful ($R^2=48.8\%$). To find atoms of LLMs, leveraging atom identifiability under TSAEs, we show via large-scale experiments that reliable atom identification occurs only when the TSAE capacity matches the data scale. Guided by this insight, we identify FRUs with near-perfect faithfulness ($R^2=99.9\%$) and stability ($q^*=99.8\%$) across layers of Gemma2-2B, Gemma2-9B, and Llama3.1-8B, satisfying the criteria of ideal atoms statistically. Further analysis confirms that these atoms align with theoretical expectations and exhibit substantially higher monosemanticity. Overall, we propose and validate Atom Theory as a foundation for understanding the internal representations of LLMs. Code available at https://github.com/ChenhuiHu/towards_atoms.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2509.20784'>page</a> · <a href='https://arxiv.org/pdf/2509.20784'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multi-Agent Teams Hold Experts Back</title>
+      <link>https://arxiv.org/abs/2602.01011</link>
+      <guid isPermaLink="false">arxiv:2602.01011</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.MA</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — James Zou</p>
+<p><b>Authors:</b> Aneesh Pappu, Batu El, Hancheng Cao, Carmelo di Nolfo, Yanchao Sun, Meng Cao, James Zou</p>
+<p>Multi-agent LLM systems are increasingly deployed as autonomous collaborators, where agents interact freely rather than execute fixed, pre-specified workflows. In such settings, effective coordination cannot be fully designed in advance and must instead emerge through interaction. However, most prior work enforces coordination through fixed roles, workflows, or aggregation rules, leaving open the question of how well self-organizing teams perform when coordination is unconstrained. Drawing on organizational psychology, we study whether self-organizing LLM teams achieve strong synergy, where team performance matches or exceeds the best individual member. Across human-inspired and frontier ML benchmarks, we find that -- unlike human teams -- LLM teams consistently fail to match their expert agent&#x27;s performance, even when explicitly told who the expert is, incurring performance losses of up to 41.1% on ML benchmarks. Decomposing this failure, we show that expert leveraging, rather than identification, is the primary bottleneck. Conversational analysis reveals a tendency toward integrative compromise -- averaging expert and non-expert views rather than appropriately weighting expertise -- which increases with team size and correlates negatively with performance. Interestingly, this consensus-seeking behavior improves robustness to adversarial agents, suggesting a trade-off between alignment and effective expertise utilization. Our findings reveal a significant gap in the ability of self-organizing multi-agent teams to harness the collective expertise of their members.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.MA, cs.AI · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2602.01011'>page</a> · <a href='https://arxiv.org/pdf/2602.01011'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Exploring Autonomous Agentic Data Engineering for Model Specialization</title>
+      <link>https://arxiv.org/abs/2605.30407</link>
+      <guid isPermaLink="false">arxiv:2605.30407</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.IR</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> CUHK, NUS, Peking U — (senior)</p>
+<p><b>Authors:</b> Yujie Luo, Xiangyuan Ru, Jingsheng Zheng, Jingjing Wang, Yuqi Zhu, Jintian Zhang, Runnan Fang, Kewei Xu, … <i>(+5 more)</i></p>
+<p>Large Language Models (LLMs) have demonstrated strong performance on general tasks, while often struggling to adapt to specialized domains without high-quality domain-specific data. Existing LLM-based data curation methods primarily rely on human-designed workflows, leaving it unexamined whether LLMs can autonomously execute an end-to-end data engineering pipeline for model specialization. We formalize \textbf{Autonomous Agentic Data Engineering}, a novel task designed to evaluate LLMs as autonomous data engineers that drive model specialization through end-to-end data curation. We frame data as an optimizable component and study agents that plan, generate, and iteratively optimize training data across multiple domains, guided by post-training performance improvement. Experiments show that autonomous LLM data engineers yield substantial gains, as GPT-5.2 constructs a training curriculum that improves a student model by \textbf{57.29\%}, entirely through iterative, agent-driven data adaptation. By illuminating both potential and bottlenecks, our study establishes autonomous data engineering as a measurable capability and charts a path toward agent-driven model specialization\footnote{Code will be released at https://github.com/zjunlp/DataAgent.}.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.IR, cs.LG · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2605.30407'>page</a> · <a href='https://arxiv.org/pdf/2605.30407'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rationalize: Shared Semantic Reasoning for Human-AI Alignment</title>
+      <link>https://arxiv.org/abs/2605.30632</link>
+      <guid isPermaLink="false">arxiv:2605.30632</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.HC</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Xun Song</p>
+<p><b>Authors:</b> Aritra Dasgupta, Naga Datha Saikiran Battula, Avina Nakarmi, Sohom Sen, Subhodeep Ghosh, Xun Song</p>
+<p>We introduce Rationalize, a role-pair framework for shared semantic reasoning between humans and AI models in data-driven sensemaking. Building on ideas in human-machine teaming and critical thinking, we conceptualize human-AI interaction as a series of complementary role pairs (Explorer-Guide, Investigator-Informant, Teacher-Student, Judge-Advocate) operating in a shared reasoning space. In this space, human analysts and AI models (such as LLMs) make purposes, questions, assumptions, evidence, inferences, and implications explicit, facilitating alignment not only at the output level but at the level of rationalization of intent and action by each side. We relate these role pairs to the bidirectional human-AI alignment framework, illustrating how &quot;aligning AI to humans&quot; and &quot;aligning humans to AI&quot; differ by role, and sketch a collaborative research agenda for alignment design and assessment using element-level and role-specific approaches.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2605.30632'>page</a> · <a href='https://arxiv.org/pdf/2605.30632'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SwanVoice: Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue</title>
+      <link>https://huggingface.co/papers/2605.30993</link>
+      <guid isPermaLink="false">arxiv:2605.30993</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Ruiqi Li, Yu Zhang, Changhao Pan, Ke Lei, Xiang Yin, Cheng Yang, Hugging Face Daily Papers (curated)</p>
+<p>Zero-shot text-to-speech (TTS) has improved substantially for single-speaker synthesis, yet expressive long-form multi-speaker dialogue remains difficult. A common workaround is to synthesize each turn with a monologue TTS model and stitch the outputs together. This adds inference cost and often breaks acoustic consistency, conversational coherence, and affective continuity across turns. Recent dialogue TTS systems have begun to address this setting, but they still struggle to keep expressive coherence, controllable speaker switching, and monologue quality at the same time. We present SwanData-Speech and SwanVoice. SwanData-Speech builds monologue and dialogue corpora from in-the-wild audio, using Swan Forced Aligner for pause-aware word-level alignment and RobustMegaTTS3 for pronunciation-hard cases. Built on these data, SwanVoice is a zero-shot TTS model for 1--4 speakers, combining a 25 Hz VAE, raw-text conditioning with pause-aware symbols and pinyin substitution, and a flow-matching DiT with speaker-turn conditioning. Training starts from monologue speech, moves through mixed and real dialogue data, and then uses DiffusionNFT post-training with phone-level and speaker-similarity rewards. On SwanBench-Speech, SwanVoice obtains higher richness and hierarchy scores than all evaluated open-source baselines in both monologue and dialogue settings, while content accuracy remains the main limitation. Audio demos are available at https://swanaigc.github.io//#swanvoice.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://huggingface.co/papers/2605.30993'>page</a> · <a href='https://arxiv.org/pdf/2605.30993'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Xetrieval: Mechanistically Explaining Dense Retrieval</title>
+      <link>https://huggingface.co/papers/2605.29507</link>
+      <guid isPermaLink="false">arxiv:2605.29507</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhixin Cai, Jun Bai, Yang Liu, Jiaqi Li, Yichi Zhang, Taichuan Li, Zhuofan Chen, Zixia Jia, … <i>(+3 more)</i></p>
+<p>Explaining why dense retrievers assign high relevance scores remains challenging because retrieval decisions are made through opaque high-dimensional embeddings. Existing explanations often focus on surface signals, such as lexical matches, token alignments, or post-hoc textual rationales, and thus provide limited insight into the latent factors that shape dense retrieval behavior at the embedding level. We propose Xetrieval, an embedding-level mechanistic framework for explaining dense retrieval. Xetrieval first introduces a lightweight reasoning internalizer that approximates Chain-of-Thought reasoning directly in the embedding space with a single forward pass, enriching sentence embeddings with reasoning-oriented information while avoiding expensive autoregressive generation. It then decomposes these reasoning-enhanced embeddings into sparse, human-interpretable features, each associated with a coherent natural language description. By aggregating sparse feature overlaps across multiple document-side views, Xetrieval provides feature-level explanations of individual retrieval decisions. Experiments on diverse retrievers and benchmarks show that Xetrieval uncovers coherent interpretable features, yields stronger pair-level intervention effects, and supports task-level feature steering. The project page and source code are available at https://hihiczx.github.io/Xetrieval .</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://huggingface.co/papers/2605.29507'>page</a> · <a href='https://arxiv.org/pdf/2605.29507'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>MENTOR: Efficient Multimodal-Conditioned Tuning for Autoregressive Vision Generation Models</title>
       <link>https://arxiv.org/abs/2507.09574</link>

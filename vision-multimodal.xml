@@ -5,8 +5,121 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Sun, 31 May 2026 05:31:53 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 05:39:12 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Cross-Modal Attention Calibration for LVLM Hallucination Mitigation</title>
+      <link>https://arxiv.org/abs/2501.01926</link>
+      <guid isPermaLink="false">arxiv:2501.01926</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Jiaming Li</p>
+<p><b>Authors:</b> Jiaming Li, Jiacheng Zhang, Zequn Jie, Lin Ma, Guanbin Li</p>
+<p>Large vision-language models (LVLMs) have shown remarkable capabilities in visual-language understanding. Despite their success, LVLMs still suffer from generating hallucinations in complex generation tasks, leading to inconsistencies between visual inputs and generated content. To address this issue, some approaches have introduced inference-time interventions, such as contrastive decoding, to reduce overreliance on language priors. However, these approaches overlook hallucinations stemming from position bias and spurious inter-modality correlations. In this paper, we propose a Cross-Modal Attention Calibration (CMAC) method to mitigate hallucinations in LVLMs in a training-free manner. In this method, we design an Inter-Modality Decoding (IMD) module to alleviate hallucination by a novel contrastive decoding mechanism. IMD masks the value vectors associated with significant cross-modal attention weights as distortion, which addresses both uni-modality overreliance and misleading inter-modality correlations. Additionally, a Cross-Modal Position Calibration (CMPC) module shrinks the position gap of image tokens, alleviating the position bias in cross-modal attention. Experimental results on diverse hallucination benchmarks validate the superiority of our method over existing state-of-the-art techniques in reducing hallucinations for LVLM. Our code will be available at https://github.com/lijm48/IMCCD.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2501.01926'>page</a> · <a href='https://arxiv.org/pdf/2501.01926'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DISCO: Mitigating Bias in Deep Learning with Conditional Distance Correlation</title>
+      <link>https://arxiv.org/abs/2506.11653</link>
+      <guid isPermaLink="false">arxiv:2506.11653</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Christian Wachinger</p>
+<p><b>Authors:</b> Emre Kavak, Tom Nuno Wolf, Christian Wachinger</p>
+<p>Dataset bias often leads deep learning models to exploit spurious correlations instead of task-relevant signals. We introduce the Standard Anti-Causal Model (SAM), a unifying causal framework that characterizes bias mechanisms and yields a conditional independence criterion for causal stability. Building on this theory, we propose DISCO$_m$ and sDISCO, efficient and scalable estimators of conditional distance correlation that enable independence regularization in gradient-based models. Across six diverse datasets, our methods consistently outperform or are competitive in existing observed bias mitigation approaches, while requiring fewer hyperparameters and scaling seamlessly to multi-bias scenarios. This work bridges causal theory and practical deep learning, providing both a principled foundation and effective tools for robust prediction. Source Code: https://github.com/yakamoz5/DISCO.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2506.11653'>page</a> · <a href='https://arxiv.org/pdf/2506.11653'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Target-Agnostic Calibration under Distribution Shift with Frequency-Aware Gradient Rectification</title>
+      <link>https://arxiv.org/abs/2508.19830</link>
+      <guid isPermaLink="false">arxiv:2508.19830</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Peking U, U Michigan — Yilin Zhang, Wei Zhao</p>
+<p><b>Authors:</b> Yilin Zhang, Cai Xu, You Wu, Ziyu Guan, Wei Zhao</p>
+<p>Real-world model deployments inevitably encounter distribution shifts, rendering the confidence estimates of deep neural networks highly unreliable, posing severe risks in safety-critical applications. Existing methods improve calibration via training-time regularization or post-hoc adjustment, but often rely on access to (or simulation of) target domains, limiting practicality. We propose Frequency-aware Gradient Rectification (FGR), a target-agnostic training framework for robust calibration. From a frequency perspective, FGR applies low-pass filtering to a subset of training images to diminish spurious high-frequency cues and encourage the learning of domain-invariant features. However, the associated information loss can degrade In-Distribution (ID) calibration. To resolve this trade-off, FGR treats ID calibration as a hard constraint and rectifies conflicting parameter updates via geometric projection. This ensures a first-order non-increase in the ID calibration objective without introducing an additional loss-balancing coefficient. Extensive experiments on synthetic, real-world, and semantic shift datasets demonstrate that FGR significantly improves calibration under diverse shifts while preserving ID performance, and it remains compatible with post-hoc calibration methods. Our code is available at https://github.com/YilinZhang107/FGR-Calib.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2508.19830'>page</a> · <a href='https://arxiv.org/pdf/2508.19830'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>CaptionFormer: Unified Segmentation, Tracking, and Captioning for Spatio-Temporal Objects</title>
+      <link>https://arxiv.org/abs/2510.14904</link>
+      <guid isPermaLink="false">arxiv:2510.14904</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Gabriel Fiastre, Antoine Yang, Cordelia Schmid</p>
+<p>Dense Video Object Captioning (DVOC) is the task of jointly detecting, tracking, and captioning object trajectories in a video, requiring the ability to understand spatio-temporal details and describe them in natural language. Due to the complexity of the task and the high cost associated with manual annotation, previous approaches resort to training strategies with limited data, potentially leading to suboptimal performance. To circumvent this issue, we propose to generate captions about spatio-temporally localized entities leveraging a state-of-the-art VLM, and extend the LVIS and LV-VIS datasets with our synthetic captions (LVISCap and LV-VISCap). Moreover, we introduce an end-to-end model, CaptionFormer, capable of jointly detecting, segmenting, tracking and captioning object trajectories. CaptionFormer achieves state-of-the-art DVOC results on three existing benchmarks, VidSTG, VLN and BenSMOT. The datasets and code are available at https://www.gabriel.fiastre.fr/captionformer/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2510.14904'>page</a> · <a href='https://arxiv.org/pdf/2510.14904'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mixture of Horizons in Action Chunking</title>
+      <link>https://arxiv.org/abs/2511.19433</link>
+      <guid isPermaLink="false">arxiv:2511.19433</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, CUHK, Georgia Tech, Tsinghua, UC Berkeley — Dong Jing</p>
+<p><b>Authors:</b> Dong Jing, Gang Wang, Jiaqi Liu, Weiliang Tang, Zelong Sun, Yunchao Yao, Zhenyu Wei, Yunhui Liu, … <i>(+2 more)</i></p>
+<p>Vision-language-action (VLA) models have shown remarkable capabilities in robotic manipulation, but their performance is sensitive to the $\textbf{action chunk length}$ used during training, termed $\textbf{horizon}$. Our empirical study reveals an inherent trade-off: longer horizons provide stronger global foresight but degrade fine-grained accuracy, while shorter ones sharpen local control yet struggle on long-term tasks, implying fixed choice of single horizons being suboptimal. To mitigate the trade-off, we propose a $\textbf{mixture of horizons (MoH)}$ strategy. MoH rearranges the action chunk into several segments with different horizons, processes them in parallel with a shared action transformer, and fuses outputs with a light linear gate. It has three appealing benefits. 1) MoH exploits long-term foresight and short-term precision jointly within a single model, improving both performance and generalizability to complex tasks. 2) MoH is plug-and-play for full-attention action modules with minimal training or inference overhead. 3) MoH enables dynamic inference with adaptive horizons, which selects stable actions through cross-horizon consensus, achieving 2.5$\times$ higher throughput than baselines while preserving superior performance. Extensive experiments over flow-based policies $π_0$, $π_{0.5}$, and one-step regression policy $π_{\text{reg}}$ demonstrate that MoH yields consistent and significant gains on both simulations and real-world tasks. Notably, under mixed-task setting, $π_{0.5}$ with MoH reaches a new state-of-the-art with 99$\%$ average success rate on LIBERO after only $30k$ training iterations. Project page: https://timsty1.github.io/moh/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2511.19433'>page</a> · <a href='https://arxiv.org/pdf/2511.19433'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Seeing Isn&#x27;t Knowing: Do VLMs Know When Not to Answer Spatial Questions (and Why)?</title>
+      <link>https://arxiv.org/abs/2605.30557</link>
+      <guid isPermaLink="false">arxiv:2605.30557</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Harvard, U Edinburgh — Yue Zhang</p>
+<p><b>Authors:</b> Yue Zhang, Zun Wang, Han Lin, Yonatan Bitton, Idan Szpektor, Mohit Bansal</p>
+<p>Spatial reasoning is a fundamental capability for vision-language models (VLMs) deployed in real-world environments. However, visual observations are inherently limited representations of a 3D world: occlusion can render objects invisible, and perspective can make geometric properties misleading. Despite this, existing spatial reasoning benchmarks typically assume that observations are sufficient and reliable, focusing on whether models produce correct answers rather than whether they recognize when a question cannot be answered and what additional observations would be needed. In this work, we challenge this assumption by constructing a controlled evaluation framework, SpatialUncertain, and introducing two types of observation challenges: (1) occlusion, which hides target information, and (2) perspective ambiguity, which produces misleading visual cues. For each configuration, we design spatial questions that are answerable under clean observations but require abstention under the introduced challenges. We further evaluate whether models can identify which additional viewpoints would resolve perspective ambiguity. Our results across a diverse set of frontier open- and closed-source VLMs reveal two consistent failure modes. First, models are prone to overconfident answering, attempting to solve spatial reasoning tasks even when visual evidence is incomplete or misleading, with average accuracy around 30\% under occlusion and below 10\% under perspective ambiguity. Second, even when additional views are available, some models perform near random chance in identifying which would provide reliable evidence. Together, our findings call for moving beyond answer correctness toward evaluating whether models know when to abstain and how to seek reliable evidence.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2605.30557'>page</a> · <a href='https://arxiv.org/pdf/2605.30557'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VLM3: Vision Language Models Are Native 3D Learners</title>
+      <link>https://arxiv.org/abs/2605.30561</link>
+      <guid isPermaLink="false">arxiv:2605.30561</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, UC Berkeley — Yangyang Shi</p>
+<p><b>Authors:</b> Zhipeng Cai, Zhuang Liu, Yunyang Xiong, Zechun Liu, Vikas Chandra, Yangyang Shi</p>
+<p>Vision Language Models (VLMs) enable a unified model to solve various vision tasks through prompting. They have shown promising performance in semantic understanding. However, 3D understanding still largely relies on expert vision models with complex task-specific designs. The key argument this work wants to make is that VLMs are native 3D learners. Our in-depth large scale study shows that 1) focal length unification, 2) text-based pixel reference and 3) data mixture and scaling, are all you need for effective 3D learning. Model architecture changes, large models, heavy data augmentations, and complex losses including the regression formulation, many of which form the foundation of expert vision models, are actually not necessary conditions. As a result, we propose VLM3, a scalable method with the simplest design that enables standard VLMs to master diverse 3D tasks. VLM3 not only advances the VLM depth estimation accuracy by a large margin (0.84 -&gt; 0.9), but also enables diverse 3D tasks such as pixel correspondence, camera pose estimation and object-level 3D understanding, matching expert vision model accuracy while maintaining standard architectures and text-based training. We believe VLM3 opens up a new paradigm for simple and scalable 3D learning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2605.30561'>page</a> · <a href='https://arxiv.org/pdf/2605.30561'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs</title>
+      <link>https://arxiv.org/abs/2605.30611</link>
+      <guid isPermaLink="false">arxiv:2605.30611</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS, Tsinghua — Haozhe Zhao</p>
+<p><b>Authors:</b> Haozhe Zhao, Shuzheng Si, Zhenhailong Wang, Zheng Wang, Liang Chen, Xiaotong Li, Zhixiang Liang, Maosong Sun, … <i>(+1 more)</i></p>
+<p>Scientific figures are among the most effective means of communicating complex research ideas, yet producing publication-quality illustrations remains one of the most labor-intensive parts of paper preparation. Existing automated systems each target a single figure type under text-only input, leaving the diversity of types and conditions researchers actually use unaddressed; their raster outputs further cannot be locally revised. Because scientific figures are structured compositions of discrete semantic components, the localized errors generators produce on such layouts demand not a stronger backbone but a harness. We instantiate this harness in two complementary systems: Crafter, a multi-agent harness for figure generation that generalizes across figure types and input conditions without architectural changes, and CraftEditor, which applies the same pattern to convert raster outputs into editable SVGs. Moreover, we introduce CraftBench, a benchmark spanning three figure types and four input conditions with human quality annotation. Experiments show that Crafter substantially outperforms both standalone generators and the agentic baseline on PaperBanana-Bench and CraftBench, with ablations confirming each component&#x27;s independent contribution; CraftEditor faithfully converts outputs into editable SVGs that surpass all baselines. Our code and benchmark are available at https://github.com/HaozheZhao/Crafter.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2605.30611'>page</a> · <a href='https://arxiv.org/pdf/2605.30611'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Simple Token-Efficient Vision-Language Model for Case-level Pathology Synoptic Report Generation</title>
+      <link>https://arxiv.org/abs/2605.30716</link>
+      <guid isPermaLink="false">arxiv:2605.30716</guid>
+      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Caltech, Cornell, Peking U, U Montreal, UC Berkeley — Zhiyuan Yang</p>
+<p><b>Authors:</b> Zhiyuan Yang, Jiahao Cheng, Vincent Quoc-Huy Trinh, Mahdi S. Hosseini</p>
+<p>Generating clinically useful pathology reports for pathology cases from whole-slide images (WSIs) is challenging due to gigapixel resolution, long visual-token sequences, and the complexity of case-level reasoning, where a single case may contain multiple WSIs with heterogeneous tissues and ambiguous findings. We present a simple token-efficient vision--language model for case-level synoptic report generation that remains practical under constrained GPU memory. Our architecture follows a minimal three-component design: a frozen pathology patch encoder, a lightweight two-layer MLP vision-language aligner, and a large language model decoder, with an explicit WSI marker token to separate slides within a case. Training proceeds in two supervised stages: (1) aligner-only WSI captioning using heterogeneous WSI-text pairs, and (2) case-level supervised fine-tuning on case-report pairs for structured report generation. To reduce sequence length, we represent each slide using $512 \times 512$ patches at $5\times$ magnification, which reduces the average sequence length by up to $64\times$ times compared to the commonly used $20\times$ patches. Combined with efficient training techniques, we enable practical training with only half a NVIDIA H100 GPU. Across both training stages, our approach achieves high ROUGE-L/METEOR/BLEU-4 scores while being substantially more efficient in memory and runtime. In AI-based evaluations, our model is consistently preferred over strong baselines. Extensive ablations characterize performance-efficiency trade-offs and identify simple choices that improve robustness in multi-WSI settings. Overall, this work provides a strong, reproducible baseline for efficient pathology report generation, lowering the barrier to multi-WSI VLM research under limited compute.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2605.30716'>page</a> · <a href='https://arxiv.org/pdf/2605.30716'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>MENTOR: Efficient Multimodal-Conditioned Tuning for Autoregressive Vision Generation Models</title>
       <link>https://arxiv.org/abs/2507.09574</link>
