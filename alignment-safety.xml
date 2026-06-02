@@ -5,8 +5,114 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 01 Jun 2026 05:39:12 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 05:37:47 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>StreamingVLM: Real-Time Understanding for Infinite Video Streams</title>
+      <link>https://arxiv.org/abs/2510.09608</link>
+      <guid isPermaLink="false">arxiv:2510.09608</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MIT — Song Han</p>
+<p><b>Authors:</b> Ruyi Xu, Guangxuan Xiao, Yukang Chen, Liuning He, Yao Lu, Song Han</p>
+<p>Vision-language models (VLMs) could power real-time assistants and autonomous agents, but they face a critical challenge: understanding near-infinite video streams without escalating latency and memory usage. Processing entire videos with full attention leads to quadratic computational costs and poor performance on long videos. Meanwhile, simple sliding window methods are also flawed, as they either break coherence or suffer from high latency due to redundant recomputation. In this paper, we introduce StreamingVLM, a model designed for real-time, stable understanding of infinite visual input. Our approach is a unified framework that aligns training with streaming inference. During inference, we maintain a compact KV cache by reusing states of attention sinks, a short window of recent vision tokens, and a long window of recent text tokens. This streaming ability is instilled via a simple supervised fine-tuning (SFT) strategy that applies full attention on short, overlapped video chunks, which effectively mimics the inference-time attention pattern without training on prohibitively long contexts. For evaluation, we build Inf-Streams-Eval, a new benchmark with videos averaging over two hours that requires dense, per-second alignment between frames and text. On Inf-Streams-Eval, StreamingVLM achieves a 66.18% win rate against GPT-4O mini and maintains stable, real-time performance at up to 8 FPS on a single NVIDIA H100. Notably, our SFT strategy also enhances general VQA abilities without any VQA-specific fine-tuning, improving performance on LongVideoBench by +4.30 and OVOBench Realtime by +5.96. Code is available at https://github.com/mit-han-lab/streaming-vlm.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2510.09608'>page</a> · <a href='https://arxiv.org/pdf/2510.09608'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VocSim: A Training-free Benchmark for Zero-shot Content Identity in Single-source Audio</title>
+      <link>https://arxiv.org/abs/2512.10120</link>
+      <guid isPermaLink="false">arxiv:2512.10120</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.SD</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Richard Hahnloser</p>
+<p><b>Authors:</b> Maris Basha, Anja Zai, Sabine Stoll, Richard Hahnloser</p>
+<p>General-purpose audio representations aim to map acoustically variable instances of the same event to nearby points, resolving content identity in a zero-shot setting. Unlike supervised classification benchmarks that measure adaptability via parameter updates, we introduce VocSim, a training-free benchmark probing the intrinsic geometric alignment of frozen embeddings, with no parameters updated and no labels used (a label-free PCA whitening is fit per subset to correct anisotropy). VocSim aggregates 125k single-source clips from 19 corpora spanning human speech, animal vocalizations, and environmental sounds, isolating content representation from source separation (polyphonic mixtures are out of scope). We evaluate embeddings with Precision@k for local purity and the Global Separation Rate (GSR) for point-wise class separation, calibrated by lift over an empirical permutation baseline. A simple pipeline of frozen Whisper features, time-frequency pooling, and label-free PCA yields strong zero-shot performance with stable GSR rankings across domains (Kendall&#x27;s tau = 0.60). However, on blind low-resource speech (Shipibo-Conibo, Chintang), local retrieval collapses while remaining above chance, exposing a cross-lingual speech generalization gap. As external validation, our top embeddings predict avian perceptual similarity, improve bioacoustic classification, and achieve state-of-the-art on the HEAR benchmark. We release data, code, and a public leaderboard.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2512.10120'>page</a> · <a href='https://arxiv.org/pdf/2512.10120'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Uncovering Competency Gaps in Large Language Models and Their Benchmarks</title>
+      <link>https://arxiv.org/abs/2512.20638</link>
+      <guid isPermaLink="false">arxiv:2512.20638</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Maty Bohacek, Nino Scherrer, Nicholas Dufour, Thomas Leung, Christoph Bregler, Stephanie C. Y. Chan</p>
+<p>The evaluation of large language models relies heavily on standardized benchmarks. These benchmarks provide useful aggregated metrics, but can obscure (i) particular sub-areas where the models are weak (&quot;model gaps&quot;) and (ii) imbalanced coverage in the benchmarks themselves (&quot;benchmark gaps&quot;). To automatically uncover both types of gaps, we propose a simple new method using concept activations from sparse autoencoders, to identify fine-grained gaps on a per-concept basis. The method also benefits from grounding evaluation in the model&#x27;s internal representations, as well as easy comparison across benchmarks. We applied the method to five popular open-source models and more than a dozen benchmarks, as illustrative examples. As validation of the approach, we found that our automatic, unsupervised method was able to recover model gaps that have been previously documented in the literature (e.g. relating to sycophancy), in addition to identifying novel model gaps. We were also able to automatically uncover benchmark gaps: core concepts that should fall within the scope of a given benchmark. Our &quot;competency gaps&quot; method can be used to complement existing benchmarks, by providing a concept-level decomposition of model behavior, and by helping benchmark developers iterate upon benchmark design. Code is available at https://competency-gaps.github.io.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2512.20638'>page</a> · <a href='https://arxiv.org/pdf/2512.20638'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Safety Alignment of LMs via Non-cooperative Games</title>
+      <link>https://arxiv.org/abs/2512.20806</link>
+      <guid isPermaLink="false">arxiv:2512.20806</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Anselm Paulus, Ilia Kulikov, Brandon Amos, Rémi Munos, Ivan Evtimov, Kamalika Chaudhuri, Arman Zharmagambetov</p>
+<p>Ensuring the safety of language models (LMs) while maintaining their usefulness remains a critical challenge in AI alignment. Current approaches rely on sequential adversarial training: generating adversarial prompts and fine-tuning LMs to defend against them. We introduce a different paradigm: framing safety alignment as a non-zero-sum game between an Attacker LM and a Defender LM trained jointly via online reinforcement learning. Each LM continuously adapts to the other&#x27;s evolving strategies, driving iterative improvement. Our method uses a preference-based reward signal derived from pairwise comparisons instead of point-wise scores, providing more robust supervision and potentially reducing reward hacking. Our RL recipe, AdvGame, shifts the Pareto frontier of safety and utility, yielding a Defender LM that is simultaneously more helpful and more resilient to adversarial attacks. In addition, the resulting Attacker LM converges into a strong, general-purpose red-teaming agent that can be directly deployed to probe arbitrary target models. Code at github.com/facebookresearch/advgame.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2512.20806'>page</a> · <a href='https://arxiv.org/pdf/2512.20806'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Better Source, Better Flow: Learning Condition-Dependent Source Distribution for Flow Matching</title>
+      <link>https://arxiv.org/abs/2602.05951</link>
+      <guid isPermaLink="false">arxiv:2602.05951</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Seungryong Kim</p>
+<p><b>Authors:</b> Junwan Kim, Jiho Park, Seonghu Jeon, Seungryong Kim</p>
+<p>Flow matching has recently emerged as a promising alternative to diffusion-based generative models, particularly for text-to-image generation. Despite its flexibility in allowing arbitrary source distributions, most existing approaches rely on a standard Gaussian distribution, a choice inherited from diffusion models, and rarely consider the source distribution itself as an optimization target in such settings. In this work, we show that principled design of the source distribution is not only feasible but also beneficial at the scale of modern text-to-image systems. Specifically, we propose learning a condition-dependent source distribution under flow matching objective that better exploit rich conditioning signals. We identify key failure modes that arise when directly incorporating conditioning into the source, including distributional collapse and instability, and show that appropriate variance regularization and directional alignment between source and target are critical for stable and effective learning. We further analyze how the choice of target representation space impacts flow matching with structured sources, revealing regimes in which such designs are most effective. Extensive experiments across multiple text-to-image benchmarks demonstrate consistent and robust improvements, including up to a 3x faster convergence in FID, highlighting the practical benefits of a principled source distribution design for conditional flow matching.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-30 · <a href='https://arxiv.org/abs/2602.05951'>page</a> · <a href='https://arxiv.org/pdf/2602.05951'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>What&#x27;s Missing in Screen-to-Action? Towards a UI-in-the-Loop Paradigm for Multimodal GUI Reasoning</title>
+      <link>https://arxiv.org/abs/2604.06995</link>
+      <guid isPermaLink="false">arxiv:2604.06995</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Wen Zhang</p>
+<p><b>Authors:</b> Songze Li, Xiaoke Guo, Tianqi Liu, Biao Yi, Zhaoyan Gong, Zhiqiang Liu, Huajun Chen, Wen Zhang</p>
+<p>Existing Graphical User Interface (GUI) reasoning tasks remain challenging, particularly in UI understanding. Current methods typically rely on direct screen-based decision-making, which lacks interpretability and overlooks a comprehensive understanding of UI elements, ultimately leading to task failure. To enhance the understanding and interaction with UIs, we propose an innovative GUI reasoning paradigm called UI-in-the-Loop (UILoop). Our approach treats the GUI reasoning task as a cyclic Screen-UI elements-Action process. By enabling Multimodal Large Language Models (MLLMs) to explicitly learn the localization, semantic functions, and practical usage of key UI elements, UILoop achieves precise element discovery and performs interpretable reasoning. Furthermore, we introduce a more challenging UI Comprehension task centered on UI elements with three evaluation metrics. Correspondingly, we contribute a benchmark of 26K samples (UI Comprehension-Bench) to comprehensively evaluate existing methods&#x27; mastery of UI elements. Extensive experiments demonstrate that UILoop achieves state-of-the-art UI understanding performance while yielding superior results in GUI reasoning tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-30 · <a href='https://arxiv.org/abs/2604.06995'>page</a> · <a href='https://arxiv.org/pdf/2604.06995'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SentGuard: Sentence-Level Streaming Guardrails for Large Language Models</title>
+      <link>https://arxiv.org/abs/2606.02041</link>
+      <guid isPermaLink="false">arxiv:2606.02041</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U — Yingchun Wang</p>
+<p><b>Authors:</b> Jiaqi Yu, Xin Wang, Yixu Wang, Jie Li, Yan Teng, Xingjun Ma, Yingchun Wang</p>
+<p>Large language models increasingly stream long, reasoning-intensive responses in real time, making when to moderate as critical as whether to moderate. Existing guardrails fall into two unsatisfactory extremes: response-level methods delay intervention until the full output is generated, whereas token-level methods act on incomplete semantics, often producing unstable decisions and excessive guard invocations. To address this challenge, we propose SentGuard, a sentence-level streaming guardrail that operates in parallel with generation. A lightweight waiting buffer groups streamed tokens into sentence chunks and releases only verified chunks to the user, introducing a small offset that enables SentGuard to assess the current prefix while the target LLM decodes subsequent content. To support this, we construct StreamSafe, a benchmark with structured per-sentence annotations across 8 harm categories, capturing the evolution of safety risks across both reasoning and response segments. We further train SentGuard with a coarse-to-fine objective to detect unsafe intent as soon as it emerges at sentence boundaries. Experiments on 5 safety benchmarks show that SentGuard outperforms existing baselines, detecting 90.5% of unsafe cases within two sentences while maintaining a low streaming false-positive rate of 7.41%.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL · <b>arXiv submitted:</b> 2026-06-01 · <a href='https://arxiv.org/abs/2606.02041'>page</a> · <a href='https://arxiv.org/pdf/2606.02041'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Circuits Updates â May 2026A short update on understanding features through downstream connections.</title>
+      <link>https://transformer-circuits.pub/2026/may-update/index.html</link>
+      <guid isPermaLink="false">transformer_circuits:fafd5ed0b3</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>blog</category>
+      <category>interpretability</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
+<p><b>Authors:</b> Anthropic Interpretability</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2026/may-update/index.html'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mellum2 Technical Report</title>
+      <link>https://huggingface.co/papers/2605.31268</link>
+      <guid isPermaLink="false">arxiv:2605.31268</guid>
+      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Marko Kojic, Ivan Bondyrev, Aral de Moor, Joseph Shtok, Petr Borovlev, Kseniia Lysaniuk, Madeeswaran Kannan, Ivan Dolgov, … <i>(+2 more)</i></p>
+<p>We present Mellum 2, an open-weight 12B-parameter Mixture-of-Experts (MoE) language model with 2.5B active parameters per token. Mellum 2 is a general-purpose language model specialized in software engineering, spanning code generation and editing, debugging, multi-step reasoning, tool use and function calling, agentic coding, and conversational programming assistance, and it is the successor to the completion-focused 4B dense Mellum model. The architecture builds on the Mixture-of-Experts (64 experts, 8 active) and combines Grouped-Query Attention with 4 KV heads, Sliding Window Attention on three of every four layers, and a single Multi-Token Prediction head that doubles as both an auxiliary pre-training objective and a built-in draft model for speculative decoding; each choice was validated by ablation with inference efficiency on commodity GPUs as a design constraint. Pre-training spans approximately 10.6 trillion tokens through a three-phase curriculum that progressively shifts the mixture from diverse web data toward curated code and mathematical content, optimized with Muon under FP8 hybrid precision and a Warmup-Hold-Decay schedule with linear decay to zero. The pre-trained base is extended to a 128K context window via a layer-selective YaRN and then post-trained in two stages (supervised fine-tuning followed by RLVR), yielding two released variants: an Instruct model that answers directly and a Thinking model that emits an explicit reasoning trace before its final answer. Across code generation, math and reasoning, tool use, knowledge, and safety benchmarks, Mellum 2 is competitive with open-weight baselines in the 4B-14B range while running at the per-token compute of a 2.5B dense model. We release the base, instruct, and thinking checkpoints, together with this report on the architecture decisions, data pipeline, and training recipe behind them, under the Apache 2.0 license.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://huggingface.co/papers/2605.31268'>page</a> · <a href='https://arxiv.org/pdf/2605.31268'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Who Gets Credit or Blame? Attributing Accountability in Modern AI Systems</title>
       <link>https://arxiv.org/abs/2506.00175</link>
