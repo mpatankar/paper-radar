@@ -5,8 +5,85 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Tue, 02 Jun 2026 05:37:47 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 05:57:48 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Domino: Decoupling Causal Modeling from Autoregressive Drafting in Speculative Decoding</title>
+      <link>https://huggingface.co/papers/2605.29707</link>
+      <guid isPermaLink="false">arxiv:2605.29707</guid>
+      <pubDate>Wed, 03 Jun 2026 05:57:48 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> U Michigan — (senior)</p>
+<p><b>Authors:</b> Jianuo Huang, Yaojie Zhang, Qituan Zhang, Hao Lin, Hanlin Xu, Linfeng Zhang, Hugging Face Daily Papers (curated)</p>
+<p>Speculative decoding accelerates LLM inference by drafting multiple tokens and verifying them in parallel with the target model. However, its practical speedup is constrained by the trade-off between draft quality and drafting cost: autoregressive drafters model causal dependencies among draft tokens but incur sequential overhead, while parallel drafters reduce drafting cost but weaken intra-block dependency modeling. In this paper, we propose Domino, a speculative decoding framework that decouples causal dependency modeling from expensive autoregressive draft execution. Domino first uses a parallel draft backbone to produce preliminary draft distributions for the entire block, and then applies a lightweight Domino head to refine them with prefix-dependent causal information. To stabilize teacher-forced causal encoding, we further introduce a base-anchored training curriculum that first strengthens the parallel backbone and then gradually shifts optimization toward the causally corrected final distribution. Experiments on Qwen3 models show that Domino achieves up to \(5.49\times\) end-to-end speedup under the Transformers backend and up to \(5.8\times\) throughput speedup under SGLang serving.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://huggingface.co/papers/2605.29707'>page</a> · <a href='https://arxiv.org/pdf/2605.29707'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Harness-1: Reinforcement Learning for Search Agents with State-Externalizing Harnesses</title>
+      <link>https://huggingface.co/papers/2606.02373</link>
+      <guid isPermaLink="false">arxiv:2606.02373</guid>
+      <pubDate>Wed, 03 Jun 2026 05:57:48 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U — (senior)</p>
+<p><b>Authors:</b> Pengcheng Jiang, Zhiyi Shi, Kelly Hong, Xueqiang Xu, Jiashuo Sun, Jimeng Sun, Hammad Bashir, Jiawei Han, … <i>(+1 more)</i></p>
+<p>Search agents are often trained as policies over growing transcripts: the model must decide how to search while also remembering what it has seen, which evidence is useful, which constraints remain open, and which claims have actually been checked. We argue that this formulation puts too much routine state management inside the policy: reinforcement learning is forced to optimize both semantic search decisions and recoverable bookkeeping that the environment can maintain more reliably. We introduce Harness-1, a 20B search agent (retrieval subagent) trained with reinforcement learning inside a stateful search harness. The harness maintains environment-side working memory, including a candidate pool, an importance-tagged curated set, compact evidence links, verification records, compressed and deduplicated observations, and budget-aware context rendering. The policy retains the semantic decisions: what to search, which documents to keep or discard, what to verify, and when to stop. Across eight retrieval benchmarks spanning web, finance, patents, and multi-hop QA, Harness-1 achieves 0.730 average curated recall, outperforming the next strongest open search subagent by +11.4 points and remaining competitive with much larger frontier-model searchers. Its gains are especially strong on held-out transfer benchmarks, suggesting that reinforcement learning over explicit search state can produce retrieval behaviors that generalize beyond the training domains. Our code is available at https://github.com/pat-jj/harness-1.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-01 · <a href='https://huggingface.co/papers/2606.02373'>page</a> · <a href='https://arxiv.org/pdf/2606.02373'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Linear Ensembles Wash Away Watermarks: On the Fragility of Distributional Perturbations in LLMs</title>
+      <link>https://huggingface.co/papers/2605.30501</link>
+      <guid isPermaLink="false">arxiv:2605.30501</guid>
+      <pubDate>Wed, 03 Jun 2026 05:57:48 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhihao Wu, Gracia Gong, Qinglin Zhu, Yudong Chen, Runcong Zhao, Hugging Face Daily Papers (curated)</p>
+<p>Watermarking embeds statistical signatures in AI-generated text for detection and attribution. We reveal a fundamental vulnerability: when users access multiple models (today&#x27;s reality), watermarks trivially fail. Watermarks perturb output distributions away from the original, and in competitive markets, these perturbations are typically independent across providers. We theoretically prove that averaging output probability distributions recovers the unwatermarked distribution with up to a second-order error term. Empirically, simply averaging 3-5 models cancels out these perturbations. We introduce WASH (Watermark Attenuation via Statistical Hybridisation), which solves practical challenges in ensemble generation: vocabulary misalignment and tokenisation differences across heterogeneous models. Experiments across six watermarking schemes and three LLMs show that averaging across 3 models suppresses detection z-scores from 5-300 to below 2 (below the detection threshold of 4) and reduces TPR at 5% FPR to below 50%, while improving quality by 27.5% and running 6 times faster than the best baseline on the long sequence generation. Our results suggest that robust AI-text detection via watermarking requires either accepting this fundamental vulnerability or unprecedented coordination among model providers.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://huggingface.co/papers/2605.30501'>page</a> · <a href='https://arxiv.org/pdf/2605.30501'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Trust Region On-Policy Distillation</title>
+      <link>https://huggingface.co/papers/2606.01249</link>
+      <guid isPermaLink="false">arxiv:2606.01249</guid>
+      <pubDate>Wed, 03 Jun 2026 05:57:48 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Stanford — (senior)</p>
+<p><b>Authors:</b> Xingrun Xing, Haoqing Wang, Boyan Gao, Ziheng Li, Yehui Tang, Hugging Face Daily Papers (curated)</p>
+<p>On-Policy Distillation (OPD) is a fundamental technique for efficient post-training of large language models (LLMs), with broad applications in agent learning, multi-task enhancement, and model compression. However, OPD training becomes unstable when the teacher and student distributions differ substantially, as teacher supervision on student-generated tokens may yield unreliable policy gradients and even cause optimization failure. This work addresses reliable on-policy token-level supervision through credit assignment strategies, and proposes Trust Region On-Policy Distillation, TrOPD. It features the following characteristics: 1) Trust-Region On-Policy Learning: TrOPD performs OPD only in regions where the teacher provides reliable supervision, mitigating the optimization difficulty of the K1 reverse-KL estimator under distribution mismatch. 2) Outlier Estimation: For outlier regions, we explore gradient clipping, masking, and forward-KL estimation to reduce the adverse effects of unreliable supervision. 3) Off-Policy Guidance: The student continues generation from teacher prefixes and uses forward KL to imitate off-policy guidance, encouraging on-policy exploration toward reliable regions. Experiments show that TrOPD consistently outperforms SoTA OPD baselines, including OPD, EOPD, and REOPOLD, across mathematical reasoning, code generation, and general-domain benchmarks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://huggingface.co/papers/2606.01249'>page</a> · <a href='https://arxiv.org/pdf/2606.01249'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking</title>
+      <link>https://huggingface.co/papers/2606.03985</link>
+      <guid isPermaLink="false">arxiv:2606.03985</guid>
+      <pubDate>Wed, 03 Jun 2026 05:57:48 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Zekun Qi, Xuchuan Chen, Dairu Liu, Chenghuai Lin, Yunrui Lian, Sikai Liang, Zhikai Zhang, Yu Guan, … <i>(+6 more)</i></p>
+<p>We introduce Humanoid-GPT, a GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control. Unlike prior shallow MLP trackers constrained by scarce data and an agility-generalization trade-off, Humanoid-GPT is pre-trained on a 2B-frame retargeted corpus that unifies all major mocap datasets with large-scale in-house recordings. Scaling both data and model capacity yields a single generative Transformer that tracks highly dynamic behaviors while achieving unprecedented zero-shot generalization to unseen motions and control tasks. Extensive experiments and scaling analyses show that our model establishes a new performance frontier, demonstrating robust zero-shot generalization to unseen tasks while simultaneously tracking highly dynamic and complex motions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-02 · <a href='https://huggingface.co/papers/2606.03985'>page</a> · <a href='https://arxiv.org/pdf/2606.03985'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>World Models Meet Language Models: On the Complementarity of Concrete and Abstract Reasoning</title>
+      <link>https://huggingface.co/papers/2606.03603</link>
+      <guid isPermaLink="false">arxiv:2606.03603</guid>
+      <pubDate>Wed, 03 Jun 2026 05:57:48 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yucheng Zhou, Wei Tao, Yiwen Guo, Jianbing Shen, Hugging Face Daily Papers (curated)</p>
+<p>World models and multimodal large language models (MLLMs) provide complementary capabilities for predicting future outcomes from static visual observations. World models can generate concrete visual rollouts of possible futures, while MLLMs can reason abstractly over questions, goals, and rules. However, generated rollouts are stochastic and may be visually plausible but task-incorrect, making it necessary to determine when visual simulation is useful, whether a rollout is credible, and how it should influence the final answer. We formulate this problem as controlled concrete reasoning, where a model learns to invoke, verify, and integrate visual future simulation alongside abstract reasoning. To study this setting, we construct two human-verified benchmarks, VRQABench for controllable spatial lookahead and OpenWorldQA for open-domain physical prediction, and propose Privileged-Future On-Policy Self-Distillation (PF-OPSD). During training, PF-OPSD uses ground-truth future videos and answers only as teacher-side privileged context to evaluate on-policy concrete-reasoning trajectories, while the deployable student never observes true futures at test time. Experimental results show that PF-OPSD outperforms baseline by 10.6% and 10.9% on VRQABench and OpenWorldQA, respectively, while increasing robustness to noisy or conflicting rollouts. Our code and dataset are available at https://github.com/yczhou001/PF-OPSD.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-02 · <a href='https://huggingface.co/papers/2606.03603'>page</a> · <a href='https://arxiv.org/pdf/2606.03603'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AutoMedBench: Towards Medical AutoResearch with Agentic AI Models</title>
+      <link>https://huggingface.co/papers/2606.01961</link>
+      <guid isPermaLink="false">arxiv:2606.01961</guid>
+      <pubDate>Wed, 03 Jun 2026 05:57:48 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, NVIDIA Research · <b>Tier-2 senior:</b> ETH Zürich — (senior)</p>
+<p><b>Authors:</b> Junqi Liu, Salena Song, Yuhan Wang, Jiawei Mao, Hardy Chen, Xiaoke Huang, Tianhao Qi, Pengfei Guo, … <i>(+8 more)</i></p>
+<p>Autonomous agents are increasingly expected to support end-to-end medical-AI research workflows, moving beyond isolated prediction tasks or short-form clinical question answering. However, existing medical agent benchmarks primarily evaluate final outputs, providing limited visibility into agent behavior within the research process. To address this gap, we present AutoMedBench, a workflow-aware benchmark for autonomous medical-AI research across diverse medical imaging and multimodal inference tasks, organizing agent execution into a unified five-stage workflow (S1-S5): Plan, Setup, Validate, Inference, and Submit. It comprises long-horizon tasks with each run averaging 33 agent turns, spanning five research tracks: segmentation, image enhancement, visual question answering (VQA), report generation, and lesion detection. Each task is evaluated under two difficulty tiers, Lite and Standard, which use the same data and metrics but differ in the amount of task-brief scaffolding, and each run is scored using both final task performance and S1-S5 stage scores, enabling stage-level analysis from the initial task brief to the final submitted artifact. Across thousands of recorded runs, stage-level scoring reveals that Validate is the weakest workflow stage on average, whereas Setup is the strongest, suggesting that current agents are better at making pipelines executable than at verifying their reliability. Post-run error analysis further shows that verification and submission failures dominate tagged errors, accounting for 37.7% and 38.1% of fired codes respectively, whereas task-understanding errors are rare at 0.9%, and runs with one fired error code have a 48% lower overall score than runs with no error code on average.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-01 · <a href='https://huggingface.co/papers/2606.01961'>page</a> · <a href='https://arxiv.org/pdf/2606.01961'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Stop Wandering, Find the Keys: LLMs Discriminate Key States for Efficient Multi-Agent Exploration</title>
       <link>https://arxiv.org/abs/2410.02511</link>
@@ -2302,85 +2379,6 @@
 <p><b>Authors:</b> Jinyue Li, Yuci Liang, Qiankun Li, Xinheng Lyu, Jiayu Qian, Huabao Chen, Kun Wang, Zhigang Zeng, … <i>(+2 more)</i></p>
 <p>Computational pathology demands both visual pattern recognition and dynamic integration of structured domain knowledge, including taxonomy, grading criteria, and clinical evidence. In practice, diagnostic reasoning requires linking morphological evidence with formal diagnostic and grading criteria. Although multimodal large language models (MLLMs) demonstrate strong vision language reasoning capabilities, they lack explicit mechanisms for structured knowledge integration and interpretable memory control. As a result, existing models struggle to consistently incorporate pathology-specific diagnostic standards during reasoning. Inspired by the hierarchical memory process of human pathologists, we propose PathMem, a memory-centric multimodal framework for pathology MLLMs. PathMem organizes structured pathology knowledge as a long-term memory (LTM) and introduces a Memory Transformer that models the dynamic transition from LTM to working memory (WM) through multimodal memory activation and context-aware knowledge grounding, enabling context-aware memory refinement for downstream reasoning. PathMem achieves SOTA performance across benchmarks, improving WSI-Bench report generation (12.8% WSI-Precision, 10.1% WSI-Relevance) and open-ended diagnosis by 9.7% and 8.9% over prior WSI-based models.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2603.09943'>page</a> · <a href='https://arxiv.org/pdf/2603.09943'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PowerFlow: Unlocking the Dual Nature of LLMs via Principled Distribution Matching</title>
-      <link>https://arxiv.org/abs/2603.18363</link>
-      <guid isPermaLink="false">arxiv:2603.18363</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Longbo Huang</p>
-<p><b>Authors:</b> Ruishuo Chen, Yu Chen, Zhuoran Li, Longbo Huang</p>
-<p>Unsupervised Reinforcement Learning from Internal Feedback (RLIF) has emerged as a promising paradigm for eliciting the latent capabilities of Large Language Models (LLMs) without external supervision. However, current methods rely on heuristic intrinsic rewards, which often lack a well-defined theoretical optimization target and are prone to degenerative biases. In this work, we introduce PowerFlow, a principled framework that reformulates unsupervised fine-tuning as a distribution matching problem. By casting GFlowNet as an amortized variational sampler for unnormalized densities, we propose a length-aware Trajectory-Balance objective that explicitly neutralizes the structural length biases inherent in autoregressive generation. By targeting $α$-power distributions, PowerFlow enables the directional elicitation of the dual nature of LLMs: sharpening the distribution ($α&gt; 1$) to intensify logical reasoning, or flattening it ($α&lt; 1$) to unlock expressive creativity. Extensive experiments demonstrate that PowerFlow consistently outperforms existing RLIF methods, matching or even exceeding supervised GRPO. Furthermore, by mitigating over-sharpening in aligned models, our approach achieves simultaneous gains in diversity and quality, shifting the Pareto frontier in creative tasks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2603.18363'>page</a> · <a href='https://arxiv.org/pdf/2603.18363'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Characterizing Linear Alignment Across Language Models</title>
-      <link>https://arxiv.org/abs/2603.18908</link>
-      <guid isPermaLink="false">arxiv:2603.18908</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Suman Jana</p>
-<p><b>Authors:</b> Matt Gorbett, Suman Jana</p>
-<p>Language models increasingly appear to learn similar representations, despite differences in training objectives, architectures, and data modalities. This emerging compatibility between independently trained models introduces new opportunities for cross-model alignment to downstream objectives. Moreover, this capability unlocks new potential application domains, such as settings where security, privacy, or competitive constraints prohibit direct data or model sharing. In this work, we investigate the extent to which representational convergence enables practical linear alignment between large language models. Specifically, we learn affine transformations between the final hidden states of independent models and empirically evaluate these mappings across text generation, embedding classification, and out-of-distribution detection. We find that performance is largely preserved across model pairs, and show for the first time that linear alignment sometimes enables text generation across independently trained models. We further highlight a potential application of linear alignment for privacy-preserving cross-silo inference. The framework learns an affine transformation over a shared public dataset and uses homomorphic encryption to protect client queries. By encrypting only the linear classification operation, the method achieves sub-second inference latency.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2603.18908'>page</a> · <a href='https://arxiv.org/pdf/2603.18908'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Neural Scalable Symbolic Search Framework for Complex Logical Queries with Multiple Free Variables</title>
-      <link>https://arxiv.org/abs/2605.25985</link>
-      <guid isPermaLink="false">arxiv:2605.25985</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, Tsinghua — Yangqiu Song</p>
-<p><b>Authors:</b> Weizhi Fei, Hang Yin, Zihao Wang, Shukai Zhao, Wei Zhang, Yangqiu Song</p>
-<p>Complex Query Answering (CQA) is a fundamental knowledge representation and reasoning task over incomplete knowledge graphs (KGs). Answering existential first-order queries with $k$ free variables (i.e., $\text{EFO}_k$ queries) is a crucial yet challenging problem, as it requires ranking answer tuples in $\mathcal{E}^k$, where $\mathcal{E}$ denotes the entity set of a KG. This quickly becomes intractable as $k$ grows. Consequently, existing benchmarks and methods rely on marginal rankings over individual variables; however, marginal rankings are a poor proxy for the true joint ranking of tuples. Building on neural symbolic search for $\text{EFO}_1$ queries, we propose Neural Scalable Symbolic Search (NS3), a budgeted framework that approximates joint ranking without enumerating $\mathcal{E}^k$. NS3 (i) answers marginalized sub-queries to obtain necessary candidate sets, (ii) merges multiple free variables into hypernodes whose domains are pruned and controlled by a dynamic budget $B$, and (iii) progressively reduces an $\text{EFO}_k$ query to an $\text{EFO}_{k-1}$ query over a budgeted reduced domain. Across three standard KG datasets, NS3 substantially improves joint ranking performance while retaining strong marginal accuracy. We further release a joint-ranking benchmark that extends existing $\text{EFO}_1$ datasets to $k=3$, enabling systematic evaluation of multi-variable queries. Our code is provided in https://github.com/HKUST-KnowComp/NS3_KDD2026.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2605.25985'>page</a> · <a href='https://arxiv.org/pdf/2605.25985'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research</title>
-      <link>https://huggingface.co/papers/2605.22878</link>
-      <guid isPermaLink="false">arxiv:2605.22878</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shuofei Qiao, Yunxiang Wei, Jiazheng Fan, Bin Wu, Busheng Zhang, Mengru Wang, Yuqi Zhu, Ningyu Zhang, … <i>(+4 more)</i></p>
-<p>The exponential growth of global academic output has confronted researchers and AI agents with an unprecedented ``information explosion,&#x27;&#x27; where fragmented and unstructured knowledge organization impedes deep interdisciplinary integration. Current academic retrieval tools predominantly rely on superficial keyword matching or vector-space semantic retrieval, which lack the topological reasoning capabilities required to navigate complex logical connections. Agentic deep-research-based frameworks are often prone to logical hallucinations and consuming high inference costs. To bridge this gap, in this report, we introduce SciAtlas, a large-scale, multi-disciplinary, heterogeneous academic resource knowledge graph designed as a panoramic scientific evolution network. By integrating over 43M papers from 26 disciplines, and a total of 157M entities and 3B triplets, SciAtlas provides a structured topological cognitive substrate that dismantles disciplinary barriers and furnishes AI agents with a global perspective. Furthermore, we develop a neuro-symbolic retrieval algorithm featuring tri-path collaborative recall and graph reranking, achieving a seamless transition from simple semantic matching to deterministic association discovery. We also present key application directions of SciAtlas, including literature review, automated research trend synthesis, idea positioning, and academic trajectory exploration, to demonstrate that SciAtlas can serve as an effective ``cognitive map&#x27;&#x27; to empower the full loop of automated scientific research while significantly reducing reasoning costs. We have released the interfaces for KG retrieval and various downstream tasks in our GitHub repo.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://huggingface.co/papers/2605.22878'>page</a> · <a href='https://arxiv.org/pdf/2605.22878'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DVAO: Dynamic Variance-adaptive Advantage Optimization for Multi-reward Reinforcement Learning</title>
-      <link>https://huggingface.co/papers/2605.25604</link>
-      <guid isPermaLink="false">arxiv:2605.25604</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Guochao Jiang, Jingyi Song, Guofeng Quan, Chuzhan Hao, Guohua Liu, Yuewei Zhang, Hugging Face Daily Papers (curated)</p>
-<p>Reinforcement Learning has become a standard paradigm for aligning Large Language Models with human intent and task requirements. While Group Relative Policy Optimization offers an efficient, value-model-free alternative to Proximal Policy Optimization, adapting it to real-world multi-reward settings remains challenging. Standard scalarization practices, such as Reward Combination and Advantage Combination, suffer from significant drawbacks: Reward Combination frequently generates advantages with excessively large squared magnitudes that lead to training instability, while Advantage Combination relies on static hyperparameters and ignores cross-objective correlations. To address these limitations, we propose Dynamic Variance-adaptive Advantage Optimization (DVAO), which dynamically adjusts combination weights based on the empirical reward variance of each objective within a rollout group, effectively up-weighting objectives with a stronger learning signal while suppressing noisy ones. We mathematically prove that DVAO maintains bounded advantage magnitudes for stable training and introduces a self-adaptive cross-objective regularization mechanism. Extensive experiments on mathematical reasoning and tool-use benchmarks using Qwen3 and Qwen2.5 models demonstrate that DVAO significantly outperforms baseline methods, achieving a superior multi-objective Pareto frontier and robust training stability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://huggingface.co/papers/2605.25604'>page</a> · <a href='https://arxiv.org/pdf/2605.25604'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>StepAudio 2.5 Technical Report</title>
-      <link>https://huggingface.co/papers/2605.23463</link>
-      <guid isPermaLink="false">arxiv:2605.23463</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Bin Lin, Bo Zhao, Boyong Wu, Chao Yan, Chen Wu, Cheng Yi, Chengyuan Yao, Daijiao Liu, … <i>(+94 more)</i></p>
-<p>Unified audio-language modeling has emerged as a prominent trend in modern speech systems, promising to bring the reasoning capabilities of large language models to auditory tasks. However, existing unified foundations often struggle to match the depth of specialized systems across automatic speech recognition (ASR), text-to-speech synthesis (TTS), and realtime spoken interaction. Bridging this gap remains an open challenge. This report presents StepAudio 2.5, a unified audio-language foundation model that matches or exceeds specialized systems across all three capabilities. Rather than treating these tasks as architecturally distinct, we operate on the premise that once text and audio share a multimodal representational space, task specialization becomes a matter of operational regimes: data construction, optimization targets, and decoding constraints. Guided by this insight, we advance the post-training paradigm from standard supervised learning to task-tailored Reinforcement Learning from Human Feedback (RLHF), using it as the primary mechanism to define complex optimization targets. We leverage this RLHF-centric alignment, alongside specialized decoding, to shape a shared backbone into three distinct operational modes. Concretely, the ASR branch advances transcription efficiency via verifiable multi-token decoding; the TTS branch achieves controllable, expressive synthesis through preference-based RLHF and context-rich supervision; and the Realtime branch realizes low-latency, persona-consistent dialogue via generative reward modeling within an RLHF framework. On standard benchmarks, StepAudio 2.5 achieves state-of-the-art results across ASR, TTS, and Realtime, demonstrating that a singular audio-language foundation can successfully internalize the distinct deployment objectives of speech understanding, generation, and live interaction.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://huggingface.co/papers/2605.23463'>page</a> · <a href='https://arxiv.org/pdf/2605.23463'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Macaron-A2UI: A Model for Generative UI in Personal Agents</title>
-      <link>https://huggingface.co/papers/2605.24830</link>
-      <guid isPermaLink="false">arxiv:2605.24830</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Fancy Kong, Congjie Zheng, Murphy Zhuang, Rio Yang, Sueky Zhang, Hao Fu, Gene Jin, Song Cao, … <i>(+4 more)</i></p>
-<p>As personal agents evolve to handle complex, user-centric tasks, static plain-text chat is rapidly becoming a bottleneck. Generative UI emerges as the necessary new interface layer, dynamically synthesizing the right controls, options, and state from the interaction context in real time. We present Macaron-A2UI, a model for Generative UI in personal agents. Our goal is to move beyond text-only interaction by enabling agents to generate natural language together with lightweight, executable UI actions for information collection, preference refinement, confirmation, and multi-goal organization. We build a large-scale Generative UI corpus from heterogeneous dialogue sources, introduce A2UI-Bench for controlled evaluation, and train 30B, 235B and 754B models with parameter-efficient LoRA-based supervised fine-tuning followed by reward-driven reinforcement learning. The best Macaron-A2UI model reaches 75.6 overall on A2UI-Bench without explicit schema hints, surpassing the strongest full-schema frontier baseline. We release the models, benchmark, and evaluation protocol to support future work on Generative UI for personal agents.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-24 · <a href='https://huggingface.co/papers/2605.24830'>page</a> · <a href='https://arxiv.org/pdf/2605.24830'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
