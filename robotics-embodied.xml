@@ -5,8 +5,349 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/robotics-embodied.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Manipulation, locomotion, VLA models, world models, real-robot work.</description>
-    <lastBuildDate>Thu, 04 Jun 2026 05:38:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 05:33:24 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Exploring Deep and Recurrent Architectures for Optimal Control</title>
+      <link>https://arxiv.org/abs/1311.1761</link>
+      <guid isPermaLink="false">arxiv:1311.1761</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.NE</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Sergey Levine</p>
+<p><b>Authors:</b> Sergey Levine</p>
+<p>Sophisticated multilayer neural networks have achieved state of the art results on multiple supervised tasks. However, successful applications of such multilayer networks to control have so far been limited largely to the perception portion of the control pipeline. In this paper, we explore the application of deep and recurrent neural networks to a continuous, high-dimensional locomotion task, where the network is used to represent a control policy that maps the state of the system (represented by joint angles) directly to the torques at each joint. By using a recent reinforcement learning algorithm called guided policy search, we can successfully train neural network controllers with thousands of parameters, allowing us to compare a variety of architectures. We discuss the differences between the locomotion control task and previous supervised perception tasks, present experimental results comparing various architectures, and discuss future directions in the application of techniques from deep learning to the problem of optimal control.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.NE, cs.RO, cs.SY, eess.SY · <b>arXiv submitted:</b> 2013-11-07 · <a href='https://arxiv.org/abs/1311.1761'>page</a> · <a href='https://arxiv.org/pdf/1311.1761'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Safe Control under Uncertainty</title>
+      <link>https://arxiv.org/abs/1510.07313</link>
+      <guid isPermaLink="false">arxiv:1510.07313</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>eess.SY</category>
+      <category>cs.AI</category>
+      <category>cs.LO</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Dorsa Sadigh</p>
+<p><b>Authors:</b> Dorsa Sadigh, Ashish Kapoor</p>
+<p>Controller synthesis for hybrid systems that satisfy temporal specifications expressing various system properties is a challenging problem that has drawn the attention of many researchers. However, making the assumption that such temporal properties are deterministic is far from the reality. For example, many of the properties the controller has to satisfy are learned through machine learning techniques based on sensor input data. In this paper, we propose a new logic, Probabilistic Signal Temporal Logic (PrSTL), as an expressive language to define the stochastic properties, and enforce probabilistic guarantees on them. We further show how to synthesize safe controllers using this logic for cyber-physical systems under the assumption that the stochastic properties are based on a set of Gaussian random variables. One of the key distinguishing features of PrSTL is that the encoded logic is adaptive and changes as the system encounters additional data and updates its beliefs about the latent random variables that define the safety properties. We demonstrate our approach by synthesizing safe controllers under the PrSTL specifications for multiple case studies including control of quadrotors and autonomous vehicles in dynamic environments.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.AI, cs.LO, cs.RO, cs.SY · <b>arXiv submitted:</b> 2015-10-25 · <a href='https://arxiv.org/abs/1510.07313'>page</a> · <a href='https://arxiv.org/pdf/1510.07313'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Funnel Libraries for Real-Time Robust Feedback Motion Planning</title>
+      <link>https://arxiv.org/abs/1601.04037</link>
+      <guid isPermaLink="false">arxiv:1601.04037</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <category>math.DS</category>
+      <category>math.OC</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Toyota Research Institute · <b>Tier-2 senior:</b> MIT — Russ Tedrake</p>
+<p><b>Authors:</b> Anirudha Majumdar, Russ Tedrake</p>
+<p>We consider the problem of generating motion plans for a robot that are guaranteed to succeed despite uncertainty in the environment, parametric model uncertainty, and disturbances. Furthermore, we consider scenarios where these plans must be generated in real-time, because constraints such as obstacles in the environment may not be known until they are perceived (with a noisy sensor) at runtime. Our approach is to pre-compute a library of &quot;funnels&quot; along different maneuvers of the system that the state is guaranteed to remain within (despite bounded disturbances) when the feedback controller corresponding to the maneuver is executed. We leverage powerful computational machinery from convex optimization (sums-of-squares programming in particular) to compute these funnels. The resulting funnel library is then used to sequentially compose motion plans at runtime while ensuring the safety of the robot. A major advantage of the work presented here is that by explicitly taking into account the effect of uncertainty, the robot can evaluate motion plans based on how vulnerable they are to disturbances. We demonstrate and validate our method using extensive hardware experiments on a small fixed-wing airplane avoiding obstacles at high speed (~12 mph), along with thorough simulation experiments of ground vehicle and quadrotor models navigating through cluttered environments. To our knowledge, these demonstrations constitute one of the first examples of provably safe and robust control for robotic systems with complex nonlinear dynamics that need to plan in real-time in environments with complex geometric constraints.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY, math.DS, math.OC · <b>arXiv submitted:</b> 2017-04-29 · <a href='https://arxiv.org/abs/1601.04037'>page</a> · <a href='https://arxiv.org/pdf/1601.04037'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Continuous Deep Q-Learning with Model-based Acceleration</title>
+      <link>https://arxiv.org/abs/1603.00748</link>
+      <guid isPermaLink="false">arxiv:1603.00748</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Max Planck, U Cambridge — Shixiang Gu</p>
+<p><b>Authors:</b> Shixiang Gu, Timothy Lillicrap, Ilya Sutskever, Sergey Levine</p>
+<p>Model-free reinforcement learning has been successfully applied to a range of challenging problems, and has recently been extended to handle large neural network policies and value functions. However, the sample complexity of model-free algorithms, particularly when using high-dimensional function approximators, tends to limit their applicability to physical systems. In this paper, we explore algorithms and representations to reduce the sample complexity of deep reinforcement learning for continuous control tasks. We propose two complementary techniques for improving the efficiency of such algorithms. First, we derive a continuous variant of the Q-learning algorithm, which we call normalized adantage functions (NAF), as an alternative to the more commonly used policy gradient and actor-critic methods. NAF representation allows us to apply Q-learning with experience replay to continuous tasks, and substantially improves performance on a set of simulated robotic control tasks. To further improve the efficiency of our approach, we explore the use of learned models for accelerating model-free reinforcement learning. We show that iteratively refitted local linear models are especially effective for this, and demonstrate substantially faster learning on domains where such models are applicable.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO, cs.SY, eess.SY · <b>arXiv submitted:</b> 2016-03-02 · <a href='https://arxiv.org/abs/1603.00748'>page</a> · <a href='https://arxiv.org/pdf/1603.00748'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mixed Strategy for Constrained Stochastic Optimal Control</title>
+      <link>https://arxiv.org/abs/1607.01478</link>
+      <guid isPermaLink="false">arxiv:1607.01478</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> Caltech, Stanford — (senior)</p>
+<p><b>Authors:</b> Masahiro Ono, Mahmoud El Chamie, Marco Pavone, Behcet Acikmese</p>
+<p>Choosing control inputs randomly can result in a reduced expected cost in optimal control problems with stochastic constraints, such as stochastic model predictive control (SMPC). We consider a controller with initial randomization, meaning that the controller randomly chooses from K+1 control sequences at the beginning (called K-randimization).It is known that, for a finite-state, finite-action Markov Decision Process (MDP) with K constraints, K-randimization is sufficient to achieve the minimum cost. We found that the same result holds for stochastic optimal control problems with continuous state and action spaces.Furthermore, we show the randomization of control input can result in reduced cost when the optimization problem is nonconvex, and the cost reduction is equal to the duality gap. We then provide the necessary and sufficient conditions for the optimality of a randomized solution, and develop an efficient solution method based on dual optimization. Furthermore, in a special case with K=1 such as a joint chance-constrained problem, the dual optimization can be solved even more efficiently by root finding. Finally, we test the theories and demonstrate the solution method on multiple practical problems ranging from path planning to the planning of entry, descent, and landing (EDL) for future Mars missions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2016-07-06 · <a href='https://arxiv.org/abs/1607.01478'>page</a> · <a href='https://arxiv.org/pdf/1607.01478'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Incremental Sampling-based Motion Planners Using Policy Iteration Methods</title>
+      <link>https://arxiv.org/abs/1609.05960</link>
+      <guid isPermaLink="false">arxiv:1609.05960</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Panagiotis Tsiotras</p>
+<p><b>Authors:</b> Oktay Arslan, Panagiotis Tsiotras</p>
+<p>Recent progress in randomized motion planners has led to the development of a new class of sampling-based algorithms that provide asymptotic optimality guarantees, notably the RRT* and the PRM* algorithms. Careful analysis reveals that the so-called &quot;rewiring&quot; step in these algorithms can be interpreted as a local policy iteration (PI) step (i.e., a local policy evaluation step followed by a local policy improvement step) so that asymptotically, as the number of samples tend to infinity, both algorithms converge to the optimal path almost surely (with probability 1). Policy iteration, along with value iteration (VI) are common methods for solving dynamic programming (DP) problems. Based on this observation, recently, the RRT$^{\#}$ algorithm has been proposed, which performs, during each iteration, Bellman updates (aka &quot;backups&quot;) on those vertices of the graph that have the potential of being part of the optimal path (i.e., the &quot;promising&quot; vertices). The RRT$^{\#}$ algorithm thus utilizes dynamic programming ideas and implements them incrementally on randomly generated graphs to obtain high quality solutions. In this work, and based on this key insight, we explore a different class of dynamic programming algorithms for solving shortest-path problems on random graphs generated by iterative sampling methods. These class of algorithms utilize policy iteration instead of value iteration, and thus are better suited for massive parallelization. Contrary to the RRT* algorithm, the policy improvement during the rewiring step is not performed only locally but rather on a set of vertices that are classified as &quot;promising&quot; during the current iteration. This tends to speed-up the whole process. The resulting algorithm, aptly named Policy Iteration-RRT$^{\#}$ (PI-RRT$^{\#}$) is the first of a new class of DP-inspired algorithms for randomized motion planning that utilize PI methods.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2016-09-19 · <a href='https://arxiv.org/abs/1609.05960'>page</a> · <a href='https://arxiv.org/pdf/1609.05960'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Transfer from Simulation to Real World through Learning Deep Inverse Dynamics Model</title>
+      <link>https://arxiv.org/abs/1610.03518</link>
+      <guid isPermaLink="false">arxiv:1610.03518</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> U Toronto, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Paul Christiano, Zain Shah, Igor Mordatch, Jonas Schneider, Trevor Blackwell, Joshua Tobin, Pieter Abbeel, Wojciech Zaremba</p>
+<p>Developing control policies in simulation is often more practical and safer than directly running experiments in the real world. This applies to policies obtained from planning and optimization, and even more so to policies obtained from reinforcement learning, which is often very data demanding. However, a policy that succeeds in simulation often doesn&#x27;t work when deployed on a real robot. Nevertheless, often the overall gist of what the policy does in simulation remains valid in the real world. In this paper we investigate such settings, where the sequence of states traversed in simulation remains reasonable for the real world, even if the details of the controls are not, as could be the case when the key differences lie in detailed friction, contact, mass and geometry properties. During execution, at each time step our approach computes what the simulation-based control policy would do, but then, rather than executing these controls on the real robot, our approach computes what the simulation expects the resulting next state(s) will be, and then relies on a learned deep inverse dynamics model to decide which real-world action is most suitable to achieve those next states. Deep models are only as good as their training data, and we also propose an approach for data collection to (incrementally) learn the deep inverse dynamics model. Our experiments shows our approach compares favorably with various baselines that have been developed for dealing with simulation to real world model discrepancy, including output error control and Gaussian dynamics adaptation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.LG, cs.SY, eess.SY · <b>arXiv submitted:</b> 2016-10-11 · <a href='https://arxiv.org/abs/1610.03518'>page</a> · <a href='https://arxiv.org/pdf/1610.03518'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Towards Generalization and Simplicity in Continuous Control</title>
+      <link>https://arxiv.org/abs/1703.02660</link>
+      <guid isPermaLink="false">arxiv:1703.02660</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Washington — Sham Kakade</p>
+<p><b>Authors:</b> Aravind Rajeswaran, Kendall Lowrey, Emanuel Todorov, Sham Kakade</p>
+<p>This work shows that policies with simple linear and RBF parameterizations can be trained to solve a variety of continuous control tasks, including the OpenAI gym benchmarks. The performance of these trained policies are competitive with state of the art results, obtained with more elaborate parameterizations such as fully connected neural networks. Furthermore, existing training and testing scenarios are shown to be very limited and prone to over-fitting, thus giving rise to only trajectory-centric policies. Training with a diverse initial state distribution is shown to produce more global policies with better generalization. This allows for interactive control scenarios where the system recovers from large on-line perturbations; as shown in the supplementary video.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO, cs.SY, eess.SY · <b>arXiv submitted:</b> 2018-03-20 · <a href='https://arxiv.org/abs/1703.02660'>page</a> · <a href='https://arxiv.org/pdf/1703.02660'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AirSim: High-Fidelity Visual and Physical Simulation for Autonomous Vehicles</title>
+      <link>https://arxiv.org/abs/1705.05065</link>
+      <guid isPermaLink="false">arxiv:1705.05065</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Shital Shah, Debadeepta Dey, Chris Lovett, Ashish Kapoor</p>
+<p>Developing and testing algorithms for autonomous vehicles in real world is an expensive and time consuming process. Also, in order to utilize recent advances in machine intelligence and deep learning we need to collect a large amount of annotated training data in a variety of conditions and environments. We present a new simulator built on Unreal Engine that offers physically and visually realistic simulations for both of these goals. Our simulator includes a physics engine that can operate at a high frequency for real-time hardware-in-the-loop (HITL) simulations with support for popular protocols (e.g. MavLink). The simulator is designed from the ground up to be extensible to accommodate new types of vehicles, hardware platforms and software protocols. In addition, the modular design enables various components to be easily usable independently in other projects. We demonstrate the simulator by first implementing a quadrotor as an autonomous vehicle and then experimentally comparing the software components with real-world flights.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.SY, eess.SY · <b>arXiv submitted:</b> 2017-07-18 · <a href='https://arxiv.org/abs/1705.05065'>page</a> · <a href='https://arxiv.org/pdf/1705.05065'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MBMF: Model-Based Priors for Model-Free Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/1709.03153</link>
+      <guid isPermaLink="false">arxiv:1709.03153</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Princeton, Stanford, UC Berkeley — Claire Tomlin</p>
+<p><b>Authors:</b> Somil Bansal, Roberto Calandra, Kurtland Chua, Sergey Levine, Claire Tomlin</p>
+<p>Reinforcement Learning is divided in two main paradigms: model-free and model-based. Each of these two paradigms has strengths and limitations, and has been successfully applied to real world domains that are appropriate to its corresponding strengths. In this paper, we present a new approach aimed at bridging the gap between these two paradigms. We aim to take the best of the two paradigms and combine them in an approach that is at the same time data-efficient and cost-savvy. We do so by learning a probabilistic dynamics model and leveraging it as a prior for the intertwined model-free optimization. As a result, our approach can exploit the generality and structure of the dynamics model, but is also capable of ignoring its inevitable inaccuracies, by directly incorporating the evidence provided by the direct observation of the cost. Preliminary results demonstrate that our approach outperforms purely model-based and model-free approaches, as well as the approach of simply switching from a model-based to a model-free setting.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO, cs.SY, eess.SY · <b>arXiv submitted:</b> 2017-10-17 · <a href='https://arxiv.org/abs/1709.03153'>page</a> · <a href='https://arxiv.org/pdf/1709.03153'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Adversarial Discriminative Sim-to-real Transfer of Visuo-motor Policies</title>
+      <link>https://arxiv.org/abs/1709.05746</link>
+      <guid isPermaLink="false">arxiv:1709.05746</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
+<p><b>Authors:</b> Fangyi Zhang, Jürgen Leitner, Zongyuan Ge, Michael Milford, Peter Corke</p>
+<p>Various approaches have been proposed to learn visuo-motor policies for real-world robotic applications. One solution is first learning in simulation then transferring to the real world. In the transfer, most existing approaches need real-world images with labels. However, the labelling process is often expensive or even impractical in many robotic applications. In this paper, we propose an adversarial discriminative sim-to-real transfer approach to reduce the cost of labelling real data. The effectiveness of the approach is demonstrated with modular networks in a table-top object reaching task where a 7 DoF arm is controlled in velocity mode to reach a blue cuboid in clutter through visual observations. The adversarial transfer approach reduced the labelled real data requirement by 50%. Policies can be transferred to real environments with only 93 labelled and 186 unlabelled real images. The transferred visuo-motor policies are robust to novel (not seen in training) objects in clutter and even a moving target, achieving a 97.8% success rate and 1.8 cm control accuracy.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.LG, cs.SY, eess.SY · <b>arXiv submitted:</b> 2018-05-31 · <a href='https://arxiv.org/abs/1709.05746'>page</a> · <a href='https://arxiv.org/pdf/1709.05746'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SE3-Pose-Nets: Structured Deep Dynamics Models for Visuomotor Planning and Control</title>
+      <link>https://arxiv.org/abs/1710.00489</link>
+      <guid isPermaLink="false">arxiv:1710.00489</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.NE</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> U Washington — Dieter Fox</p>
+<p><b>Authors:</b> Arunkumar Byravan, Felix Leeb, Franziska Meier, Dieter Fox</p>
+<p>In this work, we present an approach to deep visuomotor control using structured deep dynamics models. Our deep dynamics model, a variant of SE3-Nets, learns a low-dimensional pose embedding for visuomotor control via an encoder-decoder structure. Unlike prior work, our dynamics model is structured: given an input scene, our network explicitly learns to segment salient parts and predict their pose-embedding along with their motion modeled as a change in the pose space due to the applied actions. We train our model using a pair of point clouds separated by an action and show that given supervision only in the form of point-wise data associations between the frames our network is able to learn a meaningful segmentation of the scene along with consistent poses. We further show that our model can be used for closed-loop control directly in the learned low-dimensional pose space, where the actions are computed by minimizing error in the pose space using gradient-based methods, similar to traditional model-based control. We present results on controlling a Baxter robot from raw depth data in simulation and in the real world and compare against two baseline deep networks. Our method runs in real-time, achieves good prediction of scene dynamics and outperforms the baseline methods on multiple control runs. Video results can be found at: https://rse-lab.cs.washington.edu/se3-structured-deep-ctrl/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.NE, cs.SY, eess.SY · <b>arXiv submitted:</b> 2017-10-02 · <a href='https://arxiv.org/abs/1710.00489'>page</a> · <a href='https://arxiv.org/pdf/1710.00489'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Flow: A Modular Learning Framework for Mixed Autonomy Traffic</title>
+      <link>https://arxiv.org/abs/1710.05465</link>
+      <guid isPermaLink="false">arxiv:1710.05465</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> UC Berkeley — Alexandre M Bayen</p>
+<p><b>Authors:</b> Cathy Wu, Aboudy Kreidieh, Kanaad Parvate, Eugene Vinitsky, Alexandre M Bayen</p>
+<p>The rapid development of autonomous vehicles (AVs) holds vast potential for transportation systems through improved safety, efficiency, and access to mobility. However, the progression of these impacts, as AVs are adopted, is not well understood. Numerous technical challenges arise from the goal of analyzing the partial adoption of autonomy: partial control and observation, multi-vehicle interactions, and the sheer variety of scenarios represented by real-world networks. To shed light into near-term AV impacts, this article studies the suitability of deep reinforcement learning (RL) for overcoming these challenges in a low AV-adoption regime. A modular learning framework is presented, which leverages deep RL to address complex traffic dynamics. Modules are composed to capture common traffic phenomena (stop-and-go traffic jams, lane changing, intersections). Learned control laws are found to improve upon human driving performance, in terms of system-level velocity, by up to 57% with only 4-7% adoption of AVs. Furthermore, in single-lane traffic, a small neural network control law with only local observation is found to eliminate stop-and-go traffic - surpassing all known model-based controllers to achieve near-optimal performance - and generalize to out-of-distribution traffic densities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.RO, cs.SY, eess.SY · <b>arXiv submitted:</b> 2021-12-30 · <a href='https://arxiv.org/abs/1710.05465'>page</a> · <a href='https://arxiv.org/pdf/1710.05465'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>How Should a Robot Assess Risk? Towards an Axiomatic Theory of Risk in Robotics</title>
+      <link>https://arxiv.org/abs/1710.11040</link>
+      <guid isPermaLink="false">arxiv:1710.11040</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <category>math.OC</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> Stanford — Marco Pavone</p>
+<p><b>Authors:</b> Anirudha Majumdar, Marco Pavone</p>
+<p>Endowing robots with the capability of assessing risk and making risk-aware decisions is widely considered a key step toward ensuring safety for robots operating under uncertainty. But, how should a robot quantify risk? A natural and common approach is to consider the framework whereby costs are assigned to stochastic outcomes - an assignment captured by a cost random variable. Quantifying risk then corresponds to evaluating a risk metric, i.e., a mapping from the cost random variable to a real number. Yet, the question of what constitutes a &quot;good&quot; risk metric has received little attention within the robotics community. The goal of this paper is to explore and partially address this question by advocating axioms that risk metrics in robotics applications should satisfy in order to be employed as rational assessments of risk. We discuss general representation theorems that precisely characterize the class of metrics that satisfy these axioms (referred to as distortion risk metrics), and provide instantiations that can be used in applications. We further discuss pitfalls of commonly used risk metrics in robotics, and discuss additional properties that one must consider in sequential decision making tasks. Our hope is that the ideas presented here will lead to a foundational framework for quantifying risk (and hence safety) in robotics applications.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY, math.OC · <b>arXiv submitted:</b> 2017-11-01 · <a href='https://arxiv.org/abs/1710.11040'>page</a> · <a href='https://arxiv.org/pdf/1710.11040'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Efficient Hierarchical Robot Motion Planning Under Uncertainty and Hybrid Dynamics</title>
+      <link>https://arxiv.org/abs/1802.04205</link>
+      <guid isPermaLink="false">arxiv:1802.04205</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Ajinkya Jain, Scott Niekum</p>
+<p>Noisy observations coupled with nonlinear dynamics pose one of the biggest challenges in robot motion planning. By decomposing nonlinear dynamics into a discrete set of local dynamics models, hybrid dynamics provide a natural way to model nonlinear dynamics, especially in systems with sudden discontinuities in dynamics due to factors such as contacts. We propose a hierarchical POMDP planner that develops cost-optimized motion plans for hybrid dynamics models. The hierarchical planner first develops a high-level motion plan to sequence the local dynamics models to be visited and then converts it into a detailed continuous state plan. This hierarchical planning approach results in a decomposition of the POMDP planning problem into smaller sub-parts that can be solved with significantly lower computational costs. The ability to sequence the visitation of local dynamics models also provides a powerful way to leverage the hybrid dynamics to reduce state uncertainty. We evaluate the proposed planner on a navigation task in the simulated domain and on an assembly task with a robotic manipulator, showing that our approach can solve tasks having high observation noise and nonlinear dynamics effectively with significantly lower computational costs compared to direct planning approaches.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2018-10-08 · <a href='https://arxiv.org/abs/1802.04205'>page</a> · <a href='https://arxiv.org/pdf/1802.04205'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Learning-based Model Predictive Control for Safe Exploration</title>
+      <link>https://arxiv.org/abs/1803.08287</link>
+      <guid isPermaLink="false">arxiv:1803.08287</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>eess.SY</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Andreas Krause</p>
+<p><b>Authors:</b> Torsten Koller, Felix Berkenkamp, Matteo Turchetta, Andreas Krause</p>
+<p>Learning-based methods have been successful in solving complex control tasks without significant prior knowledge about the system. However, these methods typically do not provide any safety guarantees, which prevents their use in safety-critical, real-world applications. In this paper, we present a learning-based model predictive control scheme that can provide provable high-probability safety guarantees. To this end, we exploit regularity assumptions on the dynamics in terms of a Gaussian process prior to construct provably accurate confidence intervals on predicted trajectories. Unlike previous approaches, we do not assume that model uncertainties are independent. Based on these predictions, we guarantee that trajectories satisfy safety constraints. Moreover, we use a terminal set constraint to recursively guarantee the existence of safe control actions at every iteration. In our experiments, we show that the resulting algorithm can be used to safely and efficiently explore and learn about dynamic systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.AI, cs.LG, cs.RO, cs.SY · <b>arXiv submitted:</b> 2018-11-07 · <a href='https://arxiv.org/abs/1803.08287'>page</a> · <a href='https://arxiv.org/pdf/1803.08287'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Supervised Policy Update for Deep Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/1805.11706</link>
+      <guid isPermaLink="false">arxiv:1805.11706</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <category>stat.ML</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NYU — Keith W. Ross</p>
+<p><b>Authors:</b> Quan Vuong, Yiming Zhang, Keith W. Ross</p>
+<p>We propose a new sample-efficient methodology, called Supervised Policy Update (SPU), for deep reinforcement learning. Starting with data generated by the current policy, SPU formulates and solves a constrained optimization problem in the non-parameterized proximal policy space. Using supervised regression, it then converts the optimal non-parameterized policy to a parameterized policy, from which it draws new samples. The methodology is general in that it applies to both discrete and continuous action spaces, and can handle a wide variety of proximity constraints for the non-parameterized optimization problem. We show how the Natural Policy Gradient and Trust Region Policy Optimization (NPG/TRPO) problems, and the Proximal Policy Optimization (PPO) problem can be addressed by this methodology. The SPU implementation is much simpler than TRPO. In terms of sample efficiency, our extensive experiments show SPU outperforms TRPO in Mujoco simulated robotic tasks and outperforms PPO in Atari video game tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO, cs.SY, eess.SY, stat.ML · <b>arXiv submitted:</b> 2018-12-24 · <a href='https://arxiv.org/abs/1805.11706'>page</a> · <a href='https://arxiv.org/pdf/1805.11706'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Simulation to Scaled City: Zero-Shot Policy Transfer for Traffic Control via Autonomous Vehicles</title>
+      <link>https://arxiv.org/abs/1812.06120</link>
+      <guid isPermaLink="false">arxiv:1812.06120</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>eess.SY</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <category>cs.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Alexandre Bayen</p>
+<p><b>Authors:</b> Kathy Jang, Eugene Vinitsky, Behdad Chalaki, Ben Remer, Logan Beaver, Andreas Malikopoulos, Alexandre Bayen</p>
+<p>Using deep reinforcement learning, we train control policies for autonomous vehicles leading a platoon of vehicles onto a roundabout. Using Flow, a library for deep reinforcement learning in micro-simulators, we train two policies, one policy with noise injected into the state and action space and one without any injected noise. In simulation, the autonomous vehicle learns an emergent metering behavior for both policies in which it slows to allow for smoother merging. We then directly transfer this policy without any tuning to the University of Delaware Scaled Smart City (UDSSC), a 1:25 scale testbed for connected and automated vehicles. We characterize the performance of both policies on the scaled city. We show that the noise-free policy winds up crashing and only occasionally metering. However, the noise-injected policy consistently performs the metering behavior and remains collision-free, suggesting that the noise helps with the zero-shot policy transfer. Additionally, the transferred, noise-injected policy leads to a 5% reduction of average travel time and a reduction of 22% in maximum travel time in the UDSSC. Videos of the controllers can be found at https://sites.google.com/view/iccps-policy-transfer.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.AI, cs.RO, cs.SY · <b>arXiv submitted:</b> 2019-02-22 · <a href='https://arxiv.org/abs/1812.06120'>page</a> · <a href='https://arxiv.org/pdf/1812.06120'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Combining Optimal Control and Learning for Visual Navigation in Novel Environments</title>
+      <link>https://arxiv.org/abs/1903.02531</link>
+      <guid isPermaLink="false">arxiv:1903.02531</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford, UC Berkeley — Claire Tomlin</p>
+<p><b>Authors:</b> Somil Bansal, Varun Tolani, Saurabh Gupta, Jitendra Malik, Claire Tomlin</p>
+<p>Model-based control is a popular paradigm for robot navigation because it can leverage a known dynamics model to efficiently plan robust robot trajectories. However, it is challenging to use model-based methods in settings where the environment is a priori unknown and can only be observed partially through on-board sensors on the robot. In this work, we address this short-coming by coupling model-based control with learning-based perception. The learning-based perception module produces a series of waypoints that guide the robot to the goal via a collision-free path. These waypoints are used by a model-based planner to generate a smooth and dynamically feasible trajectory that is executed on the physical system using feedback control. Our experiments in simulated real-world cluttered environments and on an actual ground vehicle demonstrate that the proposed approach can reach goal locations more reliably and efficiently in novel environments as compared to purely geometric mapping-based or end-to-end learning-based alternatives. Our approach does not rely on detailed explicit 3D maps of the environment, works well with low frame rates, and generalizes well from simulation to the real world. Videos describing our approach and experiments are available on the project website.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.LG, cs.SY, eess.SY · <b>arXiv submitted:</b> 2019-07-17 · <a href='https://arxiv.org/abs/1903.02531'>page</a> · <a href='https://arxiv.org/pdf/1903.02531'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Efficient and Safe Exploration in Deterministic Markov Decision Processes with Unknown Transition Models</title>
+      <link>https://arxiv.org/abs/1904.01068</link>
+      <guid isPermaLink="false">arxiv:1904.01068</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Dorsa Sadigh</p>
+<p><b>Authors:</b> Erdem Bıyık, Jonathan Margoliash, Shahrouz Ryan Alimo, Dorsa Sadigh</p>
+<p>We propose a safe exploration algorithm for deterministic Markov Decision Processes with unknown transition models. Our algorithm guarantees safety by leveraging Lipschitz-continuity to ensure that no unsafe states are visited during exploration. Unlike many other existing techniques, the provided safety guarantee is deterministic. Our algorithm is optimized to reduce the number of actions needed for exploring the safe space. We demonstrate the performance of our algorithm in comparison with baseline methods in simulation on navigation tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.LG, cs.SY, eess.SY · <b>arXiv submitted:</b> 2019-04-01 · <a href='https://arxiv.org/abs/1904.01068'>page</a> · <a href='https://arxiv.org/pdf/1904.01068'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Online Risk-Bounded Motion Planning for Autonomous Vehicles in Dynamic Environments</title>
+      <link>https://arxiv.org/abs/1904.02341</link>
+      <guid isPermaLink="false">arxiv:1904.02341</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge — Xin Huang</p>
+<p><b>Authors:</b> Xin Huang, Sungkweon Hong, Andreas Hofmann, Brian C. Williams</p>
+<p>A crucial challenge to efficient and robust motion planning for autonomous vehicles is understanding the intentions of the surrounding agents. Ignoring the intentions of the other agents in dynamic environments can lead to risky or over-conservative plans. In this work, we model the motion planning problem as a partially observable Markov decision process (POMDP) and propose an online system that combines an intent recognition algorithm and a POMDP solver to generate risk-bounded plans for the ego vehicle navigating with a number of dynamic agent vehicles. The intent recognition algorithm predicts the probabilistic hybrid motion states of each agent vehicle over a finite horizon using Bayesian filtering and a library of pre-learned maneuver motion models. We update the POMDP model with the intent recognition results in real time and solve it using a heuristic search algorithm which produces policies with upper-bound guarantees on the probability of near colliding with other dynamic agents. We demonstrate that our system is able to generate better motion plans in terms of efficiency and safety in a number of challenging environments including unprotected intersection left turns and lane changes as compared to the baseline methods.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2019-04-04 · <a href='https://arxiv.org/abs/1904.02341'>page</a> · <a href='https://arxiv.org/pdf/1904.02341'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Simultaneous Contact, Gait and Motion Planning for Robust Multi-Legged Locomotion via Mixed-Integer Convex Optimization</title>
+      <link>https://arxiv.org/abs/1904.04595</link>
+      <guid isPermaLink="false">arxiv:1904.04595</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Toyota Research Institute · <b>Tier-2 senior:</b> MIT — (senior)</p>
+<p><b>Authors:</b> Bernardo Aceituno-Cabezas, Carlos Mastalli, Hongkai Dai, Michele Focchi, Andreea Radulescu, Darwin G. Caldwell, Jose Cappelletto, Juan C. Grieco, … <i>(+2 more)</i></p>
+<p>Traditional motion planning approaches for multi-legged locomotion divide the problem into several stages, such as contact search and trajectory generation. However, reasoning about contacts and motions simultaneously is crucial for the generation of complex whole-body behaviors. Currently, coupling theses problems has required either the assumption of a fixed gait sequence and flat terrain condition, or non-convex optimization with intractable computation time. In this paper, we propose a mixed-integer convex formulation to plan simultaneously contact locations, gait transitions and motion, in a computationally efficient fashion. In contrast to previous works, our approach is not limited to flat terrain nor to a pre-specified gait sequence. Instead, we incorporate the friction cone stability margin, approximate the robot&#x27;s torque limits, and plan the gait using mixed-integer convex constraints. We experimentally validated our approach on the HyQ robot by traversing different challenging terrains, where non-convexity and flat terrain assumptions might lead to sub-optimal or unstable plans. Our method increases the motion generality while keeping a low computation time.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2019-04-09 · <a href='https://arxiv.org/abs/1904.04595'>page</a> · <a href='https://arxiv.org/pdf/1904.04595'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies</title>
+      <link>https://arxiv.org/abs/2606.06491</link>
+      <guid isPermaLink="false">arxiv:2606.06491</guid>
+      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Dong Jing</p>
+<p><b>Authors:</b> Dong Jing, Jingchen Nie, Tianqi Zhang, Jiaqi Liu, Huaxiu Yao, Zhiwu Lu, Mingyu Ding</p>
+<p>Robot manipulation alternates between low-risk transit phases that call for fast execution and high-risk contact stages that demand slow, precise motion. Yet existing Vision-Language-Action models (VLAs) only inherit a single fixed speed from training demonstrations. Prior efforts to accelerate VLAs through model compression, KV-cache reuse, or reinforcement learning only shift the policy from one fixed speed to another, and leave deceleration almost unexplored. We observe that the magnitude of each predicted action already governs how fast the robot moves, opening a direct route to controllable execution speed. We turn this observation into TempoVLA, a single VLA whose execution speed is controlled by an explicit condition. TempoVLA combines two coupled components. (1) A data-side Variable-Speed Trajectory Augmentation (VSTA) that re-times demonstration to any target speed by merging or splitting actions while preserving its motion semantics. (2) A model-side conditioning mechanism that feeds the speed to the policy. Statistics show that VSTA reaches the requested speed with negligible motion error. Experiments in simulation and on real-world tasks demonstrate that TempoVLA achieves flexible speed control in both directions, while VSTA additionally boosts the default $1\times$ performance via better data utilization. Furthermore, by cooperating with a large multimodal model, TempoVLA realizes dynamic speed control, accelerating through low-risk phases and decelerating for high-risk ones.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://arxiv.org/abs/2606.06491'>page</a> · <a href='https://arxiv.org/pdf/2606.06491'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Robust Filtering and Smoothing with Gaussian Processes</title>
       <link>https://arxiv.org/abs/1203.4345</link>
