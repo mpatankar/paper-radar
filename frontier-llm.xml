@@ -5,8 +5,52 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Fri, 05 Jun 2026 05:33:24 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 05:19:06 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution</title>
+      <link>https://huggingface.co/papers/2606.06492</link>
+      <guid isPermaLink="false">arxiv:2606.06492</guid>
+      <pubDate>Sat, 06 Jun 2026 05:19:06 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Liliana Hotsko, Yinxi Li, Yuntian Deng, Pengyu Nie, Hugging Face Daily Papers (curated)</p>
+<p>Code language models need repository-level context to resolve imports, APIs, and project conventions. Existing methods inject this knowledge as long inputs (retrieved through RAG or dependency analysis) or through per-repository fine-tuning and LoRA -- costly at repository scale and brittle to evolving codebases. We introduce Code2LoRA, a hypernetwork framework that generates repository-specific LoRA adapters, effectively injecting repository knowledge with zero inference-time token overhead. Code2LoRA supports two usage scenarios: Code2LoRA-Static converts a single repository snapshot into an adapter, suitable for comprehension of stable codebases; while Code2LoRA-Evo maintains an adapter backed by a GRU hidden state updated per code diff, suitable for active development of evolving codebases. To evaluate Code2LoRA against parameter-efficient fine-tuning baselines, we build RepoPeftBench, a benchmark of 604 Python repositories with two tracks: a static track with 40K training and 12K test assertion-completion tasks, and an evolution track with 215K commit-derived training and 87K commit-derived test tasks. On the static track, Code2LoRA-Static achieves 63.8% cross-repo and 66.2% in-repo exact match, matching the per-repository LoRA upper bound; on the evolution track, Code2LoRA-Evo achieves 60.3% cross-repo exact match (+5.2 pp over a single shared LoRA). Code2LoRA&#x27;s code can be found at https://anonymous.4open.science/r/code2lora-6857; the model checkpoints and RepoPeftBench datasets can be found at https://huggingface.co/code2lora.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://huggingface.co/papers/2606.06492'>page</a> · <a href='https://arxiv.org/pdf/2606.06492'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TIDE: Proactive Multi-Problem Discovery via Template-Guided Iteration</title>
+      <link>https://huggingface.co/papers/2606.04743</link>
+      <guid isPermaLink="false">arxiv:2606.04743</guid>
+      <pubDate>Sat, 06 Jun 2026 05:19:06 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Soyeong Jeong, Jinheon Baek, Minki Kang, Sung Ju Hwang, Hugging Face Daily Papers (curated)</p>
+<p>Agents are widely deployed as assistants over documents, tools, and code. However, they typically act only on explicit user requests, which surface only the problems the user has noticed, while many other important problems coexist, hidden in plain sight, within the broader user context, with their total number unknown in advance. We frame this as the task of discovering multiple hidden problems from context, in which coexisting problems should be uncovered, grounded in supporting evidence, and paired with concrete actions. To this end, we introduce TIDE, a template-guided iterative framework with two complementary mechanisms. Specifically, motivated by the observation that single-pass prediction anchors on the most salient cases and yields generic claims, we propose iterative discovery, which surfaces a small batch of candidates per round while conditioning on what has already been found, so subsequent rounds extend coverage; and thought templates, reusable schemas distilled from previously solved cases that specify what contextual signals to attend to and how to connect them, anchoring each prediction in a recognizable problem class. We validate TIDE on two realistic settings, personal workspaces and software repositories, across four model backbones, showing substantial gains over single-shot and parallel multi-agent baselines on task coverage, identification, and resolution.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-03 · <a href='https://huggingface.co/papers/2606.04743'>page</a> · <a href='https://arxiv.org/pdf/2606.04743'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AdaPlanBench: Evaluating Adaptive Planning in Large Language Model Agents under World and User Constraints</title>
+      <link>https://huggingface.co/papers/2606.05622</link>
+      <guid isPermaLink="false">arxiv:2606.05622</guid>
+      <pubDate>Sat, 06 Jun 2026 05:19:06 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Imperial College, Peking U, U Edinburgh — (senior)</p>
+<p><b>Authors:</b> Jiayu Liu, Cheng Qian, Zhenhailong Wang, Bingxuan Li, Jiateng Liu, Heng Wang, Jeonghwan Kim, Yumeng Wang, … <i>(+4 more)</i></p>
+<p>Planning for real-world problems by language models often involves both world and user constraints, which may not be fully specified upfront and are progressively disclosed through interaction. However, existing benchmarks still underexplore adaptive planning under such progressively revealed dual constraints. To address this gap, we introduce AdaPlanBench, a dynamic interactive benchmark for evaluating whether Large Language Model (LLM) agents can adaptively plan and re-plan under progressively revealed world and user constraints. AdaPlanBench is built on 307 household tasks, with a scalable constraint construction pipeline that augments each task with dual constraints. At runtime, agents interact with the environment in a multi-turn protocol where hidden constraints are revealed only when the agent proposes a plan that violates them, requiring iterative plan revision under accumulating feedback. This makes planning challenging, as agents must infer and track constraints from feedback while re-planning effectively. Experiments on ten leading LLMs show that adaptive planning under dual constraints remains challenging, with the best model reaching only 67.75% accuracy. We further observe that performance degrades as more constraints accumulate, with user constraints posing a particularly large challenge and failures often stemming from weaker physical grounding and reduced effectiveness. These results establish AdaPlanBench as a testbed for dual-constrained interactive planning and highlight the challenge of reliable adaptation to dynamically revealed constraints in LLM agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://huggingface.co/papers/2606.05622'>page</a> · <a href='https://arxiv.org/pdf/2606.05622'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing</title>
+      <link>https://huggingface.co/papers/2606.06042</link>
+      <guid isPermaLink="false">arxiv:2606.06042</guid>
+      <pubDate>Sat, 06 Jun 2026 05:19:06 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers · <b>Tier-2 senior:</b> Columbia, Max Planck, Peking U, U Edinburgh — (senior)</p>
+<p><b>Authors:</b> Jianzong Wu, Hao Lian, Jiongfan Yang, Dachao Hao, Ye Tian, Yunhai Tong, Jingyuan Zhu, Biaolong Chen, … <i>(+7 more)</i></p>
+<p>Developing unified video generation and editing models capable of interpreting interleaved multimodal inputs is a promising yet challenging frontier field. Existing unified frameworks predominantly rely on massive models (typically 13B parameters or more) and incorporate source video conditions for editing by concatenating sequence tokens. This concatenation inevitably doubles the sequence length, quadrupling the computational complexity of the self-attention mechanism and introducing prohibitive overhead. To address these bottlenecks, we present LoomVideo, a highly efficient 5B-parameter unified architecture for both video generation and editing. LoomVideo replaces the standard text encoder with a Multimodal Large Language Model (MLLM) and employs Deepstack injection mechanism to align multi-layer MLLM features with the Diffusion Transformer (DiT). Crucially, we introduce a zero-overhead Scale-and-Add conditioning approach for video editing. By scaling and directly adding the clean source video latent to the noised target latent, this elegant design eliminates the need for token concatenation, drastically reducing computational cost while maintaining robust capabilities for complex, non-rigid edits. Furthermore, a Negative Temporal RoPE strategy is seamlessly integrated to handle multiple reference images. Extensive experiments demonstrate that our compact 5B model achieves state-of-the-art or highly competitive performance across comprehensive benchmarks, exhibiting exceptional superiority in e-commerce and fashion generation scenarios. Benefiting from the zero-overhead conditioning mechanism, LoomVideo achieves at least a 5.41x acceleration in inference speed compared to models of similar capabilities, paving the way for highly practical and efficient video foundation models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://huggingface.co/papers/2606.06042'>page</a> · <a href='https://arxiv.org/pdf/2606.06042'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Stick-Breaking Policy Learning in Dec-POMDPs</title>
       <link>https://arxiv.org/abs/1505.00274</link>
@@ -2366,55 +2410,6 @@
 <p><b>Authors:</b> Rui Yang, Qianhui Wu, Zhaoyang Wang, Hanyang Chen, Ke Yang, Hao Cheng, Huaxiu Yao, Baolin Peng, … <i>(+3 more)</i></p>
 <p>Open-source native GUI agents still lag behind closed-source systems on long-horizon navigation tasks. This gap stems from two limitations: a shortage of high-quality, action-aligned reasoning data, and the direct adoption of generic post-training pipelines that overlook the unique challenges of GUI agents. We identify two fundamental issues in these pipelines: (i) standard SFT with CoT reasoning often hurts grounding, and (ii) step-wise RLVR-tyle training faces partial verifiability, where multiple actions can be correct but only a single demonstrated action is used for verification. This makes offline step-wise metrics weak predictors of online task success. In this work, we present GUI-Libra, a tailored training recipe that addresses these challenges. First, to mitigate the scarcity of action-aligned reasoning data, we introduce a data construction and filtering pipeline and release a curated 81K GUI reasoning dataset. Second, to reconcile reasoning with grounding, we propose action-aware SFT that mixes reasoning-then-action and direct-action data and reweights tokens to emphasize action and grounding. Third, to stabilize RL under partial verifiability, we identify the overlooked importance of KL regularization in RLVR and show that a KL trust region is critical for improving offline-to-online predictability; we further introduce success-adaptive scaling to downweight unreliable negative gradients. Across diverse web and mobile benchmarks, GUI-Libra consistently improves both step-wise accuracy and end-to-end task completion. Our results suggest that carefully designed post-training and data curation can unlock significantly stronger task-solving capabilities without costly online data collection. We release our dataset, code, and models to facilitate further research on data-efficient post-training for reasoning-capable GUI agents.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2602.22190'>page</a> · <a href='https://arxiv.org/pdf/2602.22190'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>APEX-Searcher: Refining Credit Assignment with Subgoaling for Agentic Retrieval-Augmented Generation</title>
-      <link>https://arxiv.org/abs/2603.13853</link>
-      <guid isPermaLink="false">arxiv:2603.13853</guid>
-      <pubDate>Wed, 27 May 2026 05:32:01 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Kun Chen</p>
-<p><b>Authors:</b> Kun Chen, Qingchao Kong, Zhao Feifei, Wenji Mao</p>
-<p>Retrieval-augmented generation (RAG) connects large language models (LLMs) to external knowledge, but single-round retrieval is often insufficient for complex multi-hop questions. To enhance search capabilities for complex tasks, most existing works integrate multi-round iterative retrieval with reasoning processes via end-to-end training. While these approaches improve problem-solving performance, they still face challenges in task reasoning and model training, especially ambiguous retrieval execution paths and sparse rewards in end-to-end reinforcement learning (RL), which can lead to inaccurate retrieval results and lower performance. We attribute these failures to hierarchical credit entanglement: a single final reward updates planning and execution together, so the model cannot clearly separate plan errors from retrieval errors. We propose APEX-Searcher, which uses a Refining Credit Assignment paradigm: planning is optimized by RL with a plan-level reward, while execution is learned by SFT. Extensive experiments show consistent gains in both multi-hop RAG and task planning across benchmarks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://arxiv.org/abs/2603.13853'>page</a> · <a href='https://arxiv.org/pdf/2603.13853'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Demystifying Video Reasoning</title>
-      <link>https://arxiv.org/abs/2603.16870</link>
-      <guid isPermaLink="false">arxiv:2603.16870</guid>
-      <pubDate>Wed, 27 May 2026 05:32:01 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, Cornell — (senior)</p>
-<p><b>Authors:</b> Ruisi Wang, Zhongang Cai, Fanyi Pu, Junxiang Xu, Wanqi Yin, Maijunxian Wang, Ran Ji, Chenyang Gu, … <i>(+6 more)</i></p>
-<p>Recent advances in video generation have revealed an unexpected phenomenon: diffusion-based video models exhibit non-trivial reasoning capabilities. Prior work attributes this to a Chain-of-Frames (CoF) mechanism, where reasoning is assumed to unfold sequentially across video frames. In this work, we challenge this assumption and uncover a fundamentally different mechanism. We show that reasoning in video models instead primarily emerges along the diffusion denoising steps. Through qualitative analysis and targeted probing experiments, we find that models explore multiple candidate solutions in early denoising steps and progressively converge to a final answer, a process we term Chain-of-Steps (CoS). Beyond this core mechanism, we identify several emergent reasoning behaviors critical to model performance: (1) working memory, enabling persistent reference; (2) self-correction and enhancement, allowing recovery from incorrect intermediate solutions; and (3) perception before action, where early steps establish semantic grounding and later steps perform structured manipulation. During a diffusion step, we further uncover self-evolved functional specialization within Diffusion Transformers, where early layers encode dense perceptual structure, middle layers execute reasoning, and later layers consolidate latent representations. Motivated by these insights, we present a simple training-free strategy as a proof-of-concept, demonstrating how reasoning can be improved by ensembling latent trajectories from identical models with different random seeds. Overall, our work provides a systematic understanding of how reasoning emerges in video generation models, offering a foundation to guide future research in better exploiting the inherent reasoning dynamics of video models as a new substrate for intelligence.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://arxiv.org/abs/2603.16870'>page</a> · <a href='https://arxiv.org/pdf/2603.16870'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OMD-GraphRAG: Enhancing GraphRAG with Ontology-Guided Extraction, Multi-Dimensional Clustering and Dual-Channel Fusion</title>
-      <link>https://arxiv.org/abs/2603.25152</link>
-      <guid isPermaLink="false">arxiv:2603.25152</guid>
-      <pubDate>Wed, 27 May 2026 05:32:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.IR</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Jie Wang, Honghua Huang, Xi Ge, Jianhui Su, Wen Liu, Shiguo Lian</p>
-<p>Retrieval-Augmented Generation (RAG) systems face significant challenges in complex reasoning, multi-hop queries, and domain-specific QA. While existing GraphRAG frameworks have made progress in structural knowledge organization, they still have limitations in knowledge extraction precision, community report integrity, and retrieval performance. This paper proposes OMD-GraphRAG, an enhanced framework built upon open-source GraphRAG. The framework introduces three core innovations: (1) Ontology-Guided Knowledge Extraction that uses predefined Schema to guide LLMs in accurately identifying domain-specific entities and relations; (2) Multi-Dimensional Community Clustering Strategy that improves community completeness through alignment completion, attribute-based clustering, and multi-hop relationship clustering; (3) Dual-Channel Graph Retrieval Fusion that balances QA accuracy and performance through hybrid graph and community retrieval. Evaluation results on MultiHop-RAG benchmark show that OMD-GraphRAG outperforms mainstream open source solutions (e.g., LightRAG) in comprehensive F1 scores, particularly in inference and temporal queries.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.IR · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://arxiv.org/abs/2603.25152'>page</a> · <a href='https://arxiv.org/pdf/2603.25152'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ASTRA: Adaptive Semantic Tree Reasoning Architecture for Complex Table Question Answering</title>
-      <link>https://arxiv.org/abs/2604.08999</link>
-      <guid isPermaLink="false">arxiv:2604.08999</guid>
-      <pubDate>Wed, 27 May 2026 05:32:01 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Wen Zhang</p>
-<p><b>Authors:</b> Xiaoke Guo, Songze Li, Zhiqiang Liu, Zhaoyan Gong, Yuanxiang Liu, Huajun Chen, Wen Zhang</p>
-<p>Table serialization remains a critical bottleneck for Large Language Models (LLMs) in complex table question answering, hindered by challenges such as structural neglect, representation gaps, and reasoning opacity. Existing serialization methods fail to capture explicit hierarchies and lack schema flexibility, while current tree-based approaches suffer from limited semantic adaptability. To address these limitations, we propose ASTRA (Adaptive Semantic Tree Reasoning Architecture) including two main modules, AdaSTR and DuTR. First, we introduce AdaSTR, which leverages the global semantic awareness of LLMs to reconstruct tables into Logical Semantic Trees. This serialization explicitly models hierarchical dependencies and employs an adaptive mechanism to optimize construction strategies based on table scale. Second, building on this structure, we present DuTR, a dual-mode reasoning framework that integrates tree-search-based textual navigation for linguistic alignment and symbolic code execution for precise verification. Experiments on complex table benchmarks demonstrate that our method achieves state-of-the-art (SOTA) performance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://arxiv.org/abs/2604.08999'>page</a> · <a href='https://arxiv.org/pdf/2604.08999'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
