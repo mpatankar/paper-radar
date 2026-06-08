@@ -5,8 +5,49 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/robotics-embodied.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Manipulation, locomotion, VLA models, world models, real-robot work.</description>
-    <lastBuildDate>Sun, 07 Jun 2026 05:33:07 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 05:36:21 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>ScenicRules: An Autonomous Driving Benchmark with Multi-Objective Specifications and Abstract Scenarios</title>
+      <link>https://arxiv.org/abs/2602.16073</link>
+      <guid isPermaLink="false">arxiv:2602.16073</guid>
+      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.LO</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Sanjit A. Seshia</p>
+<p><b>Authors:</b> Kevin Kai-Chun Chang, Ekin Beyazit, Alberto Sangiovanni-Vincentelli, Tichakorn Wongpiromsarn, Sanjit A. Seshia</p>
+<p>Developing autonomous driving systems for complex traffic environments requires balancing multiple objectives, such as avoiding collisions, obeying traffic rules, and making efficient progress. In many situations, these objectives cannot be satisfied simultaneously, and explicit priority relations naturally arise. Also, driving rules require context, so it is important to formally model the environment scenarios within which such rules apply. Existing benchmarks for evaluating autonomous vehicles lack such combinations of multi-objective prioritized rules and formal environment models. In this work, we introduce ScenicRules, a benchmark for evaluating autonomous driving systems in stochastic environments under prioritized multi-objective specifications. We first formalize a diverse set of objectives to serve as quantitative evaluation metrics. Next, we design a Hierarchical Rulebook framework that encodes multiple objectives and their priority relations in an interpretable and adaptable manner. We then construct a compact yet representative collection of scenarios spanning diverse driving contexts and near-accident situations, formally modeled in the Scenic language. Experimental results show that our formalized objectives and Hierarchical Rulebooks align well with human driving judgments and that our benchmark effectively exposes agent failures with respect to the prioritized objectives. Our benchmark can be accessed at https://github.com/BerkeleyLearnVerify/ScenicRules/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.LO, cs.SY, eess.SY · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://arxiv.org/abs/2602.16073'>page</a> · <a href='https://arxiv.org/pdf/2602.16073'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Lane Change Trajectory Planning for Personalized Driving Comfort and Mobility Efficiency</title>
+      <link>https://arxiv.org/abs/2606.06805</link>
+      <guid isPermaLink="false">arxiv:2606.06805</guid>
+      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS, U Michigan — Ziyou Song</p>
+<p><b>Authors:</b> Haoxuan Dong, Dongjun Li, Ziyou Song</p>
+<p>Lane changing entails simultaneous longitudinal and lateral motions that affect driving comfort and mobility efficiency. Because these motions are tightly coupled and subject to substantial inter-vehicle variability, trajectory planning for lane-change maneuvers is characterized by a highly personalized nature. This study proposes a neural network-driven planner that integrates a third-order polynomial trajectory generator with a learning module that infers optimal trajectory parameters across diverse driving conditions. Using a shared backbone with dual heads, one head ensures all-condition operational guarantees, while the other captures driver-specific preferences for comfort or mobility efficiency. A head-gated switching mechanism, realized through a statistical gate based on error-winner logistic regression, adaptively selects the appropriate head under varying driving conditions, which enables context-aware lane-change trajectory planning. Representative cases and Monte Carlo simulations show that the proposed planner achieves personalized comfort and mobility during lane changes, while the baseline ensures feasible trajectories under driving conditions where personalized data are insufficient or inaccessible.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2606.06805'>page</a> · <a href='https://arxiv.org/pdf/2606.06805'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Neuro-Symbolic Learning for Long-Horizon Task Planning Under Complex Logical Constraints</title>
+      <link>https://arxiv.org/abs/2606.06877</link>
+      <guid isPermaLink="false">arxiv:2606.06877</guid>
+      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, Columbia — Qiwei Du</p>
+<p><b>Authors:</b> Qiwei Du, Zitong Zhan, Shaoshu Su, Bowen Li, Yi Du, Zhipeng Zhao, Taimeng Fu, Sebastian Scherer, … <i>(+2 more)</i></p>
+<p>Task planning often suffers from severe efficiency bottlenecks when robots must reason over long-horizon action sequences under complex logical constraints, including object affordances, spatial relationships, and sequential action dependencies. Recent neuro-symbolic methods improve planning efficiency by learning object-importance scores to prune task-irrelevant objects, but they typically rely on fixed offline supervision generated from full search spaces. This creates a train-test mismatch: at deployment, the planner operates in pruned search spaces induced by the model&#x27;s own imperfect predictions, leading to exposure bias and degraded planning performance. To address this challenge, we formulate object-importance learning for task planning as an imperative learning-based bilevel optimization problem. The upper level optimizes a neural scorer, while the lower level solves a symbolic planning problem in the score-pruned search space. To stabilize this learning process, we introduce a 3R strategy into the lower-level planning, using parallel Repair, Restart, and Rollback recovery to provide reliable and adaptive feedback for upper-level learning. Experiments on three challenging benchmarks demonstrate state-of-the-art performance, including an 80.04% reduction in failure rate and a 57.14% reduction in planning time. We further validate the framework on a quadruped-based mobile manipulator in simulation and the real world, demonstrating its potential for efficient and deployable neuro-symbolic task planning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2606.06877'>page</a> · <a href='https://arxiv.org/pdf/2606.06877'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Can Football Teach A Robot To Move</title>
       <link>https://bostondynamics.com/blog/can-football-teach-a-robot-to-move/</link>
