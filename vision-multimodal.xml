@@ -5,8 +5,59 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Mon, 08 Jun 2026 05:36:21 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 05:51:25 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Cosmos 3: Omnimodal World Models for Physical AI</title>
+      <link>https://arxiv.org/abs/2606.02800</link>
+      <guid isPermaLink="false">arxiv:2606.02800</guid>
+      <pubDate>Tue, 09 Jun 2026 05:51:25 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.MM</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind, NVIDIA Research · <b>Tier-2 senior:</b> CUHK, Columbia, Cornell, Georgia Tech, HKUST, Imperial College, MIT, Max Planck, NUS, Peking U, Stanford, Tsinghua, U Michigan, U Oxford, U Toronto, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> NVIDIA, :, Aditi, Niket Agarwal, Arslan Ali, Jon Allen, Martin Antolini, Adeline Aubame, … <i>(+288 more)</i></p>
+<p>We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting highly flexible input-output configurations, Cosmos 3 seamlessly unifies critical modalities for Physical AI -- effectively subsuming vision-language models, video generators, world simulators, and world-action models into a single framework. Our evaluation demonstrates that Cosmos 3 establishes a new state-of-the-art across a diverse suite of understanding and generation tasks, demonstrating omnimodal world models as scalable, general-purpose backbones for embodied agents. Our post-trained Cosmos 3 models were ranked as the best open-source Text-to-Image and Image-to-Video models by Artificial Analysis, and the best policy model by RoboArena at the time the technical report was written. To accelerate open research and deployment in Physical AI, we make our code, model checkpoints, curated synthetic datasets, and evaluation benchmark available under the Linux Foundation&#x27;s OpenMDW-1.1 License at https://github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3. The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos3.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.MM, cs.RO · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2606.02800'>page</a> · <a href='https://arxiv.org/pdf/2606.02800'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TBD-VLA: Temporal Block Diffusion Vision Language Action Model</title>
+      <link>https://arxiv.org/abs/2606.07895</link>
+      <guid isPermaLink="false">arxiv:2606.07895</guid>
+      <pubDate>Tue, 09 Jun 2026 05:51:25 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Sung-Wook Lee</p>
+<p><b>Authors:</b> Sung-Wook Lee, Xuhui Kang, Yen-Ling Kuo</p>
+<p>Discrete Vision-Language-Action (VLA) models typically formulate action generation as next-token prediction over discretized action spaces, conditioning each token autoregressively on prior context. While effective, this paradigm incurs high inference latency and largely ignores the temporal structure inherent in action trajectories. Recent efforts introduce parallel decoding to improve efficiency, enabling faster inference, but lack explicit mechanisms for modeling token dependencies. We introduce TBD-VLA, a discrete token-based VLA framework that incorporates block diffusion to enable temporal action generation. We partition action sequences into temporal blocks and perform masked discrete diffusion within each block, while maintaining autoregressive generation across blocks. This design unifies temporal autoregression and parallel action decoding, achieving both strong temporal coherence and improved inference speed. In addition, the explicit temporal modeling enables asynchronous execution of action chunks (e.g., Real-Time Chunking) via temporal in-painting. TBD-VLA significantly outperforms prior VLA approaches in both simulation and real-world manipulation tasks, offering a scalable path toward fast, temporally aware, discrete VLA models. Project webpage: https://tbd-vla.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.RO · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2606.07895'>page</a> · <a href='https://arxiv.org/pdf/2606.07895'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Revisiting Articulated Parts Perception in Robot Manipulation</title>
+      <link>https://arxiv.org/abs/2606.08103</link>
+      <guid isPermaLink="false">arxiv:2606.08103</guid>
+      <pubDate>Tue, 09 Jun 2026 05:51:25 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Yong-Lu Li</p>
+<p><b>Authors:</b> Xiaoqian Wu, Yejie Guo, Xiaoyang Chen, Lixin Yang, Cewu Lu, Yong-Lu Li</p>
+<p>We are surrounded by various objects with movable, articulated parts, e.g., box, handle, door. An accurate and generalizable perception of articulated parts is essential to enhance robotic manipulation capabilities. Building on this need, recent efforts in articulated parts perception have followed two main directions: One line of work uses pose-based representation, which requires high manual cost; in parallel, affordance-based methods extract future object motion from point tracking without additional manual efforts, but suffer from low-quality data. In this paper, we propose a new representation of articulated parts, Geometric Primary Structure (GPS), an abstraction of the part geometry structure to balance scalability and quality. For efficient and scalable data collection, GPS is integrated with a portable Virtual Reality (VR) device and requires only one minute to annotate one object sequence. This direct human annotation provides higher quality than the estimated affordance. With this efficient VR-GPS system, we collect 41K frames for 234 objects across six part classes, and train a generalizable GPS model with a single RGB-D object image as input. For object manipulation, we deploy a heuristic policy based on GPS prediction. Without any in-domain fine-tuning, our method achieves an 73% success rate, covering 270 initial states for 9 objects. Our code, data and reusable tool are available at https://enlighten0707.github.io/gps.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.CV · <b>arXiv submitted:</b> 2026-06-06 · <a href='https://arxiv.org/abs/2606.08103'>page</a> · <a href='https://arxiv.org/pdf/2606.08103'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Taming Perception Jitter: Uncertainty-Aware LiDAR Object Detection for Reliable Motion Classification</title>
+      <link>https://arxiv.org/abs/2606.09350</link>
+      <guid isPermaLink="false">arxiv:2606.09350</guid>
+      <pubDate>Tue, 09 Jun 2026 05:51:25 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Markus Lienkamp</p>
+<p><b>Authors:</b> Cornelius Schröder, Žygimantas Marcinkus, Markus Lienkamp</p>
+<p>Reliable motion classification is critical for autonomous driving, as false dynamic predictions of static objects can cascade into unnecessary planner interventions. Unstable bounding box predictions can lead to spurious velocity estimates in tracking and falsely predicted trajectories. We present a deployment-friendly mitigation strategy that augments a 3D object detector with aleatoric uncertainty estimates and applies a two-sample z-test over short observation windows to separate true motion from jitter. Integrated into Autoware with minimal changes, the approach reuses existing data association for minimal compute overhead. Empirical results show parity with velocity thresholding on nuScenes, but substantially fewer false dynamic predictions and unnecessary stops in real-world test drives, explained by the presence of an intermediate jitter band in the recorded data that speed-only rules misclassify. This demonstrates that uncertainty-aware detection and lightweight statistical testing can deliver practical performance gains for autonomous driving in noisier real-world settings.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.CV · <b>arXiv submitted:</b> 2026-06-08 · <a href='https://arxiv.org/abs/2606.09350'>page</a> · <a href='https://arxiv.org/pdf/2606.09350'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Enhancing Video Representations with Spatiotemporal-Semantic Residual to Mitigate Hallucinations in Video Large Multimodal Models</title>
       <link>https://arxiv.org/abs/2601.22574</link>
