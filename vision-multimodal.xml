@@ -5,8 +5,71 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Wed, 10 Jun 2026 05:33:37 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 05:36:31 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>RelayFormer: A Unified Local-Global Attention Framework for Scalable Image and Video Manipulation Localization</title>
+      <link>https://arxiv.org/abs/2508.09459</link>
+      <guid isPermaLink="false">arxiv:2508.09459</guid>
+      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS, Peking U, Tsinghua — Shu-Tao Xia</p>
+<p><b>Authors:</b> Wen Huang, Jiarui Yang, Tao Dai, Jiawei Li, Shaoxiong Zhan, Bin Wang, Shu-Tao Xia</p>
+<p>Visual manipulation localization (VML) aims to identify tampered regions in images and videos, a task that has become increasingly challenging with the rise of advanced editing tools. Existing methods face two central issues. The first is resolution diversity. Resizing or padding can distort subtle forensic cues and introduce unnecessary computational cost. The second is the difficulty of extending spatial models for images to spatio-temporal inputs in videos, which often results in maintaining separate architectures for the two data types. To address these challenges, we propose RelayFormer, a unified framework that adapts to varying resolutions and naturally handles both static and temporal visual data. RelayFormer partitions inputs into fixed-size sub-images and introduces Global Local Relay (GLR) tokens that propagate structured context through a relay-based attention mechanism. This design enables efficient exchange of global cues, such as semantic or temporal consistency, while preserving fine-grained manipulation artifacts. Unlike prior approaches that depend on uniform resizing or sparse attention, RelayFormer scales to variable resolutions and video sequences with minimal overhead. Experiments across diverse benchmarks demonstrate superior performance and strong efficiency, combining resolution adaptivity without interpolation or excessive padding, unified processing for images and videos, and a favorable balance between accuracy and computational cost. Code is available at~\href{https://github.com/WenOOI/RelayFormer}{https://github.com/WenOOI/RelayFormer}.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2508.09459'>page</a> · <a href='https://arxiv.org/pdf/2508.09459'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>OpenVTON-Bench: A Large-Scale High-Resolution Benchmark for Controllable Virtual Try-On Evaluation</title>
+      <link>https://arxiv.org/abs/2601.22725</link>
+      <guid isPermaLink="false">arxiv:2601.22725</guid>
+      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Stanford, Tsinghua — Jin Li</p>
+<p><b>Authors:</b> Jin Li, Tao Chen, Kai Wen, Siqi Yin, Shuai Jiang, Weijie Wang, Jingwen Luo, Chenhui Wu</p>
+<p>Recent advances in diffusion models have significantly elevated the visual fidelity of Virtual Try-On (VTON) systems, yet reliable evaluation remains a persistent bottleneck. Traditional metrics struggle to quantify fine-grained texture details and semantic consistency, while existing datasets fail to meet commercial standards in scale and diversity. We present OpenVTON-Bench, a large-scale benchmark comprising approximately 100K high-resolution image pairs (up to $1536 \times 1536$). The dataset is constructed using DINOv3-based hierarchical clustering for semantically balanced sampling and Gemini-powered dense captioning, ensuring a uniform distribution across 20 fine-grained garment categories. To support reliable evaluation, we propose a multi-modal protocol that measures VTON quality along five interpretable dimensions: background consistency, identity fidelity, texture fidelity, shape plausibility, and overall realism. The protocol integrates VLM-based semantic reasoning with a novel Multi-Scale Representation Metric based on SAM3 segmentation and morphological erosion, enabling the separation of boundary alignment errors from internal texture artifacts. Experimental results show strong agreement with human judgments (Kendall&#x27;s $τ$ of 0.833 vs. 0.611 for SSIM), establishing a robust benchmark for VTON evaluation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2601.22725'>page</a> · <a href='https://arxiv.org/pdf/2601.22725'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MentisOculi: Revealing the Limits of Reasoning with Mental Imagery</title>
+      <link>https://arxiv.org/abs/2602.02465</link>
+      <guid isPermaLink="false">arxiv:2602.02465</guid>
+      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich, Max Planck — Wieland Brendel</p>
+<p><b>Authors:</b> Jana Zeller, Thaddäus Wiedemer, Fanfei Li, Thomas Klein, Prasanna Mayilvahanan, Matthias Bethge, Felix Wichmann, Ryan Cotterell, … <i>(+1 more)</i></p>
+<p>Frontier models are transitioning from multimodal large language models (MLLMs) that merely ingest visual information to unified multimodal models (UMMs) capable of native interleaved generation. This shift has sparked interest in using intermediate visualizations as a reasoning aid, akin to human mental imagery. Central to this idea is the ability to form, maintain, and manipulate visual representations in a goal-oriented manner. To evaluate and probe this capability, we develop MentisOculi, a procedural, stratified suite of multi-step reasoning problems amenable to visual solution, tuned to challenge frontier models. Evaluating visual strategies ranging from latent tokens to explicit generated imagery, we find they generally fail to improve performance. Analysis of UMMs specifically exposes a critical limitation: While they possess the textual reasoning capacity to solve a task and can sometimes generate correct visuals, they suffer from compounding generation errors and fail to leverage even ground-truth visualizations. Our findings suggest that despite their inherent appeal, visual thoughts do not yet benefit model reasoning. MentisOculi establishes the necessary foundation to analyze and close this gap across diverse model families.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2602.02465'>page</a> · <a href='https://arxiv.org/pdf/2602.02465'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</title>
+      <link>https://arxiv.org/abs/2603.12261</link>
+      <guid isPermaLink="false">arxiv:2603.12261</guid>
+      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Zeynep Akata</p>
+<p><b>Authors:</b> Mateusz Pach, Jessica Bader, Quentin Bouniot, Serge Belongie, Zeynep Akata</p>
+<p>Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2603.12261'>page</a> · <a href='https://arxiv.org/pdf/2603.12261'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MultiToP: Learning to Patch Visual Tokens to Mitigate Hallucinations in Video Large Multimodal Models</title>
+      <link>https://arxiv.org/abs/2606.11792</link>
+      <guid isPermaLink="false">arxiv:2606.11792</guid>
+      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS, Tsinghua — Wenzhi Chen</p>
+<p><b>Authors:</b> Yuansheng Gao, Wenbin Xing, Jiahao Yuan, Kaiwen Zhou, Han Bao, Zonghui Wang, Wenzhi Chen</p>
+<p>Video Large Multimodal Models have achieved remarkable progress in video understanding, yet they remain prone to hallucinations, where generated responses are not faithfully supported by the input video. In this paper, we propose MultiToP, a multimodal-context-aware visual token patching framework that mitigates hallucinations by refining unreliable visual tokens before language generation. MultiToP introduces a lightweight Visual Token Patcher to predict token-level replacement distributions and selectively substitute unreliable visual tokens with a dynamic global patch token. To train the patcher effectively, we further propose information-guided rank calibration, which uses answer-conditioned frame-level information cues derived from the backbone to guide token replacement. Combined with ground-truth answer supervision and sparsity regularization, MultiToP enables localized visual evidence refinement without modifying the original model. Extensive experiments demonstrate that MultiToP effectively reduces hallucinations on Vript-HAL with negligible inference overhead, improving the F1 scores of Qwen3-VL-4B-Instruct by 50.60% over the vanilla model. Meanwhile, MultiToP preserves general video understanding ability, yielding an 18.58% relative accuracy gain on ActivityNet-QA for Video-LLaVA-7B.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2606.11792'>page</a> · <a href='https://arxiv.org/pdf/2606.11792'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Personal Privacy Protection via Irrelevant Faces Tracking and Pixelation in Video Live Streaming</title>
       <link>https://arxiv.org/abs/2101.01060</link>
