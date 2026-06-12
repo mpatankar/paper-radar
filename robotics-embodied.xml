@@ -5,8 +5,46 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/robotics-embodied.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Manipulation, locomotion, VLA models, world models, real-robot work.</description>
-    <lastBuildDate>Thu, 11 Jun 2026 05:36:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 05:36:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>WOMBET: World Model-Based Experience Transfer for Robust and Sample-efficient Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2604.08958</link>
+      <guid isPermaLink="false">arxiv:2604.08958</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Koushil Sreenath</p>
+<p><b>Authors:</b> Mintae Kim, Koushil Sreenath</p>
+<p>Reinforcement learning (RL) in robotics is often limited by the cost and risk of data collection, motivating experience transfer from a source task to a target task. Offline-to-online RL leverages prior data but typically assumes a given fixed dataset and does not address how to generate reliable data for transfer. We propose World Model-Based Experience Transfer (WOMBET), a framework that jointly generates and utilizes prior data. WOMBET learns a world model in the source task and generates offline data via uncertainty-penalized planning, followed by filtering trajectories with high return and low epistemic uncertainty. It then performs online fine-tuning in the target task using adaptive sampling between offline and online data, enabling a stable transition from prior-driven initialization to task-specific adaptation. We show that the uncertainty-penalized objective provides a lower bound on the true return and derive a finite-sample error decomposition capturing distribution mismatch and approximation error. Empirically, WOMBET improves sample efficiency and final performance over strong baselines on continuous control benchmarks, demonstrating the benefit of jointly optimizing data generation and transfer.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2604.08958'>page</a> · <a href='https://arxiv.org/pdf/2604.08958'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TrajGenAgent: A Hierarchical LLM Agent for Human Mobility Trajectory Generation</title>
+      <link>https://arxiv.org/abs/2606.12657</link>
+      <guid isPermaLink="false">arxiv:2606.12657</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.DB</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, Peking U, U Michigan — Siyu Li</p>
+<p><b>Authors:</b> Siyu Li, Toan Tran, Lingyi Zhao, Khurram Shafique, Li Xiong</p>
+<p>Human mobility data is important for transportation, urban planning, and epidemic control, but large-scale trajectory collection is often costly and privacy-constrained, motivating realistic synthetic trajectory generation. Existing LLM-based generators typically rely on either prompt engineering, which preserves zero-shot reasoning but lacks fine-grained spatiotemporal grounding, or trajectory-level fine-tuning, which improves statistical precision but incurs substantial computational cost and may weaken general reasoning. We propose TrajGenAgent, a semantic-aware hierarchical LLM-agent framework for human mobility trajectory generation without model fine-tuning. TrajGenAgent uses a two-stage orchestrator-worker design: an LLM first synthesizes an individual- and weekday-conditioned activity chain from historical evidence via in-context learning, and a deterministic workflow then grounds each activity into a complete visit using personalized POI retrieval, distance-aware location selection, kinematics-aware travel-time propagation, and LLM-based duration estimation. To evaluate realism beyond aggregate spatiotemporal statistics, we introduce an anomaly-detection-based evaluation framework using two complementary detectors to assess behavioral and semantic plausibility. Experiments on benchmark and large-scale simulation datasets show that TrajGenAgent improves spatiotemporal fidelity, semantic coherence, and individual-specific behavioral realism over representative neural and LLM-based baselines, while avoiding parameter updates.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.DB, cs.RO · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2606.12657'>page</a> · <a href='https://arxiv.org/pdf/2606.12657'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Stubborn: A Streamlined and Unified Reinforcement Learning Framework for Robust Motion Tracking and Fall Recovery for Humanoids</title>
+      <link>https://arxiv.org/abs/2606.12814</link>
+      <guid isPermaLink="false">arxiv:2606.12814</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Xiao Ren</p>
+<p><b>Authors:</b> Xiao Ren, Yuhui Yang, Zongbiao Weng, Zhijie Liu, He Kong</p>
+<p>Recent reinforcement learning approaches have shown great promise in improving humanoid motion tracking performance and achieving fall recovery under disturbances. However, most existing works treat motion tracking and fall recovery as different tasks and require multi-stage training with specialized recovery rewards and/or separate recovery policies. Moreover, existing reinforcement learning-based methods often terminate training episodes immediately after severe tracking failures, limiting recovery-oriented exploration in unstable or fallen states. To address the above issues, we propose Stubborn, a streamlined and unified reinforcement learning framework to achieve robust humanoid motion tracking and fall recovery. Specifically, Stubborn uses an asymmetric Actor-Critic architecture and consists of three major components. First, a yaw-aligned tracking representation is adopted to reduce sensitivity to global drift and heading disturbances while preserving gravity-related balance information. Second, we introduce a Bernoulli-based probabilistic termination mechanism that enables the policy to encourage exploration of fall-recovery behaviors under varying failure modes. Third, we propose a probabilistic termination and tracking-error-driven strategy that dynamically reshapes the sampling distribution based on tracking performance, increasing the training efficiency for difficult motion segments and unstable states. Extensive comparisons with SOTA methods and ablation studies show that Stubborn achieved competitive performance, and the proposed probabilistic termination mechanism and adaptive sampling strategy contributed to the performance and robustness gains. For real-world demonstrations, please refer to https://aislab-sustech.github.io/Stubborn/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2606.12814'>page</a> · <a href='https://arxiv.org/pdf/2606.12814'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>FCBV-Net: Category-Level Robotic Garment Smoothing via Feature-Conditioned Bimanual Value Prediction</title>
       <link>https://arxiv.org/abs/2508.05153</link>

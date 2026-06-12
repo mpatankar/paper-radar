@@ -5,8 +5,88 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 11 Jun 2026 05:36:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 05:36:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Cross-Model Disagreement as a Label-Free Correctness Signal</title>
+      <link>https://arxiv.org/abs/2603.25450</link>
+      <guid isPermaLink="false">arxiv:2603.25450</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Suman Jana</p>
+<p><b>Authors:</b> Matt Gorbett, Suman Jana</p>
+<p>Detecting when a language model is wrong without ground truth labels is a fundamental challenge for safe deployment. Existing approaches rely on a model&#x27;s own uncertainty -- such as token entropy or confidence scores -- but these signals fail critically on the most dangerous failure mode: confident errors, where a model is wrong but certain. In this work we introduce cross-model disagreement as a correctness indicator -- a simple, training-free signal that can be dropped into existing production systems, routing pipelines, and deployment monitoring infrastructure without modification. Given a model&#x27;s generated answer, cross-model disagreement computes how surprised or uncertain a second verifier model is when reading that answer via a single forward pass. No generation from the verifying model is required, and no correctness labels are needed. We instantiate this principle as Cross-Model Perplexity (CMP), which measures the verifying model&#x27;s surprise at the generating model&#x27;s answer tokens, and Cross-Model Entropy (CME), which measures the verifying model&#x27;s uncertainty at those positions. Both CMP and CME outperform within-model uncertainty baselines across benchmarks spanning reasoning, retrieval, and mathematical problem solving (MMLU, TriviaQA, and GSM8K). On MMLU, CMP achieves a mean AUROC of 0.75 against a within-model entropy baseline of 0.59. These results establish cross-model disagreement as a practical, training-free approach to label-free correctness estimation, with direct applications in deployment monitoring, model routing, selective prediction, data filtering, and scalable oversight of production language model systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2603.25450'>page</a> · <a href='https://arxiv.org/pdf/2603.25450'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Muse Spark Safety &amp; Preparedness Report</title>
+      <link>https://arxiv.org/abs/2606.12429</link>
+      <guid isPermaLink="false">arxiv:2606.12429</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.CY</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CMU, CUHK, Columbia, Georgia Tech, MIT, Tsinghua, U Michigan, U Oxford, U Toronto, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Cristina Menghini, Peter Ney, Hamza Kwisaba, Zifan, Wang, Miles Turpin, Felix Binder, Jean-Christophe Testud, … <i>(+112 more)</i></p>
+<p>Muse Spark is the latest large language model developed by Meta. In this report, we first present evaluations for catastrophic risk domains under Meta&#x27;s Advanced AI Scaling Framework, along with the evidence that informed our launch decision. We then discuss additional considerations, such as Muse Spark&#x27;s broader content safety and behavioral profile, that are relevant to overall safety but fall outside the catastrophic risk domains governed by the Framework. Our preparedness results covering Chemical and Biological, Cybersecurity, and Loss of Control risks assess Muse Spark&#x27;s deployment within Meta AI as presenting acceptable levels of residual risks under our Advanced AI Scaling Framework. We conducted a broad set of evaluations targeting dual-use and high-risk capabilities across these catastrophic risk domains. Those evaluations identified elevated risks prior to mitigations, with Chemical and Biological capabilities assessed as likely reaching the &quot;high risk&quot; category under the Advanced AI Scaling Framework before safeguards were applied. We have implemented a multi-layered set of mitigations that address the identified risks, and Muse Spark demonstrates state-of-the-art refusal across a range of benchmarks related to hazardous workflows in chemistry and biology. We therefore release Muse Spark as the underlying model of Meta AI.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.AI · <b>arXiv submitted:</b> 2026-05-14 · <a href='https://arxiv.org/abs/2606.12429'>page</a> · <a href='https://arxiv.org/pdf/2606.12429'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PI-Hunter: Automated Red-Teaming for Exposing and Localizing Prompt Injections</title>
+      <link>https://arxiv.org/abs/2606.12737</link>
+      <guid isPermaLink="false">arxiv:2606.12737</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.CR</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Long T. Le</p>
+<p><b>Authors:</b> Pengfei He, Lesly Miculicich, Vishesh Sharma, Ash Fox, George Lee, Jiliang Tang, Tomas Pfister, Long T. Le</p>
+<p>Large Language Models (LLMs) are rapidly evolving into agentic systems that interact with external tools and environments, introducing new security risks such as indirect prompt injection attacks through untrusted external sources. Existing defenses mainly focus on blocking malicious content at inference time, and current red-teaming methods primarily optimize attack success. As a result, developers have limited visibility into how latent prompt injections emerge and propagate through agents. We propose PI-Hunter, an automated agentic auditing framework for proactive vulnerability exposure in LLM agents. PI-Hunter constructs realistic source-aware test cases and iteratively evolves them through feedback-driven exploration to induce agents to retrieve and reveal latent malicious instructions embedded within external environments. Extensive experiments across multiple benchmarks, agent architectures, attacks, and defenses demonstrate that PI-Hunter substantially improves vulnerability exposure and attack-surface coverage over strong automated red-teaming baselines, while remaining effective under existing prompt injection defenses.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2606.12737'>page</a> · <a href='https://arxiv.org/pdf/2606.12737'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Containment Gap: How Deployed Agentic AI Frameworks Fail Public-Facing Safety Requirements</title>
+      <link>https://arxiv.org/abs/2606.12797</link>
+      <guid isPermaLink="false">arxiv:2606.12797</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Md Jafrin Hossain, Mohammad Arif Hossain, Weiqi Liu, Nirwan Ansari</p>
+<p>Agentic large language model systems that autonomously invoke tools, maintain persistent memory, and execute multi-step plans are increasingly deployed in public-facing domains, including government services, healthcare triage, and financial advising. We ask whether the frameworks used to build these systems provide architectural-level structural safety guarantees. Applying six containment principles derived from a compositional model of agentic architectures, we audit three dominant frameworks (LangChain, AutoGPT, and OpenAI Agents SDK) and find no native compliance in any of them. Memory integrity, a defense against one of the most prevalent vulnerability classes, is not observed in any of the three evaluated frameworks. We validate these findings empirically: in a simulated government benefits agent built on LangChain, a single memory-poisoning write induces persistent targeted corruption across all tested seeds and backends, increasing the wrongful denial rate for targeted applicants to 88.9%. Under a complex five-factor policy, the same attack preserves aggregate accuracy while increasing targeted wrongful denials by 3.5x, rendering the corruption difficult to detect through standard monitoring. We then introduce two lightweight containment mechanisms: a memory integrity validator and a policy gate, which eliminate both attack vectors with sub-millisecond overhead (&lt;0.2ms per call). We conclude that the current agentic framework ecosystem may not yet meet secure-by-default expectations for public-facing deployments and outline priority architectural interventions to enable trustworthy deployment in high-stakes, socially impactful applications.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2606.12797'>page</a> · <a href='https://arxiv.org/pdf/2606.12797'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MLUBench: A Benchmark for Lifelong Unlearning Evaluation in MLLMs</title>
+      <link>https://arxiv.org/abs/2606.12809</link>
+      <guid isPermaLink="false">arxiv:2606.12809</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Peking U, TU Munich — Bo Han</p>
+<p><b>Authors:</b> He Li, Haoang Chi, Qizhou Wang, Yunxin Mao, Zhiheng Zhang, Jie Tan, Tongliang Liu, Wenjing Yang, … <i>(+1 more)</i></p>
+<p>Multimodal large language models (MLLMs) are trained on massive multimodal data, making data unlearning increasingly important as data owners may request the removal of specific content. In practice, these requests often arrive sequentially over time, giving rise to the challenging problem of MLLM Lifelong Unlearning. However, most existing benchmarks are limited in scale and scope, failing to capture the complexities of MLLM lifelong unlearning. To fill this gap, we introduce the MLUBench, a large-scale and comprehensive benchmark featuring 127 entities across 9 classes under lifelong unlearning requests. We perform extensive experiments using MLUBench and reveal that existing unlearning methods suffer from severe, cumulative degradation. More critically, we further identify the unique challenge of this problem: unlike in unimodal models, MLLM lifelong unlearning is constrained by the need to preserve multimodal alignment. Continually unlearning from one modality could degrade the entire model. To alleviate this challenge, we propose LUMoE, an effective method. Experiments demonstrate that LUMoE significantly mitigates the degradation problem faced by baselines. The source code and the MLUBench dataset are open-sourced in https://github.com/lihe-maxsize/Lifelong_Unlearning_main.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2606.12809'>page</a> · <a href='https://arxiv.org/pdf/2606.12809'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Investing in multi-agent AI safety research</title>
+      <link>https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/</link>
+      <guid isPermaLink="false">deepmind:90b62352eb</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p>Google DeepMind and partners announce a $10M funding call for multi-agent safety research.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Redesign Mixture-of-Experts Routers with Manifold Power Iteration</title>
+      <link>https://huggingface.co/papers/2606.12397</link>
+      <guid isPermaLink="false">arxiv:2606.12397</guid>
+      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Songhao Wu, Ang Lv, Ruobing Xie, Yankai Lin, Hugging Face Daily Papers (curated)</p>
+<p>Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a &quot;Power-then-Retract&quot; paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://huggingface.co/papers/2606.12397'>page</a> · <a href='https://arxiv.org/pdf/2606.12397'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Cross-Layer Discrete Concept Discovery for Interpreting Language Models</title>
       <link>https://arxiv.org/abs/2506.20040</link>
@@ -2321,52 +2401,6 @@
 <p><b>Authors:</b> Sihang Guo, Chenlin Zhou, Jiaqi Wang, Kehai Chen, Qingyan Meng, Zhengyu Ma</p>
 <p>Spiking Neural Networks (SNNs) offer promising energy-efficient alternatives to large language models (LLMs) due to their event-driven nature and ultra-low power consumption. However, to preserve capacity, most existing spiking LLMs still incur intensive floating-point matrix multiplication (MatMul) and nonlinearities, or training difficulties arising from the complex spatiotemporal dynamics. To address these challenges, we propose BiSpikCLM, the first fully binary spiking MatMul-free causal language model. BiSpikCLM introduces Softmax-Free Spiking Attention (SFSA), eliminating softmax and floating-point operations in autoregressive language modeling. For efficient training, we introduce Spike-Aware Alignment Distillation (SpAD), which aligns ANN teacher and SNN student across embeddings, attention maps, intermediate features, and output logits. SpAD framework allows BiSpikCLM to reach comparable performance to ANN counterparts using substantially fewer training tokens (e.g., only 5.6% of the tokens for the 1.3B model). As a result, BiSpikCLM achieves competitive performance at only 4.16% - 5.87% of the computational cost on natural language generation tasks. Our results highlight the feasibility and effectiveness of fully binary spike-driven LLMs and establish the distillation as a promising pathway for brain-inspired spiking NLP.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.NE, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2605.13859'>page</a> · <a href='https://arxiv.org/pdf/2605.13859'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Synthesis of discrete-continuous quantum circuits with multimodal diffusion models</title>
-      <link>https://arxiv.org/abs/2506.01666</link>
-      <guid isPermaLink="false">arxiv:2506.01666</guid>
-      <pubDate>Mon, 18 May 2026 11:12:16 GMT</pubDate>
-      <category>quant-ph</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> Florian Fürrutter, Zohim Chandani, Ikko Hamamura, Hans J. Briegel, Gorka Muñoz-Gil</p>
-<p>Efficiently compiling quantum operations remains a major bottleneck in scaling quantum computing. Today&#x27;s state-of-the-art methods achieve low compilation error by combining search algorithms with gradient-based parameter optimization, but they incur long runtimes and require multiple calls to quantum hardware or expensive classical simulations, making their scaling prohibitive. Recently, machine-learning models have emerged as an alternative, though they are currently restricted to discrete gate sets. Here, we introduce a multimodal denoising diffusion model that simultaneously generates a circuit&#x27;s structure and its continuous parameters for compiling a target unitary. It leverages two independent diffusion processes, one for discrete gate selection and one for parameter prediction. We benchmark the model over different experiments, analyzing the method&#x27;s accuracy across varying qubit counts and circuit depths, showcasing the ability of the method to outperform existing approaches in gate counts and under noisy conditions. Additionally, we show that a simple post-optimization scheme allows us to significantly improve the generated ansätze. Finally, by exploiting its rapid circuit generation, we create large datasets of circuits for particular operations and use these to extract valuable heuristics that can help us discover new insights into quantum circuit synthesis.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> quant-ph, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2506.01666'>page</a> · <a href='https://arxiv.org/pdf/2506.01666'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Protecting people from harmful manipulation</title>
-      <link>https://deepmind.google/blog/protecting-people-from-harmful-manipulation/</link>
-      <guid isPermaLink="false">deepmind:00bfbe617a</guid>
-      <pubDate>Mon, 18 May 2026 11:07:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p>Google DeepMind researches AI&#x27;s harmful manipulation risks across areas like finance and health, leading to new safety measures.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://deepmind.google/blog/protecting-people-from-harmful-manipulation/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior</title>
-      <link>https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/</link>
-      <guid isPermaLink="false">deepmind:53a9bb8429</guid>
-      <pubDate>Mon, 18 May 2026 11:02:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p>Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Deepening our partnership with the UK AI Security Institute</title>
-      <link>https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute/</link>
-      <guid isPermaLink="false">deepmind:537392360b</guid>
-      <pubDate>Mon, 18 May 2026 10:57:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p>Google DeepMind and UK AI Security Institute (AISI) strengthen collaboration on critical AI safety and security research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute/'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
