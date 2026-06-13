@@ -5,8 +5,74 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Fri, 12 Jun 2026 05:36:44 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 05:31:27 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Ire identifies another LOTUSLITE specimen</title>
+      <link>https://www.microsoft.com/en-us/research/blog/ire-identifies-another-lotuslite-specimen/</link>
+      <guid isPermaLink="false">microsoft_research:2c3d26eee4</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Brian Caswell, Bob Fleck, Mike Walker</p>
+<p>&lt;p&gt;Project Ire examined a timely malware sample and determined its intent through reverse engineering—identifying LOTUSLITE characteristics even as most major EDR tools did not detect it.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.microsoft.com/en-us/research/blog/ire-identifies-another-lotuslite-specimen/&quot;&gt;Ire identifies another LOTUSLITE specimen&lt;/a&gt; appeared first on &lt;a href=&quot;https://www.microsoft.com/en-us/research&quot;&gt;Microsoft Research&lt;/a&gt;.&lt;/p&gt;</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://www.microsoft.com/en-us/research/blog/ire-identifies-another-lotuslite-specimen/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>MiniMax Sparse Attention</title>
+      <link>https://huggingface.co/papers/2606.13392</link>
+      <guid isPermaLink="false">arxiv:2606.13392</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Georgia Tech, MILA, Peking U, Tsinghua, Weizmann — (senior)</p>
+<p><b>Authors:</b> Xunhao Lai, Weiqi Xu, Yufeng Yang, Qiaorui Chen, Yang Xu, Lunbin Zeng, Xiaolong Li, Haohai Sun, … <i>(+4 more)</i></p>
+<p>Ultra-long-context capability is becoming indispensable for frontier LLMs: agentic workflows, repository-scale code reasoning, and persistent memory all require the model to jointly attend over hundreds of thousands to millions of tokens, yet the quadratic cost of softmax attention makes this untenable at deployment scale. We introduce MiniMax Sparse Attention (MSA), a blockwise sparse attention built upon Grouped Query Attention (GQA). A lightweight Index Branch scores key-value blocks and independently selects a Top-k subset for each GQA group, enabling group-specific sparse retrieval while maintaining efficient block-level execution; the Main Branch then performs exact block-sparse attention over only the selected blocks. Designed around a principle of simplicity and scalability, MSA is deliberately streamlined, making it straightforward to deploy efficiently across a broad range of GPUs. To translate sparsity into practical speedups, we co-design MSA with a GPU execution path that uses exp-free Top-k selection and KV-outer sparse attention to improve tensor-core utilization under block-granular access. On a 109B-parameter model with native multimodal training, MSA performs on par with GQA while reducing per-token attention compute by 28.4x at 1M context. Paired with our co-designed kernel, MSA achieves 14.2x prefill and 7.6x decoding wall-clock speedups on H800. Our inference kernel is available at: https://github.com/MiniMax-AI/MSA. A production-grade natively multimodal model powered by MSA has been publicly released at: https://huggingface.co/MiniMaxAI/MiniMax-M3.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://huggingface.co/papers/2606.13392'>page</a> · <a href='https://arxiv.org/pdf/2606.13392'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?</title>
+      <link>https://huggingface.co/papers/2606.08063</link>
+      <guid isPermaLink="false">arxiv:2606.08063</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> HKUST — (senior)</p>
+<p><b>Authors:</b> Jiaqi Tang, Jianmin Chen, Youyang Zhai, Wei Wei, Runtao Liu, Mengjie Zhao, Xiangyu Wu, Qingfa Xiao, … <i>(+2 more)</i></p>
+<p>Multimodal Large Language Models (MLLMs) have demonstrated remarkable success in visual understanding, yet their performance degrades significantly under real-world visual corruptions. While existing robustness enhancement approaches exist, they are limited: black-box feature alignment lacks interpretability, and white-box text-based reasoning cannot restore lost pixel-level details. This work investigates a fundamental research question: Can MLLMs recover corrupted visual content by themselves? To address this, we propose Robust-U1, a novel framework that equips MLLMs with explicit visual self-recovery capability for robust understanding. The approach comprises three core stages: supervised fine-tuning for initial reconstruction, reinforcement learning with dual rewards (pixel-level SSIM and semantic-level CLIP similarity) for aligning high visual quality, and multimodal reasoning that jointly considers both the corrupted input and the recovered image. Extensive experiments demonstrate that Robust-U1 achieves state-of-the-art robustness on the real-world corruption benchmark and maintains superior performance under adversarial corruptions on general VQA benchmarks. Analysis confirms that high-quality visual recovery directly enhances reasoning performance, establishing self-recovery as a critical mechanism for robust visual understanding. The source code is available at https://github.com/jqtangust/Robust-U1.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-06 · <a href='https://huggingface.co/papers/2606.08063'>page</a> · <a href='https://arxiv.org/pdf/2606.08063'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling</title>
+      <link>https://huggingface.co/papers/2606.13473</link>
+      <guid isPermaLink="false">arxiv:2606.13473</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Georgia Tech, NUS, Peking U, Tsinghua, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Jiacheng Chen, Xinyu Zhang, Shunkai Zhang, Yanmohan Wang, Lin Li, Tiancheng Qin, Qin Wang, Zhengmao Zhu, … <i>(+16 more)</i></p>
+<p>We present MaxProof, a population-level test-time scaling framework for competition-level mathematical proof in the MiniMax-M3 series. M3 first trains three proof-oriented capabilities -- proof generation, proof verification, and critique-conditioned proof repair -- using a defense-in-depth generative verifier engineered for low false-positive rate. These capabilities are merged into a single released M3 model. At test time, MaxProof treats the model as a generator, verifier, refiner, and ranker, searches over a population of candidate proofs, and returns one final proof through tournament selection. With MaxProof test-time scaling, the M3 model reaches 35/42 on IMO 2025 and 36/42 on USAMO 2026, exceeding the human gold-medal threshold on both.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://huggingface.co/papers/2606.13473'>page</a> · <a href='https://arxiv.org/pdf/2606.13473'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers</title>
+      <link>https://huggingface.co/papers/2606.13289</link>
+      <guid isPermaLink="false">arxiv:2606.13289</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U — (senior)</p>
+<p><b>Authors:</b> Guozhen Zhang, Xuerui Qiu, Yutao Cui, Tianhui Song, Changlin Li, Junzhe Li, Tao Huang, Xiao Zhang, … <i>(+7 more)</i></p>
+<p>Holistic visual tokenizers are fundamental to unified multimodal models (UMMs) as they map diverse visual inputs into a unified representation space. In this paper, we present HYDRA-X, the first UMM that unifies image and video tokenization within a single Vision Transformer (ViT). Our design is driven by two core challenges: efficiently injecting spatiotemporal reconstruction capability into a native ViT, and embedding image- and video-level semantic awareness into the latent space. To address the first, comprehensive ablations reveal two key findings: (1) frame-level causal temporal attention suffices for visual reconstruction, whereas full spatiotemporal attention degrades it; and (2) hierarchical temporal compression substantially outperforms single-step alternatives. To tackle the second, we propose a lightweight decompressor that upsamples temporally compressed features under joint image-video teacher supervision, thereby enforcing complementary semantic structures within the compact latent space. Building on this holistic tokenizer, we further propose a principled improvement of the editing pipeline: source-target interaction should occur at the latent level inside the tokenizer rather than at the semantic level inside the LLM, substantially improving editing consistency and accelerating convergence. Instantiated at the 7B dense model, HYDRA-X achieves strong performance across image and video understanding and generation tasks, paving the way for future unified-tokenizer UMMs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://huggingface.co/papers/2606.13289'>page</a> · <a href='https://arxiv.org/pdf/2606.13289'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>olmo-eval: An evaluation workbench for the model development loop</title>
+      <link>https://allenai.org/blog/olmo-eval</link>
+      <guid isPermaLink="false">ai2:81766f6b7d</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Allen Institute for AI</p>
+<p><b>Authors:</b> Allen Institute for AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://allenai.org/blog/olmo-eval'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Lightweight and Interpretable Transformer via Mixed Graph Algorithm Unrolling for Traffic Forecast</title>
       <link>https://arxiv.org/abs/2505.13102</link>
@@ -2308,80 +2374,6 @@ Apple Foundation Models are built to unlock a wide range of helpful experiences 
 <p><b>Authors:</b> Daniel Durstewitz, Christoph Jürgen Hemmer, Florian Hess, Charlotte Ricarda Doll, Lukas Eisenmann</p>
 <p>Time series (TS) modeling has come a long way from early statistical, mainly linear, approaches to the current trend in TS foundation models. With a lot of hype and industrial demand in this field, it is not always clear how much progress there really is. To advance TS forecasting and analysis to the next level, here we argue that the field needs a dynamical systems (DS) perspective. TS of observations from natural or engineered systems almost always originate from some underlying DS, and arguably access to its governing equations would yield theoretically optimal forecasts. This is the promise of DS reconstruction (DSR), a class of ML/AI approaches that aim to infer surrogate models of the underlying DS from data. But models based on DS principles offer other profound advantages: Beyond short-term forecasts, they enable to predict the long-term statistics of an observed system, which in many practical scenarios may be the more relevant quantities. DS theory furthermore provides domain-independent theoretical insight into mechanisms underlying TS generation, and thereby will inform us, e.g., about upper bounds on performance of any TS model, generalization into unseen regimes as in tipping points, or potential control strategies. After reviewing some of the central concepts, methods, measures, and models in DS theory and DSR, we will discuss how insights from this field can advance TS modeling in crucial ways, enabling better forecasting with much lower computational and memory footprints. We conclude with a number of specific suggestions for translating insights from DSR into TS modeling.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, math.DS · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2602.16864'>page</a> · <a href='https://arxiv.org/pdf/2602.16864'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Forecasting as Rendering: A 2D Gaussian Splatting Framework for Time Series Forecasting</title>
-      <link>https://arxiv.org/abs/2603.02220</link>
-      <guid isPermaLink="false">arxiv:2603.02220</guid>
-      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Shu-Tao Xia</p>
-<p><b>Authors:</b> Yixin Wang, Yifan Hu, Peiyuan Liu, Naiqi Li, Tao Dai, Shu-Tao Xia</p>
-<p>Time series forecasting remains a challenging problem due to the intricate entanglement of intra-period fluctuations and inter-period trends. While recent advances have attempted to reshape 1D sequences into 2D period-phase representations, they suffer from two principal limitations. Firstly, treating reshaped tensors as static images results in a topological mismatch, as standard spatial operators sever chronological continuity at grid boundaries. Secondly, relying on uniform fixed-size representations allocates modeling capacity inefficiently and fails to provide the adaptive resolution required for compressible, non-stationary temporal patterns. To address these limitations, we introduce TimeGS, a novel framework that fundamentally shifts the forecasting paradigm from regression to 2D generative rendering. By reconceptualizing the future sequence as a latent 2D temporal surface, TimeGS utilizes the inherent anisotropy of Gaussian kernels to adaptively model complex variations with flexible geometric alignment. To realize this, we introduce a Multi-Basis Gaussian Kernel Generation (MB-GKG) block that synthesizes kernels from a fixed dictionary to stabilize optimization, and a Multi-Period Chronologically Continuous Rasterization (MP-CCR) block that enforces strict temporal continuity across periodic boundaries. Comprehensive experiments on standard benchmark datasets demonstrate that TimeGS attains state-of-the-art or competitive performance. The code is at https://github.com/yixinwang1/TimeGS.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2603.02220'>page</a> · <a href='https://arxiv.org/pdf/2603.02220'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Training for Technology: Adoption and Productive Use of Generative AI in Legal Analysis</title>
-      <link>https://arxiv.org/abs/2603.04982</link>
-      <guid isPermaLink="false">arxiv:2603.04982</guid>
-      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
-      <category>cs.CY</category>
-      <category>cs.AI</category>
-      <category>cs.HC</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Oxford — Benjamin M. Chen</p>
-<p><b>Authors:</b> Benjamin M. Chen, Hong Bao</p>
-<p>Can targeted user training unlock the productive potential of generative artificial intelligence in professional settings? We study this question using a randomized experiment in which 164 law students completed an issue-spotting examination under one of three conditions: no GenAI access, optional access to a large language model (LLM), or LLM access with a brief training intervention. Untrained LLM access proved counterproductive: relative to participants without any LLM access, untrained users wrote significantly shorter answers, committed more case misstatements, and scored marginally lower, though most differences fall short of conventional significance. Training reversed this pattern. Trained participants adopted the LLM at higher rates (41% vs. 26%; p = 0.044), scored 0.27 grade points higher than untrained users--roughly one fine grade--(p = 0.027), and stated applicable rules more accurately (p = 0.014). Principal stratification analysis suggests training operates primarily through adoption rather than effectiveness--the adoption lower bound (1.06) exceeds the effectiveness upper bound (0.42) at strict mean dominance--though confidence intervals are wide. More broadly, these findings challenge the view that GenAI primarily benefits lower-skilled workers: without training, higher-ability practitioners opt out while lower-ability users adopt but unproductively. Realizing GenAI&#x27;s productivity gains requires investment in both access and instruction.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.AI, cs.HC · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2603.04982'>page</a> · <a href='https://arxiv.org/pdf/2603.04982'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio</title>
-      <link>https://arxiv.org/abs/2603.08683</link>
-      <guid isPermaLink="false">arxiv:2603.08683</guid>
-      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
-      <category>cs.SD</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <category>eess.AS</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, UC Berkeley — Phillip Long</p>
-<p><b>Authors:</b> Phillip Long, Zachary Novack, Chris Donahue</p>
-<p>Autoregressive &quot;language&quot; models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit). We propose Trilobyte, a byte-level tokenization schema for full resolution audio, improving vocabulary scaling from $O(2^{b})$ to $O(1)$ and enabling the first tractable 24-bit LM-based lossless compression. While LMs consistently outperform FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that compression gains become more modest as bit depth increases beyond 8-bit.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI, cs.LG, eess.AS · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2603.08683'>page</a> · <a href='https://arxiv.org/pdf/2603.08683'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LuMamba: Latent Unified Mamba for Electrode Topology-Invariant and Efficient EEG Modeling</title>
-      <link>https://arxiv.org/abs/2603.19100</link>
-      <guid isPermaLink="false">arxiv:2603.19100</guid>
-      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Luca Benini</p>
-<p><b>Authors:</b> Danaé Broustail, Anna Tegon, Thorir Mar Ingolfsson, Yawei Li, Luca Benini</p>
-<p>Electroencephalography (EEG) enables non-invasive monitoring of brain activity across clinical and neurotechnology applications, yet building foundation models for EEG remains challenging due to differing electrode topologies and computational scalability, as Transformer architectures incur quadratic sequence complexity. As a joint solution, we propose LuMamba (Latent Unified Mamba), a self-supervised framework combining topology-invariant encodings with linear-complexity state-space modeling, using LUNA&#x27;s learned-query cross-attention mechanism for channel unification, and FEMBA&#x27;s bidirectional Mamba blocks for efficient temporal modeling. Within this architecture, we provide the first systematic investigation of the Latent-Euclidean Joint-Embedding Predictive Architecture (LeJEPA) for biosignal learning. Pre-trained on over 21,000 hours of unlabeled EEG from the TUEG corpus, LuMamba is evaluated on five downstream tasks spanning abnormality detection, artifact recognition, and mental condition classification across electrode configurations ranging from 16 to 26 channels. In the pre-training objective, masked reconstruction alone yields structured but less generalizable representations, while LeJEPA alone produces diffuse embeddings; combining both objectives achieves the most robust performance. With only 4.6M parameters, LuMamba attains 80.99% balanced accuracy on TUAB and achieves state-of-art performance on Alzheimer&#x27;s detection (0.97 AUPR), while requiring 377x fewer FLOPS than state-of-art models at equivalent sequence lengths and scaling to 12x longer sequences before reaching typical GPU memory limits. Code is available at https://github.com/pulp-bio/biofoundation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://arxiv.org/abs/2603.19100'>page</a> · <a href='https://arxiv.org/pdf/2603.19100'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Design Once, Deploy at Scale: Template-Driven ML Development for Large Model Ecosystems</title>
-      <link>https://arxiv.org/abs/2603.24963</link>
-      <guid isPermaLink="false">arxiv:2603.24963</guid>
-      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> Peking U, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Jiang Liu, John Martabano Landy, Yao Xuan, Swamy Muddu, Nhat Le, Munaf Sahaf, Luc Kien Hang, Rupinder Khandpour, … <i>(+9 more)</i></p>
-<p>Modern computational advertising platforms typically rely on recommendation systems to predict user responses, such as click-through rates, conversion rates, and other optimization events. To support a wide variety of product surfaces and advertiser goals, these platforms frequently maintain an extensive ecosystem of machine learning (ML) models. However, operating at this scale creates significant development and efficiency challenges. Substantial engineering effort is required to regularly refresh ML models and propagate new techniques, which results in long latencies when deploying ML innovations across the ecosystem. We present a large-scale empirical study comparing model performance, efficiency, and ML technique propagation between a standardized model-building approach and independent per-model optimization in recommendation systems. To facilitate this standardization, we propose the Standard Model Template (SMT) -- a framework that generates high-performance models adaptable to diverse data distributions and optimization events. By utilizing standardized, composable ML model components, SMT reduces technique propagation complexity from $O(n \cdot 2^k)$ to $O(n + k)$ where $n$ is the number of models and $k$ the number of techniques. Evaluating an extensive suite of models over four global development cycles within Meta&#x27;s production ads ranking ecosystem, our results demonstrate: (1) a 0.63% average improvement in cross-entropy at neutral serving capacity, (2) a 92% reduction in per-model iteration engineering time, and (3) a $6.3\times$ increase in technique-model pair adoption throughput. These findings challenge the conventional wisdom that diverse optimization goals inherently require diversified ML model design.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2603.24963'>page</a> · <a href='https://arxiv.org/pdf/2603.24963'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Latent Space: Foundation, Evolution, Mechanism, Ability, and Outlook</title>
-      <link>https://arxiv.org/abs/2604.02029</link>
-      <guid isPermaLink="false">arxiv:2604.02029</guid>
-      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> CUHK, NUS, Peking U, TU Munich, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Xinlei Yu, Zhangquan Chen, Yongbo He, Tianyu Fu, Guanting Dong, Cheng Yang, Chengming Xu, Yue Ma, … <i>(+31 more)</i></p>
-<p>Latent space is rapidly emerging as a native substrate for language-based models. While modern systems are still commonly understood through explicit token-level generation, an increasing body of work shows that many critical internal processes are more naturally carried out in continuous latent space than in human-readable verbal traces. This shift is driven by the structural limitations of explicit-space computation, including linguistic redundancy, discretization bottlenecks, sequential inefficiency, and semantic loss. This survey aims to provide a unified and up-to-date landscape of latent space in language-based models. We organize the survey into five sequential perspectives: Foundation, Evolution, Mechanism, Ability, and Outlook. We begin by delineating the scope of latent space, distinguishing it from explicit or verbal space and from the latent spaces commonly studied in generative visual models. We then trace the field&#x27;s evolution from early exploratory efforts to the current large-scale expansion. To organize the technical landscape, we examine existing work through the complementary lenses of mechanism and ability. From the perspective of Mechanism, we identify four major lines of development: Architecture, Representation, Computation, and Optimization. From the perspective of Ability, we show how latent space supports a broad capability spectrum spanning Reasoning, Planning, Modeling, Perception, Memory, Collaboration, and Embodiment. Beyond consolidation, we discuss the key open challenges, and outline promising directions for future research. We hope this survey serves not only as a reference for existing work, but also as a foundation for understanding latent space as a general computational and systems paradigm for next-generation intelligence.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2604.02029'>page</a> · <a href='https://arxiv.org/pdf/2604.02029'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

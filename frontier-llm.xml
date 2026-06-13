@@ -5,8 +5,52 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Fri, 12 Jun 2026 05:36:44 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 05:31:27 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>MiniMax Sparse Attention</title>
+      <link>https://huggingface.co/papers/2606.13392</link>
+      <guid isPermaLink="false">arxiv:2606.13392</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Georgia Tech, MILA, Peking U, Tsinghua, Weizmann — (senior)</p>
+<p><b>Authors:</b> Xunhao Lai, Weiqi Xu, Yufeng Yang, Qiaorui Chen, Yang Xu, Lunbin Zeng, Xiaolong Li, Haohai Sun, … <i>(+4 more)</i></p>
+<p>Ultra-long-context capability is becoming indispensable for frontier LLMs: agentic workflows, repository-scale code reasoning, and persistent memory all require the model to jointly attend over hundreds of thousands to millions of tokens, yet the quadratic cost of softmax attention makes this untenable at deployment scale. We introduce MiniMax Sparse Attention (MSA), a blockwise sparse attention built upon Grouped Query Attention (GQA). A lightweight Index Branch scores key-value blocks and independently selects a Top-k subset for each GQA group, enabling group-specific sparse retrieval while maintaining efficient block-level execution; the Main Branch then performs exact block-sparse attention over only the selected blocks. Designed around a principle of simplicity and scalability, MSA is deliberately streamlined, making it straightforward to deploy efficiently across a broad range of GPUs. To translate sparsity into practical speedups, we co-design MSA with a GPU execution path that uses exp-free Top-k selection and KV-outer sparse attention to improve tensor-core utilization under block-granular access. On a 109B-parameter model with native multimodal training, MSA performs on par with GQA while reducing per-token attention compute by 28.4x at 1M context. Paired with our co-designed kernel, MSA achieves 14.2x prefill and 7.6x decoding wall-clock speedups on H800. Our inference kernel is available at: https://github.com/MiniMax-AI/MSA. A production-grade natively multimodal model powered by MSA has been publicly released at: https://huggingface.co/MiniMaxAI/MiniMax-M3.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://huggingface.co/papers/2606.13392'>page</a> · <a href='https://arxiv.org/pdf/2606.13392'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?</title>
+      <link>https://huggingface.co/papers/2606.08063</link>
+      <guid isPermaLink="false">arxiv:2606.08063</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> HKUST — (senior)</p>
+<p><b>Authors:</b> Jiaqi Tang, Jianmin Chen, Youyang Zhai, Wei Wei, Runtao Liu, Mengjie Zhao, Xiangyu Wu, Qingfa Xiao, … <i>(+2 more)</i></p>
+<p>Multimodal Large Language Models (MLLMs) have demonstrated remarkable success in visual understanding, yet their performance degrades significantly under real-world visual corruptions. While existing robustness enhancement approaches exist, they are limited: black-box feature alignment lacks interpretability, and white-box text-based reasoning cannot restore lost pixel-level details. This work investigates a fundamental research question: Can MLLMs recover corrupted visual content by themselves? To address this, we propose Robust-U1, a novel framework that equips MLLMs with explicit visual self-recovery capability for robust understanding. The approach comprises three core stages: supervised fine-tuning for initial reconstruction, reinforcement learning with dual rewards (pixel-level SSIM and semantic-level CLIP similarity) for aligning high visual quality, and multimodal reasoning that jointly considers both the corrupted input and the recovered image. Extensive experiments demonstrate that Robust-U1 achieves state-of-the-art robustness on the real-world corruption benchmark and maintains superior performance under adversarial corruptions on general VQA benchmarks. Analysis confirms that high-quality visual recovery directly enhances reasoning performance, establishing self-recovery as a critical mechanism for robust visual understanding. The source code is available at https://github.com/jqtangust/Robust-U1.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-06 · <a href='https://huggingface.co/papers/2606.08063'>page</a> · <a href='https://arxiv.org/pdf/2606.08063'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling</title>
+      <link>https://huggingface.co/papers/2606.13473</link>
+      <guid isPermaLink="false">arxiv:2606.13473</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Georgia Tech, NUS, Peking U, Tsinghua, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Jiacheng Chen, Xinyu Zhang, Shunkai Zhang, Yanmohan Wang, Lin Li, Tiancheng Qin, Qin Wang, Zhengmao Zhu, … <i>(+16 more)</i></p>
+<p>We present MaxProof, a population-level test-time scaling framework for competition-level mathematical proof in the MiniMax-M3 series. M3 first trains three proof-oriented capabilities -- proof generation, proof verification, and critique-conditioned proof repair -- using a defense-in-depth generative verifier engineered for low false-positive rate. These capabilities are merged into a single released M3 model. At test time, MaxProof treats the model as a generator, verifier, refiner, and ranker, searches over a population of candidate proofs, and returns one final proof through tournament selection. With MaxProof test-time scaling, the M3 model reaches 35/42 on IMO 2025 and 36/42 on USAMO 2026, exceeding the human gold-medal threshold on both.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://huggingface.co/papers/2606.13473'>page</a> · <a href='https://arxiv.org/pdf/2606.13473'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers</title>
+      <link>https://huggingface.co/papers/2606.13289</link>
+      <guid isPermaLink="false">arxiv:2606.13289</guid>
+      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U — (senior)</p>
+<p><b>Authors:</b> Guozhen Zhang, Xuerui Qiu, Yutao Cui, Tianhui Song, Changlin Li, Junzhe Li, Tao Huang, Xiao Zhang, … <i>(+7 more)</i></p>
+<p>Holistic visual tokenizers are fundamental to unified multimodal models (UMMs) as they map diverse visual inputs into a unified representation space. In this paper, we present HYDRA-X, the first UMM that unifies image and video tokenization within a single Vision Transformer (ViT). Our design is driven by two core challenges: efficiently injecting spatiotemporal reconstruction capability into a native ViT, and embedding image- and video-level semantic awareness into the latent space. To address the first, comprehensive ablations reveal two key findings: (1) frame-level causal temporal attention suffices for visual reconstruction, whereas full spatiotemporal attention degrades it; and (2) hierarchical temporal compression substantially outperforms single-step alternatives. To tackle the second, we propose a lightweight decompressor that upsamples temporally compressed features under joint image-video teacher supervision, thereby enforcing complementary semantic structures within the compact latent space. Building on this holistic tokenizer, we further propose a principled improvement of the editing pipeline: source-target interaction should occur at the latent level inside the tokenizer rather than at the semantic level inside the LLM, substantially improving editing consistency and accelerating convergence. Instantiated at the 7B dense model, HYDRA-X achieves strong performance across image and video understanding and generation tasks, paving the way for future unified-tokenizer UMMs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://huggingface.co/papers/2606.13289'>page</a> · <a href='https://arxiv.org/pdf/2606.13289'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>ReFoCUS: Reinforcement-guided Frame Optimization for Contextual Understanding</title>
       <link>https://arxiv.org/abs/2506.01274</link>
@@ -2378,52 +2422,6 @@
 <p><b>Authors:</b> Ruyi Xu, Guangxuan Xiao, Yukang Chen, Liuning He, Yao Lu, Song Han</p>
 <p>Vision-language models (VLMs) could power real-time assistants and autonomous agents, but they face a critical challenge: understanding near-infinite video streams without escalating latency and memory usage. Processing entire videos with full attention leads to quadratic computational costs and poor performance on long videos. Meanwhile, simple sliding window methods are also flawed, as they either break coherence or suffer from high latency due to redundant recomputation. In this paper, we introduce StreamingVLM, a model designed for real-time, stable understanding of infinite visual input. Our approach is a unified framework that aligns training with streaming inference. During inference, we maintain a compact KV cache by reusing states of attention sinks, a short window of recent vision tokens, and a long window of recent text tokens. This streaming ability is instilled via a simple supervised fine-tuning (SFT) strategy that applies full attention on short, overlapped video chunks, which effectively mimics the inference-time attention pattern without training on prohibitively long contexts. For evaluation, we build Inf-Streams-Eval, a new benchmark with videos averaging over two hours that requires dense, per-second alignment between frames and text. On Inf-Streams-Eval, StreamingVLM achieves a 66.18% win rate against GPT-4O mini and maintains stable, real-time performance at up to 8 FPS on a single NVIDIA H100. Notably, our SFT strategy also enhances general VQA abilities without any VQA-specific fine-tuning, improving performance on LongVideoBench by +4.30 and OVOBench Realtime by +5.96. Code is available at https://github.com/mit-han-lab/streaming-vlm.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2510.09608'>page</a> · <a href='https://arxiv.org/pdf/2510.09608'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LocalSearchBench: Benchmarking Agentic Search in Real-World Local Life Services</title>
-      <link>https://arxiv.org/abs/2512.07436</link>
-      <guid isPermaLink="false">arxiv:2512.07436</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, U Cambridge — Hang He</p>
-<p><b>Authors:</b> Hang He, Chuhuai Yue, Chengqi Dong, Mingxue Tian, Hao Chen, Zhenfeng Liu, Jiajun Chai, Xiaohan Wang, … <i>(+7 more)</i></p>
-<p>Recent advances in large reasoning models LRMs have enabled agentic search systems to perform complex multi-step reasoning across multiple sources. However, most studies focus on general information retrieval and rarely explores vertical domains with unique challenges. In this work, we focus on local life services and introduce LocalSearchBench, which encompass diverse and complex business scenarios. Real-world queries in this domain are often ambiguous and require multi-hop reasoning across merchants and products, remaining challenging and not fully addressed. As the first comprehensive benchmark for agentic search in local life services, LocalSearchBench comprises a database of over 1.3M merchant entries across 6 service categories and 9 major cities, and 900 multi-hop QA tasks from real user queries that require multi-step reasoning. We also developed LocalPlayground, a unified environment integrating multiple tools for LRMs interaction. Experiments show that even state-of-the-art LRMs struggle on LocalSearchBench: the best model (DeepSeek-V3.2) achieves only 35.60% correctness, and most models have issues with completeness (average 60.32%) and faithfulness (average 30.72%). This highlights the need for specialized benchmarks and domain-specific agent training in local life services. Code, Benchmark, and Leaderboard are available at https://localsearchbench.github.io/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2512.07436'>page</a> · <a href='https://arxiv.org/pdf/2512.07436'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Boosting RL-Based Visual Reasoning with Selective Adversarial Entropy Intervention</title>
-      <link>https://arxiv.org/abs/2512.10414</link>
-      <guid isPermaLink="false">arxiv:2512.10414</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST — Xiaomeng Li</p>
-<p><b>Authors:</b> Yang Yu, Zhuangzhuang Chen, Lanqing Li, Xiaomeng Li</p>
-<p>Recently, reinforcement learning (RL) has become a common choice in enhancing the reasoning capabilities of vision-language models (VLMs). Considering existing RL-based finetuning methods, entropy intervention turns out to be an effective way to benefit exploratory ability, thereby improving policy performance. Notably, most existing studies intervene in entropy by simply controlling the update of specific tokens during policy optimization of RL. They ignore the entropy intervention during the RL sampling that can boost the performance of GRPO by improving the diversity of responses. In this paper, we propose Selective-adversarial Entropy Intervention, namely SaEI, which enhances policy entropy by distorting the visual input with the token-selective adversarial objective coming from the entropy of sampled responses. Specifically, we first propose entropy-guided adversarial sampling (EgAS) that formulates the entropy of sampled responses as an adversarial objective. Then, the corresponding adversarial gradient can be used to attack the visual input for producing adversarial samples, allowing the policy model to explore a larger answer space during RL sampling. Then, we propose token-selective entropy computation (TsEC) to maximize the effectiveness of adversarial attack in EgAS without distorting factual knowledge within VLMs. Extensive experiments on both in-domain and out-of-domain datasets show that our proposed method can greatly improve policy exploration via entropy intervention, to boost reasoning capabilities. Code will be released once the paper is accepted.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-30 · <a href='https://arxiv.org/abs/2512.10414'>page</a> · <a href='https://arxiv.org/pdf/2512.10414'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Uncovering Competency Gaps in Large Language Models and Their Benchmarks</title>
-      <link>https://arxiv.org/abs/2512.20638</link>
-      <guid isPermaLink="false">arxiv:2512.20638</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Maty Bohacek, Nino Scherrer, Nicholas Dufour, Thomas Leung, Christoph Bregler, Stephanie C. Y. Chan</p>
-<p>The evaluation of large language models relies heavily on standardized benchmarks. These benchmarks provide useful aggregated metrics, but can obscure (i) particular sub-areas where the models are weak (&quot;model gaps&quot;) and (ii) imbalanced coverage in the benchmarks themselves (&quot;benchmark gaps&quot;). To automatically uncover both types of gaps, we propose a simple new method using concept activations from sparse autoencoders, to identify fine-grained gaps on a per-concept basis. The method also benefits from grounding evaluation in the model&#x27;s internal representations, as well as easy comparison across benchmarks. We applied the method to five popular open-source models and more than a dozen benchmarks, as illustrative examples. As validation of the approach, we found that our automatic, unsupervised method was able to recover model gaps that have been previously documented in the literature (e.g. relating to sycophancy), in addition to identifying novel model gaps. We were also able to automatically uncover benchmark gaps: core concepts that should fall within the scope of a given benchmark. Our &quot;competency gaps&quot; method can be used to complement existing benchmarks, by providing a concept-level decomposition of model behavior, and by helping benchmark developers iterate upon benchmark design. Code is available at https://competency-gaps.github.io.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2512.20638'>page</a> · <a href='https://arxiv.org/pdf/2512.20638'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Safety Alignment of LMs via Non-cooperative Games</title>
-      <link>https://arxiv.org/abs/2512.20806</link>
-      <guid isPermaLink="false">arxiv:2512.20806</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Anselm Paulus, Ilia Kulikov, Brandon Amos, Rémi Munos, Ivan Evtimov, Kamalika Chaudhuri, Arman Zharmagambetov</p>
-<p>Ensuring the safety of language models (LMs) while maintaining their usefulness remains a critical challenge in AI alignment. Current approaches rely on sequential adversarial training: generating adversarial prompts and fine-tuning LMs to defend against them. We introduce a different paradigm: framing safety alignment as a non-zero-sum game between an Attacker LM and a Defender LM trained jointly via online reinforcement learning. Each LM continuously adapts to the other&#x27;s evolving strategies, driving iterative improvement. Our method uses a preference-based reward signal derived from pairwise comparisons instead of point-wise scores, providing more robust supervision and potentially reducing reward hacking. Our RL recipe, AdvGame, shifts the Pareto frontier of safety and utility, yielding a Defender LM that is simultaneously more helpful and more resilient to adversarial attacks. In addition, the resulting Attacker LM converges into a strong, general-purpose red-teaming agent that can be directly deployed to probe arbitrary target models. Code at github.com/facebookresearch/advgame.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2512.20806'>page</a> · <a href='https://arxiv.org/pdf/2512.20806'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
