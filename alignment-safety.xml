@@ -5,8 +5,86 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 15 Jun 2026 05:48:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 05:50:51 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Attention, not scale, drives human-AI alignment in multimodal language prediction</title>
+      <link>https://arxiv.org/abs/2308.06035</link>
+      <guid isPermaLink="false">arxiv:2308.06035</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Princeton — (senior)</p>
+<p><b>Authors:</b> Viktor Kewenig, Andrew Lampinen, Samuel A. Nastase, Christopher Edwards, Quitterie Lacome D&#x27;Elascombe, Akilles Rechardt, Jeremy I Skipper, Gabriella Vigliocco</p>
+<p>Humans routinely draw on visual context to predict upcoming words. To what extent current vision-language models produce comparable behaviour is unclear. Here we placed five state-of-the-art pretrained systems side-by-side with 600 human participants in a web-based Visual-World Paradigm. On each of 100 six-second movie clips, models and participants received either text only or synchronised video and text and judged how likely a specified target word was to appear next; human eye movements were tracked throughout. Adding visual context increased model-human alignment in predictability ratings across all architectures (average Delta r = 0.18) with no impact of parameter size. When visual context was informative, transformer attention significantly increased alignment. Attention maps from two transformer models corresponded with human gaze, explaining up to 70% of the inter-participant variance when the scene contained informative cues. Notably, cross-modal attention reliably tracked anticipatory human fixations on semantic cues. These results suggest that current transformer-based vision-language models can approximate human behaviour exploiting visual context during language prediction - and that selective attention to informative cues, not sheer model scale, is the principal driver of this alignment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-13 · <a href='https://arxiv.org/abs/2308.06035'>page</a> · <a href='https://arxiv.org/pdf/2308.06035'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>FOUNDv2: Learning Unified User Quantized Tokenizers for User Representation</title>
+      <link>https://arxiv.org/abs/2508.00956</link>
+      <guid isPermaLink="false">arxiv:2508.00956</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.IR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> NUS — (senior)</p>
+<p><b>Authors:</b> Chuan He, Yang Chen, Bin Dou, Wuliang Huang, Baokun Wang, Yongchao Liu, Xing Fu, Yu Cheng, … <i>(+5 more)</i></p>
+<p>User representation learning serves as a fundamental pillar for personalized services on large-scale web platforms. Despite its importance, conventional continuous embedding methods face significant challenges, including the lack of a unified paradigm for multi-source data integration, prohibitive storage overhead due to low information density, and the lack of multi-scale modeling granularity. To overcome these limitations, we introduce FOUNDv2, a comprehensive user representation scheme centered on the Unified User Quantized Tokenizer U2QT) framework. FOUNDv2 transforms heterogeneous user data into a standardized discrete token space through a robust two-stage architecture. Specifically, the framework first extracts compact feature representations and subsequently employs a multi-view RQ-VAE to discretize them into storage-efficient tokens using shared and source-specific codebooks. To empower these representations with predictive intelligence, we further design multi-scale alignment objectives to capture both fine-grained behavioral dependencies and macro-temporal periodicity. Extensive experiments on various benchmarks demonstrate that FOUNDv2 consistently outperforms task-specific baselines while achieving substantial reductions in storage and computational costs. Finally, the large-scale deployment of FOUNDv2 on Alipay validates its practical scalability and efficiency across diverse industrial scenarios. The main code is available at: https://github.com/chuanhe1999/FOUNDv2.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.IR · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2508.00956'>page</a> · <a href='https://arxiv.org/pdf/2508.00956'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Beyond Rebalancing: Benchmarking Binary Classifiers Under Class Imbalance Without Rebalancing Techniques</title>
+      <link>https://arxiv.org/abs/2509.07605</link>
+      <guid isPermaLink="false">arxiv:2509.07605</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.IT</category>
+      <category>math.IT</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Toronto — Shehroz S. Khan</p>
+<p><b>Authors:</b> Ali Nawaz, Amir Ahmad, Shehroz S. Khan</p>
+<p>Class imbalance poses a significant challenge to supervised classification, particularly in critical domains like medical diagnostics and anomaly detection where minority class instances are rare. While numerous studies have explored rebalancing techniques to address this issue, less attention has been given to evaluating the performance of binary classifiers under imbalance when no such techniques are applied. Therefore, the goal of this study is to assess the performance of binary classifiers &quot;as-is&quot;, without performing any explicit rebalancing. Specifically, we systematically evaluate the robustness of a diverse set of binary classifiers across both real-world and synthetic datasets, under progressively reduced minority class sizes, using one-shot and few-shot scenarios as baselines. Our approach also explores varying data complexities through synthetic decision boundary generation to simulate real-world conditions. In addition to standard classifiers, we include experiments using undersampling, oversampling strategies, and one-class classification (OCC) methods to examine their behavior under severe imbalance. The results confirm that classification becomes more difficult as data complexity increases and the minority class size decreases. While traditional classifiers deteriorate under extreme imbalance, advanced models like TabPFN and boosting-based ensembles retain relatively higher performance and better generalization compared to traditional classifiers. Visual interpretability and evaluation metrics further validate these findings. Our work offers valuable guidance on model selection for imbalanced learning, providing insights into classifier robustness without dependence on explicit rebalancing techniques.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.IT, math.IT · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2509.07605'>page</a> · <a href='https://arxiv.org/pdf/2509.07605'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Safe Exploration via Policy Priors</title>
+      <link>https://arxiv.org/abs/2601.19612</link>
+      <guid isPermaLink="false">arxiv:2601.19612</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Andreas Krause</p>
+<p><b>Authors:</b> Manuel Wendl, Yarden As, Manish Prajapat, Anton Pollak, Stelian Coros, Andreas Krause</p>
+<p>Safe exploration is a key requirement for reinforcement learning (RL) agents to learn and adapt online, beyond controlled (e.g. simulated) environments. In this work, we tackle this challenge by utilizing suboptimal yet conservative policies (e.g., obtained from offline data or simulators) as priors. Our approach, SOOPER, uses probabilistic dynamics models to optimistically explore, yet pessimistically fall back to the conservative policy prior if needed. We prove that SOOPER guarantees safety throughout learning, and establish convergence to an optimal policy by bounding its cumulative regret. Extensive experiments on key safe RL benchmarks and real-world hardware demonstrate that SOOPER is scalable, outperforms the state-of-the-art and validate our theoretical guarantees in practice.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2601.19612'>page</a> · <a href='https://arxiv.org/pdf/2601.19612'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RoTRAG: Rule of Thumb Reasoning for Conversation Harm Detection with Retrieval-Augmented Generation</title>
+      <link>https://arxiv.org/abs/2604.17301</link>
+      <guid isPermaLink="false">arxiv:2604.17301</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.HC</category>
+      <category>cs.IR</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yi Bu</p>
+<p><b>Authors:</b> Juhyeon Lee, Wonduk Seo, Junseo Koh, Seunghyun Lee, Haihua Chen, Yi Bu</p>
+<p>Detecting harmful content in multi turn dialogue requires reasoning over the full conversational context rather than isolated utterances. However, most existing methods rely mainly on models internal parametric knowledge, without explicit grounding in external normative principles. This often leads to inconsistent judgments in socially nuanced contexts, limited interpretability, and redundant reasoning across turns. To address this, we propose RoTRAG, a retrieval augmented framework that incorporates concise human written moral norms, called Rules of Thumb (RoTs), into LLM based harm assessment. For each turn, RoTRAG retrieves relevant RoTs from an external corpus and uses them as explicit normative evidence for turn level reasoning and final severity classification. To improve efficiency, we further introduce a lightweight binary routing classifier that decides whether a new turn requires retrieval grounded reasoning or can reuse existing context. Experiments on ProsocialDialog and Safety Reasoning Multi Turn Dialogue show that RoTRAG consistently improves both harm classification and severity estimation over competitive baselines, with an average relative gain of around 40% in F1 across benchmark datasets and an average relative reduction of 8.4% in distributional error, while reducing redundant computation without sacrificing performance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.HC, cs.IR, cs.LG · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2604.17301'>page</a> · <a href='https://arxiv.org/pdf/2604.17301'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DreamX-World 1.0: A General-Purpose Interactive World Model</title>
+      <link>https://huggingface.co/papers/2606.16993</link>
+      <guid isPermaLink="false">arxiv:2606.16993</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> DreamX Team, Yancheng Bai, Rui Chen, Xiangxiang Chu, Rujing Dang, Hao Dou, Bingjie Gao, Qiwen Gu, … <i>(+16 more)</i></p>
+<p>DreamX-World 1.0 is a general-purpose interactive text/image-to-video world model for controllable long-horizon generation. It supports camera navigation, revisits to previously observed regions, and promptable events across photorealistic, game-style, and stylized domains. Our data engine combines camera-accurate Unreal Engine rendering, action-rich gameplay recordings, and real-world videos with recovered camera geometry. For camera control, we introduce E-PRoPE, a lightweight variant of projective positional encoding that retains PRoPE&#x27;s projective camera geometry while applying camera-aware attention to spatially reduced tokens. We convert a bidirectional video generator into a few-step autoregressive world model using causal forcing, DMD-style distillation, and long-rollout training. Training on self-generated long-horizon contexts exposes the model to its own generated history and reduces the style and color drift that accumulates across autoregressive chunks. Memory-Conditioned Scene Persistence retrieves earlier views through camera-geometry-based retrieval, while residual recycling makes the conditioning path less sensitive to imperfect memory latents. Event Instruction Tuning adds composable event control, and reinforcement learning alignment recovers camera control and visual quality after distillation. With mixed-precision DiT execution, residual reuse, 75\%-pruned VAE decoding, and asynchronous pipeline parallelism, DreamX-World 1.0 reaches up to 16\,FPS on eight RTX\,5090 GPUs. On our 5-second basic evaluation, DreamX-World 1.0 achieves a camera-control score of 73.75 and an overall score of 84.76, outperforming HY-WorldPlay 1.5 and LingBot-World in overall score, which achieve 80.79 and 80.45, respectively.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://huggingface.co/papers/2606.16993'>page</a> · <a href='https://arxiv.org/pdf/2606.16993'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Shift-Invariant Attribute Scoring for Kolmogorov-Arnold Networks via Shapley Value</title>
       <link>https://arxiv.org/abs/2510.01663</link>
@@ -2330,76 +2408,6 @@
 <p><b>Authors:</b> Xiao Jia</p>
 <p>Brain-language model comparisons often interpret neural prediction scores as evidence that model representations capture brain-relevant language computation. We asked whether language models align with brains, and whether prediction scores are enough to support that claim, using L-PACT, a source-audited framework that evaluates predictive, relational, mechanism-stripping, and reliability-bounded evidence. Across primary naturalistic language neural datasets and derived language-model representations, L-PACT compared real model features with nuisance baselines and severe controls, tested whether model-to-brain profiles reproduced brain-to-brain patterns, recomputed held-out scores after mechanism stripping, and normalized evidence against brain-brain ceilings. The locked analysis set contains 414 predictive-control rows, 2304 relational profile rows, 4320 mechanism-stripping rows, 420 brain-brain ceiling rows, and 146 integrated decision rows. Assay-sensitivity checks showed that brain-brain reliability, brain-as-model run-to-run relational profiles, independent low-level neural and WAV-derived acoustic-envelope gates, and a deterministic implanted-signal simulation can produce positive evidence when expected. Nevertheless, no real model row passed the predictive, relational, mechanism-stripping, or operational Turing-bounded reliability gates; all 146 integrated rows were control-explained. Less stringent single-criterion rules would have counted raw positive predictive, relational, stripping-delta, and ceiling-normalized effects, but L-PACT downgraded them because controls explained the apparent evidence. In the analyzed derived artifact set, the tested language-model representations do not satisfy L-PACT alignment gates; apparent positives are converted into an auditable control-explained taxonomy rather than treated as structural alignment.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI · <a href='https://arxiv.org/abs/2605.14025'>page</a> · <a href='https://arxiv.org/pdf/2605.14025'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AI Safety Landscape for Large Language Models: Taxonomy, State-of-the-art, and Future Directions</title>
-      <link>https://arxiv.org/abs/2408.12935</link>
-      <guid isPermaLink="false">arxiv:2408.12935</guid>
-      <pubDate>Mon, 18 May 2026 12:17:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS, Tsinghua — Chen Chen</p>
-<p><b>Authors:</b> Chen Chen, Xueluan Gong, Ziyao Liu, Weifeng Jiang, Si Qi Goh, Kwok-Yan Lam</p>
-<p>AI Safety is an emerging area of critical importance to the safe adoption and deployment of AI systems. With the rapid proliferation of AI and especially with the recent advancement of Generative AI (or GAI), the technology ecosystem behind the design, development, adoption, and deployment of AI systems has drastically changed, broadening the scope of AI Safety to address impacts on public safety and national security. In this paper, we propose a novel architectural framework for understanding and analyzing AI Safety; defining its characteristics from three perspectives: Trustworthy AI, Responsible AI, and Safe AI. We provide an extensive review of current research and advancements in AI safety from these perspectives, highlighting their key challenges and mitigation approaches. Through examples from state-of-the-art technologies, particularly Large Language Models (LLMs), we present innovative mechanism, methodologies, and techniques for designing and testing AI safety. Our goal is to promote advancement in AI safety research, and ultimately enhance people&#x27;s trust in digital transformation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2408.12935'>page</a> · <a href='https://arxiv.org/pdf/2408.12935'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Aligning Forest and Trees in Images &amp; Long Captions for Visually Grounded Understanding</title>
-      <link>https://arxiv.org/abs/2602.02977</link>
-      <guid isPermaLink="false">arxiv:2602.02977</guid>
-      <pubDate>Mon, 18 May 2026 12:12:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Michigan — Stella X. Yu</p>
-<p><b>Authors:</b> Byeongju Woo, Zilin Wang, Byeonghyun Pak, Sangwoo Mo, Stella X. Yu</p>
-<p>Vision-language models such as CLIP often struggle to faithfully understand long, detail-rich captions, relying on dominant scene cues while overlooking fine-grained visual evidence. We propose a hierarchical vision-language learning principle for understanding scenes as part-to-whole compositions: before forming a whole-scene representation, a model should uncover what semantic parts appear where in the image. To this end, we propose CAFT (Cross-domain Alignment of Forests and Trees), a vision-language model that jointly learns local text-region alignment at intermediate representations and global image-text alignment at the final representation. Exploiting the organization of long captions, where local descriptions often correspond to scene parts, CAFT employs a fine-to-coarse image encoder and a part-whole text encoder to discover localized part semantics and progressively compose them into a global image-text representation. Trained on 30M image-text pairs, CAFT achieves state-of-the-art performance on six long-text retrieval benchmarks and exhibits strong scaling behavior. Experiments show that CAFT learns fine-grained representations that localize textual semantics in image regions without explicit region-level supervision.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2602.02977'>page</a> · <a href='https://arxiv.org/pdf/2602.02977'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ATBench: A Diverse and Realistic Agent Trajectory Benchmark for Safety Evaluation and Diagnosis</title>
-      <link>https://arxiv.org/abs/2604.02022</link>
-      <guid isPermaLink="false">arxiv:2604.02022</guid>
-      <pubDate>Mon, 18 May 2026 12:07:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Yu Li</p>
-<p><b>Authors:</b> Yu Li, Haoyu Luo, Yuejin Xie, Yuqian Fu, Zhonghao Yang, Shuai Shao, Qihan Ren, Wanying Qu, … <i>(+5 more)</i></p>
-<p>Evaluating the safety of LLM-based agents is increasingly important because risks in realistic deployments often emerge over multi-step interactions rather than isolated prompts or final responses. Existing trajectory-level benchmarks remain limited by insufficient interaction diversity, coarse observability of safety failures, and weak long-horizon realism. We introduce ATBench, a trajectory-level benchmark for structured, diverse, and realistic evaluation of agent safety. ATBench organizes agentic risk along three dimensions: risk source, failure mode, and real-world harm. Based on this taxonomy, we construct trajectories with heterogeneous tool pools and a long-context delayed-trigger protocol that captures realistic risk emergence across multiple stages. The benchmark contains 1,000 trajectories (503 safe and 497 unsafe), averaging 9.01 turns and 3.95k tokens, with 1,954 invoked tools drawn from pools spanning 2,084 available tools. Data quality is supported by rule-based and LLM-based filtering plus full human audit. Experiments on frontier LLMs, open-source models, and specialized guard systems show that ATBench is challenging even for strong evaluators, while enabling taxonomy-stratified analysis, cross-benchmark comparison, and diagnosis of long-horizon failure patterns.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2604.02022'>page</a> · <a href='https://arxiv.org/pdf/2604.02022'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Agent^2 RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</title>
-      <link>https://arxiv.org/abs/2604.10547</link>
-      <guid isPermaLink="false">arxiv:2604.10547</guid>
-      <pubDate>Mon, 18 May 2026 12:02:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
-<p><b>Authors:</b> Wanyi Chen, Xiao Yang, Xu Yang, Tianming Sha, Qizheng Li, Zhuo Wang, Bowen Xian, Fang Kong, … <i>(+2 more)</i></p>
-<p>We introduce Agent2 RL-Bench, a compact diagnostic benchmark for evaluating agentic RL post-training, which tests whether LLM agents can autonomously design, implement, debug, and execute post-training pipelines that improve foundation models. RL post-training increasingly drives model alignment and specialization, yet existing benchmarks are largely static, rewarding supervised fine-tuning or script generation without assessing an agent&#x27;s ability to close an interactive RL loop. Agent2 RL-Bench provides a unified agent-facing interface: each run starts from an isolated workspace containing a base model, task data, instructions, and a grading API, and agents must iterate within a fixed budget by training models and submitting artifacts for evaluation. The benchmark spans six tasks across three levels, from static rule-based training to judge-based optimization and closed-loop online RL with trajectory collection. Two diagnostic skills, namely runtime recording and post-hoc summarization, enable structured analysis of agent behavior, facilitating smooth and effective iteration of the benchmark&#x27;s evaluation framework. Across five agent systems and six driver LLMs, agents show intelligent behavior but clear limitations: one RL-oriented run improves ALFWorld from 4.85 to 93.28 via SFT warm-up and GRPO with online rollouts, yet DeepSearchQA remains difficult, most successful routes rely on supervised pipelines, and interactive outcomes show large single-run differences across agent stacks. Overall, Agent2 RL-Bench shows that current agents can sometimes engineer online RL, but stable agent-driven RL post-training remains rare under fixed budgets. It also demonstrates that our benchmark provides a strong and effective evaluation framework for future research in this direction. Code is available at https://github.com/microsoft/RD-Agent/blob/main/rdagent/scenarios/rl/autorl_bench/README.md</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2604.10547'>page</a> · <a href='https://arxiv.org/pdf/2604.10547'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>COHERENCE: Benchmarking Fine-Grained Image-Text Alignment in Interleaved Multimodal Contexts</title>
-      <link>https://arxiv.org/abs/2604.27389</link>
-      <guid isPermaLink="false">arxiv:2604.27389</guid>
-      <pubDate>Mon, 18 May 2026 11:57:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> NYU — (senior)</p>
-<p><b>Authors:</b> Bingli Wang, Huanze Tang, Haijun Lv, Zhishan Lin, Lixin Gu, Lei Feng, Qipeng Guo, Kai Chen</p>
-<p>In recent years, Multimodal Large Language Models (MLLMs) have achieved remarkable progress on a wide range of multimodal benchmarks. Despite these advances, most existing benchmarks mainly focus on single-image or multi-image comprehension. In real-world scenarios such as document reading, information is often presented as interleaved multimodel contexts. This requires MLLMs not only to recognize the content of individual images, but also to identify relevant textual and visual evidence, establish fine-grained alignments between them, and reason over these aligned signals in interleaved contexts based on contextual evidence. However, there is still a lack of systematic benchmarks for quantifying the fine-grained understanding ability of MLLMs in interleaved image-text contexts. To fill this gap, we propose COHERENCE, a benchmark designed to evaluate the ability of MLLMs to recover fine-grained image-text correspondences in interleaved multimodal contexts. COHERENCE covers interleaved image-text content from four representative domains and contains 6,161 high-quality questions. Moreover, we perform a six-type error analysis, enabling fine-grained attribution of failures in interleaved image-text understanding to the specific capabilities missing in current MLLMs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2604.27389'>page</a> · <a href='https://arxiv.org/pdf/2604.27389'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AgenticRecTune: Multi-Agent with Self-Evolving Skillhub for Recommendation System Optimization</title>
-      <link>https://arxiv.org/abs/2604.26969</link>
-      <guid isPermaLink="false">arxiv:2604.26969</guid>
-      <pubDate>Mon, 18 May 2026 11:52:16 GMT</pubDate>
-      <category>cs.IR</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Harvard, NUS — Xidong Wu</p>
-<p><b>Authors:</b> Xidong Wu, Yue Zhuan, Ruoqiao Wei, Hangxin Chen, Di Bai, Jintao Liu, Xinyi Wang, Xue Wang, … <i>(+2 more)</i></p>
-<p>Modern large-scale recommendation systems are typically constructed as multi-stage pipelines, encompassing pre-ranking, ranking, and re-ranking phases. While traditional recommendation research typically focuses on optimizing a specific model, such as improving the pre-ranking model structure or ranking models training algorithm, system-level configurations optimization play a crucial role, which integrates the output from each model head to get the final score in each stage. Due to the complexity of the system, the configuration optimization is highly important and challenging. Any model modification requires new optimal system-level configurations. But each experimental iteration requires significant tuning effort. Furthermore, models in different stage operates within a distinct context and optimizes for different targets, requiring specialized domain expertise. In addition, optimization success depends on balancing competing multiple online metrics and alignment with shifting production development objectives. To address these challenges, we propose AgenticRecTune, an agentic framework comprising five specialized agents, Actor, Critic, Insight, Skill, and Online, designed to manage the end-to-end configuration optimization workflow. By leveraging the advanced reasoning of Large Language Models (LLMs), specifically Gemini, AgenticRecTune explore the optimal configuration spaces. The Actor Agent proposes multiple candidates and Critic Agent filters out suboptimal proposals.Then Online Agent autonomously prepares A/B tests based on the proposed configurations set from the Critic Agent and captures the subsequencet experimental results. We also introduce a self-evolving Skillhub, which utilizes a collaboration between the Insight Agent and Skill Agent to summarize the history results, extract underlying mechanics of each task in recommendation system and update skills.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.IR, cs.AI · <a href='https://arxiv.org/abs/2604.26969'>page</a> · <a href='https://arxiv.org/pdf/2604.26969'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

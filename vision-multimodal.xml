@@ -5,8 +5,81 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Mon, 15 Jun 2026 05:48:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 05:50:51 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Region-Adaptive Sampling for Diffusion Transformers</title>
+      <link>https://arxiv.org/abs/2502.10389</link>
+      <guid isPermaLink="false">arxiv:2502.10389</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> NUS — (senior)</p>
+<p><b>Authors:</b> Ziming Liu, Yifan Yang, Chengruidong Zhang, Yiqi Zhang, Lili Qiu, Yang You, Yuqing Yang</p>
+<p>Diffusion models (DMs) have become the leading choice for generative tasks across diverse domains. However, their reliance on multiple sequential forward passes significantly limits real-time performance. Previous acceleration methods have primarily focused on reducing the number of sampling steps or reusing intermediate results, failing to leverage variations across spatial regions within the image due to the constraints of convolutional U-Net structures. By harnessing the flexibility of Diffusion Transformers (DiTs) in handling variable number of tokens, we introduce RAS, a novel, training-free sampling strategy that dynamically assigns different sampling ratios to regions within an image based on the focus of the DiT model. Our key observation is that during each sampling step, the model concentrates on semantically meaningful regions, and these areas of focus exhibit strong continuity across consecutive steps. Leveraging this insight, RAS updates only the regions currently in focus, while other regions are updated using cached noise from the previous step. The model&#x27;s focus is determined based on the output from the preceding step, capitalizing on the temporal consistency we observed. We evaluate RAS on Stable Diffusion 3 and Lumina-Next-T2I, achieving speedups up to 2.36x and 2.51x, respectively, with minimal degradation in generation quality. Additionally, a user study reveals that RAS delivers comparable qualities under human evaluation while achieving a 1.6x speedup. Our approach makes a significant step towards more efficient diffusion transformers, enhancing their potential for real-time applications.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2502.10389'>page</a> · <a href='https://arxiv.org/pdf/2502.10389'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Cross-modal Identity Mapping: Minimizing Information Loss in Modality Conversion via Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2603.01696</link>
+      <guid isPermaLink="false">arxiv:2603.01696</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
+<p><b>Authors:</b> Haonan Jia, Shichao Dong, Xin Dong, Zenghui Sun, Jin Wang, Jinsong Lan, Xiaoyong Zhu, Bo Zheng, … <i>(+1 more)</i></p>
+<p>Large Vision-Language Models (LVLMs) often omit or misrepresent critical visual content in generated image captions. Minimizing such information loss will force LVLMs to focus on image details to generate precise descriptions. However, measuring information loss during modality conversion is inherently challenging due to the modal gap between visual content and text output. In this paper, we argue that the quality of an image caption is positively correlated with the similarity between images retrieved via text search using that caption. Based on this insight, we further propose Cross-modal Identity Mapping (CIM), a reinforcement learning framework that enhances image captioning without requiring additional annotations. Specifically, the method quantitatively evaluates the information loss from two perspectives: Gallery Representation Consistency and Query-gallery Image Relevance. Supervised under these metrics, LVLM minimizes information loss and aims to achieve identity mapping from images to captions. The experimental results demonstrate the superior performance of our method in image captioning, even when compared with Supervised Fine-Tuning. Particularly, on the COCO-LN500 benchmark, CIM achieves a 20% improvement in relation reasoning on Qwen2.5-VL-7B.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-13 · <a href='https://arxiv.org/abs/2603.01696'>page</a> · <a href='https://arxiv.org/pdf/2603.01696'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rel-Zero: Harnessing Patch-Pair Invariance for Robust Zero-Watermarking Against AI Editing</title>
+      <link>https://arxiv.org/abs/2603.17531</link>
+      <guid isPermaLink="false">arxiv:2603.17531</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Weiping Wang</p>
+<p><b>Authors:</b> Pengzhen Chen, Yanwei Liu, Xiaoyan Gu, Xiaojun Chen, Wu Liu, Weiping Wang</p>
+<p>Recent advancements in diffusion-based image editing pose a significant threat to the authenticity of digital visual content. Traditional embedding-based watermarking methods often introduce perceptible perturbations to maintain robustness, inevitably compromising visual fidelity. Meanwhile, existing zero-watermarking approaches, typically relying on global image features, struggle to withstand sophisticated manipulations. In this work, we uncover a key observation: while individual image patches undergo substantial alterations during AI-based editing, the relational distance between patch pairs remains relatively invariant. Leveraging this property, we propose Relational Zero-Watermarking (Rel-Zero), a novel framework that requires no modification to the original image but derives a unique zero-watermark from these editing-invariant patch relations. By grounding the watermark in intrinsic structural consistency rather than absolute appearance, Rel-Zero provides a non-invasive yet resilient mechanism for content authentication. Extensive experiments demonstrate that Rel-Zero achieves substantially improved robustness across diverse editing models and manipulations compared to prior zero-watermarking approaches.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CR · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2603.17531'>page</a> · <a href='https://arxiv.org/pdf/2603.17531'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mitigating Object Hallucinations in LVLMs via Attention Imbalance Rectification</title>
+      <link>https://arxiv.org/abs/2603.24058</link>
+      <guid isPermaLink="false">arxiv:2603.24058</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Han Sun, Min Zhang</p>
+<p><b>Authors:</b> Han Sun, Qin Li, Peixin Wang, Min Zhang</p>
+<p>Object hallucination in Large Vision-Language Models (LVLMs) severely compromises their reliability in real-world applications, posing a critical barrier to their deployment in high-stakes scenarios such as autonomous driving and medical image analysis. Through systematic empirical investigation, we identify that the imbalanced attention allocation, both across modalities (i.e., vision and language) and within modalities (among individual tokens), exhibits a strong causal correlation with the occurrence of object hallucination. Leveraging this insight, we introduce a novel concept termed attention imbalance, which not only quantifies the degree of attention disparity but also visually delineates the underlying patterns (e.g., over-attentiveness to irrelevant language tokens or under-attentiveness to discriminative visual features) that drive object hallucination. To mitigate object hallucination, we further propose Attention Imbalance Rectification (AIR), a lightweight decoding-time intervention method that reallocates attention weights and adjusts attention distributions to rectify modality-wise and token-wise imbalances. Extensive evaluations on four mainstream LVLMs and three benchmarks (CHAIR, POPE, and MM-Vet) with seven baselines demonstrate that AIR consistently reduces object hallucination rates, achieving up to a 35.1% reduction compared to the baselines, while improving up to 15.9% of LVLMs&#x27; general capability across diverse vision-language tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-14 · <a href='https://arxiv.org/abs/2603.24058'>page</a> · <a href='https://arxiv.org/pdf/2603.24058'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking</title>
+      <link>https://arxiv.org/abs/2604.20623</link>
+      <guid isPermaLink="false">arxiv:2604.20623</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Roie Kazoom, Yotam Gigi, George Leifman, Tomer Shekel, Genady Beryozkin</p>
+<p>Traditional change detection identifies where changes occur, but does not explain what changed in natural language. Existing remote sensing change captioning datasets typically describe overall image-level differences, leaving fine-grained localized semantic reasoning largely unexplored. To close this gap, we present RSRCC, a new benchmark for remote sensing change question-answering containing 126k questions, split into 87k training, 17.1k validation, and 22k test instances. Unlike prior datasets, RSRCC is built around localized, change-specific questions that require reasoning about a particular semantic change. To the best of our knowledge, this is the first remote sensing change question-answering benchmark designed explicitly for such fine-grained reasoning-based supervision. To construct RSRCC, we introduce a hierarchical semi-supervised curation pipeline that uses Best-of-N ranking as a critical final ambiguity-resolution stage. First, candidate change regions are extracted from semantic segmentation masks, then initially screened using an image-text embedding model, and finally validated through retrieval-augmented vision-language curation with Best-of-N ranking. This process enables scalable filtering of noisy and ambiguous candidates while preserving semantically meaningful changes. The dataset is available at https://huggingface.co/datasets/google/RSRCC.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-14 · <a href='https://arxiv.org/abs/2604.20623'>page</a> · <a href='https://arxiv.org/pdf/2604.20623'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Lightweight Distillation of SAM 3 and DINOv3 for Edge-Deployable Individual-Level Livestock Monitoring and Longitudinal Visual Analytics</title>
+      <link>https://arxiv.org/abs/2604.27128</link>
+      <guid isPermaLink="false">arxiv:2604.27128</guid>
+      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST, NUS, NYU, Peking U, Tsinghua, U Toronto — Haiyu Yang</p>
+<p><b>Authors:</b> Haiyu Yang, Miel Hostens</p>
+<p>Foundation-model pipelines for individual-level livestock monitoring -- combining open-vocabulary detection, promptable video segmentation, and self-supervised visual embeddings -- have raised the accuracy ceiling of precision livestock farming (PLF), but their GPU memory budgets exceed the envelope of commodity edge accelerators. To close this gap, the 446M-parameter Perception Encoder (PE-ViT-L+) backbone of SAM 3 is distilled into a 40.66M-parameter multi-scale student through three mechanisms: a Feature Pyramid Network student encoder built on TinyViT-21M-512, a four-term direction-then-scale distillation loss, and backbone-substitution inference with sliding-window session pruning that bounds streaming GPU memory growth. The DINOv3 family includes a pre-distilled ViT-S/16 variant (21.6M parameters) released alongside a 6716M-parameter ViT-7B teacher; the ViT-S (21M) variant is adopted as the per-individual embedder. On the Edinburgh Pig dataset, the compressed pipeline reaches 92.29% MOTA and 96.15% IDF1 against the SAM 3 teacher (1.68- and 0.84-percentage-point losses), achieves a 7.77-fold reduction in system-level parameters and a 3.01-fold reduction in peak VRAM (19.52GB -&gt; 6.49GB), and reaches 97.34% top-1 accuracy with 91.67% macro-F1 on nine-class pig behaviour classification. The pipeline fits inside an NVIDIA Jetson Orin NX 16GB envelope with 4.9GB of headroom, supporting a proposed -- but not yet empirically validated -- on-device embedding-pool re-identification mechanism whose per-individual footprint of approximately 94MB per animal per year produces a longitudinal visual record amenable to retrospective association with disease, lameness, reproductive, and growth outcome labels.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2604.27128'>page</a> · <a href='https://arxiv.org/pdf/2604.27128'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Orchestra-o1: Omnimodal Agent Orchestration</title>
       <link>https://arxiv.org/abs/2606.13707</link>
