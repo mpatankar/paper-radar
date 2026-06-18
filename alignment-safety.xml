@@ -5,8 +5,154 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Wed, 17 Jun 2026 05:40:08 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 05:37:08 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>R&amp;B -- Rhythm and Brain: Cross-subject Decoding of Music from Human Brain Activity</title>
+      <link>https://arxiv.org/abs/2406.15537</link>
+      <guid isPermaLink="false">arxiv:2406.15537</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>q-bio.NC</category>
+      <category>cs.AI</category>
+      <category>cs.SD</category>
+      <category>eess.AS</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Max Planck — Nicola Toschi</p>
+<p><b>Authors:</b> Matteo Ferrante, Matteo Ciferri, Nicola Toschi</p>
+<p>Music is a universal phenomenon that profoundly influences human experiences across cultures. This study investigates whether music can be decoded from human brain activity measured with functional MRI (fMRI) during its perception. Leveraging recent advancements in extensive datasets and pre-trained computational models, we construct mappings between neural data and latent representations of musical stimuli. Our approach integrates functional and anatomical alignment techniques to facilitate cross-subject decoding, addressing the challenges posed by the low temporal resolution and signal-to-noise ratio (SNR) in fMRI data. Starting from the GTZan fMRI dataset, where five participants listened to 540 musical stimuli from 10 different genres while their brain activity was recorded, we used the CLAP (Contrastive Language-Audio Pretraining) model to extract latent representations of the musical stimuli and developed voxel-wise encoding models to identify brain regions responsive to these stimuli. By applying a threshold to the association between predicted and actual brain activity, we identified specific regions of interest (ROIs) which can be interpreted as key players in music processing. Our decoding pipeline, primarily retrieval-based, employs a linear map to project brain activity to the corresponding CLAP features. This enables us to predict and retrieve the musical stimuli most similar to those that originated the fMRI data. Our results demonstrate state-of-the-art identification accuracy, with our methods significantly outperforming existing approaches. Our findings suggest that neural-based music retrieval systems could enable personalized recommendations and therapeutic applications. Future work could use higher temporal resolution neuroimaging and generative models to improve decoding accuracy and explore the neural underpinnings of music perception and emotion.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI, cs.SD, eess.AS · <b>arXiv submitted:</b> 2024-06-21 · <a href='https://arxiv.org/abs/2406.15537'>page</a> · <a href='https://arxiv.org/pdf/2406.15537'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Values to Tokens: An LLM-Driven Framework for Context-aware Time Series Forecasting via Symbolic Discretization</title>
+      <link>https://arxiv.org/abs/2508.09191</link>
+      <guid isPermaLink="false">arxiv:2508.09191</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> HKUST — (senior)</p>
+<p><b>Authors:</b> Xiaoyu Tao, Shilong Zhang, Mingyue Cheng, Daoyu Wang, Tingyue Pan, Bokai Pan, Changqing Zhang, Shijin Wang</p>
+<p>Time series forecasting plays a vital role in supporting decision-making across a wide range of critical applications, including energy, healthcare, and finance. Despite recent advances, forecasting accuracy remains limited due to the challenge of integrating historical numerical sequences with contextual features, which often comprise unstructured textual data. To address this challenge, we propose TokenCast, a large language model (LLM) driven framework that leverages language-based symbolic representations as a unified intermediary for context-aware time series forecasting. Specifically, TokenCast employs a discrete tokenizer to transform continuous numerical sequences into temporal tokens, enabling structural alignment with language-based inputs. To effectively bridge the semantic gap between modalities, both temporal and contextual tokens are embedded into a shared representation space via a pre-trained LLM, further optimized with generative objectives. Building upon this unified semantic space, the aligned LLM is subsequently fine-tuned in a supervised manner to predict future temporal tokens, which are then decoded back into the original numerical space. Extensive experiments on real-world datasets demonstrate the effectiveness of our framework and highlight its potential as a generative framework for context-aware time series forecasting. The code is available at https://github.com/Xiaoyu-Tao/TokenCast.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2508.09191'>page</a> · <a href='https://arxiv.org/pdf/2508.09191'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Retell, Reward, Repeat: Reinforcement Learning for Narrative Theory-Informed Story Retelling</title>
+      <link>https://arxiv.org/abs/2601.17226</link>
+      <guid isPermaLink="false">arxiv:2601.17226</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — David Y. Liu</p>
+<p><b>Authors:</b> David Y. Liu, Xanthe Muston, Dipankar Srirag, Aditya Joshi, Sebastian Sequoiah-Grayson</p>
+<p>Counterfactual story retelling exposes LLM shortcomings in constrained narrative solution spaces where they can no longer rely on recalling memorised training data. Ground-truth-based post-training, such as SFT, fails to teach LLMs how to generate logical and rational narrative events. In this paper, we introduce Retell, Reward, Repeat (RRR), an RL-based pipeline synthesising Structuralist Narratology with scalar narrativity to teach storytelling structure. We extend the TimeTravel dataset with human-annotated stages of narrative equilibrium to evaluate reward models. By using d-RLAIF, RRR derives training signals from the narrativity of textual features without the need for reference outputs. Evaluations demonstrate that RRR-trained LLMs outperform few-shot and SFT baselines in logic, rationality, and completeness, with output quality additionally validated by blind human preference. Relying on a small, query-only dataset, RRR provides a linguistically grounded, cost-effective post-training mechanism for storytelling--a domain currently lacking effective post-training methods. RRR highlights the continued relevance of integrating established linguistic theories into contemporary NLP.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2601.17226'>page</a> · <a href='https://arxiv.org/pdf/2601.17226'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HIMM: Human-Inspired Long-Term Memory Modeling for Embodied Exploration and Question Answering</title>
+      <link>https://arxiv.org/abs/2602.15513</link>
+      <guid isPermaLink="false">arxiv:2602.15513</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Peking U, Tsinghua — Shiyan Hu, Ji Li</p>
+<p><b>Authors:</b> Ji Li, Bo Wang, Jing Xia, Mingyi Li, Shiyan Hu</p>
+<p>Deploying Multimodal Large Language Models as the brain of embodied agents remains challenging, particularly under long-horizon observations and limited context budgets. Existing memory assisted methods often rely on textual summaries, which discard rich visual and spatial details and remain brittle in non-stationary environments. In this work, we propose a non-parametric memory framework that explicitly disentangles episodic and semantic memory for embodied exploration and question answering. Our retrieval-first, reasoning-assisted paradigm recalls episodic experiences via semantic similarity and verifies them through visual reasoning, enabling robust reuse of past observations without rigid geometric alignment. In parallel, we introduce a program-style rule extraction mechanism that converts experiences into structured, reusable semantic memory, facilitating cross-environment generalization. Extensive experiments demonstrate state-of-the-art performance on embodied question answering and exploration benchmarks, yielding a 7.3% gain in LLM-Match and an 11.4% gain in LLM MatchXSPL on A-EQA, as well as +7.7% success rate and +6.8% SPL on GOAT-Bench. Analyses reveal that our episodic memory primarily improves exploration efficiency, while semantic memory strengthens complex reasoning of embodied agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-03-02 · <a href='https://arxiv.org/abs/2602.15513'>page</a> · <a href='https://arxiv.org/pdf/2602.15513'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Practical Anonymous Two-Party Gradient Boosting Decision Tree</title>
+      <link>https://arxiv.org/abs/2605.26903</link>
+      <guid isPermaLink="false">arxiv:2605.26903</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.CR</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> CUHK, HKUST, NUS — Chenyu Huang</p>
+<p><b>Authors:</b> Chenyu Huang, Fan Zhang, Minxin Du, Sherman S. M. Chow, Huangxun Chen, Huaming Rao, Danqing Huang, Bo Qian, … <i>(+1 more)</i></p>
+<p>Structured data is well handled by gradient-boosted decision trees (GBDT), which are usually trained on vertically partitioned features across mutually distrustful parties. High speed and interpretability make GBDTs popular in finance and healthcare, where neural networks may fall short. Enabling secure computation for GBDTs poses unique challenges, requiring secure record alignment for comparison. Relying on private set intersection (PSI) is a de facto approach. Mistaking PSI for a safety measure actually exposes which record identifiers (IDs) are shared between the datasets. Although circuit-PSI could help, it is costly for generic uses. New ideas are needed to efficiently train in a &quot;dark forest&quot;. Aiming to hide the IDs, we initiate the study of anonymous GBDT training on split data held by two parties. Dual circuit-PSI in our design lets the parties alternate as receiver to run pick-then-sum over local features. Via oblivious programmable pseudorandom functions, we propagate circuit-PSI outputs as shared state across runs. Avoiding universal alignment, we resolve the neglected dilemma that ID hiding incurs a cost that scales with domain size. Next, we halve the cost of ciphertext packing used to convert single-instruction multiple-data homomorphic encryption from (ring) learning with errors in prior secure GBDT (Usenix Security&#x27; 23) and related secure machine-learning computations. Comparative experiments show our protocol remains competitive with leaky approaches in efficiency. Enabling ID-hiding aggregation, our techniques can extend to other vertically partitioned analytics.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2605.26903'>page</a> · <a href='https://arxiv.org/pdf/2605.26903'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Caring Without Feeling: Affective Dynamics as the Control Layer of Human-AI Agent Collaboration</title>
+      <link>https://arxiv.org/abs/2606.18259</link>
+      <guid isPermaLink="false">arxiv:2606.18259</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.HC</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CUHK, NUS, Tsinghua — Junjie Xu, Liang He</p>
+<p><b>Authors:</b> Junjie Xu, Xingjiao Wu, Zihao Zhang, Yujia Xu, Yuzhe Yang, Jin Zhu, Luwei Xiao, Wen Wu, … <i>(+1 more)</i></p>
+<p>AI agents that plan, retain memory across sessions, invoke external tools and act with partial autonomy are transforming human--AI collaboration. Research on affective computing, simulated empathy in large language models, trust in automation and AI safety has illuminated important design principles, yet these literatures remain fragmented. No integrated account explains how affective cues operate within agentic collaboration -- settings in which humans delegate, monitor and correct consequential tasks. This Review synthesises computational and interactional mechanisms of affective dynamics: the processes through which affective cues, emotion-like behaviour and perceived agent affect shape trust calibration, delegation decisions, error correction, dependence and governance. We trace how model-generated affective signals enter interaction loops that govern reliance, repair and oversight, and propose a framework that treats affect not as an internal property of AI but as a coordination layer through which humans and agents negotiate capability, uncertainty and responsibility. The framework provides a foundation for calibrated measurement, purposeful design and informed governance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI · <b>arXiv submitted:</b> 2026-05-08 · <a href='https://arxiv.org/abs/2606.18259'>page</a> · <a href='https://arxiv.org/pdf/2606.18259'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Self-CTRL: Self-Consistency Training with Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2606.18327</link>
+      <guid isPermaLink="false">arxiv:2606.18327</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Imperial College, MIT — Jacob Andreas</p>
+<p><b>Authors:</b> Itamar Pres, Laura Ruis, Melat Ghebreselassie, Belinda Z. Li, Jacob Andreas</p>
+<p>Language models (LMs) that faithfully describe their own behavior can more easily be audited, understood, and trusted by users. This paper describes Self-Consistency Training with Reinforcement Learning (Self-CTRL), a method that optimizes for consistency between a LM&#x27;s self-explanations and behavior on related inputs by updating explanations to better predict behavior or updating behavior to better match explanations. We apply our method in two domains. First, we study a formal probabilistic reasoning task in which LMs must learn to imitate a family of biased samplers and evaluated on their ability to report the associated biases. We find that consistency training improves the correlation between self-reported and behaviorally-measured latent biases from $R^2=0.24$ to $R^2=0.64$ on a set of held-out distributions, matching the generalization of direct ground-truth supervision. Second, we study a constitutional AI domain in which LMs must describe when they will refuse or comply with user requests. Here, Self-CTRL produces rules that faithfully describe the model&#x27;s behavior on held-out requests, improving the refusal predictions of a third-party auditor model from $36\%$ to $92\%$. In the other direction, behavior updates improve alignment, reducing HarmBench failure rate from $15.0\%$ to $0.5\%$ without substantially increasing refusal on harmless prompts. By aligning explanations and behavior, our work provides a general recipe for training AI models to be safer, more transparent, and more controllable.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.18327'>page</a> · <a href='https://arxiv.org/pdf/2606.18327'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Structured Representation Learning with Locally Linear Embeddings and Adaptive Feature Fusion</title>
+      <link>https://arxiv.org/abs/2606.18469</link>
+      <guid isPermaLink="false">arxiv:2606.18469</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MILA — Samira Ebrahimi Kahou</p>
+<p><b>Authors:</b> Somjit Nath, Jackson J Cone, Derek Nowrouzezahrai, Samira Ebrahimi Kahou</p>
+<p>Neuroscientific research has revealed that the brain encodes complex behaviors by leveraging structured, low-dimensional manifolds and dynamically fusing multiple sources of information through adaptive gating mechanisms. Inspired by these principles, we propose a novel reinforcement learning (RL) framework that encourages the disentanglement of dynamics-specific and reward-specific features, drawing direct parallels to how neural circuits separate and integrate information for efficient decision-making. Our approach leverages locally linear embeddings (LLEs) to capture the intrinsic, locally linear structure inherent in many environments, mirroring the local smoothness observed in neural population activity, while concurrently deriving reward-specific features through the standard RL objective. An attention mechanism, analogous to cortical gating, adaptively fuses these complementary representations on a per-state basis. Experimental results on benchmark tasks demonstrate that our method, grounded in neuroscientific principles, improves learning efficiency and overall performance compared to conventional RL approaches, highlighting the benefits of explicitly modeling local state structures and adaptive feature selection as observed in biological systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.18469'>page</a> · <a href='https://arxiv.org/pdf/2606.18469'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MagpieTTS-LF: Inference-Time Long-Form Speech Generation Without Training on Long-Form data</title>
+      <link>https://arxiv.org/abs/2606.18485</link>
+      <guid isPermaLink="false">arxiv:2606.18485</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.SD</category>
+      <category>cs.AI</category>
+      <category>eess.AS</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> Subhankar Ghosh, Jason Li, Paarth Neekhara, Shehzeen Hussain, Ryan Langman, Xuesong Yang, Roy Fejgin</p>
+<p>Neural Text-to-Speech (TTS) systems achieve remarkable quality on short utterances but long-form speech generation shows prosodic drift, speaker inconsistencies and sentence boundary artifacts. Existing approaches either compress sequences, increase context length or naively concatenate independently synthesized chunks. We present an inference-time approach called MagpieTTS-LF that enables MagpieTTS to produce coherent long-form speech without model retraining. Our method introduces three key innovations: (1) soft attention priors to guide monotonic alignment while preserving past and future context; (2) a stateful inference algorithm that maintains context across sentence chunks, ensuring prosodic continuity; (3) history-aware text encoding that uses past text for discourse-level prosodic planning. Experiments on long texts show significant improvements in long-range intelligibility, prosodic coherence, speaker consistency, and boundary naturalness compared to other baselines.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI, eess.AS · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.18485'>page</a> · <a href='https://arxiv.org/pdf/2606.18485'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Graph Grounded Cross Attention Transformer Neural Network for Structurally Constrained Full Event Sequence Generation in Predictive Process Monitoring</title>
+      <link>https://arxiv.org/abs/2606.18726</link>
+      <guid isPermaLink="false">arxiv:2606.18726</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MILA — Ernesto Damiani</p>
+<p><b>Authors:</b> Fang Wang, Ernesto Damiani</p>
+<p>Structurally constrained event sequence generation remains challenging because generated paths must preserve transition feasibility, temporal order, termination, and attribute consistency. In predictive process monitoring (PPM), this challenge appears as full event sequence generation, whereas existing work mainly addresses component tasks such as next activity, remaining time, outcome, and attribute prediction. This paper proposes the Graph Grounded Cross Attention Transformer Neural Network (GGATN) for this unified PPM task. GGATN uses a global process graph as structured activity memory, contextualizes sequence positions through Transformer self attention, and injects process topology through graph grounded cross attention. Unlike autoregressive decoding, GGATN generates activities, timestamps, length, and event level and sequence level attributes in a single pass, followed by Viterbi style graph constrained decoding for feasible paths and explicit termination. Experiments on six benchmark event logs show more reliable generation quality than local instruction prompted LLM baselines. GGATN achieves strong performance on sequence similarity, Damerau Levenshtein similarity, bigram based control flow similarity, and duration distribution, while maintaining zero hallucinated activities and zero sequence level attribute inconsistency. Ablation analyses confirm the global graph encoder as a stable structural prior. Interpretability analyses show how graph structure, sequence context, feedback refinement, and constrained decoding shape generation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.18726'>page</a> · <a href='https://arxiv.org/pdf/2606.18726'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SciRisk-Bench: A Risk-Dimension-Aware Benchmark for AI4Science Safety</title>
+      <link>https://arxiv.org/abs/2606.18936</link>
+      <guid isPermaLink="false">arxiv:2606.18936</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Yi Zeng</p>
+<p><b>Authors:</b> Linghao Feng, Yinqian Sun, Dongqi Liang, Sicheng Shen, Chenfei Yan, Yuxuan Peng, Yilin Zhao, Haibo Tong, … <i>(+3 more)</i></p>
+<p>Large language models (LLMs) are increasingly embedded in AI for Science (AI4Science) workflows, from scientific question answering and literature analysis to laboratory planning and autonomous discovery. This progress creates an urgent need for safety benchmarks that evaluate not only scientific competence, but also whether models recognize and avoid risks in high-stakes scientific contexts. Existing AI4Science safety datasets cover several disciplines and task formats, leaving the underlying risk dimensions underspecified. We introduce \textbf{SciRisk-Bench}, a benchmark designed to evaluate AI4Science safety from two complementary perspectives: explicit risk dimensions and scientific disciplines. SciRisk-Bench covers 7 disciplines, 31 subdisciplines and 10 risk dimensions. In the experimental section, we evaluate both mainstream LLMs and science-oriented LLMs across risk dimensions, disciplines, and sub-disciplines, enabling fine-grained diagnosis of where scientific models remain unsafe.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.18936'>page</a> · <a href='https://arxiv.org/pdf/2606.18936'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LectūraAgents: A Multi-Agent Framework for Adaptive Personalized AI-Assisted Learning and Embodied Teaching</title>
+      <link>https://huggingface.co/papers/2606.16428</link>
+      <guid isPermaLink="false">arxiv:2606.16428</guid>
+      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jaward Sesay, Yue Yu, Siwei Dong, Yemin Shi, Guangyao Chen, Börje F. Karlsson, Hugging Face Daily Papers (curated)</p>
+<p>Effective personalized AI-assisted learning demands systems that can not only generate accurate learner-specific educational materials, but also dynamically adapt their instruction to diverse learners. However, existing educational agents have primarily focused on lecture content automation and simulations, which often fall short of modelling multimodal and embodied instructional methods tailored for the individual learner. To this end, we propose LectūraAgents - a multi-agent framework that enables personalized learning through end-to-end adaptive embodied teaching. At its core, LectūraAgents mirrors a professor-student relationship, in which a ProfessorAgent leads a collaborative team of specialized subordinate agents through research, planning, review, and embodied delivery of lecture contents that adapt to a learner&#x27;s needs. The framework offers three main contributions: (1) a hierarchical multi-agent architecture for end-to-end personalized learning; (2) an adaptive embodied teaching mechanism, wherein the ProfessorAgent executes visible and pedagogically motivated teaching actions (e.g., handwrite, highlight, underline, etc.) over contents in a teaching environment; and (3) a Teaching Action-Speech Alignment (TASA) algorithm that employs salience-based heuristics and temporal semantic segmentation to generate coherent teaching action sequences aligned with learner profiles. We evaluate LectūraAgents on diverse courses at high school, undergraduate, and graduate levels using sample-specific rubric-based analysis; with generated lecture materials and teaching actions assessed and validated by expert educators. Experimental results show consistent gains in lecture content quality, embodied teaching quality, assessment, and personalization over existing approaches, positioning LectūraAgents as a pedagogically well-grounded framework for personalized learning at scale.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://huggingface.co/papers/2606.16428'>page</a> · <a href='https://arxiv.org/pdf/2606.16428'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>First, do NOHARM: towards clinically safe large language models</title>
       <link>https://arxiv.org/abs/2512.01241</link>
@@ -2279,140 +2425,6 @@
       <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
 <p><b>Authors:</b> Anthropic Interpretability</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/august-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — September 2024A collection of small updates: investigating successor heads, oversampling data in SAEs.</title>
-      <link>https://transformer-circuits.pub/2024/september-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:f242b5acbd</guid>
-      <pubDate>Mon, 18 May 2026 14:17:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/september-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — January 2025A collection of small updates: dictionary learning optimization techniques.</title>
-      <link>https://transformer-circuits.pub/2025/january-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:ae482879ba</guid>
-      <pubDate>Mon, 18 May 2026 14:12:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/january-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuit Tracing: Revealing Computational Graphs in Language ModelsAmeisen et al., 2025We describe an approach to tracing the &quot;step-by-step&quot; computation involved when a model responds
-                    to a single prompt.</title>
-      <link>https://transformer-circuits.pub/2025/attribution-graphs/methods.html</link>
-      <guid isPermaLink="false">transformer_circuits:4ad7b6c666</guid>
-      <pubDate>Mon, 18 May 2026 14:07:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/attribution-graphs/methods.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — April 2025A collection of small updates: jailbreaks, dense features, and spinning up on interpretability.</title>
-      <link>https://transformer-circuits.pub/2025/april-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:a325394dfd</guid>
-      <pubDate>Mon, 18 May 2026 14:02:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/april-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — July 2025A collection of small updates: revisiting A Mathematical Framework and applications of
-                    interpretability to biology.</title>
-      <link>https://transformer-circuits.pub/2025/july-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:01f8772c43</guid>
-      <pubDate>Mon, 18 May 2026 13:57:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/july-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — August 2025A small update: How does a persona modify the assistant’s response?</title>
-      <link>https://transformer-circuits.pub/2025/august-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:d53fe4dfc5</guid>
-      <pubDate>Mon, 18 May 2026 13:52:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/august-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — September 2025A small update on features and in-context learning.</title>
-      <link>https://transformer-circuits.pub/2025/september-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:06c117afeb</guid>
-      <pubDate>Mon, 18 May 2026 13:47:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/september-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — October 2025Small updates on visual features and dictionary initialization.</title>
-      <link>https://transformer-circuits.pub/2025/october-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:af3bcb16d6</guid>
-      <pubDate>Mon, 18 May 2026 13:42:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/october-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — November 2025A short update on harm pressure.</title>
-      <link>https://transformer-circuits.pub/2025/november-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:89d2cb4569</guid>
-      <pubDate>Mon, 18 May 2026 13:37:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2025/november-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Trustworthy agents in practice</title>
-      <link>https://www.anthropic.com/research/trustworthy-agents</link>
-      <guid isPermaLink="false">anthropic:a093e79948</guid>
-      <pubDate>Mon, 18 May 2026 13:32:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/trustworthy-agents'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Automated Alignment Researchers: Using large language models to scale scalable oversight</title>
-      <link>https://www.anthropic.com/research/automated-alignment-researchers</link>
-      <guid isPermaLink="false">anthropic:60d9c4aaed</guid>
-      <pubDate>Mon, 18 May 2026 13:27:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/automated-alignment-researchers'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>What 81,000 people told us about the economics of AI</title>
-      <link>https://www.anthropic.com/research/81k-economics</link>
-      <guid isPermaLink="false">anthropic:94d4d2f8af</guid>
-      <pubDate>Mon, 18 May 2026 13:22:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/81k-economics'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
