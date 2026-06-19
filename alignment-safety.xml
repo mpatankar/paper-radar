@@ -5,8 +5,67 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 18 Jun 2026 05:37:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 05:45:30 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>One Probe Won&#x27;t Catch Them All: Towards Targeted Deception Detection</title>
+      <link>https://arxiv.org/abs/2602.01425</link>
+      <guid isPermaLink="false">arxiv:2602.01425</guid>
+      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Vikram Natarajan, Devina Jain, Shivam Arora, Satvik Golechha, Joseph Bloom</p>
+<p>Linear probes are a promising approach for monitoring AI systems for deceptive behaviour. Previous work has shown that a linear classifier trained on a contrastive instruction pair and a simple dataset can achieve good performance. However, these probes exhibit notable failures even in straightforward scenarios, including spurious correlations and false positives on non-deceptive responses. In this paper, we demonstrate that deception detection is inherently heterogeneous: while a single universal probe achieves modest improvements (+0.032 AUC), post-hoc oracle analysis reveals substantially higher potential (+0.108 AUC) when probes are matched to specific deception types, and synthetic validation experiments suggest this ceiling is achievable a priori when the deception type is known in advance. Our findings reveal that instruction pairs capture deceptive intent rather than content-specific patterns, explaining why prompt choice dominates probe performance (70.6% of variance). Given this heterogeneity, we conclude that organizations should define their specific threat models and deploy appropriately matched probes rather than seeking a universal deception detector.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://arxiv.org/abs/2602.01425'>page</a> · <a href='https://arxiv.org/pdf/2602.01425'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>How LLMs Fail and Generalize in RTL Coding for Hardware Design?</title>
+      <link>https://arxiv.org/abs/2606.19347</link>
+      <guid isPermaLink="false">arxiv:2606.19347</guid>
+      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.PL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> Georgia Tech — (senior)</p>
+<p><b>Authors:</b> Guan-Ting Liu, Chao-Han Huck Yang, Chenhui Deng, Zhongzhi Yu, Brucek Khailany, Yu-Chiang Frank Wang</p>
+<p>Translating sequential programming priors into the parallel temporal logic of hardware design remains a crucial bottleneck for large language models(LLM). To investigate this, we introduce a new error taxonomy grounded in problem solvability, inspired by cognitive theory. Our taxonomy categorizes failures into syntactic, semantic, solvable functional, and unsolvable functional types. Evaluations reveal a strict empirical ceiling on the VerilogEval benchmark, as frontier models plateau at a 90.8% initial pass rate. These plateaus are defined by unsolvable functional errors, exposing persistent knowledge gaps immune to test time compute scaling. Furthermore, we expose a striking surface convergence gap: optimization readily eliminates syntax errors but concurrently exacerbates deeper functional failures. Our findings demonstrate that alignment techniques merely teach models to compile. While repeated sampling strategies can patch solvable errors, register-transfer level(RTL) coding capacity remains strictly bounded by pretraining knowledge. Addressing challenges in the current LLM based hardware generation pipeline requires more studies in model reasoning rather than alignment interventions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.PL · <b>arXiv submitted:</b> 2026-04-26 · <a href='https://arxiv.org/abs/2606.19347'>page</a> · <a href='https://arxiv.org/pdf/2606.19347'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Reward Was in Your Data All Along: Correcting Flow Matching with Discriminator-Guided RL</title>
+      <link>https://huggingface.co/papers/2606.19162</link>
+      <guid isPermaLink="false">arxiv:2606.19162</guid>
+      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Nicolas Beltran-Velez, Felix Friedrich, Zhang Xiaofeng, Reyhane Askari-Hemmat, Xiaochuang Han, Adriana Romero-Soriano, Michal Drozdzal, Hugging Face Daily Papers (curated)</p>
+<p>Score- and flow-matching models often rely on preference-based reinforcement learning for two purposes: aligning with subjective preferences and, surprisingly, recovering properties such as visual realism and coherent object structure that matching-based training is intended to learn from the data itself. We argue that this reflects a structural mismatch. Matching losses measure ell_2 regression error on the velocity or score field under training-time marginals, a proxy poorly aligned with the visual and semantic properties that determine sample quality at inference. Given a reward aligned with these properties, RL sidesteps the mismatch by evaluating the model on its own samples and following the reward landscape directly. The challenge is to obtain such a reward without relying on human preferences, which are expensive and conflate data realism with annotator inclinations.
+  We propose Discriminator-Guided RL (DRL). DRL trains a discriminator to separate data from base-model samples in a pretrained representation space and uses its logit as the reward in KL-regularized RL. The pretrained space restricts the discriminator to perceptually meaningful directions, and the logit estimates the log-likelihood ratio between data and model, which is the optimal reward for targeting the data distribution. Across SiT, JiT, REPA, and RAE, DRL reduces guidance-free FID (e.g., 9.38 to 2.62 on SiT) and semantic-space FD (e.g., 88.2 to 19.3 on DINOv3 for SiT), with consistent gains across all backbones, and improves human-preference rewards without training on them. It also yields a better Pareto frontier between preference reward and image fidelity under subsequent preference-based post-training, increasing alignment while reducing low-level artifacts such as oversaturation and excessive brightness.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.19162'>page</a> · <a href='https://arxiv.org/pdf/2606.19162'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior</title>
+      <link>https://huggingface.co/papers/2606.18322</link>
+      <guid isPermaLink="false">arxiv:2606.18322</guid>
+      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Mingyue Cui, Linghui Shen, Xingyi Yang, Hugging Face Daily Papers (curated)</p>
+<p>Sparse Autoencoders (SAEs) decompose residual-stream activations into interpretable features. Recent latent-space defenses increasingly rely on these decompositions, assuming that identified &quot;unsafe&quot; SAE features serve as actionable handles for monitoring and intervention. In this paradigm, clamping a specific harmful feature is expected to reliably prevent model misbehavior. However, we show that this success may hide a recoverable failure mode: the clamp may block one visible route to a behavior without eliminating the behavior itself. We formulate this vulnerability as post-intervention recovery, a constrained residual-space optimization problem. Starting from the post-intervention residual state, we optimize residual perturbations to recover the pre-intervention behavior while preserving the post-intervention values of the targeted SAE features. Even under a strong threat model where the intervention remains active throughout optimization and generation, recovery remains possible. To rule out that recovery simply undoes the intervention, we use encoder-orthogonal updates for single-layer interventions and the corresponding feature-map Jacobian in the cross-layer setting. Across TPP, unlearning, IOI, and refusal steering experiments, this stress test reveals recoverable behavior despite successful feature-level intervention. Especially in the safety-critical refusal-steering setting, we achieve a 95.8% recovery rate on valid samples while keeping defended-feature relative drift to 0.131, substantially below suffix-based baselines. A recovery-path attribution analysis further localizes this recovery to the SAE reconstruction residual, the component left unexplained by the SAE. These results expose a gap between feature-level control and behavioral completeness: SAE features can support causal intervention, but controlling them does not guarantee control over the underlying behavior.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://huggingface.co/papers/2606.18322'>page</a> · <a href='https://arxiv.org/pdf/2606.18322'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</title>
+      <link>https://huggingface.co/papers/2606.19195</link>
+      <guid isPermaLink="false">arxiv:2606.19195</guid>
+      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Kangsheng Duan, Ziyang Xu, Wenyu Liu, Xiaohu Ruan, Xiaoxin Chen, Xinggang Wang, Hugging Face Daily Papers (curated)</p>
+<p>While 10B-level industrial foundation models have pushed the boundaries of image inpainting, their prohibitive computational costs severely hinder practical deployment. Constructing a highly optimized task-specific specialist offers a promising solution; however, extreme structural compression inevitably triggers a severe representation bottleneck. To conquer this, we propose Moebius, a highly efficient lightweight inpainting framework. We systematically reconstruct the diffusion backbone by introducing the Local-λ Mix Interaction (LλMI) block. Comprising Local-λ and Interactive-λ modules, it elegantly summarizes spatial contexts and global semantic priors into fixed-size linear matrices, preserving complex latent interactions while drastically shedding parameters. Furthermore, to unlock the full representational capacity of this highly compact architecture, we synergistically pair it with an adaptive multi-granularity distillation strategy. Operating strictly within the latent space to avoid expensive pixel-space decoding, this strategy dynamically balances multiple gradient-based losses to achieve high-fidelity alignment. Extensive experiments across natural and portrait benchmarks demonstrate that this optimal synergy enables Moebius to rival or even surpass the generation quality of the 10B-level industrial generalist FLUX.1-Fill-Dev. Remarkably, Moebius achieves this using less than 2\% of the parameters (0.22B vs. 11.9B) while delivering a &gt;15times acceleration in total inference time, setting a new efficiency standard for high-fidelity inpainting. Project page at https://hustvl.github.io/Moebius.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.19195'>page</a> · <a href='https://arxiv.org/pdf/2606.19195'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>R&amp;B -- Rhythm and Brain: Cross-subject Decoding of Music from Human Brain Activity</title>
       <link>https://arxiv.org/abs/2406.15537</link>
@@ -2368,63 +2427,6 @@
       <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
 <p><b>Authors:</b> Anthropic Interpretability</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/march-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — April 2024A collection of small updates from the Anthropic Interpretability Team.</title>
-      <link>https://transformer-circuits.pub/2024/april-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:30d538a77e</guid>
-      <pubDate>Mon, 18 May 2026 14:42:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/april-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 SonnetTempleton et al., 2024Using a sparse autoencoder, we extract a large number of interpretable features from Claude 3
-                    Sonnet. Some appear to be safety-relevant.</title>
-      <link>https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:ace4338bfd</guid>
-      <pubDate>Mon, 18 May 2026 14:37:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — June 2024A collection of small updates: topk and gated SAE investigation.</title>
-      <link>https://transformer-circuits.pub/2024/june-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:cbcdac4435</guid>
-      <pubDate>Mon, 18 May 2026 14:32:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/june-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — July 2024A collection of small updates: five hurdles, linear representations, dark matter, pivot tables,
-                    feature sensitivity.</title>
-      <link>https://transformer-circuits.pub/2024/july-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:162ab81e84</guid>
-      <pubDate>Mon, 18 May 2026 14:27:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/july-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates — August 2024A collection of small updates: interpretability evals, reproducing self-explanation.</title>
-      <link>https://transformer-circuits.pub/2024/august-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:8333391d14</guid>
-      <pubDate>Mon, 18 May 2026 14:22:16 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2024/august-update/index.html'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
