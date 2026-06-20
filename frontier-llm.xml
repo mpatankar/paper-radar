@@ -5,8 +5,32 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Fri, 19 Jun 2026 05:45:29 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 05:30:34 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages</title>
+      <link>https://huggingface.co/papers/2606.20517</link>
+      <guid isPermaLink="false">arxiv:2606.20517</guid>
+      <pubDate>Sat, 20 Jun 2026 05:30:34 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Maria Ivanova, Pavel Zadorozhny, Rodion Levichev, Ivan Petrov, Adamenko Pavel, Ivan Lopatin, Alexey Kutalev, Dmitrii Babaev, … <i>(+1 more)</i></p>
+<p>LiveCodeBench (LCB) has recently become a widely adopted benchmark for evaluating large language models (LLMs) on code-generation tasks. By curating competitive programming problems, constantly adding fresh problems to the set, and filtering them by release dates, LCB provides contamination-aware evaluation and offers a holistic view of coding capability. However, LCB remains restricted to Python, leaving open the question of whether LLMs can generalize across the diverse programming languages required in real-world software engineering.
+  We introduce Multi-LCB, a benchmark for evaluating LLMs across twelve programming languages, including Python. Multi-LCB transforms Python tasks from the LCB dataset into equivalent tasks in other languages while preserving LCB&#x27;s contamination controls and evaluation protocol. Because it is fully compatible with the original LCB format, Multi-LCB will automatically track future LCB updates, enabling systematic assessment of cross-language code generation competence and requiring models to sustain performance well beyond Python.
+  We evaluated 24 LLMs for instruction and reasoning on Multi-LCB, uncovering evidence of Python overfitting, language-specific contamination, and substantial disparities in multilingual performance. Our results establish Multi-LCB as a rigorous new benchmark for multi-programming-language code evaluation, directly addressing LCB&#x27;s primary limitation and exposing critical gaps in current LLM capabilities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20517'>page</a> · <a href='https://arxiv.org/pdf/2606.20517'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>FreeStyle: Free Control of Style-Content Dual-Reference Generation from Community LoRA Mining</title>
+      <link>https://huggingface.co/papers/2606.20506</link>
+      <guid isPermaLink="false">arxiv:2606.20506</guid>
+      <pubDate>Sat, 20 Jun 2026 05:30:34 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jinghong Lan, Wei Cheng, Yunuo Chen, Ziqi Ye, Peng Xing, Yixiao Fang, Rui Wang, Yufeng Yang, … <i>(+6 more)</i></p>
+<p>Style-content dual-reference generation aims to synthesize an image that preserves the structure and semantics of a content reference while adopting the style of a separate style reference.Despite recent progress, this setting remains challenging because models must balance content fidelity, style alignment, and instruction following avoiding semantic leakage from the style reference.A key bottleneck is the lack of large-scale triplet data with clean content-style separation and broad long-tail style coverage.In this work, we propose FreeStyle, a scalable dual-reference generation framework based on community LoRA mining.We treat community LoRAs as compositional anchors for style and content, and design a rigorous generation and filtering pipeline to construct large-scale Style-Reference and Content-Reference triplets across multiple base models.To address content leakage, we adopt a two-stage curriculum with stage-specific disentanglement mechanisms: an attention-level enrichment constraint that suppresses style-reference leakage in the style-transfer stage, and a frequency-aware RoPE modulation strategy that targets positional-correspondence-based leakage in the harder dual-reference stage.We also introduce a benchmark covering both style-reference and dual-reference generation, with evaluations on style similarity, content preservation, aesthetics, instruction following, and leakage rejection. The benchmark incorporates a style-invariant Content Alignment Score (CAS) and introduces a calibrated VLM-based Rejection Score for evaluating generation reliability and leakage suppression.Extensive experiments show that our model achieves a strong balance among style alignment, content preservation, and leakage suppression.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20506'>page</a> · <a href='https://arxiv.org/pdf/2606.20506'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Wisdom of Committee: Diverse Distillation from Large Foundation Models and Domain Experts</title>
       <link>https://arxiv.org/abs/2402.14035</link>
@@ -2375,31 +2399,6 @@
 <p><b>Authors:</b> Peng Sun, Yi Yang, Huawen Shen, Yi Ban, Tianfan Fu, Yanbo Wang, Yuqiang Li</p>
 <p>Visual instruction tuning is crucial for improving vision-language large models (VLLMs). However, many samples can be solved via linguistic patterns or common-sense shortcuts, without genuine cross-modal reasoning, limiting the effectiveness of multimodal learning. Prior data selection methods often rely on costly proxy model training and focus on difficulty or diversity, failing to capture a sample&#x27;s true contribution to vision-language joint reasoning. In this paper, we propose CVS, a training-free data selection method based on the insight that, for high-quality multimodal samples, introducing the question should substantially alter the model&#x27;s assessment of answer validity given an image. CVS leverages a frozen VLLM as an evaluator and measures the discrepancy in answer validity with and without conditioning on the question, enabling the identification of samples that require vision-language joint reasoning while filtering semantic-conflict noise. Experiments on Vision-Flan and The Cauldron show that CVS achieves solid performance across datasets. On Vision-Flan, CVS outperforms full-data training by 3.5% and 4.8% using only 10% and 15% of the data, respectively, and remains robust on the highly heterogeneous Cauldron dataset. Moreover, CVS reduces computational cost by 17.3% and 44.4% compared to COINCIDE and XMAS.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2603.09715'>page</a> · <a href='https://arxiv.org/pdf/2603.09715'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Power Term Polynomial Algebra for Boolean Logic</title>
-      <link>https://arxiv.org/abs/2603.13854</link>
-      <guid isPermaLink="false">arxiv:2603.13854</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.LO</category>
-      <category>cs.AI</category>
-      <category>cs.SC</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MIT — Armando Solar-Lezama</p>
-<p><b>Authors:</b> Emanuele Sansone, Armando Solar-Lezama</p>
-<p>We introduce power term polynomial algebra, a representation language for Boolean formulae designed to bridge conjunctive normal form (CNF) and algebraic normal form (ANF). The language is motivated by the tiling mismatch between these representations: direct CNF&lt;-&gt;ANF conversion may cause exponential blowup unless formulas are decomposed into smaller fragments, typically through auxiliary variables and side constraints. In contrast, our framework addresses this mismatch within the representation itself, compactly encoding structured families of monomials while representing CNF clauses directly, thereby avoiding auxiliary variables and constraints at the abstraction level. We formalize the language through power terms and power term polynomials, define their semantics, and show that they admit algebraic operations corresponding to Boolean polynomial addition and multiplication. We prove several key properties of the language: disjunctive clauses admit compact canonical representations; power terms support local shortening and expansion rewrite rules; and products of atomic terms can be systematically rewritten within the language. Together, these results yield a symbolic calculus that enables direct manipulation of formulas without expanding them into ordinary ANF. The resulting framework provides a new intermediate representation and rewriting calculus that bridges clause-based and algebraic reasoning and suggests new directions for structure-aware CNF&lt;-&gt;ANF conversion and hybrid reasoning methods.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LO, cs.AI, cs.SC · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://arxiv.org/abs/2603.13854'>page</a> · <a href='https://arxiv.org/pdf/2603.13854'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Structural Attention Tax: How Retrieval Format Hijacks In-Context Learning Independent of Content</title>
-      <link>https://arxiv.org/abs/2606.11198</link>
-      <guid isPermaLink="false">arxiv:2606.11198</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Di Zhang</p>
-<p><b>Authors:</b> Yuqi Zhang, Di Zhang</p>
-<p>Retrieval-augmented generation (RAG) systems inject external knowledge to improve LLM outputs, yet the format of injected content -- distinct from its semantic relevance -- can independently distort the model&#x27;s attention distribution. We identify and formalise a phenomenon we term the structural attention tax: knowledge graph (KG) triples, due to their relational delimiters and repeated slot patterns, capture 2-3x more attention per token than semantically equivalent natural-language text ($\hat{o}$(KG) $\approx$ 0.70 vs. $\hat{o}$(neutral) $\approx$ 0.25), compressing demonstration attention by up to 42% -- regardless of whether the triples are relevant or noise. We develop a formal framework decomposing attention scores into semantic and structural components (Eq. 2), derive a compression bound (Proposition 1) connecting token-level format bias to demonstration attention loss, and show that the structural term governs how much attention is diverted while the semantic term governs whether this helps or hurts. This decoupling reveals two orthogonal axes for improving retrieval-augmented ICL: optimising retrieval quality (semantic axis) and reducing format-driven attention capture (structural axis). Empirically, across two model families (Mistral-7B, LLaMA-3-8B) and three QA benchmarks, we observe that source-task alignment dominates: task-matched BM25 retrieval achieves 58-62% on HotpotQA vs. ConceptNet&#x27;s 25-27%, a &gt;30 pp gap that dwarfs all gating strategies ($\leq$2 pp). We derive five structure-aware mitigation strategies from the framework, ranging from zero-cost prompt modifications to training-time regularisation; format flattening (S3) is validated by both accuracy and attention-level evidence from a verbalized-triple control, while structural dispersal (S1) yields mixed results that illuminate the challenges of format-level intervention.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-04-21 · <a href='https://arxiv.org/abs/2606.11198'>page</a> · <a href='https://arxiv.org/pdf/2606.11198'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
