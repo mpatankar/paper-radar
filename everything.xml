@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Sat, 20 Jun 2026 05:30:34 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 05:37:09 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising</title>
+      <link>https://huggingface.co/papers/2606.20563</link>
+      <guid isPermaLink="false">arxiv:2606.20563</guid>
+      <pubDate>Sun, 21 Jun 2026 05:37:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Columbia — (senior)</p>
+<p><b>Authors:</b> Siang-Ling Zhang, Huai-Hsun Cheng, Tsung-Ju Yang, Yu-Lun Liu, Hugging Face Daily Papers (curated)</p>
+<p>Creating 3D visual illusions, a single 3D mesh that reveals entirely different semantics from various viewing angles, is a fascinating but tough challenge. Existing optimization-based methods are slow and can produce oversaturated colors. In contrast, naive stitching approaches fail to produce geometrically coherent objects. This results in visible unnatural seams and semantic leaks. In this paper, we present a fast and training-free framework for generating text-driven 3D visual illusions. Our approach decouples the generation into two stages. First, we propose a cross-space dual-branch denoising process. This process dynamically decodes 3D latents into voxel space for CLIP-guided orientation alignment and Signed Distance Field (SDF) blending, which ensures seamless geometric fusion. Second, we introduce a view-conditioned texture synthesis module that projects and aggregates view-specific 2D diffusion priors onto the fused geometry. Extensive experiments demonstrate that our method generates highly realistic, dual-semantic 3D illusions in just 3-5 minutes. It significantly outperforms existing methods in geometric integrity, semantic recognizability, and efficiency. Project page: https://siang1105.github.io/JanusMesh.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20563'>page</a> · <a href='https://arxiv.org/pdf/2606.20563'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects</title>
       <link>https://huggingface.co/papers/2606.15133</link>
@@ -2353,19 +2364,6 @@
 <p><b>Authors:</b> Maohua Nie, Jiang Zhu, Jingqun Zhang, Zhichen Zeng, Jiayi Wang, Sibo Zhang, Jialin Wang, C. -J. Richard Shi</p>
 <p>We present HierSVA, an integrated suite that combines a pipeline, dataset, and benchmark for LLM-driven hierarchical hardware formal verification. HierSVA-SP pairs an RTL preprocessing toolchain with an LLM-in-the-loop formal verification flow to produce reference SystemVerilog Assertions (SVA) on hierarchical RTL. Applying it to BaseJump STL yields HierSVA-DS, a dataset of 342 modules, with hierarchy metadata and depths 0--9, accompanied by a deep subset of 28 module-bug pairs with natural-language specifications and bug variants. HierSVA-B decomposes assertion quality into six metric axes: syntax correctness, assertion proof success rate, vacuity, specification faithfulness, mutation coverage, and formal core coverage. Applying HierSVA-B to twelve recent LLMs reveals three findings. First, the module-level compile rate is 67.1\%; among generated assertions in evaluable runs, 82.1\% prove non-vacuously, but the corresponding assertion sets detect only 70.2\% of eligible injected faults and cover 36.2\% of the formal core. Second, on 211 evaluable model--module entries in the deep subset, assertion sets flag buggy RTL with 0.87 recall, but 40\% of predicted-buggy outcomes are false positives on correct RTL, limiting precision to 0.60. Third, agentic mode improves S1-style provability and strength metrics, but gains plateau and oscillate. Codes and artifacts are available at \href{https://github.com/HierSVAAnon/HierSVACodeAndArtifacts}{https://github.com/HierSVAAnon/HierSVACodeAndArtifacts}. Dataset is available at \href{https://huggingface.co/datasets/AnonymousHierSVA/HierSVA}{https://huggingface.co/datasets/AnonymousHierSVA/HierSVA}.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AR, cs.AI · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://arxiv.org/abs/2606.13706'>page</a> · <a href='https://arxiv.org/pdf/2606.13706'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Orchestra-o1: Omnimodal Agent Orchestration</title>
-      <link>https://arxiv.org/abs/2606.13707</link>
-      <guid isPermaLink="false">arxiv:2606.13707</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Peking U, Tsinghua — Pheng-Ann Heng</p>
-<p><b>Authors:</b> Fan Zhang, Vireo Zhang, Shengju Qian, Haoxuan Li, Hao Wu, Jinyang Wu, Donghao Zhou, Zhihong Zhu, … <i>(+3 more)</i></p>
-<p>The recent success of agent swarms has shifted the paradigm of large language model (LLM)-based agents from single-agent workflows to multi-agent systems, highlighting the importance of agent orchestration for task decomposition and collaboration. However, existing orchestration frameworks are limited to a narrow set of modalities and struggle to generalize to more complex settings where heterogeneous modalities coexist and interact. This limitation becomes particularly pronounced in omnimodal scenarios, where tasks require the unified understanding and coordination of diverse inputs such as text, image, audio, and video. In this work, we propose Orchestra-o1, an omnimodal agent orchestration framework designed to support efficient agent collaboration across multiple modalities. Orchestra-o1 introduces a unified orchestration mechanism that enables modality-aware task decomposition, online sub-agent specialization, and parallel sub-task execution. This scalable design allows agent systems to effectively tackle complex real-world tasks involving heterogeneous information sources, surpassing the second-best approach by 10.3% accuracy on the OmniGAIA benchmark. Furthermore, we introduce decision-aligned group relative policy optimization (DA-GRPO), an efficient agentic reinforcement learning approach for training Orchestra-o1-8B, which also achieves state-of-the-art performance against all existing open-source omnimodal agents.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2606.13707'>page</a> · <a href='https://arxiv.org/pdf/2606.13707'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
