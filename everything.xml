@@ -5,8 +5,107 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Mon, 22 Jun 2026 05:49:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 05:21:09 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>PlanBench-XL: Evaluating Long-Horizon Planning of LLM Tool-Use Agents in Large-Scale Tool Ecosystems</title>
+      <link>https://huggingface.co/papers/2606.22388</link>
+      <guid isPermaLink="false">arxiv:2606.22388</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiayu Liu, Qihan Lin, Cheng Qian, Rui Wang, Emre Can Acikgoz, Xiaocheng Yang, Jiateng Liu, Zhenhailong Wang, … <i>(+4 more)</i></p>
+<p>LLM agents increasingly operate in large tool ecosystems, where real-world tasks require discovering relevant tools, inferring implicit sub-goals, and adapting to dynamic environments over long horizons. However, existing benchmarks rarely evaluate planning under retrieval-limited tool visibility. To address this gap, we introduce PlanBench-XL, an interactive benchmark of 327 retail tasks over 1,665 tools that tests whether agents can iteratively retrieve usable tools, invoke them to uncover intermediate evidence for subsequent calls toward the final goal. PlanBench-XL further features an optional blocking mechanism that simulates real-world unpredictability through missing, failing, or distracting tool functions, forcing agents to detect disrupted paths and adapt at runtime. Experiments on ten leading LLMs show that massive-tool planning remains challenging: while GPT-5.4 achieves 51.90% accuracy in block-free settings, it collapses to 11.36% under the most severe blocking condition. Further analysis shows that agents are especially vulnerable when failures lack explicit error signals or when recovery requires longer alternative tool-use paths. These results establish PlanBench-XL as a testbed for diagnosing agentic planning failures and highlight the need for robust adaptive planning in long-horizon tasks with large, imperfect tool environments.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-21 · <a href='https://huggingface.co/papers/2606.22388'>page</a> · <a href='https://arxiv.org/pdf/2606.22388'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking</title>
+      <link>https://huggingface.co/papers/2606.22807</link>
+      <guid isPermaLink="false">arxiv:2606.22807</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xinping Zhao, Jiaxin Xu, Ziqi Dai, Xin Zhang, Shouzheng Huang, Danyu Tang, Xinshuo Hu, Meishan Zhang, … <i>(+3 more)</i></p>
+<p>As retrieval systems scale, high-quality reranking becomes increasingly important. However, most existing rerankers, whether encoder-based or decoder-based, jointly encode the query and passage, tightly coupling their computation and limiting deployment efficiency as well as flexibility. We present KaLM-Reranker-V1, a fast but not late-interaction (FBNL) reranker that decouples query and passage computation while retaining expressive relevance modeling. Built on an encoder-decoder architecture, KaLM-Reranker-V1 uses the encoder to pre-encode passages with Matryoshka embedding pooling, while the decoder models the system instruction, user instruction, and query intent; cross-attention then captures relevance between the query context and passage representations. This design makes KaLM-Reranker-V1 efficient through decoupled passage encoding, yet not late interaction, by preserving rich relevance modeling through cross-attention. We instantiate KaLM-Reranker-V1 in three sizes, Nano, Small, and Large, with 0.27B, 1B, and 4B activated parameters, respectively. Extensive experiments on BEIR, MIRACL, and LMEB demonstrate that KaLM-Reranker-V1 achieves strong reranking performance with superior efficiency. On BEIR, KaLM-Reranker-V1 achieves state-of-the-art performance, on par with strong industrial models such as the Qwen3-Reranker series; on MIRACL, despite not being extensively trained on multilingual data, KaLM-Reranker-V1 still shows excellent reranking performance. Moreover, on LMEB, reranking models demonstrate a clear advantage, with even the 0.27B Nano model remaining competitive with 7-12B embedding models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-22 · <a href='https://huggingface.co/papers/2606.22807'>page</a> · <a href='https://arxiv.org/pdf/2606.22807'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions</title>
+      <link>https://huggingface.co/papers/2606.23654</link>
+      <guid isPermaLink="false">arxiv:2606.23654</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jincheng Zhong, Weizhi Wang, Che Jiang, Kai Tian, Zhenzhao Yuan, Junlin Yang, Dianqiao Lei, Kaiyan Zhang, … <i>(+1 more)</i></p>
+<p>Enterprise agents increasingly operate inside workspaces: they read heterogeneous files, invoke tools, and deliver business artifacts. We introduce EnterpriseClawBench, an enterprise agent benchmark constructed from proprietary, real-world agent sessions. Starting from a large archive of workplace sessions, the EnterpriseClawBench produces 852 reproducible tasks, each paired with recovered fixtures, rewritten prompts, role classes, skill subclasses, hard rules, and semantic rubrics. Because the sessions contain internal enterprise content, we do not release the benchmark data; instead, our reusable contribution is the construction and evaluation protocol. On EnterpriseClawBench, the best configuration reaches only 0.663 (Codex with GPT-5.5). These results show that enterprise agent evaluation must report harness--model combinations, artifact delivery, visual quality, cost, runtime, and skill-transfer behavior, rather than collapsing performance into a single score. Code: https://github.com/FrontisAI/EnterpriseClawBench</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-22 · <a href='https://huggingface.co/papers/2606.23654'>page</a> · <a href='https://arxiv.org/pdf/2606.23654'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>World Action Models: A Survey</title>
+      <link>https://huggingface.co/papers/2606.20781</link>
+      <guid isPermaLink="false">arxiv:2606.20781</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Qiuhong Shen, Shihua Zhang, Yue Liao, Qi Li, Zhenxiong Tan, Shizun Wang, Shuicheng Yan, Xinchao Wang, … <i>(+1 more)</i></p>
+<p>World Action Models (WAMs) are embodied predictive-action models that make a forecast of the future available to action. Recent WAMs repurpose large video generation models, and a parallel line relies on language or vision-language backbones without a video-generation core. This rapid expansion has blurred the boundary among broad world models, video generation models, action-grounded video world models, Vision-Language-Action policies, and WAMs. This survey gives the field a common account. It first clarifies these boundaries, then organizes existing works through two complementary views. The first view asks what each method is required to generate, spanning rendered futures, latent futures, and video-generation-free action reasoning. The second view decomposes each method by predictive substrate, backbone, action coupling, and deployment regime. This anatomy supports a unified discussion of interactability, causality, persistence, physical plausibility, and generalization, followed by data, evaluation, and open challenges. Across these axes, a consistent design pattern emerges: WAMs are not simply video generators with action heads, but predictive-action methods whose design choices trade representational richness against compute, memory, latency, and action-label cost. The field is moving toward methods that generate less of the future while preserving what control requires. The survey homepage is available at https://world-action-models.github.io/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20781'>page</a> · <a href='https://arxiv.org/pdf/2606.20781'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory</title>
+      <link>https://huggingface.co/papers/2606.21649</link>
+      <guid isPermaLink="false">arxiv:2606.21649</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chang Nie, Chaoyou Fu, Junlan Feng, Caifeng Shan, Hugging Face Daily Papers (curated)</p>
+<p>Existing embedding models are inherently static: they encode text segments in isolation, ignoring their surrounding context and temporal order. This paper introduces EvoEmbedding, a novel embedding model that generates evolvable representations for retrieval. It is tailored for long-context scenarios, where information is dynamic, sequential, and requires continuous state tracking. Our design is simple: EvoEmbedding maintains a continuously updated latent memory as it sequentially processes inputs, and uses it alongside the raw content to jointly generate evolvable embeddings. Consequently, for the same query, our model adapts its representation to retrieve distinct targets based on the evolving context, going beyond static semantic search. To equip the model with this capability, we construct EvoTrain-180K, a diverse dataset for the joint optimization of latent memory and retrieval. Furthermore, we introduce a memory queue to prevent representation collapse during recurrent encoding, alongside segment-batching techniques that tackle significant length variance and accelerate training by 3.8times. Extensive experiments show that our model not only outperforms larger-scale specialists (e.g., Qwen3-Embedding-8B and KaLM-Embedding-Gemma3-12B) across a range of long-context retrieval benchmarks, but also generalizes well to downstream tasks (e.g., personalization) with contexts 10times longer than its training window. Notably, EvoEmbedding seamlessly integrates into agentic workflows to boost performance. For instance, a naive RAG pipeline equipped with our model surpasses dedicated agentic memory systems. Project Page: https://clare-nie.github.io/EvoEmbedding.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-19 · <a href='https://huggingface.co/papers/2606.21649'>page</a> · <a href='https://arxiv.org/pdf/2606.21649'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MemSlides: A Hierarchical Memory Driven Agent Framework for Personalized Slide Generation with Multi-turn Local Revision</title>
+      <link>https://huggingface.co/papers/2606.17162</link>
+      <guid isPermaLink="false">arxiv:2606.17162</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Ye Jin, Yangyang Xu, Jun Zhu, Yibo Yang, Hugging Face Daily Papers (curated)</p>
+<p>Personalized presentation generation requires more than conditioning on a current prompt or template: agents must preserve stable user preferences across tasks, retain newly introduced preferences and constraints during multi-turn revision, and carry out local edits reliably. We propose MemSlides, a hierarchical memory framework for personalized presentation agents that separates long-term memory from working memory and further divides long-term memory into user profile memory and tool memory. User profile memory stores intent-conditioned profiles for round-0 personalization, working memory carries active preferences and session constraints across revision rounds, and tool memory stores reusable execution experience for reliable localized editing. MemSlides pairs this memory design with scoped slide-local revision, so targeted updates act on the smallest affected region instead of repeatedly regenerating the full deck. In controlled experiments, user profile memory improves persona-alignment judgments on a multi-persona, multi-intent profile bank, tool-memory injection improves closed-loop modify behavior in diagnostic matched-pair settings, and qualitative cases illustrate working memory&#x27;s ability to carryover preferences. Taken together, these results suggest that effective personalization in presentation authoring depends on separating persistent user profiles, session-level working memory, and reusable execution experience across generation and localized revision.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://huggingface.co/papers/2606.17162'>page</a> · <a href='https://arxiv.org/pdf/2606.17162'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HydraHead: From Head-Level Functional Heterogeneity to Specialized Attention Hybridization</title>
+      <link>https://huggingface.co/papers/2606.20097</link>
+      <guid isPermaLink="false">arxiv:2606.20097</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhentao Tan, Wei Chen, Jingyi Shen, Yao Liu, Xu Shen, Yue Wu, Jieping Ye, Hugging Face Daily Papers (curated)</p>
+<p>The quadratic complexity of attention poses a critical bottleneck for long-context processing, spurring interest in hybrid attention designs. Most open-source hybrid models adopt a layer-wise strategy. Yet, prior work has noted the inherent difficulty of integrating Linear Attention (LA) with Full Attention (FA), suggesting that the design space of attention hybridization remains underexplored. To probe this space, we conduct interpretability analysis and observe that layers exhibit block-wise functional similarity, while individual heads within the same layer display distinct functional specialization despite sharing input features. This head-level heterogeneity suggests that the head dimension provides a natural and principled granularity for fusing heterogeneous attention signals. Building on this insight, we introduce HydraHead, a novel architecture that hybridizes FA and LA along the head axis. HydraHead features two key innovations: (1) an interpretability-driven selection strategy that identifies retrieval-critical heads and preserves FA only for them, and (2) a scale-normalized fusion module that reconciles the distributional gap between FA and LA head outputs. By leveraging a three-stage transfer pipeline with parameter reuse and distillation, we achieve high-performance hybrid models with minimal training overhead. Under a unified training setup, HydraHead outperforms other hybrid designs in long-context tasks while maintaining strong general reasoning. With interpretability-driven head selection, it matches a 3:1 layer-wise hybrid&#x27;s long-context performance at a 7:1 LA-to-FA ratio. Crucially, trained on only 15B tokens, HydraHead achieves over 69% improvement over the baseline at 512K context length, approaching Qwen3.5, a leading model of comparable size with a native context length of 256K. This highlights the significant scaling potential of head-level hybridization.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20097'>page</a> · <a href='https://arxiv.org/pdf/2606.20097'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents</title>
+      <link>https://huggingface.co/papers/2606.18829</link>
+      <guid isPermaLink="false">arxiv:2606.18829</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhe Ren, Yibo Yang, Yimeng Chen, Zijun Zhao, Benshuo Fu, Zhihao Shu, Bingjie Zhang, Yangyang Xu, … <i>(+3 more)</i></p>
+<p>Memory benchmarks for LLM agents largely assume single-user settings, leaving shared assistants for hospitals, workplaces, campuses, and households understudied. In these deployments, multiple principals write to a common memory pool and query it under different roles, scopes, and relationships, so memory quality requires governance as well as recall. We introduce GateMem, a benchmark for multi-principal shared-memory agents. GateMem jointly evaluates utility for legitimate long-horizon requests with state updates, access control across contextual authorization boundaries, and agent-facing active forgetting after explicit deletion requests. It spans medical, office, education, and household domains, with long-form multi-party episodes, incremental memory injection, hidden checkpoints, structured judging, and leak-target annotations. Across diverse baselines and backbone models, no method simultaneously achieves strong utility, robust access control, and reliable forgetting. Long-context prompting often yields the best governance score at high token cost, while retrieval-based and external-memory methods reduce cost yet still leak unauthorized or deleted information. These results show current memory agents remain far from reliable shared institutional deployment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.18829'>page</a> · <a href='https://arxiv.org/pdf/2606.18829'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents</title>
+      <link>https://huggingface.co/papers/2606.22883</link>
+      <guid isPermaLink="false">arxiv:2606.22883</guid>
+      <pubDate>Tue, 23 Jun 2026 05:21:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhanbo Hua, Yifan Yao, Weihao Xie, Yongchi Zhao, Minghao Liu, Ruizhi Qiu, Zhewei Huang, Zun Wang, … <i>(+10 more)</i></p>
+<p>While recent LLM-based terminal agents have demonstrated promising capabilities, the scarcity of high-quality, executable training data remains a critical bottleneck. Existing synthesis pipelines typically scale by retrofitting surface-level artifacts into tasks, frequently yielding ambiguous instructions, shallow execution paths, and brittle tests that provide weak learning signals. To overcome this, we introduce CLI-Universe, a principled synthesis engine that constructs terminal-agent tasks. CLI-Universe generates candidate tasks by sampling combinations across a multi-dimensional capability taxonomy (domain, skill type, capability, and engineering pillar), then grounds each candidate through evidence-guided deep research over real-world technical materials. To ensure rigorous supervision, validated blueprints are instantiated into Dockerized environments and subjected to a multi-stage executable verification pipeline featuring rubric-gated test construction, hint-conditional filtering, and strict fail-to-pass checking. Across the full pipeline, from candidate generation to verification, approximately two-thirds of candidates are discarded, retaining only those that are genuine, verifiable, and non-trivially challenging. To validate our framework, we instantiate a highly distilled dataset of 6,000 trajectories called CLI-Universe-6K. Remarkably, fine-tuning Qwen3-32B on CLI-Universe-6K achieves 33.4% on Terminal-Bench 2.0. This sets a new state-of-the-art for models trained on open-source data at or below 32B parameters, and outperforms several models an order of magnitude larger, demonstrating the profound data efficiency of structured, high-fidelity synthesis.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-22 · <a href='https://huggingface.co/papers/2606.22883'>page</a> · <a href='https://arxiv.org/pdf/2606.22883'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>JanusMesh: Fast and Zero-Shot 3D Visual Illusion Generation via Cross-Space Denoising</title>
       <link>https://huggingface.co/papers/2606.20563</link>
@@ -2254,116 +2353,6 @@
 <p><b>Authors:</b> Heecheol Yun, Joonhyung Park, Joowon Kim, Eunho Yang, Hugging Face Daily Papers (curated)</p>
 <p>Masked Diffusion Language Models (MDLMs) have emerged as a distinct paradigm for sequence generation. As MDLMs become diverse in capabilities and knowledge coverage, an important question is how to combine their knowledge. Toward this, we first investigate the unique decoding dynamics of MDLMs. We find that successful generations exhibit stable confidence dynamics over answer-relevant positions, while unreliable trajectories can often be corrected by injecting promising intermediate states from other models. Guided by this observation, we propose TIE (Trajectory-based Iterative Ensembling), a knowledge fusion framework in which MDLMs iteratively identify reliable decoding trajectories and relay them across models. TIE tracks confidence dynamics over answer-relevant positions to determine which model currently follows a more reliable trajectory and selectively transfers partially denoised sequences across models. As the model on the more promising trajectory often changes across denoising steps, TIE allows different models to contribute complementary strengths at different stages of generation. Strong performance across diverse reasoning tasks, along with our analyses, suggests that TIE offers a practical approach to the underexplored problem of MDLM ensembling.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://huggingface.co/papers/2606.16281'>page</a> · <a href='https://arxiv.org/pdf/2606.16281'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering</title>
-      <link>https://huggingface.co/papers/2606.17049</link>
-      <guid isPermaLink="false">arxiv:2606.17049</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yi-Ruei Liu, Jie-Ying Lee, Zheng-Hui Huang, Yu-Lun Liu, Chih-Hao Lin, Hugging Face Daily Papers (curated)</p>
-<p>Inverse rendering of urban scenes from captured videos enables numerous applications, including content creation and autonomous driving simulation. Physically-based rendering methods follow and control lighting physics, but suffer from reconstruction and rendering artifacts. While generative models produce realistic videos, they offer limited consistency and controllability. We present BRDFusion, a unified framework that combines two complementary models for inverse and forward rendering. Specifically, BRDFusion recovers explicit, consistent scene properties with physical modeling and alleviates optimization ambiguity with generative priors. During forward rendering, the physical model provides controllable rendering from the scene configuration, and the generative model denoises and fixes artifacts. Therefore, our method produces high-quality videos while allowing precise control, outperforming baselines in real and synthetic scenes. Moreover, BRDFusion supports novel-view relighting, night simulation, and dynamic object insertion/editing. Project page: https://shigon255.github.io/brdfusion-page/</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://huggingface.co/papers/2606.17049'>page</a> · <a href='https://arxiv.org/pdf/2606.17049'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Revisiting Outage for Edge Inference Systems</title>
-      <link>https://arxiv.org/abs/2504.03686</link>
-      <guid isPermaLink="false">arxiv:2504.03686</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.NI</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhanwei Wang</p>
-<p><b>Authors:</b> Zhanwei Wang, Qunsong Zeng, Haotian Zheng, Kaibin Huang</p>
-<p>One of the key missions of sixth-generation (6G) mobile networks is to deploy large-scale artificial intelligence (AI) models at the network edge to provide remote-inference services for edge devices. The resultant platform, known as edge inference, will support a wide range of Internet-of-Things applications, such as autonomous driving, industrial automation, and augmented reality. Given the mission-critical and time-sensitive nature of these tasks, it is essential to design edge inference systems that are both reliable and capable of meeting stringent end-to-end (E2E) latency constraints. Existing studies, which primarily focus on communication reliability as characterized by channel outage probability, may fail to guarantee E2E performance, specifically in terms of E2E inference accuracy and latency. To address this limitation, we propose a theoretical framework that introduces and mathematically characterizes the inference outage (InfOut) probability, which quantifies the likelihood that the E2E inference accuracy falls below a target threshold. Under an E2E latency constraint, this framework establishes a fundamental tradeoff between communication overhead (i.e., uploading more sensor observations) and inference reliability as quantified by the InfOut probability. To find a tractable way to optimize this tradeoff, we derive accurate surrogate functions for InfOut probability by applying a Gaussian approximation to the distribution of the received discriminant gain. Experimental results demonstrate the superiority of the proposed design over conventional communication-centric approaches in terms of E2E inference reliability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.NI, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2504.03686'>page</a> · <a href='https://arxiv.org/pdf/2504.03686'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Tackling GNARLy Problems: Graph Neural Algorithmic Reasoning Reimagined through Reinforcement Learning</title>
-      <link>https://arxiv.org/abs/2509.18930</link>
-      <guid isPermaLink="false">arxiv:2509.18930</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Oxford — Nick Hawes</p>
-<p><b>Authors:</b> Alex Schutz, Victor-Alexandru Darvariu, Efimia Panagiotaki, Bruno Lacerda, Nick Hawes</p>
-<p>Neural algorithmic reasoning (NAR) is a paradigm that trains neural networks to execute classic algorithms by supervised learning. Despite its successes, important limitations remain: inability to construct valid solutions without post-processing and to reason about multiple correct ones, poor performance on combinatorial NP-hard problems, and inapplicability to problems for which strong algorithms are not yet known. To address these limitations, we reframe the problem of learning algorithm trajectories as a Markov decision process, which imposes structure on the solution construction procedure and unlocks the powerful tools of imitation and reinforcement learning (RL). We propose the GNARL framework, encompassing the methodology to translate problem formulations from NAR to RL and a learning architecture suitable for a wide range of graph-based problems. We achieve very high graph accuracy results on several CLRS-30 problems, performance matching or exceeding much narrower NAR approaches for NP-hard problems and, remarkably, applicability even when lacking an expert algorithm.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2509.18930'>page</a> · <a href='https://arxiv.org/pdf/2509.18930'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Shift-Invariant Attribute Scoring for Kolmogorov-Arnold Networks via Shapley Value</title>
-      <link>https://arxiv.org/abs/2510.01663</link>
-      <guid isPermaLink="false">arxiv:2510.01663</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, Peking U, Tsinghua, U Michigan — Nan Liu</p>
-<p><b>Authors:</b> Wangxuan Fan, Ching Wang, Siqi Li, Nan Liu</p>
-<p>For many real-world applications, understanding feature-outcome relationships is as crucial as achieving high predictive accuracy. While traditional neural networks excel at prediction, their black-box nature obscures underlying functional relationships. Kolmogorov--Arnold Networks (KANs) address this by employing learnable spline-based activation functions on edges, enabling recovery of symbolic representations while maintaining competitive performance. However, KAN&#x27;s architecture presents unique challenges for network pruning. Conventional magnitude-based methods become unreliable due to sensitivity to input coordinate shifts. We propose \textbf{ShapKAN}, a pruning framework using Shapley value attribution to assess node importance in a shift-invariant manner. Unlike magnitude-based approaches, ShapKAN quantifies each node&#x27;s actual contribution, ensuring consistent importance rankings regardless of input parameterization. Extensive experiments on synthetic and real-world datasets demonstrate that ShapKAN preserves true node importance while enabling effective network compression. Our approach improves KAN&#x27;s interpretability advantages, facilitating deployment in resource-constrained environments.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2510.01663'>page</a> · <a href='https://arxiv.org/pdf/2510.01663'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Quantized Evolution Strategies: High-precision Fine-tuning of Quantized LLMs at Low-precision Cost</title>
-      <link>https://arxiv.org/abs/2602.03120</link>
-      <guid isPermaLink="false">arxiv:2602.03120</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Harvard, Tsinghua — Yinggan Xu</p>
-<p><b>Authors:</b> Yinggan Xu, Kajetan Schweighofer, Risto Miikkulainen, Xin Qiu</p>
-<p>Post-Training Quantization (PTQ) is essential for deploying Large Language Models (LLMs) on memory-constrained devices, yet it renders models static and difficult to fine-tune. Standard fine-tuning paradigms, including Reinforcement Learning (RL), fundamentally rely on backpropagation and continuous weights to compute gradients. Thus they cannot be used on quantized models, where the parameter space is discrete and non-differentiable. While Evolution Strategies (ES) offer a backpropagation-free alternative, optimization of the quantized parameters can still fail due to vanishing or inaccurate gradient estimation. This paper introduces Quantized Evolution Strategies (QES), an optimization paradigm that performs full-parameter fine-tuning directly in the quantized space. QES is based on two innovations: (1) it integrates accumulated error feedback to preserve high-precision weight updating signals, and (2) it utilizes a stateless seed replay to reduce memory usage to low-precision inference levels. QES significantly outperforms the state-of-the-art zeroth-order fine-tuning methods on a variety of tasks, making direct fine-tuning for quantized models possible. It therefore opens up the possibility for scaling up LLMs entirely in the quantized space. The source code is available at https://github.com/dibbla/Quantized-Evolution-Strategies .</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2602.03120'>page</a> · <a href='https://arxiv.org/pdf/2602.03120'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Low-Burden LLM-Based Preference Learning: Personalizing Assistive Robots from Natural Language Feedback for Users with Paralysis</title>
-      <link>https://arxiv.org/abs/2604.01463</link>
-      <guid isPermaLink="false">arxiv:2604.01463</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <category>cs.HC</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Caltech — Wei Gao</p>
-<p><b>Authors:</b> Keshav Shankar, Dan Ding, Wei Gao</p>
-<p>Physically Assistive Robots require personalized behaviors to ensure user safety and comfort. However, traditional preference learning methods, like exhaustive pairwise comparisons, cause substantial physical and cognitive fatigue for users with severe motor impairments. To solve this, we propose a low-burden, offline framework that translates unstructured natural language feedback directly into deterministic robotic control policies. To safely bridge the gap between ambiguous human speech and robotic code, our pipeline uses Large Language Models (LLMs) grounded in the Occupational Therapy Practice Framework. This clinical reasoning decodes subjective user reactions into explicit physical and psychological needs, which are then mapped into transparent decision trees. Before deployment, an automated &quot;LLM-as-a-Judge&quot; verifies the code&#x27;s structural safety. We validated this system in a simulated meal preparation study with 10 adults with paralysis. Results show our natural language approach significantly reduces user workload compared to traditional baselines. Additionally, occupational therapists confirmed the generated policies are safe and accurately reflect user preferences.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.HC · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2604.01463'>page</a> · <a href='https://arxiv.org/pdf/2604.01463'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Ontology Memory-Augmented ASR Correction for Long Text-Speech Interleaved Conversations</title>
-      <link>https://arxiv.org/abs/2606.13464</link>
-      <guid isPermaLink="false">arxiv:2606.13464</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Cornell, Harvard, Peking U — Min Zhang</p>
-<p><b>Authors:</b> Xinxin Li, Huiyao Chen, Meishan Zhang, Yunxin Li, Zulong Chen, Zhibo Ren, Xiaoqing Dong, Baotian Hu, … <i>(+1 more)</i></p>
-<p>Automatic speech recognition (ASR) correction has traditionally focused on isolated utterances or short local contexts. However, as text and speech become increasingly interleaved in long interactions, ASR correction requires conversation-level contextual evidence. Existing ASR correction methods often rely on the current hypothesis or concatenate raw dialogue history. In such contexts, sparse correction evidence can be difficult to locate amid redundancy and noise. Addressing these challenges, we propose an ontology memory-augmented ASR correction framework for long text-speech interleaved conversations. The framework organizes preceding interaction history into a dynamically updatable ontology memory, where entities, terminology, surface variants, potential ASR confusions, and semantic relations are stored as retrievable nodes for context-grounded correction. To evaluate this setting, we construct RAMC-Corr, a dataset derived from MAGIC-RAMC for long-range ASR correction with grounded context. Experiments on RAMC-Corr show that our method improves over direct correction in 9 out of 10 paired backbone-setting combinations and encourages more selective and evidence-grounded corrections for context-dependent ASR errors.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2606.13464'>page</a> · <a href='https://arxiv.org/pdf/2606.13464'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Efficient Temporal Modeling for Mobile Sleep Staging via Lightweight Random Attention</title>
-      <link>https://arxiv.org/abs/2606.13694</link>
-      <guid isPermaLink="false">arxiv:2606.13694</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>eess.SP</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, U Michigan — Guisong Liu</p>
-<p><b>Authors:</b> Guisong Liu, Pengfei Wei, Jainsong Zhang, Martin Dresler</p>
-<p>Mobile sleep staging serves as a foundational infrastructure for in-home sleep monitoring and closed-loop modulation. But existing sequential models such as RNNs and Transformers are computationally expensive for mobile deployment. In this paper, we propose Random Attention (RA), a lightweight temporal modeling module based on fixed random projections, which replaces learnable sequence modeling with similarity-based aggregation. RA introduces little additional parameters beyond the epoch encoder while enabling effective temporal smoothing. We further provide a theoretical interpretation via the Random Attention Prior Kernel (RAPK), which decomposes RA into a global smoothing term and a feature similarity term, offering an interpretable view of temporal sleep structure. Experiments on Sleep-EDF-20 and Sleep-EDF-78 show that RA consistently improves epoch-wise baselines by 1-3\% in accuracy and F1 score, while achieving competitive performance compared with LSTM, GRU, and Transformer models. RA also demonstrates strong generalization across different backbone encoders and improved robustness over conventional temporal smoothing methods. These results indicate that efficient sleep staging can be achieved through lightweight similarity-based temporal aggregation, making RA suitable for real-time wearable applications.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SP, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2606.13694'>page</a> · <a href='https://arxiv.org/pdf/2606.13694'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>HierSVA: A Data Synthesis Pipeline, Dataset, and Benchmark for LLM-Driven Hierarchical Hardware Formal Verification</title>
-      <link>https://arxiv.org/abs/2606.13706</link>
-      <guid isPermaLink="false">arxiv:2606.13706</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.AR</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Georgia Tech, Peking U, Tsinghua, U Washington — (senior)</p>
-<p><b>Authors:</b> Maohua Nie, Jiang Zhu, Jingqun Zhang, Zhichen Zeng, Jiayi Wang, Sibo Zhang, Jialin Wang, C. -J. Richard Shi</p>
-<p>We present HierSVA, an integrated suite that combines a pipeline, dataset, and benchmark for LLM-driven hierarchical hardware formal verification. HierSVA-SP pairs an RTL preprocessing toolchain with an LLM-in-the-loop formal verification flow to produce reference SystemVerilog Assertions (SVA) on hierarchical RTL. Applying it to BaseJump STL yields HierSVA-DS, a dataset of 342 modules, with hierarchy metadata and depths 0--9, accompanied by a deep subset of 28 module-bug pairs with natural-language specifications and bug variants. HierSVA-B decomposes assertion quality into six metric axes: syntax correctness, assertion proof success rate, vacuity, specification faithfulness, mutation coverage, and formal core coverage. Applying HierSVA-B to twelve recent LLMs reveals three findings. First, the module-level compile rate is 67.1\%; among generated assertions in evaluable runs, 82.1\% prove non-vacuously, but the corresponding assertion sets detect only 70.2\% of eligible injected faults and cover 36.2\% of the formal core. Second, on 211 evaluable model--module entries in the deep subset, assertion sets flag buggy RTL with 0.87 recall, but 40\% of predicted-buggy outcomes are false positives on correct RTL, limiting precision to 0.60. Third, agentic mode improves S1-style provability and strength metrics, but gains plateau and oscillate. Codes and artifacts are available at \href{https://github.com/HierSVAAnon/HierSVACodeAndArtifacts}{https://github.com/HierSVAAnon/HierSVACodeAndArtifacts}. Dataset is available at \href{https://huggingface.co/datasets/AnonymousHierSVA/HierSVA}{https://huggingface.co/datasets/AnonymousHierSVA/HierSVA}.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AR, cs.AI · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://arxiv.org/abs/2606.13706'>page</a> · <a href='https://arxiv.org/pdf/2606.13706'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
