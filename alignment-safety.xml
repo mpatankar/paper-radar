@@ -5,8 +5,54 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 23 Jun 2026 05:21:09 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 05:20:33 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Societal Alignment Frameworks Can Improve LLM Alignment</title>
+      <link>https://arxiv.org/abs/2503.00069</link>
+      <guid isPermaLink="false">arxiv:2503.00069</guid>
+      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
+      <category>cs.CY</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research, Google DeepMind · <b>Tier-2 senior:</b> MILA, Tel Aviv U, U Toronto — (senior)</p>
+<p><b>Authors:</b> Karolina Stańczak, Nicholas Meade, Mehar Bhatia, Hattie Zhou, Konstantin Böttinger, Jeremy Barnes, Jason Stanley, Jessica Montgomery, … <i>(+9 more)</i></p>
+<p>Recent progress in large language models (LLMs) has focused on producing responses that meet human expectations and align with shared values - a process coined alignment. However, aligning LLMs remains challenging due to the inherent disconnect between the complexity of human values and the narrow nature of the technological approaches designed to address them. Current alignment methods often lead to misspecified objectives, reflecting the broader issue of incomplete contracts, the impracticality of specifying a contract between a model developer, and the model that accounts for every scenario in LLM alignment. In this paper, we argue that improving LLM alignment requires incorporating insights from societal alignment frameworks, including social, economic, and contractual alignment, and discuss potential solutions drawn from these domains. Given the role of uncertainty within societal alignment frameworks, we then investigate how it manifests in LLM alignment. We end our discussion by offering an alternative view on LLM alignment, framing the underspecified nature of its objectives as an opportunity rather than perfect their specification. Beyond technical improvements in LLM alignment, we discuss the need for participatory alignment interface designs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-23 · <a href='https://arxiv.org/abs/2503.00069'>page</a> · <a href='https://arxiv.org/pdf/2503.00069'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DataClaw0: Agentic Tailoring Multimodal Data from Raw Streams</title>
+      <link>https://huggingface.co/papers/2606.21337</link>
+      <guid isPermaLink="false">arxiv:2606.21337</guid>
+      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Cong Wan, Zeyu Guo, Zijian Cai, Jiangyang Li, SongLin Dong, Lin Peng, Xiangyang Luo, Zhiheng Ma, … <i>(+2 more)</i></p>
+<p>Massive unstructured multimodal streams suffer from high &quot;data entropy,&quot; impeding both efficient human knowledge acquisition and high-quality AI post-training. Existing passive annotation paradigms, heavily reliant on heuristic rules or general VLMs, are costly, monotonous, and fail to unlock the deep procedural logic embedded in raw data. We elevate data processing to a learnable capability, proposing a paradigm shift towards Agentic Data Tailoring, which actively refining and structuring data to align with diverse user and downstream intents. To overcome the data scarcity bottleneck in training such high-order capabilities, we design a two-stage pipeline grounding generative semantic synthesis in deterministic Factual Anchors, yielding a large-scale dataset spanning five core physical and digital domains. Building upon this, DataClaw_0-9B model synergizes Supervised Fine-Tuning (SFT) with Group Relative Policy Optimization (GRPO), achieving robust alignment with complex refinement and tailoring intents. To systematically quantify this capability, we construct DataClaw_0-val, the first benchmark dedicated to data refinement. Crucially, we adopt downstream post-training as the ultimate validation touchstone. Evaluations on video generation, real-world VQA, and GUI navigation confirm that DataClaw_0 delivers high-information-density tailored data, facilitating efficient model adaptation to new tasks under limited training data regimes. Project page: https://czjdsg.github.io/MakeAnyData</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-19 · <a href='https://huggingface.co/papers/2606.21337'>page</a> · <a href='https://arxiv.org/pdf/2606.21337'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding</title>
+      <link>https://huggingface.co/papers/2606.21906</link>
+      <guid isPermaLink="false">arxiv:2606.21906</guid>
+      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xuanming Zhang, Sining Zhoubian, Yuxuan Chen, Tianyi Tang, An Yang, Sean Du, Chujie Zheng, Fei Huang, … <i>(+4 more)</i></p>
+<p>Autoregressive generation in large language models (LLMs) conventionally decodes from the final layer, assuming that deeper representations yield more reliable next-token predictions. We revisit this assumption by revealing a recurring Guess-Refine-Perturb dynamic: early layers form coarse guesses, intermediate layers refine reasoning-relevant semantics, and final layers can perturb these refined predictions toward generic or alignment-preferred tokens. We introduce Confident Decoding, a training-free decoding strategy that dynamically selects the most reliable near-final layer through entropy-guided conservative backward search. We further provide a theoretical formulation of layer selection as an optimal stopping problem, showing that under bounded projection noise and dominant late-stage alignment perturbation, our search rule filters perturbation while bounding the loss relative to the oracle refinement layer. Experiments across dense and Mixture-of-Experts LLMs demonstrate consistent gains on challenging reasoning benchmarks, including GPQA-Diamond, Omni-MATH, and HLE, with zero memory overhead and less than 2% latency increase. These results suggest dynamically bypassing final-layer perturbations can unlock stronger reasoning behavior from aligned LLMs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-20 · <a href='https://huggingface.co/papers/2606.21906'>page</a> · <a href='https://arxiv.org/pdf/2606.21906'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SkillHarness: Harnessing Safe Skills for Computer-Use Agents</title>
+      <link>https://huggingface.co/papers/2606.20636</link>
+      <guid isPermaLink="false">arxiv:2606.20636</guid>
+      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yurun Chen, Biao Yi, Keting Yin, Shengyu Zhang, Hugging Face Daily Papers (curated)</p>
+<p>Computer-Use Agents (CUAs) are increasingly deployed in dynamic interactive environments, creating a growing need for continual skill learning during interaction. Recent approaches address this challenge by learning reusable skills from successful trajectories. However, these skill learning methods largely assume static and safe environments, overlooking risks from adversarial interactions (e.g., prompt injections) and environmental dynamics (e.g., pop-ups). In dynamic settings, such assumptions can lead to risky skill learning and brittle execution, undermining the reliability of CUAs. This raises the question: how can CUAs learn and use skills safely in dynamic environments? To address this problem, we propose SkillHarness, a framework for safe skill harnessing in dynamic environments. SkillHarness moves beyond static skill abstractions by modeling skill learning and utilization as a safety-constrained interaction process. Specifically, we introduce the skill boundary that leverages multi-source supervision signals to identify safe skills from interaction trajectories, and construct self-improving safety constraints throughout the skill lifecycle. In addition, SkillHarness introduces selective skill reuse, where tasks are guided to decompose according to context and completed through the selective activation of skill subsets. Our experiments demonstrate that SkillHarness significantly reduces the unsafe rate of learned skills by 57.1% and consistently improves execution stability under dynamic environmental changes, outperforming existing baselines.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-02 · <a href='https://huggingface.co/papers/2606.20636'>page</a> · <a href='https://arxiv.org/pdf/2606.20636'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>MemSlides: A Hierarchical Memory Driven Agent Framework for Personalized Slide Generation with Multi-turn Local Revision</title>
       <link>https://huggingface.co/papers/2606.17162</link>
@@ -2385,49 +2431,6 @@
 <p><b>Authors:</b> Yixin Liu, Ruoxi Chen, Xun Chen, Lichao Sun</p>
 <p>Personalized diffusion models (PDMs) have become prominent for adapting pre-trained text-to-image models to generate images of specific subjects using minimal training data. However, PDMs are susceptible to minor adversarial perturbations, leading to significant degradation when fine-tuned on corrupted datasets. These vulnerabilities are exploited to create protective perturbations that prevent unauthorized image generation. Existing purification methods attempt to red-team the protective perturbation to break the protection but often over-purify images, resulting in information loss. In this work, we conduct an in-depth analysis of the fine-tuning process of PDMs through the lens of shortcut learning. We hypothesize and empirically demonstrate that adversarial perturbations induce a latent-space misalignment between images and their text prompts in the CLIP embedding space. This misalignment causes the model to erroneously associate noisy patterns with unique identifiers during fine-tuning, resulting in poor generalization. Based on these insights, we propose a systematic red-teaming framework that includes data purification and contrastive decoupling learning. We first employ off-the-shelf image restoration techniques to realign images with their original semantic content in latent space. Then, we introduce contrastive decoupling learning with noise tokens to decouple the learning of personalized concepts from spurious noise patterns. Our study not only uncovers shortcut learning vulnerabilities in PDMs but also provides a thorough evaluation framework for developing stronger protection. Our extensive evaluation demonstrates its advantages over existing purification methods and its robustness against adaptive perturbations.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CR · <a href='https://arxiv.org/abs/2406.18944'>page</a> · <a href='https://arxiv.org/pdf/2406.18944'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AgenticEval: Toward Agentic and Self-Evolving Safety Evaluation of Large Language Models</title>
-      <link>https://arxiv.org/abs/2509.26100</link>
-      <guid isPermaLink="false">arxiv:2509.26100</guid>
-      <pubDate>Mon, 18 May 2026 15:22:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U — Yingchun Wang</p>
-<p><b>Authors:</b> Yixu Wang, Xin Wang, Yang Yao, Xinyuan Li, Xibang Yang, Yan Teng, Xingjun Ma, Yingchun Wang</p>
-<p>The rapid integration of Large Language Models (LLMs) into high-stakes domains necessitates reliable safety and compliance evaluation. However, existing static benchmarks are ill-equipped to address the dynamic nature of AI risks and evolving regulations, creating a critical safety gap. This paper introduces a new paradigm of agentic safety evaluation, reframing evaluation as a continuous and self-evolving process rather than a one-time audit. We then propose a novel multi-agent framework AgenticEval, which autonomously ingests unstructured policy documents to generate and perpetually evolve a comprehensive safety benchmark. AgenticEval leverages a synergistic pipeline of specialized agents and incorporates a Self-evolving Evaluation loop, where the system learns from evaluation results to craft progressively more sophisticated and targeted test cases. Our experiments demonstrate the effectiveness of AgenticEval, showing a consistent decline in model safety as the evaluation hardens. For instance, GPT-5&#x27;s safety rate on the EU AI Act drops from 72.50% to 36.36% over successive iterations. These findings reveal the limitations of static assessments and highlight our framework&#x27;s ability to uncover deep vulnerabilities missed by traditional methods, underscoring the urgent need for dynamic evaluation ecosystems to ensure the safe and responsible deployment of advanced AI.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2509.26100'>page</a> · <a href='https://arxiv.org/pdf/2509.26100'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems</title>
-      <link>https://arxiv.org/abs/2605.01758</link>
-      <guid isPermaLink="false">arxiv:2605.01758</guid>
-      <pubDate>Mon, 18 May 2026 15:17:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Yue Ma</p>
-<p><b>Authors:</b> Yue Ma, Ziyuan Yang, Yi Zhang</p>
-<p>Large multimodal model-based Multi-Agent Systems (MASs) enable collaborative complex problem solving through specialized agents. However, MASs are vulnerable to infectious jailbreak, where compromising a single agent can spread to others, leading to widespread compromise. Existing defenses counter this by training a more contagious cure factor, biasing agents to retrieve it over virus adversarial examples (VirAEs). However, this homogenizes agent responses, providing only superficial suppression rather than true recovery. We revisit these defenses, which operate globally via a shared cure factor, while infectious jailbreak arise from localized interaction behaviors. This mismatch limits their effectiveness. To address this, we propose a training-free Foresight-Guided Local Purification (FLP) framework, where each agent reasons over future interactions to track behavioral evolution and eliminate infections. Specifically, each agent simulates future behavioral trajectories over subsequent chat rounds. To reflect diversity in MASs, we introduce a multi-persona simulation strategy for robust prediction across interaction contexts. We then use response diversity as a diagnostic signal to detect infection by analyzing inconsistencies across persona-based predictions at both retrieval-result and semantic levels. For infected agents, we apply localized purification: recent infections are mitigated via immediate album rollback, while long-term infections are handled using Recursive Binary Diagnosis (RBD), which recursively partitions the image album and applies the same diagnosis strategy to localize and eliminate VirAEs. Experiments show that FLP reduces the maximum cumulative infection rate from over 95% to below 5.47%. Moreover, retrieval and semantic metrics closely match benign baselines, indicating effective preservation of interaction diversity.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2605.01758'>page</a> · <a href='https://arxiv.org/pdf/2605.01758'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Attractor Geometry of Transformer Memory: From Conflict Arbitration to Confident Hallucination</title>
-      <link>https://arxiv.org/abs/2605.05686</link>
-      <guid isPermaLink="false">arxiv:2605.05686</guid>
-      <pubDate>Mon, 18 May 2026 15:12:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MIT — Ila Fiete</p>
-<p><b>Authors:</b> Qiyao Liang, Risto Miikkulainen, Ila Fiete</p>
-<p>Language models draw on two knowledge sources: facts baked into weights (parametric memory, PM) and information in context (working memory, WM). We study two mechanistically distinct failure modes--conflict, when PM and WM disagree and interfere; and hallucination, when the queried fact was never learned. Both produce confident output regardless, making output-based monitoring blind by design. We show both failures share a unified geometric account. In the hidden-state space of autoregressive generation, learned facts form attractor basins. Conflict is basin competition: WM disrupts convergence to the correct basin without raising output entropy. Hallucination is basin absence: the hidden state drifts freely when no memorized basin exists. The frozen LM head, designed for next-token prediction, cannot distinguish these cases and fires confidently either way. We verify this account in a controlled synthetic task-entity identifiers mapped to unique codes with PM installed via LoRA adapters--where ground truth is exact and component roles can be causally isolated through targeted adapter placement. Geometric margin--the hidden state&#x27;s distance to the nearest memorized basin--reads this geometry directly and separates correct recall from hallucination far more cleanly than output entropy, with zero false refusals where entropy-based detection cannot avoid rejecting the vast majority of correct outputs. The separation holds on natural-language factual queries from the pretrained model with no adaptation, confirming attractor geometry is structural rather than a fine-tuning artifact. The fraction of confident hallucinations follows a scaling law $C = \exp(-c/\barΔ)$, growing with scale even as overall error rates fall. Hidden states reliably encode epistemic state; the frozen output head systematically erases it--and this erasure worsens with scale.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <a href='https://arxiv.org/abs/2605.05686'>page</a> · <a href='https://arxiv.org/pdf/2605.05686'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Test-Time Alignment for Large Language Models via Textual Model Predictive Control</title>
-      <link>https://research.nvidia.com/publication/2026-04_test-time-alignment-large-language-models-textual-model-predictive-control</link>
-      <guid isPermaLink="false">nvidia_research:e6180f633f</guid>
-      <pubDate>Mon, 18 May 2026 15:07:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> NVIDIA Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-04_test-time-alignment-large-language-models-textual-model-predictive-control'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
