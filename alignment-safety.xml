@@ -5,8 +5,53 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 25 Jun 2026 05:21:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 05:28:55 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Tuning Language Models by Mixture-of-Depths Ensemble</title>
+      <link>https://arxiv.org/abs/2410.13077</link>
+      <guid isPermaLink="false">arxiv:2410.13077</guid>
+      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Imperial College — Lucia Specia</p>
+<p><b>Authors:</b> Haoyan Luo, Lucia Specia</p>
+<p>Transformer-based Large Language Models (LLMs) traditionally rely on final-layer loss for finetuning and final-layer representations for predictions, potentially overlooking the predictive power embedded in late layers. Interpretability tools such as the logit lens show that late-layer representations already carry largely formed, task-relevant predictions; here we ask whether that observation can be turned into an actionable training signal. We find that focusing tuning effort on these layers can yield losses comparable to those of the final layer, with complementary test-time behaviour. Building on this, we introduce a tuning framework, Mixture-of-Depths Ensemble (MoDE), which treats the late layers as an ensemble that contributes to the final logits through learned routing weights. MoDE can be applied on top of any existing tuning method (e.g., LoRA) and, in our experiments, modestly improves reasoning performance at a small parameter overhead. We present MoDE as a mechanism study showing that late-layer logits can be made directly useful for tuning, and that they can substitute for substantially larger trainable modules with comparable performance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://arxiv.org/abs/2410.13077'>page</a> · <a href='https://arxiv.org/pdf/2410.13077'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Human-AI Complementarity: A Goal for Amplified Oversight</title>
+      <link>https://arxiv.org/abs/2510.26518</link>
+      <guid isPermaLink="false">arxiv:2510.26518</guid>
+      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.HC</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Rishub Jain, Sophie Bridgers, Lili Janzer, Rory Greig, Tian Huey Teh, Vladimir Mikulik</p>
+<p>Human feedback is critical for aligning AI systems to human values. As AI capabilities improve and AI is used to tackle more challenging tasks, verifying quality and safety becomes increasingly challenging. This paper explores how we can leverage AI to improve the quality of human oversight. We focus on an important safety problem that is already challenging for humans: fact-verification of AI outputs. We find that combining AI ratings and human ratings based on AI rater confidence is better than relying on either alone. Giving humans an AI fact-verification assistant further improves their accuracy, but the type of assistance matters. Displaying AI explanation, confidence, and labels leads to over-reliance, but just showing search results and evidence fosters more appropriate trust. These results have implications for Amplified Oversight -- the challenge of combining humans and AI to supervise AI systems even as they surpass human expert performance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.HC · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://arxiv.org/abs/2510.26518'>page</a> · <a href='https://arxiv.org/pdf/2510.26518'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GPUArmor: A Hardware-Software Co-design for Efficient and Scalable Memory Safety on GPUs</title>
+      <link>https://research.nvidia.com/publication/2026-05_gpuarmor-hardware-software-co-design-efficient-and-scalable-memory-safety-gpus</link>
+      <guid isPermaLink="false">nvidia_research:de1a5d2239</guid>
+      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-05_gpuarmor-hardware-software-co-design-efficient-and-scalable-memory-safety-gpus'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation</title>
+      <link>https://huggingface.co/papers/2606.26087</link>
+      <guid isPermaLink="false">arxiv:2606.26087</guid>
+      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihira, Kazumi Fukuda, Jahyeok Koo, … <i>(+4 more)</i></p>
+<p>Synthesizing a novel-view video from a monocular reference video along a target camera trajectory requires both geometric consistency and motion fidelity with respect to the reference video. Existing methods based on explicit 3D representations are limited by the accuracy of off-the-shelf reconstruction modules, which often produce inaccurate geometry for dynamic objects in monocular videos. In contrast, camera-conditioning-only methods can achieve high visual quality but often struggle to preserve geometric and motion consistency. In this work, we introduce MVTrack4Gen (Multi-View point Tracking for Novel-View Generation), a motion-aware training framework that leverages multi-view point tracking as an additional geometric and motion supervision signal for camera-conditioning-only novel-view video diffusion models. Our key finding is that specific attention layers encode strong correspondence cues, where query features attend to key features at geometrically corresponding locations across views and over time, and the misalignment of these correspondences causes motion inconsistency. Based on this observation, we route these features into an auxiliary multi-view tracking head and jointly train the diffusion model with a point-tracking objective. By explicitly strengthening these motion-aware correspondences, MVTrack4Gen improves existing models to better follow the motion in the reference view and maintain cross-view geometric consistency. Across diverse benchmarks, our method achieves state-of-the-art geometric consistency and competitive camera accuracy.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://huggingface.co/papers/2606.26087'>page</a> · <a href='https://arxiv.org/pdf/2606.26087'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Towards Understanding The Calibration Benefits of Sharpness-Aware Minimization</title>
       <link>https://arxiv.org/abs/2505.23866</link>
@@ -2380,55 +2425,6 @@
 <p><b>Authors:</b> Haolin Li, Haipeng Zhang, Mang Li, Yaohua Wang, Lijie Wen, Yu Zhang, Biqing Huang</p>
 <p>Large language models (LLMs) continue to struggle with low-resource languages, primarily due to limited training data, translation noise, and unstable cross-lingual alignment. To address these challenges, we propose LiRA (Linguistic Robust Anchoring for LLMs)-a plug-and-play framework that requires only lightweight fine-tuning on top of existing pretrained backbones. LiRA jointly optimizes representation stability and cross-lingual semantic consistency by combining two key components: Arca (Anchored Representation Composition Architecture), which aligns low-resource inputs to a shared English semantic space through anchor-based alignment and collaborative encoding; and LaSR (Language-coupled Semantic Reasoner), a lightweight, language-aware head that enforces consistency regularization for unified cross-lingual understanding, retrieval, and reasoning. We theoretically show that under controlled anchoring error and translation-induced bias, LiRA guarantees bounded representation deviation and stable downstream performance under local Lipschitz continuity. To facilitate research, we release a new multilingual product retrieval dataset covering five Southeast Asian and two South Asian languages. Extensive experiments across diverse low-resource benchmarks demonstrate consistent improvements in retrieval, ranking, question answering, and reasoning tasks. Code will be publicly available on GitHub, and the dataset will be hosted on Hugging Face.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2510.14466'>page</a> · <a href='https://arxiv.org/pdf/2510.14466'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Bayesian Geometry of Transformer Attention</title>
-      <link>https://arxiv.org/abs/2512.22471</link>
-      <guid isPermaLink="false">arxiv:2512.22471</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>stat.ML</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Vishal Misra</p>
-<p><b>Authors:</b> Naman Agarwal, Siddhartha R. Dalal, Vishal Misra</p>
-<p>Transformers often appear to perform Bayesian reasoning in context, but verifying this rigorously has been impossible: natural data lack analytic posteriors, and large models conflate reasoning with memorization. We address this by constructing \emph{Bayesian wind tunnels} -- controlled environments where the true posterior is known in closed form and memorization is provably impossible. In these settings, small transformers reproduce Bayesian posteriors with $10^{-3}$-$10^{-4}$ bit accuracy, while capacity-matched MLPs fail by orders of magnitude, establishing a clear architectural separation. Across two tasks -- bijection elimination and Hidden Markov Model (HMM) state tracking -- we find that transformers implement Bayesian inference through a consistent geometric mechanism: residual streams serve as the belief substrate, feed-forward networks perform the posterior update, and attention provides content-addressable routing. Geometric diagnostics reveal orthogonal key bases, progressive query-key alignment, and a low-dimensional value manifold parameterized by posterior entropy. During training this manifold unfurls while attention patterns remain stable, a \emph{frame-precision dissociation} predicted by recent gradient analyses. Taken together, these results demonstrate that hierarchical attention realizes Bayesian inference by geometric design, explaining both the necessity of attention and the failure of flat architectures. Bayesian wind tunnels provide a foundation for mechanistically connecting small, verifiable systems to reasoning phenomena observed in large language models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, stat.ML · <b>arXiv submitted:</b> 2026-05-16 · <a href='https://arxiv.org/abs/2512.22471'>page</a> · <a href='https://arxiv.org/pdf/2512.22471'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Enhancing Cloud Network Resilience via a Robust LLM-Empowered Multi-Agent Reinforcement Learning Framework</title>
-      <link>https://arxiv.org/abs/2601.07122</link>
-      <guid isPermaLink="false">arxiv:2601.07122</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Cornell — Yuling Liu</p>
-<p><b>Authors:</b> Yixiao Peng, Hao Hu, Feiyang Li, Xinye Cao, Yingchang Jiang, Jipeng Tang, Guoshun Nan, Yuling Liu</p>
-<p>While virtualization and resource pooling empower cloud networks with structural flexibility and elastic scalability, they inevitably expand the attack surface and challenge cyber resilience. Reinforcement Learning (RL)-based defense strategies have been developed to optimize resource deployment and isolation policies under adversarial conditions, aiming to enhance system resilience by maintaining and restoring network availability. However, existing approaches lack robustness as they require retraining to adapt to dynamic changes in network structure, node scale, attack strategies, and attack intensity. Furthermore, the lack of Human-in-the-Loop (HITL) support limits interpretability and flexibility. To address these limitations, we propose CyberOps-Bots, a hierarchical multi-agent reinforcement learning framework empowered by Large Language Models (LLMs). Inspired by MITRE ATT&amp;CK&#x27;s Tactics-Techniques model, CyberOps-Bots features a two-layer architecture: (1) An upper-level LLM agent with four modules--ReAct planning, IPDRR-based perception, long-short term memory, and action/tool integration--performs global awareness, human intent recognition, and tactical planning; (2) Lower-level RL agents, developed via heterogeneous separated pre-training, execute atomic defense actions within localized network regions. This synergy preserves LLM adaptability and interpretability while ensuring reliable RL execution. Experiments on real cloud datasets show that, compared to state-of-the-art algorithms, CyberOps-Bots maintains network availability 68.5% higher and achieves a 34.7% jumpstart performance gain when shifting the scenarios without retraining. To our knowledge, this is the first study to establish a robust LLM-RL framework with HITL support for cloud defense.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2601.07122'>page</a> · <a href='https://arxiv.org/pdf/2601.07122'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RVPO: Risk-Sensitive Alignment via Variance Regularization</title>
-      <link>https://machinelearning.apple.com/research/rvpo-risk-sensitive-alignment</link>
-      <guid isPermaLink="false">apple_ml:aeb483bf19</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Current critic-less RLHF methods aggregate multi-objective rewards via an arithmetic mean, leaving them vulnerable to constraint neglect: high-magnitude success in one objective can numerically offset critical failures in others (e.g., safety or formatting), masking low-performing âbottleneckâ rewards vital for reliable multi-objective alignment. We propose Reward-Variance Policy Optimization (RVPO), a risk-sensitive framework that penalizes inter-reward variance during advantage aggregation, shifting the objective from âmaximize sumâ to âmaximize consistency.â We show via Taylor expansionâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-05-08 · <a href='https://machinelearning.apple.com/research/rvpo-risk-sensitive-alignment'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>FlipAttack: Jailbreak LLMs via Flipping</title>
-      <link>https://arxiv.org/abs/2410.02832</link>
-      <guid isPermaLink="false">arxiv:2410.02832</guid>
-      <pubDate>Mon, 18 May 2026 15:37:16 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> NUS — Bryan Hooi</p>
-<p><b>Authors:</b> Yue Liu, Xiaoxin He, Miao Xiong, Jinlan Fu, Shumin Deng, Yingwei Ma, Jiaheng Zhang, Bryan Hooi</p>
-<p>This paper proposes a simple yet effective jailbreak attack named FlipAttack against black-box LLMs. First, from the autoregressive nature, we reveal that LLMs tend to understand the text from left to right and find that they struggle to comprehend the text when noise is added to the left side. Motivated by these insights, we propose to disguise the harmful prompt by constructing left-side noise merely based on the prompt itself, then generalize this idea to 4 flipping modes. Second, we verify the strong ability of LLMs to perform the text-flipping task, and then develop 4 variants to guide LLMs to denoise, understand, and execute harmful behaviors accurately. These designs keep FlipAttack universal, stealthy, and simple, allowing it to jailbreak black-box LLMs within only 1 query. Experiments on 8 LLMs demonstrate the superiority of FlipAttack. Remarkably, it achieves $\sim$98\% attack success rate on GPT-4o, and $\sim$98\% bypass rate against 5 guardrail models on average. The codes are available at GitHub\footnote{https://github.com/yueliu1999/FlipAttack}.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <a href='https://arxiv.org/abs/2410.02832'>page</a> · <a href='https://arxiv.org/pdf/2410.02832'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
