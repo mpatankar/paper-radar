@@ -5,8 +5,52 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Fri, 26 Jun 2026 05:28:55 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 05:18:57 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2606.26790</link>
+      <guid isPermaLink="false">arxiv:2606.26790</guid>
+      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shuo Yang, Jinyang Wu, Zhengxi Lu, Yuhao Shen, Fan Zhang, Lang Feng, Shuai Zhang, Haoran Luo, … <i>(+4 more)</i></p>
+<p>Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or suppressed. On-policy self-distillation offers dense token-level supervision, yet existing skill-conditioned variants often rely on external skill memories or retrieved privileged context, which are costly to maintain and can be mismatched with the state distribution induced by the current policy in multi-turn interaction. We propose OPID (On-Policy Skill Distillation), a framework that extracts skill supervision directly from completed on-policy trajectories. OPID represents trajectory hindsight as hierarchical skills: episode-level skills capture global workflows or failure-avoidance rules, while step-level skills capture local decision knowledge at critical timesteps. A critical-first routing mechanism uses step-level skills when critical decisions are identified and falls back to episode-level skills as default guidance otherwise. The selected skill is injected into the interaction history, allowing the old policy to re-score the same sampled response under both original and skill-augmented contexts. The resulting log-probability shift yields a token-level self-distillation advantage, which is combined with the outcome advantage for policy optimization. OPID thus preserves RL as the primary training objective while introducing dense, distribution-matched hindsight supervision. Experiments on ALFWorld, WebShop and Search-based QA demonstrate that OPID generally improves agent performance, sample efficiency, and robustness over outcome-only RL and existing skill-distillation baselines. Our code is available at https://github.com/jinyangwu/OPID/tree/main.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.26790'>page</a> · <a href='https://arxiv.org/pdf/2606.26790'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation</title>
+      <link>https://huggingface.co/papers/2606.26907</link>
+      <guid isPermaLink="false">arxiv:2606.26907</guid>
+      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CUHK, Cornell, Peking U, U Edinburgh — (senior)</p>
+<p><b>Authors:</b> Zekai Zhang, Jiahao Li, Jie Zhang, Kaiyuan Gao, Kun Yan, Lihan Jiang, Ningyuan Tang, Shengming Yin, … <i>(+14 more)</i></p>
+<p>While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge. We identify this challenge as the Context Gap: the mismatch between the user context and the sufficient generation context for T2I models. To bridge this gap, we propose Qwen-Image-Agent, a unified agentic framework that integrates plan, reason, search, memory and feedback in a context-centric manner. Qwen-Image-Agent treats user input as partial context and progressively constructs the generation context through Context-Aware Planning and Context Grounding. Specifically, Context-Aware Planning identifies missing context and plans how it should be acquired and used, while Context Grounding gathers this context from reason, search, memory, and feedback. To evaluate agentic image generation, we further introduce Image Agent Bench (IA-Bench), a benchmark covering four core image agent capabilities: Plan, Reason, Search, and Memory. Experiments on IA-Bench, Mindbench and WISE-Verified show that Qwen-Image-Agent outperforms strong baselines and achieves state-of-the-art performance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.26907'>page</a> · <a href='https://arxiv.org/pdf/2606.26907'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Verification Horizon: No Silver Bullet for Coding Agent Rewards</title>
+      <link>https://huggingface.co/papers/2606.26300</link>
+      <guid isPermaLink="false">arxiv:2606.26300</guid>
+      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, NYU, Peking U, U Michigan — (senior)</p>
+<p><b>Authors:</b> Binghai Wang, Chenlong Zhang, Dayiheng Liu, Jiajun Zhang, Jiawei Chen, Mouxiang Chen, Rongyao Fang, Siyuan Zhang, … <i>(+5 more)</i></p>
+<p>A classical intuition holds that verifying a solution is easier than producing one. For today&#x27;s coding agents, this intuition is being inverted: as foundation models develop stronger reasoning capabilities and engineering harnesses grow more sophisticated, generating complex candidate solutions is no longer difficult -- reliably verifying them has become the harder problem. Every verifier we can build is only a proxy for human intent, never the intent itself. This makes verification subject to a twofold difficulty: first, intent is underspecified by nature, making it inherently hard to faithfully check whether it has been fulfilled; second, during model training, optimization widens the gap between proxy and intent -- manifesting as reward hacking or signal saturation. To address this, we characterize the quality of verification signals along three dimensions -- scalability, faithfulness, and robustness -- and argue that achieving all three simultaneously is the central challenge. We further study four reward constructions: a test verifier for general coding tasks, a rubric verifier for frontend tasks, the user as verifier for real-world agent tasks, and an automated agent verifier for long-horizon tasks. Across different task types and policy capability levels, we conduct in-depth analysis and experiments on the core challenges of reward design and how to more effectively leverage reward signals. Experiments show that targeted verification design can effectively suppress reward hacking, improve task completion quality, and achieve significant gains across multiple internal and public benchmarks. These experiences collectively point to a core observation: no fixed reward function can remain effective as policy capability continues to grow; and verification must co-evolve with the generator.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://huggingface.co/papers/2606.26300'>page</a> · <a href='https://arxiv.org/pdf/2606.26300'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting</title>
+      <link>https://huggingface.co/papers/2606.18394</link>
+      <guid isPermaLink="false">arxiv:2606.18394</guid>
+      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CUHK, NUS, Peking U, U Cambridge, U Toronto — Lanxiang Hu</p>
+<p><b>Authors:</b> Lanxiang Hu, Zhaoxiang Feng, Yulun Wu, Haoran Yuan, Yujie Zhao, Yu-Yang Qian, Bojun Wang, Peng Zhao, … <i>(+5 more)</i></p>
+<p>Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves speed only when acceptance remains high and drafting overhead stays low. This ceiling has been difficult to break because prior head-based SD methods face a causality-efficiency dilemma. Autoregressive drafters produce path-conditioned candidates that are effective for tree speculative decoding with higher acceptance length, but their drafting cost grows with tree depth. Bidirectional block-diffusion drafters generate all positions in one pass, but their branch-agnostic marginals can form individually plausible yet mutually inconsistent trees, wasting budget and reducing acceptance. We propose JetSpec, a head-based SD framework that combines one-forward drafting efficiency with branch-wise causal conditioning. JetSpec trains a causal parallel draft head over fused hidden states from the frozen target model, producing candidate trees whose scores align with the target model&#x27;s autoregressive factorization. This enables JetSpec to convert larger draft budgets into longer accepted prefixes and higher end-to-end speedup. Across math, coding, and chat benchmarks on dense and MoE Qwen3 models, JetSpec consistently outperforms bidirectional-head and tree-based SD baselines. On H100 GPUs, JetSpec achieves up to 9.64x speedup on MATH-500 and 4.58x on open-ended conversational workloads, with further latency gains demonstrated through vLLM integration under realistic serving loads. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.18394'>page</a> · <a href='https://arxiv.org/pdf/2606.18394'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Tuning Language Models by Mixture-of-Depths Ensemble</title>
       <link>https://arxiv.org/abs/2410.13077</link>
@@ -2337,57 +2381,6 @@
 <p><b>Authors:</b> Matt Gorbett, Suman Jana</p>
 <p>Detecting when a language model is wrong without ground truth labels is a fundamental challenge for safe deployment. Existing approaches rely on a model&#x27;s own uncertainty -- such as token entropy or confidence scores -- but these signals fail critically on the most dangerous failure mode: confident errors, where a model is wrong but certain. In this work we introduce cross-model disagreement as a correctness indicator -- a simple, training-free signal that can be dropped into existing production systems, routing pipelines, and deployment monitoring infrastructure without modification. Given a model&#x27;s generated answer, cross-model disagreement computes how surprised or uncertain a second verifier model is when reading that answer via a single forward pass. No generation from the verifying model is required, and no correctness labels are needed. We instantiate this principle as Cross-Model Perplexity (CMP), which measures the verifying model&#x27;s surprise at the generating model&#x27;s answer tokens, and Cross-Model Entropy (CME), which measures the verifying model&#x27;s uncertainty at those positions. Both CMP and CME outperform within-model uncertainty baselines across benchmarks spanning reasoning, retrieval, and mathematical problem solving (MMLU, TriviaQA, and GSM8K). On MMLU, CMP achieves a mean AUROC of 0.75 against a within-model entropy baseline of 0.59. These results establish cross-model disagreement as a practical, training-free approach to label-free correctness estimation, with direct applications in deployment monitoring, model routing, selective prediction, data filtering, and scalable oversight of production language model systems.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2603.25450'>page</a> · <a href='https://arxiv.org/pdf/2603.25450'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PI-Mamba: Linear-Time Protein Backbone Generation via Spectrally Initialized Flow Matching</title>
-      <link>https://arxiv.org/abs/2603.26705</link>
-      <guid isPermaLink="false">arxiv:2603.26705</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>q-bio.BM</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Lin Zhu</p>
-<p><b>Authors:</b> Tianyu Wu, Lin Zhu</p>
-<p>Motivation: Generative models for protein backbone design have to simultaneously ensure geometric validity, sampling efficiency, and scalability to long sequences. However, most existing approaches rely on iterative refinement, quadratic attention mechanisms, or post-hoc geometry correction, leading to a persistent trade-off between computational efficiency and structural fidelity. Results: We present Physics-Informed Mamba (PI-Mamba), a generative model that enforces exact local covalent geometry by construction while enabling linear-time inference. PI-Mamba integrates a differentiable constraint-enforcement operator into a flow-matching framework and couples it with a Mamba-based state-space architecture. To improve optimisation stability and backbone realism, we introduce a spectral initialization derived from the Rouse polymer model and an auxiliary cis-proline awareness head. Across benchmark tasks, PI-Mamba achieves 0.0\% local geometry violations and high designability (scTM = $0.91\pm 0.03$, n = 100), while scaling to proteins exceeding 2,000 residues on a single A5000 GPU (24 GB).</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.BM, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-03-17 · <a href='https://arxiv.org/abs/2603.26705'>page</a> · <a href='https://arxiv.org/pdf/2603.26705'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>WOMBET: World Model-Based Experience Transfer for Robust and Sample-efficient Reinforcement Learning</title>
-      <link>https://arxiv.org/abs/2604.08958</link>
-      <guid isPermaLink="false">arxiv:2604.08958</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Koushil Sreenath</p>
-<p><b>Authors:</b> Mintae Kim, Koushil Sreenath</p>
-<p>Reinforcement learning (RL) in robotics is often limited by the cost and risk of data collection, motivating experience transfer from a source task to a target task. Offline-to-online RL leverages prior data but typically assumes a given fixed dataset and does not address how to generate reliable data for transfer. We propose World Model-Based Experience Transfer (WOMBET), a framework that jointly generates and utilizes prior data. WOMBET learns a world model in the source task and generates offline data via uncertainty-penalized planning, followed by filtering trajectories with high return and low epistemic uncertainty. It then performs online fine-tuning in the target task using adaptive sampling between offline and online data, enabling a stable transition from prior-driven initialization to task-specific adaptation. We show that the uncertainty-penalized objective provides a lower bound on the true return and derive a finite-sample error decomposition capturing distribution mismatch and approximation error. Empirically, WOMBET improves sample efficiency and final performance over strong baselines on continuous control benchmarks, demonstrating the benefit of jointly optimizing data generation and transfer.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2604.08958'>page</a> · <a href='https://arxiv.org/pdf/2604.08958'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Versioned Late Materialization for Ultra-Long Sequence Training in Recommendation Systems at Scale</title>
-      <link>https://arxiv.org/abs/2604.24806</link>
-      <guid isPermaLink="false">arxiv:2604.24806</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.IR</category>
-      <category>cs.AI</category>
-      <category>cs.DB</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> Imperial College, NUS, Peking U, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Liang Guo, Ge Song, Litao Deng, Jianhui Sun, Chufeng Hu, Lu Zhang, Zhen Ma, Shouwei Chen, … <i>(+4 more)</i></p>
-<p>Modern Deep Learning Recommendation Models (DLRMs) follow scaling laws with sequence length, driving the frontier toward ultra-long User Interaction History (UIH). However, the industry-standard &quot;Fat Row&quot; paradigm, which pre-materializes these sequences into every training example, creates a storage and I/O wall where data infrastructure usage exceeds GPU training capacity due to data redundancy that is amplified in multi-tenant environments where models with vastly different sequence length requirements share a union dataset. We present a \emph{versioned late materialization} paradigm that eliminates this redundancy by storing UIH once in a normalized, immutable tier and reconstructing sequences just-in-time during training via lightweight versioned pointers. The system ensures Online-to-Offline (O2O) consistency through a bifurcated protocol that prevents future leakage across both streaming and batch training, while a read-optimized immutable storage layer provides multi-dimensional projection pushdown for heterogeneous model tenants. Disaggregated data preprocessing with pipelined I/O prefetching and data-affinity optimizations masks the latency of training-time sequence reconstruction, keeping training throughput compute-bound by GPUs. Deployed on production DLRMs, the system reduces training data infrastructure resource usage while enabling aggressive sequence length scaling that delivers significant model quality gains, serving as the foundational data infrastructure for modern recommendation model architectures, including HSTU and ULTRA-HSTU.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.IR, cs.AI, cs.DB · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2604.24806'>page</a> · <a href='https://arxiv.org/pdf/2604.24806'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Muse Spark Safety &amp; Preparedness Report</title>
-      <link>https://arxiv.org/abs/2606.12429</link>
-      <guid isPermaLink="false">arxiv:2606.12429</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.CY</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CMU, CUHK, Columbia, Georgia Tech, MIT, Tsinghua, U Michigan, U Oxford, U Toronto, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Cristina Menghini, Peter Ney, Hamza Kwisaba, Zifan, Wang, Miles Turpin, Felix Binder, Jean-Christophe Testud, … <i>(+112 more)</i></p>
-<p>Muse Spark is the latest large language model developed by Meta. In this report, we first present evaluations for catastrophic risk domains under Meta&#x27;s Advanced AI Scaling Framework, along with the evidence that informed our launch decision. We then discuss additional considerations, such as Muse Spark&#x27;s broader content safety and behavioral profile, that are relevant to overall safety but fall outside the catastrophic risk domains governed by the Framework. Our preparedness results covering Chemical and Biological, Cybersecurity, and Loss of Control risks assess Muse Spark&#x27;s deployment within Meta AI as presenting acceptable levels of residual risks under our Advanced AI Scaling Framework. We conducted a broad set of evaluations targeting dual-use and high-risk capabilities across these catastrophic risk domains. Those evaluations identified elevated risks prior to mitigations, with Chemical and Biological capabilities assessed as likely reaching the &quot;high risk&quot; category under the Advanced AI Scaling Framework before safeguards were applied. We have implemented a multi-layered set of mitigations that address the identified risks, and Muse Spark demonstrates state-of-the-art refusal across a range of benchmarks related to hazardous workflows in chemistry and biology. We therefore release Muse Spark as the underlying model of Meta AI.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.AI · <b>arXiv submitted:</b> 2026-05-14 · <a href='https://arxiv.org/abs/2606.12429'>page</a> · <a href='https://arxiv.org/pdf/2606.12429'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
