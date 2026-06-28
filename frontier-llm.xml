@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sat, 27 Jun 2026 05:18:57 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 05:31:29 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>In-Context World Modeling for Robotic Control</title>
+      <link>https://huggingface.co/papers/2606.26025</link>
+      <guid isPermaLink="false">arxiv:2606.26025</guid>
+      <pubDate>Sun, 28 Jun 2026 05:31:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab</p>
+<p><b>Authors:</b> Siyin Wang, Junhao Shi, Senyu Fei, Zhaoyang Fu, Li Ji, Jingjing Gong, Xipeng Qiu, Hugging Face Daily Papers (curated)</p>
+<p>Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.26025'>page</a> · <a href='https://arxiv.org/pdf/2606.26025'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning</title>
       <link>https://huggingface.co/papers/2606.26790</link>
@@ -2370,17 +2381,6 @@
 <p><b>Authors:</b> Haoyu Zhang, Zhipeng Li, Yiwen Guo, Tianshu Yu</p>
 <p>Omni-modal large language models (OLLMs) aim to unify multimodal understanding and generation, yet extending them to jointly produce speech and 3D facial animation remains largely unexplored despite its importance for natural human-computer interaction. A key challenge is the mismatch between the discrete semantic reasoning of LLMs and the dense temporal dynamics required for 3D facial motion. We propose Expressive Omni (Ex-Omni), an open-source model that augments OLLMs with native speech-accompanied 3D facial animation. Ex-Omni decouples semantic reasoning from temporal generation through a blendshape-aware speech unit generator and a blendshape decoder, where speech units provide temporal scaffolding and hidden speech representations carry facially relevant cues. We further introduce a unified token-as-query gated fusion (TQGF) mechanism for controlled semantic injection, as well as InstructS2SF-1200K, a dataset consisting of 1200K samples for pre-training. Extensive experiments show that Ex-Omni maintains competitive speech understanding and generation ability while achieving better audio-visual synchronization and lower face-generation latency than cascaded pipelines.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2602.07106'>page</a> · <a href='https://arxiv.org/pdf/2602.07106'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Cross-Model Disagreement as a Label-Free Correctness Signal</title>
-      <link>https://arxiv.org/abs/2603.25450</link>
-      <guid isPermaLink="false">arxiv:2603.25450</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Suman Jana</p>
-<p><b>Authors:</b> Matt Gorbett, Suman Jana</p>
-<p>Detecting when a language model is wrong without ground truth labels is a fundamental challenge for safe deployment. Existing approaches rely on a model&#x27;s own uncertainty -- such as token entropy or confidence scores -- but these signals fail critically on the most dangerous failure mode: confident errors, where a model is wrong but certain. In this work we introduce cross-model disagreement as a correctness indicator -- a simple, training-free signal that can be dropped into existing production systems, routing pipelines, and deployment monitoring infrastructure without modification. Given a model&#x27;s generated answer, cross-model disagreement computes how surprised or uncertain a second verifier model is when reading that answer via a single forward pass. No generation from the verifying model is required, and no correctness labels are needed. We instantiate this principle as Cross-Model Perplexity (CMP), which measures the verifying model&#x27;s surprise at the generating model&#x27;s answer tokens, and Cross-Model Entropy (CME), which measures the verifying model&#x27;s uncertainty at those positions. Both CMP and CME outperform within-model uncertainty baselines across benchmarks spanning reasoning, retrieval, and mathematical problem solving (MMLU, TriviaQA, and GSM8K). On MMLU, CMP achieves a mean AUROC of 0.75 against a within-model entropy baseline of 0.59. These results establish cross-model disagreement as a practical, training-free approach to label-free correctness estimation, with direct applications in deployment monitoring, model routing, selective prediction, data filtering, and scalable oversight of production language model systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2603.25450'>page</a> · <a href='https://arxiv.org/pdf/2603.25450'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
