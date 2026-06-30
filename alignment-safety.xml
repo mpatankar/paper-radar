@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 29 Jun 2026 05:35:13 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 05:23:36 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</title>
+      <link>https://huggingface.co/papers/2606.30616</link>
+      <guid isPermaLink="false">arxiv:2606.30616</guid>
+      <pubDate>Tue, 30 Jun 2026 05:23:36 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Lei Bai, Zongsheng Cao, Yang Chen, Zhiyao Cui, Shangheng Du, Yue Fan, Shiyang Feng, Zijie Guo, … <i>(+43 more)</i></p>
+<p>We introduce Agents-A1, a 35B Mixture-of-Experts Agentic Model that reaches trillion-parameter-level performance by scaling the agent horizon. We investigate agent-horizon scaling from two perspectives: scaling long-horizon trajectories and scaling heterogeneous agent abilities. To support this goal, we build a long-horizon knowledge-action infrastructure that connects external knowledge, actions, observations, and verifier outcomes, producing agentic trajectories with an average length of 45K tokens. Based on this, we train Agents-A1 with a three-stage recipe. First, we perform full-domain supervised fine-tuning to align the base model with broad agentic behaviors. Second, we train domain-level teacher models to capture specialized expertise in each domain. Third, we propose a multi-teacher domain-routed on-policy distillation with salient vocabulary alignment to improve knowledge transfer efficiency across different domains, unifying six heterogeneous domains into one deployable student model. Agents-A1 achieves strong and broad performance for long-horizon agent benchmarks. Compared with 1T-parameter model such as Kimi-K2.6 and DeepSeek-V4-pro, Agents-A1 achieves leading results on SEAL-0 (56.4), IFBench (80.6), HiPhO (46.4), FrontierScience-Olympiad (79.0), and MolBench-Bind (56.8), and remains highly competitive on SciCode (44.3), HLE (47.6) and BrowseComp (75.5). We hope this work provides the community with a practical path for scaling the horizon using a 35B agent that can reach or match the performance of 1T models on long-horizon tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-29 · <a href='https://huggingface.co/papers/2606.30616'>page</a> · <a href='https://arxiv.org/pdf/2606.30616'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Qwen-Image-2.0-RL Technical Report</title>
+      <link>https://huggingface.co/papers/2606.27608</link>
+      <guid isPermaLink="false">arxiv:2606.27608</guid>
+      <pubDate>Tue, 30 Jun 2026 05:23:36 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yixian Xu, Kaiyuan Gao, Yuxiang Chen, Yilei Chen, Zecheng Tang, Zihao Liu, Zikai Zhou, Deqing Li, … <i>(+21 more)</i></p>
+<p>We present Qwen-Image-2.0-RL, a post-training pipeline that applies reinforcement learning from human feedback (RLHF) and on-policy distillation (OPD) to improve both the visual quality and instruction-following capability of the Qwen-Image-2.0 diffusion model. To provide reliable reward signals, we construct task-specific composite reward models by fine-tuning vision-language models with a pointwise scoring paradigm and chain-of-thought reasoning. For text-to-image generation, the reward models cover alignment, aesthetics, and portrait fidelity dimensions. For image editing tasks, the reward system addresses instruction-following accuracy and face identity preservation. Building on this reward system, we develop a scalable GRPO-based RL training framework, incorporating a hybrid classifier-free guidance (CFG) strategy to preserve pre-trained knowledge, prompt curation via intra-group reward range filtering, and per-category reward weight calibration. To merge the task-specialized RL policies for T2I and editing, we propose on-policy distillation as the final training stage, which consolidates multiple teachers into a single student model through trajectory-level velocity matching. Extensive evaluation shows that Qwen-Image-2.0-RL achieves 57.84 overall score on Qwen-Image-Bench (+2.61 over the base model), Elo ratings of 1193 in text-to-image arena (+78) and 1349 in image edit arena (+93), demonstrating consistent gains in aesthetic quality, prompt adherence, and editing accuracy.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.27608'>page</a> · <a href='https://arxiv.org/pdf/2606.27608'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Derivation of effective gradient flow equations and dynamical truncation of training data in Deep Learning</title>
       <link>https://arxiv.org/abs/2501.07400</link>
@@ -2401,33 +2423,6 @@
 <p><b>Authors:</b> Tim Beyer, Sophie Xhonneux, Simon Geisler, Gauthier Gidel, Leo Schwinn, Stephan Günnemann</p>
 <p>In this paper, we argue that current safety alignment research efforts for large language models are hindered by many intertwined sources of noise, such as small datasets, methodological inconsistencies, and unreliable evaluation setups. This can, at times, make it impossible to evaluate and compare attacks and defenses fairly, thereby slowing progress. We systematically analyze the LLM safety evaluation pipeline, covering dataset curation, optimization strategies for automated red-teaming, response generation, and response evaluation using LLM judges. At each stage, we identify key issues and highlight their practical impact. We also propose a set of guidelines for reducing noise and bias in evaluations of future attack and defense papers. Lastly, we offer an opposing perspective, highlighting practical reasons for existing limitations. We believe that addressing the outlined problems in future research will improve the field&#x27;s ability to generate easily comparable results and make measurable progress.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2503.02574'>page</a> · <a href='https://arxiv.org/pdf/2503.02574'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>FinTagging: Benchmarking LLMs for Extracting and Structuring Financial Information</title>
-      <link>https://arxiv.org/abs/2505.20650</link>
-      <guid isPermaLink="false">arxiv:2505.20650</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.CE</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford, U Montreal — Jian-Yun Nie</p>
-<p><b>Authors:</b> Yan Wang, Lingfei Qian, Xueqing Peng, Yang Ren, Keyi Wang, Yi Han, Dongji Feng, Fengran Mo, … <i>(+13 more)</i></p>
-<p>Accurate interpretation of numerical data in financial reports is critical for markets and regulators. Although XBRL (eXtensible Business Reporting Language) provides a standard for tagging financial figures, mapping thousands of facts to over 10k US GAAP concepts remains costly and error prone. Existing benchmarks oversimplify this task as flat, single step classification over small subsets of concepts, ignoring the hierarchical semantics of the taxonomy and the structured nature of financial documents. Consequently, these benchmarks fail to evaluate Large Language Models (LLMs) under realistic reporting conditions. To bridge this gap, we introduce FinTagging, the first comprehensive benchmark for structure aware and full scope XBRL tagging. We decompose the complex tagging process into two subtasks: (1) FinNI (Financial Numeric Identification), which extracts entities and types from heterogeneous contexts including text and tables; and (2) FinCL (Financial Concept Linking), which maps extracted entities to the full US GAAP taxonomy. This two stage formulation enables a fair assessment of LLMs&#x27; capabilities in numerical reasoning and taxonomy alignment. Evaluating diverse LLMs in zero shot settings reveals that while models generalize well in extraction, they struggle significantly with fine grained concept linking, highlighting critical limitations in domain specific structure aware reasoning.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CE · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2505.20650'>page</a> · <a href='https://arxiv.org/pdf/2505.20650'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Geometry-aware 4D Video Generation for Robot Manipulation</title>
-      <link>https://arxiv.org/abs/2507.01099</link>
-      <guid isPermaLink="false">arxiv:2507.01099</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Toyota Research Institute · <b>Tier-2 senior:</b> Columbia, HKUST, Peking U, Stanford, U Michigan — Shuran Song</p>
-<p><b>Authors:</b> Zeyi Liu, Shuang Li, Eric Cousineau, Siyuan Feng, Benjamin Burchfiel, Shuran Song</p>
-<p>Understanding and predicting dynamics of the physical world can enhance a robot&#x27;s ability to plan and interact effectively in complex environments. While recent video generation models have shown strong potential in modeling dynamic scenes, generating videos that are both temporally coherent and geometrically consistent across camera views remains a significant challenge. To address this, we propose a 4D video generation model that enforces multi-view 3D consistency of generated videos by supervising the model with cross-view pointmap alignment during training. Through this geometric supervision, the model learns a shared 3D scene representation, enabling it to generate spatio-temporally aligned future video sequences from novel viewpoints given a single RGB-D image per view, and without relying on camera poses as input. Compared to existing baselines, our method produces more visually stable and spatially aligned predictions across multiple simulated and real-world robotic datasets. We further show that the predicted 4D videos can be used to recover robot end-effector trajectories using an off-the-shelf 6DoF pose tracker, yielding robot manipulation policies that generalize well to novel camera viewpoints.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2507.01099'>page</a> · <a href='https://arxiv.org/pdf/2507.01099'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
