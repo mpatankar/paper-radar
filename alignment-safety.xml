@@ -5,8 +5,43 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 30 Jun 2026 05:23:36 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 05:19:41 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Quantum Flow Matching</title>
+      <link>https://arxiv.org/abs/2508.12413</link>
+      <guid isPermaLink="false">arxiv:2508.12413</guid>
+      <pubDate>Thu, 02 Jul 2026 05:19:41 GMT</pubDate>
+      <category>quant-ph</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST — Ying Tang</p>
+<p><b>Authors:</b> Zidong Cui, Pan Zhang, Ying Tang</p>
+<p>The flow matching has rapidly become a dominant paradigm in classical generative modeling, offering an efficient way to interpolate between two complex distributions. We extend this idea to the quantum realm and introduce the Quantum Flow Matching (QFM), a quantum-circuit realization that offers efficient interpolation between two density matrices. QFM offers systematic preparation of density matrices and generation of samples for accurately estimating observables, and can be realized on quantum computers without the need for costly circuit redesigns. We validate its versatility on a set of applications: (i) generating target states with prescribed magnetization and entanglement entropy, (ii) estimating nonequilibrium free-energy differences to test the quantum Jarzynski equality, and (iii) expediting the study on superdiffusion. These results position QFM as a unifying and promising framework for generative modeling across quantum systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> quant-ph, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-30 · <a href='https://arxiv.org/abs/2508.12413'>page</a> · <a href='https://arxiv.org/pdf/2508.12413'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Circuits Updates â June 2026A short update on turn-averaged sparse autoencoders.</title>
+      <link>https://transformer-circuits.pub/2026/june-update/index.html</link>
+      <guid isPermaLink="false">transformer_circuits:dc1a0d03b2</guid>
+      <pubDate>Thu, 02 Jul 2026 05:19:41 GMT</pubDate>
+      <category>blog</category>
+      <category>interpretability</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
+<p><b>Authors:</b> Anthropic Interpretability</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2026/june-update/index.html'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>GEAR: Guided End-to-End AutoRegression for Image Synthesis</title>
+      <link>https://huggingface.co/papers/2606.32039</link>
+      <guid isPermaLink="false">arxiv:2606.32039</guid>
+      <pubDate>Thu, 02 Jul 2026 05:19:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bin Lin, Zheyuan Liu, Chenguo Lin, Sixiang Chen, Yunyang Ge, Yunlong Lin, Jianwei Zhang, Miles Yang, … <i>(+4 more)</i></p>
+<p>Visual generative models are typically trained in two stages. A tokenizer is first trained for reconstruction and then frozen, after which a generator is trained on its discrete indices or continuous latents. This decoupling leaves the tokenizer unaware of what the generator finds easy to model. We present GEAR (Guided End-to-end AutoRegression), which trains a vector-quantized (VQ) tokenizer and an autoregressive (AR) generator jointly and end-to-end, guided by representation alignment. The key obstacle is that the VQ index fed to the AR model is non-differentiable, so gradients cannot reach the tokenizer, and a straight-through estimator collapses. GEAR resolves this with a dual read-out of the codebook assignment. A hard, one-hot branch trains the AR with next-token prediction, while a differentiable soft branch carries a representation-alignment loss that flows back to guide only the tokenizer. The AR model thereby steers its tokenizer toward an index distribution it can predict more easily. This shifts the alignment burden from the tokenizer to the AR: the tokenizer&#x27;s own features become less DINOv2-like while the AR&#x27;s become more so, the opposite of diffusion-side recipes that make the latent itself semantic. GEAR speeds up ImageNet gFID convergence by up to 10x relative to the strong LlamaGen-REPA baseline, learns markedly better patch-level and spatially-coherent features, and generalizes across quantizers (VQVAE, LFQ, IBQ) and to text-to-image generation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-30 · <a href='https://huggingface.co/papers/2606.32039'>page</a> · <a href='https://arxiv.org/pdf/2606.32039'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</title>
       <link>https://huggingface.co/papers/2606.30616</link>
@@ -2388,41 +2423,6 @@
 <p><b>Authors:</b> Cheng Wang, Chen Xiong, Ziwen Wang, Yuchen Zhou, Qiang Liu</p>
 <p>Safety validation of autonomous driving systems requires high-risk scenario coverage, clear collision semantics, executable trajectories, and attributable multi-vehicle interactions. Existing safety-critical scenario generation methods often rely on low-level trajectory perturbations, collision-proxy optimization, or single-adversary search, which may produce adversarial samples with ambiguous collision causes or uncontrolled multi-vehicle collisions. This paper proposes KG-ASG, a collision-knowledge-guided closed-loop adversarial scenario generation framework with primary-support attribution. KG-ASG constructs a structured collision knowledge base and trains a lightweight Collision Expert to infer the target collision mode, the unique primary adversary, support vehicles, and their interaction roles. Guided by this semantic prior, multi-vehicle adversarial generation is formulated as a primary-support process, where the primary adversary induces the main conflict and support vehicles shape the surrounding risk structure without becoming additional colliders. Rule, physical, interaction-safety, and single-collider constraints are imposed as hard gates to filter non-executable samples. To handle reactive ego behaviors, planner-controller feedback is further used for failure diagnosis, candidate re-ranking, and terminal refinement. Experiments on WOMD scenarios reconstructed in MetaDrive show that KG-ASG achieves strong adversarial effectiveness while improving Valid Primary Attack, reducing multi-collision, and obtaining closed-loop recovery gains under IDM, Cruise, and Expert controllers. These results demonstrate that collision-knowledge guidance and primary-support single-collider reasoning improve adversarial effectiveness, interpretability, and executability for autonomous driving safety validation.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2605.18895'>page</a> · <a href='https://arxiv.org/pdf/2605.18895'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Evaluating the Utility of Personal Health Records in Personalized Health AI</title>
-      <link>https://arxiv.org/abs/2605.18937</link>
-      <guid isPermaLink="false">arxiv:2605.18937</guid>
-      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Rory Sayres, Kejia Chen, Ayush Jain, Matthew Thompson, Jonathan Richina, Xiang Yin, Jimmy Hu, Fan Zhang, … <i>(+14 more)</i></p>
-<p>Patient-managed Personal Health Records (PHRs) promises to empower patients to better understand their health; but information in the record is complex, potentially hindering insights. In this study, we assess the potential of large language models (LLMs, Gemini 3.0 Flash) to provide helpful answers to user health queries, when provided clinical data from PHRs as context. A total of 2,257 user queries were drawn from 3 different distributions to represent patient questions: shorter web search queries, longer questions derived from templates of chatbot conversations, and questions patients asked to their healthcare team (patient calls). Queries were matched with de-identified PHRs (from a pool of 1,945). Gemini responses were generated (1) without PHR context; (2) with a basic summary of demographics, conditions, and medications; (3) with full, extensive clinical notes. For evaluation, we leveraged an existing rating framework (SHARP), and developed a new framework for specific error modes when interpreting PHRs. Evaluation was performed using autoraters for the full set, and with clinician ratings for a subset (n=95), with both sets of raters knowing the full PHR context. We see significant improvements in the helpfulness of answers to all question types with PHR data (p &lt; 0.001, paired t-test). We also observe potential gains in safety, accuracy, relevance and personalization of answers. Our PHR evaluation framework further identifies gaps in LLM understanding of particular aspects of complex PHRs, such as temporal disorientation, and rare but meaningful confabulations. These results suggest potential for PHR data to help people with a wide range of user needs; and provide a framework for monitoring for gaps in LLM answers based on PHR context. This study motivates further work to assess and realize potential benefits to users from understanding their health records.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2605.18937'>page</a> · <a href='https://arxiv.org/pdf/2605.18937'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Representational Alignment with Chemical Induced Fit for Molecular Relational Learning</title>
-      <link>https://arxiv.org/abs/2502.07027</link>
-      <guid isPermaLink="false">arxiv:2502.07027</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U — Lin Li</p>
-<p><b>Authors:</b> Peiliang Zhang, Jingling Yuan, Qing Xie, Yongjun Zhu, Lin Li</p>
-<p>Molecular Relational Learning (MRL) is widely applied in natural sciences to predict relationships between molecular pairs by extracting structural features. The representational similarity between substructure pairs determines the functional compatibility of molecular binding sites. Nevertheless, aligning substructure representations by attention mechanisms lacks guidance from chemical knowledge, resulting in unstable model performance in chemical space (\textit{e.g.}, functional group, scaffold) shifted data. With theoretical justification, we propose the \textbf{Re}presentational \textbf{Align}ment with Chemical Induced \textbf{Fit} (ReAlignFit) to enhance the stability of MRL. ReAlignFit dynamically aligns substructure representation in MRL by introducing chemical Induced Fit-based inductive bias. In the induction process, we design the Bias Correction Function based on substructure edge reconstruction to align representations between substructure pairs by simulating chemical conformational changes (dynamic combination of substructures). ReAlignFit further integrates the Subgraph Information Bottleneck during fit process to refine and optimize substructure pairs exhibiting high chemical functional compatibility, leveraging them to generate molecular embeddings. Experimental results on nine datasets demonstrate that ReAlignFit outperforms state-of-the-art models in two tasks and significantly enhances model&#x27;s stability in both rule-shifted and scaffold-shifted data distributions.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-16 · <a href='https://arxiv.org/abs/2502.07027'>page</a> · <a href='https://arxiv.org/pdf/2502.07027'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LLM-Safety Evaluations Lack Robustness</title>
-      <link>https://arxiv.org/abs/2503.02574</link>
-      <guid isPermaLink="false">arxiv:2503.02574</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MILA, TU Munich, U Montreal — Stephan Günnemann</p>
-<p><b>Authors:</b> Tim Beyer, Sophie Xhonneux, Simon Geisler, Gauthier Gidel, Leo Schwinn, Stephan Günnemann</p>
-<p>In this paper, we argue that current safety alignment research efforts for large language models are hindered by many intertwined sources of noise, such as small datasets, methodological inconsistencies, and unreliable evaluation setups. This can, at times, make it impossible to evaluate and compare attacks and defenses fairly, thereby slowing progress. We systematically analyze the LLM safety evaluation pipeline, covering dataset curation, optimization strategies for automated red-teaming, response generation, and response evaluation using LLM judges. At each stage, we identify key issues and highlight their practical impact. We also propose a set of guidelines for reducing noise and bias in evaluations of future attack and defense papers. Lastly, we offer an opposing perspective, highlighting practical reasons for existing limitations. We believe that addressing the outlined problems in future research will improve the field&#x27;s ability to generate easily comparable results and make measurable progress.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2503.02574'>page</a> · <a href='https://arxiv.org/pdf/2503.02574'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
