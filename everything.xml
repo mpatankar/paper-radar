@@ -5,8 +5,41 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Sun, 05 Jul 2026 07:19:16 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 08:15:37 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory</title>
+      <link>https://huggingface.co/papers/2607.02517</link>
+      <guid isPermaLink="false">arxiv:2607.02517</guid>
+      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, HKUST, Imperial College, NUS, Peking U, U Michigan — (senior)</p>
+<p><b>Authors:</b> Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Qingyan Bai, Ka Leong Cheng, Yue Yu, Yixuan Li, … <i>(+6 more)</i></p>
+<p>We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration. Unlike existing world models that entangle physical dynamics with pixel rendering and rely on continuous visual observation to sustain motion, our framework explicitly decouples semantic motion orchestration from visual generation. By leveraging an LLM to coordinate 3D trajectories with camera movements and subsequently employing these orchestrated trajectories as control signals for video generation, our approach ensures strict physical logic and appearance stability, successfully preserving the exact visual identities of dynamic entities even when they re-enter the scene after prolonged periods out of view. Experimental results demonstrate that our method supports the synthesis of complex and extended events with unprecedented controllability and persistent dynamic object memory. Project Page: https://worlddirector.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02517'>page</a> · <a href='https://arxiv.org/pdf/2607.02517'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2606.29526</link>
+      <guid isPermaLink="false">arxiv:2606.29526</guid>
+      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Jing Liang, Hongyao Tang, Yi Ma, Yancheng He, Weixun Wang, Xiaoyang Li, Ju Huang, Wenbo Su, … <i>(+5 more)</i></p>
+<p>Reinforcement learning (RL) has gained growing attention in large language model (LLM) post-training, yet RL training remains fragile and can suffer from instability or collapse. One vital cause is training-inference mismatch: LLM adopts separate inference and training engines for generation efficiency and training precision, which in practice exhibits inconsistent probabilities for the same trajectories on training and inference sides, even with synchronized model parameters. This naturally induces a special type of off-policyness ever existing and poisoning the training. Prior works have made various efforts in addressing the off-policyness to stabilize the training policies under the mismatch. In this paper, we point out the objective misalignment neglected by existing works that an effective update to the policy in the training engine not necessarily ensures the improvement of the inference policy, i.e., the one used in deployment. To this end, we propose a new policy optimization objective for LLM RL, named Monotonic Inference Policy Improvement (MIPI). Following this principle, we introduce Monotonic Inference Policy Update (MIPU), a two-step LLM RL framework that constructs sampler-referenced candidate updates and selectively accepts synchronized candidates using an inference-side gap proxy. Experiments conducted on two model scales under high mismatch show that MIPU improves average reasoning performance and training stability.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-28 · <a href='https://huggingface.co/papers/2606.29526'>page</a> · <a href='https://arxiv.org/pdf/2606.29526'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning</title>
+      <link>https://huggingface.co/papers/2606.31825</link>
+      <guid isPermaLink="false">arxiv:2606.31825</guid>
+      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junha Jung, Minbyul Jeong, Suhyeon Lim, Sungwook Jung, Jaehoon Yun, Taeyun Roh, Mujeen Sung, Jaewoo Kang, … <i>(+1 more)</i></p>
+<p>Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or sequence-level preferences. This suffers from sparse credit assignment, making it difficult to optimize the reasoning process essential for clinical applications. Our analysis reveals that cascading errors from early-stage reasoning failures are a leading cause of incorrect predictions in medical visual question answering (VQA) benchmarks. Motivated by this, we propose Medical Reasoning-aware Policy Optimization (MRPO), an RL algorithm that incorporates step-wise process rewards. When the final answer is incorrect, MRPO assigns exponentially larger penalties to tokens in earlier invalid reasoning steps, breaking failure cascades without compromising successful paths. Across three multimodal LLM backbones, MRPO consistently outperforms standard GRPO and a recent RL baseline, and on Qwen3-VL-8B-Instruct even surpasses substantially larger medical MLLMs such as HuatuoGPT-Vision-34B by 2.79 points. Moreover, MRPO reduces early-stage reasoning failures from 64.0% to 13.0%, showing that targeted mitigation of cascading failures improves both reasoning quality and final answer accuracy. Our code is available at https://github.com/dmis-lab/MRPO</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-30 · <a href='https://huggingface.co/papers/2606.31825'>page</a> · <a href='https://arxiv.org/pdf/2606.31825'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Contrastive Deep Learning Reveals Age Biomarkers in Histopathological Skin Biopsies</title>
       <link>https://arxiv.org/abs/2411.16956</link>
@@ -2235,44 +2268,6 @@
 <p><b>Authors:</b> Yan Scholten, Sophie Xhonneux, Leo Schwinn, Stephan Günnemann</p>
 <p>Current unlearning methods for LLMs optimize on the private information they seek to remove by incorporating it into their fine-tuning data. We argue this not only risks reinforcing exposure to sensitive data, but also fundamentally contradicts the principle of minimizing its use. As a remedy, we propose a novel unlearning method-Partial Model Collapse (PMC), which does not require unlearning targets in the unlearning objective. Our approach is inspired by recent observations that training generative models on their own generations leads to distribution collapse, effectively removing information from model outputs. Our central insight is that model collapse can be leveraged for machine unlearning by deliberately triggering it for data we aim to remove. We theoretically analyze that our approach converges to the desired outcome, i.e. the model unlearns the data targeted for removal. We empirically demonstrate that PMC overcomes four key limitations of existing unlearning methods that explicitly optimize on unlearning targets, and more effectively removes private information from model outputs while preserving general model utility. Overall, our contributions represent an important step toward more comprehensive unlearning that better aligns with real-world privacy constraints. Code available at https://www.cs.cit.tum.de/daml/partial-model-collapse/.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2507.04219'>page</a> · <a href='https://arxiv.org/pdf/2507.04219'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>From Values to Tokens: An LLM-Driven Framework for Context-aware Time Series Forecasting via Symbolic Discretization</title>
-      <link>https://arxiv.org/abs/2508.09191</link>
-      <guid isPermaLink="false">arxiv:2508.09191</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> HKUST — (senior)</p>
-<p><b>Authors:</b> Xiaoyu Tao, Shilong Zhang, Mingyue Cheng, Daoyu Wang, Tingyue Pan, Bokai Pan, Changqing Zhang, Shijin Wang</p>
-<p>Time series forecasting plays a vital role in supporting decision-making across a wide range of critical applications, including energy, healthcare, and finance. Despite recent advances, forecasting accuracy remains limited due to the challenge of integrating historical numerical sequences with contextual features, which often comprise unstructured textual data. To address this challenge, we propose TokenCast, a large language model (LLM) driven framework that leverages language-based symbolic representations as a unified intermediary for context-aware time series forecasting. Specifically, TokenCast employs a discrete tokenizer to transform continuous numerical sequences into temporal tokens, enabling structural alignment with language-based inputs. To effectively bridge the semantic gap between modalities, both temporal and contextual tokens are embedded into a shared representation space via a pre-trained LLM, further optimized with generative objectives. Building upon this unified semantic space, the aligned LLM is subsequently fine-tuned in a supervised manner to predict future temporal tokens, which are then decoded back into the original numerical space. Extensive experiments on real-world datasets demonstrate the effectiveness of our framework and highlight its potential as a generative framework for context-aware time series forecasting. The code is available at https://github.com/Xiaoyu-Tao/TokenCast.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2508.09191'>page</a> · <a href='https://arxiv.org/pdf/2508.09191'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Rethinking Cross-lingual Gaps from a Statistical Viewpoint</title>
-      <link>https://arxiv.org/abs/2510.15551</link>
-      <guid isPermaLink="false">arxiv:2510.15551</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Vihari Piratla, Purvam Jain, Darshan Singh, Trevor Cohn, Preethi Jyothi, Partha Talukdar</p>
-<p>Any piece of knowledge is usually expressed in one or a handful of natural languages on the web or in any large corpus. Large Language Models (LLMs) act as a bridge by acquiring knowledge from a source language and making it accessible when queried using target languages. A cross-lingual gap is a drop in accuracy incurred when querying knowledge in a target language rather than the source language. Existing research focused on modeling or training failures leading to cross-lingual gaps. In this work, we take an alternative view to characterize the nature of cross-lingual error, and hypothesize that the variance of responses in the target language is a key cause of this gap. For the first time, we formalize the cross-lingual gap in terms of biased and unbiased errors. We empirically validate our hypothesis through multiple inference-time interventions that control variance and reduce the cross-lingual gap. We demonstrate a few test-time ensemble methods that reduce response variance, and thereby improve source-target transfer scores by up to 12 absolute points yielding relative gains of 8% to over 50% across various LLMs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2510.15551'>page</a> · <a href='https://arxiv.org/pdf/2510.15551'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>R2BC: Multi-Agent Imitation Learning from Single-Agent Demonstrations</title>
-      <link>https://arxiv.org/abs/2510.18085</link>
-      <guid isPermaLink="false">arxiv:2510.18085</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <category>cs.MA</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Oxford — Daniel S. Brown</p>
-<p><b>Authors:</b> Connor Mattson, Varun Raveendra, Ellen Novoseller, Nicholas Waytowich, Vernon J. Lawhern, Daniel S. Brown</p>
-<p>Imitation Learning (IL) is a natural way for humans to teach robots, particularly when high-quality demonstrations are easy to obtain. While IL has been widely applied to single-robot settings, relatively few studies have addressed the extension of these methods to multi-agent systems, especially in settings where a single human must provide demonstrations to a team of collaborating robots. In this paper, we introduce and study Round-Robin Behavior Cloning (R2BC), a method that enables a single human operator to effectively train multi-robot systems through sequential, single-agent demonstrations. Our approach allows the human to teleoperate one agent at a time and incrementally teach multi-agent behavior to the entire system, without requiring demonstrations in the joint multi-agent action space. We show that R2BC methods match, and in some cases surpass, the performance of an oracle behavior cloning approach trained on privileged synchronized demonstrations across four multi-agent simulated tasks. Finally, we deploy R2BC on two physical robot tasks trained using real human demonstrations.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.MA · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2510.18085'>page</a> · <a href='https://arxiv.org/pdf/2510.18085'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

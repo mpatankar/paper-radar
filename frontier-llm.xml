@@ -5,8 +5,41 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sun, 05 Jul 2026 07:19:16 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 08:15:37 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory</title>
+      <link>https://huggingface.co/papers/2607.02517</link>
+      <guid isPermaLink="false">arxiv:2607.02517</guid>
+      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, HKUST, Imperial College, NUS, Peking U, U Michigan — (senior)</p>
+<p><b>Authors:</b> Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Qingyan Bai, Ka Leong Cheng, Yue Yu, Yixuan Li, … <i>(+6 more)</i></p>
+<p>We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration. Unlike existing world models that entangle physical dynamics with pixel rendering and rely on continuous visual observation to sustain motion, our framework explicitly decouples semantic motion orchestration from visual generation. By leveraging an LLM to coordinate 3D trajectories with camera movements and subsequently employing these orchestrated trajectories as control signals for video generation, our approach ensures strict physical logic and appearance stability, successfully preserving the exact visual identities of dynamic entities even when they re-enter the scene after prolonged periods out of view. Experimental results demonstrate that our method supports the synthesis of complex and extended events with unprecedented controllability and persistent dynamic object memory. Project Page: https://worlddirector.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02517'>page</a> · <a href='https://arxiv.org/pdf/2607.02517'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2606.29526</link>
+      <guid isPermaLink="false">arxiv:2606.29526</guid>
+      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Jing Liang, Hongyao Tang, Yi Ma, Yancheng He, Weixun Wang, Xiaoyang Li, Ju Huang, Wenbo Su, … <i>(+5 more)</i></p>
+<p>Reinforcement learning (RL) has gained growing attention in large language model (LLM) post-training, yet RL training remains fragile and can suffer from instability or collapse. One vital cause is training-inference mismatch: LLM adopts separate inference and training engines for generation efficiency and training precision, which in practice exhibits inconsistent probabilities for the same trajectories on training and inference sides, even with synchronized model parameters. This naturally induces a special type of off-policyness ever existing and poisoning the training. Prior works have made various efforts in addressing the off-policyness to stabilize the training policies under the mismatch. In this paper, we point out the objective misalignment neglected by existing works that an effective update to the policy in the training engine not necessarily ensures the improvement of the inference policy, i.e., the one used in deployment. To this end, we propose a new policy optimization objective for LLM RL, named Monotonic Inference Policy Improvement (MIPI). Following this principle, we introduce Monotonic Inference Policy Update (MIPU), a two-step LLM RL framework that constructs sampler-referenced candidate updates and selectively accepts synchronized candidates using an inference-side gap proxy. Experiments conducted on two model scales under high mismatch show that MIPU improves average reasoning performance and training stability.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-28 · <a href='https://huggingface.co/papers/2606.29526'>page</a> · <a href='https://arxiv.org/pdf/2606.29526'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning</title>
+      <link>https://huggingface.co/papers/2606.31825</link>
+      <guid isPermaLink="false">arxiv:2606.31825</guid>
+      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junha Jung, Minbyul Jeong, Suhyeon Lim, Sungwook Jung, Jaehoon Yun, Taeyun Roh, Mujeen Sung, Jaewoo Kang, … <i>(+1 more)</i></p>
+<p>Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or sequence-level preferences. This suffers from sparse credit assignment, making it difficult to optimize the reasoning process essential for clinical applications. Our analysis reveals that cascading errors from early-stage reasoning failures are a leading cause of incorrect predictions in medical visual question answering (VQA) benchmarks. Motivated by this, we propose Medical Reasoning-aware Policy Optimization (MRPO), an RL algorithm that incorporates step-wise process rewards. When the final answer is incorrect, MRPO assigns exponentially larger penalties to tokens in earlier invalid reasoning steps, breaking failure cascades without compromising successful paths. Across three multimodal LLM backbones, MRPO consistently outperforms standard GRPO and a recent RL baseline, and on Qwen3-VL-8B-Instruct even surpasses substantially larger medical MLLMs such as HuatuoGPT-Vision-34B by 2.79 points. Moreover, MRPO reduces early-stage reasoning failures from 64.0% to 13.0%, showing that targeted mitigation of cascading failures improves both reasoning quality and final answer accuracy. Our code is available at https://github.com/dmis-lab/MRPO</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-30 · <a href='https://huggingface.co/papers/2606.31825'>page</a> · <a href='https://arxiv.org/pdf/2606.31825'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>A validity-guided workflow for robust large language model research in psychology</title>
       <link>https://arxiv.org/abs/2507.04491</link>
@@ -2329,45 +2362,6 @@
 <p><b>Authors:</b> Austin Letson, Leopoldo Sarra, Auguste Poiroux, Oliver Dressler, Paul Lezeau, Dhyan Aranha, Frederick Pu, Aaron Hill, … <i>(+4 more)</i></p>
 <p>We present SorryDB, a dynamically-updating benchmark of open Lean tasks drawn from 78 real world formalization projects on GitHub. Unlike existing static benchmarks, often composed of competition problems, hillclimbing the SorryDB benchmark will yield tools that are aligned to the community needs, more usable by mathematicians, and more capable of understanding complex dependencies. Moreover, by providing a continuously updated stream of tasks, SorryDB mitigates test-set contamination and offers a robust metric for an agent&#x27;s ability to contribute to novel formal mathematics projects. We evaluate a collection of approaches, including generalist large language models, agentic approaches, and specialized symbolic provers, over a selected snapshot of 1000 tasks from SorryDB. We show that current approaches are complementary: even though an agentic approach based on Gemini Flash is the most performant, it is not strictly better than other off-the-shelf large-language models, specialized provers, or even a curated list of Lean tactics.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2603.02668'>page</a> · <a href='https://arxiv.org/pdf/2603.02668'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mitigating Object Hallucinations in LVLMs via Attention Imbalance Rectification</title>
-      <link>https://arxiv.org/abs/2603.24058</link>
-      <guid isPermaLink="false">arxiv:2603.24058</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Han Sun, Min Zhang</p>
-<p><b>Authors:</b> Han Sun, Qin Li, Peixin Wang, Min Zhang</p>
-<p>Object hallucination in Large Vision-Language Models (LVLMs) severely compromises their reliability in real-world applications, posing a critical barrier to their deployment in high-stakes scenarios such as autonomous driving and medical image analysis. Through systematic empirical investigation, we identify that the imbalanced attention allocation, both across modalities (i.e., vision and language) and within modalities (among individual tokens), exhibits a strong causal correlation with the occurrence of object hallucination. Leveraging this insight, we introduce a novel concept termed attention imbalance, which not only quantifies the degree of attention disparity but also visually delineates the underlying patterns (e.g., over-attentiveness to irrelevant language tokens or under-attentiveness to discriminative visual features) that drive object hallucination. To mitigate object hallucination, we further propose Attention Imbalance Rectification (AIR), a lightweight decoding-time intervention method that reallocates attention weights and adjusts attention distributions to rectify modality-wise and token-wise imbalances. Extensive evaluations on four mainstream LVLMs and three benchmarks (CHAIR, POPE, and MM-Vet) with seven baselines demonstrate that AIR consistently reduces object hallucination rates, achieving up to a 35.1% reduction compared to the baselines, while improving up to 15.9% of LVLMs&#x27; general capability across diverse vision-language tasks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-14 · <a href='https://arxiv.org/abs/2603.24058'>page</a> · <a href='https://arxiv.org/pdf/2603.24058'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RoTRAG: Rule of Thumb Reasoning for Conversation Harm Detection with Retrieval-Augmented Generation</title>
-      <link>https://arxiv.org/abs/2604.17301</link>
-      <guid isPermaLink="false">arxiv:2604.17301</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.HC</category>
-      <category>cs.IR</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yi Bu</p>
-<p><b>Authors:</b> Juhyeon Lee, Wonduk Seo, Junseo Koh, Seunghyun Lee, Haihua Chen, Yi Bu</p>
-<p>Detecting harmful content in multi turn dialogue requires reasoning over the full conversational context rather than isolated utterances. However, most existing methods rely mainly on models internal parametric knowledge, without explicit grounding in external normative principles. This often leads to inconsistent judgments in socially nuanced contexts, limited interpretability, and redundant reasoning across turns. To address this, we propose RoTRAG, a retrieval augmented framework that incorporates concise human written moral norms, called Rules of Thumb (RoTs), into LLM based harm assessment. For each turn, RoTRAG retrieves relevant RoTs from an external corpus and uses them as explicit normative evidence for turn level reasoning and final severity classification. To improve efficiency, we further introduce a lightweight binary routing classifier that decides whether a new turn requires retrieval grounded reasoning or can reuse existing context. Experiments on ProsocialDialog and Safety Reasoning Multi Turn Dialogue show that RoTRAG consistently improves both harm classification and severity estimation over competitive baselines, with an average relative gain of around 40% in F1 across benchmark datasets and an average relative reduction of 8.4% in distributional error, while reducing redundant computation without sacrificing performance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.HC, cs.IR, cs.LG · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2604.17301'>page</a> · <a href='https://arxiv.org/pdf/2604.17301'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OmniMouse: Scaling properties of multi-modal, multi-task Brain Models on 150B Neural Tokens</title>
-      <link>https://arxiv.org/abs/2604.18827</link>
-      <guid isPermaLink="false">arxiv:2604.18827</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>q-bio.NC</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Max Planck, NYU, Stanford — Andreas S. Tolias</p>
-<p><b>Authors:</b> Konstantin F. Willeke, Polina Turishcheva, Alex Gilbert, Goirik Chakrabarty, Hasan A. Bedel, Paul G. Fahey, Yongrong Qiu, Marissa A. Weis, … <i>(+13 more)</i></p>
-<p>Scaling data and artificial neural networks has transformed AI, driving breakthroughs in language and vision. Whether similar principles apply to modeling brain activity remains unclear. Here we leveraged a dataset of 3.1 million neurons from the visual cortex of 73 mice across 323 sessions, totaling more than 150 billion neural tokens recorded during natural movies, images and parametric stimuli, and behavior. We train multi-modal, multi-task models that support three regimes flexibly at test time: neural prediction, behavioral decoding, neural forecasting, or any combination of the three. OmniMouse achieves state-of-the-art performance, outperforming specialized baselines across nearly all evaluation regimes. We find that performance scales reliably with more data, but gains from increasing model size saturate. This inverts the standard AI scaling story: in language and computer vision, massive datasets make parameter scaling the primary driver of progress, whereas in brain modeling -- even in the mouse visual cortex, a relatively simple system -- models remain data-limited despite vast recordings. The observation of systematic scaling raises the possibility of phase transitions in neural modeling, where larger and richer datasets might unlock qualitatively new capabilities, paralleling the emergent properties seen in large language models. Code available at https://github.com/enigma-brain/omnimouse.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI · <b>arXiv submitted:</b> 2026-06-14 · <a href='https://arxiv.org/abs/2604.18827'>page</a> · <a href='https://arxiv.org/pdf/2604.18827'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
