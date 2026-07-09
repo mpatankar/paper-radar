@@ -5,8 +5,97 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Wed, 08 Jul 2026 06:24:07 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 07:38:24 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Flint: A visualization language for the AI era</title>
+      <link>https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/</link>
+      <guid isPermaLink="false">microsoft_research:6767f70689</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Chenglong Wang, Alper Sarikaya, Scott Tsukamaki, Michel Galley, Jianfeng Gao</p>
+<p>&lt;p&gt;Short chart specifications are easy to write, but often produce uninspiring results. Flint is an open-source visualization language that offers a middle path, letting AI agents create expressive charts from compact, human-editable specifications.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/&quot;&gt;Flint: A visualization language for the AI era&lt;/a&gt; appeared first on &lt;a href=&quot;https://www.microsoft.com/en-us/research&quot;&gt;Microsoft Research&lt;/a&gt;.&lt;/p&gt;</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation</title>
+      <link>https://huggingface.co/papers/2607.06559</link>
+      <guid isPermaLink="false">arxiv:2607.06559</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haoyu Zhao, Xingyue Zhao, Siteng Huang, Xin Li, Deli Zhao, Zhongyu Li, Hugging Face Daily Papers (curated)</p>
+<p>Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://huggingface.co/papers/2607.06559'>page</a> · <a href='https://arxiv.org/pdf/2607.06559'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation</title>
+      <link>https://huggingface.co/papers/2607.06558</link>
+      <guid isPermaLink="false">arxiv:2607.06558</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haoyu Zhao, Xingyue Zhao, Hangyu Li, Biao Gong, Kehan Li, Siteng Huang, Xin Li, Deli Zhao, … <i>(+2 more)</i></p>
+<p>Scaling robot learning requires massive, diverse trajectory data, yet collection is currently bottlenecked by physical teleoperation, where every demonstration binds operator time to specific hardware and workspaces. We introduce digital teleoperation, a paradigm that decouples data collection from physical constraints by replacing the real robot with a generative world model. In this framework, an operator&#x27;s hand-pose stream drives a robot-centric generative world model to synthesize high-fidelity egocentric videos from a single reference image. The recorded pose stream serves as an embodiment-agnostic action label transferable to any target robot via standard retargeting, yielding complete state-action trajectories for imitation learning independent of physical hardware. We instantiate this paradigm in RynnWorld-Teleop, a system that integrates depth-aware skeletal conditioning, progressive human-to-robot training on a video Diffusion Transformer, and streaming autoregressive distillation. This pipeline compresses the generative process into a single-pass inference, enabling 40+ FPS, real-time interactive generation on a single H100 GPU. Policies trained exclusively on RynnWorld-Teleop-generated data achieve effective zero-shot Sim2Real transfer across dexterous and diverse bimanual tasks. Moreover, augmenting real-world datasets with our digitally teleoperated data consistently improves success rates, demonstrating that RynnWorld-Teleop serves as a high-fidelity, scalable data engine for the next generation of robotic agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://huggingface.co/papers/2607.06558'>page</a> · <a href='https://arxiv.org/pdf/2607.06558'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling</title>
+      <link>https://huggingface.co/papers/2607.02980</link>
+      <guid isPermaLink="false">arxiv:2607.02980</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xiang Hu, Xinyu Wei, Hao Gu, Minshen Zhang, Tian Liang, Huayang Li, Lei Zhu, Yan Wang, … <i>(+6 more)</i></p>
+<p>Scaling modern large language models (LLMs) to long contexts is limited by the quadratic computation cost, and poor length extrapolation of dense attention. Chunk-wise sparse attention offers a promising alternative, but all existing methods fall short of full attention because of their inaccurate chunk selection. We propose Hierarchical Landmark Sparse (HiLS) Attention, a chunk-wise sparse attention mechanism that learns chunk selection end-to-end under the language-modeling (LM) loss. HiLS factorizes attention hierarchically: each query performs attention independently with each retrieved chunk to extract chunk-specific information, and the resulting outputs are fused according to chunk retrieval scores. By incorporating retrieval scores into the forward attention computation, HiLS optimizes them directly with the LM loss, enabling end-to-end retrieval learning and native sparse training. Experimental results show that HiLS-Attention achieves performance comparable to, and in some cases better than, full attention at in-domain context lengths. Meanwhile, HiLS-Attention extrapolates more than 64times the training context length with 90% retrieval accuracy, far beyond full attention. Moreover, existing full-attention models can be converted to HiLS-Attention with lightweight continued pretraining, preserving in-domain performance while acquiring ultra-long-context extrapolation. Together with its sparse KV access and computation, HiLS-Attention breaks the usual efficiency-performance trade-off, enabling long-context LLMs that are both more efficient and more effective on general long-context tasks than their full-attention counterparts.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-03 · <a href='https://huggingface.co/papers/2607.02980'>page</a> · <a href='https://arxiv.org/pdf/2607.02980'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning</title>
+      <link>https://huggingface.co/papers/2607.07708</link>
+      <guid isPermaLink="false">arxiv:2607.07708</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chen Tang, Yizhou Wang, Jianyu Wu, Lintao Wang, Shixiang Tang, Pengze Li, Encheng Su, Jun Yao, … <i>(+22 more)</i></p>
+<p>Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint challenge of representation and reasoning: models must preserve domain-native structural information while showing how specific evidence supports predictions under these constraints. Here we introduce SciReasoner, a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. SciReasoner discretizes coordinates, topologies and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. In homology-controlled Gene Ontology prediction, SciReasoner improves Cellular Component annotation for low-homology and orphan-like proteins, increasing F_{max} from 0.42 to 0.55. In chemistry, it raises single-step retrosynthesis accuracy from 0.63 to 0.72 while generating fragment-level disconnection and precursor-verification traces. In materials science, its representations separate elemental and compound phases and resolve high- and low-band-gap regimes. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks. Double-blind expert evaluation rates its reasoning traces as preferred or at least comparable to those of a frontier large language model in 98% of cases. By making structure an inspectable substrate for reasoning under scientific constraints, SciReasoner connects accurate prediction with interpretable scientific inference.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://huggingface.co/papers/2607.07708'>page</a> · <a href='https://arxiv.org/pdf/2607.07708'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Gemma 4 Technical Report</title>
+      <link>https://huggingface.co/papers/2607.02770</link>
+      <guid isPermaLink="false">arxiv:2607.02770</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Gemma Team, Sherif El Abd, Vaibhav Aggarwal, Robin Algayres, Alek Andreev, Olivier Bachem, Ian Ballantyne, Cormac Brick, … <i>(+294 more)</i></p>
+<p>We introduce Gemma 4, a new generation of open-weight, natively multimodal language models in the Gemma model family. Designed to advance compute efficiency and reasoning, the Gemma 4 model suite features dense and Mixture-of-Experts architectures, ranging from 2.3B to 31B parameters. Alongside improved vision and audio encoders for all model sizes, we propose a unified, encoder-free architecture for our 12B model, which ingests raw audio and image patches. Furthermore, we integrate a thinking mode, enabling Gemma models to generate reasoning traces prior to responding. We improve inference speed, memory, and compute efficiency, as well as long-context abilities through critical design choices. Gemma 4 establishes a leap in performance across STEM, multimodal, and long-context benchmarks, and rivals larger, frontier open models in human-rated tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02770'>page</a> · <a href='https://arxiv.org/pdf/2607.02770'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence</title>
+      <link>https://huggingface.co/papers/2607.07675</link>
+      <guid isPermaLink="false">arxiv:2607.07675</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shuailei Ma, Jiaqi Liao, Xinyang Wang, Jingjing Wang, Chaoran Feng, Zijing Hu, Chong Bao, Zichen Xi, … <i>(+20 more)</i></p>
+<p>Despite the recent promise in robot control, video generative models suffer from a domain mismatch due to their primary focus on content creation. For example, their design inherently prioritizes visual fidelity and creativity over computational efficiency and physical realism. In this work, we present LingBot-Video, a DiT-based video pretraining paradigm specifically tailored for embodied intelligence. From the architecture perspective, we adopt the Mixture-of-Experts (MoE), instead of dense, framework to achieve a better trade-off between modeling capacity and inference efficiency, and manage to scale it up from scratch. From the data perspective, we construct a data profiling engine that augments standard internet videos with extensive robot-oriented footage, encompassing manipulation, navigation, and egocentric perspectives, to equip the base model with an intrinsic understanding of actions and world dynamics. From the training perspective, we develop a multi-dimensional reward system to enforce the alignment regarding physical rationality and task completion, going beyond standard criteria such as aesthetics, prompt-following, and motion consistency. Comprehensive evaluations validate its performance and efficiency as a video foundation model. We contribute LingBot-Video as the inaugural large-scale, open-source MoE video foundation model to the community, in a pioneering effort to bridge digital creativity and physical actuation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://huggingface.co/papers/2607.07675'>page</a> · <a href='https://arxiv.org/pdf/2607.07675'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation</title>
+      <link>https://huggingface.co/papers/2607.05147</link>
+      <guid isPermaLink="false">arxiv:2607.05147</guid>
+      <pubDate>Thu, 09 Jul 2026 07:38:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xin Cheng, Xingkai Yu, Chenze Shao, Jiashi Li, Yunfan Xiong, Yi Qian, Jiaqi Zhu, Shirong Ma, … <i>(+26 more)</i></p>
+<p>Speculative decoding accelerates Large Language Model (LLM) inference by decoupling draft generation from target verification. While recent parallel drafters efficiently propose long token sequences in a single forward pass, they suffer from rapid acceptance decay due to a lack of inter-token dependencies. Furthermore, indiscriminately verifying these extended blocks wastes critical batch capacity on tokens with high rejection risks, severely degrading throughput in high-concurrency serving systems. We introduce DSpark, a speculative decoding framework that unifies high-throughput parallel generation with adaptive, load-aware verification. To maintain draft quality, DSpark utilizes a semi-autoregressive architecture, coupling a parallel backbone with a lightweight sequential module, to introduce intra-block dependency modeling and mitigate suffix decay. To optimize system efficiency, DSpark employs confidence-scheduled verification, dynamically tailoring the verification length for each request based on estimated prefix survival probabilities and engine-specific throughput profiles. On offline benchmarks across diverse domains, DSpark substantially improves the accepted length over state-of-the-art autoregressive and parallel drafters. When deployed within the DeepSeek-V4 serving system under live user traffic, DSpark successfully mitigates verification waste. Compared to the established production baseline (MTP-1), DSpark accelerates per-user generation speeds by 60 to 85 percent at matched throughput levels. More importantly, by preventing severe throughput degradation under strict interactivity constraints, it enables performance tiers that were previously unattainable, shifting the Pareto frontier of our serving system.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://huggingface.co/papers/2607.05147'>page</a> · <a href='https://arxiv.org/pdf/2607.05147'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>MLLM-LLaVA-FL: Multimodal Large Language Model Assisted Federated Learning</title>
       <link>https://arxiv.org/abs/2409.06067</link>
@@ -2247,104 +2336,6 @@
 <p><b>Authors:</b> Hyung-Seok Oh, Deok-Hyeon Cho, Seung-Bin Kim, Seong-Whan Lee</p>
 <p>Multilingual speaker verification remains challenging because language-dependent acoustic variability causes speaker identity to become entangled with linguistic characteristics, degrading generalization across languages. In multilingual training, embeddings often encode language cues with speaker identity, causing speakers to form language-specific clusters. We propose L-Proto, a language-aware episodic prototypical training strategy that constructs language-consistent episodes. By sampling speakers from a single language per episode, L-Proto reduces language-driven variation during training and encourages embeddings to focus more directly on speaker identity. Experiments on the TidyVoice Challenge benchmark demonstrate consistent performance improvements over conventional fine-tuning and random episodic sampling across multiple backbone architectures.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17416'>page</a> · <a href='https://arxiv.org/pdf/2606.17416'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Patients With Personality: Realistic Patient Simulation through Controlled Diversity and Selective Disclosure</title>
-      <link>https://arxiv.org/abs/2606.17441</link>
-      <guid isPermaLink="false">arxiv:2606.17441</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.HC</category>
-      <category>cs.AI</category>
-      <category>cs.CY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Imperial College, TU Munich — (senior)</p>
-<p><b>Authors:</b> Moritz Schlager, Friederike Jungmann, Samuel Schmidgall, Philipp Raffler, Franziska Hartl, Eva Wende, Paula Roßmüller, Conrad Ketzer, … <i>(+7 more)</i></p>
-<p>Simulating realistic patient interactions is a key requirement to testing clinical applications of LLMs at scale without time-consuming and expensive user studies. However, existing approaches often lack realism and controllability, often oversharing information unprompted, and failing to capture the wide variability of patient behavior. Here, we introduce PatientsWithPersonality (PWP), a patient simulation framework that generates realistic yet diverse virtual patient responses through explicit personality parametrization over a latent patient state. Grounded in HEXACO, a six-dimensional personality space used to quantify and parameterize human behavioral traits, our approach enables fine-grained control over conversational style, cooperativeness, and information disclosure within a unified framework. In a clinician evaluation, PWP is judged nearly as realistic as recorded human actors and clearly ahead of prior simulators, while being flagged as &quot;too informative&quot; far less often. Conditioning on HEXACO axes yields personas whose configured traits are recoverable by both clinicians and an autorater, span a substantially wider behavioral footprint than the closest baseline, and prevent oversharing. Altogether, our framework paves the way for more accurate and informative LLM benchmarking through our realistic and steerable patient simulator.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-05-13 · <a href='https://arxiv.org/abs/2606.17441'>page</a> · <a href='https://arxiv.org/pdf/2606.17441'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AUTOGATE: Automated Clock Gating via Toggling-Aware LLM-based RTL Rewriting</title>
-      <link>https://arxiv.org/abs/2606.17461</link>
-      <guid isPermaLink="false">arxiv:2606.17461</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.AR</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> CUHK, Tsinghua — Yiting Wang</p>
-<p><b>Authors:</b> Yiting Wang, Chenhui Deng, Chia-Tung Ho, Yanqing Zhang, Zhuo Feng, Cunxi Yu, Ang Li, Gang Qu, … <i>(+1 more)</i></p>
-<p>Fine-grain clock gating (FGCG) is among the most effective techniques for reducing dynamic power, yet current FGCG optimization flows remain largely manual. Recent LLM-based RTL optimization approaches remain limited by two key drawbacks: (1) the inability to process long waveform traces spanning millions of cycles, and (2) the difficulty of scaling optimization to large hierarchical codebases while preserving correctness. In this work, we present AUTOGATE, the first agentic framework for industry-grade RTL power optimization, enabling workload-aware clock-gating optimization across large hierarchical codebases. AUTOGATE introduces a Machine Learning (ML)-LLM co-design that bridges waveform-level analysis and RTL rewriting. Specifically, we design an ML-based clustering algorithm that distills raw toggling traces into compact, structured representations that guide LLM-based RTL rewriting. This enables accurate identification and application of clock-gating opportunities without requiring LLMs to directly process raw waveform data. To enhance scalability, AUTOGATE employs a hierarchical multi-agent architecture that decomposes large designs into independently optimizable modules, enabling coordinated optimization across deep design hierarchies. We evaluate AUTOGATE on a diverse set of designs ranging from small RTL designs to large industrial-grade codebases. Experimental results show that AUTOGATE consistently reduces dynamic power relative to baselines. Across the small-design suite, AUTOGATE reduces dynamic power by 49.31% on average. On industry-scale designs, it achieves 19.34% and 7.96% dynamic power reductions on NVDLA and BlackParrot, respectively, and up to 6.86% on highly optimized proprietary production designs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AR, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17461'>page</a> · <a href='https://arxiv.org/pdf/2606.17461'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Decoding Hidden Deception in Reasoning LLMs: Activation Explainers for Deception Auditing</title>
-      <link>https://arxiv.org/abs/2606.17478</link>
-      <guid isPermaLink="false">arxiv:2606.17478</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Princeton — Dongxia Wang</p>
-<p><b>Authors:</b> Kexin Chen, Yi Liu, Haonan Zhang, Yanhui Li, Xinyu Deng, Dongxia Wang</p>
-<p>As LLMs acquire stronger reasoning capabilities, deceptive behavior becomes an increasingly serious safety concern. Existing deception monitors either score visible transcripts or derive scalar probe scores from representation vectors, leaving little inspectable evidence about why a response is suspicious. We introduce STATEWITNESS, an activation explainer for deception auditing. A separate decoder reads a target model&#x27;s hidden states, then answers natural-language queries or emits structured reports about them. We evaluate STATEWITNESS on two target reasoning LLMs across seven deception datasets. STATEWITNESS reaches 0.916 mean AUROC, a relative gain of 11.6% over the best black-box text monitor and 25.0% over the best activation-probe baseline under the same evaluation protocol. When combined with existing monitors, STATEWITNESS reduces missed deceptive examples in simple threshold ensembles. Beyond scalar detection, the decoder returns query-level answers, schema reports, and token- or sentence-level evidence traces for human inspection. We view this interface as a potential building block for broader interpretability and alignment tools.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17478'>page</a> · <a href='https://arxiv.org/pdf/2606.17478'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Online LLM Selection via Constrained Bandits with Time-Varying Demand</title>
-      <link>https://arxiv.org/abs/2606.17489</link>
-      <guid isPermaLink="false">arxiv:2606.17489</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge — Yin Huang</p>
-<p><b>Authors:</b> Yin Huang, Qingsong Liu, Jie Xu</p>
-<p>Large Language Models (LLMs) are increasingly deployed in edge-cloud inference systems to handle diverse user tasks with heterogeneous accuracy, latency, and cost profiles. Selecting the appropriate LLM for each incoming task is critical for ensuring service quality and efficient resource utilization. However, model heterogeneity, stochastic and unknown performance characteristics, and time-varying task demands make static selection strategies inadequate. Real-world deployments often impose hard resource budgets such as monetary expenditure limits, along with soft service-level requirements such as latency guarantees. These constraints introduce additional challenges for online decision-making. We formulate this problem as a constrained stochastic bandit learning task, where the learner sequentially selects models under both packing-type (hard) and covering-type (soft) constraints, while adapting to time-varying task demand. The learner operates without access to the underlying reward, cost, or latency distributions and must rely on partial feedback. We develop a novel online learning algorithm that leverages confidence-bound estimates and demand predictions to balance reward maximization with long-term constraint satisfaction. We provide theoretical guarantees showing sublinear regret and sublinear covering constraint violations compared to an offline benchmark with full information. Experimental results on synthetic workloads demonstrate the effectiveness and robustness of our approach in dynamic, resource-constrained environments.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17489'>page</a> · <a href='https://arxiv.org/pdf/2606.17489'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MagicSim: A Unified Infrastructure for Executable Embodied Interaction</title>
-      <link>https://arxiv.org/abs/2606.17511</link>
-      <guid isPermaLink="false">arxiv:2606.17511</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Peking U, Tsinghua — Han Liu</p>
-<p><b>Authors:</b> Haoran Lu, Songling Liu, Yue Chen, Guo Ye, Mutian Shen, Shuyang Yu, Yu Xiao, Jihai Zhao, … <i>(+10 more)</i></p>
-<p>Robot learning and embodied agents now require simulation to serve as a shared execution substrate linking control, skills, and planning, not only as a renderer, controller testbed, or fixed task environment. Existing pipelines split these layers with &quot;magic&quot; actions, disconnected training environments, or forward-only renders that cannot reproduce, evaluate, and annotate the same episode. We present MagicSim, an embodied interaction infrastructure built around one deterministic batched runtime and a shared Markov decision process (MDP). From YAML-first specifications that decouple contents, placement, behavior, and agent exposure, MagicSim constructs diverse executable worlds spanning task families, interaction regimes, physics, layouts, sensors, avatars, and robot embodiments in one reset-and-step loop. A common execution interface grounds high-level commands through controllers, atomicskills, planner primitives, and asynchronous planning, realizing them as robot actions rather than simulator-side state edits. One task definition supports three capabilities: benchmark and RL evaluation, an autocollect interface that automatically turns commands into grounded trajectories, and agent/VLM-facing interaction. For automatic execution, commands flow through a Command-&gt;Skill-&gt;Planner-&gt;Robot-&gt;Record pipeline, while per-environment command, skill, planning, retry, annotation, and episode states advance independently above the shared physics tick. Successful rollouts are saved as structured multimodal trajectories aligning language supervision, action representations, visual/geometric representations, and task-level status with the executed episode. MagicSim thus unifies diverse world construction, embodied execution, task evaluation, automatic rollout generation, and interactive agent interfaces in one planner-in-the-loop runtime.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17511'>page</a> · <a href='https://arxiv.org/pdf/2606.17511'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Unlocking LLM Code Correction with Iterative Feedback Loops</title>
-      <link>https://arxiv.org/abs/2606.17514</link>
-      <guid isPermaLink="false">arxiv:2606.17514</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.SE</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Le Zhang</p>
-<p><b>Authors:</b> Le Zhang, Suresh Kothari</p>
-<p>Large Language Models have shown remarkable capabilities in code generation. However, most existing evaluations focus only on single-attempt accuracy and overlook the iterative refinement process that is central to real-world programming. This study presents a systematic investigation of LLMs&#x27; ability to rectify their own code through execution feedback. Using real-world programming problems across four models and two major programming languages, this study evaluates performance using iterative refinement framework where LLMs receive compiler error messages and testcase feedback after each attempt. This study introduces metrics to evaluate code failures, analyze rectification patterns, and compare the effectiveness of reasoning and non-reasoning models, offering actionable insights into both the understanding and practical application of feedback loops in LLM-driven code generation systems. Results show that reasoning models consistently improve over iterations, substantially outperforming non-reasoning models in leveraging feedback, while syntactic and runtime errors are far more tractable than logical or algorithmic failures.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17514'>page</a> · <a href='https://arxiv.org/pdf/2606.17514'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Reinforcing Dual-Path Reasoning in Spatial Vision Language Models</title>
-      <link>https://arxiv.org/abs/2606.17539</link>
-      <guid isPermaLink="false">arxiv:2606.17539</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> MIT, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Yatai Ji, An-Chieh Cheng, Yang Fu, Yukang Chen, Han Zhang, Zhaojing Yang, Wei Huang, Ka Chun Cheung, … <i>(+8 more)</i></p>
-<p>Spatial VLMs have made substantial progress in geometric perception, yet complex spatial reasoning requiring multi-step inference over depth, distance, and scene relations remains challenging. Moreover, different spatial queries call for fundamentally different strategies: some are best addressed through purely linguistic, step-by-step deduction, while others require explicit 3D grounding before quantitative inference. We present Dual-Path Spatial Reasoning via Reinforcement Learning for Spatial VLMs (SR-REAL), a unified framework that equips a spatial VLM with two complementary reasoning paths: Language-Only Reasoning (LOR), which performs step-by-step linguistic deduction, and Detect-Then-Reason (DTR), which detects 3D geometric cues (e.g., centers or bounding boxes) via region tokens before explicit geometric inference. SR-REAL begins with a cold-start supervised fine-tuning stage that constructs LOR and DTR chain-of-thought supervision and exposes a region-to-3D interface, followed by RL that optimizes the policy model with accuracy and format rewards; for DTR, a discrete center-based detection reward further refines geometric alignment. Across diverse spatial benchmarks, SR-REAL significantly outperforms spatial VLM baselines: (i) a single RL-trained model supports both reasoning paths, with DTR excelling in region-aware tasks through precise 3D localization and LOR enhancing general spatial reasoning; (ii) jointly training both paths fosters mutual reinforcement; (iii) high-quality, blended cold-start data is crucial for stable RL optimization; and (iv) the model generalizes across datasets and domains without per-task tuning, demonstrating positive transfer between LOR and DTR.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17539'>page</a> · <a href='https://arxiv.org/pdf/2606.17539'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DeepInsight: A Unified Evaluation Infrastructure Across the Physical AI Stack</title>
-      <link>https://arxiv.org/abs/2606.17574</link>
-      <guid isPermaLink="false">arxiv:2606.17574</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, Peking U, U Michigan — Siyi Li</p>
-<p><b>Authors:</b> Siyi Li, Chunyu Sun, Jiahao Zhang, Yuchen Kang, Wuliang Wang, Yu Qiu, Rui Jiang, Haitao Cui, … <i>(+1 more)</i></p>
-<p>Evaluating a Physical AI stack spans operators that differ by more than three orders of magnitude -- from a single foundation-model decoding step to thousands of physics ticks of whole-body control -- varying orthogonally in modality, reward semantics, and resource profile. No existing framework spans this range, so the stack is evaluated today by stitching together separate harnesses that share neither runtime nor scoring, preserving each segment&#x27;s local validity but losing the shared identity needed to diagnose cross-layer regressions. We present DeepInsight, an evaluation infrastructure that serves this full spectrum on a single runtime. Rather than homogenize the regimes, it preserves their heterogeneity behind three narrow abstractions -- task, resource, and result -- each realized as one invariant shared by every subsystem: one episode driver, one resource-handle protocol implemented by every expensive backend (LLM inference and sandboxed runtimes alike), and one trace identity scheme under which every event is written. Deployed in production across all three layers of an embodied humanoid stack, this single set of invariants onboards new benchmarks largely by configuration. Where mature peer orchestrators exist -- at the foundation-model end -- it reproduces published references and peer-framework readings within their own spread, runs the same suites faster on a single node, and scales near-linearly across nodes. Its distinctive return is diagnostic: because every layer writes into one shared trace, a regression that begins in one layer and surfaces in another stays localizable on that trace -- a cross-layer payoff no federation of per-segment harnesses can reproduce.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17574'>page</a> · <a href='https://arxiv.org/pdf/2606.17574'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
