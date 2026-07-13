@@ -5,8 +5,68 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sun, 12 Jul 2026 06:28:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 06:47:54 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>The Quantification Horizon Theory of Consciousness</title>
+      <link>https://arxiv.org/abs/1704.01148</link>
+      <guid isPermaLink="false">arxiv:1704.01148</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>q-bio.NC</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge, U Edinburgh — T. R. Le</p>
+<p><b>Authors:</b> T. R. Le</p>
+<p>To make nature mathematically tractable, the scientific model of the world omits qualia--colors, sounds, tastes, sensations--leaving only what admits of numerical characterization. The &quot;hard problem&quot; of consciousness--the enigma of why and how physical processing gives rise to felt experience--remains unsolved. The Quantification Horizon Theory of Consciousness (QHT) proposes that this enigma reflects a structural limitation of mathematical description: quantitative models capture only quantifiable features of reality; qualia are left out. Yet despite this limitation, QHT argues that such models can account for the unquantifiable--not by explaining or containing it, but by marking its place, in the form of a signpost. There are specific structural features--compression singularities in a system&#x27;s own self-compression, rendered in this paper through information geometry--that intuitively correspond to the hallmark properties of consciousness and could serve as precisely such signposts. QHT proposes that these singularities mark a quantification horizon--a boundary beyond which quantitative description cannot reach. On this proposal, qualia lie beyond the horizon. From this basis, the theory conditionally localizes the structure of ineffability, privacy, and subjectivity, and proposes structural accounts of unity and causal efficacy. The theory proposes substrate-independent dynamical criteria as candidate markers of which systems may be conscious, is anti-panpsychist without adding intuition-saving exclusions, defines prospective prediction schemas through a designated formal rendering, and offers concrete implications for artificial intelligence and artificial consciousness.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/1704.01148'>page</a> · <a href='https://arxiv.org/pdf/1704.01148'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multi-Attribute Steering of Language Models via Targeted Intervention</title>
+      <link>https://arxiv.org/abs/2502.12446</link>
+      <guid isPermaLink="false">arxiv:2502.12446</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Duy Nguyen</p>
+<p><b>Authors:</b> Duy Nguyen, Archiki Prasad, Elias Stengel-Eskin, Mohit Bansal</p>
+<p>Inference-time intervention (ITI) has emerged as a promising method for steering large language model (LLM) behavior in a particular direction (e.g., improving helpfulness) by intervening on token representations without costly updates to the LLM&#x27;s parameters. However, existing ITI approaches fail to scale to multi-attribute settings with conflicts, such as enhancing helpfulness while also reducing toxicity. To address this, we introduce Multi-Attribute Targeted Steering (MAT-Steer), a novel steering framework designed for selective token-level intervention across multiple attributes. MAT-Steer learns steering vectors using an alignment objective that shifts the model&#x27;s internal representations of undesirable outputs closer to those of desirable ones while enforcing sparsity and orthogonality among vectors for different attributes, thereby reducing inter-attribute conflicts. We evaluate MAT-Steer in two distinct settings: (i) on question answering (QA) tasks where we balance attributes like truthfulness, bias, and toxicity; (ii) on generative tasks where we simultaneously improve attributes like helpfulness, correctness, and coherence. MAT-Steer outperforms existing ITI and parameter-efficient fine-tuning approaches across both task types (e.g., 3% average accuracy gain across QA tasks and 55.82% win rate against the best ITI baseline).</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/2502.12446'>page</a> · <a href='https://arxiv.org/pdf/2502.12446'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GrAInS: Gradient-based Attribution for Inference-Time Steering of LLMs and VLMs</title>
+      <link>https://arxiv.org/abs/2507.18043</link>
+      <guid isPermaLink="false">arxiv:2507.18043</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Duy Nguyen</p>
+<p><b>Authors:</b> Duy Nguyen, Archiki Prasad, Elias Stengel-Eskin, Mohit Bansal</p>
+<p>Inference-time steering methods offer a lightweight alternative to fine-tuning large language models (LLMs) and vision-language models (VLMs) by modifying internal activations at test time without updating model weights. However, most existing approaches rely on fixed, global intervention vectors, overlook the causal influence of individual input tokens, and fail to leverage informative gradients from the model&#x27;s logits, particularly in multimodal settings where visual and textual inputs contribute unevenly. To address these limitations, we introduce GrAInS, an inference-time steering approach that operates across both language-only and vision-language models and tasks. GrAInS uses contrastive, gradient-based attribution via Integrated Gradients to identify the top-k most influential tokens, both positively and negatively attributed based on their contribution to preferred versus dispreferred outputs. These tokens are then used to construct directional steering vectors that capture semantic shifts from undesirable to desirable behavior. During inference, GrAInS adjusts hidden activations at transformer layers guided by token-level attribution signals, and normalizes activations to preserve representational scale. This enables fine-grained, interpretable, and modular control over model behavior, without retraining or auxiliary supervision. Empirically, GrAInS consistently outperforms both fine-tuning and existing steering baselines: it achieves a 13.22% accuracy gain on TruthfulQA using Llama-3.1-8B, reduces hallucination rates on MMHal-Bench from 0.624 to 0.514 with LLaVA-1.6-7B, and improves alignment win rates on SPA-VL by 8.11%, all while preserving the model&#x27;s fluency and general capabilities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/2507.18043'>page</a> · <a href='https://arxiv.org/pdf/2507.18043'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading</title>
+      <link>https://huggingface.co/papers/2607.08964</link>
+      <guid isPermaLink="false">arxiv:2607.08964</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zongxia Li, Zhongzhi Li, Yucheng Shi, Ruhan Wang, Junyao Yang, Zhichao Liu, Xiyang Wu, Anhao Li, … <i>(+6 more)</i></p>
+<p>AI agents have become capable of autonomously completing short, well-specified tasks. However, existing terminal benchmarks largely focus on simple problems that finish within minutes and are evaluated only by their final outcome. This setup overlooks intermediate progress and partial solutions, yielding sparse reward signals and an incomplete picture of agent capability. We introduce Long-Horizon-Terminal-Bench, a terminal benchmark of 46 long-horizon tasks spanning nine categories, including experiment reproduction, software engineering, multimodal analysis, interactive games, and scientific computing. Each task follows a Terminal-Bench-style setup with a reference solution or simulation engine, but is further decomposed into fine-grained graded subtasks. This design enables dense intermediate rewards and partial credit, allowing evaluation to capture not only whether an agent reaches the final goal, but also how far it progresses on open-ended workflows. Tasks in Long-Horizon-Terminal-Bench typically require hundreds of episodes and minutes to hours of execution, stressing long-horizon planning, long-context management, and iterative debugging rather than one-shot problem solving. We evaluate 15 frontier models and find that agents consume on average 9.9M tokens per task, with roughly 231 episodes and 85.3 minutes of execution time per run, making Long-Horizon-Terminal-Bench more demanding than prior terminal-based benchmarks. Even the strongest tested model achieves 15.2% pass@1 at a partial-reward threshold of 0.95 and 10.9% at a perfect-reward threshold of 1.0, while the mean pass rate across models is 4.3% and 1.7% under the two thresholds, respectively. These results reveal headroom for improvement. We further analyze failure modes and error patterns, and release Long-Horizon-Terminal-Bench to support future progress on long-horizon terminal agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://huggingface.co/papers/2607.08964'>page</a> · <a href='https://arxiv.org/pdf/2607.08964'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Enhancing In-context Panoramic Generation via Geometric-aware Pretraining</title>
+      <link>https://huggingface.co/papers/2607.08765</link>
+      <guid isPermaLink="false">arxiv:2607.08765</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haoran Feng, Ruiyang Zhang, Longyi Zhang, Dizhe Zhang, Lu Qi, Hugging Face Daily Papers (curated)</p>
+<p>In this work, we present Canvas360, a two-stage framework for in-context panoramic generation that combines geometry-aware pretraining with downstream task-specific fine-tuning. To address the lack of large-scale, high-quality training data tailored to in-context panoramic tasks, we propose Canvas360Dataset, a collection of 1M high-quality paired panoramic samples for style transfer, inpainting, outpainting, and editing, enabling effective supervision across diverse in-context generation scenarios. On the modeling side, Canvas360 enhances text-to-panorama generation through parallel depth generation, velocity circular padding, and similarity loss regularization, enabling the model to learn geometry-aware representations, capture object distortion details, and improve geometric consistency and global coherence. Furthermore, empowered by strong panoramic priors, Canvas360 enables a unified in-context panoramic generation framework that supports diverse downstream tasks via token-level concatenation, surpassing prior methods in both task coverage and modeling flexibility. Extensive experiments show that Canvas360 improves panoramic image fidelity, achieving particularly strong performance on the panorama-specific FAED metric and competitive or leading results across the reported quantitative evaluations. More information can be found on our project page: https://zry000.github.io/Canvas360/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://huggingface.co/papers/2607.08765'>page</a> · <a href='https://arxiv.org/pdf/2607.08765'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>LongE2V: Long-Horizon Event-based Video Reconstruction, Prediction, and Frame Interpolation with Video Diffusion Models</title>
       <link>https://huggingface.co/papers/2607.08770</link>
@@ -2268,68 +2328,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Haoran Lu, Shang Wu, Songling Liu, Jianshu Zhang, Maojiang Su, Guo Ye, Chenwei Xu, Lie Lu, … <i>(+5 more)</i></p>
 <p>Recent video diffusion models have achieved impressive capabilities as large-scale generative world models. However, these models often struggle with fine-grained physical consistency, exhibiting physically implausible dynamics over time. In this work, we present \textbf{Phys4D}, a pipeline for learning physics-consistent 4D world representations from video diffusion models. Phys4D adopts \textbf{a three-stage training paradigm} that progressively lifts appearance-driven video diffusion models into physics-consistent 4D world representations. We first bootstrap robust geometry and motion representations through large-scale pseudo-supervised pretraining, establishing a foundation for 4D scene modeling. We then perform physics-grounded supervised fine-tuning using simulation-generated data, enforcing temporally consistent 4D dynamics. Finally, we apply simulation-grounded reinforcement learning to correct residual physical violations that are difficult to capture through explicit supervision. To evaluate fine-grained physical consistency beyond appearance-based metrics, we introduce a set of \textbf{4D world consistency evaluation} that probe geometric coherence, motion stability, and long-horizon physical plausibility. Experimental results demonstrate that Phys4D substantially improves fine-grained spatiotemporal and physical consistency compared to appearance-driven baselines, while maintaining strong generative performance. Our project page is available at https://sensational-brioche-7657e7.netlify.app/</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2603.03485'>page</a> · <a href='https://arxiv.org/pdf/2603.03485'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DiffAttn: Diffusion-Based Drivers&#x27; Visual Attention Prediction with LLM-Enhanced Semantic Reasoning</title>
-      <link>https://arxiv.org/abs/2603.28251</link>
-      <guid isPermaLink="false">arxiv:2603.28251</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua, UC Berkeley — Weimin Liu</p>
-<p><b>Authors:</b> Weimin Liu, Qingkun Li, Jiyuan Qiu, Wenjun Wang, Joshua H. Meng</p>
-<p>Drivers&#x27; visual attention provides critical cues for anticipating latent hazards and directly shapes decision-making and control maneuvers, where its absence can compromise traffic safety. To emulate drivers&#x27; perception patterns and advance visual attention prediction for intelligent vehicles, we propose DiffAttn, a diffusion-based framework that formulates this task as a conditional diffusion-denoising process, enabling more accurate modeling of drivers&#x27; attention. To capture both local and global scene features, we adopt Swin Transformer as encoder and design a decoder that combines a Feature Fusion Pyramid for cross-layer interaction with dense, multi-scale conditional diffusion to jointly enhance denoising learning and model fine-grained local and global scene contexts. Additionally, a large language model (LLM) layer is incorporated to enhance top-down semantic reasoning and improve sensitivity to safety-critical cues. Extensive experiments on four public datasets demonstrate that DiffAttn achieves state-of-the-art (SoTA) performance, surpassing most video-based, top-down-feature-driven, and LLM-enhanced baselines. Our framework further supports interpretable driver-centric scene understanding and has the potential to improve in-cabin human-machine interaction, risk perception, and drivers&#x27; state measurement in intelligent vehicles.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2603.28251'>page</a> · <a href='https://arxiv.org/pdf/2603.28251'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Correct When Paired, Wrong When Split: Decoupling and Editing Modality-Specific Neurons in MLLMs</title>
-      <link>https://arxiv.org/abs/2606.17057</link>
-      <guid isPermaLink="false">arxiv:2606.17057</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Wei Zhou</p>
-<p><b>Authors:</b> Tingchao Fu, Wenkai Wang, Fanxiao Li, Huadong Zhang, Jinhong Zhang, Dayang Li, Yunyun Dong, Renyang Liu, … <i>(+1 more)</i></p>
-<p>Although Knowledge Editing provides an efficient mechanism for updating the knowledge of Multimodal Large Language Models (MLLMs), we find that current paradigms still suffer from an important yet remain underexplored issue : editing decoupling failure, where entity-related knowledge can be updated when the model is triggered by multimodal inputs (text--image query pairs), however, it often reverts to outdated pre-edit facts when the paired inputs are split into unimodal ones. Our in-depth empirical analysis reveals that the entity knowledge in MLLMs is not stored as a unified representation, but is instead distributed across disentangled modality-specific pathways. As a result, updates biased toward multimodal queries fail to propagate effectively to unimodal circuits. To bridge this gap, we propose DECODE, which explicitly disentangles and localizes modality-specific neuron groups for targeted knowledge. Extensive experiments demonstrate that DECODE consistently achieves effective knowledge updates under different modality triggers, thereby mitigating editing decoupling failures.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-04-20 · <a href='https://arxiv.org/abs/2606.17057'>page</a> · <a href='https://arxiv.org/pdf/2606.17057'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Vibrato Expression Control for Singing Voice Conversion with Improving Independent Control</title>
-      <link>https://arxiv.org/abs/2606.17126</link>
-      <guid isPermaLink="false">arxiv:2606.17126</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.SD</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST, Stanford — Seong-Whan Lee</p>
-<p><b>Authors:</b> Joon-Seung Choi, Dong-Min Byun, Seong-Whan Lee</p>
-<p>Singing style is a crucial aspect of a natural and expressive singing voice. Singers utilize singing styles to convey the feeling or emotion of the songs. Several works have been proposed to control singing style for making the more expressive singing voice. Recently, VibE-SVC successfully controls vibrato by predicting high-frequency F0 contour. In this paper, we introduce a singing voice conversion framework, called VibE-SVC2, to improve singing style conversion performance and controllability. The model offers control over two types of singing styles: a pitch style and a timbre style. For the pitch style, to resolve the pitch-energy entanglement issue that is unresolved in our previous work, we introduce a novel Energy Style Converter to address remaining style information in the energy contour. In addition, we propose a Zero-shot Pitch Style Converter, which mimics the pitch style of reference audio. To expand the controllability of the model, we propose vibrato rate scaling that is an independent control of vibrato extent, which is unavailable in VibE-SVC. For the timbre style, we extend the model to handle a variety of phonation styles. However, addressing specific styles such as vocal fry poses a challenge, as conventional F0 extraction often fails due to their inherent subharmonic characteristics, which degrades the conversion quality. To address this, we propose a novel Subharmonic Correction algorithm to refine the F0 contour for more natural timbre conversion. Through comprehensive objective and subjective evaluations, we demonstrate that VibE-SVC2 provides fine-grained, independent control over two types of singing styles, outperforming existing methods.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2606.17126'>page</a> · <a href='https://arxiv.org/pdf/2606.17126'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Agentic Discovery of Non-Canonical Antimicrobial Peptides with AMPGAN v3</title>
-      <link>https://arxiv.org/abs/2606.17127</link>
-      <guid isPermaLink="false">arxiv:2606.17127</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>q-bio.QM</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Jay Jung</p>
-<p><b>Authors:</b> Jay Jung, Xiaohan Zhang, Shenghan Song, Mahmoud Sayedahmed, Chijian Xiang, Yunong Xu, Ahmed AbdelKhalek, Severin T. Schneebeli, … <i>(+3 more)</i></p>
-<p>Antimicrobial resistance causes to over a million deaths annually. Antimicrobial peptides (AMPs) are a promising solution, but generative AMP models are not yet ready to design peptides with non-natural amino acids and/or chemical modifications, which are essential for real-world peptide drugs. We present AMPGAN v3, a multi-objective conditional GAN that expands the generative vocabulary to D-amino acids and N/C-terminus modifications such as amidation. By separating adversarial and activity-aware supervision across two specialized discriminators, AMPGAN v3 substantially improves training stability and outperforms prior generative AMP models on external classifiers. We validated five candidates spanning three structural classes in vitro; two showed activity against Gram-positive strains, with the best candidate reaching MIC 8 μg/mL against B. subtilis. To support downstream curation, we further present PepCraft, a multi-agent framework for end-to-end AMP discovery in which a Planning Agent orchestrates specialized executors for generation, filtering, and verification. Its prioritization recommendations align with our in vitro outcomes. Together, these contributions let us examine, on a small but real scale, how generative and agentic AI compose in therapeutic peptide discovery. Code: https://github.com/marszzibros/AMPGANv3</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.QM, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2606.17127'>page</a> · <a href='https://arxiv.org/pdf/2606.17127'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Pulling The REINS: Training-Free Safety Alignment of Video Diffusion Models via Representation Steering</title>
-      <link>https://arxiv.org/abs/2606.17257</link>
-      <guid isPermaLink="false">arxiv:2606.17257</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Rohit Kundu, Arindam Dutta, Sarosij Bose, Athula Balachandran, Amit K. Roy-Chowdhury</p>
-<p>Open-weight video diffusion models can generate photorealistic unsafe content, from violence to misinformation, yet existing defenses either require expensive safety fine-tuning that degrades general capability, or apply external filters that are trivially bypassed by adversarial prompts. We present REINS (REpresentation-space INference-time Safety steering), a training-free method that aligns video diffusion models at inference time by steering their internal representations toward safe generation. Our key finding is that safety-relevant structure is linearly encoded in the hidden-state activations of video diffusion transformers, and a single direction, discovered via Supervised PCA on binary safety labels, suffices to separate safe from unsafe generation trajectories. At inference, adding this direction to hidden states at an intermediate transformer layer redirects generation from harmful content to semantically related safe alternatives, with no weight updates, no concept enumeration, and negligible computational overhead. Through mechanistic analysis, we reveal that while safety information accumulates monotonically with transformer depth, steering effectiveness peaks at intermediate layers (~50% depth), exposing a fundamental tradeoff between information availability and downstream propagation capacity. We evaluate REINS across 9 video diffusion models, multiple parameter scales (1.3B-5B), and both text-to-video and image-to-video generation, to our knowledge, the broadest safety evaluation suite in the video generation literature.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2606.17257'>page</a> · <a href='https://arxiv.org/pdf/2606.17257'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

@@ -5,8 +5,34 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 12 Jul 2026 06:28:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 06:47:54 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Multi-Attribute Steering of Language Models via Targeted Intervention</title>
+      <link>https://arxiv.org/abs/2502.12446</link>
+      <guid isPermaLink="false">arxiv:2502.12446</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Duy Nguyen</p>
+<p><b>Authors:</b> Duy Nguyen, Archiki Prasad, Elias Stengel-Eskin, Mohit Bansal</p>
+<p>Inference-time intervention (ITI) has emerged as a promising method for steering large language model (LLM) behavior in a particular direction (e.g., improving helpfulness) by intervening on token representations without costly updates to the LLM&#x27;s parameters. However, existing ITI approaches fail to scale to multi-attribute settings with conflicts, such as enhancing helpfulness while also reducing toxicity. To address this, we introduce Multi-Attribute Targeted Steering (MAT-Steer), a novel steering framework designed for selective token-level intervention across multiple attributes. MAT-Steer learns steering vectors using an alignment objective that shifts the model&#x27;s internal representations of undesirable outputs closer to those of desirable ones while enforcing sparsity and orthogonality among vectors for different attributes, thereby reducing inter-attribute conflicts. We evaluate MAT-Steer in two distinct settings: (i) on question answering (QA) tasks where we balance attributes like truthfulness, bias, and toxicity; (ii) on generative tasks where we simultaneously improve attributes like helpfulness, correctness, and coherence. MAT-Steer outperforms existing ITI and parameter-efficient fine-tuning approaches across both task types (e.g., 3% average accuracy gain across QA tasks and 55.82% win rate against the best ITI baseline).</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/2502.12446'>page</a> · <a href='https://arxiv.org/pdf/2502.12446'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GrAInS: Gradient-based Attribution for Inference-Time Steering of LLMs and VLMs</title>
+      <link>https://arxiv.org/abs/2507.18043</link>
+      <guid isPermaLink="false">arxiv:2507.18043</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Duy Nguyen</p>
+<p><b>Authors:</b> Duy Nguyen, Archiki Prasad, Elias Stengel-Eskin, Mohit Bansal</p>
+<p>Inference-time steering methods offer a lightweight alternative to fine-tuning large language models (LLMs) and vision-language models (VLMs) by modifying internal activations at test time without updating model weights. However, most existing approaches rely on fixed, global intervention vectors, overlook the causal influence of individual input tokens, and fail to leverage informative gradients from the model&#x27;s logits, particularly in multimodal settings where visual and textual inputs contribute unevenly. To address these limitations, we introduce GrAInS, an inference-time steering approach that operates across both language-only and vision-language models and tasks. GrAInS uses contrastive, gradient-based attribution via Integrated Gradients to identify the top-k most influential tokens, both positively and negatively attributed based on their contribution to preferred versus dispreferred outputs. These tokens are then used to construct directional steering vectors that capture semantic shifts from undesirable to desirable behavior. During inference, GrAInS adjusts hidden activations at transformer layers guided by token-level attribution signals, and normalizes activations to preserve representational scale. This enables fine-grained, interpretable, and modular control over model behavior, without retraining or auxiliary supervision. Empirically, GrAInS consistently outperforms both fine-tuning and existing steering baselines: it achieves a 13.22% accuracy gain on TruthfulQA using Llama-3.1-8B, reduces hallucination rates on MMHal-Bench from 0.624 to 0.514 with LLaVA-1.6-7B, and improves alignment win rates on SPA-VL by 8.11%, all while preserving the model&#x27;s fluency and general capabilities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/2507.18043'>page</a> · <a href='https://arxiv.org/pdf/2507.18043'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>LongE2V: Long-Horizon Event-based Video Reconstruction, Prediction, and Frame Interpolation with Video Diffusion Models</title>
       <link>https://huggingface.co/papers/2607.08770</link>
@@ -2389,29 +2415,6 @@
 <p><b>Authors:</b> Yoon Pyo Lee, Samrendra Roy, Jay Yoo, Kazuma Kobayashi, Sajedul Talukder, Seid Koric, Souvik Chakraborty, Syed Bahauddin Alam</p>
 <p>The prevailing paradigm in AI for physical systems (scaling general-purpose foundation models toward universal multimodal reasoning) confronts a fundamental barrier at the control interface. Recent benchmarks show that even frontier vision--language models achieve only 50--53% accuracy on basic quantitative physics tasks, behaving as approximate guessers that preserve semantic plausibility by violating physical constraints. This input unfaithfulness is not a scaling deficiency but a structural limitation: perception-centric architectures optimize parameter-space imitation, whereas safety-critical control demands outcome-space guarantees over executed actions. Here, we present a fundamentally different pathway &quot;toward&quot; domain-specific foundation models by introducing compact language models operating as Agentic Physical AI, in which policy optimization is driven by physics-based validation rather than perceptual inference. We train a 360-million-parameter model on synthetic nuclear reactor control scenarios, scaling the dataset from 10^3 to 10^5 examples. Scaling induces strong improvements in closed-loop reliability under nominal simulated conditions, with a steep but smooth gain at strict tolerances: small-scale systems exhibit high-variance imitation with severe tail excursions, while large-scale models undergo variance collapse (approximately 500times reduction), stabilizing execution-level behavior within the sampled distribution. Despite balanced exposure to four actuation families, the model autonomously rejects approximately 70\% of the training distribution, concentrating 95% of runtime execution on a single-bank strategy. This emergent policy distillation arises without reinforcement learning or reward engineering, driven solely by outcome-level success under physical execution.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2512.23292'>page</a> · <a href='https://arxiv.org/pdf/2512.23292'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Deep Neural Networks as Discrete Dynamical Systems: Implications for Physics-Informed Learning</title>
-      <link>https://arxiv.org/abs/2601.00473</link>
-      <guid isPermaLink="false">arxiv:2601.00473</guid>
-      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Sauro Succi</p>
-<p><b>Authors:</b> Abhisek Ganguly, Santosh Ansumali, Sauro Succi</p>
-<p>We revisit the analogy between feed-forward deep neural networks (DNNs) and discrete dynamical systems derived from neural integral equations and their corresponding partial differential equation (PDE) forms. A comparative analysis between the numerical/exact solutions of the Burgers&#x27; and Eikonal equations, and the same obtained via PINNs is presented. We show that PINN learning provides a different computational pathway compared to standard numerical discretization in approximating essentially the same underlying dynamics of the system. Within this framework, DNNs can be interpreted as discrete dynamical systems whose layer-wise evolution approaches attractors, and multiple parameter configurations may yield comparable solutions, reflecting the degeneracy of the inverse mapping. In contrast to the structured operators associated with finite-difference (FD) procedures, PINNs learn dense parameter representations that are not directly associated with classical discretization stencils. This distributed representation generally involves a larger number of parameters, leading to reduced interpretability and increased computational cost. However, the additional flexibility of such representations may offer advantages in high-dimensional settings where classical grid-based methods become impractical.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2601.00473'>page</a> · <a href='https://arxiv.org/pdf/2601.00473'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Can Current Agents Close the Discovery-to-Application Gap? A Case Study in Minecraft</title>
-      <link>https://arxiv.org/abs/2604.24697</link>
-      <guid isPermaLink="false">arxiv:2604.24697</guid>
-      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Caltech, Cornell, Peking U, UC Berkeley — Zhou Ziheng</p>
-<p><b>Authors:</b> Zhou Ziheng, Huacong Tang, Jinyuan Zhang, Haowei Lin, Bangcheng Yang, Qian Long, Fang Sun, Yizhou Sun, … <i>(+4 more)</i></p>
-<p>Discovering causal regularities and applying them to build functional systems--the discovery-to-application loop--is a hallmark of general intelligence, yet evaluating this capacity has been hindered by the vast complexity gap between scientific discovery and real-world engineering. We introduce SciCrafter, a Minecraft-based benchmark that operationalizes this loop through parameterized redstone circuit tasks. Agents must ignite lamps in specified patterns (e.g., simultaneously or in timed sequences); scaling target parameters substantially increases construction complexity and required knowledge, forcing genuine discovery rather than reliance on memorized solutions. Evaluating frontier models including GPT-5.2, Gemini-3-Pro, and Claude-Opus-4.5 under a general-purpose code agent scaffold, we find that all plateau at approximately 26% success rate. To diagnose these failures, we decompose the loop into four capacities--knowledge gap identification, experimental discovery, knowledge consolidation, and knowledge application--and design targeted interventions whose marginal contributions serve as proxies for corresponding gaps. Our analysis reveals that although the general knowledge application capability still remains as the biggest gap across all models, for frontier models the knowledge gap identification starts to become a major hurdle--indicating the bottleneck is shifting from solving problems right to raising the right problems for current AI. We release SciCrafter as a diagnostic probe for future research on AI systems that navigate the full discovery-to-application loop.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-20 · <a href='https://arxiv.org/abs/2604.24697'>page</a> · <a href='https://arxiv.org/pdf/2604.24697'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

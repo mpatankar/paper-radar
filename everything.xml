@@ -5,8 +5,68 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Sun, 12 Jul 2026 06:28:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 06:47:54 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>The Quantification Horizon Theory of Consciousness</title>
+      <link>https://arxiv.org/abs/1704.01148</link>
+      <guid isPermaLink="false">arxiv:1704.01148</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>q-bio.NC</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge, U Edinburgh — T. R. Le</p>
+<p><b>Authors:</b> T. R. Le</p>
+<p>To make nature mathematically tractable, the scientific model of the world omits qualia--colors, sounds, tastes, sensations--leaving only what admits of numerical characterization. The &quot;hard problem&quot; of consciousness--the enigma of why and how physical processing gives rise to felt experience--remains unsolved. The Quantification Horizon Theory of Consciousness (QHT) proposes that this enigma reflects a structural limitation of mathematical description: quantitative models capture only quantifiable features of reality; qualia are left out. Yet despite this limitation, QHT argues that such models can account for the unquantifiable--not by explaining or containing it, but by marking its place, in the form of a signpost. There are specific structural features--compression singularities in a system&#x27;s own self-compression, rendered in this paper through information geometry--that intuitively correspond to the hallmark properties of consciousness and could serve as precisely such signposts. QHT proposes that these singularities mark a quantification horizon--a boundary beyond which quantitative description cannot reach. On this proposal, qualia lie beyond the horizon. From this basis, the theory conditionally localizes the structure of ineffability, privacy, and subjectivity, and proposes structural accounts of unity and causal efficacy. The theory proposes substrate-independent dynamical criteria as candidate markers of which systems may be conscious, is anti-panpsychist without adding intuition-saving exclusions, defines prospective prediction schemas through a designated formal rendering, and offers concrete implications for artificial intelligence and artificial consciousness.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/1704.01148'>page</a> · <a href='https://arxiv.org/pdf/1704.01148'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multi-Attribute Steering of Language Models via Targeted Intervention</title>
+      <link>https://arxiv.org/abs/2502.12446</link>
+      <guid isPermaLink="false">arxiv:2502.12446</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Duy Nguyen</p>
+<p><b>Authors:</b> Duy Nguyen, Archiki Prasad, Elias Stengel-Eskin, Mohit Bansal</p>
+<p>Inference-time intervention (ITI) has emerged as a promising method for steering large language model (LLM) behavior in a particular direction (e.g., improving helpfulness) by intervening on token representations without costly updates to the LLM&#x27;s parameters. However, existing ITI approaches fail to scale to multi-attribute settings with conflicts, such as enhancing helpfulness while also reducing toxicity. To address this, we introduce Multi-Attribute Targeted Steering (MAT-Steer), a novel steering framework designed for selective token-level intervention across multiple attributes. MAT-Steer learns steering vectors using an alignment objective that shifts the model&#x27;s internal representations of undesirable outputs closer to those of desirable ones while enforcing sparsity and orthogonality among vectors for different attributes, thereby reducing inter-attribute conflicts. We evaluate MAT-Steer in two distinct settings: (i) on question answering (QA) tasks where we balance attributes like truthfulness, bias, and toxicity; (ii) on generative tasks where we simultaneously improve attributes like helpfulness, correctness, and coherence. MAT-Steer outperforms existing ITI and parameter-efficient fine-tuning approaches across both task types (e.g., 3% average accuracy gain across QA tasks and 55.82% win rate against the best ITI baseline).</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/2502.12446'>page</a> · <a href='https://arxiv.org/pdf/2502.12446'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GrAInS: Gradient-based Attribution for Inference-Time Steering of LLMs and VLMs</title>
+      <link>https://arxiv.org/abs/2507.18043</link>
+      <guid isPermaLink="false">arxiv:2507.18043</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Duy Nguyen</p>
+<p><b>Authors:</b> Duy Nguyen, Archiki Prasad, Elias Stengel-Eskin, Mohit Bansal</p>
+<p>Inference-time steering methods offer a lightweight alternative to fine-tuning large language models (LLMs) and vision-language models (VLMs) by modifying internal activations at test time without updating model weights. However, most existing approaches rely on fixed, global intervention vectors, overlook the causal influence of individual input tokens, and fail to leverage informative gradients from the model&#x27;s logits, particularly in multimodal settings where visual and textual inputs contribute unevenly. To address these limitations, we introduce GrAInS, an inference-time steering approach that operates across both language-only and vision-language models and tasks. GrAInS uses contrastive, gradient-based attribution via Integrated Gradients to identify the top-k most influential tokens, both positively and negatively attributed based on their contribution to preferred versus dispreferred outputs. These tokens are then used to construct directional steering vectors that capture semantic shifts from undesirable to desirable behavior. During inference, GrAInS adjusts hidden activations at transformer layers guided by token-level attribution signals, and normalizes activations to preserve representational scale. This enables fine-grained, interpretable, and modular control over model behavior, without retraining or auxiliary supervision. Empirically, GrAInS consistently outperforms both fine-tuning and existing steering baselines: it achieves a 13.22% accuracy gain on TruthfulQA using Llama-3.1-8B, reduces hallucination rates on MMHal-Bench from 0.624 to 0.514 with LLaVA-1.6-7B, and improves alignment win rates on SPA-VL by 8.11%, all while preserving the model&#x27;s fluency and general capabilities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://arxiv.org/abs/2507.18043'>page</a> · <a href='https://arxiv.org/pdf/2507.18043'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading</title>
+      <link>https://huggingface.co/papers/2607.08964</link>
+      <guid isPermaLink="false">arxiv:2607.08964</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zongxia Li, Zhongzhi Li, Yucheng Shi, Ruhan Wang, Junyao Yang, Zhichao Liu, Xiyang Wu, Anhao Li, … <i>(+6 more)</i></p>
+<p>AI agents have become capable of autonomously completing short, well-specified tasks. However, existing terminal benchmarks largely focus on simple problems that finish within minutes and are evaluated only by their final outcome. This setup overlooks intermediate progress and partial solutions, yielding sparse reward signals and an incomplete picture of agent capability. We introduce Long-Horizon-Terminal-Bench, a terminal benchmark of 46 long-horizon tasks spanning nine categories, including experiment reproduction, software engineering, multimodal analysis, interactive games, and scientific computing. Each task follows a Terminal-Bench-style setup with a reference solution or simulation engine, but is further decomposed into fine-grained graded subtasks. This design enables dense intermediate rewards and partial credit, allowing evaluation to capture not only whether an agent reaches the final goal, but also how far it progresses on open-ended workflows. Tasks in Long-Horizon-Terminal-Bench typically require hundreds of episodes and minutes to hours of execution, stressing long-horizon planning, long-context management, and iterative debugging rather than one-shot problem solving. We evaluate 15 frontier models and find that agents consume on average 9.9M tokens per task, with roughly 231 episodes and 85.3 minutes of execution time per run, making Long-Horizon-Terminal-Bench more demanding than prior terminal-based benchmarks. Even the strongest tested model achieves 15.2% pass@1 at a partial-reward threshold of 0.95 and 10.9% at a perfect-reward threshold of 1.0, while the mean pass rate across models is 4.3% and 1.7% under the two thresholds, respectively. These results reveal headroom for improvement. We further analyze failure modes and error patterns, and release Long-Horizon-Terminal-Bench to support future progress on long-horizon terminal agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://huggingface.co/papers/2607.08964'>page</a> · <a href='https://arxiv.org/pdf/2607.08964'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Enhancing In-context Panoramic Generation via Geometric-aware Pretraining</title>
+      <link>https://huggingface.co/papers/2607.08765</link>
+      <guid isPermaLink="false">arxiv:2607.08765</guid>
+      <pubDate>Mon, 13 Jul 2026 06:47:54 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haoran Feng, Ruiyang Zhang, Longyi Zhang, Dizhe Zhang, Lu Qi, Hugging Face Daily Papers (curated)</p>
+<p>In this work, we present Canvas360, a two-stage framework for in-context panoramic generation that combines geometry-aware pretraining with downstream task-specific fine-tuning. To address the lack of large-scale, high-quality training data tailored to in-context panoramic tasks, we propose Canvas360Dataset, a collection of 1M high-quality paired panoramic samples for style transfer, inpainting, outpainting, and editing, enabling effective supervision across diverse in-context generation scenarios. On the modeling side, Canvas360 enhances text-to-panorama generation through parallel depth generation, velocity circular padding, and similarity loss regularization, enabling the model to learn geometry-aware representations, capture object distortion details, and improve geometric consistency and global coherence. Furthermore, empowered by strong panoramic priors, Canvas360 enables a unified in-context panoramic generation framework that supports diverse downstream tasks via token-level concatenation, surpassing prior methods in both task coverage and modeling flexibility. Extensive experiments show that Canvas360 improves panoramic image fidelity, achieving particularly strong performance on the panorama-specific FAED metric and competitive or leading results across the reported quantitative evaluations. More information can be found on our project page: https://zry000.github.io/Canvas360/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://huggingface.co/papers/2607.08765'>page</a> · <a href='https://arxiv.org/pdf/2607.08765'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>LongE2V: Long-Horizon Event-based Video Reconstruction, Prediction, and Frame Interpolation with Video Diffusion Models</title>
       <link>https://huggingface.co/papers/2607.08770</link>
@@ -2204,67 +2264,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Jinghong Lan, Wei Cheng, Yunuo Chen, Ziqi Ye, Peng Xing, Yixiao Fang, Rui Wang, Yufeng Yang, … <i>(+6 more)</i></p>
 <p>Style-content dual-reference generation aims to synthesize an image that preserves the structure and semantics of a content reference while adopting the style of a separate style reference.Despite recent progress, this setting remains challenging because models must balance content fidelity, style alignment, and instruction following avoiding semantic leakage from the style reference.A key bottleneck is the lack of large-scale triplet data with clean content-style separation and broad long-tail style coverage.In this work, we propose FreeStyle, a scalable dual-reference generation framework based on community LoRA mining.We treat community LoRAs as compositional anchors for style and content, and design a rigorous generation and filtering pipeline to construct large-scale Style-Reference and Content-Reference triplets across multiple base models.To address content leakage, we adopt a two-stage curriculum with stage-specific disentanglement mechanisms: an attention-level enrichment constraint that suppresses style-reference leakage in the style-transfer stage, and a frequency-aware RoPE modulation strategy that targets positional-correspondence-based leakage in the harder dual-reference stage.We also introduce a benchmark covering both style-reference and dual-reference generation, with evaluations on style similarity, content preservation, aesthetics, instruction following, and leakage rejection. The benchmark incorporates a style-invariant Content Alignment Score (CAS) and introduces a calibrated VLM-based Rejection Score for evaluating generation reliability and leakage suppression.Extensive experiments show that our model achieves a strong balance among style alignment, content preservation, and leakage suppression.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20506'>page</a> · <a href='https://arxiv.org/pdf/2606.20506'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Wisdom of Committee: Diverse Distillation from Large Foundation Models and Domain Experts</title>
-      <link>https://arxiv.org/abs/2402.14035</link>
-      <guid isPermaLink="false">arxiv:2402.14035</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:30 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Tsinghua, U Michigan, U Toronto — Zhe Zhao</p>
-<p><b>Authors:</b> Zichang Liu, Qingyun Liu, Yuening Li, Liang Liu, Anshumali Shrivastava, Shuchao Bi, Lichan Hong, Ed H. Chi, … <i>(+1 more)</i></p>
-<p>Knowledge distillation from foundation models to compact domain models is challenging due to substantial gaps in capacity, architecture, and modality. For example, in our experiments, distilling from a 76M-parameter language model to a 2M-parameter recommender closes less than 40% of the performance gap between the undistilled student and the teacher. We show that introducing domain-specific experts -- which share the student&#x27;s architectural characteristics -- alongside the foundation model as a diverse teacher committee significantly improves transfer. However, standard multi-teacher methods fail to exploit this diversity: naively combining heterogeneous teachers can degrade performance below single-teacher distillation. To address this, we propose DiverseDistill, an interactive distillation framework that employs a learnable Question-Answer mechanism to generate teacher-conditioned queries and align heterogeneous teacher outputs into the student&#x27;s representation space. Unlike methods requiring gradient-based co-optimization or architectural modification of teachers, DiverseDistill operates with frozen teachers using only forward-pass inference through their intermediate layers: no parameter updates, no co-training, and no architectural surgery. A dynamic teacher importance mechanism further reduces training cost by filtering low-relevance teachers per sample (e.g., ~30% fewer forward passes with no quality loss for recommendation tasks), while the entire Distillation Module is discarded after training, adding zero inference overhead. Evaluations on recommendation (38x compression) and vision (3.6x compression) tasks demonstrate that DiverseDistill recovers 73-114% of the teacher-student performance gap, consistently outperforming all single- and multi-teacher baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2402.14035'>page</a> · <a href='https://arxiv.org/pdf/2402.14035'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Enhancing Generative Auto-bidding with Offline Reward Evaluation and Policy Search</title>
-      <link>https://arxiv.org/abs/2509.15927</link>
-      <guid isPermaLink="false">arxiv:2509.15927</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:30 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> Tsinghua — Bo Zheng</p>
-<p><b>Authors:</b> Zhiyu Mou, Yiqin Lv, Miao Xu, Qi Wang, Yixiu Mao, Jinghao Chen, Qichen Ye, Chao Li, … <i>(+4 more)</i></p>
-<p>Auto-bidding is a critical tool for advertisers to improve advertising performance. Recent progress has demonstrated that AI-Generated Bidding (AIGB), which learns a conditional generative planner from offline data, achieves superior performance compared to typical offline reinforcement learning (RL)-based auto-bidding methods. However, existing AIGB methods still face a performance bottleneck due to their inherent inability to explore beyond the static dataset with feedback. To address this, we propose \textbf{AIGB-Pearl} (\emph{\textbf{P}lanning with \textbf{E}valu\textbf{A}tor via \textbf{RL}}), a novel method that integrates generative planning and policy optimization. The core of AIGB-Pearl lies in constructing a trajectory evaluator to assess the quality of generated scores and designing a provably sound KL-Lipschitz-constrained score-maximization scheme to ensure safe and efficient exploration beyond the offline dataset. A practical algorithm that incorporates the synchronous coupling technique is further developed to ensure the model regularity required by the proposed scheme. Extensive experiments on both simulated and real-world advertising systems demonstrate the state-of-the-art performance of our approach.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://arxiv.org/abs/2509.15927'>page</a> · <a href='https://arxiv.org/pdf/2509.15927'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RoboSSM: Scalable In-context Imitation Learning via State-Space Models</title>
-      <link>https://arxiv.org/abs/2509.19658</link>
-      <guid isPermaLink="false">arxiv:2509.19658</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:30 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Tsinghua — Peter Stone</p>
-<p><b>Authors:</b> Youngju Yoo, Jiaheng Hu, Yifeng Zhu, Bo Liu, Qiang Liu, Roberto Martín-Martín, Peter Stone</p>
-<p>In-context imitation learning (ICIL) enables robots to learn tasks from prompts consisting of just a handful of demonstrations. By eliminating the need for parameter updates at deployment time, this paradigm supports few-shot adaptation to novel tasks. However, recent ICIL methods rely on Transformers, which have computational limitations and tend to underperform when handling longer prompts than those seen during training. In this work, we introduce RoboSSM, a scalable recipe for in-context imitation learning based on state-space models (SSM). Specifically, RoboSSM replaces Transformers with Longhorn -- a state-of-the-art SSM that provides linear-time inference and strong extrapolation capabilities, making it well-suited for long-context prompts. Through diverse experiments on the LIBERO benchmark, we demonstrate the effectiveness of applying SSMs to ICIL, achieving improved generalization to both unseen and long-horizon tasks than Transformer-based ICIL methods by handling longer contexts at test-time. These results show for the first time that SSMs are an efficient and scalable backbone for ICIL. Our code is available at https://github.com/youngjuY/RoboSSM.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://arxiv.org/abs/2509.19658'>page</a> · <a href='https://arxiv.org/pdf/2509.19658'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Modeling Day-Long ECG Signals to Predict Heart Failure Risk with Explainable AI</title>
-      <link>https://arxiv.org/abs/2601.00014</link>
-      <guid isPermaLink="false">arxiv:2601.00014</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:30 GMT</pubDate>
-      <category>eess.SP</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Technion, Tel Aviv U — Joachim A. Behar</p>
-<p><b>Authors:</b> Eran Zvuloni, Ronit Almog, Michael Glikson, Shany Brimer Biton, Ilan Green, Izhar Laufer, Offer Amir, Joachim A. Behar</p>
-<p>Heart failure (HF) affects 11.8% of adults aged 65 and older, reducing quality of life and longevity. Preventing HF can reduce morbidity and mortality. We hypothesized that artificial intelligence (AI) applied to 24-hour single-lead electrocardiogram (ECG) data could predict the risk of HF within five years. To research this, the Technion-Leumit Holter ECG (TLHE) dataset, including 69,663 recordings from 47,729 patients, collected over 20 years was used. Our deep learning model, DeepHHF, trained on 24-hour ECG recordings, achieved an area under the receiver operating characteristic curve of 0.80 that outperformed a model using 30-second segments and a clinical score. High-risk individuals identified by DeepHHF had a two-fold chance of hospitalization or death incidents. Explainability analysis showed DeepHHF focused on arrhythmias and heart abnormalities. This study highlights the feasibility of deep learning to model 24-hour continuous ECG data, capturing paroxysmal events essential for reliable risk prediction. Artificial intelligence applied to single-lead Holter ECG is non-invasive, inexpensive, and widely accessible, making it a promising tool for HF risk prediction.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SP, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2601.00014'>page</a> · <a href='https://arxiv.org/pdf/2601.00014'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>One Probe Won&#x27;t Catch Them All: Towards Targeted Deception Detection</title>
-      <link>https://arxiv.org/abs/2602.01425</link>
-      <guid isPermaLink="false">arxiv:2602.01425</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Vikram Natarajan, Devina Jain, Shivam Arora, Satvik Golechha, Joseph Bloom</p>
-<p>Linear probes are a promising approach for monitoring AI systems for deceptive behaviour. Previous work has shown that a linear classifier trained on a contrastive instruction pair and a simple dataset can achieve good performance. However, these probes exhibit notable failures even in straightforward scenarios, including spurious correlations and false positives on non-deceptive responses. In this paper, we demonstrate that deception detection is inherently heterogeneous: while a single universal probe achieves modest improvements (+0.032 AUC), post-hoc oracle analysis reveals substantially higher potential (+0.108 AUC) when probes are matched to specific deception types, and synthetic validation experiments suggest this ceiling is achievable a priori when the deception type is known in advance. Our findings reveal that instruction pairs capture deceptive intent rather than content-specific patterns, explaining why prompt choice dominates probe performance (70.6% of variance). Given this heterogeneity, we conclude that organizations should define their specific threat models and deploy appropriately matched probes rather than seeking a universal deception detector.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://arxiv.org/abs/2602.01425'>page</a> · <a href='https://arxiv.org/pdf/2602.01425'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
