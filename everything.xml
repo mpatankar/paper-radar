@@ -5,8 +5,164 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Tue, 14 Jul 2026 06:06:52 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 06:10:26 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Enhancing Phenotype Recognition in Clinical Notes Using Large Language Models: PhenoBCBERT and PhenoGPT</title>
+      <link>https://arxiv.org/abs/2308.06294</link>
+      <guid isPermaLink="false">arxiv:2308.06294</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>q-bio.QM</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia, Peking U, Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Jingye Yang, Cong Liu, Wendy Deng, Da Wu, Chunhua Weng, Yunyun Zhou, Kai Wang</p>
+<p>We hypothesize that large language models (LLMs) based on the transformer architecture can enable automated detection of clinical phenotype terms, including terms not documented in the HPO. In this study, we developed two types of models: PhenoBCBERT, a BERT-based model, utilizing Bio+Clinical BERT as its pre-trained model, and PhenoGPT, a GPT-based model that can be initialized from diverse GPT models, including open-source versions such as GPT-J, Falcon, and LLaMA, as well as closed-source versions such as GPT-3 and GPT-3.5. We compared our methods with PhenoTagger, a recently developed HPO recognition tool that combines rule-based and deep learning methods. We found that our methods can extract more phenotype concepts, including novel ones not characterized by HPO. We also performed case studies on biomedical literature to illustrate how new phenotype information can be recognized and extracted. We compared current BERT-based versus GPT-based models for phenotype tagging, in multiple aspects including model architecture, memory usage, speed, accuracy, and privacy protection. We also discussed the addition of a negation step and an HPO normalization layer to the transformer models for improved HPO term tagging. In conclusion, PhenoBCBERT and PhenoGPT enable the automated discovery of phenotype terms from clinical notes and biomedical literature, facilitating automated downstream tasks to derive new biological insights on human diseases.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.QM, cs.AI · <b>arXiv submitted:</b> 2023-11-09 · <a href='https://arxiv.org/abs/2308.06294'>page</a> · <a href='https://arxiv.org/pdf/2308.06294'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Exploring the Reversal Curse and Other Deductive Logical Reasoning in BERT and GPT-Based Large Language Models</title>
+      <link>https://arxiv.org/abs/2312.03633</link>
+      <guid isPermaLink="false">arxiv:2312.03633</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Da Wu, Jingye Yang, Kai Wang</p>
+<p>The term &quot;Reversal Curse&quot; refers to the scenario where auto-regressive decoder large language models (LLMs), such as ChatGPT, trained on &quot;A is B&quot; fail to learn &quot;B is A,&quot; assuming that B and A are distinct and can be uniquely identified from each other, demonstrating a basic failure of logical deduction. This raises a red flag in the use of GPT models for certain general tasks such as constructing knowledge graphs, considering their adherence to this symmetric principle. In our study, we examined a bidirectional LLM, BERT, and found that it is immune to the reversal curse. Driven by ongoing efforts to construct biomedical knowledge graphs with LLMs, we also embarked on evaluating more complex but essential deductive reasoning capabilities. This process included first training encoder and decoder language models to master the intersection and union operations on two sets and then moving on to assess their capability to infer different combinations of union and intersection operations on three newly created sets. The findings showed that while both encoder and decoder language models, trained for tasks involving two sets (union/intersection), were proficient in such scenarios, they encountered difficulties when dealing with operations that included three sets (various combinations of union and intersection). Our research highlights the distinct characteristics of encoder and decoder models in simple and complex logical reasoning. In practice, the choice between BERT and GPT should be guided by the specific requirements and nature of the task at hand, leveraging their respective strengths in bidirectional context comprehension and sequence prediction.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2024-07-01 · <a href='https://arxiv.org/abs/2312.03633'>page</a> · <a href='https://arxiv.org/pdf/2312.03633'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VSLLaVA: a pipeline of large multimodal foundation model for industrial vibration signal analysis</title>
+      <link>https://arxiv.org/abs/2409.07482</link>
+      <guid isPermaLink="false">arxiv:2409.07482</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>eess.SP</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Fulei Chu, Qi Li</p>
+<p><b>Authors:</b> Qi Li, Xinran Zhang, Jinfeng Huang, Hongliang He, Feibin Zhang, Zhaoye Qin, Fulei Chu</p>
+<p>While Large Multimodal Models (LMMs) excel in general multimodal tasks, they lack the domain-specific knowledge for industrial vibration signal analysis. This paper introduces VSLLaVA, a comprehensive pipeline that utilizes expert knowledge-guided instruction tuning and evaluation to create an end-to-end LMM for signal analysis. To achieve this, we construct a novel Signal-Question-Answer (SQA) dataset using an expert rule-based signal generator. This dataset facilitates a two-stage learning procedure. The first step is efficient instruction fine-tuning with Low-Rank Adaptation (LoRA), which imparts specialized signal identification capabilities. Subsequently, we designed a tailored Group Relative Policy Optimization (GRPO) to refine the reasoning capabilities and enhance classification robustness. Then, a dual-mode evaluation framework is proposed, combining an LLM referee with expert rules for semantic assessment using quantitative metrics for numerical and textual accuracy, which reveals that VSLLaVA significantly improves performance in signal type identification and parameter analysis, and makes progress in the identification and parameter analysis of fault-related signals. This research demonstrates a viable approach for developing specialized foundational models for complex industrial applications and marks a transition from conventional task-specific systems to a cohesive, interactive foundational model.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SP, cs.AI · <b>arXiv submitted:</b> 2025-09-01 · <a href='https://arxiv.org/abs/2409.07482'>page</a> · <a href='https://arxiv.org/pdf/2409.07482'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Modeling Story Expectations: A Generative Framework using LLMs</title>
+      <link>https://arxiv.org/abs/2412.15239</link>
+      <guid isPermaLink="false">arxiv:2412.15239</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>econ.GN</category>
+      <category>q-fin.EC</category>
+      <category>stat.ME</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia, U Michigan — Bo Yang</p>
+<p><b>Authors:</b> Hortense Fong, George Gui, Bo Yang</p>
+<p>Consumers&#x27; engagement with stories is shaped by their expectations about what will happen next, yet modeling these forward-looking beliefs over unstructured narrative content has remained challenging. We develop a framework that uses large language models to approximate consumers&#x27; story expectations. Our method generates multiple imagined story continuations from a pre-trained LLM and extracts interpretable, theory-motivated features from these continuations, such as emotion and narrative path features. We propose two complementary validation procedures suited to different data availability: a survey-based approach that compares LLM-derived expectations to human-reported beliefs, and a rational-expectations approach that compares them to actual story outcomes. Applying the framework to both survey data collected in a controlled lab setting and observational data from an online reading platform, we find that LLM-derived expectations correlate with human-reported beliefs as well as actual story continuations along all features studied. In both settings, forward-looking expectations are associated with reader engagement above and beyond features of the content already consumed. Our framework provides a scalable method for modeling consumer beliefs about narrative content, with implications for content creation, platform strategy, and the study of narrative media.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, econ.GN, q-fin.EC, stat.ME · <b>arXiv submitted:</b> 2026-07-13 · <a href='https://arxiv.org/abs/2412.15239'>page</a> · <a href='https://arxiv.org/pdf/2412.15239'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Integrating Chain-of-Thought and Retrieval Augmented Generation Enhances Rare Disease Diagnosis from Clinical Notes</title>
+      <link>https://arxiv.org/abs/2503.12286</link>
+      <guid isPermaLink="false">arxiv:2503.12286</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>q-bio.GN</category>
+      <category>q-bio.QM</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Zhanliang Wang, Da Wu, Quan Nguyen, Kai Wang</p>
+<p>Background: Several studies show that large language models (LLMs) struggle with phenotype-driven gene prioritization for rare diseases. These studies typically use Human Phenotype Ontology (HPO) terms to prompt foundation models like GPT and LLaMA to predict candidate genes. However, in real-world settings, foundation models are not optimized for domain-specific tasks like clinical diagnosis, yet inputs are unstructured clinical notes rather than standardized terms. How LLMs can be instructed to predict candidate genes or disease diagnosis from unstructured clinical notes remains a major challenge. Methods: We introduce RAG-driven CoT and CoT-driven RAG, two methods that combine Chain-of-Thought (CoT) and Retrieval Augmented Generation (RAG) to analyze clinical notes. A five-question CoT protocol mimics expert reasoning, while RAG retrieves data from sources like HPO and OMIM (Online Mendelian Inheritance in Man). We evaluated these approaches on rare disease datasets, including 5,980 Phenopacket-derived notes, 255 literature-based narratives, and 220 in-house clinical notes from Childrens Hospital of Philadelphia. Results: We found that recent foundations models, including Llama 3.3-70B-Instruct and DeepSeek-R1-Distill-Llama-70B, outperformed earlier versions such as Llama 2 and GPT-3.5. We also showed that RAG-driven CoT and CoT-driven RAG both outperform foundation models in candidate gene prioritization from clinical notes; in particular, both methods with DeepSeek backbone resulted in a top-10 gene accuracy of over 40% on Phenopacket-derived clinical notes. RAG-driven CoT works better for high-quality notes, where early retrieval can anchor the subsequent reasoning steps in domain-specific evidence, while CoT-driven RAG has advantage when processing lengthy and noisy notes.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, q-bio.GN, q-bio.QM · <b>arXiv submitted:</b> 2026-02-18 · <a href='https://arxiv.org/abs/2503.12286'>page</a> · <a href='https://arxiv.org/pdf/2503.12286'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multimodal Integrated Knowledge Transfer to Large Language Models through Preference Optimization with Biomedical Applications</title>
+      <link>https://arxiv.org/abs/2505.05736</link>
+      <guid isPermaLink="false">arxiv:2505.05736</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>q-bio.QM</category>
+      <category>cs.CL</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Zhanliang Wang, Da Wu, Quan Nguyen, Zhuoran Xu, Kai Wang</p>
+<p>The scarcity of high-quality multimodal biomedical data limits the ability to effectively fine-tune pretrained Large Language Models (LLMs) for specialized biomedical tasks. To address this challenge, we introduce MINT (Multimodal Integrated kNowledge Transfer), a framework that aligns unimodal large decoder models with domain-specific decision patterns from multimodal biomedical data through preference optimization. While MINT supports different optimization techniques, we primarily implement it with the Odds Ratio Preference Optimization (ORPO) framework as its backbone. This strategy enables the aligned LLMs to perform predictive tasks using text-only or image-only inputs while retaining knowledge learnt from multimodal data. MINT leverages an upstream multimodal machine learning (MML) model trained on high-quality multimodal data to transfer domain-specific insights to downstream text-only or image-only LLMs. We demonstrate its effectiveness through two key applications: (1) Rare genetic disease prediction from texts, where MINT uses a multimodal encoder model, trained on facial photos and clinical notes, to generate a preference dataset for aligning a lightweight Llama 3.2-3B-Instruct. Despite relying on text input only, the MINT-derived model outperforms models trained with SFT, RAG, or DPO, and even outperforms Llama 3.1-405B-Instruct. (2) Tissue type classification using cell nucleus images, where MINT uses a vision-language foundation model as the preference generator, containing knowledge learnt from both text and histopathological images to align downstream image-only models. The resulting MINT-derived model significantly improves the performance of Llama 3.2-Vision-11B-Instruct on tissue type classification. In summary, MINT provides an effective strategy to align unimodal LLMs with high-quality multimodal expertise through preference optimization.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.QM, cs.CL, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-02-16 · <a href='https://arxiv.org/abs/2505.05736'>page</a> · <a href='https://arxiv.org/pdf/2505.05736'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>How Canada uses Claude: Findings from the Anthropic Economic Index</title>
+      <link>https://www.anthropic.com/research/how-canada-uses-claude</link>
+      <guid isPermaLink="false">anthropic:0df6793724</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
+<p><b>Authors:</b> Anthropic</p>
+<p>Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/how-canada-uses-claude'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Pedestrian Collision Detection and Avoidance in Cerebral Visual Impairment During Unrestricted Walking in an Immersive Virtual Reality Environment</title>
+      <link>https://research.nvidia.com/publication/2026-06_pedestrian-collision-detection-and-avoidance-cerebral-visual-impairment-during</link>
+      <guid isPermaLink="false">nvidia_research:54be8335dd</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-06_pedestrian-collision-detection-and-avoidance-cerebral-visual-impairment-during'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Weak-to-Strong Generalization via Direct On-Policy Distillation</title>
+      <link>https://huggingface.co/papers/2607.05394</link>
+      <guid isPermaLink="false">arxiv:2607.05394</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shiyuan Feng, Huan-ang Gao, Haohan Chi, Hanlin Wu, Zhilong Zhang, Zheng Jiang, Bingxiang He, Wei-Ying Ma, … <i>(+3 more)</i></p>
+<p>Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher&#x27;s final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher&#x27;s RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student&#x27;s own on-policy states. This directly reuses the weak model&#x27;s RL supervision signal without running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 58.3% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://huggingface.co/papers/2607.05394'>page</a> · <a href='https://arxiv.org/pdf/2607.05394'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>4D Human-Scene Reconstruction from Low-Overlap Captures</title>
+      <link>https://huggingface.co/papers/2607.09125</link>
+      <guid isPermaLink="false">arxiv:2607.09125</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Minhyuk Hwang, Sangmin Kim, Seunguk Do, Daneul Kim, Jaesik Park, Hugging Face Daily Papers (curated)</p>
+<p>Existing volumetric capture of dynamic human performance achieves high fidelity with dense camera arrays. However, in real-world scenarios, only a handful of low-overlap cameras are available, which degrades the output quality and leaves large areas unobserved. Recent 4D reconstruction methods have focused on low-overlap settings, yet they still produce noticeable artifacts in under-observed regions. Video diffusion models have emerged as another option, but they show geometrically inconsistent results for humans. To address these limitations, we propose StudioRecon, a pipeline that reconstructs 4D human scenes from sparse, low-overlap cameras by decoupling background and humans. We densify background supervision by synthesizing hundreds of camera-controlled novel views with a video diffusion model. We also robustly initialize deformable Gaussian humans with cross-view identity association and triangulated multi-view keypoint fitting. Finally, our recursive enhancement module with motion-adaptive consistency injection harmonizes the composed output, thereby further avoiding remaining artifacts. We achieve state-of-the-art novel view synthesis across four real-world datasets and demonstrate applications such as novel trajectory rendering and human replacement.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-10 · <a href='https://huggingface.co/papers/2607.09125'>page</a> · <a href='https://arxiv.org/pdf/2607.09125'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LightMem-Ego: Your AI Memory for Everyday Life</title>
+      <link>https://huggingface.co/papers/2607.11487</link>
+      <guid isPermaLink="false">arxiv:2607.11487</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yijun Chen, Boyi Xiao, Yixian Zhao, Haoting Xia, Buqiang Xu, Jizhan Fang, Yanya Li, Yaqi Zheng, … <i>(+6 more)</i></p>
+<p>Personal AI assistants on mobile and wearable devices continuously perceive users&#x27; daily lives through visual and audio streams. However, answering queries about past experiences requires lightweight multimodal memory that can continuously accumulate, organize, and retrieve long-term experiences, which remains challenging. To address this challenge, we present LightMem-Ego, a lightweight streaming multimodal memory system for everyday-life assistance. The system continuously captures egocentric visual and audio streams, aligns them on a shared timeline, and organizes them into a hierarchical memory consisting of current, short-term, and long-term memory. Given a user query, LightMem-Ego dynamically routes retrieval to the appropriate memory level and generates answers grounded in multimodal evidence. The demonstration can be deployed on smartphones and AI glasses, supporting object finding, conversation recall, life summarization, routine discovery, and personalized assistance. Code is available at https://github.com/zjunlp/LightMem-Ego.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-13 · <a href='https://huggingface.co/papers/2607.11487'>page</a> · <a href='https://arxiv.org/pdf/2607.11487'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Proactive Agent Research Environment: Simulating Active Users to Evaluate Proactive Assistants</title>
+      <link>https://machinelearning.apple.com/research/proactive-agent-research-environment</link>
+      <guid isPermaLink="false">apple_ml:a81c1ff8a0</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Proactive agents that anticipate user needs and autonomously execute tasks hold great promise as digital assistants, yet the lack of realistic user simulation frameworks hinders their development. Existing approaches model apps as flat tool-calling APIs, failing to capture the stateful and sequential nature of user interaction in digital environments and making realistic user simulation infeasible. We introduce Proactive Agent Research Environment (Pare), a framework for building and evaluating proactive agents in digital environments. Pare models applications as finite state machines withâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-14 · <a href='https://machinelearning.apple.com/research/proactive-agent-research-environment'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multilingual Semantic Retrieval for Apple Music Search</title>
+      <link>https://machinelearning.apple.com/research/multilingual-semantic-retrieval</link>
+      <guid isPermaLink="false">apple_ml:da16a3f773</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Apple Music serves listeners across 150+ storefronts in dozens of languages, with a catalog that grows by hundreds of thousands of new tracks daily. At this scale, search recall on misspelled, transliterated, and cross-lingual queries becomes a dominant driver of session quality, particularly for tail queries that account for the majority of unique queries. We present a multilingual semantic retrieval system built on a 305M-parameter Siamese bi-encoder fine-tuned from GTE-multilingual-base with curriculum-scheduled multi-objective training. The model is integrated into the search stack via aâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-14 · <a href='https://machinelearning.apple.com/research/multilingual-semantic-retrieval'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Research on Cross-media Science and Technology Information Data Retrieval</title>
       <link>https://arxiv.org/abs/2204.04887</link>
@@ -2128,146 +2284,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
       <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Goodfire</p>
 <p><b>Authors:</b> Goodfire</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://www.goodfire.ai/research/stories-in-space'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mistral OCR 4</title>
-      <link>https://mistral.ai/news/ocr-4/</link>
-      <guid isPermaLink="false">mistral:9732faa627</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/ocr-4/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Introducing Mistral OCR 4</title>
-      <link>https://mistral.ai/news/ocr-4</link>
-      <guid isPermaLink="false">mistral:5cf9082081</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/ocr-4'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>ResearchIntroducing Mistral 3December 2, 2025Mistral AI</title>
-      <link>https://mistral.ai/news/mistral-3/</link>
-      <guid isPermaLink="false">mistral:702a281954</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/mistral-3/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Proto: A programming language for generative biology</title>
-      <link>https://arcinstitute.org/news/proto</link>
-      <guid isPermaLink="false">arc_institute:83a96f8ce3</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>blog</category>
-      <category>biology</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Arc Institute</p>
-<p><b>Authors:</b> Arc Institute</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, biology · <a href='https://arcinstitute.org/news/proto'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>DataClaw0: Agentic Tailoring Multimodal Data from Raw Streams</title>
-      <link>https://huggingface.co/papers/2606.21337</link>
-      <guid isPermaLink="false">arxiv:2606.21337</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Cong Wan, Zeyu Guo, Zijian Cai, Jiangyang Li, SongLin Dong, Lin Peng, Xiangyang Luo, Zhiheng Ma, … <i>(+2 more)</i></p>
-<p>Massive unstructured multimodal streams suffer from high &quot;data entropy,&quot; impeding both efficient human knowledge acquisition and high-quality AI post-training. Existing passive annotation paradigms, heavily reliant on heuristic rules or general VLMs, are costly, monotonous, and fail to unlock the deep procedural logic embedded in raw data. We elevate data processing to a learnable capability, proposing a paradigm shift towards Agentic Data Tailoring, which actively refining and structuring data to align with diverse user and downstream intents. To overcome the data scarcity bottleneck in training such high-order capabilities, we design a two-stage pipeline grounding generative semantic synthesis in deterministic Factual Anchors, yielding a large-scale dataset spanning five core physical and digital domains. Building upon this, DataClaw_0-9B model synergizes Supervised Fine-Tuning (SFT) with Group Relative Policy Optimization (GRPO), achieving robust alignment with complex refinement and tailoring intents. To systematically quantify this capability, we construct DataClaw_0-val, the first benchmark dedicated to data refinement. Crucially, we adopt downstream post-training as the ultimate validation touchstone. Evaluations on video generation, real-world VQA, and GUI navigation confirm that DataClaw_0 delivers high-information-density tailored data, facilitating efficient model adaptation to new tasks under limited training data regimes. Project page: https://czjdsg.github.io/MakeAnyData</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-19 · <a href='https://huggingface.co/papers/2606.21337'>page</a> · <a href='https://arxiv.org/pdf/2606.21337'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Grouped Query Experts: Mixture-of-Experts on GQA Self-Attention</title>
-      <link>https://huggingface.co/papers/2606.20945</link>
-      <guid isPermaLink="false">arxiv:2606.20945</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Vishesh Tripathi, Abhay Kumar, Hugging Face Daily Papers (curated)</p>
-<p>Self-attention is central to Transformer performance and is often the most expensive part of the Transformer at long context lengths because its pairwise token interactions scale quadratically with sequence length. Standard dense attention also applies the same set of attention heads to every token regardless of token difficulty or information content. This uniform activation can waste compute, especially as sequences grow longer and attention cost increases rapidly. We propose Grouped Query Experts (GQE), a mixture-of-experts layer on top of grouped-query attention (GQA). Within each GQA group, a router selects k query-head experts per token while all key-value (KV) heads remain dense and unchanged. Thus, GQE keeps the KV cache benefits of GQA and reduces only the active query-head computation. On a fixed 30B token budget at the 250M parameter scale, GQE matches the all-active GQA baseline in downstream accuracy while activating half the query heads per token.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20945'>page</a> · <a href='https://arxiv.org/pdf/2606.20945'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Qwen-AgentWorld: Language World Models for General Agents</title>
-      <link>https://huggingface.co/papers/2606.24597</link>
-      <guid isPermaLink="false">arxiv:2606.24597</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yuxin Zuo, Zikai Xiao, Li Sheng, Fei Huang, Jianhong Tu, Yuxuan Liu, Tianyi Tang, Xiaomeng Hu, … <i>(+26 more)</i></p>
-<p>A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning. In this work, we investigate how world modeling based on language models can further push the boundaries of general agents. (i) We first focus on building foundation models for agentic environment simulation. We introduce Qwen-AgentWorld-35B-A3B and Qwen-AgentWorld-397B-A17B, the first language world models capable of simulating agentic environments covering 7 domains via long chain-of-thought reasoning. Leveraging more than 10M environment interaction trajectories of 7 domains in real-world environments, we develop Qwen-AgentWorld through a three-stage training pipeline: CPT injects general-purpose world modeling capabilities from the state transition dynamics and augmented professional corpora, SFT activates next-state-prediction reasoning, and RL sharpens simulation fidelity through a tailored framework with hybrid rubric-and-rule rewards. To evaluate language world models, we present AgentWorldBench, a comprehensive benchmark constructed from real-world interactions of 5 frontier models on 9 established benchmarks. Empirical results demonstrate that Qwen-AgentWorld significantly outperforms existing frontier models. (ii) Beyond foundation models, we further investigate two complementary paradigms through which world modeling enhances general agents. First, as a decoupled environment simulator, Qwen-AgentWorld supports scalable and controllable simulation of thousands of real-world environments for agentic RL, yielding gains that surpass real-environment training alone. Second, as a unified agent foundation model, world-model training acts as a highly effective warm-up that improves downstream performance across 7 agentic benchmarks. Code: https://github.com/QwenLM/Qwen-AgentWorld</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-23 · <a href='https://huggingface.co/papers/2606.24597'>page</a> · <a href='https://arxiv.org/pdf/2606.24597'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?</title>
-      <link>https://huggingface.co/papers/2606.24530</link>
-      <guid isPermaLink="false">arxiv:2606.24530</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yuru Wang, Lejun Cheng, Yuxin Zuo, Sihang Zeng, Bingxiang He, Che Jiang, Junlin Yang, Yuchong Wang, … <i>(+10 more)</i></p>
-<p>We introduce NatureBench, a cross-discipline benchmark of 90 tasks distilled from peer-reviewed Nature-family publications, designed to evaluate whether AI coding agents can move beyond reproduction toward discovery on real scientific problems. NatureBench is built on NatureGym, an automated pipeline that constructs a standardized, per-task containerized environment from a source paper, addressing the environment-fragmentation problem that has limited the credibility of prior agent-on-research benchmarks. Evaluating ten frontier agent configurations under a strict web-search-disabled protocol, we find that the strongest model surpasses SOTA on only 17.8% of tasks under the g&gt;0.1 criterion. Analysis of method pathways reveals that agents succeed primarily through methodological translation, converting scientific tasks into familiar supervised prediction problems, rather than through genuine scientific invention. Failures are dominated by wrong method choice and insufficient compute budget, not by task misunderstanding. We release the benchmark, the NatureGym pipeline, and a public leaderboard with maintainer-side reproduction. Code: https://github.com/FrontisAI/NatureBench</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-23 · <a href='https://huggingface.co/papers/2606.24530'>page</a> · <a href='https://arxiv.org/pdf/2606.24530'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MobileForge: Annotation-Free Adaptation for Mobile GUI Agents with Hierarchical Feedback-Guided Policy Optimization</title>
-      <link>https://huggingface.co/papers/2606.19930</link>
-      <guid isPermaLink="false">arxiv:2606.19930</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Guangyi Liu, Pengxiang Zhao, Gao Wu, Yiwen Yin, Mading Li, Liang Liu, Congxiao Liu, Zhang Qi, … <i>(+4 more)</i></p>
-<p>MLLM-based mobile GUI agents have made substantial progress in UI understanding and action execution, but adapting them to real target apps remains costly because mobile apps are numerous, frequently updated, and hard to cover with human-written tasks, demonstrations, or reward labels. Existing annotation-free GUI learning reduces manual supervision, yet lacks a unified substrate connecting target-app exploration, curriculum mining, rollout execution, and feedback, while policy optimization often relies on isolated rollouts and coarse rewards that are hard to convert into reliable improvement signals. We present MobileForge, an annotation-free adaptation system for mobile GUI agents. MobileForge consists of MobileGym, which grounds task generation and rollout evaluation in real mobile app interaction, and Hierarchical Feedback-Guided Policy Optimization (HiFPO), which turns trajectory outcomes, step-level process feedback, and corrective hints into hint-contextualized step-level GRPO updates. Using only automatically generated annotation-free adaptation data, MobileForge adapts Qwen3-VL-8B to 67.2% Pass@3 on AndroidWorld, close to the closed-data GUI-specialized GUI-Owl-1.5-8B base model at 69.0%. The MobileForge-adapted ForgeOwl-8B further reaches 77.6% Pass@3 on AndroidWorld and 41.0% success on the out-of-domain MobileWorld GUI-only split, establishing the strongest open-data mobile GUI agent in our evaluation. Code, data, and trained models will be released at https://mobile-forge.github.io/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.19930'>page</a> · <a href='https://arxiv.org/pdf/2606.19930'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>BioMatrix: Towards a Comprehensive Biological Foundation Model Spanning the Modality Matrix of Sequences, Structures, and Language</title>
-      <link>https://huggingface.co/papers/2606.22138</link>
-      <guid isPermaLink="false">arxiv:2606.22138</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Qizhi Pei, Zhimeng Zhou, Yi Duan, Yiyang Zhao, Wei Li, Han Guo, Liang He, Chengping Li, … <i>(+5 more)</i></p>
-<p>We present BioMatrix, the first multimodal foundation model that natively integrates sequences, structures, and natural language for both molecules and proteins within a single decoder-only architecture. Existing biological foundation models pursue native multimodality and broad entity coverage separately: those that fuse multiple modalities under a shared objective remain confined to a single entity type, while those spanning multiple entity types either omit explicit structural modeling or rely on adapter-based designs in which the model cannot natively generate the very modalities it can read. BioMatrix closes this gap by mapping molecular sequences (supporting both SMILES and SELFIES notations), molecular structures, protein sequences, protein structures, and natural language into a shared discrete token space through a unified tokenization scheme, so that all modalities are consumed and produced uniformly under a single next-token prediction objective -- without external encoders, projection adapters, or modality-specific output heads. Built upon the Qwen3 language model (1.7B and 4B), BioMatrix is continually pretrained on 304.4 billion tokens spanning general and domain-specific text, sequence and structure views of molecules and proteins, and cross-modal corpora that interleave biomolecular entities with scientific text and link distinct entities through molecule-protein and protein-protein interaction data. After tuning on a comprehensive suite of downstream applications covering 80 tasks across 6 categories -- encompassing single-entity and multi-entity understanding and generation tasks across and within modalities -- BioMatrix achieves state-of-the-art or competitive performance on 77 out of 80 tasks, demonstrating that a single, natively multimodal generalist model can effectively match or surpass specialized approaches across a wide range of biological tasks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-20 · <a href='https://huggingface.co/papers/2606.22138'>page</a> · <a href='https://arxiv.org/pdf/2606.22138'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding</title>
-      <link>https://huggingface.co/papers/2606.21906</link>
-      <guid isPermaLink="false">arxiv:2606.21906</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xuanming Zhang, Sining Zhoubian, Yuxuan Chen, Tianyi Tang, An Yang, Sean Du, Chujie Zheng, Fei Huang, … <i>(+4 more)</i></p>
-<p>Autoregressive generation in large language models (LLMs) conventionally decodes from the final layer, assuming that deeper representations yield more reliable next-token predictions. We revisit this assumption by revealing a recurring Guess-Refine-Perturb dynamic: early layers form coarse guesses, intermediate layers refine reasoning-relevant semantics, and final layers can perturb these refined predictions toward generic or alignment-preferred tokens. We introduce Confident Decoding, a training-free decoding strategy that dynamically selects the most reliable near-final layer through entropy-guided conservative backward search. We further provide a theoretical formulation of layer selection as an optimal stopping problem, showing that under bounded projection noise and dominant late-stage alignment perturbation, our search rule filters perturbation while bounding the loss relative to the oracle refinement layer. Experiments across dense and Mixture-of-Experts LLMs demonstrate consistent gains on challenging reasoning benchmarks, including GPQA-Diamond, Omni-MATH, and HLE, with zero memory overhead and less than 2% latency increase. These results suggest dynamically bypassing final-layer perturbations can unlock stronger reasoning behavior from aligned LLMs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-20 · <a href='https://huggingface.co/papers/2606.21906'>page</a> · <a href='https://arxiv.org/pdf/2606.21906'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MemGUI-Agent: An End-to-End Long-Horizon Mobile GUI Agent with Proactive Context Management</title>
-      <link>https://huggingface.co/papers/2606.19926</link>
-      <guid isPermaLink="false">arxiv:2606.19926</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Guangyi Liu, Gao Wu, Congxiao Liu, Pengxiang Zhao, Liang Liu, Mading Li, Qi Zhang, Mengyan Wang, … <i>(+3 more)</i></p>
-<p>MLLM-based mobile GUI agents have made substantial progress on short-horizon tasks, yet remain unreliable on long-horizon tasks that require retaining intermediate facts across many steps and app transitions. We attribute this limitation to ReAct-style prompting, which passively accumulates per-step records, leading to prompt explosion and dilution of critical cross-app facts. To address this, we introduce MemGUI-Agent, an end-to-end long-horizon mobile GUI agent with proactive context management. MemGUI-Agent is built on Context-as-Action (ConAct), which casts context management as first-class actions emitted by the same policy that selects UI actions. Instead of passively appending history, ConAct maintains three structured context fields: folded action history, folded UI state, and recent step record, preserving critical UI facts while keeping context compact. To make proactive context management learnable across model scales, we construct MemGUI-3K, a 2,956-trajectory dataset with full ConAct annotations for supervised training and offline analysis. Training an 8B model on MemGUI-3K produces MemGUI-8B-SFT, an 8B MemGUI-Agent that achieves the best open-data 8B performance on MemGUI-Bench and generalizes to the out-of-distribution MobileWorld benchmark. Code, data, and trained models will be released at https://memgui-agent.github.io/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.19926'>page</a> · <a href='https://arxiv.org/pdf/2606.19926'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SkillHarness: Harnessing Safe Skills for Computer-Use Agents</title>
-      <link>https://huggingface.co/papers/2606.20636</link>
-      <guid isPermaLink="false">arxiv:2606.20636</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yurun Chen, Biao Yi, Keting Yin, Shengyu Zhang, Hugging Face Daily Papers (curated)</p>
-<p>Computer-Use Agents (CUAs) are increasingly deployed in dynamic interactive environments, creating a growing need for continual skill learning during interaction. Recent approaches address this challenge by learning reusable skills from successful trajectories. However, these skill learning methods largely assume static and safe environments, overlooking risks from adversarial interactions (e.g., prompt injections) and environmental dynamics (e.g., pop-ups). In dynamic settings, such assumptions can lead to risky skill learning and brittle execution, undermining the reliability of CUAs. This raises the question: how can CUAs learn and use skills safely in dynamic environments? To address this problem, we propose SkillHarness, a framework for safe skill harnessing in dynamic environments. SkillHarness moves beyond static skill abstractions by modeling skill learning and utilization as a safety-constrained interaction process. Specifically, we introduce the skill boundary that leverages multi-source supervision signals to identify safe skills from interaction trajectories, and construct self-improving safety constraints throughout the skill lifecycle. In addition, SkillHarness introduces selective skill reuse, where tasks are guided to decompose according to context and completed through the selective activation of skill subsets. Our experiments demonstrate that SkillHarness significantly reduces the unsafe rate of learned skills by 57.1% and consistently improves execution stability under dynamic environmental changes, outperforming existing baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-02 · <a href='https://huggingface.co/papers/2606.20636'>page</a> · <a href='https://arxiv.org/pdf/2606.20636'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

@@ -5,8 +5,95 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Tue, 14 Jul 2026 06:06:52 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 06:10:26 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Enhancing Phenotype Recognition in Clinical Notes Using Large Language Models: PhenoBCBERT and PhenoGPT</title>
+      <link>https://arxiv.org/abs/2308.06294</link>
+      <guid isPermaLink="false">arxiv:2308.06294</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>q-bio.QM</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia, Peking U, Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Jingye Yang, Cong Liu, Wendy Deng, Da Wu, Chunhua Weng, Yunyun Zhou, Kai Wang</p>
+<p>We hypothesize that large language models (LLMs) based on the transformer architecture can enable automated detection of clinical phenotype terms, including terms not documented in the HPO. In this study, we developed two types of models: PhenoBCBERT, a BERT-based model, utilizing Bio+Clinical BERT as its pre-trained model, and PhenoGPT, a GPT-based model that can be initialized from diverse GPT models, including open-source versions such as GPT-J, Falcon, and LLaMA, as well as closed-source versions such as GPT-3 and GPT-3.5. We compared our methods with PhenoTagger, a recently developed HPO recognition tool that combines rule-based and deep learning methods. We found that our methods can extract more phenotype concepts, including novel ones not characterized by HPO. We also performed case studies on biomedical literature to illustrate how new phenotype information can be recognized and extracted. We compared current BERT-based versus GPT-based models for phenotype tagging, in multiple aspects including model architecture, memory usage, speed, accuracy, and privacy protection. We also discussed the addition of a negation step and an HPO normalization layer to the transformer models for improved HPO term tagging. In conclusion, PhenoBCBERT and PhenoGPT enable the automated discovery of phenotype terms from clinical notes and biomedical literature, facilitating automated downstream tasks to derive new biological insights on human diseases.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.QM, cs.AI · <b>arXiv submitted:</b> 2023-11-09 · <a href='https://arxiv.org/abs/2308.06294'>page</a> · <a href='https://arxiv.org/pdf/2308.06294'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Exploring the Reversal Curse and Other Deductive Logical Reasoning in BERT and GPT-Based Large Language Models</title>
+      <link>https://arxiv.org/abs/2312.03633</link>
+      <guid isPermaLink="false">arxiv:2312.03633</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Da Wu, Jingye Yang, Kai Wang</p>
+<p>The term &quot;Reversal Curse&quot; refers to the scenario where auto-regressive decoder large language models (LLMs), such as ChatGPT, trained on &quot;A is B&quot; fail to learn &quot;B is A,&quot; assuming that B and A are distinct and can be uniquely identified from each other, demonstrating a basic failure of logical deduction. This raises a red flag in the use of GPT models for certain general tasks such as constructing knowledge graphs, considering their adherence to this symmetric principle. In our study, we examined a bidirectional LLM, BERT, and found that it is immune to the reversal curse. Driven by ongoing efforts to construct biomedical knowledge graphs with LLMs, we also embarked on evaluating more complex but essential deductive reasoning capabilities. This process included first training encoder and decoder language models to master the intersection and union operations on two sets and then moving on to assess their capability to infer different combinations of union and intersection operations on three newly created sets. The findings showed that while both encoder and decoder language models, trained for tasks involving two sets (union/intersection), were proficient in such scenarios, they encountered difficulties when dealing with operations that included three sets (various combinations of union and intersection). Our research highlights the distinct characteristics of encoder and decoder models in simple and complex logical reasoning. In practice, the choice between BERT and GPT should be guided by the specific requirements and nature of the task at hand, leveraging their respective strengths in bidirectional context comprehension and sequence prediction.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2024-07-01 · <a href='https://arxiv.org/abs/2312.03633'>page</a> · <a href='https://arxiv.org/pdf/2312.03633'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VSLLaVA: a pipeline of large multimodal foundation model for industrial vibration signal analysis</title>
+      <link>https://arxiv.org/abs/2409.07482</link>
+      <guid isPermaLink="false">arxiv:2409.07482</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>eess.SP</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Fulei Chu, Qi Li</p>
+<p><b>Authors:</b> Qi Li, Xinran Zhang, Jinfeng Huang, Hongliang He, Feibin Zhang, Zhaoye Qin, Fulei Chu</p>
+<p>While Large Multimodal Models (LMMs) excel in general multimodal tasks, they lack the domain-specific knowledge for industrial vibration signal analysis. This paper introduces VSLLaVA, a comprehensive pipeline that utilizes expert knowledge-guided instruction tuning and evaluation to create an end-to-end LMM for signal analysis. To achieve this, we construct a novel Signal-Question-Answer (SQA) dataset using an expert rule-based signal generator. This dataset facilitates a two-stage learning procedure. The first step is efficient instruction fine-tuning with Low-Rank Adaptation (LoRA), which imparts specialized signal identification capabilities. Subsequently, we designed a tailored Group Relative Policy Optimization (GRPO) to refine the reasoning capabilities and enhance classification robustness. Then, a dual-mode evaluation framework is proposed, combining an LLM referee with expert rules for semantic assessment using quantitative metrics for numerical and textual accuracy, which reveals that VSLLaVA significantly improves performance in signal type identification and parameter analysis, and makes progress in the identification and parameter analysis of fault-related signals. This research demonstrates a viable approach for developing specialized foundational models for complex industrial applications and marks a transition from conventional task-specific systems to a cohesive, interactive foundational model.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SP, cs.AI · <b>arXiv submitted:</b> 2025-09-01 · <a href='https://arxiv.org/abs/2409.07482'>page</a> · <a href='https://arxiv.org/pdf/2409.07482'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Integrating Chain-of-Thought and Retrieval Augmented Generation Enhances Rare Disease Diagnosis from Clinical Notes</title>
+      <link>https://arxiv.org/abs/2503.12286</link>
+      <guid isPermaLink="false">arxiv:2503.12286</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>q-bio.GN</category>
+      <category>q-bio.QM</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Zhanliang Wang, Da Wu, Quan Nguyen, Kai Wang</p>
+<p>Background: Several studies show that large language models (LLMs) struggle with phenotype-driven gene prioritization for rare diseases. These studies typically use Human Phenotype Ontology (HPO) terms to prompt foundation models like GPT and LLaMA to predict candidate genes. However, in real-world settings, foundation models are not optimized for domain-specific tasks like clinical diagnosis, yet inputs are unstructured clinical notes rather than standardized terms. How LLMs can be instructed to predict candidate genes or disease diagnosis from unstructured clinical notes remains a major challenge. Methods: We introduce RAG-driven CoT and CoT-driven RAG, two methods that combine Chain-of-Thought (CoT) and Retrieval Augmented Generation (RAG) to analyze clinical notes. A five-question CoT protocol mimics expert reasoning, while RAG retrieves data from sources like HPO and OMIM (Online Mendelian Inheritance in Man). We evaluated these approaches on rare disease datasets, including 5,980 Phenopacket-derived notes, 255 literature-based narratives, and 220 in-house clinical notes from Childrens Hospital of Philadelphia. Results: We found that recent foundations models, including Llama 3.3-70B-Instruct and DeepSeek-R1-Distill-Llama-70B, outperformed earlier versions such as Llama 2 and GPT-3.5. We also showed that RAG-driven CoT and CoT-driven RAG both outperform foundation models in candidate gene prioritization from clinical notes; in particular, both methods with DeepSeek backbone resulted in a top-10 gene accuracy of over 40% on Phenopacket-derived clinical notes. RAG-driven CoT works better for high-quality notes, where early retrieval can anchor the subsequent reasoning steps in domain-specific evidence, while CoT-driven RAG has advantage when processing lengthy and noisy notes.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, q-bio.GN, q-bio.QM · <b>arXiv submitted:</b> 2026-02-18 · <a href='https://arxiv.org/abs/2503.12286'>page</a> · <a href='https://arxiv.org/pdf/2503.12286'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multimodal Integrated Knowledge Transfer to Large Language Models through Preference Optimization with Biomedical Applications</title>
+      <link>https://arxiv.org/abs/2505.05736</link>
+      <guid isPermaLink="false">arxiv:2505.05736</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>q-bio.QM</category>
+      <category>cs.CL</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Kai Wang</p>
+<p><b>Authors:</b> Zhanliang Wang, Da Wu, Quan Nguyen, Zhuoran Xu, Kai Wang</p>
+<p>The scarcity of high-quality multimodal biomedical data limits the ability to effectively fine-tune pretrained Large Language Models (LLMs) for specialized biomedical tasks. To address this challenge, we introduce MINT (Multimodal Integrated kNowledge Transfer), a framework that aligns unimodal large decoder models with domain-specific decision patterns from multimodal biomedical data through preference optimization. While MINT supports different optimization techniques, we primarily implement it with the Odds Ratio Preference Optimization (ORPO) framework as its backbone. This strategy enables the aligned LLMs to perform predictive tasks using text-only or image-only inputs while retaining knowledge learnt from multimodal data. MINT leverages an upstream multimodal machine learning (MML) model trained on high-quality multimodal data to transfer domain-specific insights to downstream text-only or image-only LLMs. We demonstrate its effectiveness through two key applications: (1) Rare genetic disease prediction from texts, where MINT uses a multimodal encoder model, trained on facial photos and clinical notes, to generate a preference dataset for aligning a lightweight Llama 3.2-3B-Instruct. Despite relying on text input only, the MINT-derived model outperforms models trained with SFT, RAG, or DPO, and even outperforms Llama 3.1-405B-Instruct. (2) Tissue type classification using cell nucleus images, where MINT uses a vision-language foundation model as the preference generator, containing knowledge learnt from both text and histopathological images to align downstream image-only models. The resulting MINT-derived model significantly improves the performance of Llama 3.2-Vision-11B-Instruct on tissue type classification. In summary, MINT provides an effective strategy to align unimodal LLMs with high-quality multimodal expertise through preference optimization.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.QM, cs.CL, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-02-16 · <a href='https://arxiv.org/abs/2505.05736'>page</a> · <a href='https://arxiv.org/pdf/2505.05736'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Weak-to-Strong Generalization via Direct On-Policy Distillation</title>
+      <link>https://huggingface.co/papers/2607.05394</link>
+      <guid isPermaLink="false">arxiv:2607.05394</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shiyuan Feng, Huan-ang Gao, Haohan Chi, Hanlin Wu, Zhilong Zhang, Zheng Jiang, Bingxiang He, Wei-Ying Ma, … <i>(+3 more)</i></p>
+<p>Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher&#x27;s final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher&#x27;s RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student&#x27;s own on-policy states. This directly reuses the weak model&#x27;s RL supervision signal without running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 58.3% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://huggingface.co/papers/2607.05394'>page</a> · <a href='https://arxiv.org/pdf/2607.05394'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Proactive Agent Research Environment: Simulating Active Users to Evaluate Proactive Assistants</title>
+      <link>https://machinelearning.apple.com/research/proactive-agent-research-environment</link>
+      <guid isPermaLink="false">apple_ml:a81c1ff8a0</guid>
+      <pubDate>Wed, 15 Jul 2026 06:10:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Proactive agents that anticipate user needs and autonomously execute tasks hold great promise as digital assistants, yet the lack of realistic user simulation frameworks hinders their development. Existing approaches model apps as flat tool-calling APIs, failing to capture the stateful and sequential nature of user interaction in digital environments and making realistic user simulation infeasible. We introduce Proactive Agent Research Environment (Pare), a framework for building and evaluating proactive agents in digital environments. Pare models applications as finite state machines withâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-14 · <a href='https://machinelearning.apple.com/research/proactive-agent-research-environment'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Network-informed Prompt Engineering against Organized Astroturf Campaigns under Extreme Class Imbalance</title>
       <link>https://arxiv.org/abs/2501.11849</link>
@@ -2243,83 +2330,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Leyang Shen, Yang Zhang, Xiaoyan Zhao, Chun Kai Ling, Tat-Seng Chua</p>
 <p>Large language model (LLM)-based multi-agent systems (MAS) have demonstrated great potential in solving tasks with execution complexity, by distributing subtasks across cooperative agents. However, this divide-and-conquer paradigm falls short on decision-making tasks that are also prevalent in the real world. These tasks require simultaneous reasoning from the stances of all involved stakeholders whose decisions are mutually dependent and thus cannot be solved in isolation. We characterize this challenge as stance entanglement, a form of decision complexity distinct from execution complexity. To address it, we propose Multi-Agent Fictitious Play (MAFP), a novel MAS paradigm that represents stakeholder stances as agents and formulates decision-making as an equilibrium-seeking process. Built on the game-theoretic principle of fictitious play, MAFP iteratively updates each agent&#x27;s decision by best responding to the empirical mixture of other agents&#x27; past decisions. This enables agents to expose and address one another&#x27;s weaknesses, progressively improving decision quality and robustness. We evaluate MAFP on challenging decision-making tasks that test the capability of deciding strategies for competitive scenarios prior to acting. MAFP outperforms both single-round and multi-round baselines on two complementary metrics, tournament strength and robustness, demonstrating its effectiveness in addressing stance entanglement.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.MA · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19308'>page</a> · <a href='https://arxiv.org/pdf/2606.19308'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Measuring LLMs’ impact on N-day exploits</title>
-      <link>https://www.anthropic.com/research/n-days</link>
-      <guid isPermaLink="false">anthropic:eefc865e48</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>In cybersecurity, a large fraction of real-world harm comes from N-days: vulnerabilities that have already been publicly disclosed, but only patched on some devices. In this post, we evaluate how much large language models can accelerate and automate the process of developing N-day exploits.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/n-days'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mapping AI-enabled cyber threats: Insights from the LLM ATT&amp;CK Navigator</title>
-      <link>https://www.anthropic.com/research/attack-navigator</link>
-      <guid isPermaLink="false">anthropic:1796194ba9</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>We’ve spent the past year investigating how threat actors are weaponizing AI to conduct cyber operations. Today, we’re sharing a new analysis that maps these real-world attacks onto the MITRE ATT&amp;CK framework, a database of tactics and techniques used by cyberattackers.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/attack-navigator'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Measuring LLMs’ ability to develop exploits</title>
-      <link>https://www.anthropic.com/research/exploit-evals</link>
-      <guid isPermaLink="false">anthropic:7e504b4758</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>We&#x27;ve developed two new, challenging academic benchmarks measuring AI models’ ability to develop exploits, and an updated version of the benchmark measuring smart contract exploitation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/exploit-evals'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling</title>
-      <link>https://huggingface.co/papers/2606.18023</link>
-      <guid isPermaLink="false">arxiv:2606.18023</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Jian Yang, Shawn Guo, Wei Zhang, Tianyu Zheng, Yaxin Du, Haau-Sing Li, Jiajun Wu, Yue Song, … <i>(+12 more)</i></p>
-<p>Looped Transformers scale latent computation by repeatedly applying shared blocks, but sequential looping increases latency and KV-cache memory with the loop count. Parallel loop Transformers (PLT) alleviate this cost through cross-loop position offsets (CLP) and shared-KV gated sliding-window attention, making loop count a practical design choice. We therefore study PLT loop-count selection through a gain--cost view: an extra loop may refine representations, but CLP also introduces a positional mismatch at each loop boundary. We instantiate this study by training LoopCoder-v2, a family of 7B PLT coders with different loop counts, from scratch on 18T tokens, followed by matched instruction tuning and evaluation. Empirically, the two-loop variant delivers broad gains over the non-looped baseline across code generation, code reasoning, agentic software engineering, and tool-use benchmarks, improving SWE-bench Verified from 43.0 to 64.4 points and Multi-SWE from 14.0 to 31.0 points. In contrast, variants with three or more loops regress, revealing a strongly non-monotonic loop-count effect. Our diagnostics show that loop 2 provides the main productive refinement, while later loops yield diminishing, oscillatory updates and reduced representational diversity. Because the CLP-induced mismatch remains roughly fixed as refinement gains shrink, the offset cost increasingly dominates. This gain--cost trade-off explains PLT&#x27;s saturation at two loops and provides diagnostics for loop-count selection.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://huggingface.co/papers/2606.18023'>page</a> · <a href='https://arxiv.org/pdf/2606.18023'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Learning from the Self-future: On-policy Self-distillation for dLLMs</title>
-      <link>https://huggingface.co/papers/2606.18195</link>
-      <guid isPermaLink="false">arxiv:2606.18195</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yifu Luo, Zeyu Chen, Haoyu Wang, Xinhao Hu, Yuxuan Zhang, Zhizhou Sha, Shiwei Liu, Hugging Face Daily Papers (curated)</p>
-<p>On-policy self-distillation (OPSD) has proven effective for post-training large language models (LLMs), yet its application to diffusion LLMs (dLLMs) remains unexplored. Existing OPSD methods are inherently autoregressive-centric. They inject privileged information via left-to-right prefix conditioning with token-level divergence supervision, a design that fundamentally conflicts with the arbitraryorder generation of dLLMs. We introduce d-OPSD, the first OPSD framework tailored for dLLMs. Our approach makes two core contributions. First, we reframe self-teacher construction by using self-generated answers as suffix conditioning, enabling the student model to learn from &quot;self future-experience&quot; rather than privileged prefixes. Second, we shift supervision from token-level to step-level, aligning training with the iterative denoising process of dLLMs. Experiments across four reasoning benchmarks show that d-OPSD consistently outperforms RLVR and SFT baselines with superior sample efficiency, requiring only around 10% of the optimization steps by RLVR and opening a promising pathway for dLLM posttraining. The code is available at https://github.com/xingzhejun/d-OPSD.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://huggingface.co/papers/2606.18195'>page</a> · <a href='https://arxiv.org/pdf/2606.18195'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LectūraAgents: A Multi-Agent Framework for Adaptive Personalized AI-Assisted Learning and Embodied Teaching</title>
-      <link>https://huggingface.co/papers/2606.16428</link>
-      <guid isPermaLink="false">arxiv:2606.16428</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Jaward Sesay, Yue Yu, Siwei Dong, Yemin Shi, Guangyao Chen, Börje F. Karlsson, Hugging Face Daily Papers (curated)</p>
-<p>Effective personalized AI-assisted learning demands systems that can not only generate accurate learner-specific educational materials, but also dynamically adapt their instruction to diverse learners. However, existing educational agents have primarily focused on lecture content automation and simulations, which often fall short of modelling multimodal and embodied instructional methods tailored for the individual learner. To this end, we propose LectūraAgents - a multi-agent framework that enables personalized learning through end-to-end adaptive embodied teaching. At its core, LectūraAgents mirrors a professor-student relationship, in which a ProfessorAgent leads a collaborative team of specialized subordinate agents through research, planning, review, and embodied delivery of lecture contents that adapt to a learner&#x27;s needs. The framework offers three main contributions: (1) a hierarchical multi-agent architecture for end-to-end personalized learning; (2) an adaptive embodied teaching mechanism, wherein the ProfessorAgent executes visible and pedagogically motivated teaching actions (e.g., handwrite, highlight, underline, etc.) over contents in a teaching environment; and (3) a Teaching Action-Speech Alignment (TASA) algorithm that employs salience-based heuristics and temporal semantic segmentation to generate coherent teaching action sequences aligned with learner profiles. We evaluate LectūraAgents on diverse courses at high school, undergraduate, and graduate levels using sample-specific rubric-based analysis; with generated lecture materials and teaching actions assessed and validated by expert educators. Experimental results show consistent gains in lecture content quality, embodied teaching quality, assessment, and personalization over existing approaches, positioning LectūraAgents as a pedagogically well-grounded framework for personalized learning at scale.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://huggingface.co/papers/2606.16428'>page</a> · <a href='https://arxiv.org/pdf/2606.16428'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation</title>
-      <link>https://huggingface.co/papers/2606.17628</link>
-      <guid isPermaLink="false">arxiv:2606.17628</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Guibin Zhang, Xun Xu, Yanwei Yue, Zikun Su, Wangchunshu Zhou, Xiaobin Hu, Shuicheng Yan, Hugging Face Daily Papers (curated)</p>
-<p>Memory has become a standard substrate for self-evolving agents, yet retaining experience is not the same as learning how to evolve through it. Existing memory agents can store trajectories, retrieve reflections, or accumulate skills, but often lack the holistic competence to select useful experience, act on it, write reusable knowledge, and maintain a growing repository. We introduce OPD-Evolver, a slow-fast co-evolution framework that cultivates such an agent evolver through on-policy self-distillation. In the fast loop, OPD-Evolver interacts with a four-level memory hierarchy to read, use, write, and maintain experience for rapid test-time evolution. In the slow loop, outcome-calibrated memory attribution and privileged hindsight distill these four abilities into the deployable policy. Across multi-domain benchmarks, OPD-Evolver surpasses memory systems such as ReasoningBank by up to 11.5%, and training-based methods such as Skill0 by ~5.8%. Further analysis shows that OPD-Evolver internalizes high-value experience and memory management, enabling OPD-Evolver-9B to challenge giant counterparts such as Qwen3.5-397B-A17B and Step-3.5-Flash, pointing beyond memory-augmented agents toward genuinely qualified agent evolvers.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://huggingface.co/papers/2606.17628'>page</a> · <a href='https://arxiv.org/pdf/2606.17628'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
