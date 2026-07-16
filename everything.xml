@@ -5,8 +5,192 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Wed, 15 Jul 2026 06:10:26 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 06:13:45 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>ORBIT-2: Scaling Exascale Vision Foundation Models for Weather and Climate Downscaling</title>
+      <link>https://arxiv.org/abs/2505.04802</link>
+      <guid isPermaLink="false">arxiv:2505.04802</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>astro-ph.EP</category>
+      <category>cs.AI</category>
+      <category>cs.DC</category>
+      <category>physics.ao-ph</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Xiao Wang</p>
+<p><b>Authors:</b> Xiao Wang, Jong-Youl Choi, Takuya Kurihaya, Isaac Lyngaas, Hong-Jun Yoon, Xi Xiao, David Pugmire, Ming Fan, … <i>(+10 more)</i></p>
+<p>Sparse observations and coarse-resolution climate models limit effective regional decision-making, underscoring the need for robust downscaling. However, existing AI methods struggle with generalization across variables and geographies and are constrained by the quadratic complexity of Vision Transformer (ViT) self-attention. We introduce ORBIT-2, a scalable foundation model for global, hyper-resolution climate downscaling. ORBIT-2 incorporates two key innovations: (1) Residual Slim ViT (Reslim), a lightweight architecture with residual learning and Bayesian regularization for efficient, robust prediction; and (2) TILES, a tile-wise sequence scaling algorithm that reduces self-attention complexity from quadratic to linear, enabling long-sequence processing and massive parallelism. ORBIT-2 scales to 10 billion parameters across 65,536 GPUs, achieving up to 4.1 exaFLOPS sustained throughput and 74--98% strong scaling efficiency. It supports downscaling to 0.9 km global resolution and processes sequences up to 4.2 billion tokens. On 7 km resolution benchmarks, ORBIT-2 achieves high accuracy with $R^2$ scores in the range of 0.98--0.99 against observational data.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, astro-ph.EP, cs.AI, cs.DC, physics.ao-ph · <b>arXiv submitted:</b> 2025-09-02 · <a href='https://arxiv.org/abs/2505.04802'>page</a> · <a href='https://arxiv.org/pdf/2505.04802'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Post-Disaster Affected Area Segmentation with a Vision Transformer (ViT)-based EVAP Model using Sentinel-2 and Formosat-5 Imagery</title>
+      <link>https://arxiv.org/abs/2507.16849</link>
+      <guid isPermaLink="false">arxiv:2507.16849</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Yi-Shan Chu</p>
+<p><b>Authors:</b> Yi-Shan Chu, Hsuan-Cheng Wei</p>
+<p>We propose a vision transformer (ViT)-based deep learning framework to refine disaster-affected area segmentation from remote sensing imagery, aiming to support and enhance the Emergent Value Added Product (EVAP) developed by the Taiwan Space Agency (TASA). The process starts with a small set of manually annotated regions. We then apply principal component analysis (PCA)-based feature space analysis and construct a confidence index (CI) to expand these labels, producing a weakly supervised training set. These expanded labels are then used to train ViT-based encoder-decoder models with multi-band inputs from Sentinel-2 and Formosat-5 imagery. Our architecture supports multiple decoder variants and multi-stage loss strategies to improve performance under limited supervision. During the evaluation, model predictions are compared with higher-resolution EVAP output to assess spatial coherence and segmentation consistency. Case studies on the 2022 Poyang Lake drought and the 2023 Rhodes wildfire demonstrate that our framework improves the smoothness and reliability of segmentation results, offering a scalable approach for disaster mapping when accurate ground truth is unavailable.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://arxiv.org/abs/2507.16849'>page</a> · <a href='https://arxiv.org/pdf/2507.16849'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Representation-Based Exploration for Language Models: From Test-Time to Post-Training</title>
+      <link>https://arxiv.org/abs/2510.11686</link>
+      <guid isPermaLink="false">arxiv:2510.11686</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Jens Tuyls, Dylan J. Foster, Akshay Krishnamurthy, Jordan T. Ash</p>
+<p>Reinforcement learning (RL) promises to expand the capabilities of language models, but it is unclear if current RL techniques promote the discovery of novel behaviors, or simply sharpen those already present in the base model. In this paper, we investigate the value of deliberate exploration -- explicitly incentivizing the model to discover novel and diverse behaviors -- and aim to understand how the knowledge in pre-trained models can guide this search. Our main finding is that exploration with a simple, principled, representation-based bonus derived from the pre-trained language model&#x27;s hidden states significantly improves diversity and pass@k rates -- both for post-training, and in a novel inference-time scaling setting we introduce. For inference-time, exploration with representation-based diversity improves efficiency, consistently improving pass@k rates across a variety of models and reasoning tasks. For example, for Qwen-2.5-14b-Instruct we obtain over 50% improvement in verifier efficiency on almost all tasks. For post-training, we show that integrating this exploration strategy into an RL pipeline improves reasoning performance over that of the initial model and over standard RL post-training. For example, on AIME 2024, our post-trained Qwen-2.5-7b-Instruct&#x27;s pass@80 matches the pass@256 of GRPO on the same model, demonstrating a 3x improvement in test-time sample efficiency. Overall, our findings suggest that deliberate exploration -- with the right notion of diversity -- is a practical path toward discovery of new behaviors beyond sharpening.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://arxiv.org/abs/2510.11686'>page</a> · <a href='https://arxiv.org/pdf/2510.11686'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Uncertainty-Aware Sequential Decision Rules for Event-Triggered LLM Invocation in Streaming Systems</title>
+      <link>https://arxiv.org/abs/2607.13048</link>
+      <guid isPermaLink="false">arxiv:2607.13048</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>stat.ML</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhaohui Wang</p>
+<p><b>Authors:</b> Zhaohui Wang</p>
+<p>Streaming inference pipelines increasingly pair lightweight fast models with Large Language Models (LLMs) that provide rich semantic understanding at substantial cost. The central question of when to invoke the LLM has received limited formal treatment. We cast this as a risk-based sequential stopping problem, where a trigger policy fires when a risk functional over the observation history exceeds a threshold. Within this framework, we prove six results: a minimum inter-event time bound excluding trigger chattering; optimality of threshold policies via smooth pasting; approximate SPRT guarantees under estimated parameters; O(sqrt(T log T)) regret for stationary streams, extending to O(sqrt((C_T + 1) T log T)) under C_T changepoints; O(1/sqrt(T)) convergence of online gradient descent for adaptive thresholds; and a calibration-to-miss-rate transfer inequality. Several classical trigger families, including event-triggered, optimal stopping, SPRT, CUSUM, and Bayesian triggers, can be expressed as special cases of this framework. On turbofan degradation data (CMAPSS) with real LLM calls, we empirically verify the theoretical assumptions, ablate the risk function design, compare against six baselines including a RouteLLM-style router and contextual bandits, and analyze cost sensitivity and LLM failure modes. The results confirm sublinear regret, with alpha &lt; 1 for all principled triggers; high diagnostic quality, with 92.9 percent of 1600 LLM diagnoses reaching grounding score &gt;= 0.75 under our rubric; and that anomaly-score-driven risk functions dominate alternatives by roughly an order of magnitude on the Pareto AUC.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, stat.ML · <b>arXiv submitted:</b> 2026-06-27 · <a href='https://arxiv.org/abs/2607.13048'>page</a> · <a href='https://arxiv.org/pdf/2607.13048'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Novice to Expert: Cost-Aware Bandits for Evolving Worker Performance in Crowdsensing</title>
+      <link>https://arxiv.org/abs/2607.13546</link>
+      <guid isPermaLink="false">arxiv:2607.13546</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge — Yin Huang</p>
+<p><b>Authors:</b> Yin Huang, Qingsong Liu, Jie Xu</p>
+<p>Mobile crowdsensing (MC) recruits mobile users to perform sensing tasks using their smartphones, enabling large-scale applications such as traffic monitoring and environmental sensing. A fundamental challenge is online worker recruitment under uncertainty, where the platform must learn workers&#x27; sensing performance while operating with a limited budget. Existing learning-based MC recruitment methods typically assume that each worker&#x27;s sensing quality is stationary with a fixed mean over time. In practice, however, worker performance often improves with experience and eventually stabilizes, while the incurred sensing cost can be unknown in advance due to time-varying device and context states. In this paper, we study a budget-constrained online recruitment problem in which the platform selects one worker in each round, observes the sensing quality and incurred cost, where the expected sensing quality of each worker increases with experience and eventually converges to a plateau, and repeats until the budget is exhausted. We formulate this problem as a structured bandit model where each worker&#x27;s expected reward evolves according to an unknown increasing-then-converging function of its participation count, and each worker has an unknown expected cost. We develop a cost-aware online learning framework that jointly learns evolving reward trajectories and heterogeneous costs, detects performance saturation, and allocates the limited budget to maximize long-term sensing utility. We provide theoretical performance guarantees and validate the proposed approach through extensive experiments, demonstrating consistent improvements over baselines that ignore experience-driven dynamics or assume known costs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://arxiv.org/abs/2607.13546'>page</a> · <a href='https://arxiv.org/pdf/2607.13546'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GPT-Red: Unlocking Self-Improvement for Robustness</title>
+      <link>https://openai.com/index/unlocking-self-improvement-gpt-red/</link>
+      <guid isPermaLink="false">openai:eee8e8ed86</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
+<p><b>Authors:</b> OpenAI</p>
+<p>Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/unlocking-self-improvement-gpt-red/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation</title>
+      <link>https://huggingface.co/papers/2607.05382</link>
+      <guid isPermaLink="false">arxiv:2607.05382</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haozhe Wang, Weijia Feng, Jinpeng Yu, Che Liu, Ping Nie, Fangzhen Lin, Jiaming Liu, Ruihua Huang, … <i>(+4 more)</i></p>
+<p>Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutoff events, and more. This world-knowledge bottleneck is structural: generators are trained on fixed corpora, but the visual world is open-ended. We construct SearchGen-20K and SearchGen-Bench, with 20,839 prompts spanning twelve failure categories and twenty-two domains, paired with a pre-executed multimodal SearchGen-Corpus-1M to support offline, reproducible research. On SearchGen-Bench, frontier open generators score only 21 to 28 out of 100, a 40-point collapse invisible to existing benchmarks. The natural remedy is to employ search tools, enabling agentic visual generation. However, we find that naive search fails: it retrieves indiscriminately, injecting noise into prompts the generator already handles. We trace the root cause to a generator-specific, evolving knowledge boundary: the divide between what a generator can internalize through training and what must remain in external context. Although this boundary is hard to specify in advance, we show that it is discoverable through a teach-then-search co-training framework. Even a minimal version of this co-training recipe produces monotonic improvement, laying the foundation for recursive self-improvement in visual generation that can meet world-knowledge-grounded requests. We release the full dataset, co-training corpus, and search corpus as a replayable harness for tool-augmented, world-knowledge-grounded visual generation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://huggingface.co/papers/2607.05382'>page</a> · <a href='https://arxiv.org/pdf/2607.05382'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation</title>
+      <link>https://huggingface.co/papers/2607.11886</link>
+      <guid isPermaLink="false">arxiv:2607.11886</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Runhui Huang, Qihui Zhang, Zhe Liu, Yu Gao, Jie Wu, Hengshuang Zhao, Hugging Face Daily Papers (curated)</p>
+<p>In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning. Instead of asking the MLLM to judge a generated image or answer decomposed verification questions, SpectraReward measures how well the original prompt can be recovered from the generated image through a single image-conditioned, teacher-forced forward pass. We use the average image-conditioned prompt log-likelihood as the reward, directly reusing the MLLM&#x27;s pretrained image-text alignment ability without preference labels, reward-model fine-tuning. We further introduce Self-SpectraReward, a special case for unified multimodal models where the policy&#x27;s own understanding branch serves as the reward model for its generation branch, forming a closed-loop self-improving framework without external reward models or external knowledge. Extensive experiments validate SpectraReward through a broad image-generation RL study covering two diffusion models, three RL algorithms, nine reward MLLM backbones from four MLLM families spanning 4B to 235B parameters, and five out-of-distribution text-to-image benchmarks. Results show that both SpectraReward and Self-SpectraReward significantly and consistently improve generation performance and outperform prior MLLM-derived reward training methods. Further analysis reveals that larger reward MLLMs are not always better, while Self-SpectraReward can match or surpass much larger external reward models, suggesting that reward-policy alignment is a key factor for effective image-generation RL. Project Page: https://huangrh99.github.io/SpectraReward/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-13 · <a href='https://huggingface.co/papers/2607.11886'>page</a> · <a href='https://arxiv.org/pdf/2607.11886'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SynthDocBench: Controlled Benchmark for Long-Context Visual Document Understanding</title>
+      <link>https://huggingface.co/papers/2607.10400</link>
+      <guid isPermaLink="false">arxiv:2607.10400</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Abhigya Verma, Khyati Mahajan, Amit Kumar Saha, Shruthan Radhakrishna, Sagar Davasam, Vikas Yadav, Sai Rajeswar Mudumba, Hugging Face Daily Papers (curated)</p>
+<p>Vision language models (VLMs) have achieved strong performance on visual document understanding benchmarks such as DocVQA, ChartQA, and MMLongBench-Doc. However, real-world documents combine multiple factors such as length, layout complexity, modality, and question difficulty, which makes it difficult to attribute model failures to specific causes. We introduce SynthDocBench, a fully synthetic benchmark for long-context visual document understanding that systematically controls factors including document length, layout structure, modality composition, and question type. The benchmark is constructed using a combinatorial design, each factor is varied independently across generated documents, enabling controlled analysis of model behavior. Documents are generated end to end using an LLM pipeline across six layout archetypes, with a 40 percent random override to prevent models from exploiting spurious correlations. Additionally, SynthDocBench spans long-context documents with substantially greater length and structural diversity than existing benchmarks. Evaluating seven frontier VLMs, we uncover three failure modes that existing benchmarks cannot surface: sharp degradation with document length, a systematic positional sensitivity in which the middle third of a document is hardest for five of six models and five of six models show a negative Early-to-Late trend (steepest decline: 8.3 percentage points), and breakdown of chart comprehension in long-document settings. These results suggest that current models may be overfitting to benchmark artifacts rather than achieving robust long-context visual document understanding.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-11 · <a href='https://huggingface.co/papers/2607.10400'>page</a> · <a href='https://arxiv.org/pdf/2607.10400'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning</title>
+      <link>https://huggingface.co/papers/2607.12395</link>
+      <guid isPermaLink="false">arxiv:2607.12395</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xinyu Tang, Gangqiang Cao, Yurou Liu, Yuliang Zhan, Xiaochong Lan, Yifan Li, Yuchen Yan, Han Peng, … <i>(+9 more)</i></p>
+<p>Reinforcement learning with verifiable rewards without human-annotated data, often referred to as zero RL, has emerged as a powerful paradigm for eliciting chain-of-thought reasoning. However, due to computational constraints, existing studies are largely restricted to small models, leaving the training dynamics and emergent capabilities at a large scale unexplored. To meaningfully explore this frontier, we aim to elicit high-quality reasoning behaviors from the model. However, we find that naive scaling often suffers from poor readability, token redundancy, and a lack of adaptive reasoning depth. To address these challenges, we present a stable and efficient training pipeline, incorporating algorithmic and system optimizations such as clipped importance sampling, training-inference ratio correction, and mixed-precision control. Our experiments offer three key findings that validate the &quot;bitter lesson&quot; of scaling: (1) scaling to 1T parameters significantly enhances sample efficiency and performance ceilings; (2) the training process progresses sequentially through an initial discovery phase followed by a sharpening phase; and (3) the model spontaneously develops advanced cognitive behaviors, including anthropomorphism, structured formatting, self-verification, parallel reasoning, and context anxiety, rendering hand-crafted heuristics redundant. Evaluated on seven mathematical benchmarks, Ring-2.5-1T-Zero achieves competitive performance. Additionally, to assess CoT quality beyond final-answer correctness, we propose a structured evaluation framework across three dimensions: comprehensibility, reproducibility, and efficiency, where our model demonstrates clear advantages in producing structured and concise reasoning traces. By sharing our observed emergent phenomena, we hope to provide the community with deeper insights into scaling behaviors, particularly at the 1-trillion scale.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-14 · <a href='https://huggingface.co/papers/2607.12395'>page</a> · <a href='https://arxiv.org/pdf/2607.12395'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>OvisOCR2 Technical Report</title>
+      <link>https://huggingface.co/papers/2607.13639</link>
+      <guid isPermaLink="false">arxiv:2607.13639</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shiyin Lu, Yinglun Li, Yu Xia, Yuhui Chen, An-Yang Ji, Jun-Peng Jiang, Qing-Guo Chen, Jianshan Zhao, … <i>(+6 more)</i></p>
+<p>We introduce OvisOCR2, a 0.8B document parsing model. OvisOCR2 is designed as an end-to-end parser: given a document page image, it generates a Markdown representation in natural reading order, covering text, formulas, tables, and visual regions. We build a data engine that combines filtered real-document annotations with synthetic pages whose rendered images and Markdown targets are derived from the same HTML source. The training recipe includes supervised fine-tuning, reinforcement learning on a 4B branch with a multi-component reward design, on-policy distillation into the 0.8B model, and model fusion. On OmniDocBench v1.6, OvisOCR2 achieves a state-of-the-art overall score of 96.58, placing an end-to-end model at the top of this leaderboard previously dominated by pipeline methods and highlighting the potential of end-to-end document parsing. On PureDocBench, OvisOCR2 also achieves the highest Avg3 score of 75.06. Beyond these two public benchmarks, we evaluate OvisOCR2 on an in-house benchmark designed to cover a broader set of long-tail and challenging scenarios. OvisOCR2 obtains the best overall performance among the compared methods, providing further evidence of its generalization and robustness. OvisOCR2 is available at https://huggingface.co/ATH-MaaS/OvisOCR2.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://huggingface.co/papers/2607.13639'>page</a> · <a href='https://arxiv.org/pdf/2607.13639'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>One Layer Is Enough: Adapting Pretrained Visual Encoders for Image Generation</title>
+      <link>https://machinelearning.apple.com/research/adapting-pretrained-visual-encoders</link>
+      <guid isPermaLink="false">apple_ml:4708467cc8</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Visual generative models (e.g., diffusion models) typically operate in compressed latent spaces to balance training efficiency and sample quality. In parallel, there has been growing interest in leveraging high-quality pre-trained visual representationsâeither by aligning them inside VAEs or directly within the generative model. However, adapting such representations remains challenging due to fundamental mismatches between understanding-oriented features and generation-friendly latent spaces. Representation encoders benefit from high-dimensional latents that capture diverse hypotheses forâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://machinelearning.apple.com/research/adapting-pretrained-visual-encoders'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning</title>
+      <link>https://machinelearning.apple.com/research/clara-latent-reasoning</link>
+      <guid isPermaLink="false">apple_ml:57fcb2d7c3</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Retrieval-augmented generation (RAG) enhances large language models (LLMs) with external knowledge but still suffers from long contexts and disjoint retrievalâgeneration optimization. In this work, we propose CLaRa (Continuous Latent Reasoning), a unified framework that performs embedding-based compression and joint optimization in a shared continuous space. To obtain semantically rich and retrievable compressed vectors, thereby reducing the document length fed into the generator, we introduce SCP, a key-preserving data synthesis framework based on question-answering and paraphraseâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://machinelearning.apple.com/research/clara-latent-reasoning'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Uncertainty Quantification for LLM Function-Calling</title>
+      <link>https://machinelearning.apple.com/research/uncertainty-quantification-function-calling</link>
+      <guid isPermaLink="false">apple_ml:2e39b9944f</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Large Language Models (LLMs) are increasingly deployed to autonomously solve real-world tasks. A key ingredient for this is the LLM Function-Calling paradigm, a widely used approach for equipping LLMs with tool-use capabilities. However, an LLM calling functions incorrectly can have severe implications, especially when their effects are irreversible, e.g., transferring money or deleting data. Hence, it is of paramount importance to consider the LLMâs confidence that a function call solves the task correctly prior to executing it. Uncertainty Quantification (UQ) methods can be used to quantifyâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://machinelearning.apple.com/research/uncertainty-quantification-function-calling'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Deploying Robots Into And Onto The Field</title>
+      <link>https://bostondynamics.com/blog/deploying-robots-into-and-onto-the-field/</link>
+      <guid isPermaLink="false">boston_dynamics:a7d2d09a25</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/deploying-robots-into-and-onto-the-field/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Bridging The Porch Gap</title>
+      <link>https://bostondynamics.com/blog/bridging-the-porch-gap/</link>
+      <guid isPermaLink="false">boston_dynamics:7a4134ca64</guid>
+      <pubDate>Thu, 16 Jul 2026 06:13:45 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
+<p><b>Authors:</b> Boston Dynamics</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/bridging-the-porch-gap/'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Enhancing Phenotype Recognition in Clinical Notes Using Large Language Models: PhenoBCBERT and PhenoGPT</title>
       <link>https://arxiv.org/abs/2308.06294</link>
@@ -2104,186 +2288,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Xumin Yu, Zuyan Liu, Zhenyu Yang, Yuhao Dong, Shengsheng Qian, Jiwen Lu, Han Hu, Yongming Rao, … <i>(+1 more)</i></p>
 <p>A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training. However, representing images as discrete signals in the same way as text inevitably introduces severe information loss. Existing work struggles to balance low-level details and high-level semantics in discrete representations: reconstruction-oriented representations often lack semantic information, whereas semantically stronger features typically suffer from severe loss of detail. We present ViQ, a Visual Quantized Representations framework, which is designed to balance semantics and details in discrete representations while supporting inputs at native resolutions, thereby enabling it to serve as a unified and general discrete representation for arbitrary visual inputs. Our approach structures quantization learning into two stages: text-aligned pre-training and feature discretization. With text-aligned pre-training, we enhance the visual encoder semantic-rich supervision from the pretrained language model and enable it to process native-resolution visual inputs. During discretization, we propose a proximal representation learning strategy to progressively compact the feature space, along with a position-aware head-wise quantization mechanism that enables flexible processing of arbitrary resolutions. Extensive experiments on multimodal tasks demonstrate that ViQ achieves competitive performance compared to state-of-the-art multimodal vision encoders with continuous and high-dimensional visual features, while maintaining high precision in low-level reconstruction. We also show that multimodal training with visual quantized representations largely improves efficiency, yielding up to 20\%-70\% acceleration with different base LLMs and training recipes.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.27313'>page</a> · <a href='https://arxiv.org/pdf/2606.27313'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>UnityShots: Memory-Driven Multi-Shot Audio-Video Generation with Boundary-Aware Gating</title>
-      <link>https://huggingface.co/papers/2606.21661</link>
-      <guid isPermaLink="false">arxiv:2606.21661</guid>
-      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Jiehui Huang, Yuechen Zhang, Bin Xia, Jiahao Wang, Xu He, Zhenchao Tang, Meng Chu, Xin Tao, … <i>(+3 more)</i></p>
-<p>Generating a coherent multi-shot video requires structured cross-shot memory. Subject appearance, scene context, and speaker identity must persist across cuts. Existing approaches either train end-to-end over fixed-length sequences and cannot scale, generate shot-by-shot with memory banks that grow linearly, or orchestrate pretrained generators under an LLM planner without a multi-shot-aware backbone. We present UnityShots, a memory-driven multi-shot audio-video generation system built on LTX-2.3, trained on annotated cinematic and music-video shots. The video stream maintains two fixed-size slots, a long-term memory (LTM) slot anchored to the opening shot and a short-term memory (STM) slot holding the immediately preceding tail, both updated at every cut by a boundary-conditioned gate that fuses visual cut probability and beat-tracker signals. The audio stream injects a reference speaker token at every shot to preserve vocal timbre without a sliding audio bank. A discrete cut-type prior, learned through AdaLN, becomes an inference-time control knob over transition strength. We release a benchmark of 200 multi-cultural multi-shot sequences spanning six ethnic regions and ten or more languages, with per-shot reference identities, reference audio, and per-boundary transition labels. Evaluated across I2V, T2V, and R2V conditioning modes, UnityShots leads open-source baselines on every cross-shot coherence metric and matches the strongest closed-source system on the multi-shot axes.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-19 · <a href='https://huggingface.co/papers/2606.21661'>page</a> · <a href='https://arxiv.org/pdf/2606.21661'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Don&#x27;t Fear Peculiar Activation Functions: EUAF and Beyond</title>
-      <link>https://arxiv.org/abs/2407.09580</link>
-      <guid isPermaLink="false">arxiv:2407.09580</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Peking U — Tieyong Zeng</p>
-<p><b>Authors:</b> Qianchao Wang, Shijun Zhang, Dong Zeng, Zhaoheng Xie, Hengtao Guo, Feng-Lei Fan, Tieyong Zeng</p>
-<p>In this paper, we propose a new super-expressive activation function called the Parametric Elementary Universal Activation Function (PEUAF). We demonstrate the effectiveness of PEUAF through systematic and comprehensive experiments on various industrial and image datasets, including CIFAR10, Tiny-ImageNet, and ImageNet. Moreover, we significantly generalize the family of super-expressive activation functions, whose existence has been demonstrated in several recent works by showing that any continuous function can be approximated to any desired accuracy by a fixed-size network with a specific super-expressive activation function. Specifically, our work addresses two major bottlenecks in impeding the development of super-expressive activation functions: the limited identification of super-expressive functions, which raises doubts about their broad applicability, and their often peculiar forms, which lead to skepticism regarding their scalability and practicality in real-world applications.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2024-07-12 · <a href='https://arxiv.org/abs/2407.09580'>page</a> · <a href='https://arxiv.org/pdf/2407.09580'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Towards Understanding The Calibration Benefits of Sharpness-Aware Minimization</title>
-      <link>https://arxiv.org/abs/2505.23866</link>
-      <guid isPermaLink="false">arxiv:2505.23866</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Yong Xu</p>
-<p><b>Authors:</b> Chengli Tan, Yubo Zhou, Haishan Ye, Guang Dai, Junmin Liu, Zengjie Song, Jiangshe Zhang, Zixiang Zhao, … <i>(+2 more)</i></p>
-<p>Deep neural networks have been increasingly used in safety-critical applications such as medical diagnosis and autonomous driving. However, many studies suggest that they are prone to being poorly calibrated and have a propensity for overconfidence, which may have disastrous consequences. In this paper, unlike standard training such as stochastic gradient descent, we show that the recently proposed sharpness-aware minimization (SAM) counteracts this tendency towards overconfidence. The theoretical analysis suggests that SAM allows us to learn models that are already well-calibrated by implicitly maximizing the entropy of the predictive distribution. Inspired by this finding, we further propose a variant of SAM, coined as CSAM, to ameliorate model calibration. Extensive experiments on various datasets, including ImageNet-1K, demonstrate the benefits of SAM in reducing calibration error. Meanwhile, CSAM performs even better than SAM and consistently achieves lower calibration error than other approaches</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://arxiv.org/abs/2505.23866'>page</a> · <a href='https://arxiv.org/pdf/2505.23866'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Introducing computer use in Gemini 3.5 Flash</title>
-      <link>https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/</link>
-      <guid isPermaLink="false">deepmind:0ce8c6adc2</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Bringing more control over your connectors</title>
-      <link>https://mistral.ai/news/more-control-over-connectors</link>
-      <guid isPermaLink="false">mistral:0a69ac6087</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/more-control-over-connectors'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>EngineeringBringing more control over your connectorsJune 24, 2026Mistral AI</title>
-      <link>https://mistral.ai/news/more-control-over-connectors/</link>
-      <guid isPermaLink="false">mistral:4df3260584</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/more-control-over-connectors/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Talos: Scaling rare disease diagnosis with automated, iterative genomic reanalysis</title>
-      <link>https://www.microsoft.com/en-us/research/blog/talos-scaling-rare-disease-diagnosis-with-automated-iterative-genomic-reanalysis/</link>
-      <guid isPermaLink="false">microsoft_research:d9216cddfa</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
-<p><b>Authors:</b> Jeremiah (Miah) Wander, Cas Simons</p>
-<p>&lt;p&gt;Talos was built to help resolve a major bottleneck in genomic medicine: human review time. The open-source system recovered 90% of in-scope diagnoses while surfacing just 1.3 candidate variants per patient for expert review. &lt;/p&gt;
-&lt;p&gt;The post &lt;a href=&quot;https://www.microsoft.com/en-us/research/blog/talos-scaling-rare-disease-diagnosis-with-automated-iterative-genomic-reanalysis/&quot;&gt;Talos: Scaling rare disease diagnosis with automated, iterative genomic reanalysis&lt;/a&gt; appeared first on &lt;a href=&quot;https://www.microsoft.com/en-us/research&quot;&gt;Microsoft Research&lt;/a&gt;.&lt;/p&gt;</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://www.microsoft.com/en-us/research/blog/talos-scaling-rare-disease-diagnosis-with-automated-iterative-genomic-reanalysis/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Are We Ready For An Agent-Native Memory System?</title>
-      <link>https://huggingface.co/papers/2606.24775</link>
-      <guid isPermaLink="false">arxiv:2606.24775</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Wei Zhou, Xuanhe Zhou, Shaokun Han, Hongming Xu, Guoliang Li, Zhiyu Li, Feiyu Xiong, Fan Wu, … <i>(+1 more)</i></p>
-<p>Memory for large language model (LLM) agents has rapidly evolved from simple retrieval-augmented mechanisms into a data management system that supports persistent information storage, retrieval, update, consolidation, and dynamic lifecycle governance throughout agent execution. Despite this evolution, existing evaluations still benchmark agent memory mainly through end-to-end task success metrics (e.g., F1, BLEU), while treating the underlying system as a monolithic black box. As a result, critical system-level concerns, including operational costs, architectural trade-offs across memory modules, and robustness under dynamic knowledge updates, remain insufficiently explored. In this paper, we present a systematic experimental study of agent memory from a data management perspective. We propose an analytical framework that decomposes agent memory into four core modules: memory representation and storage, extraction, retrieval and routing, and maintenance. Under this framework, we evaluate 12 representative memory systems and two reference baselines across five benchmark workloads spanning 11 datasets. Our extensive end-to-end evaluation shows that no single architecture dominates across all scenarios; instead, effectiveness depends heavily on how well the memory structure aligns with the workload bottleneck. Furthermore, through fine-grained ablation studies, we quantify their individual effects on representation fidelity, retrieval precision, update correctness, and long-horizon stability. Finally, we reveal cost-performance trade-offs under realistic workloads, showing localized maintenance is more cost-efficient than global reorganization. Based on these findings, we identify promising directions towards building truly agent-native memory systems. The code is publicly available at https://github.com/OpenDataBox/MemoryData.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-23 · <a href='https://huggingface.co/papers/2606.24775'>page</a> · <a href='https://arxiv.org/pdf/2606.24775'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DomainShuttle: Freeform Open Domain Subject-driven Text-to-video Generation</title>
-      <link>https://huggingface.co/papers/2606.26058</link>
-      <guid isPermaLink="false">arxiv:2606.26058</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Nan Chen, Yiyang Cai, Rongchang Xie, Junwen Pan, Cheng Chen, Weinan Jia, Zhuowei Chen, Wen Zhou, … <i>(+3 more)</i></p>
-<p>Open domain subject-driven text-to-video (S2V) generation has drawn significant interest in academia and industry. Open domain S2V mainly involves two scenarios: in-domain, which requires retaining the reference subject features as much as possible, and cross-domain, which preserves the intrinsic features of the subject while allowing subject-irrelevant properties to vary flexibly according to the text prompt. Existing methods primarily focus on maximizing subject fidelity in in-domain scenarios, which limits their editability and adaptability in cross-domain scenarios, such as novel styles, semantic combinations, or domain attributes. In this study, we propose that an ideal S2V method should flexibly shuttle between different domains, achieving strong performance in both in-domain and cross-domain scenarios. To this end, we propose DomainShuttle, which could achieve high fidelity and generative flexibility for open domain video personalization. Specifically, we introduce Domain-MoT, which decouples videos and reference features and introduces the domain-aware AdaLN for domain-specific modeling of reference images. We then introduce the Video-Reference DualRoPE scheme, which places reference image tokens and video tokens in separate RoPE spaces to enable precise subject-level spatial modeling, and Cross-Pair Consistent Loss, which aims to extract intrinsic subject features unaffected by irrelevant features. Extensive experiments demonstrate that DomainShuttle achieves significant performance improvements over existing methods, exhibiting high subject fidelity and generative flexibility across diverse open domain application scenarios.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://huggingface.co/papers/2606.26058'>page</a> · <a href='https://arxiv.org/pdf/2606.26058'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OpenThoughts-Agent: Data Recipes for Agentic Models</title>
-      <link>https://huggingface.co/papers/2606.24855</link>
-      <guid isPermaLink="false">arxiv:2606.24855</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Negin Raoof, Richard Zhuang, Marianna Nezhurina, Etash Guha, Atula Tejaswi, Ryan Marten, Charlie F. Ruan, Tyler Griggs, … <i>(+43 more)</i></p>
-<p>Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-Terminal typically target a single benchmark, leaving open the question of how to train models that generalize across diverse agentic tasks. The OpenThoughts-Agent (OT-Agent) project addresses this gap with a fully open data curation pipeline for training agentic models. We conduct more than 100 controlled ablation experiments to systematically investigate each stage of the pipeline, yielding insights on the importance of task sources and diversity. We then assemble a training set of 100K examples from our pipeline and fine-tune Qwen3-32B on this dataset, which yields an average accuracy of 44.8% across seven agentic benchmarks and a 3.9 percentage point improvement over the strongest existing open data agentic model (Nemotron-Terminal-32B, 40.9%). Moreover, our training data exhibits strong scaling properties, outperforming alternative open datasets at every training set size in compute-controlled comparisons. We publicly release our training sets, data pipeline, experimental data, and models at openthoughts.ai to support future open research on agentic model training.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-23 · <a href='https://huggingface.co/papers/2606.24855'>page</a> · <a href='https://arxiv.org/pdf/2606.24855'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction</title>
-      <link>https://huggingface.co/papers/2606.23449</link>
-      <guid isPermaLink="false">arxiv:2606.23449</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shanhui Zhao, Jiacheng Liu, Guohong Liu, Jichao Yan, Jialei Ye, Yuhao Yang, Hao Wen, Shizuo Tian, … <i>(+9 more)</i></p>
-<p>AI agents are driving a new software paradigm, with the ability to autonomously call tools, extract information, manage memory, and complete tasks that span applications and data sources. Most existing end-user operating systems, however, are designed for application-centric workflows and offer little native support for AI agents. This mismatch limits the wider adoption of agents and leads to execution overhead and safety risks when running agents on conventional systems. While the concept of agent-native operating systems is emerging, the research community lacks an open testbed to explore the architectural primitives desired for agent-mediated interaction. We present AOHP (Android Open Harness Project), an OS-level agent harness built on the Android Open Source Project (AOSP). The core design principle of AOHP is to treat agents as first-class OS actors, enabling adaptive user interfaces and agent-friendly runtime environments. AOHP preserves the mature Android software and hardware ecosystem while introducing three agent-oriented system mechanisms: personalized service composition, efficient agent interfaces, and secure information flow. Based on preliminary experiments on challenging tasks covering key capabilities of OS agents, AOHP shows clear advantages in task completion (+21.12% completion rate), execution cost (-51.55% token cost), and security-policy compliance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-22 · <a href='https://huggingface.co/papers/2606.23449'>page</a> · <a href='https://arxiv.org/pdf/2606.23449'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond NL2Code: A Structured Survey of Multimodal Code Intelligence</title>
-      <link>https://huggingface.co/papers/2606.15932</link>
-      <guid isPermaLink="false">arxiv:2606.15932</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xuanle Zhao, Qiushi Sun, Jingyu Xiao, Xuexin Liu, Haoyue Yang, Qiaosheng Chen, Xianzhen Luo, Jing Huang, … <i>(+12 more)</i></p>
-<p>While Large Language Models (LLMs) have substantially advanced text-to-code synthesis, many real programming tasks specify intent through visual artifacts such as screenshots, charts, vector drawings, videos, and interactive states. These tasks require models to connect visual perception to executable programs, because correctness depends not only on syntax but also on layout, data semantics, interaction behavior, and domain-specific constraints that apply after execution. This survey examines Multimodal Code Intelligence, covering systems that generate, edit, refine, or reason with code under visually grounded inputs and outputs. We first formulate the field by the role that code plays in each task, distinguishing code as a rendered artifact, an editable symbolic structure, a scientific representation, an intermediate reasoning trace, or an executable policy or tool interface. We then organize benchmarks and methods into four domains: Graphical User Interface, Scientific Visualization, Structured Graphics, and Frontier Tasks and Frameworks. This taxonomy connects mature artifact-generation problems to emerging agentic and unified settings and allows us to compare how different tasks treat evidence of correctness. Looking ahead, we argue that future research may benefit from four verification-centered directions. Multi-signal validation can combine complementary evidence of correctness, multi-state verification can test behavior across execution trajectories, cross-task transfer testing can probe reusable visual-code skills, and verifiable agent traces can reveal whether agent actions are grounded in visual evidence. Together, these directions may move this field from single-output imitation toward evidence-grounded executable systems. An ongoing project and resources are available on https://github.com/xjywhu/Awesome-Multimodal-LLM-for-Code{GitHub}.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://huggingface.co/papers/2606.15932'>page</a> · <a href='https://arxiv.org/pdf/2606.15932'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LingxiDiagBench: A Multi-Agent Framework for Benchmarking LLMs in Chinese Psychiatric Consultation and Diagnosis</title>
-      <link>https://huggingface.co/papers/2602.09379</link>
-      <guid isPermaLink="false">arxiv:2602.09379</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shihao Xu, Tiancheng Zhou, Jiatong Ma, Yanli Ding, Yiming Yan, Ming Xiao, Guoyi Li, Haiyang Geng, … <i>(+4 more)</i></p>
-<p>Mental disorders are highly prevalent worldwide, but the shortage of psychiatrists and the inherent subjectivity of interview-based diagnosis create substantial barriers to timely and consistent mental-health assessment. Progress in AI-assisted psychiatric diagnosis is constrained by the absence of benchmarks that simultaneously provide realistic patient simulation, clinician-verified diagnostic labels, and support for dynamic multi-turn consultation. We present LingxiDiagBench, a large-scale multi-agent benchmark that evaluates LLMs on both static diagnostic inference and dynamic multi-turn psychiatric consultation in Chinese. At its core is LingxiDiag-16K, a dataset of 16,000 EMR-aligned synthetic consultation dialogues designed to reproduce real clinical demographic and diagnostic distributions across 12 ICD-10 psychiatric categories. Through extensive experiments across state-of-the-art LLMs, we establish key findings: (1) although LLMs achieve high accuracy on binary depression--anxiety classification (up to 92.3%), performance deteriorates substantially for depression--anxiety comorbidity recognition (43.0%) and 12-way differential diagnosis (28.5%); (2) dynamic consultation often underperforms static evaluation, indicating that ineffective information-gathering strategies significantly impair downstream diagnostic reasoning; (3) consultation quality assessed by LLM-as-a-Judge shows only moderate correlation with diagnostic accuracy, suggesting that well-structured questioning alone does not ensure correct diagnostic decisions. We release LingxiDiag-16K and the full evaluation framework to support reproducible research at https://github.com/Lingxi-mental-health/LingxiDiagBench.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://huggingface.co/papers/2602.09379'>page</a> · <a href='https://arxiv.org/pdf/2602.09379'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark</title>
-      <link>https://arxiv.org/abs/2409.11363</link>
-      <guid isPermaLink="false">arxiv:2409.11363</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.MA</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Princeton — Arvind Narayanan</p>
-<p><b>Authors:</b> Zachary S. Siegel, Sayash Kapoor, Nitya Nadgir, Benedikt Stroebl, Arvind Narayanan</p>
-<p>AI agents have the potential to aid users on a variety of consequential tasks, including conducting scientific research. To spur the development of useful agents, we need benchmarks that are challenging, but more crucially, directly correspond to real-world tasks of interest. This paper introduces such a benchmark, designed to measure the accuracy of AI agents in tackling a crucial yet surprisingly challenging aspect of scientific research: computational reproducibility. This task, fundamental to the scientific process, involves reproducing the results of a study using the provided code and data. We introduce CORE-Bench (Computational Reproducibility Agent Benchmark), a benchmark consisting of 270 tasks based on 90 scientific papers across three disciplines (computer science, social science, and medicine). Tasks in CORE-Bench consist of three difficulty levels and include both language-only and vision-language tasks. We provide an evaluation system to measure the accuracy of agents in a fast and parallelizable way, saving days of evaluation time for each run compared to a sequential implementation. We evaluated two baseline agents: the general-purpose AutoGPT and a task-specific agent called CORE-Agent. We tested both variants using two underlying language models: GPT-4o and GPT-4o-mini. The best agent achieved an accuracy of 21% on the hardest task, showing the vast scope for improvement in automating routine scientific tasks. Having agents that can reproduce existing work is a necessary step towards building agents that can conduct novel research and could verify and improve the performance of other research agents. We hope that CORE-Bench can improve the state of reproducibility and spur the development of future research agents.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.MA · <b>arXiv submitted:</b> 2026-06-22 · <a href='https://arxiv.org/abs/2409.11363'>page</a> · <a href='https://arxiv.org/pdf/2409.11363'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Societal Alignment Frameworks Can Improve LLM Alignment</title>
-      <link>https://arxiv.org/abs/2503.00069</link>
-      <guid isPermaLink="false">arxiv:2503.00069</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.CY</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research, Google DeepMind · <b>Tier-2 senior:</b> MILA, Tel Aviv U, U Toronto — (senior)</p>
-<p><b>Authors:</b> Karolina Stańczak, Nicholas Meade, Mehar Bhatia, Hattie Zhou, Konstantin Böttinger, Jeremy Barnes, Jason Stanley, Jessica Montgomery, … <i>(+9 more)</i></p>
-<p>Recent progress in large language models (LLMs) has focused on producing responses that meet human expectations and align with shared values - a process coined alignment. However, aligning LLMs remains challenging due to the inherent disconnect between the complexity of human values and the narrow nature of the technological approaches designed to address them. Current alignment methods often lead to misspecified objectives, reflecting the broader issue of incomplete contracts, the impracticality of specifying a contract between a model developer, and the model that accounts for every scenario in LLM alignment. In this paper, we argue that improving LLM alignment requires incorporating insights from societal alignment frameworks, including social, economic, and contractual alignment, and discuss potential solutions drawn from these domains. Given the role of uncertainty within societal alignment frameworks, we then investigate how it manifests in LLM alignment. We end our discussion by offering an alternative view on LLM alignment, framing the underspecified nature of its objectives as an opportunity rather than perfect their specification. Beyond technical improvements in LLM alignment, we discuss the need for participatory alignment interface designs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-23 · <a href='https://arxiv.org/abs/2503.00069'>page</a> · <a href='https://arxiv.org/pdf/2503.00069'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Stories In Space</title>
-      <link>https://www.goodfire.ai/research/stories-in-space</link>
-      <guid isPermaLink="false">goodfire:d4b998c521</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Goodfire</p>
-<p><b>Authors:</b> Goodfire</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://www.goodfire.ai/research/stories-in-space'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
