@@ -5,8 +5,96 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Fri, 17 Jul 2026 06:11:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 05:59:45 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding</title>
+      <link>https://huggingface.co/papers/2607.14935</link>
+      <guid isPermaLink="false">arxiv:2607.14935</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Xinhao Li, Yuhan Zhu, Xiangyu Zeng, Yuhao Dong, Haoning Wu, Zhiqiu Zhang, Yuandong Yang, Changlian Ma, … <i>(+20 more)</i></p>
+<p>Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications. Despite this progress, current open-source models remain limited in several ways. They often struggle to generalize across diverse video types, making them effective only in specific domains. High computational demands further restrict their efficiency and scalability. Moreover, most models are only partially open, with key components such as training code, strategy, or datasets unavailable, which hinders reproducibility and slows community-driven development. To address these issues, we introduce VideoChat3, a fully open, efficient, and generalist video-centric MLLM. VideoChat3 advances video understanding through two complementary designs. For efficiency, we introduce Inflated 3D Vision Transformer (I3D-ViT) and Adaptive Frame Resolution for Streaming Video Perception, which enables efficient spatiotemporal representation and reduces the cost of processing video inputs during training and inference. For effectiveness, we develop a scalable video data synthesis pipeline that curates three diverse, high-quality training datasets: VideoChat3-Academic2M, VideoChat3-LV116K, and VideoChat3-OL617K, covering general, long-form, and streaming video scenarios, improving the model&#x27;s generalization across domains. By integrating these designs, VideoChat3 achieves a rare balance of broad generalization and computational efficiency. Experiments across general, long-form, and streaming benchmarks demonstrate that VideoChat3 surpasses prior open-source models with equal or larger parameter counts with only 4B parameters and higher efficiency.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-16 · <a href='https://huggingface.co/papers/2607.14935'>page</a> · <a href='https://arxiv.org/pdf/2607.14935'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget</title>
+      <link>https://huggingface.co/papers/2607.14952</link>
+      <guid isPermaLink="false">arxiv:2607.14952</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Columbia, Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Changhai Zhou, Kieran Liu, Yuhua Zhou, Qian Qiao, Jun Gao, Harry Zhang, Irvine Lu, Nolan Ho, … <i>(+13 more)</i></p>
+<p>A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-16 · <a href='https://huggingface.co/papers/2607.14952'>page</a> · <a href='https://arxiv.org/pdf/2607.14952'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>BadWAM: When World-Action Models Dream Right but Act Wrong</title>
+      <link>https://huggingface.co/papers/2607.15207</link>
+      <guid isPermaLink="false">arxiv:2607.15207</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U — Qi Li</p>
+<p><b>Authors:</b> Qi Li, Xingyi Yang, Xinchao Wang, Hugging Face Daily Papers (curated)</p>
+<p>World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction. This coupling is often viewed as a source of robustness, interpretability, and safety, as a robot&#x27;s action can in principle be checked against its imagined future. In this paper, we show that this assumption is fragile. We introduce BadWAM, a unified framework for modeling and evaluating World-Action Drift Attacks: a new class of WAM-specific adversarial attacks that use small visual perturbations to break the alignment between what a WAM imagines and what it executes. BadWAM characterizes this attack surface along two natural criteria: attack strength and stealthiness. When the adversary prioritizes disruption, BadWAM instantiates an action-only adversarial attack, which directly drives the model toward task-failing actions. When the adversary additionally prioritizes stealth, BadWAM instantiates an imagination-preserving adversarial attack, which seeks to induce harmful action shifts while keeping the model&#x27;s predicted future close to its clean imagination. Together, these two attacks capture a spectrum of WAM-specific failures: from overt action hijacking to stealthier cases where the model appears to imagine a plausible future but executes a desynchronized action. We evaluate BadWAM across different variants of WAMs. Results show that our attacks substantially reduce task success rates under closed-loop execution. For example, our action-only attack reduces the model performance from 96.5% to 43.1% success. The results of our imagination-preserving attack further exposes a WAM-specific vulnerability: moderate future-preserving regularization can maintain strong attack performance while reducing future imagination drift.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-16 · <a href='https://huggingface.co/papers/2607.15207'>page</a> · <a href='https://arxiv.org/pdf/2607.15207'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AgentCompass: A Unified Evaluation Infrastructure for Agent Capabilities</title>
+      <link>https://huggingface.co/papers/2607.13705</link>
+      <guid isPermaLink="false">arxiv:2607.13705</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Tsinghua, UC Berkeley — (senior)</p>
+<p><b>Authors:</b> Zichen Ding, Jiaye Ge, Shufan Jiang, Kai Chen, Mo Li, Qingqiu Li, Zehao Li, Zonglin Li, … <i>(+16 more)</i></p>
+<p>As Large Language Models (LLMs) evolve into autonomous agents, the need for unified evaluation infrastructure becomes critical. However, current evaluation pipelines remain highly fragmented and tightly coupled, hindering reproducibility and causing redundant engineering. To address this, we introduce AgentCompass, an open-source, lightweight, and extensible infrastructure for evaluating LLM-based agents. AgentCompass organizes the evaluation process around three independent components, namely Benchmark, Harness, and Environment, thereby enabling flexible configurations without requiring the reimplementation of complex execution logic. Furthermore, it features a fault-tolerant asynchronous runtime and comprehensive trajectory analysis tools to transparently diagnose nuanced failure modes like reward-hacking. Natively supporting over 20 benchmarks across five capability dimensions, AgentCompass provides the community with a scalable and reproducible infrastructure for advancing agent research.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://huggingface.co/papers/2607.13705'>page</a> · <a href='https://arxiv.org/pdf/2607.13705'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails</title>
+      <link>https://huggingface.co/papers/2607.05910</link>
+      <guid isPermaLink="false">arxiv:2607.05910</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Harvard, NUS, Peking U — Mingyang Song</p>
+<p><b>Authors:</b> Mingyang Song, Luxin Xu, Haoyu Sun, Minzhou Pan, Yu Cheng, Bo Li, Hugging Face Daily Papers (curated)</p>
+<p>Image guardrails are typically trained and evaluated under a fixed safety policy, implicitly treating safety as an intrinsic property of an image. Real deployments are different: the same image may be allowed in one product, restricted in another, and newly disallowed when a policy boundary changes. We study policy-adaptive image guardrailing, where a model must decide whether an image violates the currently supplied policy and generalize to held-out policy definitions. We introduce PolicyShiftBench, a comprehensive benchmark with 2,000 policy-discriminative instances over 265 images, where each image is paired with 7.55 policy-conditioned prompts on average to test whether models adapt to the active policy rather than relying on image-level safety priors. We then propose PolicyShiftGuard, a compact policy-conditioned guardrail trained with a two-stage training recipe that combines Randomized Policy SFT (RP-SFT) with Boundary-Pair Policy Adaptation (BP-Adapt). BP-Adapt trains matched prompts for the same image and risk category using standard label supervision and a pairwise comparison loss that separates blocking policies from passing policies. Experiments show that existing VLMs and specialized guardrails remain brittle under policy shifts, while PolicyShiftGuard substantially improves policy-sensitive performance. The 7B model achieves SOTA performance of 76.9 Avg. F1 and 72.1 Avg. PSS on PolicyShiftBench, transfers well to UnSafeBench and SafeEditBench, and improves the latency-performance trade-off with a concise output format. Ablations confirm that matched pass/block boundary pairs are essential for stable policy adaptation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://huggingface.co/papers/2607.05910'>page</a> · <a href='https://arxiv.org/pdf/2607.05910'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation</title>
+      <link>https://huggingface.co/papers/2607.14202</link>
+      <guid isPermaLink="false">arxiv:2607.14202</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Stanford, U Toronto — (senior)</p>
+<p><b>Authors:</b> Yuqi Tang, Tengfei Liu, Yizheng Lai, Yuran Wang, Yang Shi, Wanshun Su, Zhuoran Zhang, Qixun Wang, … <i>(+14 more)</i></p>
+<p>Video generation increasingly relies on keyframe-based workflows, where creators specify a sequence of reference images to guide generation. Although recent models support multi-keyframe conditioning, it remains unclear whether they can faithfully reproduce the prescribed keyframes while maintaining overall video quality. We present KeyFrame-Compass, the first comprehensive benchmark for evaluating keyframe-conditioned video generation. The benchmark contains 386 carefully curated samples spanning three application domains, two video structures, two prompt granularities, two conditioning formats, and four keyframe densities, enabling controlled analysis under diverse generation settings. We further introduce an automated evaluation framework that jointly measures keyframe execution and overall video quality. Specifically, we decompose keyframe execution into six complementary metrics covering presence, fidelity, temporal ordering, localization, persistence, and uniqueness, while assessing overall video quality through evidence-grounded MLLM judgments augmented with specialized perception models. Experiments on nine representative video generation systems reveal several fundamental limitations. Current models exhibit a clear trade-off between faithful keyframe execution and natural video synthesis. Their performance further degrades as keyframe constraints become denser and most open-source models also fail to interpret storyboard-grid inputs as temporally ordered keyframe sequences.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://huggingface.co/papers/2607.14202'>page</a> · <a href='https://arxiv.org/pdf/2607.14202'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>When Unlearning Is Free: Leveraging Low Influence Points to Reduce Computational Costs</title>
+      <link>https://machinelearning.apple.com/research/unlearning-free-low-influence</link>
+      <guid isPermaLink="false">apple_ml:bb1aa4396f</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>As concerns around data privacy in machine learning grow, the ability to unlearnâor removeâspecific data points from trained models becomes increasingly important. While state-of-the-art unlearning methods have emerged in response, they typically treat all points in the forget set equally. In this work, we challenge this approach by asking: do points that have a negligible impact on the modelâs learning need to be removed? Through a comparative analysis of influence functions across language and vision tasks, we identify subsets of training data with negligible impact on model outputsâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-17 · <a href='https://machinelearning.apple.com/research/unlearning-free-low-influence'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Show Me Examples: Inferring Visual Concepts from Image Sets</title>
+      <link>https://machinelearning.apple.com/research/visual-concept-inference</link>
+      <guid isPermaLink="false">apple_ml:8da8abf7b0</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Vision-language models (VLMs) can follow complex textual instructions, yet they struggle to reason from purely visual context. In particular, current models fail to infer shared concepts from sets of example images and apply them to new inputs. We introduce Visual Concept Inference from Sets (VICIS), a task that evaluates this capability. Given a small context set of images sharing a concept and a query image, the model must generate new images that preserve the context-defined concept while remaining consistent with the query. We show that state-of-the-art VLMs perform poorly on this taskâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-17 · <a href='https://machinelearning.apple.com/research/visual-concept-inference'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Decoupled Alignment for Robust Plug-and-Play Adaptation</title>
       <link>https://arxiv.org/abs/2406.01514</link>
@@ -2201,93 +2289,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Yuntian Gao, Xiangyu Xu, Hugging Face Daily Papers (curated)</p>
 <p>Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models. For visual planning, however, LeWM evaluates candidate action sequences by repeatedly applying a local one-step latent transition model. This autoregressive rollout makes planning computationally expensive and exposes the predicted trajectory to accumulated latent errors as the horizon grows. We propose Fast LeWorldModel (Fast-LeWM), a fast latent world model that replaces repeated local rollout with action-prefix prediction. Given the current latent and a candidate action sequence, Fast-LeWM encodes its prefixes and predicts the future latents reached after executing those prefixes in parallel. By making action prefixes the basic prediction unit, Fast-LeWM directly models action effects accumulated to different extents over multiple horizons. This prefix-level supervision forces the model to learn how states continuously evolve under different action prefixes, rather than only fitting one-step state transitions. During planning, the predictor can use the last prefix token from the encoded action sequence to evaluate the corresponding future latent without explicitly rolling through each intermediate imagined state. Across multiple tasks, Fast-LeWM improves average success over LeWM while substantially reducing planning time, achieving lower open-loop latent loss whose growth becomes significantly slower as the rollout horizon increases.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://huggingface.co/papers/2606.26217'>page</a> · <a href='https://arxiv.org/pdf/2606.26217'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>In-Context World Modeling for Robotic Control</title>
-      <link>https://huggingface.co/papers/2606.26025</link>
-      <guid isPermaLink="false">arxiv:2606.26025</guid>
-      <pubDate>Sun, 28 Jun 2026 05:31:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab</p>
-<p><b>Authors:</b> Siyin Wang, Junhao Shi, Senyu Fei, Zhaoyang Fu, Li Ji, Jingjing Gong, Xipeng Qiu, Hugging Face Daily Papers (curated)</p>
-<p>Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.26025'>page</a> · <a href='https://arxiv.org/pdf/2606.26025'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Anthropic Economic Index report: Cadences</title>
-      <link>https://www.anthropic.com/research/economic-index-june-2026-report</link>
-      <guid isPermaLink="false">anthropic:503801173b</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>In the latest Anthropic Economic Index report, we look at when people come to Claude, what they produce with it, and how they perceive AI’s impact on their work.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/economic-index-june-2026-report'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Previewing GPT-5.6 Sol: a next-generation model</title>
-      <link>https://openai.com/index/previewing-gpt-5-6-sol/</link>
-      <guid isPermaLink="false">openai:0077efc5b4</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
-<p><b>Authors:</b> OpenAI</p>
-<p>OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/previewing-gpt-5-6-sol/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning</title>
-      <link>https://huggingface.co/papers/2606.26790</link>
-      <guid isPermaLink="false">arxiv:2606.26790</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shuo Yang, Jinyang Wu, Zhengxi Lu, Yuhao Shen, Fan Zhang, Lang Feng, Shuai Zhang, Haoran Luo, … <i>(+4 more)</i></p>
-<p>Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or suppressed. On-policy self-distillation offers dense token-level supervision, yet existing skill-conditioned variants often rely on external skill memories or retrieved privileged context, which are costly to maintain and can be mismatched with the state distribution induced by the current policy in multi-turn interaction. We propose OPID (On-Policy Skill Distillation), a framework that extracts skill supervision directly from completed on-policy trajectories. OPID represents trajectory hindsight as hierarchical skills: episode-level skills capture global workflows or failure-avoidance rules, while step-level skills capture local decision knowledge at critical timesteps. A critical-first routing mechanism uses step-level skills when critical decisions are identified and falls back to episode-level skills as default guidance otherwise. The selected skill is injected into the interaction history, allowing the old policy to re-score the same sampled response under both original and skill-augmented contexts. The resulting log-probability shift yields a token-level self-distillation advantage, which is combined with the outcome advantage for policy optimization. OPID thus preserves RL as the primary training objective while introducing dense, distribution-matched hindsight supervision. Experiments on ALFWorld, WebShop and Search-based QA demonstrate that OPID generally improves agent performance, sample efficiency, and robustness over outcome-only RL and existing skill-distillation baselines. Our code is available at https://github.com/jinyangwu/OPID/tree/main.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.26790'>page</a> · <a href='https://arxiv.org/pdf/2606.26790'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation</title>
-      <link>https://huggingface.co/papers/2606.26907</link>
-      <guid isPermaLink="false">arxiv:2606.26907</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CUHK, Cornell, Peking U, U Edinburgh — (senior)</p>
-<p><b>Authors:</b> Zekai Zhang, Jiahao Li, Jie Zhang, Kaiyuan Gao, Kun Yan, Lihan Jiang, Ningyuan Tang, Shengming Yin, … <i>(+14 more)</i></p>
-<p>While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge. We identify this challenge as the Context Gap: the mismatch between the user context and the sufficient generation context for T2I models. To bridge this gap, we propose Qwen-Image-Agent, a unified agentic framework that integrates plan, reason, search, memory and feedback in a context-centric manner. Qwen-Image-Agent treats user input as partial context and progressively constructs the generation context through Context-Aware Planning and Context Grounding. Specifically, Context-Aware Planning identifies missing context and plans how it should be acquired and used, while Context Grounding gathers this context from reason, search, memory, and feedback. To evaluate agentic image generation, we further introduce Image Agent Bench (IA-Bench), a benchmark covering four core image agent capabilities: Plan, Reason, Search, and Memory. Experiments on IA-Bench, Mindbench and WISE-Verified show that Qwen-Image-Agent outperforms strong baselines and achieves state-of-the-art performance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.26907'>page</a> · <a href='https://arxiv.org/pdf/2606.26907'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Verification Horizon: No Silver Bullet for Coding Agent Rewards</title>
-      <link>https://huggingface.co/papers/2606.26300</link>
-      <guid isPermaLink="false">arxiv:2606.26300</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, NYU, Peking U, U Michigan — (senior)</p>
-<p><b>Authors:</b> Binghai Wang, Chenlong Zhang, Dayiheng Liu, Jiajun Zhang, Jiawei Chen, Mouxiang Chen, Rongyao Fang, Siyuan Zhang, … <i>(+5 more)</i></p>
-<p>A classical intuition holds that verifying a solution is easier than producing one. For today&#x27;s coding agents, this intuition is being inverted: as foundation models develop stronger reasoning capabilities and engineering harnesses grow more sophisticated, generating complex candidate solutions is no longer difficult -- reliably verifying them has become the harder problem. Every verifier we can build is only a proxy for human intent, never the intent itself. This makes verification subject to a twofold difficulty: first, intent is underspecified by nature, making it inherently hard to faithfully check whether it has been fulfilled; second, during model training, optimization widens the gap between proxy and intent -- manifesting as reward hacking or signal saturation. To address this, we characterize the quality of verification signals along three dimensions -- scalability, faithfulness, and robustness -- and argue that achieving all three simultaneously is the central challenge. We further study four reward constructions: a test verifier for general coding tasks, a rubric verifier for frontend tasks, the user as verifier for real-world agent tasks, and an automated agent verifier for long-horizon tasks. Across different task types and policy capability levels, we conduct in-depth analysis and experiments on the core challenges of reward design and how to more effectively leverage reward signals. Experiments show that targeted verification design can effectively suppress reward hacking, improve task completion quality, and achieve significant gains across multiple internal and public benchmarks. These experiences collectively point to a core observation: no fixed reward function can remain effective as policy capability continues to grow; and verification must co-evolve with the generator.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://huggingface.co/papers/2606.26300'>page</a> · <a href='https://arxiv.org/pdf/2606.26300'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting</title>
-      <link>https://huggingface.co/papers/2606.18394</link>
-      <guid isPermaLink="false">arxiv:2606.18394</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CUHK, NUS, Peking U, U Cambridge, U Toronto — Lanxiang Hu</p>
-<p><b>Authors:</b> Lanxiang Hu, Zhaoxiang Feng, Yulun Wu, Haoran Yuan, Yujie Zhao, Yu-Yang Qian, Bojun Wang, Peng Zhao, … <i>(+5 more)</i></p>
-<p>Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves speed only when acceptance remains high and drafting overhead stays low. This ceiling has been difficult to break because prior head-based SD methods face a causality-efficiency dilemma. Autoregressive drafters produce path-conditioned candidates that are effective for tree speculative decoding with higher acceptance length, but their drafting cost grows with tree depth. Bidirectional block-diffusion drafters generate all positions in one pass, but their branch-agnostic marginals can form individually plausible yet mutually inconsistent trees, wasting budget and reducing acceptance. We propose JetSpec, a head-based SD framework that combines one-forward drafting efficiency with branch-wise causal conditioning. JetSpec trains a causal parallel draft head over fused hidden states from the frozen target model, producing candidate trees whose scores align with the target model&#x27;s autoregressive factorization. This enables JetSpec to convert larger draft budgets into longer accepted prefixes and higher end-to-end speedup. Across math, coding, and chat benchmarks on dense and MoE Qwen3 models, JetSpec consistently outperforms bidirectional-head and tree-based SD baselines. On H100 GPUs, JetSpec achieves up to 9.64x speedup on MATH-500 and 4.58x on open-ended conversational workloads, with further latency gains demonstrated through vLLM integration under realistic serving loads. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://huggingface.co/papers/2606.18394'>page</a> · <a href='https://arxiv.org/pdf/2606.18394'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Which tokens does a hybrid model predict better?</title>
-      <link>https://allenai.org/blog/hybrid-token-prediction</link>
-      <guid isPermaLink="false">ai2:a4baaff47f</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Allen Institute for AI</p>
-<p><b>Authors:</b> Allen Institute for AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://allenai.org/blog/hybrid-token-prediction'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>

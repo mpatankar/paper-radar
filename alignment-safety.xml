@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Fri, 17 Jul 2026 06:11:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 05:59:45 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>BadWAM: When World-Action Models Dream Right but Act Wrong</title>
+      <link>https://huggingface.co/papers/2607.15207</link>
+      <guid isPermaLink="false">arxiv:2607.15207</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U — Qi Li</p>
+<p><b>Authors:</b> Qi Li, Xingyi Yang, Xinchao Wang, Hugging Face Daily Papers (curated)</p>
+<p>World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction. This coupling is often viewed as a source of robustness, interpretability, and safety, as a robot&#x27;s action can in principle be checked against its imagined future. In this paper, we show that this assumption is fragile. We introduce BadWAM, a unified framework for modeling and evaluating World-Action Drift Attacks: a new class of WAM-specific adversarial attacks that use small visual perturbations to break the alignment between what a WAM imagines and what it executes. BadWAM characterizes this attack surface along two natural criteria: attack strength and stealthiness. When the adversary prioritizes disruption, BadWAM instantiates an action-only adversarial attack, which directly drives the model toward task-failing actions. When the adversary additionally prioritizes stealth, BadWAM instantiates an imagination-preserving adversarial attack, which seeks to induce harmful action shifts while keeping the model&#x27;s predicted future close to its clean imagination. Together, these two attacks capture a spectrum of WAM-specific failures: from overt action hijacking to stealthier cases where the model appears to imagine a plausible future but executes a desynchronized action. We evaluate BadWAM across different variants of WAMs. Results show that our attacks substantially reduce task success rates under closed-loop execution. For example, our action-only attack reduces the model performance from 96.5% to 43.1% success. The results of our imagination-preserving attack further exposes a WAM-specific vulnerability: moderate future-preserving regularization can maintain strong attack performance while reducing future imagination drift.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-16 · <a href='https://huggingface.co/papers/2607.15207'>page</a> · <a href='https://arxiv.org/pdf/2607.15207'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails</title>
+      <link>https://huggingface.co/papers/2607.05910</link>
+      <guid isPermaLink="false">arxiv:2607.05910</guid>
+      <pubDate>Sat, 18 Jul 2026 05:59:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Harvard, NUS, Peking U — Mingyang Song</p>
+<p><b>Authors:</b> Mingyang Song, Luxin Xu, Haoyu Sun, Minzhou Pan, Yu Cheng, Bo Li, Hugging Face Daily Papers (curated)</p>
+<p>Image guardrails are typically trained and evaluated under a fixed safety policy, implicitly treating safety as an intrinsic property of an image. Real deployments are different: the same image may be allowed in one product, restricted in another, and newly disallowed when a policy boundary changes. We study policy-adaptive image guardrailing, where a model must decide whether an image violates the currently supplied policy and generalize to held-out policy definitions. We introduce PolicyShiftBench, a comprehensive benchmark with 2,000 policy-discriminative instances over 265 images, where each image is paired with 7.55 policy-conditioned prompts on average to test whether models adapt to the active policy rather than relying on image-level safety priors. We then propose PolicyShiftGuard, a compact policy-conditioned guardrail trained with a two-stage training recipe that combines Randomized Policy SFT (RP-SFT) with Boundary-Pair Policy Adaptation (BP-Adapt). BP-Adapt trains matched prompts for the same image and risk category using standard label supervision and a pairwise comparison loss that separates blocking policies from passing policies. Experiments show that existing VLMs and specialized guardrails remain brittle under policy shifts, while PolicyShiftGuard substantially improves policy-sensitive performance. The 7B model achieves SOTA performance of 76.9 Avg. F1 and 72.1 Avg. PSS on PolicyShiftBench, transfers well to UnSafeBench and SafeEditBench, and improves the latency-performance trade-off with a concise output format. Ablations confirm that matched pass/block boundary pairs are essential for stable policy adaptation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://huggingface.co/papers/2607.05910'>page</a> · <a href='https://arxiv.org/pdf/2607.05910'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Decoupled Alignment for Robust Plug-and-Play Adaptation</title>
       <link>https://arxiv.org/abs/2406.01514</link>
@@ -2390,31 +2412,6 @@
 <p><b>Authors:</b> Han Jiang, Susu Zhang, Dongyao Zhu, Yuzhuo Bai, Sang T. Truong, Xiaoyuan Yi, Sanmi Koyejo, Xing Xie, … <i>(+1 more)</i></p>
 <p>This position paper argues that standardized item-level benchmark data should become the default infrastructure for AI evaluation. Current evaluations suffer from underspecified item selection, construct misalignment, and poor generalization. The root cause of these failures is a misplaced focus on aggregate model scores. Without item-level evidence, validity claims cannot be assessed, resulting in inflated capability claims, misdirected research, and unwarranted trust in deployed systems. Our position is that designing valid evaluations requires empirical evidence from item-level model responses, and the standardized release of such data should be treated as core AI evaluation infrastructure. Such a release, in addition, enables transparency, replicability, and auditability of evaluation results. To show the norm is both feasible and consequential, we construct OpenEval, an item-level archive of 10M responses across 155k items from widely-used benchmarks, under a unified schema that the AI evaluation community can develop upon. We demonstrate how item-level data can identify low-quality items, document construct misalignment, and recover validity evidence about benchmarks&#x27; internal structure. We address objections around contamination and author burden, and show each is tractable relative to the cost of decisions made on claims that cannot be trusted.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CY, cs.DB · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://arxiv.org/abs/2604.03244'>page</a> · <a href='https://arxiv.org/pdf/2604.03244'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LFRAG: Layout-oriented Fine-grained Retrieval-Augmented Generation on Multimodal Document Understanding</title>
-      <link>https://arxiv.org/abs/2605.22829</link>
-      <guid isPermaLink="false">arxiv:2605.22829</guid>
-      <pubDate>Mon, 25 May 2026 05:34:08 GMT</pubDate>
-      <category>cs.IR</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Michigan — Yifan Zhu</p>
-<p><b>Authors:</b> Yifan Zhu, Yu Mi, Yue Lu, Yanchu Guan, Zhixuan Chu</p>
-<p>Multimodal Retrieval-Augmented Generation (RAG) has emerged as an effective paradigm for enhancing Large Language Models (LLMs) with external knowledge. However, existing multimodal RAG systems predominantly rely on coarse-grained page-level retrieval, which fails to capture fine-grained semantic and layout structures in visually rich documents, thereby compromising retrieval accuracy and leading to redundant context in downstream tasks. To address these issues, we propose Layout-oriented Fine-grained Retrieval-Augmented Generation (LFRAG), a novel framework that advances multimodal RAG from page-level to block-level retrieval. We perform layout segmentation to construct semantically coherent fine-grained retrieval units and design a semantic-layout fusion encoder that integrates local semantics with global context via cross-attention. With block-level late interaction retrieval, LFRAG enables precise query-content alignment and reduces irrelevant content for downstream generation. To enable rigorous evaluation, we construct LFDocQA, a large-scale benchmark with block-level annotations spanning diverse document types, designed to assess both multimodal document retrieval and question answering with greater granularity than existing datasets. Extensive experiments on LFDocQA demonstrate that LFRAG achieves state-of-the-art performance on retrieval tasks, outperforms the best baseline by 7.20% in answer accuracy, and reduces token consumption by 73.07% in generation tasks, confirming LFRAG as an accurate and efficient framework for multimodal RAG over visually rich documents. Our code and datasets will be released soon.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.IR, cs.AI · <b>arXiv submitted:</b> 2026-04-18 · <a href='https://arxiv.org/abs/2605.22829'>page</a> · <a href='https://arxiv.org/pdf/2605.22829'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ChainFlow-VLA: Causal Flow Planning with Vision-Language Models</title>
-      <link>https://arxiv.org/abs/2605.23270</link>
-      <guid isPermaLink="false">arxiv:2605.23270</guid>
-      <pubDate>Mon, 25 May 2026 05:34:08 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Mu Yang</p>
-<p><b>Authors:</b> Xiyang Wang, Xinlin Wang, Tingguang Zhou, Gong Chen, Xingtai Gui, Zhi Xu, Xiaolei Wu, Feiyang Tan, … <i>(+2 more)</i></p>
-<p>Current end-to-end autonomous driving systems are fundamentally limited by a mismatch between temporal causal reasoning and global trajectory consistency. Autoregressive (AR) models capture interaction-aware temporal dependencies via causal factorization, but their step-wise decoding leads to error accumulation and suboptimal global structure. In contrast, diffusion models optimize trajectories globally but lack explicit causal constraints, making them unreliable in interactive and safety-critical scenarios. This dichotomy reveals a deeper issue: existing methods treat causal modeling and global optimization as separate paradigms, without a principled way to unify them within a single trajectory distribution. To address this, we propose ChainFlow-VLA, which unifies causal generation and global refinement within a unified probabilistic framework. We formulate planning as a mixture over AR-induced modes and learn Vision-Language Model (VLM)-conditioned residual distributions over these modes. An autoregressive generator (Chain) produces a discrete set of causal trajectory modes, followed by a diffusion-based refiner (Flow) that leverages VLM hidden states as semantic priors to perform mode-conditioned correction in residual space while preserving causal structure. This straightforward conditioning seamlessly injects high-level scene understanding into fine-grained trajectory adjustments. Experiments demonstrate that ChainFlow-VLA achieves robust planning in ambiguous and long-tail scenarios, achieving a state-of-the-art score of 94.85 on the NAVSIM v1 leaderboard, matching human-level performance (94.8). Code will be available at https://github.com/AFARI-Research/ChainFlow-VLA.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://arxiv.org/abs/2605.23270'>page</a> · <a href='https://arxiv.org/pdf/2605.23270'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
