@@ -5,8 +5,57 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 20 Jul 2026 06:41:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 06:24:15 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>NanoZK: Privacy-Preserving Verifiable Inference for Large Language Models via Layerwise Zero-Knowledge Proofs</title>
+      <link>https://arxiv.org/abs/2603.18046</link>
+      <guid isPermaLink="false">arxiv:2603.18046</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhaohui Wang</p>
+<p><b>Authors:</b> Zhaohui Wang</p>
+<p>We present NanoZK, a zero-knowledge proof system for verifiable LLM inference: clients and third-party auditors check that a provider executed the advertised model on a committed input without learning weights or activations. NanoZK introduces a layerwise proof framework that decomposes transformer inference into independently provable layers linked by a SHA-256 commitment chain, yielding constant-size sub-circuit proofs (3.5-3.7 KB; about 83 KB total at L=12), comparable in total size to and substantially more parallelizable than prior ZKML&#x27;s monolithic 101-126 KB proofs. We prove compositional soundness and zero-knowledge under standard assumptions, design 16-bit lookup-table approximations for softmax, GELU, and normalization with measured perplexity degradation below 1e-4 across six model/dataset combinations, and add a Fisher-information-guided audit-budget triage as an efficiency tool (full soundness still requires verifying every layer). On CPU the MLP sub-circuit proves in about 6.3 s prove-only (about 43 s setup plus prove) with about 22 ms verification at any width; attention prove-only time scales from 0.9 s (d=16) to 184 s (d=256); full-block end-to-end proofs are measured to d=128, with a projected GPU time of about 68 s per block at d=768 from measured O(d^2) MSM scaling and a conservative 15-30x GPU-MSM speedup range based on Icicle&#x27;s published 30x result for n &gt;= 2^20 and extrapolated to the smaller-n regime. Privacy scope: NanoZK hides weights and activations from verifiers and auditors but does not hide the prompt from the prover; this is complementary to HE/MPC.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CR · <b>arXiv submitted:</b> 2026-07-18 · <a href='https://arxiv.org/abs/2603.18046'>page</a> · <a href='https://arxiv.org/pdf/2603.18046'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TRACE: Trajectory-Based Safety Patch Learning for LLM Post-Training Realignment</title>
+      <link>https://arxiv.org/abs/2607.16242</link>
+      <guid isPermaLink="false">arxiv:2607.16242</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U, Tsinghua, U Edinburgh — (senior)</p>
+<p><b>Authors:</b> Changyue Li, Jiaming He, Youliang Yuan, Jialin Wu, Boxi Yu, Zhicong Huang, Pinjia He</p>
+<p>Fine-Tuning-as-a-Service (FTaaS) platforms let users train large language models (LLMs) on customized tasks, but this pipeline could erode models&#x27; safety alignment. In practice, service providers need to recover models&#x27; safety without re-running full alignment, or destroying the utility gained from customized tasks. A line of existing work refers to model parameter merging, which adds a safety patch on the fine-tuned model parameters to shift the model away from unsafe tendencies. However, this merging-based paradigm is fundamentally bottlenecked by task-safety update entanglement: downstream task updates and the safety patch often overlap in their dominant directions, so the merge strength is intrinsically hard to calibrate. If the safety vector is scaled too weakly, harmful components could still dominate, preventing the model from returning to a safe region; if it is scaled too aggressively, it suppresses task-relevant directions and degrades utility. To solve this problem, we shift the focus of merging-based methods from designing online merging operators to offline patch learning, and seek a safety patch that minimally interferes with task-relevant directions while retaining decisive control over unsafe behaviors. We propose TRACE, a trajectory-based safety patch learning framework that (i) simulates harmful tuning trajectories to generate progressively corrupted states, and (ii) optimizes a plug-in patch to recover safety while maintaining utility across varying corrupted base states. Across six benchmarks and two models, TRACE consistently dominates the safety-utility frontier. TRACE reaches nearly 100% safety on all settings, while maintaining comparable utility to the undefended fine-tuned model.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CR · <b>arXiv submitted:</b> 2026-06-26 · <a href='https://arxiv.org/abs/2607.16242'>page</a> · <a href='https://arxiv.org/pdf/2607.16242'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Learning from World Feedback: Why Model Uncertainty Fails as a Risk Signal in Model-Based RL</title>
+      <link>https://arxiv.org/abs/2607.16591</link>
+      <guid isPermaLink="false">arxiv:2607.16591</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhaohui Wang</p>
+<p><b>Authors:</b> Zhaohui Wang</p>
+<p>The RLxF programme argues that learning signals should come from world feedback rather than from internal model proxies. We instantiate this position in safe model-based control and distil it into three concrete design principles. Empirically, across four world-model architectures spanning a 2x MSE range, MPC planning is statistically equivalent (TOST, n=200), and dynamics-based uncertainty penalties increase collision rates from 26% to 34%: the standard MBRL safety proxy is anti-correlated with safety in this regime. Replacing the model-internal proxy with three world-feedback signals (a sensor-derived margin via minimum lidar, a temporal signal via time-to-collision, and an outcome-supervised feedback model g_psi trained on prior collision labels, structurally analogous to outcome-trained reward models in RLHF) reduces collisions to 1-14% without retraining the world model or the planner. The mechanism is structural: model uncertainty has support over state-prediction space, whereas task risk has support over constraint boundaries, with empirical correlation r &lt; 0.15. From this we extract three RLxF principles (ground risk in world outcomes, validate proxies before deployment, and substitute outcome-trained feedback models when direct world signals are unavailable) and argue they apply equally to model-based control and to verifier-based or RLHF approaches in LLM alignment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-18 · <a href='https://arxiv.org/abs/2607.16591'>page</a> · <a href='https://arxiv.org/pdf/2607.16591'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LVSum: A Benchmark for Timestamp-Aware Long Video Summarization</title>
+      <link>https://machinelearning.apple.com/research/lvsum-video-summarization</link>
+      <guid isPermaLink="false">apple_ml:addb760cc7</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Long video summarization presents significant challenges for multimodal large language models (MLLMs), particularly in maintaining temporal fidelity over extended durations and producing summaries that are both semantically and temporally grounded. We introduce LVSum, a human-annotated benchmark for evaluating long-form video summarization with fine-grained temporal alignment. LVSum comprises 72 diverse videos spanning 13 domains with an average duration of 16 minutes, each annotated with up to 10 human-generated summaries containing temporal references. We conduct a comprehensive evaluationâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://machinelearning.apple.com/research/lvsum-video-summarization'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Perception-Aligned AI Outputs: End-to-End Visual Prediction for Uncertainty Communication in Clinical Decision-Making</title>
       <link>https://arxiv.org/abs/2205.04599</link>
@@ -2365,51 +2414,6 @@
 <p><b>Authors:</b> Boyin Liu, Zhuo Zhang, Sen Huang, Lipeng Xie, Qingxu Fu, Haoran Chen, LI YU, Tianyi Hu, … <i>(+3 more)</i></p>
 <p>Reinforcement Learning from AI Feedback (RLAIF) relies on LLM judges as preference measurement instruments, yet these instruments are fundamentally limited by random measurement errors -- stochastic fluctuations that manifest as preference cycles (e.g., $A \succ B \succ C \succ A$), occurring in 5-9% of evaluations across state-of-the-art models. While repeated sampling mitigates noise by averaging multiple judgments, it treats each comparison in isolation and fails to exploit the structural constraints that distinguish systematic signals from random noise. We introduce Topological Consensus Rewards (TCR), a framework that leverages transitivity as a denoising mechanism via topological majority voting: systematic signals reinforce each other through transitive chains, while random errors cluster into topologically exposed cycles. TCR approximates the Maximum Acyclic Subgraph to filter stochastic noise from preference signals. We also propose Cycle Incidence Rate (CIR) as a diagnostic metric that measures the proportion of samples containing preference cycles. Under our noise model, these cycles arise primarily from stochastic measurement errors rather than genuine intransitivity. Experiments on Arena-Hard, MT-Bench, and WritingBench demonstrate that TCR consistently outperforms pairwise baselines and classical ranking algorithms, while exhibiting robust performance across different judge models.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-24 · <a href='https://arxiv.org/abs/2510.15514'>page</a> · <a href='https://arxiv.org/pdf/2510.15514'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AGI Requires a Coordination Layer on Top of Pattern Repositories</title>
-      <link>https://arxiv.org/abs/2512.05765</link>
-      <guid isPermaLink="false">arxiv:2512.05765</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Edward Y. Chang</p>
-<p><b>Authors:</b> Edward Y. Chang</p>
-<p>In this paper we argue that influential critiques dismissing Large Language Models (LLMs) as a dead end for AGI misidentify the bottleneck: they confuse the ocean with the net. Pattern repositories are the necessary System-1 substrate; the missing component is a System-2 coordination layer that recruits relevant patterns, verifies their use, preserves state, and governs convergence. We separate two uses of control that are often conflated. Semantic anchoring, formalized by UCCT (Unified Contextual Control Theory), binds labels and task intent to learned pattern regions through a phase transition governed by effective support (rho_d), representational mismatch (d_r), and an adaptive anchoring budget (gamma log k). Trace-answer verification, implemented by Recursive Causal Audit (RCA), tests whether a final causal judgment is warranted by its own reasoning trace under pressure. We translate these ideas into MACI, a multi-agent coordination stack that integrates diversity and control via baiting (PID-modulated debate), filtering (Socratic and causal audit), and persistence (transactional memory). Empirical validation on causal judgment and the sycophancy-paranoia trade-off demonstrates that static prompting fails where adaptive control succeeds. By reframing common objections as testable coordination failures, we argue that the path to AGI runs through LLMs, not around them. Capability is not coordination.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-24 · <a href='https://arxiv.org/abs/2512.05765'>page</a> · <a href='https://arxiv.org/pdf/2512.05765'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Characterizing Linear Alignment Across Language Models</title>
-      <link>https://arxiv.org/abs/2603.18908</link>
-      <guid isPermaLink="false">arxiv:2603.18908</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Suman Jana</p>
-<p><b>Authors:</b> Matt Gorbett, Suman Jana</p>
-<p>Language models increasingly appear to learn similar representations, despite differences in training objectives, architectures, and data modalities. This emerging compatibility between independently trained models introduces new opportunities for cross-model alignment to downstream objectives. Moreover, this capability unlocks new potential application domains, such as settings where security, privacy, or competitive constraints prohibit direct data or model sharing. In this work, we investigate the extent to which representational convergence enables practical linear alignment between large language models. Specifically, we learn affine transformations between the final hidden states of independent models and empirically evaluate these mappings across text generation, embedding classification, and out-of-distribution detection. We find that performance is largely preserved across model pairs, and show for the first time that linear alignment sometimes enables text generation across independently trained models. We further highlight a potential application of linear alignment for privacy-preserving cross-silo inference. The framework learns an affine transformation over a shared public dataset and uses homomorphic encryption to protect client queries. By encrypting only the linear classification operation, the method achieves sub-second inference latency.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2603.18908'>page</a> · <a href='https://arxiv.org/pdf/2603.18908'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>StepAudio 2.5 Technical Report</title>
-      <link>https://huggingface.co/papers/2605.23463</link>
-      <guid isPermaLink="false">arxiv:2605.23463</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Bin Lin, Bo Zhao, Boyong Wu, Chao Yan, Chen Wu, Cheng Yi, Chengyuan Yao, Daijiao Liu, … <i>(+94 more)</i></p>
-<p>Unified audio-language modeling has emerged as a prominent trend in modern speech systems, promising to bring the reasoning capabilities of large language models to auditory tasks. However, existing unified foundations often struggle to match the depth of specialized systems across automatic speech recognition (ASR), text-to-speech synthesis (TTS), and realtime spoken interaction. Bridging this gap remains an open challenge. This report presents StepAudio 2.5, a unified audio-language foundation model that matches or exceeds specialized systems across all three capabilities. Rather than treating these tasks as architecturally distinct, we operate on the premise that once text and audio share a multimodal representational space, task specialization becomes a matter of operational regimes: data construction, optimization targets, and decoding constraints. Guided by this insight, we advance the post-training paradigm from standard supervised learning to task-tailored Reinforcement Learning from Human Feedback (RLHF), using it as the primary mechanism to define complex optimization targets. We leverage this RLHF-centric alignment, alongside specialized decoding, to shape a shared backbone into three distinct operational modes. Concretely, the ASR branch advances transcription efficiency via verifiable multi-token decoding; the TTS branch achieves controllable, expressive synthesis through preference-based RLHF and context-rich supervision; and the Realtime branch realizes low-latency, persona-consistent dialogue via generative reward modeling within an RLHF framework. On standard benchmarks, StepAudio 2.5 achieves state-of-the-art results across ASR, TTS, and Realtime, demonstrating that a singular audio-language foundation can successfully internalize the distinct deployment objectives of speech understanding, generation, and live interaction.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-22 · <a href='https://huggingface.co/papers/2605.23463'>page</a> · <a href='https://arxiv.org/pdf/2605.23463'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>See What I Mean: Aligning Vision and Language Representations for Video Fine-grained Object Understanding</title>
-      <link>https://huggingface.co/papers/2605.18018</link>
-      <guid isPermaLink="false">arxiv:2605.18018</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Boyuan Sun, Bowen Yin, Yuanming Li, Xihan Wei, Qibin Hou, Hugging Face Daily Papers (curated)</p>
-<p>We present SWIM (See What I Mean), a novel training strategy that aligns vision and language representations to enable fine-grained object understanding solely from textual prompts. Unlike existing approaches that require explicit visual prompts, such as masks or points, SWIM leverages mask supervision only during training to guide cross-modal attention, allowing the model to automatically attend to the user-specified object at inference. Our cross-attention analysis of pretrained multimodal large languagemodels (MLLMs) reveals a systematic discrepancy: Attribute words produce sharp, localized activations in the visual modality, whereas object nouns yield diffuse and scattered patterns due to semantic reference bias and distributed high-level representations. To address this misalignment, we construct NL-Refer, an enriched dataset, in which each object mask is paired with a precise natural language referring expression. SWIM extracts multi-layer cross-attention maps from object nouns and enforces spatial consistency with ground-truth masks. Experimental results demonstrate that SWIM substantially improves text-visual alignment and achieves superior performance over visual-prompt-based methods on fine-grained object understanding benchmarks. The code and data are available at https://github.com/HumanMLLM/SWIM{https://github.com/HumanMLLM/SWIM}.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://huggingface.co/papers/2605.18018'>page</a> · <a href='https://arxiv.org/pdf/2605.18018'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

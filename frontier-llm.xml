@@ -5,8 +5,158 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Mon, 20 Jul 2026 06:41:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 06:24:15 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning</title>
+      <link>https://arxiv.org/abs/2504.17356</link>
+      <guid isPermaLink="false">arxiv:2504.17356</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Weiliang Zhang</p>
+<p><b>Authors:</b> Weiliang Zhang, Xiaohan Huang, Yi Du, Ziyue Qiao, Qingqing Long, Zhen Meng, Yuanchun Zhou, Meng Xiao</p>
+<p>Feature selection aims to preprocess the target dataset, find an optimal and most streamlined feature subset, and enhance the downstream machine learning task. Among filter, wrapper, and embedded-based approaches, the reinforcement learning (RL)-based subspace exploration strategy provides a novel objective optimization-directed perspective and promising performance. Nevertheless, even with improved performance, current reinforcement learning approaches face challenges similar to conventional methods when dealing with complex datasets. These challenges stem from the inefficient paradigm of using one agent per feature and the inherent complexities present in the datasets. This observation motivates us to investigate and address the above issue and propose a novel approach, namely HRLFS. Our methodology initially employs a Large Language Model (LLM)-based hybrid state extractor to capture each feature&#x27;s mathematical and semantic characteristics. Based on this information, features are clustered, facilitating the construction of hierarchical agents for each cluster and sub-cluster. Extensive experiments demonstrate the efficiency, scalability, and robustness of our approach. Compared to contemporary or the one-feature-one-agent RL-based approaches, HRLFS improves the downstream ML performance with iterative feature subspace exploration while accelerating total run time by reducing the number of agents involved.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://arxiv.org/abs/2504.17356'>page</a> · <a href='https://arxiv.org/pdf/2504.17356'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>NanoZK: Privacy-Preserving Verifiable Inference for Large Language Models via Layerwise Zero-Knowledge Proofs</title>
+      <link>https://arxiv.org/abs/2603.18046</link>
+      <guid isPermaLink="false">arxiv:2603.18046</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhaohui Wang</p>
+<p><b>Authors:</b> Zhaohui Wang</p>
+<p>We present NanoZK, a zero-knowledge proof system for verifiable LLM inference: clients and third-party auditors check that a provider executed the advertised model on a committed input without learning weights or activations. NanoZK introduces a layerwise proof framework that decomposes transformer inference into independently provable layers linked by a SHA-256 commitment chain, yielding constant-size sub-circuit proofs (3.5-3.7 KB; about 83 KB total at L=12), comparable in total size to and substantially more parallelizable than prior ZKML&#x27;s monolithic 101-126 KB proofs. We prove compositional soundness and zero-knowledge under standard assumptions, design 16-bit lookup-table approximations for softmax, GELU, and normalization with measured perplexity degradation below 1e-4 across six model/dataset combinations, and add a Fisher-information-guided audit-budget triage as an efficiency tool (full soundness still requires verifying every layer). On CPU the MLP sub-circuit proves in about 6.3 s prove-only (about 43 s setup plus prove) with about 22 ms verification at any width; attention prove-only time scales from 0.9 s (d=16) to 184 s (d=256); full-block end-to-end proofs are measured to d=128, with a projected GPU time of about 68 s per block at d=768 from measured O(d^2) MSM scaling and a conservative 15-30x GPU-MSM speedup range based on Icicle&#x27;s published 30x result for n &gt;= 2^20 and extrapolated to the smaller-n regime. Privacy scope: NanoZK hides weights and activations from verifiers and auditors but does not hide the prompt from the prover; this is complementary to HE/MPC.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CR · <b>arXiv submitted:</b> 2026-07-18 · <a href='https://arxiv.org/abs/2603.18046'>page</a> · <a href='https://arxiv.org/pdf/2603.18046'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TRACE: Trajectory-Based Safety Patch Learning for LLM Post-Training Realignment</title>
+      <link>https://arxiv.org/abs/2607.16242</link>
+      <guid isPermaLink="false">arxiv:2607.16242</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U, Tsinghua, U Edinburgh — (senior)</p>
+<p><b>Authors:</b> Changyue Li, Jiaming He, Youliang Yuan, Jialin Wu, Boxi Yu, Zhicong Huang, Pinjia He</p>
+<p>Fine-Tuning-as-a-Service (FTaaS) platforms let users train large language models (LLMs) on customized tasks, but this pipeline could erode models&#x27; safety alignment. In practice, service providers need to recover models&#x27; safety without re-running full alignment, or destroying the utility gained from customized tasks. A line of existing work refers to model parameter merging, which adds a safety patch on the fine-tuned model parameters to shift the model away from unsafe tendencies. However, this merging-based paradigm is fundamentally bottlenecked by task-safety update entanglement: downstream task updates and the safety patch often overlap in their dominant directions, so the merge strength is intrinsically hard to calibrate. If the safety vector is scaled too weakly, harmful components could still dominate, preventing the model from returning to a safe region; if it is scaled too aggressively, it suppresses task-relevant directions and degrades utility. To solve this problem, we shift the focus of merging-based methods from designing online merging operators to offline patch learning, and seek a safety patch that minimally interferes with task-relevant directions while retaining decisive control over unsafe behaviors. We propose TRACE, a trajectory-based safety patch learning framework that (i) simulates harmful tuning trajectories to generate progressively corrupted states, and (ii) optimizes a plug-in patch to recover safety while maintaining utility across varying corrupted base states. Across six benchmarks and two models, TRACE consistently dominates the safety-utility frontier. TRACE reaches nearly 100% safety on all settings, while maintaining comparable utility to the undefended fine-tuned model.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CR · <b>arXiv submitted:</b> 2026-06-26 · <a href='https://arxiv.org/abs/2607.16242'>page</a> · <a href='https://arxiv.org/pdf/2607.16242'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Learning from World Feedback: Why Model Uncertainty Fails as a Risk Signal in Model-Based RL</title>
+      <link>https://arxiv.org/abs/2607.16591</link>
+      <guid isPermaLink="false">arxiv:2607.16591</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhaohui Wang</p>
+<p><b>Authors:</b> Zhaohui Wang</p>
+<p>The RLxF programme argues that learning signals should come from world feedback rather than from internal model proxies. We instantiate this position in safe model-based control and distil it into three concrete design principles. Empirically, across four world-model architectures spanning a 2x MSE range, MPC planning is statistically equivalent (TOST, n=200), and dynamics-based uncertainty penalties increase collision rates from 26% to 34%: the standard MBRL safety proxy is anti-correlated with safety in this regime. Replacing the model-internal proxy with three world-feedback signals (a sensor-derived margin via minimum lidar, a temporal signal via time-to-collision, and an outcome-supervised feedback model g_psi trained on prior collision labels, structurally analogous to outcome-trained reward models in RLHF) reduces collisions to 1-14% without retraining the world model or the planner. The mechanism is structural: model uncertainty has support over state-prediction space, whereas task risk has support over constraint boundaries, with empirical correlation r &lt; 0.15. From this we extract three RLxF principles (ground risk in world outcomes, validate proxies before deployment, and substitute outcome-trained feedback models when direct world signals are unavailable) and argue they apply equally to model-based control and to verifier-based or RLHF approaches in LLM alignment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-18 · <a href='https://arxiv.org/abs/2607.16591'>page</a> · <a href='https://arxiv.org/pdf/2607.16591'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RAGU: A Multi-Step GraphRAG Engine with a Compact Domain-Adapted LLM</title>
+      <link>https://huggingface.co/papers/2607.11683</link>
+      <guid isPermaLink="false">arxiv:2607.11683</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Mikhail Komarov, Ivan Bondarenko, Stanislav Shtuka, Oleg Sedukhin, Roman Shuvalov, Yana Dementyeva, Matvey Solovyov, Nikolay O. Nikitin, … <i>(+1 more)</i></p>
+<p>Graph retrieval-augmented generation (GraphRAG) enhances large language models with structured knowledge, yet existing systems construct knowledge graphs in a single extraction pass, producing noisy entities and brittle retrieval. RAGU, an open-source modular GraphRAG engine, addresses this by separating extraction from consolidation: entities and relations pass through two-stage typed extraction, DBSCAN-backed deduplication, LLM summarization, and Leiden community detection. A key insight motivates a compact extractor: the skills an in-pipeline LLM needs - comprehension, extraction, reasoning over context - are language skills that grow only weakly with model size, unlike factual world knowledge. Accordingly, we train Meno-Lite-0.1, a 7B model optimized for language skills, which outperforms Qwen2.5-32B on knowledge-graph construction (+12.5% relative harmonic mean) and matches it on English GraphRAG tasks. On GraphRAG-Bench (Medical), RAGU retrieves the most complete context at every factoid level (evidence recall up to 0.84 vs. leq0.76) and overtakes HippoRAG2 on synthesis tasks; on multi-hop factoid QA, the apparent HippoRAG2 advantage is shown to be largely an answer-format artifact. RAGU is installable via pip install graph_ragu, runs on a single GPU, and is released under MIT. The source code is publicly available at https://github.com/RaguTeam/RAGU, and the Meno-Lite-0.1 model can be obtained from https://huggingface.co/bond005/meno-lite-0.1.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-13 · <a href='https://huggingface.co/papers/2607.11683'>page</a> · <a href='https://arxiv.org/pdf/2607.11683'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Loop the Loopies!</title>
+      <link>https://huggingface.co/papers/2607.16051</link>
+      <guid isPermaLink="false">arxiv:2607.16051</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zitian Gao, Yilong Chen, Yihao Xiao, Xinyu Yang, Ran Tao, Joey Zhou, Bryan Dai, Hugging Face Daily Papers (curated)</p>
+<p>We present Loopie, the most powerful looped Transformer to date. The Loopie series consists of two Mixture-of-Experts (MoE) models: a 20B-parameter model with 2B active parameters and a 6Bparameter model with 0.6B active parameters. Looped Transformers have long faced a challenge: given an N-fold increase in pre-training compute, increasing the parameter count by a factor of N usually outperforms looping a model N times. Loopie addresses this challenge. Extensive ablation studies, including comparisons with a vanilla 30B-A3B model, show that Loopie substantially outperforms vanilla Transformer baselines trained with the same compute budget. Our novel post-training pipeline equips Loopie with strong reasoning abilities. At the 2025 IMO and IPhO, Loopie achieves gold-medal performance without tools.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-17 · <a href='https://huggingface.co/papers/2607.16051'>page</a> · <a href='https://arxiv.org/pdf/2607.16051'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Cura 1T: Specialized Model for Agentic Healthcare</title>
+      <link>https://huggingface.co/papers/2607.15314</link>
+      <guid isPermaLink="false">arxiv:2607.15314</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> actAVA AI, Haolin Chen, Leon Qi, Steve Brown, Deon Metelski, Tao Xia, Joonyul Lee, Qixuan Wang, … <i>(+4 more)</i></p>
+<p>Healthcare spans high-stakes communication, expert reasoning, and workflow execution, yet specialized LLMs that cover these use cases together remain limited. A healthcare model must handle patient consultation, clinical reasoning over text and images, interactive diagnosis, and electronic health record (EHR) tool use. These capabilities fail in different ways, and a narrow update for one task can degrade another. We present Cura 1T, a healthcare-specialized LLM trained through a human-gated self-evolution loop. In each evolution round, a training agent plans a target capability, trains the model, evaluates benchmark trajectories, and refines the data mixture from observed failures. This data-centered loop improves the model through targeted synthetic and curated examples rather than a single generic medical-data update. Across the healthcare evaluation suite, Cura 1T ranks at or near the top among frontier baselines, while remaining competitive on out-of-domain reasoning and agentic benchmarks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://huggingface.co/papers/2607.15314'>page</a> · <a href='https://arxiv.org/pdf/2607.15314'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>On-Policy Delta Distillation</title>
+      <link>https://huggingface.co/papers/2607.15161</link>
+      <guid isPermaLink="false">arxiv:2607.15161</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Byeongho Heo, Jaehui Hwang, Sangdoo Yun, Dongyoon Han, Hugging Face Daily Papers (curated)</p>
+<p>On-policy distillation is an alternative post-training method in reinforcement learning that alleviates the constraints imposed by reward models by providing token-level supervision from a teacher model. Although on-policy distillation has been studied and applied across various settings, its fundamental design remains underexplored. In this paper, we introduce a new distillation reward, termed the delta signal, instead of directly imitating the teacher&#x27;s output distribution. The delta signal is defined as the difference between the teacher model and its base model prior to instruction tuning for reasoning capability. It therefore captures the changes induced by reasoning tuning and provides a more direct signal for transferring reasoning capabilities. Using extensive empirical evidence, we show that the delta signal substantially improves on-policy distillation and refer to the new distillation method as On-Policy Delta Distillation (OPD^2). Experiments across mathematics, science, and code-reasoning benchmarks demonstrate that OPD^2 consistently outperforms conventional on-policy distillation, enabling reasoning LLMs to achieve strong performance with only a short post-training period. Code will be available at https://github.com/naver-ai/opd2</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-16 · <a href='https://huggingface.co/papers/2607.15161'>page</a> · <a href='https://arxiv.org/pdf/2607.15161'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RecGPT-V3 Technical Report</title>
+      <link>https://huggingface.co/papers/2607.15591</link>
+      <guid isPermaLink="false">arxiv:2607.15591</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bowen Zheng, Chao Yi, Dian Chen, Gaoyang Guo, Han Zhu, Jiakai Tang, Jian Wu, Mao Zhang, … <i>(+17 more)</i></p>
+<p>Large language models (LLMs) are transforming recommender systems from matching co-occurrence patterns in historical behavior toward reasoning about the intent that drives it. RecGPT-V1 pioneered this paradigm on Taobao by centering user understanding, and RecGPT-V2 scaled it via coordinated multi-agent reasoning; both are deployed in production with consistent gains in user experience and commercial outcomes. However, operating RecGPT at scale reveals three challenges: (1) stateless behavior modeling, where each request reprocesses full user history, wasting computation and discarding prior analysis; (2) a tag-to-item information bottleneck, where natural-language tags form a lossy channel between user understanding and item grounding; and (3) inefficient explicit reasoning, whose lengthy chain-of-thought incurs untenable latency and compute overhead.
+  We present RecGPT-V3, a stateful, hybrid-modal recommender that reasons over natural language for open-world knowledge and Semantic IDs (SIDs) for concrete item grounding. A Memory Hub maintains structured, continually evolving user memory that distills long-horizon behavior into condensed units, cutting user-modeling computation by 55.8%. A Hybrid-modal Foundation Model allows the LLM jointly reason over text tags and SIDs, opening a high-bandwidth channel into the item space. Latent Intent Reasoning internalizes verbose rationales into compact learnable latent tokens that remain decodable into readable explanations, lowering output token cost by 200x. Deployed in Taobao&#x27;s &quot;Guess What You Like&quot; feed, RecGPT-V3 achieves consistent gains in large-scale online A/B tests: IPV +1.28%, CTR +1.00%, TC +1.97%, GMV +3.97%, while cutting end-to-end serving resource consumption by 52.4%.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-17 · <a href='https://huggingface.co/papers/2607.15591'>page</a> · <a href='https://arxiv.org/pdf/2607.15591'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination</title>
+      <link>https://huggingface.co/papers/2607.14187</link>
+      <guid isPermaLink="false">arxiv:2607.14187</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haotian Liang, Mingkang Chen, Yufei Huang, Yuchun Guo, Xiaomeng Zhu, Xiangli Shi, Kaixuan Wang, Yunxuan Mao, … <i>(+23 more)</i></p>
+<p>Embodied cognition requires agents to connect high-level task reasoning with the physical states to be achieved. We introduce Hy-Embodied-RxBrain, an embodied cognition foundation model with joint language-visual reasoning and imagination. Unlike vision-language models that emphasize scene understanding and textual decision making, or generative world models that mainly predict future visual states, RxBrain represents embodied plans in a single planning sequence where language and visual imagination play complementary roles. Language provides the abstract structure of a plan, including task decomposition, planning primitives, constraints, temporal order, and decision logic, while visual imagination grounds this structure through world state prediction and joint subgoal planning, associating each planning step with intermediate and final physical states. RxBrain adopts a unified multimodal Mixture-of-Transformers architecture that supports language, image, and video understanding and generation within one model. To train this capability, we build an automatic pipeline that converts embodied videos into joint text-visual planning supervision by decomposing videos into planning steps and aligning them with visual state transitions. We further introduce RxBrain-Bench to evaluate whether models can represent embodied plans through joint textual and visual components rather than separate understanding or generation. Experiments show that RxBrain maintains embodied understanding and generation abilities, and produces plans with coupled textual reasoning, world state prediction, and joint subgoal planning. We also extend RxBrain to continuous robot action generation, where it shows promising real-robot performance without large-scale action-data pretraining. These results provide an initial step toward foundation models for embodied cognition.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://huggingface.co/papers/2607.14187'>page</a> · <a href='https://arxiv.org/pdf/2607.14187'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Human-Centric to Agentic Code Review: The Impact of Different Generations of Generative AI Technology on Review Quality</title>
+      <link>https://huggingface.co/papers/2607.13196</link>
+      <guid isPermaLink="false">arxiv:2607.13196</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Suzhen Zhong, Shayan Noei, Bram Adams, Ying Zou, Hugging Face Daily Papers (curated)</p>
+<p>Code review helps maintain software quality before code integration, but it also imposes a substantial workload on human reviewers. As generative artificial intelligence becomes part of software development, code review is shifting from a primarily human review process toward AI-supported review processes in which large language model (LLM) reviewers and AI agent reviewers participate alongside human reviewers. However, we still lack empirical evidence on how this transition affects review efficiency and review quality. In this paper, we study 1.02 million reviewed pull requests from 207 GitHub projects that transition across three code review eras: human-centric review, LLM-assisted review, and agentic code review. We identify three AI reviewer adoption practices: Gradual AI Adoption, Rapid LLM Adoption, and Rapid AI Agent Adoption. We further model pull request review discussions as reviewer interaction sequences to characterize how human, LLM, and AI agent reviewers collaborate during the review process. Our results show that agent-involved collaboration patterns, especially reviews initiated by AI agents or involving multiple AI agents, are associated with faster review decisions under Gradual AI Adoption and Rapid AI Agent Adoption. However, these efficiency gains do not translate into better review quality. We also find that review activity and pull request type remain important across eras, while human-AI collaboration patterns become the strongest explanatory factor for review efficiency once LLM and AI agent reviewers participate. These findings provide empirical guidance for designing AI-supported code review processes that improve efficiency without weakening review quality.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-14 · <a href='https://huggingface.co/papers/2607.13196'>page</a> · <a href='https://arxiv.org/pdf/2607.13196'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LVSum: A Benchmark for Timestamp-Aware Long Video Summarization</title>
+      <link>https://machinelearning.apple.com/research/lvsum-video-summarization</link>
+      <guid isPermaLink="false">apple_ml:addb760cc7</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Long video summarization presents significant challenges for multimodal large language models (MLLMs), particularly in maintaining temporal fidelity over extended durations and producing summaries that are both semantically and temporally grounded. We introduce LVSum, a human-annotated benchmark for evaluating long-form video summarization with fine-grained temporal alignment. LVSum comprises 72 diverse videos spanning 13 domains with an average duration of 16 minutes, each annotated with up to 10 human-generated summaries containing temporal references. We conduct a comprehensive evaluationâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://machinelearning.apple.com/research/lvsum-video-summarization'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Length Value Model: Scalable Value Pretraining for Token-Level Length Modeling</title>
+      <link>https://machinelearning.apple.com/research/length-value-model</link>
+      <guid isPermaLink="false">apple_ml:b50690f129</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Token serves as the fundamental unit of computation in modern autoregressive models, and generation length directly influences both inference cost and reasoning performance. Despite its importance, existing approaches lack fine-grained length modeling, operating primarily at the coarse-grained sequence level. In this paper, we introduce the Length Value Model (LenVM), a token-level framework that models the remaining generation length at each decoding step. By formulating length modeling as a value estimation problem and assigning a constant negative reward to each generated token, LenVMâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://machinelearning.apple.com/research/length-value-model'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories</title>
       <link>https://huggingface.co/papers/2607.15330</link>
@@ -2161,147 +2311,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Google DeepMind</p>
 <p>Securing internal systems with an AI Control Roadmap, combining traditional safeguards and real-time monitoring.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://deepmind.google/blog/securing-the-future-of-ai-agents/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>ProductVibe gets to work.The unified agent for long-horizon productivity and coding, launching with Work and Code modes. Plus, a new Vibe VS Code extension.May 28, 2026Mistral</title>
-      <link>https://mistral.ai/news/vibe-agent/</link>
-      <guid isPermaLink="false">mistral:b46d95d99f</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/vibe-agent/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>SolutionsRails testing on autopilot: Building an agent that writes what developers won&#x27;tMarch 11, 2026By Maxime Langelier &amp; Mathis Grosmaitre - Applied AI - Proto team</title>
-      <link>https://mistral.ai/news/rails-testing-on-autopilot-building-an-agent-that-writes-what-developers-wont/</link>
-      <guid isPermaLink="false">mistral:9cb1cdc81b</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/rails-testing-on-autopilot-building-an-agent-that-writes-what-developers-wont/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>EngineeringHeaps do lie: debugging a memory leak in vLLM.January 21, 2026By Mathis Felardos</title>
-      <link>https://mistral.ai/news/debugging-memory-leak-in-vllm/</link>
-      <guid isPermaLink="false">mistral:132c3b3bb6</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/debugging-memory-leak-in-vllm/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>SolutionsUnlocking the potential of vision language models on satellite imagery through fine-tuningAugust 1, 2025Mistral AI</title>
-      <link>https://mistral.ai/news/unlocking-potential-vision-language-models-satellite-imagery-fine-tuning/</link>
-      <guid isPermaLink="false">mistral:415af207e1</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
-<p><b>Authors:</b> Mistral AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/unlocking-potential-vision-language-models-satellite-imagery-fine-tuning/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>MolmoMotion: Forecasting Point Trajectories in 3D with Language Instruction</title>
-      <link>https://huggingface.co/papers/2606.18558</link>
-      <guid isPermaLink="false">arxiv:2606.18558</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Jianing Zhang, Chenhao Zheng, Yajun Yang, Max Argus, Rustin Soraki, Winson Han, Taira Anderson, Chun-Liang Li, … <i>(+6 more)</i></p>
-<p>Motion forecasting is central to visual intelligence: agents must anticipate how objects will move in order to plan actions, reason about physical interactions, and synthesize realistic futures. We argue that 3D points in world coordinates provide a general representation that is class-agnostic, view-stable, compact, and directly useful for downstream tasks. We formalize the task of goal-conditioned 3D point motion forecasting: given a short visual history, a set of 3D query points on an object of interest, and a language description of the intended goal, the model predicts the future 3D trajectory of each point. We introduce a full stack to study this task at scale: (1) MolmoMotion-1M is a large corpus of action-described, object-grounded 3D point trajectories annotated from 1.16M unconstrained videos; (2) PointMotionBench is a human-verified benchmark spanning 111 object categories and 61 motion types; and (3) MolmoMotion is a general motion forecasting model that supports both autoregressive coordinate prediction and flow-matching-based trajectory generation. MolmoMotion accurately predicts diverse motion patterns with different language instructions, and significantly outperforms existing motion prediction baselines on PointMotionBench. Finally, we show that the learned 3D motion prior transfers well to downstream applications: it improves training efficiency and generalization for robot manipulation, and its predicted trajectories provide effective motion guidance for generative models to synthesize videos with more realistic object motion.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.18558'>page</a> · <a href='https://arxiv.org/pdf/2606.18558'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts</title>
-      <link>https://huggingface.co/papers/2606.18967</link>
-      <guid isPermaLink="false">arxiv:2606.18967</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Minseo Kim, Minjae Lee, Seunghyuk Oh, Kevin Galim, Donghoon Kim, Coleman Hooper, Harman Singh, Amir Gholami, … <i>(+3 more)</i></p>
-<p>Reinforcement learning (RL) has become a representative post-training paradigm for LLMs, enabling strong reasoning and agentic capabilities. However, rollout generation remains a dominant latency bottleneck because autoregressive sampling decodes responses sequentially and a small number of long-tailed generations often determine completion time. Speculative decoding (SD) offers a natural way to address this bottleneck, as it is a well-established technique for serving fixed LLMs that reduces latency by rapidly drafting tokens and accepting them through parallel verification while preserving the target-model distribution. However, its practical speedups do not directly carry over to RL rollouts: (i) the evolving target policy makes any fixed drafter increasingly mismatched with the policy&#x27;s output distribution; and (ii) active batch sizes shrink throughout rollout decoding, shifting decoding from compute-bound to memory-bound regimes where parallel verification can exploit underutilized compute. Therefore, accelerating RL rollouts requires both a drafter that remains effective under long, high-temperature generations from an evolving policy and system-aware use of SD that avoids compute-bound regimes. We present EfficientRollout, a system-aware self-SD framework designed to address this gap for RL rollouts. EfficientRollout induces a quantized drafter from the target model (i.e. self-speculative decoding), keeping it coupled to the evolving policy without separate drafter pretraining or online adaptation. It further coordinates a system-aware SD toggle policy with acceptance-aware draft-length adaptation, enabling speculation only in beneficial regimes while matching the drafting budget to evolving drafter quality. EfficientRollout reduces rollout and end-to-end latency by up to 19.6% and 12.7%, respectively, over an accelerated AR rollout baseline, while preserving final model quality.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.18967'>page</a> · <a href='https://arxiv.org/pdf/2606.18967'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>S-Agent: Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</title>
-      <link>https://huggingface.co/papers/2606.20515</link>
-      <guid isPermaLink="false">arxiv:2606.20515</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yalun Dai, Hao Li, Shulin Tian, Runmao Yao, Yuhao Dong, Fangzhou Hong, Zhaoxi Chen, Fangfu Liu, … <i>(+6 more)</i></p>
-<p>Real-world spatial intelligence requires reasoning over a continuous and evolving 3D world, yet existing VLMs and tool-augmented agents largely remain tied to static, stateless inference from isolated visual observations. We introduce \textsc{S-Agent}, a spatial tool-use agentic paradigm for understanding and reasoning over continuous multi-view images and videos. By formulating spatial reasoning as spatio-temporal evidence accumulation rather than isolated frame-level prediction, S-Agent reshapes spatial perception into scene-centric understanding beyond frame-centric recognition. Specifically, S-Agent casts the VLM as a semantic planner that decides what evidence is needed, while a hierarchy of spatial tools and experts grounds objects in 2D, lifts them into 3D geometric evidence, and aggregates this evidence into high-level spatial knowledge (e.g., counting, measurement, orientation, and relative position). Additionally, a temporal memory mechanism, including Scene Memory for maintaining the evolving scene state and Agent Memory for accumulating reasoning context, enables evidence integration across frames and reasoning steps. Comprehensive experiments on multi-view and video spatial reasoning benchmarks show that S-Agent consistently improves both open-source and closed-source VLMs in a training-free manner. Beyond inference-time augmentation, supervised fine-tuning (SFT) on S-Agent-generated spatial trajectories S-300K yields S-Agent-8B, a compact spatial agent that significantly surpasses similar-scale baselines (e.g., Qwen3-VL-8B) and performs comparably to advanced closed-source models (e.g., GPT-5.4 and Gemini 3).</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20515'>page</a> · <a href='https://arxiv.org/pdf/2606.20515'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents</title>
-      <link>https://huggingface.co/papers/2606.19704</link>
-      <guid isPermaLink="false">arxiv:2606.19704</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Dhaval C. Patel, Kaoutar El Maghraoui, Shuxin Lin, Yusheng Li, Tianjun Feng, Chun-Yi Tsai, Yihan Sun, Wei Alexander Xin, … <i>(+54 more)</i></p>
-<p>Agent benchmarks are growing fast, but no single benchmark touches more than four or five of the dimensions that deployment exposes. This paper aggregates the largest coordinated deep-dive of one MCP-based industrial-agent benchmark to date: fourteen parallel implementation studies covering new asset classes (including a multi-modal visual extension), alternative orchestrations, retrieval strategies, reasoning modes, infrastructure optimizations, and evaluation-methodology probes. Consolidating those studies with seven prior agent benchmarks, we argue that aggregate-score leaderboards systematically underspecify deployed-agent evaluation. Rankings derived from aggregate scores do not transfer to out-of-distribution settings; recent public-to-hidden competition retrospectives provide direct empirical evidence of this rank instability. We propose ranking configurations by predictive validity, the correlation between in-sample and out-of-sample rank, rather than in-sample mean, and report a twelve-tier measurement apparatus that exposes the deployment-relevant dimensions HELM and its agent-era successors collapse. The position is operationalized through three falsifiable out-of-distribution criteria with explicit thresholds; existing evidence partly supports it but is too thin to confirm. We close with a pre-registered pilot design and a field-level vision for what the next generation of agentic benchmarks should report.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.19704'>page</a> · <a href='https://arxiv.org/pdf/2606.19704'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Reward Was in Your Data All Along: Correcting Flow Matching with Discriminator-Guided RL</title>
-      <link>https://huggingface.co/papers/2606.19162</link>
-      <guid isPermaLink="false">arxiv:2606.19162</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Nicolas Beltran-Velez, Felix Friedrich, Zhang Xiaofeng, Reyhane Askari-Hemmat, Xiaochuang Han, Adriana Romero-Soriano, Michal Drozdzal, Hugging Face Daily Papers (curated)</p>
-<p>Score- and flow-matching models often rely on preference-based reinforcement learning for two purposes: aligning with subjective preferences and, surprisingly, recovering properties such as visual realism and coherent object structure that matching-based training is intended to learn from the data itself. We argue that this reflects a structural mismatch. Matching losses measure ell_2 regression error on the velocity or score field under training-time marginals, a proxy poorly aligned with the visual and semantic properties that determine sample quality at inference. Given a reward aligned with these properties, RL sidesteps the mismatch by evaluating the model on its own samples and following the reward landscape directly. The challenge is to obtain such a reward without relying on human preferences, which are expensive and conflate data realism with annotator inclinations.
-  We propose Discriminator-Guided RL (DRL). DRL trains a discriminator to separate data from base-model samples in a pretrained representation space and uses its logit as the reward in KL-regularized RL. The pretrained space restricts the discriminator to perceptually meaningful directions, and the logit estimates the log-likelihood ratio between data and model, which is the optimal reward for targeting the data distribution. Across SiT, JiT, REPA, and RAE, DRL reduces guidance-free FID (e.g., 9.38 to 2.62 on SiT) and semantic-space FD (e.g., 88.2 to 19.3 on DINOv3 for SiT), with consistent gains across all backbones, and improves human-preference rewards without training on them. It also yields a better Pareto frontier between preference reward and image fidelity under subsequent preference-based post-training, increasing alignment while reducing low-level artifacts such as oversaturation and excessive brightness.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.19162'>page</a> · <a href='https://arxiv.org/pdf/2606.19162'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>From Trainee to Trainer: LLM-Designed Training Environment for RL with Multi-Agent Reasoning</title>
-      <link>https://huggingface.co/papers/2606.17682</link>
-      <guid isPermaLink="false">arxiv:2606.17682</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Chao Chen, Chengzu Li, Zhiwei Li, Yinhong Liu, Zhijiang Guo, Hugging Face Daily Papers (curated)</p>
-<p>Reinforcement learning pipelines for Large Language Model (LLM) training often rely on manually redesigned environments between stages, requiring practitioners to heuristically infer which configuration will best improve the current policy. To automate this process, we propose the LLM-as-Environment-Engineer framework in which the current policy model analyzes failure trajectories together with contextual information and proposes modifications to the next-stage training environment configuration. We also introduce MAPF-FrozenLake, a controllable testbed whose generator exposes multi-dimensional environment configurations, making it suitable for studying and benchmarking environment redesign. On this testbed, we condition the environment engineer on structured summaries of policy behavior, failure cases, and environment statistics, from which it produces the configuration for the next training stage. With Qwen3-4B as the backbone, our framework achieves the strongest aggregate performance on our benchmarks, outperforming larger proprietary LLMs (e.g., GPT, Gemini) and fixed-environment training baselines. We further analyze which forms of context are most effective, finding that successful environment updates rely on failure evidence and preserve configurations that already work. Interestingly, the current RL checkpoint serves as a better environment engineer than the original base model, suggesting that policy learning improves the model&#x27;s ability to diagnose its remaining weaknesses.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://huggingface.co/papers/2606.17682'>page</a> · <a href='https://arxiv.org/pdf/2606.17682'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Playful Agentic Robot Learning</title>
-      <link>https://huggingface.co/papers/2606.19419</link>
-      <guid isPermaLink="false">arxiv:2606.19419</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junyi Zhang, Jiaxin Ge, Hanjun Yoo, Letian Fu, Zihan Yang, Yaowei Liu, Raj Saravanan, Shaofeng Yin, … <i>(+13 more)</i></p>
-<p>Current agentic robot systems can write executable Code-as-Policy programs, observe feedback, and revise behavior across multiple attempts, but they remain largely task-driven: reusable skills are acquired only after explicit instructions. We study Playful Agentic Robot Learning, where an embodied coding agent uses self-directed play as a continual skill-learning stage before downstream tasks arrive. We introduce RATs, Robotics Agent Teams designed for play-time skill acquisition. During play, RATs proposes novel yet learnable exploratory tasks, plans and executes robot-code policies, verifies intermediate progress, diagnoses failures, retries with dense, step-level feedback, and distills successful executions into a persistent code skill library. At test time, the agent reuses relevant skills from this frozen library to help solve new tasks. Experiments in LIBERO-PRO and MolmoSpaces show that play-learned skills improve held-out downstream tasks over no-play and random-play baselines, with 20.6 and 17.0 percentage-point gains over CaP-Agent0 on LIBERO-PRO and MolmoSpaces, respectively. Moreover, the learned skills can be plugged into other inference-time Code-as-Policy agents by simply retrieving them into the context, improving RoboSuite and real-world transfer by 8.9 and 8.8 points, respectively, without finetuning the underlying model.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.19419'>page</a> · <a href='https://arxiv.org/pdf/2606.19419'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</title>
-      <link>https://huggingface.co/papers/2606.19195</link>
-      <guid isPermaLink="false">arxiv:2606.19195</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Kangsheng Duan, Ziyang Xu, Wenyu Liu, Xiaohu Ruan, Xiaoxin Chen, Xinggang Wang, Hugging Face Daily Papers (curated)</p>
-<p>While 10B-level industrial foundation models have pushed the boundaries of image inpainting, their prohibitive computational costs severely hinder practical deployment. Constructing a highly optimized task-specific specialist offers a promising solution; however, extreme structural compression inevitably triggers a severe representation bottleneck. To conquer this, we propose Moebius, a highly efficient lightweight inpainting framework. We systematically reconstruct the diffusion backbone by introducing the Local-λ Mix Interaction (LλMI) block. Comprising Local-λ and Interactive-λ modules, it elegantly summarizes spatial contexts and global semantic priors into fixed-size linear matrices, preserving complex latent interactions while drastically shedding parameters. Furthermore, to unlock the full representational capacity of this highly compact architecture, we synergistically pair it with an adaptive multi-granularity distillation strategy. Operating strictly within the latent space to avoid expensive pixel-space decoding, this strategy dynamically balances multiple gradient-based losses to achieve high-fidelity alignment. Extensive experiments across natural and portrait benchmarks demonstrate that this optimal synergy enables Moebius to rival or even surpass the generation quality of the 10B-level industrial generalist FLUX.1-Fill-Dev. Remarkably, Moebius achieves this using less than 2\% of the parameters (0.22B vs. 11.9B) while delivering a &gt;15times acceleration in total inference time, setting a new efficiency standard for high-fidelity inpainting. Project page at https://hustvl.github.io/Moebius.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://huggingface.co/papers/2606.19195'>page</a> · <a href='https://arxiv.org/pdf/2606.19195'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Recursive Joint Simulation in Games</title>
-      <link>https://arxiv.org/abs/2402.08128</link>
-      <guid isPermaLink="false">arxiv:2402.08128</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.GT</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU — Vincent Conitzer</p>
-<p><b>Authors:</b> Vojtech Kovarik, Caspar Oesterheld, Vincent Conitzer</p>
-<p>Game-theoretic dynamics between AI agents could differ from traditional human-human interactions in various ways. One such difference is that it may be possible to accurately simulate an AI agent, for example because its source code is known. Such an agent would then be fundamentally uncertain whether it is in the real world or in a simulation. Our aim is to explore ways of leveraging this possibility to achieve more cooperative outcomes in strategic settings. In this paper, we study an interaction between AI agents where the agents run a recursive joint simulation. That is, the agents first jointly observe a simulation of the situation they face. This simulation in turn recursively includes additional simulations (with a small chance of failure, to avoid infinite recursion), and the results of all these nested simulations are observed before an action is chosen. We show that the resulting interaction is strategically equivalent to an infinitely repeated version of the original game, allowing a direct transfer of existing results such as the various folk theorems. As evidence that the equivalence is robust, we show that it holds even when we relax some of the assumptions and that it also holds ``from the inside&#x27;&#x27; -- meaning, for an agent that finds itself inside the game and has self-locating uncertainty.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.GT · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2402.08128'>page</a> · <a href='https://arxiv.org/pdf/2402.08128'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

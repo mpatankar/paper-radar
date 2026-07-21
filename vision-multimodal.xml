@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Mon, 20 Jul 2026 06:41:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 06:24:15 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>The generator is the tracker: Multi-object tracking by painting persistent identity colours</title>
+      <link>https://arxiv.org/abs/2607.17120</link>
+      <guid isPermaLink="false">arxiv:2607.17120</guid>
+      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST, NUS, NYU, Peking U, Tsinghua, U Toronto — Haiyu Yang</p>
+<p><b>Authors:</b> Haiyu Yang, Miel Hostens</p>
+<p>Multi-object tracking (MOT) is conventionally decomposed into detection followed by association, with object identity maintained as external state: track buffers, motion models, and appearance embeddings. We ask whether a video generator can maintain that state in pixels. We fine-tune a 22B text-to-video diffusion model (LTX-2.3) with a lightweight in-context LoRA to translate an RGB clip into an ID-map clip, a video in which every person is painted a flat, distinct color that persists over time: same color, same identity. Long videos are generated as chained windows, where each window is conditioned on the cleaned tail of the previous one. A brief continuation fine-tune teaches the model to extend a given coloring, after which identity flows through the chain with no tracker, no motion model, and no re-identification module. On the DanceTrack test server, our system, to our knowledge the first generative tracker evaluated there and the only entry with no detector and no tracking stack, reaches 40.3 HOTA. This is well below today&#x27;s specialist state of the art (&gt;=70 HOTA), but with a unique, inverted error profile: its association score (AssA 44.1) exceeds every tracker of the original benchmark suite while detection remains the sole deficit. Controlled comparisons show the mechanism matters: the same generated windows linked by classical post-hoc association score 2x worse (18.2 HOTA), and frame-to-frame IoU association fragments tracks that the generator&#x27;s colors keep whole. On 383 mined occlusion events, the generator re-acquires identities after gaps at a 42% conditional rate where appearance-embedding baselines score zero, including gaps longer than its temporal context, evidence that the generator&#x27;s color assignment functions as an emergent re-identification signal. We release code, checkpoints, and the full pre-registered experimental log.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV · <b>arXiv submitted:</b> 2026-07-19 · <a href='https://arxiv.org/abs/2607.17120'>page</a> · <a href='https://arxiv.org/pdf/2607.17120'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Post-Disaster Affected Area Segmentation with a Vision Transformer (ViT)-based EVAP Model using Sentinel-2 and Formosat-5 Imagery</title>
       <link>https://arxiv.org/abs/2507.16849</link>
