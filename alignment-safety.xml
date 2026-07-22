@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 21 Jul 2026 06:24:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 06:24:38 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enchancement</title>
+      <link>https://huggingface.co/papers/2607.18217</link>
+      <guid isPermaLink="false">arxiv:2607.18217</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yiyang Cai, Nan Chen, Rongchang Xie, Junwen Pan, Chunyang Jiang, Cheng Chen, Wen Zhou, Zhenbang Sun, … <i>(+4 more)</i></p>
+<p>Human-object centric video personalization (HOCVP) is a core task within subject-driven video generation. However, existing methods suffer from two key limitations. First, most approaches focusing on inter-subject personalization still struggle to strike a balance between high subject fidelity and accurate interaction patterns between humans and diverse objects, especially when objects represent abstract concepts such as logos. Second, while intra-subject references (e.g., OCR maps, multi-view inputs) are expected to enhance subject fidelity, most existing works lack mechanisms to understand such latent correspondence. To address both challenges, we propose HOMIE, an HOCVP framework that tackles both inter- and intra-subject input settings in a unified manner. Compared to previous approaches, HOMIE proposes a better MLLM integration strategy to extract knowledge of reference-level relationships without compromising the controllability of text encoders or incurring costly re-alignment. Specifically, we introduce global multimodal guidance within self-attention to better align MLLM-derived semantic features with VAE tokens. Furthermore, we propose modality-reference embedding to differentiate tokens from MLLM features and VAE tokens and associate intra-subject reference image tokens. Extensive experiments validate that our method achieves state-of-the-art performance across various HOCVP tasks. Project Page: https://yiyangcai.github.io/homie-page.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://huggingface.co/papers/2607.18217'>page</a> · <a href='https://arxiv.org/pdf/2607.18217'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>NanoZK: Privacy-Preserving Verifiable Inference for Large Language Models via Layerwise Zero-Knowledge Proofs</title>
       <link>https://arxiv.org/abs/2603.18046</link>
@@ -2403,17 +2414,6 @@
 <p><b>Authors:</b> Daniel Jason Tan, Jiayang Chen, Dilruk Perera, Kay Choong See, Mengling Feng</p>
 <p>Objective: Enteral nutrition (EN) delivery in the ICU remains suboptimal due to limited personalization and uncertainty regarding appropriate calorie, protein, and fluid targets under dynamic metabolic demands. We introduce DeepEN, a reinforcement learning (RL) framework for personalized EN optimization using electronic health record data. Methods: DeepEN was trained on over 11,000 ICU patients from MIMIC-IV to generate 4-hourly, patient-specific caloric, protein, and fluid targets. The state representation incorporated demographics, comorbidities, vital signs, laboratory values, and recent interventions. A physiologically aligned reward framework balanced biomarker stability with long-term survival. Policy learning employed a dueling double deep Q-network with Conservative Q-Learning regularization to enable safe offline training. Results: DeepEN achieved the highest estimated policy value ($V^π= 9.48$) and the lowest calibrated mortality (18.8 +/- 1.0%), representing a 4.0 percentage-point absolute reduction compared with clinician practice (22.8%). The policy also demonstrated superior metabolic stability, achieving the highest proportion of glucose, phosphate, and sodium values within target range. Furthermore, deviation from the DeepEN policy was independently associated with increased mortality and biomarker instability, whereas deviation from a random policy showed no such association. Interpretability analyses further indicated that recommendations were conditioned on physiologically relevant markers of organ function and metabolic status rather than static dosing heuristics. Conclusion: DeepEN demonstrates the feasibility of conservative offline RL for safe, individualized EN optimization, highlighting the potential of data-driven personalization to complement guideline-based approaches in critical care.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2510.08350'>page</a> · <a href='https://arxiv.org/pdf/2510.08350'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Voting with the Graph: Stable RLAIF via Topological Consistency Maximization</title>
-      <link>https://arxiv.org/abs/2510.15514</link>
-      <guid isPermaLink="false">arxiv:2510.15514</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> NYU, Peking U, Tsinghua, U Toronto — (senior)</p>
-<p><b>Authors:</b> Boyin Liu, Zhuo Zhang, Sen Huang, Lipeng Xie, Qingxu Fu, Haoran Chen, LI YU, Tianyi Hu, … <i>(+3 more)</i></p>
-<p>Reinforcement Learning from AI Feedback (RLAIF) relies on LLM judges as preference measurement instruments, yet these instruments are fundamentally limited by random measurement errors -- stochastic fluctuations that manifest as preference cycles (e.g., $A \succ B \succ C \succ A$), occurring in 5-9% of evaluations across state-of-the-art models. While repeated sampling mitigates noise by averaging multiple judgments, it treats each comparison in isolation and fails to exploit the structural constraints that distinguish systematic signals from random noise. We introduce Topological Consensus Rewards (TCR), a framework that leverages transitivity as a denoising mechanism via topological majority voting: systematic signals reinforce each other through transitive chains, while random errors cluster into topologically exposed cycles. TCR approximates the Maximum Acyclic Subgraph to filter stochastic noise from preference signals. We also propose Cycle Incidence Rate (CIR) as a diagnostic metric that measures the proportion of samples containing preference cycles. Under our noise model, these cycles arise primarily from stochastic measurement errors rather than genuine intransitivity. Experiments on Arena-Hard, MT-Bench, and WritingBench demonstrate that TCR consistently outperforms pairwise baselines and classical ranking algorithms, while exhibiting robust performance across different judge models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-24 · <a href='https://arxiv.org/abs/2510.15514'>page</a> · <a href='https://arxiv.org/pdf/2510.15514'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

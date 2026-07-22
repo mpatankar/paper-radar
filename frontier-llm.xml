@@ -5,8 +5,107 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Tue, 21 Jul 2026 06:24:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 06:24:38 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model</title>
+      <link>https://huggingface.co/papers/2607.17977</link>
+      <guid isPermaLink="false">arxiv:2607.17977</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Kehan Li, Bohan Hou, Minghao Zhu, Tianyi Zhang, Zesen Cheng, Zhikai Wang, Sicong Leng, Xin Li, … <i>(+23 more)</i></p>
+<p>We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales. Trained with a unified spatio-temporal and physically grounded framework, RynnBrain 1.1 supports embodied perception, spatial reasoning, localization, and planning. Compared with RynnBrain 1.0, it further introduces contact-point prediction across the model family and native 3D grounding for the 2B and 9B models, yielding representations and outputs that are more directly aligned with robot manipulation. We also develop RynnBrain-VLA with a unified cross-embodiment action space and embodiment-specific masking, and deploy it on Unitree G1, Astribot-S1, and Tianji-Wuji. RynnBrain 1.1 achieves strong results on embodied cognition, localization, and 3D grounding, with the 122B-A10B model outperforming all evaluated proprietary and open-source models on VSI-Bench, MMSI, and RefSpatial-Bench. Real-robot experiments show that RynnBrain-initialized policies outperform Qwen-based and representative generalist VLAs, while joint multi-task and multi-embodiment training improves process scores and success rates over per-task training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://huggingface.co/papers/2607.17977'>page</a> · <a href='https://arxiv.org/pdf/2607.17977'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs</title>
+      <link>https://huggingface.co/papers/2607.17423</link>
+      <guid isPermaLink="false">arxiv:2607.17423</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuhan Zhu, Changlian Ma, Xiangyu Zeng, Xinhao Li, Zhiqiu Zhang, Songze Li, Jun Zhang, Tianxiang Jiang, … <i>(+8 more)</i></p>
+<p>Video multimodal large language models (MLLMs) can describe what happens in a video, but rarely identify when the supporting evidence occurs. We study generalist video temporal grounding, in which one model predicts a variable-cardinality set of evidence intervals across video lengths, domains, query forms, and viewpoints. Existing training strategies are misaligned with this set-valued task: long-video labels often rely on brittle one-pass annotation, while reinforcement-learning rewards either fail to distinguish non-overlapping predictions or require fragile segment matching. TimeLens2 treats temporal evidence as an interval set throughout supervision and optimization. TimeLens2-93K constructs reliable multi-span supervision through caption-derived proposals, independent localization, cross-agent consensus, semantic verification, and boundary refinement. Our temporal Wasserstein reward computes exact one-dimensional \(W_1\) between uniform distributions over merged interval supports, providing dense, matching-free feedback under unequal cardinalities and equivalent fragmentation; temporal IoU complements it with precise-overlap feedback. Across seven benchmarks, TimeLens2-2B outperforms all size-matched baselines on every benchmark, while the 4B and 8B variants achieve state-of-the-art performance, surpassing open-source models with up to 397B parameters. The 2B, 4B, and 8B variants improve over their Qwen3-VL backbones by 14.2, 13.0, and 18.1 mIoU points, respectively.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-19 · <a href='https://huggingface.co/papers/2607.17423'>page</a> · <a href='https://arxiv.org/pdf/2607.17423'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</title>
+      <link>https://huggingface.co/papers/2607.07820</link>
+      <guid isPermaLink="false">arxiv:2607.07820</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xinyu Geng, Xuanhua He, Sixiang Chen, Yanjing Xiao, Fan Zhang, Shijue Huang, Haitao Mi, Zhenwen Liang, … <i>(+3 more)</i></p>
+<p>Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://huggingface.co/papers/2607.07820'>page</a> · <a href='https://arxiv.org/pdf/2607.07820'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World</title>
+      <link>https://huggingface.co/papers/2607.17250</link>
+      <guid isPermaLink="false">arxiv:2607.17250</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Qing Zong, Yue Guo, Mengxin Yang, Yiwen Guo, Yangqiu Song, Hugging Face Daily Papers (curated)</p>
+<p>This paper introduces EvolvingWorld, a framework and benchmark for character and world co-evolution in interactive literary worlds. Existing systems either treat interactive literary simulation as static persona imitation or isolated scene generation, failing to capture how characters and worlds evolve together over time. To address this, EvolvingWorld models literary simulation as a long-horizon process where characters interact, scenes progress, and character and world states are persistently updated. Unlike prior systems relying on fixed schemas, EvolvingWorld adopts an open-schema framework to support simulation across diverse literary worlds. The framework consists of two coupled modules: a Character Agent for multi-character role-play and persistent profile evolution, and an LLM-based World Model for global and location/entity-level state maintenance and scene progression. Based on this architecture, we formulate 7 trainable tasks for scene initialization, interaction generation, and state update. We construct a dataset from 57 books, producing 138,596 supervised training samples and 222 snapshots for testing. Furthermore, we introduce a trajectory-level LLM-as-Judge evaluation protocol spanning 10 dimensions and 20 metrics. Experiments show that EvolvingWorld can improve long-horizon simulation by effectively maintaining persistent, coherent character and world development.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-19 · <a href='https://huggingface.co/papers/2607.17250'>page</a> · <a href='https://arxiv.org/pdf/2607.17250'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SWE-Pruner Pro: The Coder LLM Already Knows What to Prune</title>
+      <link>https://huggingface.co/papers/2607.18213</link>
+      <guid isPermaLink="false">arxiv:2607.18213</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuhang Wang, Yuling Shi, Shaoqiu Zhang, Jialiang Liang, Shilin He, Siyu Ye, Yuting Chen, Kai Cai, … <i>(+2 more)</i></p>
+<p>Pruning long context for coding agents has been a vital technology for efficient context management. While existing context pruning methods such as SWE-Pruner realize this by attaching a separate code classifier, we find the agent itself encodes internal representations indicating the relevance of code context when reading tool output. Based on this finding, we propose SWE-Pruner Pro, which prunes tool outputs directly inside the agent. Concretely, a small head turns the agent&#x27;s own internal representations into a keep-or-prune label for each line, with a length-aware embedding keyed to each tool output&#x27;s line count. Across two open-weight backbones and four multi-turn benchmarks, SWE-Pruner Pro saves up to 39% of prompt and completion tokens while preserving task quality, with bounded inference overhead. Notably, on MiMo-V2-Flash SWE-Pruner Pro additionally raises the SWE-Bench Verified resolve rate by +3.8% and the long-context Oolong accuracy by +2.2 points.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://huggingface.co/papers/2607.18213'>page</a> · <a href='https://arxiv.org/pdf/2607.18213'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enchancement</title>
+      <link>https://huggingface.co/papers/2607.18217</link>
+      <guid isPermaLink="false">arxiv:2607.18217</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yiyang Cai, Nan Chen, Rongchang Xie, Junwen Pan, Chunyang Jiang, Cheng Chen, Wen Zhou, Zhenbang Sun, … <i>(+4 more)</i></p>
+<p>Human-object centric video personalization (HOCVP) is a core task within subject-driven video generation. However, existing methods suffer from two key limitations. First, most approaches focusing on inter-subject personalization still struggle to strike a balance between high subject fidelity and accurate interaction patterns between humans and diverse objects, especially when objects represent abstract concepts such as logos. Second, while intra-subject references (e.g., OCR maps, multi-view inputs) are expected to enhance subject fidelity, most existing works lack mechanisms to understand such latent correspondence. To address both challenges, we propose HOMIE, an HOCVP framework that tackles both inter- and intra-subject input settings in a unified manner. Compared to previous approaches, HOMIE proposes a better MLLM integration strategy to extract knowledge of reference-level relationships without compromising the controllability of text encoders or incurring costly re-alignment. Specifically, we introduce global multimodal guidance within self-attention to better align MLLM-derived semantic features with VAE tokens. Furthermore, we propose modality-reference embedding to differentiate tokens from MLLM features and VAE tokens and associate intra-subject reference image tokens. Extensive experiments validate that our method achieves state-of-the-art performance across various HOCVP tasks. Project Page: https://yiyangcai.github.io/homie-page.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://huggingface.co/papers/2607.18217'>page</a> · <a href='https://arxiv.org/pdf/2607.18217'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Apple-π: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence</title>
+      <link>https://huggingface.co/papers/2607.16401</link>
+      <guid isPermaLink="false">arxiv:2607.16401</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Runmao Yao, Kairui Hu, Yukang Cao, Ruisi Wang, Shulin Tian, Ziang Cao, Weichen Fan, Ziqi Huang, … <i>(+7 more)</i></p>
+<p>Modern video generation models are increasingly hailed as emerging world models with an internalized grasp of physical law. Yet existing benchmarks largely evaluate physical plausibility only at the output level, without verifying whether the model arrives there through a faithful, law-grounded reasoning process. We introduce Apple-PI, the first benchmark that anchors video-model evaluation explicitly in physical laws. Apple-PI comprises three components. 1) Orchard: a dataset of 400 videos covering ten canonical tasks in classical mechanics. It separates single-law tasks for confounder-free diagnosis from multi-law tasks for probing generalization. 2) Benchmark Protocol: a three-stage protocol based on scientific reasoning, including Perception, Formulation, and Deduction. It uses chain-of-frames prompting on infographic-annotated first frames, treating the generated video as the model&#x27;s visible reasoning trace. 3) Evaluation Suite: a hybrid evaluation suite that combines MLLM-based subjective scoring with physics-law-grounded objective measures. This enables stage-resolved diagnosis of not only whether a model fails, but where it fails. Benchmarking 11 models shows that current video models remain far from reliable law-grounded world simulators, with the best video model scoring only 0.473. Our stage-, pillar-, and source-resolved analyses further expose a Perception-to-Formulation-to-Deduction bottleneck, weak multi-law state transfer, and a persistent Sim-to-Real gap. These findings position Apple-PI as a diagnostic foundation for guiding future video models toward world models with law-grounded physical intelligence.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-17 · <a href='https://huggingface.co/papers/2607.16401'>page</a> · <a href='https://arxiv.org/pdf/2607.16401'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DataFlow-Harness: A Grounded Code-Agent Platform for Constructing Editable LLM Data Pipelines</title>
+      <link>https://huggingface.co/papers/2607.16617</link>
+      <guid isPermaLink="false">arxiv:2607.16617</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Runming He, Zhen Hao Wong, Hao Liang, Zimo Meng, Chengyu Shen, Xiaochen Ma, Wentao Zhang, Hugging Face Daily Papers (curated)</p>
+<p>Large language models (LLMs) are increasingly used to automate data-processing workflows, yet coding agents typically produce scripts that are not automatically materialized as persistent, editable platform artifacts. We call this disconnect the NL2Pipeline gap. To bridge it, we introduce DataFlow-Harness, a platform that guides an LLM agent to construct platform-native directed acyclic graphs (DAGs) through typed, incremental mutations rather than free-form scripts. The platform combines DataFlow-Skills for procedural guidance, a Model Context Protocol (MCP) layer that exposes the live operator registry and current pipeline state, and DataFlow-WebUI, which synchronizes conversational authoring with a visual DAG editor. On a 12-task data-engineering benchmark, DataFlow-Harness achieves a 93.3\% observed end-to-end pass rate. Relative to Vanilla Claude Code, it reduces measured monetary cost by 72.5\% and generation latency by 49.9\%; its observed pass rate is within 0.9 percentage points of the Context-Aware Claude Code baseline while its cost is 42.8\% lower. Per-task analysis indicates that Skills are most useful when construction depends on implicit procedural knowledge. These results show that live platform grounding can produce persistent, editable workflow artifacts with an observed reliability close to script-generation baselines and with lower measured construction cost and latency.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-18 · <a href='https://huggingface.co/papers/2607.16617'>page</a> · <a href='https://arxiv.org/pdf/2607.16617'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Environment-free Synthetic Data Generation for API-Calling Agents</title>
+      <link>https://machinelearning.apple.com/research/environment-free</link>
+      <guid isPermaLink="false">apple_ml:a305f240ed</guid>
+      <pubDate>Wed, 22 Jul 2026 06:24:38 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Training API-calling large language model (LLM) agents demands massive amounts of high-quality trajectories. However, collecting such data at scale typically requires fully implemented environments with executable APIs and realistic, pre-populated backend databases, creating a major bottleneck for scalability. To overcome this, we propose an environment-free synthetic data generation approach that leverages LLMs as on-the-fly digital world models. Given only API specifications, our method generates trajectories mimicking interactions between an agent and a stateful environment. Specificallyâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-21 · <a href='https://machinelearning.apple.com/research/environment-free'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning</title>
       <link>https://arxiv.org/abs/2504.17356</link>
@@ -2197,120 +2296,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> DeepSeek-AI, Anyi Xu, Bangcai Lin, Bing Xue, Bingxuan Wang, Bingzheng Xu, Bochao Wu, Bowei Zhang, … <i>(+311 more)</i></p>
 <p>We present a preview version of DeepSeek-V4 series, including two strong Mixture-of-Experts (MoE) language models -- DeepSeek-V4-Pro with 1.6T parameters (49B activated) and DeepSeek-V4-Flash with 284B parameters (13B activated) -- both supporting a context length of one million tokens. DeepSeek-V4 series incorporate several key upgrades in architecture and optimization: (1) a hybrid attention architecture that combines Compressed Sparse Attention (CSA) and Heavily Compressed Attention (HCA) to improve long-context efficiency; (2) Manifold-Constrained Hyper-Connections (mHC) that enhance conventional residual connections; (3) and the Muon optimizer for faster convergence and greater training stability. We pre-train both models on more than 32T diverse and high-quality tokens, followed by a comprehensive post-training pipeline that unlocks and further enhances their capabilities. DeepSeek-V4-Pro-Max, the maximum reasoning effort mode of DeepSeek-V4-Pro, redefines the state-of-the-art for open models, outperforming its predecessors in core tasks. Meanwhile, DeepSeek-V4 series are highly efficient in long-context scenarios. In the one-million-token context setting, DeepSeek-V4-Pro requires only 27% of single-token inference FLOPs and 10% of KV cache compared with DeepSeek-V3.2. This enables us to routinely support one-million-token contexts, thereby making long-horizon tasks and further test-time scaling more feasible. The model checkpoints are available at https://huggingface.co/collections/deepseek-ai/deepseek-v4.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-04-26 · <a href='https://arxiv.org/abs/2606.19348'>page</a> · <a href='https://arxiv.org/pdf/2606.19348'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Where to Place the Query? Unveiling and Mitigating Positional Bias in In-Context Learning for Diffusion LLMs via Decoding Dynamics</title>
-      <link>https://arxiv.org/abs/2606.19349</link>
-      <guid isPermaLink="false">arxiv:2606.19349</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U — Zhengheng Li</p>
-<p><b>Authors:</b> Zhengheng Li, Panrui Li, Xuyang Liu, Puzhi Xia</p>
-<p>While In-Context Learning (ICL) is extensively studied in Autoregressive (AR) LLMs, its mechanism within Diffusion Large Language Models (dLLMs) remains largely unexplored. Unlike AR models restricted by unidirectional causal masking, dLLMs intrinsically utilize bidirectional attention, offering extensive spatial flexibility for query placement. Unfortunately, current practices conventionally inherit AR-style trailing-query templates, often overlooking the structural paradigm shift. This paper presents a comprehensive analysis unveiling that query position is actually a first-order variable in dLLMs. Through empirical decoupling, we demonstrate that positional variance impacts generation quality on par with example semantic quality. Internally, this positional sensitivity stems from a spatial ``Recency Effect&#x27;&#x27; in attention flow and task-dependent shifts in decoding trajectories. To mitigate this instability without ground-truth labels, we reveal that traditional single-step confidence ($C_{decoded}$) fails in dLLMs. Instead, we propose Average Confidence ($\overline{C}$), a novel metric tracking the iterative decoding process. By establishing the foundational spatial ICL baselines, we introduce Auto-ICL, a training-free adaptive routing strategy that dynamically optimizes query placement, robustly approaching oracle performance across heterogeneous reasoning and perception tasks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-04-26 · <a href='https://arxiv.org/abs/2606.19349'>page</a> · <a href='https://arxiv.org/pdf/2606.19349'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>VERITAS: Verifier-Guided Proof Search for Zero-Shot Formal Theorem Proving</title>
-      <link>https://arxiv.org/abs/2606.19399</link>
-      <guid isPermaLink="false">arxiv:2606.19399</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.LO</category>
-      <category>cs.PL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yifan Zhang</p>
-<p><b>Authors:</b> Manish Acharya, Zhenyu Liao, Yueke Zhang, Kevin Leach, Yu Huang, Yifan Zhang</p>
-<p>LLM-based formal provers often collapse rich verifier signals (syntax errors, type mismatches, partial goal progress) into a binary pass/fail bit. We present VERITAS, a zero-shot framework that routes every verifier signal back into proof search through a two-phase protocol: Best-of-N sampling first, then a critic-guided MCTS pass that ingests Phase 1 failures as explicit negative examples. The protocol preserves every theorem solved by its own Phase 1 sweep, so Phase 2&#x27;s additional solves are attributable to feedback-driven exploration. VERITAS reaches 40.6% on miniF2F (vs. an independently run Best-of-5 at 36.9%, Portfolio 26.2%) and 7.3% on VERITAS-CombiBench, a 55-theorem combinatorics benchmark we release on which Best-of-5 (1.8%) falls below Portfolio (3.6%), exposing that unguided sampling hurts when correct lemma names must be recovered iteratively from verifier feedback. Artifacts are available on GitHub.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.LO, cs.PL · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19399'>page</a> · <a href='https://arxiv.org/pdf/2606.19399'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Playful Agentic Robot Learning</title>
-      <link>https://arxiv.org/abs/2606.19419</link>
-      <guid isPermaLink="false">arxiv:2606.19419</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Caltech, MILA, Tsinghua, UC Berkeley — Trevor Darrell</p>
-<p><b>Authors:</b> Junyi Zhang, Jiaxin Ge, Hanjun Yoo, Letian Fu, Zihan Yang, Yaowei Liu, Raj Saravanan, Shaofeng Yin, … <i>(+12 more)</i></p>
-<p>Current agentic robot systems can write executable Code-as-Policy programs, observe feedback, and revise behavior across multiple attempts, but they remain largely task-driven: reusable skills are acquired only after explicit instructions. We study Playful Agentic Robot Learning, where an embodied coding agent uses self-directed play as a continual skill-learning stage before downstream tasks arrive. We introduce RATs, Robotics Agent Teams designed for play-time skill acquisition. During play, RATs proposes novel yet learnable exploratory tasks, plans and executes robot-code policies, verifies intermediate progress, diagnoses failures, retries with dense, step-level feedback, and distills successful executions into a persistent code skill library. At test time, the agent reuses relevant skills from this frozen library to help solve new tasks. Experiments in LIBERO-PRO and MolmoSpaces show that play-learned skills improve held-out downstream tasks over no-play and random-play baselines, with 20.6 and 17.0 percentage-point gains over CaP-Agent0 on LIBERO-PRO and MolmoSpaces, respectively. Moreover, the learned skills can be plugged into other inference-time Code-as-Policy agents by simply retrieving them into the context, improving RoboSuite and real-world transfer by 8.9 and 8.8 points, respectively, without finetuning the underlying model.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19419'>page</a> · <a href='https://arxiv.org/pdf/2606.19419'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Scaling Generative Foundation Models for Chest Radiography with Rectified Flow Transformers</title>
-      <link>https://arxiv.org/abs/2606.19460</link>
-      <guid isPermaLink="false">arxiv:2606.19460</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Imperial College, Peking U, U Edinburgh, UC Berkeley — Ben Glocker</p>
-<p><b>Authors:</b> Fabio De Sousa Ribeiro, Emma A. M. Stanley, Charles Jones, Tian Xia, Dominic C. Marshall, Laurent Renard Triché, Christopher V. Cosgriff, Panagiotis Dimitrakopoulos, … <i>(+2 more)</i></p>
-<p>We introduce the first generative foundation model for chest radiograph synthesis trained from scratch at the billion-parameter scale. Existing radiographic AI models often suffer from poor generalisation across patient subpopulations, institutions, and acquisition settings, resulting in limited real-world clinical utility. Controlled, high-fidelity synthesis of chest radiographs is a promising path toward diversifying clinical datasets and evaluating the robustness of diagnostic models. Therefore, we present the largest specialist generative foundation model for chest radiographs to date, with over 1.3B parameters, trained for 1.6T tokens on a curated, heterogeneous dataset comprising 1.2M radiographs and clinical expert-guided metadata. Our model supports controllable radiograph generation and editing across multiple demographic subgroups, acquisition views, and a dozen pathologies. Moreover, we significantly advance the state of the art in radiograph synthesis fidelity, producing images that are indistinguishable from real radiographs to clinical experts.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19460'>page</a> · <a href='https://arxiv.org/pdf/2606.19460'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Can In-Context Learning Support Intrinsic Curiosity?</title>
-      <link>https://arxiv.org/abs/2606.19476</link>
-      <guid isPermaLink="false">arxiv:2606.19476</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> MILA, U Montreal — (senior)</p>
-<p><b>Authors:</b> Eric Elmoznino, Sangnie Bhardwaj, Johannes von Oswald, Rajai Nasser, Blaise Agüera y Arcas, João Sacramento, Rif A. Saurous, Guillaume Lajoie</p>
-<p>Effective machine learning depends not only on how we model data, but also on what data we choose to collect. While large sequence models have revolutionized data modeling, the problem of automated data selection, or &quot;intrinsic curiosity&quot;, remains a significant challenge. Classic approaches incentivize exploration by rewarding an agent based on its &quot;learning progress&quot;, which measures how much a newly acquired observation improves a world model&#x27;s predictive ability. However, evaluating these rewards traditionally requires expensive inner loops of gradient descent updates within each trajectory, rendering them computationally impractical at scale. In this work, we investigate whether the emergent in-context learning (ICL) capabilities of sequence models can eliminate this bottleneck by serving as immediate, update-free world models. Specifically, we evaluate whether an exploration policy can be trained to maximize learning progress, using solely the prediction errors and counterfactual context manipulations of an in-context learner. We first prove that in general Markov decision processes, this is in fact impossible in an unbiased way: the resulting intrinsic rewards either suffer from nuisance terms that bias their estimation of true learning progress, or they cannot be implemented using an in-context learner&#x27;s prediction errors. Conversely, we prove a positive result for a broad subclass of non-temporal settings, encompassing active learning and Bayesian Experimental Design: here, ICL-derived rewards successfully bound and asymptotically converge to the true learning progress. We corroborate our theory with controlled experiments across continuous and symbolic environments, demonstrating that our ICL-driven framework successfully trains curious data-collection policies that explore optimally.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19476'>page</a> · <a href='https://arxiv.org/pdf/2606.19476'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models</title>
-      <link>https://arxiv.org/abs/2606.19534</link>
-      <guid isPermaLink="false">arxiv:2606.19534</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Yunhai Tong</p>
-<p><b>Authors:</b> Yueyi Sun, Yuhao Wang, Jason Li, Ye Tian, Tao Zhang, Jacky Mai, Yihan Wang, Haochen Wang, … <i>(+3 more)</i></p>
-<p>Multimodal large language models (MLLMs) have achieved remarkable progress in visual understanding tasks. However, most existing MLLMs rely on autoregressive generation, which limits their efficiency for perception tasks that require captioning multiple regions. In this work, we propose PerceptionDLM, a multimodal diffusion language model optimized for efficient parallel region perception. Built upon PerceptionDLM-Base, a strong foundational baseline that achieves state-of-the-art performance among open-source diffusion MLLMs, our architecture fully leverages the parallel decoding nature of DLMs. Specifically, we introduce efficient prompting and structured attention masking to enable simultaneous perception of multiple masked regions, allowing the model to generate region descriptions in parallel at both the sequence and token levels. This design significantly improves inference efficiency compared with existing approaches that process regions sequentially. To systematically evaluate the parallelism property of visual perception capability for DLMs, we construct a new Parallel Detailed Localized Captioning Benchmark (ParaDLC-Bench) by scaling the DLC-Bench to include multiple region masks per image, enabling joint evaluation of both caption quality and inference efficiency. Experiments demonstrate that PerceptionDLM maintains competitive performance in region captioning while achieving substantial speed improvements for multi-region perception tasks. Our results highlight the potential of multimodal diffusion language models for efficient, parallel visual perception. To the best of our knowledge, we are the first to achieve parallel region caption and perception by leveraging the advantages of diffusion language models. Code, models, and datasets are released.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19534'>page</a> · <a href='https://arxiv.org/pdf/2606.19534'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>GDGU: A Gradient Difference-based Graph Unlearning Method for Cyberattack Localization in Electric Vehicle Charging Networks</title>
-      <link>https://arxiv.org/abs/2606.19566</link>
-      <guid isPermaLink="false">arxiv:2606.19566</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>eess.SY</category>
-      <category>cs.AI</category>
-      <category>cs.SY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST, NUS, Peking U, Stanford, Tsinghua — Jie Zhang</p>
-<p><b>Authors:</b> Nanhong Liu, Mucun Sun, Jie Zhang</p>
-<p>Electric vehicle charging stations (EVCSs) can expose distribution feeders to cyberattacks. While machine learning methods, including graph neural networks, can localize which bus is compromised, significant challenges remain in data sharing and model training. For example, privacy regulations grant EVCS owners the right to delete their training data from a deployed model, yet retraining from scratch on every request is computationally prohibitive. To address this, we study graph unlearning (GU) for EVCS cyberattack localization, formulated as a feature-level unlearning problem on a graph-level multi-label classification task. Specifically, we propose gradient difference-based graph unlearning (GDGU), which removes the influence of the requested deletion data through a first-order parameter correction. The correction is computed from the gradient difference between the original training data and a modified dataset in which only the charging power features at the requested EVCS buses are unlearned. Then, a batch-normalization recalibration and a brief recovery fine-tuning step are applied to restore localization utility. We benchmark GDGU against two second-order GU baselines on the IEEE 34-bus, 123-bus, and 8500-node distribution networks across three graph neural network backbones and cumulative unlearning scenarios. GDGU matches the strongest baseline on localization utility and reaches forgetting fidelity close to full-retraining, while unlearning 10 to 12 times faster than retraining from scratch and using far less memory than the second-order GU baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.AI, cs.SY · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19566'>page</a> · <a href='https://arxiv.org/pdf/2606.19566'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AI4SE and SE4AI Exploration: A Decade Looking Back and Forward</title>
-      <link>https://arxiv.org/abs/2606.19630</link>
-      <guid isPermaLink="false">arxiv:2606.19630</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.DL</category>
-      <category>cs.SY</category>
-      <category>eess.SY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Toronto — Thomas Bradley</p>
-<p><b>Authors:</b> H. Sinan Bank, Daniel R. Herber, Thomas Bradley</p>
-<p>The March 2020 INCOSE INSIGHT special issue on AI and Systems Engineering (SE) became the most downloaded issue in the publication&#x27;s history and launched a research community that now draws over 250 registrants to its annual workshop. In this article, we trace the progress in AI and SE across three phases (labeled here foundational, applied, and LLM inflection) based on the authors&#x27; reading of the field&#x27;s core papers, and describe our opinions of where the community has converged and where critical gaps remain. Separately, a human-AI agreement literature review leveraging both human expertise and six AI models was performed to assess the relevance of 1,712 INCOSE INSIGHT articles and 889 SERC publications. The results identify five critical research gaps and offer guidance for practitioners navigating AI adoption, assurance, and workforce transformation in SE. We share the agreement data and the AI4SE/SE4AI Explorer web application so readers can compare their own relevance judgments with the human and AI raters.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.DL, cs.SY, eess.SY · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.19630'>page</a> · <a href='https://arxiv.org/pdf/2606.19630'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Securing the future of AI agents</title>
-      <link>https://deepmind.google/blog/securing-the-future-of-ai-agents/</link>
-      <guid isPermaLink="false">deepmind:ae74216dee</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p>Securing internal systems with an AI Control Roadmap, combining traditional safeguards and real-time monitoring.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://deepmind.google/blog/securing-the-future-of-ai-agents/'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
