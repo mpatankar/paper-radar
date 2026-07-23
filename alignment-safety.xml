@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Wed, 22 Jul 2026 06:24:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 06:26:26 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers</title>
+      <link>https://huggingface.co/papers/2607.19139</link>
+      <guid isPermaLink="false">arxiv:2607.19139</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Maohua Li, Qirui Li, Yanke Zhou, Yiduo Li, Zhaosheng Chi, Chao Xu, Cuifeng Shen, Yixuan Xu, … <i>(+6 more)</i></p>
+<p>Text-to-image diffusion transformers (DiTs) jointly process text and image tokens, yet their internal computation during denoising remains poorly understood. We introduce a causal interpretability framework for modern large-scale DiTs that combines attention decomposition with targeted interventions across token spans, heads, and layers. Using it to separate prompt-content tokens from structural template tokens, we find that the structural tokens carry little prompt-specific information at the encoder output. Yet surprisingly, they emerge as dominant image-to-text attention sinks and causally maintain object identity inside the DiT, acting as implicit semantic registers. We show that they acquire this identity indirectly, with prompt semantics first injected into the image latents and then read back into the template tokens rather than transferred directly from the prompt tokens. Inspired by the above findings, we design a training-free pruning rule for DiTs. Heads that attend most strongly to prompt tokens are dispensable, and pruning them removes 20% of attention FLOPs with only a 1.4-point drop on GenEval. We further reveal how generative computation in DiTs is organized across heads and depth, separating semantic routing from visual synthesis and progressing from identity formation to propagation and refinement. Our work not only reveals that the tokens encoding semantics at input need not be those that maintain it during generation, but also provides a causal view of internal mechanisms in DiTs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-21 · <a href='https://huggingface.co/papers/2607.19139'>page</a> · <a href='https://arxiv.org/pdf/2607.19139'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enchancement</title>
       <link>https://huggingface.co/papers/2607.18217</link>
@@ -2402,18 +2413,6 @@
 <p><b>Authors:</b> Hunjae Lee, Corey Clark</p>
 <p>Standard attention mechanisms in transformers employ static token representations that remain unchanged across all pair-wise computations in each layer. This limits their representational alignment with the potentially diverse relational dynamics of each token-pair interaction. While they excel in domains with relatively homogeneous relationships, standard attention&#x27;s static relational learning struggles to capture the diverse, heterogeneous inter-channel dependencies of multivariate time series (MTS) data--where different channel-pair interactions within a single system may be governed by entirely different physical laws or temporal dynamics. To better align the attention mechanism for such domain phenomena, we propose attention with dynamic relational priming (prime attention). Unlike standard attention where each token presents an identical representation across all of its pair-wise interactions, prime attention tailors each token dynamically (or per interaction) through learnable modulations to best capture the unique relational dynamics of each token pair, optimizing each pair-wise interaction for that specific relationship. This representational plasticity of prime attention enables effective extraction of relationship-specific information in MTS while maintaining the same asymptotic computational complexity as standard attention. Our results demonstrate that prime attention consistently outperforms standard attention across benchmarks, achieving up to 6.5\% improvement in forecasting accuracy. In addition, we find that prime attention achieves comparable or superior performance using up to 40\% less sequence length compared to standard attention, further demonstrating its superior relational modeling capabilities.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-23 · <a href='https://arxiv.org/abs/2509.12196'>page</a> · <a href='https://arxiv.org/pdf/2509.12196'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DeepEN: A Deep Reinforcement Learning Framework for Personalized Enteral Nutrition in Critical Care</title>
-      <link>https://arxiv.org/abs/2510.08350</link>
-      <guid isPermaLink="false">arxiv:2510.08350</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Mengling Feng</p>
-<p><b>Authors:</b> Daniel Jason Tan, Jiayang Chen, Dilruk Perera, Kay Choong See, Mengling Feng</p>
-<p>Objective: Enteral nutrition (EN) delivery in the ICU remains suboptimal due to limited personalization and uncertainty regarding appropriate calorie, protein, and fluid targets under dynamic metabolic demands. We introduce DeepEN, a reinforcement learning (RL) framework for personalized EN optimization using electronic health record data. Methods: DeepEN was trained on over 11,000 ICU patients from MIMIC-IV to generate 4-hourly, patient-specific caloric, protein, and fluid targets. The state representation incorporated demographics, comorbidities, vital signs, laboratory values, and recent interventions. A physiologically aligned reward framework balanced biomarker stability with long-term survival. Policy learning employed a dueling double deep Q-network with Conservative Q-Learning regularization to enable safe offline training. Results: DeepEN achieved the highest estimated policy value ($V^π= 9.48$) and the lowest calibrated mortality (18.8 +/- 1.0%), representing a 4.0 percentage-point absolute reduction compared with clinician practice (22.8%). The policy also demonstrated superior metabolic stability, achieving the highest proportion of glucose, phosphate, and sodium values within target range. Furthermore, deviation from the DeepEN policy was independently associated with increased mortality and biomarker instability, whereas deviation from a random policy showed no such association. Interpretability analyses further indicated that recommendations were conditioned on physiologically relevant markers of organ function and metabolic status rather than static dosing heuristics. Conclusion: DeepEN demonstrates the feasibility of conservative offline RL for safe, individualized EN optimization, highlighting the potential of data-driven personalization to complement guideline-based approaches in critical care.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2510.08350'>page</a> · <a href='https://arxiv.org/pdf/2510.08350'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

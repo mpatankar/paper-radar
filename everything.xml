@@ -5,8 +5,153 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Wed, 22 Jul 2026 06:24:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 06:26:26 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>SciTrek: Evaluating and Improving Long-Context Numerical Reasoning over Scientific Articles</title>
+      <link>https://arxiv.org/abs/2509.21028</link>
+      <guid isPermaLink="false">arxiv:2509.21028</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Edinburgh — Mirella Lapata</p>
+<p><b>Authors:</b> Miao Li, Alexander Gurung, Irina Saparina, Mirella Lapata</p>
+<p>We introduce SciTrek, a synthetic question-answering dataset for assessing and improving long-context numerical reasoning in large language models (LLMs). Existing long-context datasets with inputs beyond 64K tokens either target simple information retrieval or, when they do involve reasoning, rely on artificial contexts, while numerical reasoning remains largely overlooked in both cases. SciTrek addresses these limitations with questions that require numerical operations (e.g., counting, sorting, aggregation, and comparison) over collections of full-text scientific articles. Questions are generated automatically by formulating them as SQL queries over a database of article metadata (titles, authors, and references), and ground-truth answers are obtained by executing these queries. The underlying SQL provides a transparent, verifiable specification of the reasoning each question requires, enabling fine-grained error analysis, while the fully automated pipeline scales to arbitrary context lengths and dataset sizes with minimal human supervision, mitigating data contamination and supplying abundant data for post-training. Extensive experiments show that frontier open-weight and proprietary LLMs struggle even with ostensibly simple questions: the best-performing model achieves only 46.5% exact match at 128K tokens, and performance degrades steadily as contexts grow. Fine-grained analysis reveals systematic weaknesses on citation-related questions and on compound logical conditions, particularly those involving negation. Finally, post-training open-weight models on SciTrek improves their numerical reasoning in ways that generalise to out-of-domain long-context tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://arxiv.org/abs/2509.21028'>page</a> · <a href='https://arxiv.org/pdf/2509.21028'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Dominant vs. Dominated: Concept-Level Generative Collapse in Diffusion Models</title>
+      <link>https://arxiv.org/abs/2512.20666</link>
+      <guid isPermaLink="false">arxiv:2512.20666</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Jong-Seok Lee</p>
+<p><b>Authors:</b> Hayeon Jeong, Jong-Seok Lee</p>
+<p>Text-to-image diffusion models have attracted significant attention for their ability to generate diverse, high-fidelity images. However, in multi-concept generation, one concept token often dominates the output while others are suppressed-a phenomenon we term the Dominant-vs-Dominated (DvD) imbalance. To systematically study this failure mode, we introduce DominanceBench and examine its underlying causes from both data and internal-mechanistic perspectives. Our controlled fine-tuning study, which mimics concept learning during diffusion-model training, shows that concepts learned from visually homogeneous (low-variation) concept-specific training images exhibit stronger dominance when composed with others. Cross-attention analysis indicates that dominant tokens concentrate attention in early denoising steps, followed by reduced representation of competing concepts. Head-ablation analysis further shows that this dominance is distributed across attention heads rather than localized. Overall, these findings characterize DvD as a systematic concept-level failure mode and provide a basis for more reliable and controllable multi-concept generation. DominanceBench will be released upon publication.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://arxiv.org/abs/2512.20666'>page</a> · <a href='https://arxiv.org/pdf/2512.20666'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ArenaRL: Scaling RL for Open-Ended Agents via Tournament-based Relative Ranking</title>
+      <link>https://arxiv.org/abs/2601.06487</link>
+      <guid isPermaLink="false">arxiv:2601.06487</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
+<p><b>Authors:</b> Qiang Zhang, Boli Chen, Fanrui Zhang, Ruixue Ding, Shihang Wang, Qiuchen Wang, Yinfeng Huang, Haonan Zhang, … <i>(+9 more)</i></p>
+<p>Reinforcement learning has substantially improved the performance of LLM agents on tasks with verifiable outcomes, but it still struggles on open-ended agent tasks with vast solution spaces (e.g., complex travel planning). Due to the absence of objective ground-truth for these tasks, current RL algorithms largely rely on reward models that assign scalar scores to individual responses. We contend that such pointwise scoring suffers from an inherent discrimination collapse: the reward model struggles to distinguish subtle advantages among different trajectories, resulting in scores within a group being compressed into a narrow range. Consequently, the effective reward signal becomes dominated by noise from the reward model, leading to optimization stagnation. To address this, we propose ArenaRL, a reinforcement learning paradigm that shifts from pointwise scalar scoring to intra-group relative ranking. ArenaRL introduces a process-aware pairwise evaluation mechanism, employing multi-level rubrics to assign fine-grained relative scores to trajectories. Additionally, we construct an intra-group adversarial arena and devise a tournament-based ranking scheme to obtain stable advantage signals. Empirical results confirm that the built seeded single-elimination scheme achieves nearly equivalent advantage estimation accuracy to full pairwise comparisons with O(N^2) complexity, while operating with only O(N) complexity, striking an optimal balance between efficiency and precision. Furthermore, to address the lack of full-cycle benchmarks for open-ended agents, we build Open-Travel and Open-DeepResearch, two high-quality benchmarks featuring a comprehensive pipeline covering SFT, RL training, and multi-dimensional evaluation. Extensive experiments show that ArenaRL substantially outperforms standard RL baselines, enabling LLM agents to generate more robust solutions for complex real-world tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://arxiv.org/abs/2601.06487'>page</a> · <a href='https://arxiv.org/pdf/2601.06487'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Accelerating the frontiers of scientific discovery: Googleâs $40M commitment to the Genesis Mission</title>
+      <link>https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/</link>
+      <guid isPermaLink="false">deepmind:15eb5b1c41</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p>Google commits $40M in AI tokens and credits for the Genesis Mission</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Performance, Rendering, and Interaction in Competitive Esports (PRICE)</title>
+      <link>https://research.nvidia.com/publication/2026-07_performance-rendering-and-interaction-competitive-esports-price</link>
+      <guid isPermaLink="false">nvidia_research:fa6205a6f0</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_performance-rendering-and-interaction-competitive-esports-price'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>CTRL-G: Controllable Generative Graphics for Games</title>
+      <link>https://research.nvidia.com/publication/2026-07_ctrl-g-controllable-generative-graphics-games</link>
+      <guid isPermaLink="false">nvidia_research:063dd9a955</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_ctrl-g-controllable-generative-graphics-games'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU</title>
+      <link>https://huggingface.co/papers/2607.19191</link>
+      <guid isPermaLink="false">arxiv:2607.19191</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Fan Jiang, Zhaoxu Sun, Mengchao Wang, Ziyu Zhu, Chiyu Wang, Yunpeng Zhang, Wenlin Liu, Yun Wang, … <i>(+34 more)</i></p>
+<p>We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and internet videos to learn controllable world dynamics. WorldExplorer performs agent-driven collection guided by training feedback, while a unified pipeline applies 14 deterministic quality checks, VLM-based assessment, and synchronized action and text annotation. We progressively distill a bidirectional action-conditioned teacher into a causal student through teacher forcing and ODE distillation, and introduce LongForcing to align long student self-rollouts with an extended-horizon teacher, mitigating accumulated distribution shift and autoregressive drift. Raw keyboard actions provide a unified control interface for scene roaming and third-person character interaction, while reference-character memory provides persistent appearance cues for identity consistency during third-person rollouts. For deployment, we co-design a streaming inference stack with a lightweight VAE decoder, efficient attention, memory-aware scheduling, and low-bit DiT inference. Across optimized low-bit configurations, ABot-World-0 streams 720P video at up to 16 FPS on a single NVIDIA RTX 5090 desktop GPU, with 1.2s action-to-first-frame latency and approximately 19GiB peak VRAM. Experiments on WorldRoamBench and extended interactive rollouts demonstrate competitive controllability and coherent long-horizon world evolution.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-21 · <a href='https://huggingface.co/papers/2607.19191'>page</a> · <a href='https://arxiv.org/pdf/2607.19191'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers</title>
+      <link>https://huggingface.co/papers/2607.19139</link>
+      <guid isPermaLink="false">arxiv:2607.19139</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Maohua Li, Qirui Li, Yanke Zhou, Yiduo Li, Zhaosheng Chi, Chao Xu, Cuifeng Shen, Yixuan Xu, … <i>(+6 more)</i></p>
+<p>Text-to-image diffusion transformers (DiTs) jointly process text and image tokens, yet their internal computation during denoising remains poorly understood. We introduce a causal interpretability framework for modern large-scale DiTs that combines attention decomposition with targeted interventions across token spans, heads, and layers. Using it to separate prompt-content tokens from structural template tokens, we find that the structural tokens carry little prompt-specific information at the encoder output. Yet surprisingly, they emerge as dominant image-to-text attention sinks and causally maintain object identity inside the DiT, acting as implicit semantic registers. We show that they acquire this identity indirectly, with prompt semantics first injected into the image latents and then read back into the template tokens rather than transferred directly from the prompt tokens. Inspired by the above findings, we design a training-free pruning rule for DiTs. Heads that attend most strongly to prompt tokens are dispensable, and pruning them removes 20% of attention FLOPs with only a 1.4-point drop on GenEval. We further reveal how generative computation in DiTs is organized across heads and depth, separating semantic routing from visual synthesis and progressing from identity formation to propagation and refinement. Our work not only reveals that the tokens encoding semantics at input need not be those that maintain it during generation, but also provides a causal view of internal mechanisms in DiTs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-21 · <a href='https://huggingface.co/papers/2607.19139'>page</a> · <a href='https://arxiv.org/pdf/2607.19139'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing</title>
+      <link>https://huggingface.co/papers/2607.19064</link>
+      <guid isPermaLink="false">arxiv:2607.19064</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xinjie Zhang, Peng Zhang, Shicheng Zheng, Jinghao Guo, Zhaoyang Jia, Yifei Shen, Xun Guo, Yuxuan Luo, … <i>(+17 more)</i></p>
+<p>Large-scale visual generators are increasingly capable but costly to train, fine-tune, and deploy. We introduce Mage-Flow, a compact 4B-scale generative stack for efficient text-to-image generation and instruction-based image editing. The stack is built from two co-designed components: Mage-VAE, a lightweight high-fidelity latent tokenizer, and a Native-Resolution Multimodal Diffusion Transformer trained with rectified flow matching. Mage-VAE uses one-step diffusion-style encoding and decoding with anchor-latent regularization, preserving the reconstruction quality of strong public VAEs while reducing tokenization cost by more than an order of magnitude. Together with native-resolution packing and stack-level CUDA kernel fusion, the stack supports flexible-resolution training and improves end-to-end training throughput by about 2.5times. Built on this foundation, we develop a complete model family with Base, RL-aligned, and Turbo variants for both generation and editing. Diffusion-NFT improves prompt following, text rendering, aesthetic quality, and editing fidelity, while few-step distillation with adversarial perceptual guidance produces 4-step Turbo models for low-latency inference. Despite its compact scale, Mage-Flow and Mage-Flow-Edit achieves competitive performance across standard generation and editing benchmarks. More importantly, the Turbo variants make high-resolution generation and editing practical for interactive use: at 1024^2 resolution on a single NVIDIA A100 GPU, Mage-Flow-Turbo generates an image in 0.59s, and Mage-Flow-Edit-Turbo edits an image in 1.02s, while maintaining a small memory footprint. These results show that careful tokenizer--backbone--system co-design can deliver strong high-resolution generation and editing within an efficient 4B model family.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-21 · <a href='https://huggingface.co/papers/2607.19064'>page</a> · <a href='https://arxiv.org/pdf/2607.19064'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report</title>
+      <link>https://huggingface.co/papers/2607.18367</link>
+      <guid isPermaLink="false">arxiv:2607.18367</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> AlayaWorld Team, Kaipeng Zhang, Chuanhao Li, Yifan Zhan, Yongtao Ge, Yuanyang Yin, Jiaming Tan, Kang He, … <i>(+11 more)</i></p>
+<p>Unlike conventional video game development, which relies on labor-intensive pipelines for asset production, animation, physics, and programming, video world models generate interactive environments from user inputs instantly. It enable us to create customized, explorable, and continuously evolving virtual world from text, an image, or video. Realizing this vision requires four tightly coupled capabilities: interaction, persistent spatiotemporal consistency, stable long-horizon generation, and efficient response. We present AlayaWorld, an interactive long-horizon video world model that generates 24-fps video at 540p and 720p. Built on a 15B video diffusion transformer, AlayaWorld generates short latent chunks autoregressively under camera trajectories and switchable text prompts. Its bounded visual context combines a persistent sink frame, compressed temporal history, geometry-aligned spatial memory, and recent-frame conditioning. To reduce long-term drift, the model is trained with corrupted histories and prediction residuals collected from its own roll-outs. We further introduce a discrete autoregressive distillation formulation that combines distribution-matching distillation, self-forcing++, and consistency distillation, reducing inference from approximately 30 sampling steps to four steps per chunk. On iWorld-Bench, AlayaWorld achieves the best performance over long-horizon generation. Conceived as a full-stack, open-source, and long-term project, AlayaWorld is intended to provide an extensible foundation for future research on interactive video world models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://huggingface.co/papers/2607.18367'>page</a> · <a href='https://arxiv.org/pdf/2607.18367'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Subliminal Clocks: Latent Time Modelling in Diffusion Language Models</title>
+      <link>https://huggingface.co/papers/2607.01774</link>
+      <guid isPermaLink="false">arxiv:2607.01774</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Maximo Eduardo Rulli, Thomas Vaitses Fontanari, Simone Petruzzi, Federico Alvetreti, Giorgio Strano, Donato Crisostomi, Giorgos Nikolaou, Tommaso Mencattini, … <i>(+5 more)</i></p>
+<p>Diffusion Language Models (DLMs) have recently emerged as a promising alternative to autoregressive models. Unlike standard diffusion-based approaches, DLMs are not explicitly conditioned on a timestep, raising a natural question: do these models internally represent denoising progress, and how is such information used downstream? In this work, we show that DLMs do in fact encode a latent representation related to the diffusion timestep within their residual streams. We find that this signal can be reliably extracted using probes across layers, indicating that denoising progress is decodable from internal activations. We further demonstrate that steering the model along a low-dimensional subspace associated with the inferred timestep allows us to systematically modulate its notion of denoising progress, leading to predictable changes in model confidence and entropy. Finally, we analyse the geometry of the identified representation, showing that it exhibits structured and interpretable properties in activation space, and shedding light on how such a signal is processed by these models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://huggingface.co/papers/2607.01774'>page</a> · <a href='https://arxiv.org/pdf/2607.01774'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2607.18722</link>
+      <guid isPermaLink="false">arxiv:2607.18722</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junyao Yang, Yucheng Shi, Zongxia Li, Zhongzhi Li, Ruhan Wang, Xiangxin Zhou, Kishan Panaganti, Haitao Mi, … <i>(+2 more)</i></p>
+<p>Asynchronous reinforcement learning improves throughput by decoupling rollout generation from optimization, but staleness is an inevitable byproduct compounded by policy lag, engine delays, and mixture-of-experts routing. From a trust-region perspective, this mismatch is critical: training-inference divergence governs approximation error in finite-horizon bounds, whereas PPO clipping only gates sampled outward updates, acting as a sampled surrogate rather than a full-policy constraint. As a result, high-staleness updates remain weakly controlled in the asynchronous regime where stale rollouts matter most.
+  We introduce the Staleness-Adaptive Trust Region (SAT), which uses the detached sampled log-ratio as a practical staleness proxy, identifies high-mismatch tails within each batch via staleness-based kernel scaling, and contracts only the sign-selected endpoint of the nominal PPO interval. This preserves baseline behavior on ordinary tokens while enforcing more conservative updates on newly intercepted outward bands. We prove local interval containment and pointwise pessimism relative to PPO, showing how the adaptive rule reshapes update geometry under heterogeneous staleness.
+  We evaluate SAT in a decoupled asynchronous RL setup built on Qwen3-30B-A3B-Base, using SGLang as the inference engine and Megatron for training. In this setting, SAT-GSPO w/ R3 achieves the best observed AIME24 avg@8, reaching 35.83 at lag 1 and 34.79 at lag 8, while SAT-GSPO reaches 34.17 at lag 1. Adaptive clipping and routing replay act as complementary stabilizers targeting mismatch tails and routing inconsistency, respectively. Overall, aligning clip intervals with staleness heterogeneity effectively stabilizes asynchronous RL.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-21 · <a href='https://huggingface.co/papers/2607.18722'>page</a> · <a href='https://arxiv.org/pdf/2607.18722'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD</title>
+      <link>https://huggingface.co/papers/2607.20145</link>
+      <guid isPermaLink="false">arxiv:2607.20145</guid>
+      <pubDate>Thu, 23 Jul 2026 06:26:26 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Dongfang Li, Xiaodong Luo, Ruoyu Sun, Xuhui Chen, Linyuan Qiu, Jian Meng, Zhengxuan Lu, Yiting Wang, … <i>(+58 more)</i></p>
+<p>Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication overhead, and inefficient kernel execution. While most large-scale LLM training systems are built around GPU-based clusters, this report presents an end-to-end optimization practice on the Ascend NPU SuperPOD. Using the DeepSeek-V4 model family as the target workload, we develop a hierarchical optimization framework spanning model-level parallelism, computation-communication orchestration, and low-level kernel execution. The resulting system achieves 34.22% Model FLOPs Utilization (MFU) with a 2.93x improvement over the open-source baseline recipe while maintaining training stability. Building on this optimized infrastructure, we further establish a CPT and SFT workflow for complex Operations Research (OR) tasks. We refer to the integrated framework as SLAI T-Rex. Using DeepSeek-V4-Flash, we develop OR-oriented CPT and SFT data pipelines that combine collected domain resources with solver-verified synthetic optimization documents. The resulting dataset contains 10K high-quality SFT samples spanning four task categories and three problem representations. The specialized model achieves the highest average zero-shot Pass@1 score among the evaluated models, reaching 71.81% and outperforming GPT-5.4-Mini and the base DeepSeek-V4-Flash model by 3.98 and 11.27 percentage points, respectively. Overall, this work demonstrates a full-stack pathway from efficient trillion-parameter model post-training on Ascend infra to domain-specialized Flash models for solver-grounded mathematical modeling, advancing frontier-model systems for complex reasoning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://huggingface.co/papers/2607.20145'>page</a> · <a href='https://arxiv.org/pdf/2607.20145'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Glyce: Glyph-vectors for Chinese Character Representations</title>
       <link>https://arxiv.org/abs/1901.10125</link>
@@ -2140,149 +2285,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Bytedance Seed, Hugging Face Daily Papers (curated)</p>
 <p>We present Seed2.0, a model series that takes a meaningful step toward solving complex, real-world tasks. Our approach begins with identifying users&#x27; genuine needs and constructing a reliable, forward-looking evaluation system by selecting and abstracting benchmarks grounded in these needs and in realistic, complex scenarios. Guided by this evaluation system, Seed2.0 targets two persistent challenges, long-tail knowledge and complex instruction following, substantially improving the model&#x27;s reliability on intricate, long-horizon tasks. Beyond these, Seed2.0 delivers world-leading reasoning intelligence, visual understanding, and search capabilities that address the most common needs of a broad user base. Through extensive real-world use cases documented in this model card, we demonstrate that Seed2.0 begins to exhibit the ability to handle initial complex real-world tasks, delivering greater value to hundreds of millions of users.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-30 · <a href='https://huggingface.co/papers/2607.00248'>page</a> · <a href='https://arxiv.org/pdf/2607.00248'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Morphing into Hybrid Attention Models</title>
-      <link>https://huggingface.co/papers/2606.30562</link>
-      <guid isPermaLink="false">arxiv:2606.30562</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Disen Lan, Jianbin Zheng, Yuxi Ren, Xin Xia, Xuanda Wang, Xuefeng Xiao, Xipeng Qiu, Yu Cheng, … <i>(+1 more)</i></p>
-<p>Hybrid attention models improve long-context efficiency by retaining only a subset of full-attention layers and replacing the remaining layers with linear attention. However, the effectiveness of Transformer-to-hybrid conversion critically depends on which layers preserve full attention. Existing hybrid layer selection methods typically rely on heuristic strategies such as fixed placement patterns or layerwise scoring, implicitly treating layer importance as isolated and overlooking the interdependent layer effect under a global hybrid configuration. In this work, we formulate hybrid layer selection as a budget-constrained subset optimization problem. We further propose FlashMorph (Fast LAyer Selection for Hybrid MORPHing), an effective, efficient and scalable layer selection method for Transformer-to-hybrid conversion. FlashMorph first constructs a morphable model by equipping each full-attention layer with a converted linear-attention branch. It then freezes all model weights and jointly optimizes layerwise gates on synthetic long-context retrieval data, with a linearization regularization that encourages the model to rely on linear attention for efficiency. The learned gates are discretized under a preset full-attention budget to instantiate the hybrid architecture, followed by standard logits distillation and long-context finetuning. Extensive experiments show that FlashMorph discovers more effective hybrid configurations, preserves strong long-context recall and general benchmark performance while substantially reducing layer selection cost compared with existing layer selection methods, demonstrating its effectiveness, efficiency, and scalability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-29 · <a href='https://huggingface.co/papers/2606.30562'>page</a> · <a href='https://arxiv.org/pdf/2606.30562'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts</title>
-      <link>https://huggingface.co/papers/2607.00666</link>
-      <guid isPermaLink="false">arxiv:2607.00666</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Taewook Kang, Taeheon Kim, Donghyun Shin, Jonghyun Choi, Hugging Face Daily Papers (curated)</p>
-<p>Vision-Language-Action (VLA) models often fail to perform the same learned tasks under environmental shifts, such as changes in camera pose and shifts to a different but similar robot (e.g., from Panda to UR5e). Adapting these models to the shifted environment (i.e., target domain) often requires training on multiple demonstrations for each task, which are costly to collect. To reduce the burden of data curation and training, we propose an analogy-based method that adapts VLA models under environmental shifts through weight vector arithmetic with domain-specific information addition, named Domain ARiThmetic (DART). Unlike prior approaches, DART requires collecting only a single demonstration, enabling efficient adaptation. To accurately isolate domain-specific information for addition, DART performs subspace alignment between singular components in weight vectors to filter out noisy components. In both simulated and real-world experiments, DART outperforms existing VLA adaptation methods in one-shot scenarios across diverse visual and embodiment shifts. Code is available at https://github.com/snumprlab/dart.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-01 · <a href='https://huggingface.co/papers/2607.00666'>page</a> · <a href='https://arxiv.org/pdf/2607.00666'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Multi-Agent Teams Hold Experts Back</title>
-      <link>https://machinelearning.apple.com/research/multi-agent-teams-experts</link>
-      <guid isPermaLink="false">apple_ml:6f6800d882</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Multi-agent LLM systems are increasingly deployed as autonomous collaborators, where agents interact freely rather than execute fixed, pre-specified workflows. In such settings, effective coordination cannot be fully designed in advance and must instead emerge through interaction. However, most prior work enforces coordination through fixed roles, workflows, or aggregation rules, leaving open the question of how well self-organizing teams perform when coordination is unconstrained. Drawing on organizational psychology, we study whether self-organizing LLM teams achieve strong synergy, whereâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/multi-agent-teams-experts'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>VideoFlexTok: Flexible-Length Coarse-to-Fine Video Tokenization</title>
-      <link>https://machinelearning.apple.com/research/videoflextok</link>
-      <guid isPermaLink="false">apple_ml:60d531bdfa</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Visual tokenizers map high-dimensional raw pixels into a compressed representation for downstream modeling. Beyond compression, tokenizers dictate what information is preserved and how it is organized. A de facto standard approach to video tokenization is to represent a video as a spatiotemporal 3D grid of tokens, each capturing the corresponding local information in the original signal. This requires the downstream model that consumes the tokens, e.g., a text-to-video model, to learn to predict all low-level details âpixel-by-pixelâ irrespective of the videoâs inherent complexity, leading toâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/videoflextok'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Amortizing Maximum Inner Product Search with Learned Support Functions</title>
-      <link>https://machinelearning.apple.com/research/amortizing-inner-product-search</link>
-      <guid isPermaLink="false">apple_ml:85e8427cbb</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Maximum inner product search (MIPS) is a crucial subroutine in machine learning, requiring the identification of a vector taken within a database (the keys) that best aligns with a given query. We propose amortized MIPS: a regression-based approach that trains neural networks to directly predict MIPS solutions, amortizing the cost of repeatedly solving MIPS for queries drawn from a known distribution over a fixed key database. Our key insight is that the MIPS value function is the support function of the set of keys, a well-studied convex function whose gradient yields the optimal key. Thisâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/amortizing-inner-product-search'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>On Robustness and Chain-of-Thought Consistency of RL-Finetuned VLMs</title>
-      <link>https://machinelearning.apple.com/research/robustness-chain-thought-consistency</link>
-      <guid isPermaLink="false">apple_ml:b9f1984a66</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Reinforcement learning (RL) finetuning has become a key technique for enhancing large language models (LLMs) on reasoning-intensive tasks, motivating its extension to vision language models (VLMs). While RL-tuned VLMs improve on visual reasoning benchmarks, they remain vulnerable to weak visual grounding, hallucinations, and over-reliance on textual cues. We show that simple, controlled textual perturbationsâmisleading captions or incorrect chain-of-thought (CoT) tracesâcause substantial drops in robustness and confidence, and that these effects are more pronounced when CoT consistency isâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/robustness-chain-thought-consistency'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>MemoryLLM: Plug-n-Play Interpretable Feed-Forward Memory for Transformers</title>
-      <link>https://machinelearning.apple.com/research/memoryllm</link>
-      <guid isPermaLink="false">apple_ml:16ba583877</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Understanding how transformer components operate in LLMs is important, as it is at the core of recent technological advances in artificial intelligence. In this work, we revisit the challenges associated with interpretability of feed-forward modules (FFNs) and propose MemoryLLM, which aims to decouple FFNs from self-attention and enables us to study the decoupled FFNs as context-free token-wise neural retrieval memory. In detail, we investigate how input tokens access memory locations within FFN parameters and the importance of FFN memory across different downstream tasks. MemoryLLM achievesâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/memoryllm'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Learning Structured Reasoning via Tractable Trajectory Control</title>
-      <link>https://machinelearning.apple.com/research/learning-structured-reasoning</link>
-      <guid isPermaLink="false">apple_ml:6553c5f8f3</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Large language models can exhibit emergent reasoning behaviors, often manifested as recurring lexical patterns (e.g., âwait,â indicating verification). However, complex reasoning trajectories remain sparse in unconstrained sampling, and standard RL often fails to guarantee the acquisition of diverse reasoning behaviors. We propose a systematic discovery and reinforcement of diverse reasoning patterns through structured reasoning, a paradigm that requires targeted exploration of specific reasoning patterns during the RL process. To this end, we propose Ctrl-R, a framework for learningâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/learning-structured-reasoning'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Learning Unmasking Policies for Diffusion Language Models</title>
-      <link>https://machinelearning.apple.com/research/unmasking</link>
-      <guid isPermaLink="false">apple_ml:ffa5a20cbd</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Diffusion (Large) Language Models (dLLMs) now match the downstream performance of their autoregressive counterparts on many tasks, while holding the promise of being more efficient during inference. One critical design aspect of dLLMs is the sampling procedure that selects which tokens to unmask at each diffusion step. Indeed, recent work has found that heuristic strategies such as confidence thresholding improve both sample quality and token throughput compared to random unmasking. However, such heuristics have downsides: they require manual tuning, and we observe that their performanceâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/unmasking'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Residual Context Diffusion Language Models</title>
-      <link>https://machinelearning.apple.com/research/residual-context-diffusion</link>
-      <guid isPermaLink="false">apple_ml:e4909f9a7f</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode multiple tokens in parallel. However, state-of-the-art block-wise dLLMs rely on a âremaskingâ mechanism that decodes only the most confident tokens and discards the rest, effectively wasting computation. We demonstrate that recycling computation from the discarded tokens is beneficial, as these tokens retain contextual information useful for subsequent decoding iterations. In light of this, we propose Residual Context Diffusion (RCD), a module thatâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/residual-context-diffusion'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Conformal Thinking: Risk Control for Reasoning on a Compute Budget</title>
-      <link>https://machinelearning.apple.com/research/conformal-thinking-risk-control</link>
-      <guid isPermaLink="false">apple_ml:69e5924e42</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Reasoning Large Language Models (LLMs) enable test-time scaling, with dataset-level accuracy improving as the token budget increases, motivating adaptive reasoningâspending tokens when they improve reliability and stopping early when additional computation is unlikely to help. However, setting the token budget, as well as the threshold for adaptive reasoning, is a practical challenge that entails a fundamental risk-accuracy trade-off. We re-frame the budget setting problem as risk control, limiting the error rate while minimizing compute. Our framework introduces an upper threshold that stopsâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/conformal-thinking-risk-control'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Anti-Causal Domain Generalization: Leveraging Unlabeled Data</title>
-      <link>https://machinelearning.apple.com/research/anti-casual</link>
-      <guid isPermaLink="false">apple_ml:cb5b608b78</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>The problem of domain generalization concerns learning predictive models that are robust to distribution shifts when deployed in new, previously unseen environments. Existing methods typically require labeled data from multiple training environments, limiting their applicability when labeled data are scarce. In this work, we study domain generalization in an anti-causal setting, where the outcome causes the observed covariates. Under this structure, environment perturbations that affect the covariates do not propagate to the outcome, which motivates regularizing the modelâs sensitivity toâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://machinelearning.apple.com/research/anti-casual'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Securing The Fifa World Cup 2026</title>
-      <link>https://bostondynamics.com/blog/securing-the-fifa-world-cup-2026/</link>
-      <guid isPermaLink="false">boston_dynamics:a9f80b3ef1</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>blog</category>
-      <category>robotics</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Boston Dynamics</p>
-<p><b>Authors:</b> Boston Dynamics</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://bostondynamics.com/blog/securing-the-fifa-world-cup-2026/'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
