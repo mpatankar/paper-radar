@@ -5,8 +5,73 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Fri, 24 Jul 2026 06:21:09 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 06:32:47 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Project Pilot: Can AI control a drone?</title>
+      <link>https://www.anthropic.com/research/project-pilot</link>
+      <guid isPermaLink="false">anthropic:814a2650ce</guid>
+      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
+<p><b>Authors:</b> Anthropic</p>
+<p>We worked with Andon Labs on Drone-Bench, a new benchmark testing whether AI models can autonomously fly a drone to locate and follow a person.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/project-pilot'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Autonomous Discovery of Wireless Communications Algorithms</title>
+      <link>https://research.nvidia.com/publication/2026-07_autonomous-discovery-wireless-communications-algorithms</link>
+      <guid isPermaLink="false">nvidia_research:6204e9537f</guid>
+      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_autonomous-discovery-wireless-communications-algorithms'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>ReferTrack: Referring Then Tracking for Embodied Visual Tracking</title>
+      <link>https://huggingface.co/papers/2607.20061</link>
+      <guid isPermaLink="false">arxiv:2607.20061</guid>
+      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Hanjing Ye, Tianle Zeng, Jiazhao Zhang, Shaoan Wang, Zibo Zhang, Weisi Situ, Yuchen Zhou, Yonggen Ling, … <i>(+2 more)</i></p>
+<p>Embodied visual tracking (EVT) requires a mobile agent to continuously follow a specific target described in natural language using only onboard vision. While recent vision-language-action (VLA) policies unify target identification and trajectory planning, their chain-of-thought (CoT) reasoning often operates in abstract spatial latents that are difficult to supervise and weakly aligned with explicit image-space detections. To address this, we introduce ReferTrack, a referring-then-tracking paradigm that grounds EVT using a single forward-facing camera. Our model first selects the target from an indexed set of bounding boxes, then decodes tracking waypoints conditioned on this image-grounded decision. To preserve target motion cues over time, ReferTrack maintains a sliding-window queue of previously selected bounding boxes, injecting their geometric features into the visual history via temporal-viewpoint-bbox indicator (TVBI) tokens. We further enhance target identification by co-training on a custom Refer-QA dataset. On EVT-Bench, ReferTrack achieves state-of-the-art single-view performance with success rates of 89.4%, 73.3%, and 74.1% on the single-target, distracted, and ambiguity tracking splits, respectively -- matching or even surpassing several multi-camera baselines on identification-heavy tasks. Finally, real-world deployments on legged and humanoid robots validate its robust sim-to-real transfer capabilities. Code is available at https://github.com/MedlarTea/referTrack.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://huggingface.co/papers/2607.20061'>page</a> · <a href='https://arxiv.org/pdf/2607.20061'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs</title>
+      <link>https://huggingface.co/papers/2605.09635</link>
+      <guid isPermaLink="false">arxiv:2605.09635</guid>
+      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U — (senior)</p>
+<p><b>Authors:</b> Hao Liang, Qihan Lin, Zhaoyang Han, Xiaochen Ma, Zhen Hao Wong, Meiyi Qiang, Linzhuang Sun, Wentao Zhang, … <i>(+1 more)</i></p>
+<p>Large language models are increasingly used in K-12 education, but existing benchmarks mainly test exam question answering rather than understanding how curriculum knowledge is structured and visually presented. We call this capability curriculum cognition. It covers prerequisite chains, concept taxonomies, experiment-concept links, pedagogical sequencing, and visual grounding. We introduce K12-KGraph, a curriculum-aligned knowledge graph extracted from official People&#x27;s Education Press textbooks in mathematics, physics, chemistry, and biology across primary, middle, and high school. It contains nine node types and fourteen relation types covering curriculum structure and visual grounding. From this graph, we derive K12-Bench, a 23,640-question multi-select benchmark with five task families: Ground, Prereq, Neighbor, Evidence, and Locate. We also build K12-Train, a graph-guided supervised fine-tuning corpus of 7,335 samples, including 2,267 text-only QA pairs and 5,068 multimodal VQA pairs. On K12-Bench, Gemini-3-Flash achieves only 57 percent exact match and Gemma-4-31B-IT reaches 46 percent, with Prereq and Neighbor being the hardest tasks. Our training experiments show that domain-specific supervision can reduce this gap. Under a matched 2,300-sample budget, K12-Train-Text consistently outperforms equally sized subsets of eight mainstream instruction-tuning corpora on GaokaoBench and EduEval. For vision-language models, K12-Train-Full achieves the best overall results on Gaokao-MM, MDK12-medium, and K12Vista among all compared training configurations, despite using fewer samples than the full DataFlow and WizardLM baselines. It also surpasses both text-only and multimodal-only variants, showing that textual and visual supervision are complementary. We release the graph, benchmark, training data, and complete construction pipeline.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2605.09635'>page</a> · <a href='https://arxiv.org/pdf/2605.09635'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Show, Don&#x27;t Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text</title>
+      <link>https://huggingface.co/papers/2607.21072</link>
+      <guid isPermaLink="false">arxiv:2607.21072</guid>
+      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Cornell, HKUST, Peking U, U Toronto, U Washington — (senior)</p>
+<p><b>Authors:</b> Xu Wang, Kaixiang Yao, Miao Pan, Xiaohe Zhou, Xuanyu Liu, Wenqi Zhang, Xuhong Zhang, Hugging Face Daily Papers (curated)</p>
+<p>Spatial intelligence is essential for agents to move from static semantic understanding toward interacting with the physical world. Many spatial tasks are grounded in continuous visual scenes, where locations, regions, and paths are more naturally expressed by pointing, marking, or drawing than by reporting precise coordinates or discrete textual symbols. Yet existing spatial reasoning benchmarks usually require coordinates, options, or text, creating an answer-interface mismatch for image-generation models. This makes it difficult to evaluate image-generation models under the same task semantics as text-output VLMs, despite their ability to externalize spatial judgments directly in pixel space. We propose ProVisE (Protocolized Visual Evaluation), a benchmark-agnostic framework that elicits protocol-constrained visual answers from image-generation models and parses them into structured predictions compatible with original metrics. ProVisE also includes an Agentic builder that constructs and validates task-specific protocols for new benchmarks. We further introduce SpatialGen-Bench, a curated diagnostic benchmark of 470 samples across 14 spatial subtasks, four capability levels, and diverse answer forms. We evaluate representative text-output VLMs and image-generation models in a unified setting and validate Agentic protocol construction on six external spatial benchmarks. Results show that image-generation models are competitive when spatial answers can be externalized directly in pixel space, while text-output VLMs retain a clear advantage in compositional spatial reasoning. These findings reveal complementary strengths of pixel-space expression and text-based reasoning and establish a metric-compatible testbed for studying spatial cognition in image-generation models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2607.21072'>page</a> · <a href='https://arxiv.org/pdf/2607.21072'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LEAD: Breaking the No-Recovery Bottleneck in Long-Horizon Reasoning</title>
+      <link>https://machinelearning.apple.com/research/lead-no-recovery-bottleneck</link>
+      <guid isPermaLink="false">apple_ml:efa034feb9</guid>
+      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Long-horizon execution in Large Language Models (LLMs) remains unstable even when high-level strategies are provided. Evaluating on controlled algorithmic puzzles, we demonstrate that while decomposition is essential for stability, extreme decomposition creates a âno-recovery bottleneckâ. We show that this bottleneck becomes critical due to highly non-uniform error distribution, where consistent errors on a few âhardâ steps become irreversible. To address this, we propose Lookahead-Enhanced Atomic Decomposition (LEAD). By incorporating short-horizon future validation and aggregatingâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://machinelearning.apple.com/research/lead-no-recovery-bottleneck'>page</a></p>]]></description>
+    </item>
     <item>
       <title>MELLA: Bridging Linguistic Capability and Cultural Groundedness for Low-Resource Language MLLMs</title>
       <link>https://arxiv.org/abs/2508.05502</link>
@@ -2220,77 +2285,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Apple ML Research</p>
 <p>We address the fundamental incompatibility of attention-based encoder-decoder (AED) models with long-form acoustic encodings. AED models trained on segmented utterances learn to encode absolute frame positions by exploiting limited acoustic context beyond segment boundaries, but fail to generalize when decoding long-form segments where these cues vanish. The model loses ability to order acoustic encodings due to permutation invariance of keys and values in cross-attention. We propose four modifications: (1) injecting explicit absolute positional encodings into cross-attention for each decodedâ¦</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/segmental-attention-decoding'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Fortress: A Case Study in Stabilizing Search Recommendations via Temporal Data Augmentation and Feature Pruning</title>
-      <link>https://machinelearning.apple.com/research/fortress-stabilizing-search-recommendations</link>
-      <guid isPermaLink="false">apple_ml:b8628ae2f9</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>In search and recommendation systems, predictive models often suffer from temporal instability when certain input features introduce volatility in output scores. This instability can degrade model reliability and user experience especially in multi-stage systems where consistent predictions are critical for downstream decision making. We introduce Fortress, a general framework for enhancing model stability and accuracy by identifying and pruning features that contribute to inconsistent prediction scores over time. Fortress leverages historical snapshots temporally partitioned datasetsâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/fortress-stabilizing-search-recommendations'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory</title>
-      <link>https://huggingface.co/papers/2607.02517</link>
-      <guid isPermaLink="false">arxiv:2607.02517</guid>
-      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, HKUST, Imperial College, NUS, Peking U, U Michigan — (senior)</p>
-<p><b>Authors:</b> Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Qingyan Bai, Ka Leong Cheng, Yue Yu, Yixuan Li, … <i>(+6 more)</i></p>
-<p>We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration. Unlike existing world models that entangle physical dynamics with pixel rendering and rely on continuous visual observation to sustain motion, our framework explicitly decouples semantic motion orchestration from visual generation. By leveraging an LLM to coordinate 3D trajectories with camera movements and subsequently employing these orchestrated trajectories as control signals for video generation, our approach ensures strict physical logic and appearance stability, successfully preserving the exact visual identities of dynamic entities even when they re-enter the scene after prolonged periods out of view. Experimental results demonstrate that our method supports the synthesis of complex and extended events with unprecedented controllability and persistent dynamic object memory. Project Page: https://worlddirector.github.io/</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02517'>page</a> · <a href='https://arxiv.org/pdf/2607.02517'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</title>
-      <link>https://huggingface.co/papers/2606.29526</link>
-      <guid isPermaLink="false">arxiv:2606.29526</guid>
-      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Jing Liang, Hongyao Tang, Yi Ma, Yancheng He, Weixun Wang, Xiaoyang Li, Ju Huang, Wenbo Su, … <i>(+5 more)</i></p>
-<p>Reinforcement learning (RL) has gained growing attention in large language model (LLM) post-training, yet RL training remains fragile and can suffer from instability or collapse. One vital cause is training-inference mismatch: LLM adopts separate inference and training engines for generation efficiency and training precision, which in practice exhibits inconsistent probabilities for the same trajectories on training and inference sides, even with synchronized model parameters. This naturally induces a special type of off-policyness ever existing and poisoning the training. Prior works have made various efforts in addressing the off-policyness to stabilize the training policies under the mismatch. In this paper, we point out the objective misalignment neglected by existing works that an effective update to the policy in the training engine not necessarily ensures the improvement of the inference policy, i.e., the one used in deployment. To this end, we propose a new policy optimization objective for LLM RL, named Monotonic Inference Policy Improvement (MIPI). Following this principle, we introduce Monotonic Inference Policy Update (MIPU), a two-step LLM RL framework that constructs sampler-referenced candidate updates and selectively accepts synchronized candidates using an inference-side gap proxy. Experiments conducted on two model scales under high mismatch show that MIPU improves average reasoning performance and training stability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-28 · <a href='https://huggingface.co/papers/2606.29526'>page</a> · <a href='https://arxiv.org/pdf/2606.29526'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning</title>
-      <link>https://huggingface.co/papers/2606.31825</link>
-      <guid isPermaLink="false">arxiv:2606.31825</guid>
-      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junha Jung, Minbyul Jeong, Suhyeon Lim, Sungwook Jung, Jaehoon Yun, Taeyun Roh, Mujeen Sung, Jaewoo Kang, … <i>(+1 more)</i></p>
-<p>Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or sequence-level preferences. This suffers from sparse credit assignment, making it difficult to optimize the reasoning process essential for clinical applications. Our analysis reveals that cascading errors from early-stage reasoning failures are a leading cause of incorrect predictions in medical visual question answering (VQA) benchmarks. Motivated by this, we propose Medical Reasoning-aware Policy Optimization (MRPO), an RL algorithm that incorporates step-wise process rewards. When the final answer is incorrect, MRPO assigns exponentially larger penalties to tokens in earlier invalid reasoning steps, breaking failure cascades without compromising successful paths. Across three multimodal LLM backbones, MRPO consistently outperforms standard GRPO and a recent RL baseline, and on Qwen3-VL-8B-Instruct even surpasses substantially larger medical MLLMs such as HuatuoGPT-Vision-34B by 2.79 points. Moreover, MRPO reduces early-stage reasoning failures from 64.0% to 13.0%, showing that targeted mitigation of cascading failures improves both reasoning quality and final answer accuracy. Our code is available at https://github.com/dmis-lab/MRPO</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-30 · <a href='https://huggingface.co/papers/2606.31825'>page</a> · <a href='https://arxiv.org/pdf/2606.31825'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Contrastive Deep Learning Reveals Age Biomarkers in Histopathological Skin Biopsies</title>
-      <link>https://arxiv.org/abs/2411.16956</link>
-      <guid isPermaLink="false">arxiv:2411.16956</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>eess.IV</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Imperial College — Samir Bhatt</p>
-<p><b>Authors:</b> Kaustubh Chakradeo, Pernille Nielsen, Lise Mette Rahbek Gjerdrum, Gry Sahl Hansen, David A Duchêne, Laust H Mortensen, Majken K Jensen, Samir Bhatt</p>
-<p>As global life expectancy increases, so does the burden of chronic diseases, yet individuals exhibit considerable variability in the rate at which they age. Identifying biomarkers that distinguish fast from slow ageing is crucial for understanding the biology of ageing, enabling early disease detection, and improving prevention strategies. Using contrastive deep learning, we show that skin biopsy images alone are sufficient to determine an individual&#x27;s age. We then use visual features in histopathology slides of the skin biopsies to construct a novel biomarker of ageing. By linking with comprehensive health registers in Denmark, we demonstrate that visual features in histopathology slides of skin biopsies predict mortality and the prevalence of chronic age-related diseases. Our work highlights how routinely collected health data can provide additional value when used together with deep learning, by creating a new biomarker for ageing which can be actively used to determine mortality over time.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.IV, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-07-01 · <a href='https://arxiv.org/abs/2411.16956'>page</a> · <a href='https://arxiv.org/pdf/2411.16956'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>A validity-guided workflow for robust large language model research in psychology</title>
-      <link>https://arxiv.org/abs/2507.04491</link>
-      <guid isPermaLink="false">arxiv:2507.04491</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.HC</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.CY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Zhicheng Lin</p>
-<p><b>Authors:</b> Zhicheng Lin</p>
-<p>Large language models (LLMs) are rapidly being integrated into psychological research as research tools, evaluation targets, human simulators, and cognitive models. However, recent evidence reveals severe measurement unreliability: Personality assessments collapse under factor analysis, moral preferences reverse with punctuation changes, and theory-of-mind accuracy varies widely with trivial rephrasing. These &quot;measurement phantoms&quot;--statistical artifacts masquerading as psychological phenomena--threaten the validity of a growing body of research. Guided by the dual-validity framework that integrates psychometrics with causal inference, we present a six-stage workflow that scales validity requirements to research ambition--using LLMs to code text requires basic reliability and accuracy, while claims about psychological properties demand comprehensive construct validation. Researchers must (1) explicitly define their research goal and corresponding validity requirements, (2) develop and validate computational instruments through psychometric testing, (3) design experiments that control for computational confounds, (4) execute protocols with transparency, (5) analyze data using methods appropriate for non-independent observations, and (6) report findings within demonstrated boundaries and use results to refine theory. We illustrate the workflow through an example of model evaluation--&quot;LLM selfhood&quot;--showing how systematic validation can distinguish genuine computational phenomena from measurement artifacts. By establishing validated computational instruments and transparent practices, this workflow provides a path toward building a robust empirical foundation for AI psychology research.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.CL, cs.CY · <b>arXiv submitted:</b> 2025-07-06 · <a href='https://arxiv.org/abs/2507.04491'>page</a> · <a href='https://arxiv.org/pdf/2507.04491'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
