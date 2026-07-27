@@ -5,8 +5,44 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Sun, 26 Jul 2026 06:31:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 06:57:13 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>TRW: TRACE-RealWorld---An Auditable Consistency Contract for World Models as Materialized Views</title>
+      <link>https://arxiv.org/abs/2607.21910</link>
+      <guid isPermaLink="false">arxiv:2607.21910</guid>
+      <pubDate>Mon, 27 Jul 2026 06:57:13 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.DB</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Edward Y. Chang</p>
+<p><b>Authors:</b> Edward Y. Chang</p>
+<p>TRACE-RealWorld addresses a core data-management problem: maintaining an actionable materialized view over a continuously changing physical world when reads of the base state are priced, delayed, heterogeneous, and fallible. Its data-management contributions are a commitment-level validity abstraction for materialized predictions; consequence-conditioned adaptive view maintenance; transaction-style, dependency-scoped compensation for commitments invalidated after authorization; and append-only provenance supporting exact replay. The work builds directly on materialized-view maintenance, adaptive stream synchronization, transaction recovery, sagas, data freshness, and provenance. The end-to-end Flood-SAR evaluation treats sensing as physical data acquisition and measures freshness, verification cost, stale reads, recovery scope, restoration failure, and replayability through six pre-registered questions with held-out seeds. The contribution is therefore not a new predictive model, but a consistency, recovery, and accountability contract for deploying learned world representations as operational data systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.DB · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://arxiv.org/abs/2607.21910'>page</a> · <a href='https://arxiv.org/pdf/2607.21910'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Trajectory-Regularized Stochastic Optimal Control via KL Divergence</title>
+      <link>https://arxiv.org/abs/2607.22201</link>
+      <guid isPermaLink="false">arxiv:2607.22201</guid>
+      <pubDate>Mon, 27 Jul 2026 06:57:13 GMT</pubDate>
+      <category>eess.SY</category>
+      <category>cs.LG</category>
+      <category>cs.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Koushil Sreenath</p>
+<p><b>Authors:</b> Mintae Kim, Koushil Sreenath</p>
+<p>We introduce trajectory-regularized stochastic optimal control (TRSOC), which augments standard stochastic optimal control (SOC) with a Kullback--Leibler (KL) divergence between controlled and reference trajectory distributions. Using Girsanov&#x27;s theorem, the trajectory KL reduces to a quadratic drift mismatch penalty, yielding a modified running cost that preserves the dynamic programming (DP) structure. We derive the corresponding Hamilton--Jacobi--Bellman (HJB) equation and characterize the optimal policy. In the linear-quadratic (LQ) setting, the formulation admits a closed-form solution with an augmented control cost. Experiments show that the regularization parameter induces a trade-off between performance-driven and reference-preserving behavior, including cases with reference dynamics learned from offline data.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.LG, cs.SY · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://arxiv.org/abs/2607.22201'>page</a> · <a href='https://arxiv.org/pdf/2607.22201'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation</title>
+      <link>https://huggingface.co/papers/2607.21553</link>
+      <guid isPermaLink="false">arxiv:2607.21553</guid>
+      <pubDate>Mon, 27 Jul 2026 06:57:13 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junsong Chen, Jincheng Yu, Yitong Li, Shuchen Xue, Haozhe Liu, Jingyu Xin, Yuyang Zhao, Tian Ye, … <i>(+7 more)</i></p>
+<p>We introduce SANA-Video 2.0, a hybrid video diffusion transformer instantiated at 5B and 14B scales under a unified architecture. Designed to generate high-quality video up to 720p on a single GPU, SANA-Video 2.0 matches full-softmax video DiTs in quality while retaining the favorable long-sequence scaling of linear attention. To avoid quadratic attention throughout, Hybrid Linear-Softmax Attention combines gated linear attention for O(N)-dominated mixing with periodic gated-softmax anchors at a 3:1 ratio, restoring the full-rank token interactions that pure linear attention lacks. To propagate these refreshed representations across depth, Block Attention Residuals (AttnRes) route completed block summaries into later linear layers, enabling anchor-feature reuse and boosting deep-layer effective rank by ~12%. Through from-scratch training, SANA-Video 2.0 learns the complete hybrid directly rather than linearizing pretrained models, with reduced-resolution proxy studies establishing 25% softmax as the optimal quality-efficiency trade-off. With 40-step sampling, SANA-Video 2.0 achieves a VBench score of 84.30 in 13.2s at 480p on a single H100, remaining competitive with far larger softmax video DiTs at a fraction of the latency. Its compiled DiT forward pass is 3.2x faster than a matched full-softmax baseline at 720p/60s, a gap that expands with video duration. Furthermore, full-stack Sol-Engine optimization (kernel fusion, caching, and sparse attention) accelerates this hardware-friendly backbone by a further 3.58x, bringing the 5B pipeline to 13.06s at 720p/5s and making it 120x faster than Wan 2.2-A14B on one H100. Overall, our hybrid design recovers softmax-level expressiveness at substantially reduced cost, unlocking scalable long, high resolution video generation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2607.21553'>page</a> · <a href='https://arxiv.org/pdf/2607.21553'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>NVIDIA-labs OO Agents: Native Python Object-Oriented Agents</title>
       <link>https://huggingface.co/papers/2607.20709</link>
@@ -2253,39 +2289,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Apple ML Research</p>
 <p>Sparse Mixture-of-Experts (MoE) architectures route each token through a subset of experts at each layer independently. We propose viewing MoE computation through the lens of expert pathsâthe sequence of expert selections a token makes across all layers. This perspective reveals that, despite N^L possible paths for N experts across L layers, tokens in practice cluster into a small fraction of paths that align with linguistic function, yet the vast majority of paths remain unexplored, representing a statistical inefficiency. This motivates architectures that constrain the effective path spaceâ¦</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/path-constrained-mixture-experts'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>TopoPrimer: The Missing Topological Context in Forecasting Models</title>
-      <link>https://machinelearning.apple.com/research/topoprimer-topological-context</link>
-      <guid isPermaLink="false">apple_ml:196da7ba81</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>We introduce TopoPrimer, a framework that makes the global topological structure of the series population an explicit input to any forecasting model. TopoPrimer improves accuracy across diverse domains, stabilizes forecasts under seasonal demand spikes, and closes the cold-start gap. Precomputed once per domain via persistent homology and spectral sheaf coordinates, TopoPrimer deploys per token for fully-trained models and as a lightweight adapter for pre-trained backbones. Of these two components, sheaf coordinates are the primary accuracy driver. Across four public benchmarks on Chronos andâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/topoprimer-topological-context'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Scaling Properties of Continuous Diffusion Spoken Language Models</title>
-      <link>https://machinelearning.apple.com/research/scaling-properties-continuous-diffusion</link>
-      <guid isPermaLink="false">apple_ml:6592fdcf45</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Speech-only spoken language models (SLMs) lag behind text and text-speech models in performance, with recent discrete autoregressive (AR) SLMs indicating significant computational and data demands to match text models. Since discretizing continuous speech for AR creates bottlenecks, we explore whether continuous diffusion (CD) SLM is more viable. To quantify the SLMs linguistic quality, we introduce the phoneme Jensen-Shannon divergence (pJSD) metric. Our analysis reveals CD SLMs, mirroring AR behavior, exhibit scaling laws for validation loss and pJSD, and show optimal token-to-parameterâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/scaling-properties-continuous-diffusion'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Understanding Annotator Safety Policy with Interpretability</title>
-      <link>https://machinelearning.apple.com/research/annotator-safety-policy-interpretability</link>
-      <guid isPermaLink="false">apple_ml:0afff12e7c</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Safety policies define what constitutes safe and unsafe AI outputs, guiding data annotation and model development. However, annotation disagreement is pervasive and can stem from multiple sources such as operational failures (annotators misunderstand or misexecute the task), policy ambiguity (policy wording leaves room for interpretation), or value pluralism (different annotators hold different perspectives on safety). Distinguishing these sources matters. For example, operational failures call for quality control, ambiguity calls for policy clarification, and pluralism calls for deliberationâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/annotator-safety-policy-interpretability'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>

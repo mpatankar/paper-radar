@@ -5,8 +5,32 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sun, 26 Jul 2026 06:31:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 06:57:13 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Trajectory-Regularized Stochastic Optimal Control via KL Divergence</title>
+      <link>https://arxiv.org/abs/2607.22201</link>
+      <guid isPermaLink="false">arxiv:2607.22201</guid>
+      <pubDate>Mon, 27 Jul 2026 06:57:13 GMT</pubDate>
+      <category>eess.SY</category>
+      <category>cs.LG</category>
+      <category>cs.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Koushil Sreenath</p>
+<p><b>Authors:</b> Mintae Kim, Koushil Sreenath</p>
+<p>We introduce trajectory-regularized stochastic optimal control (TRSOC), which augments standard stochastic optimal control (SOC) with a Kullback--Leibler (KL) divergence between controlled and reference trajectory distributions. Using Girsanov&#x27;s theorem, the trajectory KL reduces to a quadratic drift mismatch penalty, yielding a modified running cost that preserves the dynamic programming (DP) structure. We derive the corresponding Hamilton--Jacobi--Bellman (HJB) equation and characterize the optimal policy. In the linear-quadratic (LQ) setting, the formulation admits a closed-form solution with an augmented control cost. Experiments show that the regularization parameter induces a trade-off between performance-driven and reference-preserving behavior, including cases with reference dynamics learned from offline data.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.LG, cs.SY · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://arxiv.org/abs/2607.22201'>page</a> · <a href='https://arxiv.org/pdf/2607.22201'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation</title>
+      <link>https://huggingface.co/papers/2607.21553</link>
+      <guid isPermaLink="false">arxiv:2607.21553</guid>
+      <pubDate>Mon, 27 Jul 2026 06:57:13 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junsong Chen, Jincheng Yu, Yitong Li, Shuchen Xue, Haozhe Liu, Jingyu Xin, Yuyang Zhao, Tian Ye, … <i>(+7 more)</i></p>
+<p>We introduce SANA-Video 2.0, a hybrid video diffusion transformer instantiated at 5B and 14B scales under a unified architecture. Designed to generate high-quality video up to 720p on a single GPU, SANA-Video 2.0 matches full-softmax video DiTs in quality while retaining the favorable long-sequence scaling of linear attention. To avoid quadratic attention throughout, Hybrid Linear-Softmax Attention combines gated linear attention for O(N)-dominated mixing with periodic gated-softmax anchors at a 3:1 ratio, restoring the full-rank token interactions that pure linear attention lacks. To propagate these refreshed representations across depth, Block Attention Residuals (AttnRes) route completed block summaries into later linear layers, enabling anchor-feature reuse and boosting deep-layer effective rank by ~12%. Through from-scratch training, SANA-Video 2.0 learns the complete hybrid directly rather than linearizing pretrained models, with reduced-resolution proxy studies establishing 25% softmax as the optimal quality-efficiency trade-off. With 40-step sampling, SANA-Video 2.0 achieves a VBench score of 84.30 in 13.2s at 480p on a single H100, remaining competitive with far larger softmax video DiTs at a fraction of the latency. Its compiled DiT forward pass is 3.2x faster than a matched full-softmax baseline at 720p/60s, a gap that expands with video duration. Furthermore, full-stack Sol-Engine optimization (kernel fusion, caching, and sparse attention) accelerates this hardware-friendly backbone by a further 3.58x, bringing the 5B pipeline to 13.06s at 720p/5s and making it 120x faster than Wan 2.2-A14B on one H100. Overall, our hybrid design recovers softmax-level expressiveness at substantially reduced cost, unlocking scalable long, high resolution video generation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2607.21553'>page</a> · <a href='https://arxiv.org/pdf/2607.21553'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>NVIDIA-labs OO Agents: Native Python Object-Oriented Agents</title>
       <link>https://huggingface.co/papers/2607.20709</link>
@@ -2272,28 +2296,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Qizhi Pei, Zhimeng Zhou, Yi Duan, Yiyang Zhao, Wei Li, Han Guo, Liang He, Chengping Li, … <i>(+5 more)</i></p>
 <p>We present BioMatrix, the first multimodal foundation model that natively integrates sequences, structures, and natural language for both molecules and proteins within a single decoder-only architecture. Existing biological foundation models pursue native multimodality and broad entity coverage separately: those that fuse multiple modalities under a shared objective remain confined to a single entity type, while those spanning multiple entity types either omit explicit structural modeling or rely on adapter-based designs in which the model cannot natively generate the very modalities it can read. BioMatrix closes this gap by mapping molecular sequences (supporting both SMILES and SELFIES notations), molecular structures, protein sequences, protein structures, and natural language into a shared discrete token space through a unified tokenization scheme, so that all modalities are consumed and produced uniformly under a single next-token prediction objective -- without external encoders, projection adapters, or modality-specific output heads. Built upon the Qwen3 language model (1.7B and 4B), BioMatrix is continually pretrained on 304.4 billion tokens spanning general and domain-specific text, sequence and structure views of molecules and proteins, and cross-modal corpora that interleave biomolecular entities with scientific text and link distinct entities through molecule-protein and protein-protein interaction data. After tuning on a comprehensive suite of downstream applications covering 80 tasks across 6 categories -- encompassing single-entity and multi-entity understanding and generation tasks across and within modalities -- BioMatrix achieves state-of-the-art or competitive performance on 77 out of 80 tasks, demonstrating that a single, natively multimodal generalist model can effectively match or surpass specialized approaches across a wide range of biological tasks.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-20 · <a href='https://huggingface.co/papers/2606.22138'>page</a> · <a href='https://arxiv.org/pdf/2606.22138'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding</title>
-      <link>https://huggingface.co/papers/2606.21906</link>
-      <guid isPermaLink="false">arxiv:2606.21906</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xuanming Zhang, Sining Zhoubian, Yuxuan Chen, Tianyi Tang, An Yang, Sean Du, Chujie Zheng, Fei Huang, … <i>(+4 more)</i></p>
-<p>Autoregressive generation in large language models (LLMs) conventionally decodes from the final layer, assuming that deeper representations yield more reliable next-token predictions. We revisit this assumption by revealing a recurring Guess-Refine-Perturb dynamic: early layers form coarse guesses, intermediate layers refine reasoning-relevant semantics, and final layers can perturb these refined predictions toward generic or alignment-preferred tokens. We introduce Confident Decoding, a training-free decoding strategy that dynamically selects the most reliable near-final layer through entropy-guided conservative backward search. We further provide a theoretical formulation of layer selection as an optimal stopping problem, showing that under bounded projection noise and dominant late-stage alignment perturbation, our search rule filters perturbation while bounding the loss relative to the oracle refinement layer. Experiments across dense and Mixture-of-Experts LLMs demonstrate consistent gains on challenging reasoning benchmarks, including GPQA-Diamond, Omni-MATH, and HLE, with zero memory overhead and less than 2% latency increase. These results suggest dynamically bypassing final-layer perturbations can unlock stronger reasoning behavior from aligned LLMs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-20 · <a href='https://huggingface.co/papers/2606.21906'>page</a> · <a href='https://arxiv.org/pdf/2606.21906'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MemGUI-Agent: An End-to-End Long-Horizon Mobile GUI Agent with Proactive Context Management</title>
-      <link>https://huggingface.co/papers/2606.19926</link>
-      <guid isPermaLink="false">arxiv:2606.19926</guid>
-      <pubDate>Wed, 24 Jun 2026 05:20:33 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Guangyi Liu, Gao Wu, Congxiao Liu, Pengxiang Zhao, Liang Liu, Mading Li, Qi Zhang, Mengyan Wang, … <i>(+3 more)</i></p>
-<p>MLLM-based mobile GUI agents have made substantial progress on short-horizon tasks, yet remain unreliable on long-horizon tasks that require retaining intermediate facts across many steps and app transitions. We attribute this limitation to ReAct-style prompting, which passively accumulates per-step records, leading to prompt explosion and dilution of critical cross-app facts. To address this, we introduce MemGUI-Agent, an end-to-end long-horizon mobile GUI agent with proactive context management. MemGUI-Agent is built on Context-as-Action (ConAct), which casts context management as first-class actions emitted by the same policy that selects UI actions. Instead of passively appending history, ConAct maintains three structured context fields: folded action history, folded UI state, and recent step record, preserving critical UI facts while keeping context compact. To make proactive context management learnable across model scales, we construct MemGUI-3K, a 2,956-trajectory dataset with full ConAct annotations for supervised training and offline analysis. Training an 8B model on MemGUI-3K produces MemGUI-8B-SFT, an 8B MemGUI-Agent that achieves the best open-data 8B performance on MemGUI-Bench and generalizes to the out-of-distribution MobileWorld benchmark. Code, data, and trained models will be released at https://memgui-agent.github.io/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.19926'>page</a> · <a href='https://arxiv.org/pdf/2606.19926'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
