@@ -5,8 +5,33 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 27 Jul 2026 06:57:13 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 06:21:21 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Quantum Hamiltonian Embedding of Images for Data Reuploading Classifiers</title>
+      <link>https://arxiv.org/abs/2407.14055</link>
+      <guid isPermaLink="false">arxiv:2407.14055</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>quant-ph</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Peiyong Wang</p>
+<p><b>Authors:</b> Peiyong Wang, Casey R. Myers, Lloyd C. L. Hollenberg, Udaya Parampalli</p>
+<p>When applying quantum computing to machine learning tasks, one of the first considerations is the design of the quantum machine learning model itself. Conventionally, the design of quantum machine learning algorithms relies on the ``quantisation&quot; of classical learning algorithms, such as using quantum linear algebra to implement important subroutines of classical algorithms, if not the entire algorithm, seeking to achieve quantum advantage through possible run-time accelerations brought by quantum computing. However, recent research has started questioning whether quantum advantage via speedup is the right goal for quantum machine learning [1]. Research also has been undertaken to exploit properties that are unique to quantum systems, such as quantum contextuality, to better design quantum machine learning models [2]. In this paper, we take an alternative approach by incorporating the heuristics and empirical evidences from the design of classical deep learning algorithms to the design of quantum neural networks. We first construct a model based on the data reuploading circuit [3] with the quantum Hamiltonian data embedding unitary [4]. Through numerical experiments on images datasets, including the famous MNIST and FashionMNIST datasets, we demonstrate that our model outperforms the quantum convolutional neural network (QCNN)[5] by a large margin (up to over 40% on MNIST test set). Based on the model design process and numerical results, we then laid out six principles for designing quantum machine learning models, especially quantum neural networks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> quant-ph, cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2024-08-01 · <a href='https://arxiv.org/abs/2407.14055'>page</a> · <a href='https://arxiv.org/pdf/2407.14055'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DataPrep-Bench: Benchmarking LLMs as Training Data Preparators</title>
+      <link>https://huggingface.co/papers/2607.20465</link>
+      <guid isPermaLink="false">arxiv:2607.20465</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Hao Liang, Qifeng Cai, Yibo Lin, Jianzhuo Du, Qifeng Xia, Sizhe Qiu, Linzhuang Sun, Meiyi Qiang, … <i>(+7 more)</i></p>
+<p>The quality of training data fundamentally determines the capabilities of large language models (LLMs), yet no unified benchmark exists to measure how well LLMs, agents, and data-centric workflows actually prepare training data end to end. We view LLM-driven data preparation as comprising two complementary capabilities: data construction, which transforms raw sources into supervised training data, and data quality evaluation, which predicts the training value of candidate datasets before downstream training; throughout, &quot;quality&quot; refers to downstream training utility rather than surface-level textual properties. We introduce DataPrep-Bench, the first unified benchmark that jointly evaluates both capabilities under a shared downstream-grounded protocol over six domains and multiple base models. For data construction, methods consume identical raw sources and are scored by fine-tuning a base model on their outputs jointly with Dolly-15k; alongside this track we release Data-Construction-Skill, a skill-guided agent that lifts the Dolly-only baseline by nearly 20 points absolute on Llama-3.1-8B Finance and is competitive with the strongest agent- and DataFlow-based methods in knowledge-extraction-dense domains. For data quality evaluation, scoring functions are scored by Pearson correlation with downstream performance on a shared candidate pool; we release the Distributional Alignment Score (DAS), a distribution-based evaluator that uses MMD between a candidate dataset and a domain proxy. DAS attains the strongest cross-model correlation in four of six domains and is the only metric clearing r &gt; 0.70 simultaneously in Math, Science, and Medical, outperforming existing quality-, diversity-, and heuristic-based evaluators. DataPrep-Bench provides a unified, downstream-grounded framework for measuring progress on both capabilities as co-equal targets of LLM-driven data preparation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2607.20465'>page</a> · <a href='https://arxiv.org/pdf/2607.20465'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>MELLA: Bridging Linguistic Capability and Cultural Groundedness for Low-Resource Language MLLMs</title>
       <link>https://arxiv.org/abs/2508.05502</link>
@@ -2387,33 +2412,6 @@
 <p><b>Authors:</b> Haosong Peng, Hao Li, Jiaqi Chen, Yuhao Pan, Runmao Yao, Yalun Dai, Fushuo Huo, Fangzhou Hong, … <i>(+6 more)</i></p>
 <p>While spatial foundation models have demonstrated impressive performance on standard datasets, a critical question remains: are they truly all-round players capable of generalizing robustly across diverse downstream tasks, arbitrary viewpoints, shifting scene domains, varying input densities, and specific hardware constraints? Answering this overarching question requires a holistic assessment, yet current models are mainly evaluated on specific domains for which they were specifically designed or trained. Such evaluations are intrinsically limited by narrow paradigm coverage, limited scene domains, and arbitrary frame sampling, making it fundamentally difficult to assess their true generalization capabilities. To address this gap, we present SpatialBench, a cross-paradigm, domain-diverse benchmark for spatial foundation models with deterministic sampling. SpatialBench features unprecedented scale and rigorous deterministic design, comprising 19 datasets and 546 scenes across 5 diverse spatial domains. It comprehensively evaluates 41 models across 6 paradigms on 5 task suites under 4 different input density settings. Our extensive evaluation reveals that current models are not yet all-round players, and uncovers crucial insights for future advancement. Specifically, we demonstrate that full-context attention maximizes accuracy while bounded-memory strategies unlock long-sequence scalability. Moreover, our empirical evaluations in challenging embodied and egocentric tasks demonstrate that strict domain alignment and high data quality are far more critical to performance than simple dataset scaling. Furthermore, to address the largest data gap identified in our analysis, we go beyond evaluation by introducing a large-scale dataset, DA-Next-5M, and a strong baseline model, DA-Next, pushing the boundaries of spatial representation learning.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://huggingface.co/papers/2605.27367'>page</a> · <a href='https://arxiv.org/pdf/2605.27367'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Uni-DPO: A Unified Paradigm for Dynamic Preference Optimization of LLMs</title>
-      <link>https://arxiv.org/abs/2506.10054</link>
-      <guid isPermaLink="false">arxiv:2506.10054</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> CUHK, MIT, Peking U — Min Zhang</p>
-<p><b>Authors:</b> Shangpin Peng, Weinong Wang, Zhuotao Tian, Senqiao Yang, Xing Wu, Haotian Xu, Chengquan Zhang, Takashi Isobe, … <i>(+2 more)</i></p>
-<p>Direct Preference Optimization (DPO) has emerged as a cornerstone of reinforcement learning from human feedback (RLHF) due to its simplicity and efficiency. However, existing DPO-based methods typically treat all preference pairs equally, overlooking substantial variations in data quality and learning difficulty, which leads to inefficient data utilization and suboptimal performance. To address this limitation, we propose Uni-DPO, a unified dynamic preference optimization framework that jointly considers (a) the inherent quality of preference pairs and (b) the model&#x27;s evolving performance during training. By adaptively reweighting samples based on both factors, Uni-DPO enables more effective use of preference data and achieves superior performance. Extensive experiments across models and benchmarks demonstrate the effectiveness and generalization of Uni-DPO. On textual tasks, Gemma-2-9B-IT fine-tuned with Uni-DPO surpasses the leading LLM, Claude 3 Opus, by 6.7 points on Arena-Hard. On mathematical and multimodal tasks, Uni-DPO consistently outperforms baseline methods across all benchmarks, providing strong empirical evidence of its effectiveness and robustness.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-05-23 · <a href='https://arxiv.org/abs/2506.10054'>page</a> · <a href='https://arxiv.org/pdf/2506.10054'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MCPXKIT: The Unified Toolkit for Analyzing Model Context Protocol Security</title>
-      <link>https://arxiv.org/abs/2508.12538</link>
-      <guid isPermaLink="false">arxiv:2508.12538</guid>
-      <pubDate>Tue, 26 May 2026 05:21:56 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <category>cs.SE</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich, Tsinghua — Sheng Wen</p>
-<p><b>Authors:</b> Yongjian Guo, Puzhuo Liu, Wanlun Ma, Zehang Deng, Xiaogang Zhu, Peng Di, Xi Xiao, Sheng Wen</p>
-<p>The Model Context Protocol (MCP) has emerged as a universal standard that enables AI agents to seamlessly connect with external tools, significantly enhancing their functionality. However, while MCP brings notable benefits, it also introduces significant vulnerabilities, such as Tool Poisoning Attacks (TPA), where hidden malicious instructions exploit the sycophancy of large language models (LLMs) to manipulate agent behavior. Despite these risks, current academic research on MCP security remains limited, with most studies focusing on narrow or qualitative analyses that fail to capture the diversity of real-world threats. To address this gap, we present the MCP eXploit Toolkit (MCPXKIT), which categorizes and implements 31 distinct attack methods under four key classifications: direct tool injection, indirect tool injection, malicious user attacks, and LLM inherent attack. We further conduct a quantitative analysis of the efficacy of each attack. Our experiments reveal key insights into MCP vulnerabilities, including agents&#x27; blind reliance on tool descriptions, sensitivity to file-based attacks, chain attacks exploiting shared context, and difficulty distinguishing external data from executable commands. These insights, validated through attack experiments, underscore the urgency for robust defense strategies and informed MCP design. Our contributions include 1) constructing a comprehensive MCP attack taxonomy, 2) introducing a unified attack framework, MCPXKIT, and 3) conducting empirical vulnerability analysis to enhance MCP security mechanisms. This work provides a foundational framework, supporting the secure evolution of MCP ecosystems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI, cs.SE · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://arxiv.org/abs/2508.12538'>page</a> · <a href='https://arxiv.org/pdf/2508.12538'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

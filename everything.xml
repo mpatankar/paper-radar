@@ -5,8 +5,231 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Mon, 27 Jul 2026 06:57:13 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 06:21:21 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Quantum Hamiltonian Embedding of Images for Data Reuploading Classifiers</title>
+      <link>https://arxiv.org/abs/2407.14055</link>
+      <guid isPermaLink="false">arxiv:2407.14055</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>quant-ph</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Peiyong Wang</p>
+<p><b>Authors:</b> Peiyong Wang, Casey R. Myers, Lloyd C. L. Hollenberg, Udaya Parampalli</p>
+<p>When applying quantum computing to machine learning tasks, one of the first considerations is the design of the quantum machine learning model itself. Conventionally, the design of quantum machine learning algorithms relies on the ``quantisation&quot; of classical learning algorithms, such as using quantum linear algebra to implement important subroutines of classical algorithms, if not the entire algorithm, seeking to achieve quantum advantage through possible run-time accelerations brought by quantum computing. However, recent research has started questioning whether quantum advantage via speedup is the right goal for quantum machine learning [1]. Research also has been undertaken to exploit properties that are unique to quantum systems, such as quantum contextuality, to better design quantum machine learning models [2]. In this paper, we take an alternative approach by incorporating the heuristics and empirical evidences from the design of classical deep learning algorithms to the design of quantum neural networks. We first construct a model based on the data reuploading circuit [3] with the quantum Hamiltonian data embedding unitary [4]. Through numerical experiments on images datasets, including the famous MNIST and FashionMNIST datasets, we demonstrate that our model outperforms the quantum convolutional neural network (QCNN)[5] by a large margin (up to over 40% on MNIST test set). Based on the model design process and numerical results, we then laid out six principles for designing quantum machine learning models, especially quantum neural networks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> quant-ph, cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2024-08-01 · <a href='https://arxiv.org/abs/2407.14055'>page</a> · <a href='https://arxiv.org/pdf/2407.14055'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>CodexGraph: Bridging Large Language Models and Code Repositories via Code Graph Databases</title>
+      <link>https://arxiv.org/abs/2408.03910</link>
+      <guid isPermaLink="false">arxiv:2408.03910</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.SE</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> CUHK, HKUST, NUS, Peking U, Stanford, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Xiangyan Liu, Bo Lan, Zhiyuan Hu, Yang Liu, Zhicheng Zhang, Fei Wang, Michael Shieh, Wenmeng Zhou</p>
+<p>Large Language Models (LLMs) excel in stand-alone code tasks like HumanEval and MBPP, but struggle with handling entire code repositories. This challenge has prompted research on enhancing LLM-codebase interaction at a repository scale. Current solutions rely on similarity-based retrieval or manual tools and APIs, each with notable drawbacks. Similarity-based retrieval often has low recall in complex tasks, while manual tools and APIs are typically task-specific and require expert knowledge, reducing their generalizability across diverse code tasks and real-world applications. To mitigate these limitations, we introduce CodexGraph, a system that integrates LLM agents with graph database interfaces extracted from code repositories. By leveraging the structural properties of graph databases and the flexibility of the graph query language, CodexGraph enables the LLM agent to construct and execute queries, allowing for precise, code structure-aware context retrieval and code navigation. We assess CodexGraph using three benchmarks: CrossCodeEval, SWE-bench, and EvoCodeBench. Additionally, we develop five real-world coding applications. With a unified graph database schema, CodexGraph demonstrates competitive performance and potential in both academic and real-world environments, showcasing its versatility and efficacy in software engineering. Our application demo: https://github.com/modelscope/modelscope-agent/tree/master/apps/codexgraph_agent.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://arxiv.org/abs/2408.03910'>page</a> · <a href='https://arxiv.org/pdf/2408.03910'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Beyond Squared Error: Exploring Loss Design for Enhanced Training of Generative Flow Networks</title>
+      <link>https://arxiv.org/abs/2410.02596</link>
+      <guid isPermaLink="false">arxiv:2410.02596</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Longbo Huang</p>
+<p><b>Authors:</b> Rui Hu, Yifan Zhang, Zhuoran Li, Longbo Huang</p>
+<p>Generative Flow Networks (GFlowNets) are a novel class of generative models designed to sample from unnormalized distributions and have found applications in various important tasks, attracting great research interest in their training algorithms. In general, GFlowNets are trained by fitting the forward flow to the backward flow on sampled training objects. Prior work focused on the choice of training objects, parameterizations, sampling and resampling strategies, and backward policies, aiming to enhance credit assignment, exploration, or exploitation of the training process. However, the choice of regression loss, which can highly influence the exploration and exploitation behavior of the under-training policy, has been overlooked. Due to the lack of theoretical understanding for choosing an appropriate regression loss, most existing algorithms train the flow network by minimizing the squared error of the forward and backward flows in log-space, i.e., using the quadratic regression loss. In this work, we rigorously prove that distinct regression losses correspond to specific divergence measures, enabling us to design and analyze regression losses according to the desired properties of the corresponding divergence measures. Specifically, we examine two key properties: zero-forcing and zero-avoiding, where the former promotes exploitation and higher rewards, and the latter encourages exploration and enhances diversity. Based on our theoretical framework, we propose three novel regression losses, namely, Shifted-Cosh, Linex(1/2), and Linex(1). We evaluate them across three benchmarks: hyper-grid, bit-sequence generation, and molecule generation. Our proposed losses are compatible with most existing training algorithms, and significantly improve the performances of the algorithms concerning convergence speed, sample diversity, and robustness.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-25 · <a href='https://arxiv.org/abs/2410.02596'>page</a> · <a href='https://arxiv.org/pdf/2410.02596'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>A Survey of Graph Transformers: Architectures, Theories and Applications</title>
+      <link>https://arxiv.org/abs/2502.16533</link>
+      <guid isPermaLink="false">arxiv:2502.16533</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> Columbia, Georgia Tech, Tsinghua — Chaohao Yuan</p>
+<p><b>Authors:</b> Chaohao Yuan, Kangfei Zhao, Ercan Engin Kuruoglu, Liang Wang, Tingyang Xu, Wenbing Huang, Deli Zhao, Hong Cheng, … <i>(+1 more)</i></p>
+<p>Graph Transformers (GTs) have demonstrated a strong capability in modeling graph structures by addressing the intrinsic limitations of graph neural networks (GNNs), such as over-smoothing and over-squashing. Recent studies have proposed diverse architectures, enhanced explainability, and practical applications for Graph Transformers. In light of these rapid developments, we conduct a comprehensive review of Graph Transformers, covering aspects such as their architectures, theoretical foundations, and applications. In this survey, we first categorize the architecture of Graph Transformers according to their strategies for processing structural information, including graph tokenization, positional encoding, structure-aware attention, and model ensemble. Then, from the theoretical perspective, we examine the expressivity of Graph Transformers in various discussed architectures and contrast them with other advanced graph learning algorithms to discover their connections. For applications, we organize the literature around four graph organization forms, from relational, geometric, dynamic to heterogeneous. A Practical Guidance table then maps architectural components to these graph forms by adoption frequency, so practitioners can narrow down which design families to consider for a given input structure. Lastly, we will discuss the current challenges and prospective directions in Graph Transformers for potential future research.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://arxiv.org/abs/2502.16533'>page</a> · <a href='https://arxiv.org/pdf/2502.16533'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AutoMat: Enabling Automated Crystal Structure Reconstruction from Microscopy via Agentic Tool Use</title>
+      <link>https://arxiv.org/abs/2505.12650</link>
+      <guid isPermaLink="false">arxiv:2505.12650</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Tsinghua, U Oxford — (senior)</p>
+<p><b>Authors:</b> Yaotian Yang, Yiwen Tang, Yizhe Chen, Xiao Chen, Jiangjie Qiu, Hao Xiong, Haoyu Yin, Zhiyao Luo, … <i>(+9 more)</i></p>
+<p>Reconstructing atomistic crystal structures from a single noisy STEM projection is an ill-posed inverse problem: multiple lattices can explain similar contrast, and purely feed-forward models cannot verify physical validity. We present AutoMat, a failure-aware agentic controller that performs inference-time hypothesis search with closed-loop verification to convert Scanning Transmission Electron Microscopy (STEM) images into simulation-ready crystal structures and downstream properties. AutoMat composes perception and physics modules---pattern-adaptive denoising, physics-guided template retrieval as a state-dependent auxiliary branch, symmetry-constrained atomic reconstruction, and MLIP-based relaxation/validation---and triggers rollback-and-retry when verification fails. For systematic evaluation, we introduce STEM2Mat-Bench, a benchmark dataset containing 450+ annotated samples. Performance is assessed using lattice root-mean-square deviation (RMSD), formation energy mean absolute error (MAE), and structure matching accuracy. Results demonstrate that AutoMat outperforms existing approaches including SOTA models, specialized domain tools, and closed-source multimodal large models. This work establishes a direct pathway from microscopic characterization to atomic-scale modeling, addressing a fundamental challenge in materials science.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-07-26 · <a href='https://arxiv.org/abs/2505.12650'>page</a> · <a href='https://arxiv.org/pdf/2505.12650'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Accelerating Frequency Domain Diffusion Models with Error-Feedback Event-Driven Caching</title>
+      <link>https://arxiv.org/abs/2604.22901</link>
+      <guid isPermaLink="false">arxiv:2604.22901</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua — Dong Liu</p>
+<p><b>Authors:</b> Dong Liu, Yanxuan Yu, Ying Nian Wu</p>
+<p>Diffusion models achieve remarkable success in time series generation. However, slow inference limits their practical deployment. We propose E$^2$-CRF (Error-Feedback Event-Driven Cumulative Residual Feature caching) to accelerate frequency domain diffusion models. Our method exploits two structural properties: (1) spectral localization, where signal energy concentrates in low frequencies, and (2) mirror symmetry, which halves the effective frequency dimension. E$^2$-CRF uses a closed-loop error-feedback system that adaptively caches transformer KV features across diffusion steps. We trigger recomputation using event-driven residual dynamics instead of fixed schedules. Our method selectively recomputes high-energy or rapidly-changing tokens while reusing cached features for stable high-frequency components. E$^2$-CRF achieves ~2.2 speedup while maintaining sample quality. We demonstrate effectiveness on 5 datasets. Our caching strategy naturally aligns with the diffusion process&#x27;s structure-to-detail progression. We include sufficient-condition error and complexity bounds under standard regularity assumptions (Appendix), alongside empirical validation. Our code is available at https://github.com/NoakLiu/FastFourierDiffusion and is also integrated in https://github.com/NoakLiu/FastCache-xDiT.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG · <b>arXiv submitted:</b> 2026-07-26 · <a href='https://arxiv.org/abs/2604.22901'>page</a> · <a href='https://arxiv.org/pdf/2604.22901'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber</title>
+      <link>https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/</link>
+      <guid isPermaLink="false">deepmind:edd884e3eb</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p>Weâre introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-21 · <a href='https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Spatial-IQ: Deconstructing Spatial Intelligence via Hierarchical Capability Tests</title>
+      <link>https://research.nvidia.com/publication/2026-07_spatial-iq-deconstructing-spatial-intelligence-hierarchical-capability-tests</link>
+      <guid isPermaLink="false">nvidia_research:bc08fa472c</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_spatial-iq-deconstructing-spatial-intelligence-hierarchical-capability-tests'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Understanding Emergent Non-Verbal Communication in the Delta Force Competitive Video Game through Multimodal AI Analysis</title>
+      <link>https://research.nvidia.com/publication/2026-07_understanding-emergent-non-verbal-communication-delta-force-competitive-video</link>
+      <guid isPermaLink="false">nvidia_research:5cc4927422</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_understanding-emergent-non-verbal-communication-delta-force-competitive-video'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Towards Field Experiments in Esports Competition</title>
+      <link>https://research.nvidia.com/publication/2026-07_towards-field-experiments-esports-competition</link>
+      <guid isPermaLink="false">nvidia_research:eb69b1af5f</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_towards-field-experiments-esports-competition'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Clustered Codebook Quantization for 2D Gaussian-based Image Compression</title>
+      <link>https://research.nvidia.com/publication/2026-07_clustered-codebook-quantization-2d-gaussian-based-image-compression</link>
+      <guid isPermaLink="false">nvidia_research:eed9b7a55d</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_clustered-codebook-quantization-2d-gaussian-based-image-compression'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Real-time 3D Visualization of Radiance Fields on Light Field Displays</title>
+      <link>https://research.nvidia.com/publication/2026-07_real-time-3d-visualization-radiance-fields-light-field-displays</link>
+      <guid isPermaLink="false">nvidia_research:24f5b7078d</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-07_real-time-3d-visualization-radiance-fields-light-field-displays'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Progress Reward Modeling for Robotic Learning: A Comprehensive Survey</title>
+      <link>https://huggingface.co/papers/2607.21655</link>
+      <guid isPermaLink="false">arxiv:2607.21655</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jianshu Zhang, Keliang Wu, Haoran Lu, Anbang Liu, Ce Zhang, Weijie Yin, Chengxuan Qian, Xiyuan Yang, … <i>(+4 more)</i></p>
+<p>Robotic learning takes place in dynamic environments with large behavior spaces. A terminal success signal only tells the robot whether the task is completed. It does not explain whether the current behavior is making progress, remaining unchanged, or undoing earlier progress. For this reason, recent studies have increasingly explored progress rewards that provide feedback during task execution. However, the current literature lacks a shared framework. Existing methods use different observations, goal specifications, output signals, supervision sources, and evaluation protocols. This makes it difficult to compare them and understand what their results actually validate. In this survey, we provide a unified view of progress reward modeling for robotic learning. We organize the field in three connected steps. We first study the interface of a progress model. This defines the problem from the outside by asking what information the model receives and what form of progress signal it produces. We then move inside the model and study the methods used to construct this signal. This reveals the different assumptions and mechanisms behind progress estimation and reward generation. Finally, we examine the data and benchmarks that support these methods. This shows how progress supervision is obtained and what different evaluations actually measure. Together, these three perspectives connect what a progress model is, how it is built, and how its quality is validated. We further summarize the main limitations of current approaches and discuss future research directions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://huggingface.co/papers/2607.21655'>page</a> · <a href='https://arxiv.org/pdf/2607.21655'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DataPrep-Bench: Benchmarking LLMs as Training Data Preparators</title>
+      <link>https://huggingface.co/papers/2607.20465</link>
+      <guid isPermaLink="false">arxiv:2607.20465</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Hao Liang, Qifeng Cai, Yibo Lin, Jianzhuo Du, Qifeng Xia, Sizhe Qiu, Linzhuang Sun, Meiyi Qiang, … <i>(+7 more)</i></p>
+<p>The quality of training data fundamentally determines the capabilities of large language models (LLMs), yet no unified benchmark exists to measure how well LLMs, agents, and data-centric workflows actually prepare training data end to end. We view LLM-driven data preparation as comprising two complementary capabilities: data construction, which transforms raw sources into supervised training data, and data quality evaluation, which predicts the training value of candidate datasets before downstream training; throughout, &quot;quality&quot; refers to downstream training utility rather than surface-level textual properties. We introduce DataPrep-Bench, the first unified benchmark that jointly evaluates both capabilities under a shared downstream-grounded protocol over six domains and multiple base models. For data construction, methods consume identical raw sources and are scored by fine-tuning a base model on their outputs jointly with Dolly-15k; alongside this track we release Data-Construction-Skill, a skill-guided agent that lifts the Dolly-only baseline by nearly 20 points absolute on Llama-3.1-8B Finance and is competitive with the strongest agent- and DataFlow-based methods in knowledge-extraction-dense domains. For data quality evaluation, scoring functions are scored by Pearson correlation with downstream performance on a shared candidate pool; we release the Distributional Alignment Score (DAS), a distribution-based evaluator that uses MMD between a candidate dataset and a domain proxy. DAS attains the strongest cross-model correlation in four of six domains and is the only metric clearing r &gt; 0.70 simultaneously in Math, Science, and Medical, outperforming existing quality-, diversity-, and heuristic-based evaluators. DataPrep-Bench provides a unified, downstream-grounded framework for measuring progress on both capabilities as co-equal targets of LLM-driven data preparation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://huggingface.co/papers/2607.20465'>page</a> · <a href='https://arxiv.org/pdf/2607.20465'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</title>
+      <link>https://huggingface.co/papers/2607.23588</link>
+      <guid isPermaLink="false">arxiv:2607.23588</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yunlong Lin, Zixu Lin, Zhaohu Xing, Biqiang Li, Chenxin Li, Haonan Wang, Haitao Wu, Hengyu Liu, … <i>(+19 more)</i></p>
+<p>Creative AI is moving from single-step asset generation toward long-horizon multimodal production. Although recent generative models can synthesize high-quality images, videos, audio clips, UI elements, storyboards, slides, and other creative assets, real-world creative work requires more than isolated prompt-output interactions. It involves references, drafts, alternatives, edits, failed attempts, version relations, tool actions, evaluation signals, and human feedback, which together form an evolving project state. Existing prompt-based, chat-based, and node-based generation systems only partially support this state, as they often discard intermediate context, rely on linear conversations, or require manually specified workflows. Recent commercial systems indicate a shift toward agent-assisted creative production, but their closed architectures make it difficult to study how agents represent context, choose tools, revise artifacts, recover from failures, and maintain consistency over time. To address this gap, we introduce JarvisHub, a canvas-native creative agent harness for long-horizon multimodal creation. JarvisHub treats an editable canvas as the user workspace, the agent&#x27;s external memory, action space, and shared project state, representing multimodal artifacts, dependencies, versions, and feedback as typed canvas nodes and links. Through a three-layer architecture of canvas state, protocol bridge, and agent runtime, JarvisHub enables agents to act within an inspectable and editable creative state. This design moves creative agents beyond isolated tool use toward sustained, human-steerable creative automation, where agents can progressively plan, generate, revise, and organize multimodal projects while users remain able to inspect, guide, and intervene throughout the process.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-26 · <a href='https://huggingface.co/papers/2607.23588'>page</a> · <a href='https://arxiv.org/pdf/2607.23588'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search</title>
+      <link>https://huggingface.co/papers/2607.24280</link>
+      <guid isPermaLink="false">arxiv:2607.24280</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junlin Liu, Jiangwang Chen, Zixin Song, Shuaiyu Zhou, Chunji Lv, Hank Wu, Kailin Jiang, Jinyang Wu, … <i>(+3 more)</i></p>
+<p>Agentic search enables large language models to solve knowledge-intensive tasks by interleaving multi-step reasoning with retrieval, yet optimizing this with outcome-based reinforcement learning (RL) provides only sparse supervision. Knowledge distillation can supply denser guidance, and advanced proprietary models with their strong reasoning capabilities are promising teachers. While distilling from proprietary models can densify this supervisory signal, conventional logit-matching is precluded by hidden logits and mismatched tokenizers, whereas raw natural language trajectory imitation transfers superficial stylistic artifacts rather than core reasoning competence. To address the heterogeneous distillation problem and bridge the distribution gap, we propose Multi-Agent Protocol Distillation (MAPD), a joint distillation and RL framework uses a structured, style-normalized protocol as an intermediate representation. An offline multi-agent system (MAS) decomposes each query, retrieves supporting evidence, repairs failed searches, and converts the resulting exploration trace into a JSON protocol containing the task type, reasoning plan, and extractive grounding facts. During training, the protocol is provided only to a privileged branch of the student policy, whose token distributions furnish a dense distillation signal alongside the sparse RL objective. Extensive evaluations across seven QA benchmarks demonstrate that MAPD consistently outperforms competitive distillation and RL, achieving average success rates of 39.4\% on Qwen3-1.7B and 44.4\% on Qwen3-4B. Crucially, the framework generalizes robustly across diverse proprietary teachers while effectively mitigating the student policy from style drift and verbosity degeneration.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://huggingface.co/papers/2607.24280'>page</a> · <a href='https://arxiv.org/pdf/2607.24280'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Kimi K3: Open Frontier Intelligence</title>
+      <link>https://huggingface.co/papers/2607.24653</link>
+      <guid isPermaLink="false">arxiv:2607.24653</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Kimi Team, Tongtong Bai, Yifan Bai, Yiping Bao, M. C., Jianfeng Cai, Xinyuan Cai, Peizhou Cao, … <i>(+395 more)</i></p>
+<p>We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window. Kimi K3 is built on Kimi Delta Attention and Attention Residuals, which improve information flow across sequence length and model depth. Together with Stable LatentMoE, which effectively activates 16 of 896 routed experts per token, and refined training and data recipes, these advances yield an approximately 2.5x improvement in overall scaling efficiency over Kimi K2. Post-training highlights reinforcement learning across general, agentic, and coding domains and multiple reasoning-effort levels, enabling compositional generalization and robust long-horizon execution. At 2.8T scale, Kimi K3 is supported by infrastructure advances in multiple areas: algorithm-system co-design for KDA, perfectly balanced expert-parallel training with efficient memory management, million-token agentic RL with persistent rollout and sandbox states, and deployment innovations. Extensive evaluations show that Kimi K3 achieves frontier-level performance across long-horizon coding, agentic, knowledge, reasoning, and vision tasks. While its overall performance still trails the most powerful proprietary models, namely Claude Fable 5 and GPT-5.6 Sol, Kimi K3 consistently outperforms other open and proprietary models evaluated in our suite. We release the full Kimi K3 model weights to facilitate future research and accelerate the broader deployment and adoption of frontier intelligence.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://huggingface.co/papers/2607.24653'>page</a> · <a href='https://arxiv.org/pdf/2607.24653'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents</title>
+      <link>https://huggingface.co/papers/2607.22798</link>
+      <guid isPermaLink="false">arxiv:2607.22798</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yan Yang, Xiangru Jian, Ziyang Luo, Zirui Zhao, Yutong Dai, Ziji Shi, Hanshu Yan, Jun Hao Liew, … <i>(+3 more)</i></p>
+<p>Computer-use agents are usually improved by strengthening perception: better models for reading a screenshot and choosing where to click. Yet a screenshot is only a lossy rendering of the underlying program state, e.g., the files, application backends, and DOM that hold the task data. Different states can produce the same pixels, while code can inspect and modify that state directly. StateAct is a code-first, multi-agent harness built around this distinction. Its main agent works directly with program state by using code, while a dedicated GUI subagent handles screenshot-and-click interaction on the few subgoals that need it, just 28 of 108 tasks and 1.1% of main-agent steps. The same direct access to program state also supports verification: an independent finish gate double-checks the saved result for structural failures, e.g., output that is missing, unsaved, or written to the wrong path. To stay on track over hundreds of steps, the main agent hands subgoals to fresh subagents, keeping its own context focused. On OSWorld 2.0, StateAct lifts Claude Opus 4.8 from 20.6% to 26.9% on binary success, and from 54.8% to 61.6% on partial success, at ~ 9x lower cost per task than the same model driven by screenshots alone; a code-only variant with no GUI subagent reaches only 45.9% partial, below that screenshot-based baseline&#x27;s 54.8%. In general, grounding action, verification, and memory in state, what we call state-grounding, shifts the main bottleneck from perception toward reasoning: failures depend more on what the agent thinks than on what it sees.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://huggingface.co/papers/2607.22798'>page</a> · <a href='https://arxiv.org/pdf/2607.22798'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills</title>
+      <link>https://huggingface.co/papers/2607.22529</link>
+      <guid isPermaLink="false">arxiv:2607.22529</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS — (senior)</p>
+<p><b>Authors:</b> Siyuan Huang, Pengyu Cheng, Haotian Liu, Tao Chen, Yihao Liu, Jingwei Ni, Shijie Zhou, Ziyi Yang, … <i>(+6 more)</i></p>
+<p>LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability: environment-bound methods obtain precise feedback but confine learning to narrow domains, while open-ended self-generation broadens the task space but lacks reliable verification, allowing misleading rewards to pollute the training loop. We identify agent skills as a powerful middle ground to reconcile this tension: each skill ensures deep, verifiable execution in a specific scenario, while dynamic routing across skills maintains open-ended task variety. Leveraging this insight, we introduce Skill Self-Play (Skill-SP), a co-evolutionary framework comprising a proposer, a solver, and a dynamic skill controller. Orchestrated via a reinforcement learning loop, these components co-evolve in a continuous self-play loop: the proposer generates challenging tasks conditioned on dynamically sampled skills; the solver explores candidate solutions to push its capability boundaries; and the skill controller collects execution feedback to update and expand the skill library. This interactive co-evolution effectively bridges the gap between structured verification and open-ended exploration. Empirical evaluations on tool-use and reasoning benchmarks demonstrate that Skill-SP, serving as a robust evolution engine, consistently pushes the performance ceiling of competent backbones while catalyzing striking turnarounds for initially misaligned models. Our code is available at https://github.com/Qwen-Applications/skill-self-play.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://huggingface.co/papers/2607.22529'>page</a> · <a href='https://arxiv.org/pdf/2607.22529'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GH-ESD: Grounded Hypothesis-Driven Error Slice Discovery for Instance-Level Vision Tasks</title>
+      <link>https://machinelearning.apple.com/research/gh-esd</link>
+      <guid isPermaLink="false">apple_ml:39f2f42ba0</guid>
+      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Systematic failures of vision models on semantically coherent subsets, known as error slices, reveal limitations in robustness and evaluation. Existing slice discovery approaches largely model slices as clusters in representation space or combinations of predefined attributes. While effective for image-level classification, such formulations are insufficient for instance-level tasks such as object detection and segmentation, where failures often arise from contextual relational and spatially grounded visual patterns. We propose GH-ESD (Grounded Hypothesis-Driven Error Slice Discovery), aâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://machinelearning.apple.com/research/gh-esd'>page</a></p>]]></description>
+    </item>
     <item>
       <title>TRW: TRACE-RealWorld---An Auditable Consistency Contract for World Models as Materialized Views</title>
       <link>https://arxiv.org/abs/2607.21910</link>
@@ -2066,229 +2289,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Apple ML Research</p>
 <p>This study focuses on Text-to-Sounding-Video (T2SV) generation, which aims to generate a video with synchronized audio from text, with both modalities aligned to the text conditions. Despite progress in joint audio-video training, two critical challenges remain: (1) text conditioning is a bottleneckâshared captions (TV=TA) trigger modal interference, while a gap persists between dense training captions and concise inference user prompts, and (2) the optimal fusion mechanism for cross-modal feature interaction remains unclear. To address the first challenge, we first propose theâ¦</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/sounding-video-generation'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>DynaMiCS: Fine-Tuning LLMs with Performance Constraints Using Dynamic Mixtures</title>
-      <link>https://machinelearning.apple.com/research/dynamics-fine-tuning-llms</link>
-      <guid isPermaLink="false">apple_ml:2182d4f4bb</guid>
-      <pubDate>Wed, 08 Jul 2026 06:24:07 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Multi-domain fine-tuning of large language models requires improving performance on target domains while preserving performance on constrained domains, such as general knowledge, instruction following, or safety evaluations. Existing data mixing strategies rely on fixed heuristics or adaptive rules that cannot explicitly enforce preservation of such capabilities. We propose DynaMiCS, a dynamic mixture optimizer that casts multi-domain fine-tuning as a constrained optimization problem. At each update, DynaMiCS performs short domain-specific probing runs to estimate a slope matrix of localâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/dynamics-fine-tuning-llms'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>LensVLM: Selective Context Expansion for Compressed Visual Representation of Text</title>
-      <link>https://machinelearning.apple.com/research/lensvlm-context-expansion</link>
-      <guid isPermaLink="false">apple_ml:32887e8251</guid>
-      <pubDate>Wed, 08 Jul 2026 06:24:07 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Vision Language Models (VLMs) offer the exciting possibility of processing text as rendered images, bypassing the need for tokenizing the text into long token sequences. Since VLM image encoders map fixed-size images to a fixed number of visual tokens, varying rendering resolution provides a fine-grained compression knob. However, accuracy deteriorates quickly as compression increases: characters shrink below the vision encoderâs effective resolution, making them indistinguishable. To address this, we propose LensVLM, an inference framework and post-training recipe that enables VLMs to scanâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/lensvlm-context-expansion'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>MT-EditFlow: Reinforcement Learning for Multi-Turn Image Editing with Flow Matching</title>
-      <link>https://machinelearning.apple.com/research/mt-editflow-image-editing</link>
-      <guid isPermaLink="false">apple_ml:710fcc60c8</guid>
-      <pubDate>Wed, 08 Jul 2026 06:24:07 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Recent breakthroughs in instruction-based image editing have captured significant attention, as models are now capable of handling real-world editing demands with the practicality required by everyday users. However, editing models trained primarily for single-turn edits often break down in multi-turn editingâthe natural interactive setting where a user iteratively refines an image based on the modelâs own previous outputs. This failure stems from the all-or-nothing requirement, where a single failed turn compromises the entire sequence, and error propagation, where exposure bias leads toâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/mt-editflow-image-editing'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Weblica: Scalable and Reproducible Training Environments for Visual Web Agents</title>
-      <link>https://machinelearning.apple.com/research/weblica-visual-web-agents</link>
-      <guid isPermaLink="false">apple_ml:0207e53bb4</guid>
-      <pubDate>Wed, 08 Jul 2026 06:24:07 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>The web is complex, open-ended, and constantly changing, making it challenging to scale training data for visual web agents. Existing data collection attempts remain limited to offline trajectories for supervised fine-tuning or a handful of simulated environments for RL training, thus failing to capture web diversity. We propose Weblica (Web Replica), a framework for constructing reproducible and scalable web environments. Our framework leverages 1) HTTP-level caching to capture and replay stable visual states while preserving interactive behavior and 2) LLM-based environment synthesisâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/weblica-visual-web-agents'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>FlowEval: Reference-Based Evaluation of Generated User Interfaces</title>
-      <link>https://machinelearning.apple.com/research/floweval-ui-evaluation</link>
-      <guid isPermaLink="false">apple_ml:9a9563df46</guid>
-      <pubDate>Wed, 08 Jul 2026 06:24:07 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>While large language models (LLMs) and coding agents are often applied to user interface (UI) development, developers find it difficult to reliably assess their proficiency in visual and interaction design. Existing evaluations either rely on human experts, who can accurately assess usability by testing critical flows but are slow and costly, or on automated judges, which are scalable but less accurate and opaque. We present FlowEval, a reference-based framework that measures whether a generated UI supports realistic interaction flows by comparing navigation traces from real websites to tracesâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/floweval-ui-evaluation'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>A Single Neuron Is Sufficient to Bypass Safety Alignment in Large Language Models</title>
-      <link>https://machinelearning.apple.com/research/single-neuron-safety-alignment</link>
-      <guid isPermaLink="false">apple_ml:1fb59e7903</guid>
-      <pubDate>Wed, 08 Jul 2026 06:24:07 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Safety alignment in language models operates through two mechanistically distinct systems: refusal neurons that gate whether harmful knowledge is expressed, and concept neurons that encode the harmful knowledge itself. By targeting a single neuron in each system, we demonstrate both directions of failure â bypassing safety on explicit harmful requests via suppression, and inducing harmful content from innocent prompts via amplification â across seven models spanning two families and 1.7B to 70B parameters, without any training or prompt engineering. Our findings suggest that safety alignmentâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/single-neuron-safety-alignment'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Graph Unitary Message Passing</title>
-      <link>https://arxiv.org/abs/2403.11199</link>
-      <guid isPermaLink="false">arxiv:2403.11199</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Quanming Yao</p>
-<p><b>Authors:</b> Haiquan Qiu, Quanming Yao</p>
-<p>Unitarity is a useful principle for stabilizing deep neural networks, but in graph neural networks (GNNs) instability is induced not only by learnable parameters but also by the graph propagation operator. Motivated by this distinction, we propose Graph Unitary Message Passing (GUMP), a message-passing framework that uses a unitary propagation operator on a transformed graph to avoid graph-induced exponential decay under repeated propagation. GUMP combines (i) a graph transformation that maps an input graph to an Eulerian line-graph construction admitting unitary adjacency matrices, and (ii) a practical unitary projection procedure based on Newton-Schulz iteration. Theoretical analysis clarifies that, under standard analysis assumptions, unitary propagation keeps the graph-propagation term depth-stable, while vanilla normalized propagation exhibits exponential decay in its non-trivial spectral components. Across synthetic long-range tasks, TUDataset benchmarks, and LRGB datasets, GUMP improves over vanilla message passing and achieves competitive or superior performance against strong baselines. Code is available at https://github.com/ucker/gump_code.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-07-04 · <a href='https://arxiv.org/abs/2403.11199'>page</a> · <a href='https://arxiv.org/pdf/2403.11199'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>TaoSR-AGRL: Adaptive Guided Reinforcement Learning Framework for E-commerce Search Relevance</title>
-      <link>https://arxiv.org/abs/2510.08048</link>
-      <guid isPermaLink="false">arxiv:2510.08048</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.IR</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
-<p><b>Authors:</b> Jianhui Yang, Yiming Jin, Pengkun Jiao, Chenhe Dong, Zerui Huang, Shaowei Yao, Xiaojiang Zhou, Dan Ou, … <i>(+1 more)</i></p>
-<p>Query-product relevance prediction is fundamental to e-commerce search and has become even more critical in the era of AI-powered shopping, where semantic understanding and complex reasoning directly shape the user experience and business conversion. Large Language Models (LLMs) enable generative, reasoning-based approaches, typically aligned via supervised fine-tuning (SFT) or preference optimization methods like Direct Preference Optimization (DPO). However, the increasing complexity of business rules and user queries exposes the inability of existing methods to endow models with robust reasoning capacity for long-tail and challenging cases. Efforts to address this via reinforcement learning strategies like Group Relative Policy Optimization (GRPO) often suffer from sparse terminal rewards, offering insufficient guidance for multi-step reasoning and slowing convergence. To address these challenges, we propose TaoSR-AGRL, an Adaptive Guided Reinforcement Learning framework for LLM-based relevance prediction in Taobao Search Relevance. TaoSR-AGRL introduces two key innovations: (1) Rule-aware Reward Shaping, which decomposes the final relevance judgment into dense, structured rewards aligned with domain-specific relevance criteria; and (2) Adaptive Guided Replay, which identifies low-accuracy rollouts during training and injects targeted ground-truth guidance to steer the policy away from stagnant, rule-violating reasoning patterns toward compliant trajectories. TaoSR-AGRL was evaluated on large-scale real-world datasets and through online side-by-side human evaluations on Taobao Search. It consistently outperforms DPO and standard GRPO baselines in offline experiments, improving relevance accuracy, rule adherence, and training stability. The model trained with TaoSR-AGRL has been successfully deployed in the main search scenario on Taobao, serving hundreds of millions of users.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.IR, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-07-03 · <a href='https://arxiv.org/abs/2510.08048'>page</a> · <a href='https://arxiv.org/pdf/2510.08048'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>A global workspace in language models</title>
-      <link>https://www.anthropic.com/research/global-workspace</link>
-      <guid isPermaLink="false">anthropic:22b32121ee</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Interpretability research on Claude&#x27;s internal thoughts.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/global-workspace'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Verbalizable Representations Form a Global Workspace in Language ModelsGurnee et al., 2026We find that Claude maintains a small, privileged set of representations it can report on, control, and reason with, atop a much larger volume of automatic processing.</title>
-      <link>https://transformer-circuits.pub/2026/workspace/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:66936446cf</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2026/workspace/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>The 2M Multiplication Algorithm for Complex Matrices</title>
-      <link>https://research.nvidia.com/publication/2026-06_2m-multiplication-algorithm-complex-matrices</link>
-      <guid isPermaLink="false">nvidia_research:29b9d29013</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> NVIDIA Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-06_2m-multiplication-algorithm-complex-matrices'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots</title>
-      <link>https://huggingface.co/papers/2607.02501</link>
-      <guid isPermaLink="false">arxiv:2607.02501</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Ling Xu, Chuyu Han, Borui Li, Hao Wu, Shiqi Jiang, Ting Cao, Chuanyou Li, Sheng Zhong, … <i>(+2 more)</i></p>
-<p>Embodied AI models now span vision-language-action (VLA) models and world-action models (WAMs), but practical deployment remains fragmented across model-specific Python stacks, backend assumptions, and robot-side glue code, especially on heterogeneous edge devices. Existing inference runtimes are designed mainly for request-response serving and therefore do not satisfy the runtime contract of embodied deployment: multi-rate execution inside closed-loop control, latency-first batch-1 inference on heterogeneous hardware, and extensible embodied interfaces beyond fixed token I/O. We present Embodied.cpp, a portable C++ inference runtime for embodied models. Based on an architectural analysis of representative VLA models and WAMs, Embodied.cpp captures a shared execution path and organizes it into five layers: input adapters, sequence builders, backbone execution, head plugins, and deployment adapters. The runtime provides modular multi-rate execution, latency-first fused inference, and extensible operator and I/O support, enabling deployment across heterogeneous devices, robots, and simulators through one backend abstraction. We evaluate Embodied.cpp on two VLA models, HY-VLA and pi0.5, and on a preliminary WAM benchmark using a LingBot-VA Transformer block. The VLA deployments achieve successful closed-loop execution with 100.0% and 91.0% task success rates, respectively. The WAM benchmark reduces block memory from 312.2 MiB to 88.1 MiB. These results show that Embodied.cpp improves deployment efficiency while preserving high accuracy across diverse embodied model architectures.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02501'>page</a> · <a href='https://arxiv.org/pdf/2607.02501'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ResearchStudio-Reel: Automate the Last Mile of Research from Paper to Poster, Video, and Blog</title>
-      <link>https://huggingface.co/papers/2607.04438</link>
-      <guid isPermaLink="false">arxiv:2607.04438</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Lingao Xiao, Yalun Dai, Yangyu Huang, Qihao Zhao, Wenshan Wu, Hugo He, Ruishuo Chen, Jin Jiang, … <i>(+13 more)</i></p>
-<p>Research dissemination, turning a paper into a poster, a talk video, and a blog post, is still a manual last mile. Prior automation treats each artifact in isolation that each re-extract the paper from scratch, usually ship one-way renders the author cannot reopen in PowerPoint or Word, and gates quality on soft VLM-preference scores that plateau while load-bearing sections still read as empty. We argue this last mile is best built as a composition of skills: thin agent-readable contracts that share one upstream extractor and wrap deterministic primitives in a measured-fill loop whose exits are hard pass/fail render gates. We instantiate this as ResearchStudio-Reel, five Claude Code and Codex skills organized into one shared extractor (Paper2Assets), three editable generators (Paper2Poster, Paper2Video, Paper2Blog), and one interactive convergence layer (Paper2Reel). Paper2Assets extracts each paper once into a shared bundle that can be reused by every downstream skill; The three generators produce a print-ready poster, a synchronized talk video, and a bilingual blog that stay factually consistent and round-trip through PowerPoint or Word; Paper2Reel then binds all three into a self-contained HTML viewer whose section-level clicks jump the video, slides, captions, and blog to matching content. On the Paper2Poster benchmark, our posters lead every aesthetic and information sub-criterion against both prior automated systems and single-shot frontier LLMs, surpassing the authors&#x27; own on aesthetics under two held-out VLM judges and winning overall on 84% to 93% of papers; capability audits further show that, by uniquely pairing narration-aligned on-slide highlights with a bilingual blog gated by layout-aware DOCX repair, ResearchStudio-Reel is the only pipeline to ship all three editable artifacts. Project is available at https://aka.ms/ResearchStudio</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04438'>page</a> · <a href='https://arxiv.org/pdf/2607.04438'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DataComp-VLM: Improved Open Datasets for Vision-Language Models</title>
-      <link>https://huggingface.co/papers/2606.28551</link>
-      <guid isPermaLink="false">arxiv:2606.28551</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Matteo Farina, Vishaal Udandarao, Thao Nguyen, Selim Kuzucu, Maximilian Böther, Andreas Hochlehnert, Adhiraj Ghosh, Marianna Nezhurina, … <i>(+29 more)</i></p>
-<p>Building performant Vision-Language Models (VLMs) requires carefully curating large-scale training datasets, yet the community lacks systematic benchmarks for evaluating such curation strategies. We introduce DataComp for VLMs (DCVLM), a benchmark for controlled data-centric experiments to improve VLM training. As part of DCVLM, we collect 160 datasets spanning four data types -- image-caption pairs, multimodal interleaved documents, text-only, and instruction-tuning data -- into a corpus of 6T multimodal tokens. DCVLM allows participants to test curation strategies (filtering, mixing, formatting, sampling) across 1B-8B models and 6.25B-200B token budgets. Models are then evaluated on a carefully selected suite of up to 52 downstream benchmarks across 9 domains. We conduct extensive experiments on DCVLM and find that data mixing, not filtering, is key to a high-quality training dataset: instruction-heavy mixtures scale better than caption-heavy ones, with gains widening at larger scales. The resulting dataset, DCVLM-Baseline, enables training an 8B VLM to 63.6% accuracy on our 33-task core suite with 200B training tokens. Compared to FineVision, the state-of-the-art open VLM training dataset, this represents an improvement of +5.4pp. DCVLM and all accompanying artifacts will be made publicly available at https://www.datacomp.ai/dcvlm/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-26 · <a href='https://huggingface.co/papers/2606.28551'>page</a> · <a href='https://arxiv.org/pdf/2606.28551'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning</title>
-      <link>https://huggingface.co/papers/2607.04425</link>
-      <guid isPermaLink="false">arxiv:2607.04425</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Niu Lian, Alan Chen, Zhehao Yu, Chengzhen Duan, Fazhan Liu, Hui Liu, Pei Fu, Jian Luan, … <i>(+4 more)</i></p>
-<p>Recent advances in multimodal foundation models and agent systems have driven GUI agents from single-platform task execution toward cross-platform interaction. However, building multi-platform GUI agents remains challenging. On one hand, high-quality and executable cross-platform interaction trajectories are still scarce, and existing data often suffer from limited platform coverage. On the other hand, different platforms exhibit distinct interaction conventions, making joint or continual training prone to behavioral pattern mixing, platform-specific capability degradation, and catastrophic forgetting. To address these challenges, we construct Uni-GUI, a high-quality cross-platform GUI interaction dataset, and propose UI-MOPD, the first method that incorporates multi-teacher on-policy distillation into continual learning for GUI agents. UI-MOPD dynamically selects a platform-specific teacher according to the current environment and transfers platform-specific behavioral priors to a shared policy through platform-conditioned distillation, enabling adaptation to new platforms while preserving capabilities on existing ones. Experiments on OSWorld and MobileWorld show that UI-MOPD achieves task success rates of 38.2% and 12.0%, respectively, demonstrating its effectiveness in balancing cross-platform capability retention and new-platform adaptation.
-  Project page: https://elispectre.github.io/UI-MOPD/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04425'>page</a> · <a href='https://arxiv.org/pdf/2607.04425'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ResearchStudio-Idea: An Evidence-Grounded Research-Ideation Skill Suite from ML Conference Outcomes</title>
-      <link>https://huggingface.co/papers/2607.04439</link>
-      <guid isPermaLink="false">arxiv:2607.04439</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Qihao Zhao, Yangyu Huang, Yalun Dai, Lingao Xiao, Jianjun Gao, Xin Zhang, Wenshan Wu, Scarlett Li, … <i>(+4 more)</i></p>
-<p>Large language models have made research ideation increasingly accessible, yet effective idea development requires more than generating candidate directions. Researchers must ground a problem in current literature, identify meaningful bottlenecks, differentiate from existing solutions, and evaluate risks before committing to implementation. We present ResearchStudio-Idea as a reusable skill suite for this first mile of research ideation. The suite includes Paper-Search, a standalone multi-source literature search skill; Scoop-Check, a standalone prior-art collision checker for novelty claims; and IdeaSpark, the end-to-end skill that composes evidence grounding, pattern-guided generation, collision retrieval, audit, and idea-card rendering into one workflow. IdeaSpark is constructed from a corpus of 1,947 machine learning conference papers collected from ICLR, ICML, and NeurIPS between 2021 and 2025, including Oral papers, a separately tracked high-citation subset, and rejected submissions. Analysis of these outcomes reveals 31 recurring ideation sub-patterns, consolidated into 15 reusable ideation patterns. Each pattern is operationalized as a structured card containing research contexts, bottleneck types, differentiation strategies, supporting precedents, and common failure modes. Given a research problem and an evidence bundle, IdeaSpark evaluates evidence readiness, reconstructs the surrounding research context, identifies unresolved bottlenecks, selects relevant patterns, instantiates one candidate direction, retrieves potentially conflicting prior work, and performs outcome-informed auditing. This workflow transforms reusable ideation patterns into traceable research proposals. Blind automated-judge evaluations show that IdeaSpark consistently produces stronger research proposals than no-skill and generic-skill baselines while maintaining competitive novelty.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04439'>page</a> · <a href='https://arxiv.org/pdf/2607.04439'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers</title>
-      <link>https://huggingface.co/papers/2607.02461</link>
-      <guid isPermaLink="false">arxiv:2607.02461</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Donghyun Lee, Jitesh Chavan, Duy Nguyen, Sam Huang, Liming Jiang, Priyadarshini Panda, Timo Mertens, Saurabh Shukla, … <i>(+1 more)</i></p>
-<p>Diffusion transformers (DiTs) achieve state-of-the-art image and video generation, but their multi-step sampling and growing parameter count make inference expensive. Post-training quantization (PTQ) is the natural remedy, yet DiT activations shift across timesteps, prompts, and guidance branches, forcing prior methods to re-fit calibration data for every new checkpoint or modality. We present OrbitQuant, a data-agnostic weight-activation quantizer that bypasses range estimation by quantizing in a normalized, rotated basis. In this basis, a randomized permuted block-Hadamard (RPBH) rotation concentrates each coordinate around one fixed, known marginal regardless of the input, so a single Lloyd-Max codebook serves all timesteps, prompts, and layers of a given input dimension. We extend the same quantizer to weight rows offline, absorbing the rotation into the weights so that it cancels inside each linear layer and only a forward rotation on the activations remains at runtime. The same recipe transfers from image to video with no per-modality tuning. Across FLUX.1, Z-Image-Turbo, Wan 2.1, and CogVideoX, it sets the state of the art for PTQ at several low-bit settings. It also pushes PTQ of image diffusion transformers to W2A4 with usable generation quality.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02461'>page</a> · <a href='https://arxiv.org/pdf/2607.02461'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space</title>
-      <link>https://huggingface.co/papers/2607.05373</link>
-      <guid isPermaLink="false">arxiv:2607.05373</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Sensen Gao, Zhaoqing Wang, Qihang Cao, Dongdong Yu, Changhu Wang, Jia-Wang Bian, Hugging Face Daily Papers (curated)</p>
-<p>3D reconstruction and generation are commonly tackled by separate paradigms: pixel-based regression for reconstruction, and latent diffusion for generation. Recent works attempt to unify them in latent space, but with notable drawbacks: the diffusion objective is defined on latent features rather than the underlying 3D representation, and both branches suffer from information loss introduced by latent encoding, while requiring a pretrained Variational Autoencoder (VAE) or Representation Autoencoder (RAE). In this paper, we reformulate these two tasks under a unified pixel-space diffusion paradigm and introduce PixWorld, a single model that jointly addresses 3D reconstruction and generation. By supervising diffusion directly on rendered images, PixWorld removes the above limitations and aligns optimization with 3D scene fidelity. Beyond photometric and perceptual supervision that operates at the 2D image level and lacks 3D geometric awareness, we further introduce a geometry perception loss that aligns rendered views with their ground truth in the geometry-aware feature space of a pretrained 3D foundation model, providing 3D structural supervision. PixWorld consistently outperforms prior latent-space generation methods and matches state-of-the-art reconstruction methods, demonstrating the superiority of a unified pixel-space approach.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://huggingface.co/papers/2607.05373'>page</a> · <a href='https://arxiv.org/pdf/2607.05373'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Revisiting ASR Error Correction with Specialized Models</title>
-      <link>https://machinelearning.apple.com/research/asr-error-correction</link>
-      <guid isPermaLink="false">apple_ml:aca046406b</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Language models play a central role in automatic speech recognition (ASR), yet most methods rely on text-only models unaware of ASR error patterns. Recently, large language models (LLMs) have been applied to ASR correction, but introduce latency and hallucination concerns. We revisit ASR error correction with compact seq2seq models, trained on ASR errors from real and synthetic audio. To scale training, we construct synthetic corpora via cascaded TTS and ASR, finding that matching the diversity of realistic error distributions is key. We propose correction-first decoding, where the correctionâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/asr-error-correction'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Path-Constrained Mixture-of-Experts</title>
-      <link>https://machinelearning.apple.com/research/path-constrained-mixture-experts</link>
-      <guid isPermaLink="false">apple_ml:c36ba11a8c</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Sparse Mixture-of-Experts (MoE) architectures route each token through a subset of experts at each layer independently. We propose viewing MoE computation through the lens of expert pathsâthe sequence of expert selections a token makes across all layers. This perspective reveals that, despite N^L possible paths for N experts across L layers, tokens in practice cluster into a small fraction of paths that align with linguistic function, yet the vast majority of paths remain unexplored, representing a statistical inefficiency. This motivates architectures that constrain the effective path spaceâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/path-constrained-mixture-experts'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
