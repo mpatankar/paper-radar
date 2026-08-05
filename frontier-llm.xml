@@ -5,8 +5,122 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Tue, 04 Aug 2026 06:22:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 06:22:04 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Meta Prompting for AI Systems</title>
+      <link>https://arxiv.org/abs/2311.11482</link>
+      <guid isPermaLink="false">arxiv:2311.11482</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Tsinghua — Yifan Zhang, Andrew Chi-Chih Yao</p>
+<p><b>Authors:</b> Yifan Zhang, Yang Yuan, Andrew Chi-Chih Yao</p>
+<p>We introduce Meta Prompting (MP), a framework that emphasizes the formal structure of a task rather than content-specific worked examples. We give a categorical formalization in which a functor maps typed task transformations to typed prompt transformations. Functoriality encodes preservation of identities and composition, but it does not by itself guarantee semantic correctness. We extend MP to Recursive Meta Prompting (RMP), in which a proposer model generates candidate prompt edits, a validator enforces the edit schema, and an executor model uses the resulting prompt. We model the accumulation of valid edit scripts with the Writer monad and their application by a monoid action on prompts. This construction makes accumulated edits independent of parenthesization; it does not guarantee convergence or improved task accuracy. Empirically, a Qwen-72B base model guided by example-free meta-prompts attains 46.3% pass@1 on MATH and 83.5% accuracy on GSM8K. Separately, an MP-CR agent synthesizes a tool-executed Game of 24 solver; the original experiment reports 100% success on 1,362 instances, subject to exact re-verification from the corresponding input and per-instance outputs. The batch amortizes one LLM response across all puzzles, so its token accounting is not protocol-matched to per-instance few-shot or search-based methods.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://arxiv.org/abs/2311.11482'>page</a> · <a href='https://arxiv.org/pdf/2311.11482'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>When Search Teaches Style: Causal Internalization of Tactical Priors in AlphaZero</title>
+      <link>https://arxiv.org/abs/2504.14636</link>
+      <guid isPermaLink="false">arxiv:2504.14636</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, Tsinghua — Ru Zhang</p>
+<p><b>Authors:</b> Ruitong Li, Binjie Guo, Aisheng Mo, Guowei Su, Han Wang, Jie Li, Ru Zhang</p>
+<p>AlphaZero is normally evaluated as one agent: a policy-value network fused with Monte Carlo tree search. That fusion hides a causal question. When self-play search is given a useful prior, does the network absorb the induced behavior, or does the behavior stay rented from search at test time? We answer with Cross-Phase Prior Intervention (CPI), which switches a root-level tactical prior on and off independently during training and during evaluation, separating the prior&#x27;s online effect from the learned residual it leaves in the weights. The endpoint is deliberately narrow: how often a network discharges a forced defensive obligation when no search-time guidance is available. On a sealed one-shot final test in 9x9 Gomoku and 19x19 Go, deleting the prior still leaves a large residual response rises from 13.8% to 26.3% in Gomoku and from 0.6% to 33.8% in Go-and soft reweighting teaches as well as hard action restriction, so pruning legal actions is not the mechanism. The same cross bounds the claim: re-enabling the prior restores nearly 100% response, leaving dependence gaps of 73.7 and 65.8 points. A latched-position evaluation localizes the residual to trained geometry-absent at the shared initialization, emerging over training, worth +17.3 points on in-distribution defenses but only +1.3 on structurally novel ones. Search is therefore best read as a training-time behavioral curriculum whose lessons are real, partial, and geometry-bound, and online competence and internalized competence are different estimands that a diagonal ablation cannot tell apart.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://arxiv.org/abs/2504.14636'>page</a> · <a href='https://arxiv.org/pdf/2504.14636'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Large language models for partial differential equation workflows</title>
+      <link>https://arxiv.org/abs/2608.03600</link>
+      <guid isPermaLink="false">arxiv:2608.03600</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Hao Sun</p>
+<p><b>Authors:</b> Han Wan, Rui Zhang, Hao Sun</p>
+<p>Partial differential equations (PDEs) become actionable in science and engineering not as isolated formulae, but as executable workflows that connect modelling assumptions, governing equations, numerical solvers, diagnostics, and decisions. Large language models (LLMs) are beginning to support such workflows by linking natural language, symbolic mathematics, code, solver outputs, and feedback. Here we examine recent advances in LLM-assisted PDE research across three stages: the discovery and formulation of governing models, the generation and revision of executable numerical solvers, and the use of simulation feedback to support control, design, and optimization. Across these stages, current systems act primarily as workflow-level interfaces. Despite this progress, the field remains limited by the scarcity of high-quality datasets and benchmarks, especially for knowledge discovery and real-world applications, where expert annotation, executable problem construction, and task-level feedback require substantial domain effort. A further challenge is the persistent gap between simulation-based results and real-world scientific and engineering systems, which limits the direct transfer of numerical simulations, control policies, and optimized designs to practical settings. These challenges make LLM-assisted PDE workflows a critical testbed for developing scientific AI systems that can connect language, computation, physical constraints, and real-world decision-making.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://arxiv.org/abs/2608.03600'>page</a> · <a href='https://arxiv.org/pdf/2608.03600'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>A game theory for foundation models shows new paths to rational cooperation through similarity inference</title>
+      <link>https://arxiv.org/abs/2608.03958</link>
+      <guid isPermaLink="false">arxiv:2608.03958</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> MILA, U Montreal — (senior)</p>
+<p><b>Authors:</b> Alexander Meulemans, Maciej Wołczyk, Marissa A. Weis, Rajai Nasser, Roberta Rocca, Seijin Kobayashi, Guillaume Lajoie, Angelika Steger, … <i>(+6 more)</i></p>
+<p>As autonomous agents powered by foundation models are increasingly integrated into social and economic systems, understanding the principles governing their collective behavior is essential for ensuring safety and cooperation. Classical game theory, the dominant framework for modeling rational interaction, is built upon the assumption of `decoupled agency,&#x27; where agents treat their own decision-making as independent of the environment and other actors. Modern AI agents, however, jointly predict their own future actions alongside external observations. Here, we report a striking finding: when interacting in stylized social dilemmas, foundation model agents engaging in optimal planning consistently converge to stable cooperation, directly contradicting classical game-theoretic predictions of mutual defection. To understand this phenomenon, we introduce the `embedded Bayesian agent,&#x27; a theoretical model for foundation model agents. By shifting from decoupled to embedded agency, these agents model themselves as part of the universe they inhabit, maintaining epistemic uncertainty about their own decision-making algorithms. We show that by inferring whether others are behaviorally similar, an embedded agent treats its own deliberation during planning as evidence: a decision to cooperate predicts a similar decision by a similar partner. We formalize this mechanism of similarity inference through the `embedded equilibrium,&#x27; a novel solution concept replacing the Nash equilibrium to provide a foundational game theory for the social behavior of modern AI agents.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://arxiv.org/abs/2608.03958'>page</a> · <a href='https://arxiv.org/pdf/2608.03958'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DAPD: Dual-Anchored Policy Distillation</title>
+      <link>https://huggingface.co/papers/2608.01735</link>
+      <guid isPermaLink="false">arxiv:2608.01735</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jianyu Wu, Yizhou Wang, Encheng Su, Chen Tang, Shixiang Tang, Hugging Face Daily Papers (curated)</p>
+<p>On-policy (self) distillation (OPSD) is increasingly adopted for language-model post-training. It strengthens the teacher with privileged information but can induce a privilege illusion: the student learns privilege-dependent behavior it cannot reproduce from its inference-time context, yet behaves as if the training-time privileged information remained available, ultimately degrading performance. In this paper, we identify information asymmetry between the privileged teacher and the student at inference as the root cause of this failure in OPSD. To resolve this asymmetry, we propose Dual-Anchored Policy Distillation (DAPD), a unified framework with two levels of anchoring. Dual-Path Anchoring (DPA) introduces a self-conditioned bridge and aligns reference and rollout behavior along two matched-information paths, preventing privilege-dependent behavior from being transferred to the inference-time student. Dual-Source Anchoring (DSA) applies these paths in both reference-to-rollout and rollout-to-reference directions, reducing reliance on privileged reference guidance while preserving correctness supervision. Extensive experiments show that DAPD significantly alleviates privilege illusion, outperforming OPSD on Qwen3-4B by +2.00 points on average across tasks. Notably, its gains persist across scales, reaching +2.69 at 4B and +2.78 at 32B.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://huggingface.co/papers/2608.01735'>page</a> · <a href='https://arxiv.org/pdf/2608.01735'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Progressive Agent Skill Generation via Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2608.01678</link>
+      <guid isPermaLink="false">arxiv:2608.01678</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junhao Shen, Zhanqiu Zhang, Yiwen Guo, Hong Cheng, Hugging Face Daily Papers (curated)</p>
+<p>Existing skill generation methods largely rely on heuristics or pipeline-style consolidation, which must be specially designed for different evidence sources. In contrast, learning-based approaches offer a more unified way to model skill generation across heterogeneous sources. However, learning-based skill generation remains challenging because skills lack a natural supervision signal based on relevance or correctness; their value can largely be determined only by whether they improve the behavior of the agent on downstream tasks. To address this challenge, we propose Skill-α, a reinforcement learning method for progressively generating high-quality agent skills. Specifically, we formulate skill generation as a sequential editing process that decomposes skill construction into individually evaluable edits, and introduce a novel rollback reward that evaluates each edit by comparing downstream execution under the original and edited skills on an anchored query. Extensive experiments show that Skill-α generates more effective skills than methods based on heuristics or pipelines in both document-to-skill and experience-to-skill settings. Under the main GPT-4o worker, Skill-α improves average downstream success rates over the strongest skill-generation baseline by 3.3 points on CL-Bench and 6.7 points on tau2-bench. Further ablations validate the importance of rollback reward and progressive generation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://huggingface.co/papers/2608.01678'>page</a> · <a href='https://arxiv.org/pdf/2608.01678'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling</title>
+      <link>https://huggingface.co/papers/2608.02602</link>
+      <guid isPermaLink="false">arxiv:2608.02602</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiajun Liang, Yucheng Liao, Yukang Cao, Jiazhe Wei, Ken Li, Wende Tan, Jiankun Zhang, ZY Cui, … <i>(+8 more)</i></p>
+<p>Language remains an outlier in generative modeling: while images, video, and audio are increasingly modeled in continuous latent spaces, text generation still relies predominantly on discrete tokens. Existing continuous language models either inherit embedding spaces not designed for joint generation and decoding, or compress autoencoded latents to ease diffusion, sacrificing token-level fidelity. Instead of simplifying the representation to suit the generative model, we preserve a high-capacity, decodable text latent and design the diffusion model to learn its distribution directly.
+  We introduce AURORA-LM, a continuous-latent diffusion language model that separates the construction of a decodable text representation from the modeling of its distribution. A Query-based Encoder-Decoder organizes text into a high-capacity, prefix-aligned latent sequence, and a Block-causal Diffusion Transformer learns its distribution through flow matching, generating blocks left to right while denoising positions within each block in parallel. Because such a latent is harder for diffusion to model, AURORA-LM restricts only the noisy-input pathway while retaining the full clean-latent prediction target, accommodating full-width latents without reducing decoder-facing capacity. We further calibrate the noise-level distribution to the latent width, and introduce self-trajectory consistency to bridge independently sampled training noise and iterative denoising at inference.
+  AURORA-LM achieves the strongest performance among evaluated continuous and diffusion-based language models on OpenWebText free generation and XSum summarization. Scaling to 1B parameters with about 1500 EFLOPs of total compute yields further gains, surpassing a larger publicly released latent-diffusion language model under a matched evaluation protocol. All experiments are conducted on Ascend NPUs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://huggingface.co/papers/2608.02602'>page</a> · <a href='https://arxiv.org/pdf/2608.02602'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing</title>
+      <link>https://huggingface.co/papers/2608.02711</link>
+      <guid isPermaLink="false">arxiv:2608.02711</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junliang Ye, Kenkun Liu, Guocun Wang, Yang Li, Yansong Qu, Chunshi Wang, Jingwei Xu, Yunhan Yang, … <i>(+8 more)</i></p>
+<p>Recent advances in image generation have demonstrated the potential of unified multimodal models that integrate understanding, generation, and editing. However, unified 3D modeling remains constrained by scarce multimodal data, particularly the lack of large-scale and geometrically consistent editing data. To address this limitation, we propose Hunyuan3D-Buffalo 1.0, a unified framework supporting 3D understanding, text-to-3D generation, instruction-guided 3D editing, and text-grounded part generation within a single architecture. To enable scalable training, we construct an 87M-scale 3D multimodal corpus, comprising 25M understanding samples, 50M text-to-3D pairs, and 12M editing pairs generated using Nano3D-v2. Architecturally, the framework combines Hunyuan3D-VLM for semantic, structural, and spatial understanding with Hunyuan3D DiT for high-fidelity 3D synthesis. The VLM provides multimodal semantic conditions for generation, while editing and part generation additionally condition the diffusion process on the source object representation to preserve its overall structure and unedited regions. Extensive experiments show that Hunyuan3D-Buffalo 1.0 achieves state-of-the-art or leading performance on text-to-3D generation and 3D editing benchmarks, while exhibiting strong understanding and part-generation capabilities. Our analysis further shows that both generation and understanding improve editing, demonstrating the effectiveness of unified 3D multimodal training. Project Page: https://tencent-hunyuan.github.io/Hunyuan3D-Buffalo1.0/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://huggingface.co/papers/2608.02711'>page</a> · <a href='https://arxiv.org/pdf/2608.02711'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations</title>
+      <link>https://huggingface.co/papers/2607.28956</link>
+      <guid isPermaLink="false">arxiv:2607.28956</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Qiming Shi, Yulong Tao, Linbo Jin, Zhaolu Kang, Yibo Dou, Jiawen Zhu, Tianjun Pan, Shaokang Fu, … <i>(+6 more)</i></p>
+<p>Large language model agents are increasingly evaluated as autonomous tool users, yet most benchmarks focus on bounded tasks with immediate success criteria. Real-world deployments often require Long-Term Coherence, the capacity to preserve purposeful behavior across extended horizons while adapting decisions to accumulated evidence. Evaluating this capacity requires a persistent environment in which actions constrain future choices, feedback arrives at heterogeneous delays, and incoherent behavior produces measurable cumulative effects. Seller-side e-commerce provides a suitable setting for this evaluation through recurrent and interdependent decisions over Product Sourcing, Listing and Pricing Control, Cash-Flow Management, and Mixed-Latency Feedback Adaptation. We introduce MerchantBench, a 365-day order-level simulation grounded in 98,843 real e-commerce product records and equipped with 26 tools for agent interaction. MerchantBench couples promptly observable Upstream Supplier Events with delayed Downstream Order Outcomes, requiring agents to follow individual order lifecycles and revisit earlier decisions. We evaluate eight LLMs under two agent frameworks in 48 runs, each spanning 365 simulated days. Our results reveal a substantial gap between even the latest LLMs and human participants, with the best LLM configuration attaining only 27.3\% of the mean final net assets achieved by human participants.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-31 · <a href='https://huggingface.co/papers/2607.28956'>page</a> · <a href='https://arxiv.org/pdf/2607.28956'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity</title>
+      <link>https://huggingface.co/papers/2608.02603</link>
+      <guid isPermaLink="false">arxiv:2608.02603</guid>
+      <pubDate>Wed, 05 Aug 2026 06:22:03 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuxue Yang, Shuyao Shang, Jiahe Wang, Zitong Zhou, Liang Tan, Junhan Zeng, Ruizhi Li, Junyan Li, … <i>(+9 more)</i></p>
+<p>Controllable video generation models are increasingly being developed as world models. Accordingly, evaluating them in this role extends beyond the apparent appearance of generated videos to the inherent reactivity of the worlds they depict: the ability to infer from the scene state how the world should react and to generate plausible consequences not explicitly described in the input. Yet existing benchmarks mainly assess visual quality or explicit instruction fulfillment by checking whether requested actions and interaction outcomes are realized, leaving inherent reactivity underexamined. We introduce WorldExam, a hierarchical diagnostic benchmark spanning four levels: Visual Quality, Control Adherence, Spatial Consistency, and World Reactivity. It comprises 1,474 cases across eight dedicated tasks and supports unified evaluation of camera-, action-, and language-driven model paradigms. The World Reactivity level evaluates scene-conditioned reactions and goal-directed behaviors beyond what is explicitly specified in the input. Evaluation of 20 representative models reveals a clear capability split. Camera-driven models excel at camera control, but their interfaces do not support dynamic interaction; action-driven models control subjects more precisely but often leave the world unresponsive; and language-driven models perform better on interaction but follow complex controls less faithfully. No model combines broad task coverage with consistently strong performance, showing that high visual quality and explicit instruction fulfillment do not guarantee inherent reactivity.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://huggingface.co/papers/2608.02603'>page</a> · <a href='https://arxiv.org/pdf/2608.02603'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Mind the Sim2Real Gap in User Simulation for Agentic Tasks</title>
       <link>https://arxiv.org/abs/2603.11245</link>
@@ -2179,122 +2293,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Qingyan Bai, Ka Leong Cheng, Yue Yu, Yixuan Li, … <i>(+6 more)</i></p>
 <p>We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration. Unlike existing world models that entangle physical dynamics with pixel rendering and rely on continuous visual observation to sustain motion, our framework explicitly decouples semantic motion orchestration from visual generation. By leveraging an LLM to coordinate 3D trajectories with camera movements and subsequently employing these orchestrated trajectories as control signals for video generation, our approach ensures strict physical logic and appearance stability, successfully preserving the exact visual identities of dynamic entities even when they re-enter the scene after prolonged periods out of view. Experimental results demonstrate that our method supports the synthesis of complex and extended events with unprecedented controllability and persistent dynamic object memory. Project Page: https://worlddirector.github.io/</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02517'>page</a> · <a href='https://arxiv.org/pdf/2607.02517'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</title>
-      <link>https://huggingface.co/papers/2606.29526</link>
-      <guid isPermaLink="false">arxiv:2606.29526</guid>
-      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Jing Liang, Hongyao Tang, Yi Ma, Yancheng He, Weixun Wang, Xiaoyang Li, Ju Huang, Wenbo Su, … <i>(+5 more)</i></p>
-<p>Reinforcement learning (RL) has gained growing attention in large language model (LLM) post-training, yet RL training remains fragile and can suffer from instability or collapse. One vital cause is training-inference mismatch: LLM adopts separate inference and training engines for generation efficiency and training precision, which in practice exhibits inconsistent probabilities for the same trajectories on training and inference sides, even with synchronized model parameters. This naturally induces a special type of off-policyness ever existing and poisoning the training. Prior works have made various efforts in addressing the off-policyness to stabilize the training policies under the mismatch. In this paper, we point out the objective misalignment neglected by existing works that an effective update to the policy in the training engine not necessarily ensures the improvement of the inference policy, i.e., the one used in deployment. To this end, we propose a new policy optimization objective for LLM RL, named Monotonic Inference Policy Improvement (MIPI). Following this principle, we introduce Monotonic Inference Policy Update (MIPU), a two-step LLM RL framework that constructs sampler-referenced candidate updates and selectively accepts synchronized candidates using an inference-side gap proxy. Experiments conducted on two model scales under high mismatch show that MIPU improves average reasoning performance and training stability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-28 · <a href='https://huggingface.co/papers/2606.29526'>page</a> · <a href='https://arxiv.org/pdf/2606.29526'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning</title>
-      <link>https://huggingface.co/papers/2606.31825</link>
-      <guid isPermaLink="false">arxiv:2606.31825</guid>
-      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junha Jung, Minbyul Jeong, Suhyeon Lim, Sungwook Jung, Jaehoon Yun, Taeyun Roh, Mujeen Sung, Jaewoo Kang, … <i>(+1 more)</i></p>
-<p>Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or sequence-level preferences. This suffers from sparse credit assignment, making it difficult to optimize the reasoning process essential for clinical applications. Our analysis reveals that cascading errors from early-stage reasoning failures are a leading cause of incorrect predictions in medical visual question answering (VQA) benchmarks. Motivated by this, we propose Medical Reasoning-aware Policy Optimization (MRPO), an RL algorithm that incorporates step-wise process rewards. When the final answer is incorrect, MRPO assigns exponentially larger penalties to tokens in earlier invalid reasoning steps, breaking failure cascades without compromising successful paths. Across three multimodal LLM backbones, MRPO consistently outperforms standard GRPO and a recent RL baseline, and on Qwen3-VL-8B-Instruct even surpasses substantially larger medical MLLMs such as HuatuoGPT-Vision-34B by 2.79 points. Moreover, MRPO reduces early-stage reasoning failures from 64.0% to 13.0%, showing that targeted mitigation of cascading failures improves both reasoning quality and final answer accuracy. Our code is available at https://github.com/dmis-lab/MRPO</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-30 · <a href='https://huggingface.co/papers/2606.31825'>page</a> · <a href='https://arxiv.org/pdf/2606.31825'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>A validity-guided workflow for robust large language model research in psychology</title>
-      <link>https://arxiv.org/abs/2507.04491</link>
-      <guid isPermaLink="false">arxiv:2507.04491</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.HC</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.CY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Zhicheng Lin</p>
-<p><b>Authors:</b> Zhicheng Lin</p>
-<p>Large language models (LLMs) are rapidly being integrated into psychological research as research tools, evaluation targets, human simulators, and cognitive models. However, recent evidence reveals severe measurement unreliability: Personality assessments collapse under factor analysis, moral preferences reverse with punctuation changes, and theory-of-mind accuracy varies widely with trivial rephrasing. These &quot;measurement phantoms&quot;--statistical artifacts masquerading as psychological phenomena--threaten the validity of a growing body of research. Guided by the dual-validity framework that integrates psychometrics with causal inference, we present a six-stage workflow that scales validity requirements to research ambition--using LLMs to code text requires basic reliability and accuracy, while claims about psychological properties demand comprehensive construct validation. Researchers must (1) explicitly define their research goal and corresponding validity requirements, (2) develop and validate computational instruments through psychometric testing, (3) design experiments that control for computational confounds, (4) execute protocols with transparency, (5) analyze data using methods appropriate for non-independent observations, and (6) report findings within demonstrated boundaries and use results to refine theory. We illustrate the workflow through an example of model evaluation--&quot;LLM selfhood&quot;--showing how systematic validation can distinguish genuine computational phenomena from measurement artifacts. By establishing validated computational instruments and transparent practices, this workflow provides a path toward building a robust empirical foundation for AI psychology research.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.CL, cs.CY · <b>arXiv submitted:</b> 2025-07-06 · <a href='https://arxiv.org/abs/2507.04491'>page</a> · <a href='https://arxiv.org/pdf/2507.04491'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Navigating the Alignment-Calibration Trade-off: A Pareto-Superior Frontier via Model Merging</title>
-      <link>https://arxiv.org/abs/2510.17426</link>
-      <guid isPermaLink="false">arxiv:2510.17426</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge — Nigel Collier</p>
-<p><b>Authors:</b> Tiancheng Hu, Benjamin Minixhofer, Nigel Collier</p>
-<p>The &quot;alignment tax&quot; of post-training is typically framed as a drop in task accuracy. We show it also involves a severe loss of calibration, making models overconfident, less reliable, and model outputs less diverse. We show that this trade-off can be navigated effectively via a simple post-hoc intervention: interpolating between a model&#x27;s weights before and after alignment. Crucially, this is not a strict trade-off. We find that the process consistently reveals Pareto-optimal interpolations - models that improve accuracy beyond both parents while substantially recovering the calibration lost during alignment. Our work demonstrates that simple model merging provides a computationally efficient method for mitigating the full scope of the alignment tax, yielding models that are more capable and more reliable.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://arxiv.org/abs/2510.17426'>page</a> · <a href='https://arxiv.org/pdf/2510.17426'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>UniSE: A Unified Framework for Decoder-Only Autoregressive LM-Based Speech Enhancement</title>
-      <link>https://arxiv.org/abs/2510.20441</link>
-      <guid isPermaLink="false">arxiv:2510.20441</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.SD</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
-<p><b>Authors:</b> Haoyin Yan, Chengwei Liu, Shaofei Xue, Xiaotao Liang, Yinghao Liu, Yuxiang Kong, Zheng Xue</p>
-<p>Neural audio codecs have largely promoted the application of language models (LMs) for speech applications. However, the effectiveness of autoregressive LM-based models in unifying speech enhancement (SE) tasks remains underexplored. In this work, we propose UniSE, a unified decoder-only LM-based framework to handle different SE tasks including speech restoration, target speaker extraction, and speech separation. Conditioned on input speech features, it autoregressively generates target discrete tokens, facilitating compatibility between distinct learning patterns of multiple tasks. To further optimize speech quality, we introduce a progressive reinforcement learning strategy with multiple assessment criteria. Experiments on several benchmarks show that UniSE achieves competitive performance compared to discriminative and generative baselines, demonstrating the capacity of LMs in unifying SE tasks. The code and demo are available at: https://github.com/alibaba/unified-audio/tree/main/QuarkAudio-UniSE.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://arxiv.org/abs/2510.20441'>page</a> · <a href='https://arxiv.org/pdf/2510.20441'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception</title>
-      <link>https://huggingface.co/papers/2606.28322</link>
-      <guid isPermaLink="false">arxiv:2606.28322</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yana Wei, Hongbo Peng, Yanlin Lai, Liang Zhao, Kangheng Lin, En Yu, Keyu Lv, Han Zhou, … <i>(+10 more)</i></p>
-<p>We introduce PerceptionRubrics, a rubric-based evaluation framework that addresses the gap between saturated benchmark scores and real-world brittleness. Shifting evaluation from holistic semantic matching to rigorous atomic auditing, PerceptionRubrics pairs 1,038 information-dense images with over 12,000 instance-specific rubrics. These criteria are derived from golden captions constructed via a novel Circular Peer-Review consensus pipeline and then distilled into a dual-stream system of Must-Right (essential facts) and Easy-Wrong (fine-grained details) rubrics. Crucially, PerceptionRubrics implements a Gated Scoring mechanism: unlike linear averages, failure on mandatory visual facts triggers sharp binary penalties. Extensive evaluation yields critical insights: (1) The Reliability Gap: models often verify fragmented elements correctly yet fail strict conjunctive constraints, exposing brittleness in dense domains; (2) Open-Closed Stratification: contrary to reasoning trends, we reveal a persistent 8% perception deficit between open-source and proprietary frontiers; and (3) Human-Aligned Rigor: our gated metrics substantially out-align conventional benchmarks, validating that strict perceptual fidelity is the prerequisite for reliable generation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-26 · <a href='https://huggingface.co/papers/2606.28322'>page</a> · <a href='https://arxiv.org/pdf/2606.28322'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Program-as-Weights: A Programming Paradigm for Fuzzy Functions</title>
-      <link>https://huggingface.co/papers/2607.02512</link>
-      <guid isPermaLink="false">arxiv:2607.02512</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Wentao Zhang, Liliana Hotsko, Woojeong Kim, Pengyu Nie, Stuart Shieber, Yuntian Deng, Hugging Face Daily Papers (curated)</p>
-<p>Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (PAW), in which a 4B compiler trained on FuzzyBench, a 10M-example dataset we release, emits parameter-efficient adapters for a frozen, lightweight interpreter. A 0.6B Qwen3 interpreter executing PAW programs matches the performance of direct prompting of Qwen3-32B, while using roughly one fiftieth of the inference memory and running at 30 tokens/s on a MacBook M3. PAW reframes the foundation model from a per-input problem solver into a tool builder: invoked once per function definition, it produces a small reusable artifact whose subsequent calls per function application are cheap and offline.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02512'>page</a> · <a href='https://arxiv.org/pdf/2607.02512'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents</title>
-      <link>https://huggingface.co/papers/2607.02255</link>
-      <guid isPermaLink="false">arxiv:2607.02255</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xiangchen Cheng, Yunwei Jiang, Jianwen Sun, Zizhen Li, Chuanhao Li, Xiangcheng Cao, Yihao Liu, Fanrui Zhang, … <i>(+3 more)</i></p>
-<p>Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see. The simplest contract appends past observations, tool calls, and reflections to every prompt, which makes prior context easy to access but also turns it into a jumbled mixture in which the effect of any single memory component is hard to isolate. We introduce and instrument an alternative bounded contract: every decision is made from a fresh user message assembled by typed retrieval, with no raw cross-decision transcript appended. The prompt thus stays bounded across runs of any length, and any single layer can be ablated in isolation. We instantiate the contract in Slay the Spire 2, a closed-rule stochastic deck-building game whose runs require hundreds of tactical and strategic decisions. A public online benchmark of frontier LLMs on the same game reports zero wins at the lowest difficulty across five configurations, and the developer-reported human win rate at the same difficulty is 16%; the task is hard but not saturated. Within our harness, a fixed-A0 ablation shows the largest observed difference when triggered strategic skills are enabled: the no-store baseline wins 3/10 games and adding the skill layer 6/10. At this sample size the comparison is directional rather than statistically decisive (Fisher exact p\approx0.37); a cross-backbone probe and public accumulating-context baselines are reported as operational comparisons rather than controlled tests of the contract variable itself. We release a reproducible testbed: 298 completed trajectories with condition tags, frozen memory/skill snapshots, prompt records, and analysis scripts -- an agent design and a validated, reusable methodology for studying how explicit memory layers shape long-horizon LLM-agent decisions.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02255'>page</a> · <a href='https://arxiv.org/pdf/2607.02255'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Multimodal Continuous Reasoning via Asymmetric Mutual Variational Learning</title>
-      <link>https://huggingface.co/papers/2607.00461</link>
-      <guid isPermaLink="false">arxiv:2607.00461</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shijie Li, Yilin Gao, Siyuan Yang, Tieyuan Chen, Chaofan Gan, Zhihao He, Zicheng Zhao, Yuyu Guo, … <i>(+3 more)</i></p>
-<p>Multimodal Large Language Models (MLLMs) are often constrained by a language-space bottleneck, forcing complex visual reasoning into discrete tokens which can lose perceptual nuance. A promising alternative is continuous latent reasoning, where the goal is to discover implicit reasoning pathways that bridge the multimodal query and the final answer. However, this introduces a severe train-inference mismatch: a training-time posterior, conditioned on the ground-truth answer, can exploit answer-dependent shortcuts. Standard variational training then forces the inference-time prior to mimic a posterior that has access to information unavailable at test time, leading to poor performance. To address this, we propose Asymmetric Mutual Variational Learning (AMVL), a framework that resolves this mismatch via a bidirectional calibration objective. A forward KL divergence trains the target-agnostic prior to match the posterior, while a novel reverse KL divergence simultaneously regularizes the posterior, preventing it from collapsing into inference-incompatible regions and mitigating this ``answer leakage&#x27;&#x27;. We provide theoretical analysis formalizing this leakage as prior contamination and prove that our dual-KL objective reduces it. We instantiate AMVL in a latent-integrated MLLM and show that it consistently outperforms strong discrete and latent-reasoning baselines, improving the average score on the complex BLINK benchmark by +10.83 and achieving gains of up to +32.00 on individual reasoning tasks, with analyses confirming improved latent-space stability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-01 · <a href='https://huggingface.co/papers/2607.00461'>page</a> · <a href='https://arxiv.org/pdf/2607.00461'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</title>
-      <link>https://huggingface.co/papers/2607.00466</link>
-      <guid isPermaLink="false">arxiv:2607.00466</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Sangjin Choi, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng, Hugging Face Daily Papers (curated)</p>
-<p>In prefill-decode (PD) disaggregated LLM serving, each request is assigned to a decode worker after prefill. Existing decode routers balance only load; for mixture-of-experts (MoE) models this is incomplete: equally loaded workers can differ in latency, since each decode step loads the weights of every distinct expert its batch activates. We present ELDR, an expert-locality-aware decode router for PD-disaggregated MoE serving. From a request&#x27;s prefill expert activations, ELDR builds an expert signature predicting the experts it will activate during generation. Offline, balanced K-means partitions signature space across decode workers; online, locality-band routing sends each request to the least-loaded worker among those best matching its signature. A signature cache, co-indexed with the KV cache at KV-block granularity, keeps signatures exact under prefix caching. Implemented in vLLM and evaluated on deployments of up to 40 GPUs, ELDR reduces median TPOT by 5.9-13.9% over the strongest of four load-balancing baselines across three MoE models and two workloads, with model outputs unchanged.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-01 · <a href='https://huggingface.co/papers/2607.00466'>page</a> · <a href='https://arxiv.org/pdf/2607.00466'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
