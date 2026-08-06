@@ -5,8 +5,144 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Wed, 05 Aug 2026 06:22:04 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 06:24:41 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Large-Small Model Collaboration for Enhancing Edge-Deployed Small Models</title>
+      <link>https://arxiv.org/abs/2503.10367</link>
+      <guid isPermaLink="false">arxiv:2503.10367</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
+<p><b>Authors:</b> Peigen Liu, Yijiang Fan, Zixuan Xu, Yuren Mao, Longbin Lai, Ying Zhang</p>
+<p>Edge devices host domain-specific small language models (SLMs) with limited resources, while private clouds offer larger LLMs. We propose G-Boost, an adaptive edge-cloud framework that improves a deployed SLM&#x27;s task performance without parameter updates. It formulates reasoning as a tree search, choosing at each step between SLM-only inference and SLM-LLM logit fusion---which transfers domain knowledge from the SLM&#x27;s adapted version to the cloud LLM without exposing private data. A process reward model guides Monte Carlo tree search to select beneficial collaboration steps dynamically. The edge runs the SLM and search controller; the cloud hosts the LLM and reward model, exchanging only current context. Evaluated on GSM8K and MATH-500 with Qwen2.5 and LLaMA2, G-Boost outperforms the SLM alone, static fusion, and fine-tuned baselines, gaining up to 8.6 and 10.7 percentage points over MCTS and Proxy-Tuning, respectively. Results confirm that step-level, reward-guided dynamic collaboration enhances reasoning and domain utilization for deployed edge SLMs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-08-05 · <a href='https://arxiv.org/abs/2503.10367'>page</a> · <a href='https://arxiv.org/pdf/2503.10367'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Uncertainty-aware Predict-Then-Optimize Framework for Equitable Post-Disaster Power Restoration</title>
+      <link>https://arxiv.org/abs/2508.04780</link>
+      <guid isPermaLink="false">arxiv:2508.04780</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.SI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Lin Jiang</p>
+<p><b>Authors:</b> Lin Jiang, Dahai Yu, Rongchao Xu, Tian Tang, Guang Wang</p>
+<p>The increasing frequency of extreme weather events, such as hurricanes, highlights the urgent need for efficient and equitable power system restoration. Many electricity providers make restoration decisions primarily based on the volume of power restoration requests from each region. However, our data-driven analysis reveals significant disparities in request submission volume, as disadvantaged communities tend to submit fewer restoration requests. This disparity makes the current restoration solution inequitable, leaving these communities vulnerable to extended power outages. To address this, we aim to propose an equity-aware power restoration strategy that balances both restoration efficiency and equity across communities. However, achieving this goal is challenging for two reasons: the difficulty of predicting repair durations under dataset heteroscedasticity, and the tendency of reinforcement learning agents to favor low-uncertainty actions, which potentially undermine equity. To overcome these challenges, we design a predict-then-optimize framework called EPOPR with two key components: (1) Equity-Conformalized Quantile Regression for uncertainty-aware repair duration prediction, and (2) Spatial-Temporal Attentional RL that adapts to varying uncertainty levels across regions for equitable decision-making. Experimental results show that our EPOPR effectively reduces the average power outage duration by 3.60% and decreases inequity between different communities by 14.19% compared to state-of-the-art baselines.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.SI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://arxiv.org/abs/2508.04780'>page</a> · <a href='https://arxiv.org/pdf/2508.04780'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Benchmarking and Improving LLM Robustness for Personalized Generation</title>
+      <link>https://arxiv.org/abs/2509.19358</link>
+      <guid isPermaLink="false">arxiv:2509.19358</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge, U Michigan — Rada Mihalcea</p>
+<p><b>Authors:</b> Chimaobi Okite, Naihao Deng, Kiran Bodipati, Huaidian Hou, Joyce Chai, Rada Mihalcea</p>
+<p>Recent years have witnessed a growing interest in personalizing the responses of large language models (LLMs). While existing evaluations primarily focus on whether a response aligns with a user&#x27;s preferences, we argue that factuality is an equally important yet often overlooked dimension. In the context of personalization, we define a model as robust if its responses are both factually accurate and align with the user preferences. To assess this, we introduce PERG, a scalable framework for evaluating robustness in LLMs, along with a new dataset, PERGData. We evaluate fourteen models from five different model families using different prompting methods. Our findings show that current LLMs struggle with robust personalization: even the strongest models (GPT-4.1, LLaMA3-70B) fail to maintain correctness in 5% of previously successful cases without personalization, while smaller models (e.g., 7B-scale) can fail more than 20% of the time. Further analysis reveals that robustness is significantly affected by the nature of the query and the type of user preference. To mitigate these failures, we propose Pref-Aligner, a two-stage approach that improves robustness by an average of 25% across models. Our work highlights critical gaps in current evaluation practices and introduces tools and metrics to support more reliable, user-aligned LLM deployments.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2025-09-18 · <a href='https://arxiv.org/abs/2509.19358'>page</a> · <a href='https://arxiv.org/pdf/2509.19358'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent</title>
+      <link>https://huggingface.co/papers/2608.03979</link>
+      <guid isPermaLink="false">arxiv:2608.03979</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhen Fang, Yu Zeng, Wenxuan Huang, Yiming Zhao, Shiting Huang, Tianfei Ren, Qi Lu, Qingnan Ren, … <i>(+13 more)</i></p>
+<p>We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web exploration. Preliminary evaluations reveal two critical bottlenecks in current models: (1) modality bias, where agents bypass visual tools in favor of textual search, and (2) parametric knowledge leakage, where models rely on internal memory rather than genuine tool-augmented execution. To address these challenges, we propose Video-DR, featuring a decoupled perception-exploration pipeline with stage-wise tool unlocking that compels exhaustive cross-frame visual grounding prior to web retrieval. Our framework adopts a two-stage training recipe: supervised fine-tuning followed by Group Relative Policy Optimization (GRPO), enabling autonomous exploration that breaks the imitation-learning ceiling. Furthermore, we curate Video-DR-Bench, a human-AI collaborative benchmark comprising 200 complex, multi-hop VQA instances. Empirical results demonstrate that our Video-DeepResearch-35B-A3B establishes a new state-of-the-art of 64.0% average accuracy, surpassing proprietary Claude-4.5-Sonnet (59.0%) by 5.0 points and significantly outperforming GPT-5 (52.5%) and Gemini 2.5 Pro (57.5%). The 30B-A3B variant achieves 59.3%, competitive with Claude-4.5-Sonnet and demonstrating the effectiveness of our training paradigm even at compact scale. Code: https://github.com/Osilly/Vision-DeepResearch.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://huggingface.co/papers/2608.03979'>page</a> · <a href='https://arxiv.org/pdf/2608.03979'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ToolArtist: Tool-Using Unified Multimodal Models for Agentic Image Generation</title>
+      <link>https://huggingface.co/papers/2608.04436</link>
+      <guid isPermaLink="false">arxiv:2608.04436</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiahao Zhao, Xiaomin Yu, Zhongxiang Sun, Fengwei Teng, Chengwei Qin, Xiaobin Hu, Jun Xu, Shuicheng Yan, … <i>(+1 more)</i></p>
+<p>Text-to-image (T2I) models can produce visually compelling images, yet they remain limited on open-world tasks that require complex semantic understanding, multi-step reasoning, and the integration of external world knowledge. Existing efforts introduce agent capabilities into image generation, but they either prescribe a fixed workflow or place only a subset of the open-world image generation process under agent control. Consequently, reasoning, tool invocation, and image generation are not coordinated by a single policy. We propose ToolArtist, a fully agentic image generation model obtained by post-training a Unified Multimodal Model (UMM). ToolArtist dynamically orchestrates reasoning, external tool use, and native image generation within one unified policy. During Supervised Fine-Tuning (SFT), we equip a teacher agent with search tools alongside an image-generation tool. We then convert the collected trajectories into a UMM compatible format, where the image-generation tool is concealed while the resulting generated images are retained. During Reinforcement Learning (RL), we develop an agentic RL infrastructure for UMMs and introduce Reason-Act-Draw GRPO (RAD-GRPO), which uses complementary intent and quality rewards to jointly optimize the model. Experiments show that placing the entire open-world image-generation process under an agent policy consistently outperforms approaches with fixed pipelines or only partially agent-controlled components. We release the training data and the complete post-training infrastructure.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-05 · <a href='https://huggingface.co/papers/2608.04436'>page</a> · <a href='https://arxiv.org/pdf/2608.04436'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2608.01837</link>
+      <guid isPermaLink="false">arxiv:2608.01837</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chunji Lv, Yangguang Wei, Junlin Liu, Yang Gao, Ming Liu, Xinming Wang, Jinyang Wu, Guoren Wang, … <i>(+2 more)</i></p>
+<p>Large language model agents have shown strong potential in complex interactive tasks, yet their reinforcement learning (RL) is often hindered by sparse rewards, as a long multi-turn trajectory may receive only a single outcome-level signal. On-policy self-distillation (OPSD) provides dense token-level supervision from a privileged teacher, but the teacher may not be reliable at every position. Existing methods commonly rely on isolated token-level discrepancies, which can be sensitive to noise, or assign a shared step-level weight that may overlook positional variation. We propose Persistent Consistency Self-Distillation (PCSD), which derives token-level distillation weights from the local persistence of teacher-favoring signals. PCSD combines adaptive windows with exponentially decayed aggregation to capture persistent relative teacher support, applies trend-aware modulation to attenuate locally declining support, and produces continuous weights through sigmoid gating. The resulting objective is jointly optimized with GRPO, combining dense teacher guidance with sparse environmental feedback. Without inference-time skills, PCSD achieves the best ALFWorld Overall results among all baselines on both backbones, exceeding GRPO by 15.6 and 13.3 points and SDAR by 6.2 and 5.5 points, while remaining competitive on WebShop and gaining 15.8 points over GRPO on unseen ALFWorld split.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://huggingface.co/papers/2608.01837'>page</a> · <a href='https://arxiv.org/pdf/2608.01837'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads</title>
+      <link>https://huggingface.co/papers/2608.04570</link>
+      <guid isPermaLink="false">arxiv:2608.04570</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yushi Sun, Yanjie Zhang, Rui Sheng, Hugging Face Daily Papers (curated)</p>
+<p>Personalized LLMs with persistent memory are increasingly deployed, yet the faithfulness of their user models remains unexamined. We study over-inference (OI): the phenomenon where LLMs fabricate user attributes beyond what evidence supports. We introduce MirageBench, comprising 150 personas balanced across stereotypical, counter-stereotypical, and neutral profiles, 6 personalization tasks spanning an ``imagination gradient&#x27;&#x27;, a four-way faithfulness taxonomy operationalized by an independent judge (validated against a blind human annotator on 400 claims: Cohen&#x27;s kappa = 0.863 four-class, kappa = 0.900 binary), and a leaderboard of 12 models across 7 families on 143616 judged claims. We find that over-inference is pervasive: every one of the 12 models over-infers 35%--49% of its claims (cross-model mean 41.6%; claim-weighted 41.8%), with no model in this evaluation escaping it. Most strikingly, we surface a Self-Monitoring Inversion: at the model-selection level, models&#x27; self-assessed OI is negatively rank-correlated with their judge-measured OI (rho = -0.60, p = 0.044; exploratory, wide bootstrap CI [-0.90, +0.06], n = 12). The models that report the least over-inference tend to be flagged as fabricating the most, so self-reported confidence is a misleading signal for comparing models, even though within a single model self-audit still ranks that model&#x27;s own claims moderately well (AUROC 0.58--0.83). We further show that OI is task-dependent (27%--59%) and that, in a multi-turn pilot, inferred attributes accumulate approximately linearly with little revision. MirageBench positions external verification, rather than model self-report, as a more reliable foundation for trustworthy personalization.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-05 · <a href='https://huggingface.co/papers/2608.04570'>page</a> · <a href='https://arxiv.org/pdf/2608.04570'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Quo Vadis, World Modeling?</title>
+      <link>https://huggingface.co/papers/2608.02713</link>
+      <guid isPermaLink="false">arxiv:2608.02713</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yu Yang, Xuemeng Yang, Licheng Wen, Lingdong Kong, Xiaobin Hu, Dongyue Lu, Wei Chow, Xiyan Huang, … <i>(+13 more)</i></p>
+<p>Continually improving agents require dynamic interaction feedback beyond static supervision, yet direct real-environment interaction is costly, slow, unsafe, and hard to parallelize. World modeling offers a natural intermediate proxy that allows agents to query lower-cost, more controllable feedback before committing to real actions. Classical world models instantiate this proxy primarily through future physical-state prediction, a formulation useful yet narrow for agents that require actionable feedback beyond raw state transitions. In this work, we conceptualize Agent-Centric Interactive World Proxies, shifting the fundamental paradigm from physical state transitions to agent-usable information transitions, such as execution outcomes, retrieved experiences or skills, and verification signals, broadening the scope of world modeling to provide versatile feedback for continually improving agents. To systematically map this design space, we organize world proxies into six functional forms based on their feedback modalities: dynamics, spatial, execution, memory/experience, skill, and reward/verification proxies, which together characterize the primary ways world modeling serves agent improvement. We further analyze how these proxies empower agents across three progressive levels: L.1 Inference-Time Guidance, where proxy outputs enrich in-context information for superior decisions; L.2 Training-Time Optimization, where proxy outputs yield rewards, critiques, or synthetic rollouts for policy learning; and L.3 Agent-Proxy Co-Evolution, where real-environment evidence continuously updates both the proxy and the agent for co-evolution. Ultimately, this work recasts world modeling into an agent-centric paradigm, establishing a roadmap for building world proxies that empower agents to plan better, learn faster, and evolve continually.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-03 · <a href='https://huggingface.co/papers/2608.02713'>page</a> · <a href='https://arxiv.org/pdf/2608.02713'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents</title>
+      <link>https://huggingface.co/papers/2608.04003</link>
+      <guid isPermaLink="false">arxiv:2608.04003</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shuhan Xue, Zixin Ding, Yichen Shen, Yinjie Wang, Zhenfei Yin, Yingcheng Wu, Yuxin Chen, Mengdi Wang, … <i>(+2 more)</i></p>
+<p>Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain preferences, task histories, tool routines, and learned skills across sessions. Yet whether retained experience actually improves them over time has not been systematically tested. We introduce PAST-Bench, a benchmark designed to isolate this question. Each agent runs through ordered sequences of fresh-session tasks under matched conditions that turn retained experience on and off. It spans 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update. We report both later-task gains and whether those gains follow the intended save, retrieve, and update pathway. Across seven base models and four agent frameworks, improvement is real but uneven across capabilities. Agents with the same headline gain can differ markedly in whether that gain is supported by evidence of the intended pathway. Guided by these findings, we develop Hermes+, which extends Hermes with five targeted interventions across stages of the agent loop. Hermes+ raises the average gain from retained experience and provides clearer pathway evidence, with its strongest improvement on tasks requiring outdated state to be replaced, although the effect remains capability- and model-dependent. Together, PAST-Bench and Hermes+ provide an evaluation and diagnostic foundation for studying how persistent agents can progress from retaining experience to systematically improving through it. Code: https://github.com/Gen-Verse/PAST-Bench</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://huggingface.co/papers/2608.04003'>page</a> · <a href='https://arxiv.org/pdf/2608.04003'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LLaDA MoE v2: Scaling Mixture-of-Experts Diffusion Language Models</title>
+      <link>https://huggingface.co/papers/2608.03457</link>
+      <guid isPermaLink="false">arxiv:2608.03457</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Fengqi Zhu, Shaoxuan Xu, Jingyang Ou, Zebin You, Yipeng Xing, Huabin Liu, Xiaolu Zhang, Jun Zhou, … <i>(+7 more)</i></p>
+<p>Diffusion language models (dLLMs) offer an alternative to autoregressive (AR) language modeling, yet the scaling behavior of Mixture-of-Experts (MoE) dLLMs remains poorly understood. We systematically characterize how optimization hyperparameters, compute allocation, and architecture scale for MoE dLLMs, identifying quantitative differences from scaling trends previously reported for AR models. Specifically, for optimization, the optimal nominal batch size grows faster, while the optimal learning rate decays more rapidly with compute. For model--data allocation, IsoFLOP analysis reveals a slight data-side tilt: the optimal token budget grows faster than activated model-side computation. For MoE architecture, larger scales increasingly favor larger expert pools at fixed activated capacity, while moderate expert granularity remains consistently effective and the preferred fraction of activated capacity assigned to shared experts remains stable across scales. Guided by these findings, we train LLaDA MoE v2, a 30B-A3B dLLM, from scratch on 23.5T tokens. With approximately 65\% as many pretraining tokens as Qwen3, LLaDA MoE v2 approaches Qwen3 on several knowledge, reasoning, and coding benchmarks. After supervised fine-tuning alone, it outperforms SDAR Chat on seven of eight reasoning and coding benchmarks and remains close to Qwen3 on several tasks. These results establish practical scaling laws and design principles for MoE dLLMs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://huggingface.co/papers/2608.03457'>page</a> · <a href='https://arxiv.org/pdf/2608.03457'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models</title>
+      <link>https://huggingface.co/papers/2608.03812</link>
+      <guid isPermaLink="false">arxiv:2608.03812</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Wanshun Su, Yang Shi, Feihu Liu, Ziwen Yu, Yan Min, Zhuoran Zhang, Qixun Wang, Haotian Wang, … <i>(+6 more)</i></p>
+<p>Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs substantial computational overhead, demanding aggressive token compression for efficient deployment. Existing methods often degrade at low token budgets: pre-LLM compression may discard structurally important and globally distributed evidence, whereas inner-LLM compression often underexploits query-conditioned audio-visual collaboration. To address these limitations, we propose OmniPack, a training-free framework that coordinates structural compression before the LLM with task-relevant semantic refinement within the LLM. Before the LLM, OmniPack removes structural redundancy through modality-specific importance, global coverage, and similarity-aware merging. After sufficient multimodal interaction, it further consolidates diverse, task-relevant representations through textual guidance and audio-visual collaboration. Extensive experiments on five benchmarks with three Omni-LLM backbones demonstrate that OmniPack consistently achieves the best performance-efficiency trade-off across diverse retention ratios, outperforming all existing methods. Notably, on Qwen2.5-Omni-7B, OmniPack preserves 98.0% of the original performance while reducing FLOPs to 16.7%, and still retains 92.9% of the original performance with only 6.8% of the original FLOPs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-04 · <a href='https://huggingface.co/papers/2608.03812'>page</a> · <a href='https://arxiv.org/pdf/2608.03812'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes</title>
+      <link>https://huggingface.co/papers/2608.05000</link>
+      <guid isPermaLink="false">arxiv:2608.05000</guid>
+      <pubDate>Thu, 06 Aug 2026 06:24:41 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junlin Han, Shengbang Tong, David Fan, Minghao Chen, Philip Torr, Filippos Kokkinos, Mike Lewis, Hugging Face Daily Papers (curated)</p>
+<p>Vision offers a critical axis for advancing foundation models, driving a shift towards natively unified multimodal pretraining. Despite this momentum, the design space and the fundamental mechanisms of how modalities interact during unified training remain underexplored. We provide empirical clarity through a systematic exploration of multimodal pretraining. Our controlled experiments on both synthetic and large-scale real-world datasets yield four key insights into the physics of multimodal pretraining: (i) Knowledge Flow: We disentangle how language, visual understanding, and visual generation transfer knowledge across modalities, revealing distinct patterns of influence and asymmetry; (ii) Synergy vs. Competition: We show that data &quot;complexity&quot; largely determines whether modalities are synergistic, identify architectural choices that promote synergy: such as shared attention and normalization with modality-specific feed-forward layers, and find that these behaviors generalize across different visual tokenizer designs; (iii) Early Unification: Unifying modalities from the very early stages and training them jointly is shown to be more effective than late alignment or sequential training. This process uncovers a vision laziness phenomenon, where delayed integration leads models to rely on language priors; (iv) Recipes: We derive efficient pretraining recipes that achieve strong generative performance using only 5% of the compute budget. These core findings are subsequently validated at scale by training multiple 13.5B MoE models on 2T tokens. We hope this study provides a principled foundation for understanding and scaling multimodal pretraining.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-05 · <a href='https://huggingface.co/papers/2608.05000'>page</a> · <a href='https://arxiv.org/pdf/2608.05000'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Meta Prompting for AI Systems</title>
       <link>https://arxiv.org/abs/2311.11482</link>
@@ -2158,141 +2294,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Apple ML Research</p>
 <p>Safety alignment in language models operates through two mechanistically distinct systems: refusal neurons that gate whether harmful knowledge is expressed, and concept neurons that encode the harmful knowledge itself. By targeting a single neuron in each system, we demonstrate both directions of failure â bypassing safety on explicit harmful requests via suppression, and inducing harmful content from innocent prompts via amplification â across seven models spanning two families and 1.7B to 70B parameters, without any training or prompt engineering. Our findings suggest that safety alignmentâ¦</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/single-neuron-safety-alignment'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>TaoSR-AGRL: Adaptive Guided Reinforcement Learning Framework for E-commerce Search Relevance</title>
-      <link>https://arxiv.org/abs/2510.08048</link>
-      <guid isPermaLink="false">arxiv:2510.08048</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.IR</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
-<p><b>Authors:</b> Jianhui Yang, Yiming Jin, Pengkun Jiao, Chenhe Dong, Zerui Huang, Shaowei Yao, Xiaojiang Zhou, Dan Ou, … <i>(+1 more)</i></p>
-<p>Query-product relevance prediction is fundamental to e-commerce search and has become even more critical in the era of AI-powered shopping, where semantic understanding and complex reasoning directly shape the user experience and business conversion. Large Language Models (LLMs) enable generative, reasoning-based approaches, typically aligned via supervised fine-tuning (SFT) or preference optimization methods like Direct Preference Optimization (DPO). However, the increasing complexity of business rules and user queries exposes the inability of existing methods to endow models with robust reasoning capacity for long-tail and challenging cases. Efforts to address this via reinforcement learning strategies like Group Relative Policy Optimization (GRPO) often suffer from sparse terminal rewards, offering insufficient guidance for multi-step reasoning and slowing convergence. To address these challenges, we propose TaoSR-AGRL, an Adaptive Guided Reinforcement Learning framework for LLM-based relevance prediction in Taobao Search Relevance. TaoSR-AGRL introduces two key innovations: (1) Rule-aware Reward Shaping, which decomposes the final relevance judgment into dense, structured rewards aligned with domain-specific relevance criteria; and (2) Adaptive Guided Replay, which identifies low-accuracy rollouts during training and injects targeted ground-truth guidance to steer the policy away from stagnant, rule-violating reasoning patterns toward compliant trajectories. TaoSR-AGRL was evaluated on large-scale real-world datasets and through online side-by-side human evaluations on Taobao Search. It consistently outperforms DPO and standard GRPO baselines in offline experiments, improving relevance accuracy, rule adherence, and training stability. The model trained with TaoSR-AGRL has been successfully deployed in the main search scenario on Taobao, serving hundreds of millions of users.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.IR, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-07-03 · <a href='https://arxiv.org/abs/2510.08048'>page</a> · <a href='https://arxiv.org/pdf/2510.08048'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>A global workspace in language models</title>
-      <link>https://www.anthropic.com/research/global-workspace</link>
-      <guid isPermaLink="false">anthropic:22b32121ee</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Interpretability research on Claude&#x27;s internal thoughts.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/global-workspace'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Verbalizable Representations Form a Global Workspace in Language ModelsGurnee et al., 2026We find that Claude maintains a small, privileged set of representations it can report on, control, and reason with, atop a much larger volume of automatic processing.</title>
-      <link>https://transformer-circuits.pub/2026/workspace/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:66936446cf</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2026/workspace/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>ResearchStudio-Reel: Automate the Last Mile of Research from Paper to Poster, Video, and Blog</title>
-      <link>https://huggingface.co/papers/2607.04438</link>
-      <guid isPermaLink="false">arxiv:2607.04438</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Lingao Xiao, Yalun Dai, Yangyu Huang, Qihao Zhao, Wenshan Wu, Hugo He, Ruishuo Chen, Jin Jiang, … <i>(+13 more)</i></p>
-<p>Research dissemination, turning a paper into a poster, a talk video, and a blog post, is still a manual last mile. Prior automation treats each artifact in isolation that each re-extract the paper from scratch, usually ship one-way renders the author cannot reopen in PowerPoint or Word, and gates quality on soft VLM-preference scores that plateau while load-bearing sections still read as empty. We argue this last mile is best built as a composition of skills: thin agent-readable contracts that share one upstream extractor and wrap deterministic primitives in a measured-fill loop whose exits are hard pass/fail render gates. We instantiate this as ResearchStudio-Reel, five Claude Code and Codex skills organized into one shared extractor (Paper2Assets), three editable generators (Paper2Poster, Paper2Video, Paper2Blog), and one interactive convergence layer (Paper2Reel). Paper2Assets extracts each paper once into a shared bundle that can be reused by every downstream skill; The three generators produce a print-ready poster, a synchronized talk video, and a bilingual blog that stay factually consistent and round-trip through PowerPoint or Word; Paper2Reel then binds all three into a self-contained HTML viewer whose section-level clicks jump the video, slides, captions, and blog to matching content. On the Paper2Poster benchmark, our posters lead every aesthetic and information sub-criterion against both prior automated systems and single-shot frontier LLMs, surpassing the authors&#x27; own on aesthetics under two held-out VLM judges and winning overall on 84% to 93% of papers; capability audits further show that, by uniquely pairing narration-aligned on-slide highlights with a bilingual blog gated by layout-aware DOCX repair, ResearchStudio-Reel is the only pipeline to ship all three editable artifacts. Project is available at https://aka.ms/ResearchStudio</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04438'>page</a> · <a href='https://arxiv.org/pdf/2607.04438'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DataComp-VLM: Improved Open Datasets for Vision-Language Models</title>
-      <link>https://huggingface.co/papers/2606.28551</link>
-      <guid isPermaLink="false">arxiv:2606.28551</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Matteo Farina, Vishaal Udandarao, Thao Nguyen, Selim Kuzucu, Maximilian Böther, Andreas Hochlehnert, Adhiraj Ghosh, Marianna Nezhurina, … <i>(+29 more)</i></p>
-<p>Building performant Vision-Language Models (VLMs) requires carefully curating large-scale training datasets, yet the community lacks systematic benchmarks for evaluating such curation strategies. We introduce DataComp for VLMs (DCVLM), a benchmark for controlled data-centric experiments to improve VLM training. As part of DCVLM, we collect 160 datasets spanning four data types -- image-caption pairs, multimodal interleaved documents, text-only, and instruction-tuning data -- into a corpus of 6T multimodal tokens. DCVLM allows participants to test curation strategies (filtering, mixing, formatting, sampling) across 1B-8B models and 6.25B-200B token budgets. Models are then evaluated on a carefully selected suite of up to 52 downstream benchmarks across 9 domains. We conduct extensive experiments on DCVLM and find that data mixing, not filtering, is key to a high-quality training dataset: instruction-heavy mixtures scale better than caption-heavy ones, with gains widening at larger scales. The resulting dataset, DCVLM-Baseline, enables training an 8B VLM to 63.6% accuracy on our 33-task core suite with 200B training tokens. Compared to FineVision, the state-of-the-art open VLM training dataset, this represents an improvement of +5.4pp. DCVLM and all accompanying artifacts will be made publicly available at https://www.datacomp.ai/dcvlm/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-26 · <a href='https://huggingface.co/papers/2606.28551'>page</a> · <a href='https://arxiv.org/pdf/2606.28551'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning</title>
-      <link>https://huggingface.co/papers/2607.04425</link>
-      <guid isPermaLink="false">arxiv:2607.04425</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Niu Lian, Alan Chen, Zhehao Yu, Chengzhen Duan, Fazhan Liu, Hui Liu, Pei Fu, Jian Luan, … <i>(+4 more)</i></p>
-<p>Recent advances in multimodal foundation models and agent systems have driven GUI agents from single-platform task execution toward cross-platform interaction. However, building multi-platform GUI agents remains challenging. On one hand, high-quality and executable cross-platform interaction trajectories are still scarce, and existing data often suffer from limited platform coverage. On the other hand, different platforms exhibit distinct interaction conventions, making joint or continual training prone to behavioral pattern mixing, platform-specific capability degradation, and catastrophic forgetting. To address these challenges, we construct Uni-GUI, a high-quality cross-platform GUI interaction dataset, and propose UI-MOPD, the first method that incorporates multi-teacher on-policy distillation into continual learning for GUI agents. UI-MOPD dynamically selects a platform-specific teacher according to the current environment and transfers platform-specific behavioral priors to a shared policy through platform-conditioned distillation, enabling adaptation to new platforms while preserving capabilities on existing ones. Experiments on OSWorld and MobileWorld show that UI-MOPD achieves task success rates of 38.2% and 12.0%, respectively, demonstrating its effectiveness in balancing cross-platform capability retention and new-platform adaptation.
-  Project page: https://elispectre.github.io/UI-MOPD/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04425'>page</a> · <a href='https://arxiv.org/pdf/2607.04425'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ResearchStudio-Idea: An Evidence-Grounded Research-Ideation Skill Suite from ML Conference Outcomes</title>
-      <link>https://huggingface.co/papers/2607.04439</link>
-      <guid isPermaLink="false">arxiv:2607.04439</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Qihao Zhao, Yangyu Huang, Yalun Dai, Lingao Xiao, Jianjun Gao, Xin Zhang, Wenshan Wu, Scarlett Li, … <i>(+4 more)</i></p>
-<p>Large language models have made research ideation increasingly accessible, yet effective idea development requires more than generating candidate directions. Researchers must ground a problem in current literature, identify meaningful bottlenecks, differentiate from existing solutions, and evaluate risks before committing to implementation. We present ResearchStudio-Idea as a reusable skill suite for this first mile of research ideation. The suite includes Paper-Search, a standalone multi-source literature search skill; Scoop-Check, a standalone prior-art collision checker for novelty claims; and IdeaSpark, the end-to-end skill that composes evidence grounding, pattern-guided generation, collision retrieval, audit, and idea-card rendering into one workflow. IdeaSpark is constructed from a corpus of 1,947 machine learning conference papers collected from ICLR, ICML, and NeurIPS between 2021 and 2025, including Oral papers, a separately tracked high-citation subset, and rejected submissions. Analysis of these outcomes reveals 31 recurring ideation sub-patterns, consolidated into 15 reusable ideation patterns. Each pattern is operationalized as a structured card containing research contexts, bottleneck types, differentiation strategies, supporting precedents, and common failure modes. Given a research problem and an evidence bundle, IdeaSpark evaluates evidence readiness, reconstructs the surrounding research context, identifies unresolved bottlenecks, selects relevant patterns, instantiates one candidate direction, retrieves potentially conflicting prior work, and performs outcome-informed auditing. This workflow transforms reusable ideation patterns into traceable research proposals. Blind automated-judge evaluations show that IdeaSpark consistently produces stronger research proposals than no-skill and generic-skill baselines while maintaining competitive novelty.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04439'>page</a> · <a href='https://arxiv.org/pdf/2607.04439'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers</title>
-      <link>https://huggingface.co/papers/2607.02461</link>
-      <guid isPermaLink="false">arxiv:2607.02461</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Donghyun Lee, Jitesh Chavan, Duy Nguyen, Sam Huang, Liming Jiang, Priyadarshini Panda, Timo Mertens, Saurabh Shukla, … <i>(+1 more)</i></p>
-<p>Diffusion transformers (DiTs) achieve state-of-the-art image and video generation, but their multi-step sampling and growing parameter count make inference expensive. Post-training quantization (PTQ) is the natural remedy, yet DiT activations shift across timesteps, prompts, and guidance branches, forcing prior methods to re-fit calibration data for every new checkpoint or modality. We present OrbitQuant, a data-agnostic weight-activation quantizer that bypasses range estimation by quantizing in a normalized, rotated basis. In this basis, a randomized permuted block-Hadamard (RPBH) rotation concentrates each coordinate around one fixed, known marginal regardless of the input, so a single Lloyd-Max codebook serves all timesteps, prompts, and layers of a given input dimension. We extend the same quantizer to weight rows offline, absorbing the rotation into the weights so that it cancels inside each linear layer and only a forward rotation on the activations remains at runtime. The same recipe transfers from image to video with no per-modality tuning. Across FLUX.1, Z-Image-Turbo, Wan 2.1, and CogVideoX, it sets the state of the art for PTQ at several low-bit settings. It also pushes PTQ of image diffusion transformers to W2A4 with usable generation quality.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02461'>page</a> · <a href='https://arxiv.org/pdf/2607.02461'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Revisiting ASR Error Correction with Specialized Models</title>
-      <link>https://machinelearning.apple.com/research/asr-error-correction</link>
-      <guid isPermaLink="false">apple_ml:aca046406b</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Language models play a central role in automatic speech recognition (ASR), yet most methods rely on text-only models unaware of ASR error patterns. Recently, large language models (LLMs) have been applied to ASR correction, but introduce latency and hallucination concerns. We revisit ASR error correction with compact seq2seq models, trained on ASR errors from real and synthetic audio. To scale training, we construct synthetic corpora via cascaded TTS and ASR, finding that matching the diversity of realistic error distributions is key. We propose correction-first decoding, where the correctionâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/asr-error-correction'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Path-Constrained Mixture-of-Experts</title>
-      <link>https://machinelearning.apple.com/research/path-constrained-mixture-experts</link>
-      <guid isPermaLink="false">apple_ml:c36ba11a8c</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Sparse Mixture-of-Experts (MoE) architectures route each token through a subset of experts at each layer independently. We propose viewing MoE computation through the lens of expert pathsâthe sequence of expert selections a token makes across all layers. This perspective reveals that, despite N^L possible paths for N experts across L layers, tokens in practice cluster into a small fraction of paths that align with linguistic function, yet the vast majority of paths remain unexplored, representing a statistical inefficiency. This motivates architectures that constrain the effective path spaceâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/path-constrained-mixture-experts'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Scaling Properties of Continuous Diffusion Spoken Language Models</title>
-      <link>https://machinelearning.apple.com/research/scaling-properties-continuous-diffusion</link>
-      <guid isPermaLink="false">apple_ml:6592fdcf45</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Speech-only spoken language models (SLMs) lag behind text and text-speech models in performance, with recent discrete autoregressive (AR) SLMs indicating significant computational and data demands to match text models. Since discretizing continuous speech for AR creates bottlenecks, we explore whether continuous diffusion (CD) SLM is more viable. To quantify the SLMs linguistic quality, we introduce the phoneme Jensen-Shannon divergence (pJSD) metric. Our analysis reveals CD SLMs, mirroring AR behavior, exhibit scaling laws for validation loss and pJSD, and show optimal token-to-parameterâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/scaling-properties-continuous-diffusion'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory</title>
-      <link>https://huggingface.co/papers/2607.02517</link>
-      <guid isPermaLink="false">arxiv:2607.02517</guid>
-      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, HKUST, Imperial College, NUS, Peking U, U Michigan — (senior)</p>
-<p><b>Authors:</b> Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Qingyan Bai, Ka Leong Cheng, Yue Yu, Yixuan Li, … <i>(+6 more)</i></p>
-<p>We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration. Unlike existing world models that entangle physical dynamics with pixel rendering and rely on continuous visual observation to sustain motion, our framework explicitly decouples semantic motion orchestration from visual generation. By leveraging an LLM to coordinate 3D trajectories with camera movements and subsequently employing these orchestrated trajectories as control signals for video generation, our approach ensures strict physical logic and appearance stability, successfully preserving the exact visual identities of dynamic entities even when they re-enter the scene after prolonged periods out of view. Experimental results demonstrate that our method supports the synthesis of complex and extended events with unprecedented controllability and persistent dynamic object memory. Project Page: https://worlddirector.github.io/</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2607.02517'>page</a> · <a href='https://arxiv.org/pdf/2607.02517'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
