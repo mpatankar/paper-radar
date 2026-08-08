@@ -5,8 +5,74 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Fri, 07 Aug 2026 05:29:58 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 04:48:42 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models</title>
+      <link>https://huggingface.co/papers/2607.28609</link>
+      <guid isPermaLink="false">arxiv:2607.28609</guid>
+      <pubDate>Sat, 08 Aug 2026 04:48:42 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
+<p><b>Authors:</b> Qiushi Sun, Kanzhi Cheng, Yian Wang, Bowen Yang, Hang Yan, Liheng Chen, Fangzhi Xu, Zichen Ding, … <i>(+16 more)</i></p>
+<p>Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent&#x27;s actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA evaluation, data curation, and reinforcement learning. Neither human-written verifiers nor human annotators can provide such verification at scale, so the field increasingly turns to vision-language models (VLMs) as judges of CUA trajectories. But a fundamental question has long gone unexamined: are these VLM judges reliable enough? To study it systematically, we introduce OSReward, a realistic, high-quality benchmark that evaluates VLM judges on CUA trajectories. The trajectories come from diverse agent backbones executing human-verified instructions across platforms, then rigorously labeled with ground-truth verdicts through multi-stage human annotation. Building on it, we derive OSReward-Hard, a challenge set concentrating genuinely hard cases, and OSReward-Multi for fine-grained efficiency and alignment scoring. The most comprehensive evaluation of VLM judges to date finds even state-of-the-art models fall short of an ideal judge, sharing a systematic leniency bias that mislabels failed runs as successes. The few reliable enough to trust are too expensive to run at scale, while affordable open models trail far behind. To close this gap, we construct and release OS-Shepherd-100K, an open corpus of reasoning-annotated trajectory judgments for the CUA community. On it, we train OS-Shepherd (9B and 35B), open reward models that supply low-cost, stable, and reliable reward signals, matching commercial judges at 30-60% lower cost than the frontier. Extensive analyses further inform the design of reliable CUA reward at scale. Our code, benchmark, dataset, and model checkpoints are available at https://os-copilot.github.io/OSReward-Home/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-30 · <a href='https://huggingface.co/papers/2607.28609'>page</a> · <a href='https://arxiv.org/pdf/2607.28609'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GST-Bench: Can VLMs Develop Global Spatial Awareness from Video?</title>
+      <link>https://huggingface.co/papers/2608.05747</link>
+      <guid isPermaLink="false">arxiv:2608.05747</guid>
+      <pubDate>Sat, 08 Aug 2026 04:48:42 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
+<p><b>Authors:</b> Qifeng Zhang, Kaixiang Huang, Heng Dong, Huang Fang, Junting Chen, Junjie Zhu, Yonghang Chen, Zhiyu Zhang, … <i>(+2 more)</i></p>
+<p>Spatial intelligence is fundamental to embodied agents, yet existing benchmarks focus on local spatial perception from single or few viewpoints, overlooking global spatial awareness over continuous, long-horizon visual streams. To address this limitation, we introduce the Global-Spatial-Temporal Benchmark (GST-Bench), a VQA benchmark for global spatial intelligence in video understanding, comprising human-verified questions derived from 6,790 minutes of synthetically generated video. It requires models to perform accurate spatial inference from novel viewpoints unseen in the input video and to map egocentric observations onto global top-down images. A comprehensive evaluation of 22 state-of-the-art VLMs exposes a striking gap between models and humans: the strongest zero-shot model attains only 42.68, far below the human score of 79.08. To probe the cause of this gap, we construct GST-Bench-Local and find that models, despite strong local spatial understanding under the same task formulation, still fail to consolidate long-horizon observations into a globally consistent scene representation. We further provide GST-Train, a dataset for global spatial reasoning, as a complementary resource to facilitate future research on this challenge.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-06 · <a href='https://huggingface.co/papers/2608.05747'>page</a> · <a href='https://arxiv.org/pdf/2608.05747'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2608.06197</link>
+      <guid isPermaLink="false">arxiv:2608.06197</guid>
+      <pubDate>Sat, 08 Aug 2026 04:48:42 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Zishan Xu, Zhiyuan Yao, Yuxin Chen, Yifu Guo, Zhengxi Lu, Yuquan Lu, Jinyang Huang, Yan Xu, … <i>(+5 more)</i></p>
+<p>Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on external simulators that are difficult to ground. We introduce EnvACE, an agentic reinforcement learning method that replaces external environment interaction during training with world rehearsal. The policy alternates between acting and rehearsal: it first generates a tool call, then plays the role of the environment to produce the response induced by that action, and conditions subsequent decisions on the rehearsed response. Both roles are jointly optimized end-to-end using task-success rewards. Through world rehearsal, the policy internalizes the relationship between actions and their environment responses in its parameters, yielding an agent world model that directly supports decision making. Across BFCL-v4, tau^2-Bench, VitaBench, and FinMCP-Bench, EnvACE achieves strong and transferable performance, outperforming environment-scaling baselines in the overall evaluation. Controlled studies further show that world rehearsal consistently improves policy learning across model scales. At test time, the internalized world model enables private rehearsal before committed execution, yielding further gains under a moderate rehearsal budget without additional external interaction. Our findings establish world rehearsal as a new path toward scaling LLM agent training beyond the constraints of external environments. Our code is publicly available at https://github.com/Within-yao/EnvACE.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-06 · <a href='https://huggingface.co/papers/2608.06197'>page</a> · <a href='https://arxiv.org/pdf/2608.06197'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling Categorical Flow Maps</title>
+      <link>https://machinelearning.apple.com/research/scaling-categorical-flow-maps</link>
+      <guid isPermaLink="false">apple_ml:1e64e8285c</guid>
+      <pubDate>Sat, 08 Aug 2026 04:48:42 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Continuous diffusion and flow matching models could represent a powerful alternative to autoregressive approaches for language modelling (LM), as they unlock a host of advantages currently reserved for continuous modalities, including accelerated sampling and tilting. Recently, several works have demonstrated the possibility of generating discrete data continuously by a simple flow matching process between a Gaussian and the one-hot encoded data distribution. They have further shown the feasibility of accelerated sampling via Categorical Flow Maps (CFMs), resulting in competitive sampleâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-07 · <a href='https://machinelearning.apple.com/research/scaling-categorical-flow-maps'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Beyond Next-Token Prediction: A Performance Characterization of Diffusion versus Autoregressive Language Models</title>
+      <link>https://machinelearning.apple.com/research/diffusion-autoregressive-performance</link>
+      <guid isPermaLink="false">apple_ml:edc21c15e4</guid>
+      <pubDate>Sat, 08 Aug 2026 04:48:42 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Large Language Models (LLMs) have achieved state-of-the-art performance on a broad range of Natural Language Processing (NLP) tasks, including document processing and code generation. Autoregressive Language Models (ARMs), which generate tokens sequentially conditioned on all previous tokens, have been the predominant paradigm for LLMs. While these models have achieved high accuracy across a range of downstream tasks, they exhibit low arithmetic intensity due to the inherent sequential dependency in next-token prediction. Recently, Diffusion Language Models (DLMs) have emerged as a promisingâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-07 · <a href='https://machinelearning.apple.com/research/diffusion-autoregressive-performance'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Arbitrage: Efficient Reasoning via Advantage-Aware Speculation</title>
+      <link>https://machinelearning.apple.com/research/arbitrage-efficient-reasoning</link>
+      <guid isPermaLink="false">apple_ml:303dca412c</guid>
+      <pubDate>Sat, 08 Aug 2026 04:48:42 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Modern Large Language Models achieve impressive reasoning capabilities with long Chain of Thoughts, but they incur substantial computational cost during inference, and this motivates techniques to improve the performance-cost ratio. Among these techniques, Speculative Decoding accelerates inference by employing a fast but inaccurate draft model to auto-regressively propose tokens, which are then verified in parallel by a more capable target model. However, due to unnecessary rejections caused by token mismatches in semantically equivalent steps, traditional token-level Speculative Decodingâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-07 · <a href='https://machinelearning.apple.com/research/arbitrage-efficient-reasoning'>page</a></p>]]></description>
+    </item>
     <item>
       <title>A note on conditional PAC-efficient reasoning in large language model routing</title>
       <link>https://arxiv.org/abs/2512.03057</link>
@@ -2236,74 +2302,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Yujin Kim, Namgyu Ho, Sangmin Hwang, Joonkee Kim, Yongjin Yang, Sangmin Bae, Seungone Kim, Jaehun Jung, … <i>(+3 more)</i></p>
 <p>Reinforcement learning (RL) for non-verifiable instruction following increasingly relies on LLM judges with prompt-specific rubrics as reward signals. While recent methods adapt these rubrics to the evolving policy during training, the training prompts themselves remain static, drawn from fixed corpora. This static approach often results in a critical misalignment between prompt difficulty and policy capability, leaving the judge unable to recover a discriminative reward signal when prompts fail to elicit quality variance among rollouts. To address this misalignment, we introduce LLM-as-a-Tutor, a framework that extends the LLM&#x27;s role from judge to tutor: a single model serves as an examiner that pairwise-compares policy rollouts to detect non-challenging prompts, and as a generator that appends atomic constraints to them. This append-only design monotonically raises difficulty in step with the policy&#x27;s capability, producing a self-calibrating training signal without external difficulty schedules. On three complex instruction-following benchmarks, our method consistently outperforms both policy-unaware baselines and prior policy-adaptive methods that adapt rubrics or rewrite prompts, suggesting prompt adaptation as a missing axis of policy-awareness in non-verifiable RL.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04412'>page</a> · <a href='https://arxiv.org/pdf/2607.04412'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation</title>
-      <link>https://huggingface.co/papers/2607.08758</link>
-      <guid isPermaLink="false">arxiv:2607.08758</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yifan Zhou, Qihao Yang, Yan Li, Donggang Li, Xiru Hu, Hokin Deng, Ziyang Gong, Xuanyi Zhou, … <i>(+10 more)</i></p>
-<p>Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation. IG-Bench is organized around the IdeaGene framework: each paper or proposal is represented as a set of minimal, typed, evidence-grounded Idea Genome objects, and a GenomeDiff aligns these objects to record inheritance, mutation, loss, external import, and novel insertion under six operational evolutionary dynamics. The benchmark contains 1,961 golden lineage traces, 1,085 curated Idea Genome objects, and 920 pairwise GenomeDiff records across 10 scientific domains. It supports two evaluations. IG-Exam (42 task types, 1,029 instances) tests closed-form lineage reasoning across Idea Genome abstraction, inheritance tracing, evolutionary reasoning, and lineage verification. IG-Arena evaluates generation with a lineage-conditioned Population-Evolution Score(PES), asking whether a proposal can be inserted as a coherent descendant of a given lineage population: it should inherit the right Idea Genome objects, vary meaningfully from nearby work, and offer selection value for future research. Experiments on 14 LLM-based scientists expose a compositional bottleneck. The strongest system reaches only 27.3% exact accuracy on lineage reasoning, and structured lineage context reshuffles system rankings rather than helping every participant uniformly.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://huggingface.co/papers/2607.08758'>page</a> · <a href='https://arxiv.org/pdf/2607.08758'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>JD Oxygen AI Item Center (Oxygen AIIC) V1: An Industrial-Scale LLM/VLM-Centric Solution for Item Understanding, Management, and Applications</title>
-      <link>https://huggingface.co/papers/2606.28070</link>
-      <guid isPermaLink="false">arxiv:2606.28070</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Oxygen AIIC, Chan Long, Chao Liu, Chaofan Chen, Chaohui Dong, Chunyuan Guo, Danping Liu, Debin Liu, … <i>(+48 more)</i></p>
-<p>JD.com, one of the world&#x27;s largest e-commerce platforms, serves over 700 million active users and millions of merchants, with a catalog of tens of billions of SKUs. At this scale, high-quality, structured item knowledge underpins a better consumer experience, lower management costs, and higher operational efficiency-yet producing and serving it poses three industrial-scale challenges: fast-emerging concepts, high-quality knowledge production for massive SKUs, and diverse downstream requirements. To address these challenges, we present the JD Oxygen AI Item Center (Oxygen AIIC), an industrial-scale platform built on LLMs/VLMs for item-knowledge production and service. Oxygen AIIC is built around four core pillars: (i) ontology engineering driven by efficient human-AI collaboration, which supports the dynamic evolution and agile expansion of an ontology with millions of entries; (ii) a &quot;Semantic Search then Discrimination&quot;(S2D) knowledge identification architecture that, combined with throughput improvement strategies, enables scalable, extensible, and high-throughput AI Item Library production for tens of billions of SKUs; (iii) self-evolving item-understanding LLMs/VLMs that improve in a stable and controllable manner, enabling knowledge production with 94.2% precision and 82.8% recall; and (iv) a unified item tunnel that serves as the data and service hub. Oxygen AIIC now covers tens of thousands of JD categories and processes hundreds of millions of item updates per day on Huawei Ascend NPUs. It has accumulated hundreds of billions of item-knowledge assets. Deployed across core business scenarios-including search, recommendation, operations, category planning-Oxygen AIIC has delivered measurable gains at scale. Search-traffic coverage reaches 80.4%, item-information quality issues drop by 37%, the automated fill rate of core attributes during item listing exceeds 80%.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-29 · <a href='https://huggingface.co/papers/2606.28070'>page</a> · <a href='https://arxiv.org/pdf/2606.28070'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Incentivizing Temporal-Awareness in Egocentric Video Understanding Models</title>
-      <link>https://machinelearning.apple.com/research/incentivizing-temporal-awareness-egocentric</link>
-      <guid isPermaLink="false">apple_ml:87a6464227</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Multimodal large language models (MLLMs) have recently shown strong performance in visual understanding, yet they often lack temporal awareness, particularly in egocentric settings where reasoning depends on the correct ordering and evolution of events. This deficiency stems in part from training objectives that fail to explicitly reward temporal reasoning and instead rely on frame-level spatial shortcuts. To address this limitation, we propose Temporal Global Policy Optimization (TGPO), a reinforcement learning with verifiable rewards (RLVR) algorithm designed to incentivize temporalâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://machinelearning.apple.com/research/incentivizing-temporal-awareness-egocentric'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Recursive Language Models Meet Uncertainty: The Surprising Effectiveness of Self-Reflective Program Search for Long Context</title>
-      <link>https://machinelearning.apple.com/research/self-reflective-program-search</link>
-      <guid isPermaLink="false">apple_ml:8610948d5a</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Long-context handling remains a core challenge for language models: even with extended context windows, models often fail to reliably extract, reason over, and use the information across long contexts. Recent works like Recursive Language Models (RLMs) have approached this challenge by agentic way of decomposing long contexts into recursive sub-queries through programmatic interaction at inference. While promising, the success of RLMs critically depends on how these trajectories of context-interaction programs are selected, which has remained unexplored. In this paper, we study this problemâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://machinelearning.apple.com/research/self-reflective-program-search'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why</title>
-      <link>https://machinelearning.apple.com/research/unmasking-on-policy-distillation</link>
-      <guid isPermaLink="false">apple_ml:46c510c44b</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>On-policy distillation offers dense, per-token supervision for training reasoning models; however, it remains unclear under which conditions this signal is beneficial and under which it is detrimental. Which teacher model should be used, and in the case of self-distillation, which specific context should serve as the supervisory signal? Does the optimal choice vary from one token to the next? At present, addressing these questions typically requires costly training runs whose aggregate performance metrics obscure the dynamics at the level of individual tokens. We introduce a training-freeâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-09 · <a href='https://machinelearning.apple.com/research/unmasking-on-policy-distillation'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>MLLM-LLaVA-FL: Multimodal Large Language Model Assisted Federated Learning</title>
-      <link>https://arxiv.org/abs/2409.06067</link>
-      <guid isPermaLink="false">arxiv:2409.06067</guid>
-      <pubDate>Wed, 08 Jul 2026 06:24:07 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Cornell, HKUST, Harvard, NYU, Tsinghua, U Michigan — Jianyi Zhang</p>
-<p><b>Authors:</b> Jianyi Zhang, Hao Frank Yang, Ang Li, Xin Guo, Pu Wang, Haiming Wang, Yiran Chen, Hai Li</p>
-<p>Previous studies on federated learning (FL) often encounter performance degradation due to data heterogeneity among different clients. In light of the recent advances in multimodal large language models (MLLMs), such as GPT-4v and LLaVA, which demonstrate their exceptional proficiency in multimodal tasks, such as image captioning and multimodal question answering. We introduce a novel federated learning framework, named Multimodal Large Language Model Assisted Federated Learning (MLLM-LLaVA-FL), which employs powerful MLLMs at the server end to address the heterogeneous and long-tailed challenges. Owing to the advanced cross-modality representation capabilities and the extensive open-vocabulary prior knowledge of MLLMs, our framework is adept at harnessing the extensive, yet previously underexploited, open-source data accessible from websites and powerful server-side computational resources. Hence, the MLLM-LLaVA-FL not only enhances the performance but also avoids increasing the risk of privacy leakage and the computational burden on local devices, distinguishing it from prior methodologies. Our framework has three key stages. Initially, we conduct global visual-text pretraining of the model. This pretraining is facilitated by utilizing the extensive open-source data available online, with the assistance of MLLMs. Subsequently, the pretrained model is distributed among various clients for local training. Finally, once the locally trained models are transmitted back to the server, a global alignment is carried out under the supervision of MLLMs to further enhance the performance. Experimental evaluations on established benchmarks, show that our framework delivers promising performance in the typical scenarios with data heterogeneity and long-tail distribution across different clients in FL.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.LG · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://arxiv.org/abs/2409.06067'>page</a> · <a href='https://arxiv.org/pdf/2409.06067'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
