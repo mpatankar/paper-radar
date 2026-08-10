@@ -5,8 +5,57 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sun, 09 Aug 2026 04:57:32 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 05:19:31 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Harnessing the Synergy between LLM Agents and Knowledge Graphs for Urban Socioeconomic Prediction</title>
+      <link>https://arxiv.org/abs/2411.00028</link>
+      <guid isPermaLink="false">arxiv:2411.00028</guid>
+      <pubDate>Mon, 10 Aug 2026 05:19:31 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.SI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Yong Li</p>
+<p><b>Authors:</b> Zhilun Zhou, Jingyang Fan, Yu Liu, Fengli Xu, Depeng Jin, Yong Li</p>
+<p>Socioeconomic prediction aims to leverage various urban data to predict the socioeconomic indicators of regions such as population and commercial activity level, which plays an important role in understanding urban regions and supporting decision-making. Existing studies leverage knowledge graphs (KG) to model heterogeneous urban data, and further apply graph representation learning methods for socioeconomic prediction. However, these approaches heavily rely on heuristic ideas and expertise to extract task-relevant knowledge from diverse data, which may not be optimal for specific tasks. Additionally, they tend to overlook the inherent relationships between different indicators, limiting the prediction accuracy. Motivated by the remarkable abilities of large language models (LLMs), in this work, we propose a synergistic framework of LLM agents and KG, which integrates the reasoning and representation learning on KG with LLM agents. We first construct an urban knowledge graph (UrbanKG) to model multi-sourced urban data and finetune an embedding language model to generate embeddings for KG entities with semantic information. Then we leverage the reasoning power of LLM to identify relevant meta-paths in the UrbanKG for each type of socioeconomic prediction task, and design a semantic-guided attention module for knowledge fusion with meta-paths. Moreover, we introduce a cross-task communication mechanism to further enhance performance by enabling knowledge sharing across tasks at both LLM agent and KG levels. On the one hand, the LLM agents for different tasks collaborate to generate more diverse and comprehensive meta-paths. On the other hand, the embeddings from different tasks are adaptively merged. Experiments on two datasets demonstrate the effectiveness of the synergistic design between LLM and KG, providing insights for information sharing across socioeconomic prediction tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG, cs.SI · <b>arXiv submitted:</b> 2026-08-07 · <a href='https://arxiv.org/abs/2411.00028'>page</a> · <a href='https://arxiv.org/pdf/2411.00028'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Social World Models</title>
+      <link>https://arxiv.org/abs/2509.00559</link>
+      <guid isPermaLink="false">arxiv:2509.00559</guid>
+      <pubDate>Mon, 10 Aug 2026 05:19:31 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, NUS, Peking U — Maarten Sap</p>
+<p><b>Authors:</b> Xuhui Zhou, Jiarui Liu, Akhila Yerukola, Hyunwoo Kim, Maarten Sap</p>
+<p>Humans intuitively navigate social interactions by simulating unspoken dynamics and reasoning about others&#x27; perspectives, even with limited information. In contrast, AI systems struggle to structure and reason about implicit social contexts, as they lack explicit representations for unobserved dynamics such as intentions, beliefs, and evolving social states. In this paper, we introduce the concept of social world models (SWMs) to characterize the complex social dynamics. To operationalize SWMs, we introduce a novel structured social world representation formalism (S3AP), which captures the evolving states, actions, and mental states of agents, addressing the lack of explicit structure in traditional free-text-based inputs. Through comprehensive experiments across five social reasoning benchmarks, we show that S3AP significantly enhances LLM performance-achieving a +51% improvement on FANToM over OpenAI&#x27;s o1. Our ablations further reveal that these gains are driven by the explicit modeling of hidden mental states, which proves more effective than a wide range of baseline methods. Finally, we introduce an algorithm for social world models using S3AP, which enables AI agents to build models of their interlocutors and predict their next actions and mental states. Empirically, S3AP-enabled social world models yield up to +18% improvement on the SOTOPIA multi-turn social interaction benchmark. Our findings highlight the promise of S3AP as a powerful, general-purpose representation for social world states, enabling the development of more socially-aware systems that better navigate social interactions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-06 · <a href='https://arxiv.org/abs/2509.00559'>page</a> · <a href='https://arxiv.org/pdf/2509.00559'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SABRE: Scalable and Automated Benchmarking of VLMs under Stress</title>
+      <link>https://arxiv.org/abs/2608.07435</link>
+      <guid isPermaLink="false">arxiv:2608.07435</guid>
+      <pubDate>Mon, 10 Aug 2026 05:19:31 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Jiawei Zhou</p>
+<p><b>Authors:</b> Zixuan Lan, Luzhe Sun, Matthew R. Walter, Jiawei Zhou</p>
+<p>Vision-language models (VLMs) are improving rapidly, but benchmark development lags behind, making weaknesses hard to identify. Building stress tests is costly: samples must satisfy controlled conditions, remain answerable, and challenge current models. We present SABRE, a scalable, automated pipeline that converts a Test Primer (a Markdown Task Design with Data Schema) into structured specifications, generated or edited images, and question-answer pairs. Automated filtering removes candidates solved by a Filtering VLM, while human review verifies candidate validity and supports annotation correction and localized image repair. We instantiate SABRE-Prior to test whether VLMs follow visual evidence instead of relying on world priors -- learned expectations about familiar objects and scenes. Its 600 images and 1,000 questions span Context (unexpected entities in familiar scenes), Texture (counterfactual materials), Attribute (noncanonical component counts), and Language Elicitation (answers suggested by language but unsupported by the image). Across six VLMs, macro-average accuracy ranges from 17.8% to 31.3% (22.6% mean). A real-image Attribute control is comparably difficult for the Filtering VLM. SABRE-Counting and SABRE-Spatial pilots show that the workflow supports other stress-test settings. These results establish SABRE as a reusable framework for constructing and refreshing VLM stress tests rather than a single fixed benchmark.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-08-07 · <a href='https://arxiv.org/abs/2608.07435'>page</a> · <a href='https://arxiv.org/pdf/2608.07435'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HarnessOpt-Bench: Evaluating LLMs at Harness Optimization</title>
+      <link>https://huggingface.co/papers/2608.06301</link>
+      <guid isPermaLink="false">arxiv:2608.06301</guid>
+      <pubDate>Mon, 10 Aug 2026 05:19:31 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Varun Ursekar, Apaar Shanker, Yash Maurya, Shehab Yasser, Vijay S. Kalmath, Veronica Chatrath, Yuan Xue, Hugging Face Daily Papers (curated)</p>
+<p>As LLMs are increasingly deployed within agentic systems, their capabilities depend not only on the model weights but also on the harness: the prompts, tools, control flow, memory, and orchestration code surrounding them. This makes automated harness optimization -- the iterative and evaluation-guided improvement of a harness by an AI system -- both an important route to improving AI systems and a demanding capability for AI systems themselves. Yet the community lacks a common protocol for measuring how well frontier LLMs perform at this task. We introduce HarnessOpt-Bench, a benchmark for end-to-end harness optimization under expensive and stochastic evaluation. An optimizer, an LLM paired with a coding harness, receives a target agent&#x27;s seed harness, graded evaluation feedback, and a fixed target-evaluation budget. It edits the harness and nominates a final candidate, which is scored by its normalized gain over the seed on a held-out test partition that remains inaccessible throughout search. A trusted execution environment enforces the evaluation boundary, meters target-agent resource use, and preserves candidate versions for audit. We evaluate 5 frontier LLMs as optimizers both under a shared coding harness and under their native harnesses across 4 downstream tasks, over 111 scored runs. Experiment results show that optimizer models separate more than the coding harnesses they act through, native harnesses are not consistently superior, and gains vary substantially across tasks and seed regimes. These results establish harness optimization as a measurable and discriminative capability with large space for improvement.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-06 · <a href='https://huggingface.co/papers/2608.06301'>page</a> · <a href='https://arxiv.org/pdf/2608.06301'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models</title>
       <link>https://huggingface.co/papers/2607.28609</link>
@@ -2258,50 +2307,6 @@ Autonomous negotiation agents are increasingly deployed in high-stakes settings 
 <p><b>Authors:</b> Jintao Zhang, Kai Jiang, Jintao Chen, Xu Wang, Yang Luo, Yuji Wang, Dechuang Chen, Jungang Li, … <i>(+20 more)</i></p>
 <p>We introduce Vidu S1, a real-time interactive video generation model supporting voice control of digital characters. Users can control video generation content at any moment through voice instructions. Vidu S1 supports infinite-length real-time video generation without blurring, drift, or visual distortion. Built with TurboDiffusion and TurboServe, Vidu S1 outputs 540p real-time videos at up to 42 FPS on regular consumer GPUs. Users can upload custom images of real people, anime, and pets, and choose different voice tones for personalized experiences. Experiments show that Vidu S1 achieves the best performance across all test metrics while fully meeting real-time inference requirements. A playable online demo is available at https://vidu.com/vidu-stream.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-03 · <a href='https://huggingface.co/papers/2607.03118'>page</a> · <a href='https://arxiv.org/pdf/2607.03118'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation</title>
-      <link>https://huggingface.co/papers/2607.07608</link>
-      <guid isPermaLink="false">arxiv:2607.07608</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Hongyu Qu, Jianzhe Gao, Xiaobin Hu, Shaohuan Yang, Xinlei Yu, Rui Yan, Wenguan Wang, Xiangbo Shu, … <i>(+2 more)</i></p>
-<p>Mainstream Vision-Language-Action (VLA) models predict actions primarily from the current observation under a Markovian assumption, thus struggling with long-horizon, temporally dependent tasks. Existing memory-augmented VLAs either expand the observation window or retrieve history from the memory bank as auxiliary policy-side context. However, they leave memory outside the native latent embedding space of VLA reasoning, preventing historical experience from being fluidly interleaved with multimodal reasoning and action formation. To this end, we introduce LaMem-VLA, a latent-memory-native framework that reconstructs historical experience into latent memory tokens and directly interweaves them with VLA reasoning. At its core, LaMem-VLA introduces four coordinated components: (i) a curator that organizes historical experience into two complementary short-term and long-term memory vaults; (ii) a seeker that queries both vaults using the multimodal cognition to retrieve context-relevant evidence; (iii) a condenser that reconstructs the retrieved evidence into compact short-term and long-term latent memory tokens; and (iv) a weaver that injects these memory tokens with the current observation and instruction into one continuous embedding sequence. By representing, retrieving, and consuming historical experience entirely in the same continuous latent space, LaMem-VLA enables memory to directly participate in VLA reasoning and guide action generation under a bounded context. Extensive experiments on SimplerEnv and LIBERO demonstrate the superiority of our LaMem-VLA.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://huggingface.co/papers/2607.07608'>page</a> · <a href='https://arxiv.org/pdf/2607.07608'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Video-Oasis: Rethinking Evaluation of Video Understanding</title>
-      <link>https://huggingface.co/papers/2603.29616</link>
-      <guid isPermaLink="false">arxiv:2603.29616</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Geuntaek Lim, Sungjune Park, Jaeyun Lee, Inwoong Lee, Taeoh Kim, Dongyoon Wee, Minho Shim, Yukyung Choi, … <i>(+1 more)</i></p>
-<p>The inherent complexity of video understanding makes it difficult to determine whether Video-LLM benchmark performance stems from visual perception, linguistic reasoning, or knowledge priors. While many benchmarks have emerged to assess high-level reasoning, shared criteria for evaluating video understanding remain largely overlooked. Instead of introducing yet another benchmark, we take a step back to re-examine the criteria for evaluating video understanding. In this work, we introduce Video-Oasis, a sustainable diagnostic suite for systematically auditing existing video understanding benchmarks. This audit reveals that 55\% of existing benchmark samples are solvable without visual input or temporal context. After filtering these shortcuts, the remaining video-native challenges expose a substantial capability gap: state-of-the-art models perform only marginally above random guessing. Building on these findings, we use the distilled challenges as a testbed to investigate which algorithmic design choices contribute to robust video understanding. We hope our work provides a practical foundation for constructing rigorous video benchmarks and evaluating future Video-LLMs. Code is available at https://github.com/sejong-rcv/Video-Oasis.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://huggingface.co/papers/2603.29616'>page</a> · <a href='https://arxiv.org/pdf/2603.29616'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Infinite Worlds with Versatile Interactions</title>
-      <link>https://huggingface.co/papers/2607.07534</link>
-      <guid isPermaLink="false">arxiv:2607.07534</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK — (senior)</p>
-<p><b>Authors:</b> Zelin Gao, Qiuyu Wang, Jiapeng Zhu, Jingye Chen, Zichen Liu, Qingyan Bai, Jiahao Wang, Yufeng Yuan, … <i>(+13 more)</i></p>
-<p>We present LingBot-World 2.0 (also known as LingBot-World-Infinity), an advanced iteration of LingBot-World featuring four distinct upgrades. (1) Our model achieves an unbounded interaction horizon while maintaining consistent output quality, benefiting from a carefully crafted causal pretraining paradigm. (2) Through distilling a real-time variant from the base model, our system guarantees rapid response time, sufficient to drive 720p video streams at 60 fps. (3) Compared to the previous version, this update introduces highly diverse interactive elements, comprising a broader spectrum of actions (e.g., attacking, archery, spell-casting, and shooting) alongside a richer variety of text-driven events. (4) We pioneer the integration of an agentic harness within the domain of world modeling, wherein a pilot agent is tasked with planning and executing character behaviors, while a director agent is responsible for synthesizing novel environmental elements as the scene progresses. Additionally, to facilitate a shared experience, we develop an interface that permits multiple players to simultaneously immerse themselves in this vivid world simulator. We pair our primary 14B model with a lightweight 1.3B counterpart, which supports effortless deployment on a single GPU.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-08 · <a href='https://huggingface.co/papers/2607.07534'>page</a> · <a href='https://arxiv.org/pdf/2607.07534'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LLM-as-a-Tutor: Policy-Aware Prompt Adaptation for Non-Verifiable RL</title>
-      <link>https://huggingface.co/papers/2607.04412</link>
-      <guid isPermaLink="false">arxiv:2607.04412</guid>
-      <pubDate>Fri, 10 Jul 2026 07:29:59 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yujin Kim, Namgyu Ho, Sangmin Hwang, Joonkee Kim, Yongjin Yang, Sangmin Bae, Seungone Kim, Jaehun Jung, … <i>(+3 more)</i></p>
-<p>Reinforcement learning (RL) for non-verifiable instruction following increasingly relies on LLM judges with prompt-specific rubrics as reward signals. While recent methods adapt these rubrics to the evolving policy during training, the training prompts themselves remain static, drawn from fixed corpora. This static approach often results in a critical misalignment between prompt difficulty and policy capability, leaving the judge unable to recover a discriminative reward signal when prompts fail to elicit quality variance among rollouts. To address this misalignment, we introduce LLM-as-a-Tutor, a framework that extends the LLM&#x27;s role from judge to tutor: a single model serves as an examiner that pairwise-compares policy rollouts to detect non-challenging prompts, and as a generator that appends atomic constraints to them. This append-only design monotonically raises difficulty in step with the policy&#x27;s capability, producing a self-calibrating training signal without external difficulty schedules. On three complex instruction-following benchmarks, our method consistently outperforms both policy-unaware baselines and prior policy-adaptive methods that adapt rubrics or rewrite prompts, suggesting prompt adaptation as a missing axis of policy-awareness in non-verifiable RL.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-05 · <a href='https://huggingface.co/papers/2607.04412'>page</a> · <a href='https://arxiv.org/pdf/2607.04412'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
