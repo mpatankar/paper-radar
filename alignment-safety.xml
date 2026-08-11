@@ -5,8 +5,57 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 10 Aug 2026 05:19:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 05:05:59 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>SafeMERGE: Preserving Safety Alignment in Fine-Tuned Large Language Models via Selective Layer-Wise Model Merging</title>
+      <link>https://arxiv.org/abs/2503.17239</link>
+      <guid isPermaLink="false">arxiv:2503.17239</guid>
+      <pubDate>Tue, 11 Aug 2026 05:05:59 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Holger Boche</p>
+<p><b>Authors:</b> Aladin Djuhera, Swanand Ravindra Kadhe, Farhan Ahmed, Syed Zawad, Holger Boche</p>
+<p>Fine-tuning large language models (LLMs) is a common practice to adapt generalist models to specialized domains. However, recent studies show that fine-tuning can erode safety alignment, causing LLMs to respond to harmful or unethical prompts. Many methods to realign safety have been proposed, but often introduce custom algorithms that are difficult to implement or compromise task utility. In this work, we propose SafeMERGE, a lightweight, post-fine-tuning framework that restores safety while maintaining downstream performance. SafeMERGE selectively merges fine-tuned with safety-aligned model layers only when they deviate from safe behavior, measured by a cosine similarity criterion. Across four LLMs and several tasks, SafeMERGE consistently reduces harmful outputs compared to other defenses, with negligible or even positive impact on utility. Our results demonstrate that selective, layer-wise merging offers a robust safeguard against the inadvertent loss of safety during fine-tuning, establishing SafeMERGE as a simple yet effective post-fine-tuning defense.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-04-23 · <a href='https://arxiv.org/abs/2503.17239'>page</a> · <a href='https://arxiv.org/pdf/2503.17239'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Fixing It in Post: A Comparative Study of LLM Post-Training Data Quality and Model Performance</title>
+      <link>https://arxiv.org/abs/2506.06522</link>
+      <guid isPermaLink="false">arxiv:2506.06522</guid>
+      <pubDate>Tue, 11 Aug 2026 05:05:59 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Holger Boche</p>
+<p><b>Authors:</b> Aladin Djuhera, Swanand Ravindra Kadhe, Syed Zawad, Farhan Ahmed, Heiko Ludwig, Holger Boche</p>
+<p>Recent work on large language models (LLMs) has increasingly focused on post-training and alignment with datasets curated to enhance instruction following, world knowledge, and specialized skills. However, most post-training datasets used in leading open- and closed-source LLMs remain inaccessible to the public, with limited information about their construction process. This lack of transparency has motivated the recent development of open-source post-training corpora. While training on these open alternatives can yield performance comparable to that of leading models, systematic comparisons remain challenging due to the significant computational cost of conducting them rigorously at scale, and are therefore largely absent. As a result, it remains unclear how specific samples, task types, or curation strategies influence downstream performance when assessing data quality. In this work, we conduct the first comprehensive side-by-side analysis of two prominent open post-training datasets: Tulu-3-SFT-Mix and SmolTalk. Using the Magpie framework, we annotate each sample with detailed quality metrics, including turn structure (single-turn vs. multi-turn), task category, input quality, and response quality, and we derive statistics that reveal structural and qualitative similarities and differences between the two datasets. Based on these insights, we design a principled curation recipe that produces a new data mixture, TuluTalk, which contains 14% fewer samples than either source dataset while matching or exceeding their performance on key benchmarks. Our findings offer actionable insights for constructing more effective post-training datasets that improve model performance within practical resource limits. To support future research, we publicly release both the annotated source datasets and our curated TuluTalk mixture.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2025-12-15 · <a href='https://arxiv.org/abs/2506.06522'>page</a> · <a href='https://arxiv.org/pdf/2506.06522'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SafeCOMM: A Study on Safety Degradation in Fine-Tuned Telecom Large Language Models</title>
+      <link>https://arxiv.org/abs/2506.00062</link>
+      <guid isPermaLink="false">arxiv:2506.00062</guid>
+      <pubDate>Tue, 11 Aug 2026 05:05:59 GMT</pubDate>
+      <category>cs.CY</category>
+      <category>cs.CL</category>
+      <category>cs.CR</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Holger Boche</p>
+<p><b>Authors:</b> Aladin Djuhera, Swanand Ravindra Kadhe, Farhan Ahmed, Syed Zawad, Fernando Koch, Walid Saad, Holger Boche</p>
+<p>Fine-tuning large language models (LLMs) on telecom datasets is a common practice to adapt general-purpose models to the telecom domain. However, little attention has been paid to how this process may compromise model safety. Recent research has shown that even benign fine-tuning can degrade the safety alignment of LLMs, causing them to respond to harmful or unethical user queries. In this paper, we investigate this issue by fine-tuning LLMs on three representative telecom datasets and show that safety degrades even for light telecom domain adaptation. To this end, we introduce TeleHarm, the first telecom-specific red-teaming benchmark, which we use alongside established DirectHarm and HexPhi datasets to systematically assess harmful behavior. We further extend our analysis to publicly available TeleLLMs that were continually pre-trained on large telecom corpora, revealing that safety alignment is severely lacking, primarily due to the omission of safety-focused instruction tuning. To address these issues, we evaluate three realignment defenses: SafeInstruct, SafeLoRA, SafeMERGE. We show that, across all settings, the proposed defenses can effectively restore safety without compromising telecom task performance, leading to Safe teleCOMMunication (SafeCOMM) models. Our work serves as both a diagnostic study and practical guide for safety realignment in telecom-tuned LLMs, underscoring the need for safety-aware instruction and fine-tuning in the telecom domain.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.CL, cs.CR, cs.LG · <b>arXiv submitted:</b> 2026-02-06 · <a href='https://arxiv.org/abs/2506.00062'>page</a> · <a href='https://arxiv.org/pdf/2506.00062'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>YOLO-PEFT: Parameter-Efficient Fine-Tuning on YOLO Family</title>
+      <link>https://huggingface.co/papers/2608.07051</link>
+      <guid isPermaLink="false">arxiv:2608.07051</guid>
+      <pubDate>Tue, 11 Aug 2026 05:05:59 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xu Lin, WenJie Nie, Jinlong Peng, Weifu Fu, YueXiao Ma, Xiawu Zheng, Yong Liu, Hugging Face Daily Papers (curated)</p>
+<p>Generic parameter-efficient fine-tuning (PEFT) methods transferred from language models can fail silently on real-time detectors, whose heterogeneous operators and detection-specific components impose placement constraints absent from regular Transformer stacks. We propose YOLO-PEFT, a structure-aware framework that formulates adapter placement as an auditable constraint-planning problem. Given a detector graph, a PEFT request, and a resource budget, YOLO-PEFT assigns operator and semantic roles, evaluates explicit operator-validity, detector-semantic, graph-interface, and deployment predicates, records a reason code for each excluded module, and either emits a budgeted target-module plan or returns Refuse before training. Under the official VOC07+12 trainval-to-VOC07 test protocol, planner-selected RS-LoRA reaches 0.7138 and 0.7307 mAP50-95 on YOLO11s and YOLO12s, respectively, compared with 0.6428 and 0.6662 for Full-SFT. On RT-DETR-L, all seven evaluated LoRA-family configurations cross the predefined catastrophic threshold, supporting a calibrated Refuse-to-Full-SFT decision within the evaluated coverage. A controlled YOLO11 audit further shows that LoRA reduces peak training memory by 43.9 percent, although training takes 1.72 times longer. Within the evaluated detector families, placement policies, and calibration coverage, YOLO-PEFT replaces manual target-module trial and error with explicit, inspectable planning while preserving verified train-save-merge-export paths; refusal on unseen detector architectures remains an open validation problem. Project Page: github.com/Tencent/YOLO-Master</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-07 · <a href='https://huggingface.co/papers/2608.07051'>page</a> · <a href='https://arxiv.org/pdf/2608.07051'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models</title>
       <link>https://huggingface.co/papers/2607.28609</link>
@@ -2358,55 +2407,6 @@
 <p><b>Authors:</b> Aoxi Liu, Yupeng Chen, James Oldfield, Guanzhe Hong, Junchi Yu, Baoyuan Wu, Philip Torr, Adel Bibi, … <i>(+1 more)</i></p>
 <p>Despite the emergence of diffusion large language models (D-LLMs) as an alternative to autoregressive large language models (AR-LLMs), safety monitoring for D-LLMs remains largely unexplored. Unlike AR-LLMs, D-LLMs generate text through a multi-step denoising process, exposing intermediate hidden representations that may contain safety-relevant information unavailable in standard single-step monitoring setups. Motivated by the suitability of lightweight probes for always-on monitoring, we analyze which trajectory-level signals best indicate when such probes are likely to struggle. We find that the most informative signal is safety hesitation: intermediate hidden states repeatedly falling within a small margin of the probe&#x27;s decision boundary. The number of such hesitation steps in D-LLM&#x27;s trajectory predicts probe failure effectively, providing a proxy of sample difficulty. Building on this analysis, we propose D^2-Monitor, a bi-level safety monitor for D-LLMs. D^2-Monitor adopts a lightweight probe as an always-on monitor to jointly estimate hesitation and perform base classification. When the hesitation level exceeds a threshold, a more expressive but computationally heavier probe is activated. This dynamic routing mechanism allocates monitoring resources efficiently at test time. Evaluated on 3 datasets (WildguardMix, ToxicChat, OpenAI-Moderation) across 4 D-LLMs, D^2-Monitor achieves state-of-the-art performance with a compact parameter footprint (leq 0.85M parameters), and exhibits the best trade-off between effectiveness and efficiency relative to 8 baselines.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://huggingface.co/papers/2605.25893'>page</a> · <a href='https://arxiv.org/pdf/2605.25893'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MemTrace: Tracing and Attributing Errors in Large Language Model Memory Systems</title>
-      <link>https://huggingface.co/papers/2605.28732</link>
-      <guid isPermaLink="false">arxiv:2605.28732</guid>
-      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xinle Deng, Ruobin Zhong, Hujin Peng, Xiaoben Lu, Yanzhe Wu, Guang Li, Buqiang Xu, Yunzhi Yao, … <i>(+11 more)</i></p>
-<p>Memory is essential for enabling large language models to support long-horizon reasoning, yet existing memory systems remain unreliable and difficult to debug. Tracing memory&#x27;s dynamic evolution is crucial to understand how information is synthesized, propagated, or corrupted over time. In this work, we study the new problem of error tracing and attribution in LLM memory systems. We propose a novel framework that transforms memory pipelines into executable memory evolution graphs, enabling fine-grained tracing of operational information flow. We then construct MemTraceBench, a benchmark collected from representative memory systems such as Long-Context, RAG, Mem0, and EverMemOS, to systematically study memory failure modes. We further introduce an automatic attribution method that iteratively traces operation subgraphs to pinpoint the root cause of any failed case. Our analysis reveals that memory failures are systematic, stemming from operation-level issues like information loss and retrieval misalignment. Crucially, we leverage these fine-grained attribution signals to guide downstream prompt optimization, establishing a closed-loop system that automatically corrects faults and boosts end-task performance by up to 7.62%. Code will be released at https://github.com/zjunlp/MemTrace.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://huggingface.co/papers/2605.28732'>page</a> · <a href='https://arxiv.org/pdf/2605.28732'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PICACO: Pluralistic In-Context Value Alignment of LLMs via Total Correlation Optimization</title>
-      <link>https://arxiv.org/abs/2507.16679</link>
-      <guid isPermaLink="false">arxiv:2507.16679</guid>
-      <pubDate>Wed, 27 May 2026 05:32:01 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.CY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
-<p><b>Authors:</b> Han Jiang, Dongyao Zhu, Zhihua Wei, Xiaoyuan Yi, Ziang Xiao, Xing Xie</p>
-<p>In-Context Learning has shown great potential for aligning Large Language Models (LLMs) with human values, helping reduce harmful outputs and accommodate diverse preferences without costly post-training, known as In-Context Alignment (ICA). However, LLMs&#x27; comprehension of input prompts remains agnostic, limiting ICA&#x27;s ability to address value tensions--human values are inherently pluralistic, often imposing conflicting demands, e.g., stimulation vs. tradition. Current ICA methods therefore face the Instruction Bottleneck challenge, where LLMs struggle to reconcile multiple intended values within a single prompt, leading to incomplete or biased alignment. To address this, we propose PICACO, a novel pluralistic ICA method. Without fine-tuning, PICACO optimizes a meta-instruction that navigates multiple values to better elicit LLMs&#x27; understanding of them and improve their alignment. This is achieved by maximizing the total correlation between specified values and LLM responses, theoretically reinforcing value correlation while reducing distractive noise, resulting in effective value instructions. Extensive experiments on five value sets show that PICACO works well with both black-box and open-source LLMs, outperforms several recent strong baselines, and achieves a better balance across up to 8 distinct values.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://arxiv.org/abs/2507.16679'>page</a> · <a href='https://arxiv.org/pdf/2507.16679'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mechanistic Interpretability of Antibody Language Models Using SAEs</title>
-      <link>https://arxiv.org/abs/2512.05794</link>
-      <guid isPermaLink="false">arxiv:2512.05794</guid>
-      <pubDate>Wed, 27 May 2026 05:32:01 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>q-bio.QM</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, MIT, Peking U, U Oxford, UC Berkeley — Charlotte M. Deane</p>
-<p><b>Authors:</b> Rebonto Haque, Oliver M. Turnbull, Anisha Parsan, Nithin Parsan, John J. Yang, Anna L. Beukenhorst, Charlotte M. Deane</p>
-<p>Sparse autoencoders (SAEs) are a mechanistic interpretability technique that have been used to provide insight into learned concepts within large protein language models. Here, we employ TopK and Ordered SAEs to investigate autoregressive antibody language models, and steer their generation. We show that TopK SAEs can reveal biologically meaningful latent features, but high feature-concept correlation does not guarantee causal control over generation. In contrast, Ordered SAEs impose a hierarchical structure that reliably identifies steerable features, but at the expense of more complex and less interpretable activation patterns. These findings advance the mechanistic interpretability of domain-specific protein language models and suggest that, while TopK SAEs suffice for mapping latent features to concepts, Ordered SAEs are preferable when precise generative steering is required.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, q-bio.QM · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://arxiv.org/abs/2512.05794'>page</a> · <a href='https://arxiv.org/pdf/2512.05794'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OMD-GraphRAG: Enhancing GraphRAG with Ontology-Guided Extraction, Multi-Dimensional Clustering and Dual-Channel Fusion</title>
-      <link>https://arxiv.org/abs/2603.25152</link>
-      <guid isPermaLink="false">arxiv:2603.25152</guid>
-      <pubDate>Wed, 27 May 2026 05:32:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.IR</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Jie Wang, Honghua Huang, Xi Ge, Jianhui Su, Wen Liu, Shiguo Lian</p>
-<p>Retrieval-Augmented Generation (RAG) systems face significant challenges in complex reasoning, multi-hop queries, and domain-specific QA. While existing GraphRAG frameworks have made progress in structural knowledge organization, they still have limitations in knowledge extraction precision, community report integrity, and retrieval performance. This paper proposes OMD-GraphRAG, an enhanced framework built upon open-source GraphRAG. The framework introduces three core innovations: (1) Ontology-Guided Knowledge Extraction that uses predefined Schema to guide LLMs in accurately identifying domain-specific entities and relations; (2) Multi-Dimensional Community Clustering Strategy that improves community completeness through alignment completion, attribute-based clustering, and multi-hop relationship clustering; (3) Dual-Channel Graph Retrieval Fusion that balances QA accuracy and performance through hybrid graph and community retrieval. Evaluation results on MultiHop-RAG benchmark show that OMD-GraphRAG outperforms mainstream open source solutions (e.g., LightRAG) in comprehensive F1 scores, particularly in inference and temporal queries.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.IR · <b>arXiv submitted:</b> 2026-05-26 · <a href='https://arxiv.org/abs/2603.25152'>page</a> · <a href='https://arxiv.org/pdf/2603.25152'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
