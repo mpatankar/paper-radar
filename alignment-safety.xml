@@ -5,8 +5,43 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 11 Aug 2026 05:05:59 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 05:26:37 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution</title>
+      <link>https://huggingface.co/papers/2608.08311</link>
+      <guid isPermaLink="false">arxiv:2608.08311</guid>
+      <pubDate>Wed, 12 Aug 2026 05:26:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Anton Razzhigaev, Andrei Gritsaev, Andrei Kaznacheev, Nikita Dragunov, Roman Yampolskiy, Andrei Kuznetsov, Hugging Face Daily Papers (curated)</p>
+<p>We present Ouroboros, a self-developing agent harness whose tools, prompts, context assembly, and core implementation improve through reviewed commits that become the runtime for later work. Core evolution proceeds in two modes. In recursive free evolution, improvement is itself a task, and completing one evolution cycle can schedule the next. In experience-driven core evolution, ordinary work and social interaction expose bugs, rough edges, and inefficient context construction that lead to reviewed structural changes.
+  On Terminal-Bench 2.1, an Opus 5 run scores 86.74%, the best result reported on the benchmark. On OSWorld-Verified, an Opus 5 run reaches 90.69%, exceeding the best previously reported score. A five-rollout CL-Bench campaign achieves a normalized reward of 0.2301, setting a new state of the art.
+  Hope is the longest-running publicly documented Ouroboros deployment. It is a 161-day living agent experiment in free evolution under governed human communication across seven surfaces. Human interaction surfaces faults and generates proposals, but the agent decides which changes to pursue. Because a self-developing agent may rewrite its own code and select new model APIs, operational safety becomes a primary design problem: guardrails must remain authoritative under evolutionary and public social pressure. Benchmark campaigns use frozen system snapshots, while Hope continues live evolution on a separate lineage.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-08 · <a href='https://huggingface.co/papers/2608.08311'>page</a> · <a href='https://arxiv.org/pdf/2608.08311'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Stealing Reasoning Traces from Proprietary LLM APIs</title>
+      <link>https://huggingface.co/papers/2608.09867</link>
+      <guid isPermaLink="false">arxiv:2608.09867</guid>
+      <pubDate>Wed, 12 Aug 2026 05:26:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Alexander Panfilov, David Schmotz, Ilia Shumailov, Luca Beurer-Kellner, Joachim Schaeffer, Ameya Prabhu, Jonas Geiping, Maksym Andriushchenko, … <i>(+1 more)</i></p>
+<p>Leading large language model providers now conceal their models&#x27; step-by-step reasoning, or chain-of-thought, to protect intellectual property and limit information leakage. Rather than storing these traces server-side, providers return them to the client as blocks of encrypted text, which the client passes back with each subsequent request. Building on prior research, we identify an architectural vulnerability: these encrypted blocks are fully compatible and interchangeable across different sessions, users, and models within a provider&#x27;s ecosystem. We exploit this compatibility to develop a scalable decryption jailbreak. By injecting an encrypted reasoning trace from a given model into a weaker, and less safeguarded model from the same provider, we force it to decode and output the trace verbatim in plaintext, without ever jailbreaking the more capable model directly. This vulnerability enables four distinct attack vectors. First, it circumvents anti-distillation mechanisms, allowing adversaries to extract a proprietary model&#x27;s reasoning, as we demonstrate across Anthropic, OpenAI, and Google. Second, it allows for large-scale private data extraction. Developers frequently share session logs publicly, unaware of contents of the encrypted blocks. By decoding 315,320 reasoning blocks scraped from public repositories, we recovered 367 Personally Identifiable Information (PII) artifacts and 182 credentials. Third, it inadvertently reveals hazardous information hidden within the reasoning process, even in cases where the model&#x27;s final, visible output safely rejects a malicious request. Fourth, attackers can leverage this flaw to execute invisible prompt injections, embedding malicious payloads entirely within encrypted blocks to poison public agentic rollouts. Following responsible disclosure, we propose concrete cryptographic and system-level mitigations to secure client-side reasoning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-10 · <a href='https://huggingface.co/papers/2608.09867'>page</a> · <a href='https://arxiv.org/pdf/2608.09867'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ComBodied Agents: a New Paradigm of Human-Centric Agentic AI</title>
+      <link>https://huggingface.co/papers/2608.10915</link>
+      <guid isPermaLink="false">arxiv:2608.10915</guid>
+      <pubDate>Wed, 12 Aug 2026 05:26:37 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Qianggang Ding, Xingyao Wang, Rui Feng, Zhibin Wang, Feixiang Wang, Kelong Mao, Hao Sun, Zhiyao Luo, … <i>(+15 more)</i></p>
+<p>After an older adult misses a medication dose, a software agent can send another reminder and an embodied agent can bring the medication. Yet neither explains whether the person forgot, is confused, has side effects, or deliberately refused, nor what support is appropriate. This reveals a structural gap in Agentic AI: Digital Agents primarily transform software states, while Embodied Agents transform physical states; neither makes a person&#x27;s evolving state and agency the primary object of modeling, intervention, and evaluation. We introduce Combodied Agents, a human-centered paradigm that perceives, models, predicts, and supports individual human-state trajectories over time, using software tools, sensors, wearables, robots, and human services as action channels rather than end goals. We unify fragmented capabilities across personal assistants, health agents, AI companions, and adaptive human--AI systems into a closed loop: event-based multimodal perception reconstructs meaningful personal events; longitudinal, correctable memory provides temporal context; Personal World Models estimate future personal states and outcomes under alternative decisions and interventions; and an admissible intervention policy selects proportionate support under consent, uncertainty, safety, reversibility, and user control. Feedback from the person and environment updates the loop. Rather than requiring an exhaustive Human Digital Twin, the framework uses purpose-bounded, uncertainty-aware, user-correctable representations. We organize the design space by human-state targets, relational contexts, and agent roles, and propose scenario-centered evaluation, agency-preservation metrics, benchmark requirements, edge-native personal models, and governance directions. Combodied Agents shift Agentic AI from external task completion toward sustained human benefit.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-11 · <a href='https://huggingface.co/papers/2608.10915'>page</a> · <a href='https://arxiv.org/pdf/2608.10915'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>SafeMERGE: Preserving Safety Alignment in Fine-Tuned Large Language Models via Selective Layer-Wise Model Merging</title>
       <link>https://arxiv.org/abs/2503.17239</link>
@@ -2373,40 +2408,6 @@
 <p><b>Authors:</b> Marco Gutierrez, Xinyi Leng, Hannah Cyberey, Jonathan Richard Schwarz, Ahmed Alaa, Thomas Hartvigsen</p>
 <p>Language model benchmarks are pervasive and computationally-efficient proxies for real-world performance. However, many recent works find that benchmarks often fail to predict real utility. Towards bridging this gap, we introduce benchmark alignment, where we use limited amounts of information about model performance to automatically update offline benchmarks, aiming to produce new static benchmarks that predict model pairwise preferences in given test settings. We then propose BenchAlign, the first solution to this problem, which learns preference-aligned weight- ings for benchmark questions using the question-level performance of language models alongside ranked pairs of models that could be collected during deployment, producing new benchmarks that rank previously unseen models according to these preferences. Our experiments show that our aligned benchmarks can accurately rank unseen models according to models of human preferences, even across different sizes, while remaining interpretable. Overall, our work provides insights into the limits of aligning benchmarks with practical human preferences, which stands to accelerate model development towards real utility.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2602.02898'>page</a> · <a href='https://arxiv.org/pdf/2602.02898'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Capture Timing-Attention of Events in Clinical Time Series</title>
-      <link>https://arxiv.org/abs/2602.10385</link>
-      <guid isPermaLink="false">arxiv:2602.10385</guid>
-      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Jia Li</p>
-<p><b>Authors:</b> Jia Li, Yu Hou, Rui Zhang</p>
-<p>Automatically discovering personalized trajectories (i.e., sequential event patterns) from longitudinal EHR data is crucial for enabling precision medicine in clinical research, yet it remains a formidable challenge even for contemporary AI models. For example, while the attention mechanism of transformers can capture rich associations, it is largely agnostic to event timing and ordering, thereby bypassing potential causal reasoning. Intuitively, we need a method capable of evaluating the ``degree of alignment&#x27;&#x27; among patient-specific trajectories and identifying their shared patterns, that is, the significant events in a consistent sequence. This necessitates treating timing as a true **computable** dimension, allowing models to assign ``relative timestamps&#x27;&#x27; to candidate events beyond their observed physical times. In this work, we introduce LITT (Individual-Level Time Transformation), a novel architecture that enables temporary alignment of sequential events on a virtual ``relative timeline&#x27;&#x27;, thereby enabling **event-timing-focused attention** and personalized interpretations of clinical trajectories. Its interpretability and effectiveness are validated on real-world longitudinal EHR data from 3,276 breast cancer patients to predict the onset timing of cardiotoxicity-induced heart disease. Furthermore, LITT outperforms both the benchmark and state-of-the-art survival analysis methods on public datasets, positioning it as a significant step forward for precision medicine in clinical AI.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2602.10385'>page</a> · <a href='https://arxiv.org/pdf/2602.10385'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>From Pixels to Words -- Towards Native One-Vision Models at Scale</title>
-      <link>https://huggingface.co/papers/2605.28820</link>
-      <guid isPermaLink="false">arxiv:2605.28820</guid>
-      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Haiwen Diao, Jiahao Wang, Penghao Wu, Yuhao Dong, Yuwei Niu, Yue Zhu, Zhongang Cai, Weichen Fan, … <i>(+14 more)</i></p>
-<p>Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames and scatters early pixel-word interactions. In parallel, native VLMs, despite impressive performance on single images, remain largely unexplored in multi-image, video understanding, and spatial intelligence. Hence, we introduce NEO-ov, a native foundation model that learns cross-frame and pixel-word correspondence end-to-end, without any external encoders, auxiliary adapters, or post-hoc fusion. By eliminating module boundaries entirely, NEO-ov enables fine-grained and unified spatiotemporal modeling to emerge natively inside the model. Notably, NEO-ov largely narrows the gap to modular counterparts while excelling at fine-grained visual perception, validating that native &quot;one-vision&quot; architectures are not only feasible but competitive at scale. Beyond empirical performance, we unveil systematic architectural analyses and detailed training recipes to facilitate subsequent native multimodal modeling. Our code and models are publicly available at: https://github.com/EvolvingLMMs-Lab/NEO.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://huggingface.co/papers/2605.28820'>page</a> · <a href='https://arxiv.org/pdf/2605.28820'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>D^2-Monitor: Dynamic Safety Monitoring for Diffusion LLMs via Hesitation-Aware Routing</title>
-      <link>https://huggingface.co/papers/2605.25893</link>
-      <guid isPermaLink="false">arxiv:2605.25893</guid>
-      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Aoxi Liu, Yupeng Chen, James Oldfield, Guanzhe Hong, Junchi Yu, Baoyuan Wu, Philip Torr, Adel Bibi, … <i>(+1 more)</i></p>
-<p>Despite the emergence of diffusion large language models (D-LLMs) as an alternative to autoregressive large language models (AR-LLMs), safety monitoring for D-LLMs remains largely unexplored. Unlike AR-LLMs, D-LLMs generate text through a multi-step denoising process, exposing intermediate hidden representations that may contain safety-relevant information unavailable in standard single-step monitoring setups. Motivated by the suitability of lightweight probes for always-on monitoring, we analyze which trajectory-level signals best indicate when such probes are likely to struggle. We find that the most informative signal is safety hesitation: intermediate hidden states repeatedly falling within a small margin of the probe&#x27;s decision boundary. The number of such hesitation steps in D-LLM&#x27;s trajectory predicts probe failure effectively, providing a proxy of sample difficulty. Building on this analysis, we propose D^2-Monitor, a bi-level safety monitor for D-LLMs. D^2-Monitor adopts a lightweight probe as an always-on monitor to jointly estimate hesitation and perform base classification. When the hesitation level exceeds a threshold, a more expressive but computationally heavier probe is activated. This dynamic routing mechanism allocates monitoring resources efficiently at test time. Evaluated on 3 datasets (WildguardMix, ToxicChat, OpenAI-Moderation) across 4 D-LLMs, D^2-Monitor achieves state-of-the-art performance with a compact parameter footprint (leq 0.85M parameters), and exhibits the best trade-off between effectiveness and efficiency relative to 8 baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-25 · <a href='https://huggingface.co/papers/2605.25893'>page</a> · <a href='https://arxiv.org/pdf/2605.25893'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
