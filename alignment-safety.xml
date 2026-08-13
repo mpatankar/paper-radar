@@ -5,8 +5,41 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Wed, 12 Aug 2026 05:26:37 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 05:32:53 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Patterns and problems in emerging multiagent systems</title>
+      <link>https://www.anthropic.com/research/multiagent-systems</link>
+      <guid isPermaLink="false">anthropic:af863cb3b2</guid>
+      <pubDate>Thu, 13 Aug 2026 05:32:53 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
+<p><b>Authors:</b> Anthropic</p>
+<p>We ran experiments on swarms of Claude agents and found coordination failures, collusion, and sabotage. Here, we share what they mean for AI safety.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/multiagent-systems'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>OpenART: Scaling Agent Red Teaming via Open-Ended Environment Evolution</title>
+      <link>https://huggingface.co/papers/2608.00677</link>
+      <guid isPermaLink="false">arxiv:2608.00677</guid>
+      <pubDate>Thu, 13 Aug 2026 05:32:53 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yunhao Chen, Xin Wang, Yixu Wang, Yi Liu, Jie Li, Yan Teng, Xingjun Ma, Xia Hu, … <i>(+2 more)</i></p>
+<p>AI agents operate in persistent environments where early state changes can influence decisions far into the future. Unlike conventional language-model interactions, agent behavior is mediated through a shared state that is repeatedly modified and reused across long-horizon workflows. Current safety benchmarks often fail to capture these cumulative risks because they focus on short, static tasks. To address these limitations, we introduce OpenART, an open-ended arena for scalable agent red teaming through environment evolution. OpenART provides over 10,000 validated stateful scenarios across 50 domains, drawing from a pool of more than 500,000 tools and skills. These tasks require a median of 97 tool calls and enable unified evaluation across 75 different agent-model configurations. To systematically explore these evolving attack surfaces, we propose the Evolutionary Markov Hypergraph Attack (EMHA). EMHA is a black-box policy that performs feedback-driven environment evolution by coordinating authorized state transitions without requiring parameter updates. Throughout the evaluation, task objectives remain fixed while only the environment state changes. Across all configurations, EMHA achieves a pooled Attack Success Rate (ASR) of 85.0%. Its advantage over instruction-only evolution increases from approximately 2% on simple environments to over 17% on the most complex ones, demonstrating that environment evolution increasingly exposes safety failures as task complexity grows. Furthermore, our analysis shows that the specific runtime implementation of an agent explains a significant portion of safety variation beyond the underlying model&#x27;s capabilities. These results establish OpenART as a scalable foundation for studying agent safety in complex, evolving environments.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-01 · <a href='https://huggingface.co/papers/2608.00677'>page</a> · <a href='https://arxiv.org/pdf/2608.00677'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AdvFD: Boosting Visual Generation via Adversarial Fr&#x27;echet Distance Loss</title>
+      <link>https://huggingface.co/papers/2608.11205</link>
+      <guid isPermaLink="false">arxiv:2608.11205</guid>
+      <pubDate>Thu, 13 Aug 2026 05:32:53 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Mingju Gao, Jingkai Zhou, Kun Gai, Changqian Yu, Hao Tang, Hugging Face Daily Papers (curated)</p>
+<p>Fréchet distance has recently emerged as an effective distribution-level objective for generator post-training, complementing the conventional sample-level diffusion and flow-matching losses. However, directly optimizing Fréchet objectives can cause Fréchet hacking. The target metrics keep improving, but visual quality and Fréchet alignment in other feature spaces may stagnate or deteriorate. We attribute this failure to the static pretrained feature spaces used by existing Fréchet losses. These feature spaces provide incomplete and fixed views of the differences between real and generated distributions. To address this limitation, we propose Adversarial Fréchet Distance (AdvFD), which complements the static representation targets in FD-Loss with a calibrated adversarially learned representation. AdvFD augments the original static Fréchet objective with a learnable representation that adversarially maximizes the Fréchet discrepancy between real and generated samples, while the generator minimizes the same discrepancy in the resulting adaptive feature space. To prevent the adversarial representation from trivially increasing the objective through feature amplification, we further introduce real-feature whitening, which normalizes its scale and covariance geometry and stabilizes the min--max optimization. Extensive experiments show that AdvFD consistently improves one-step generator post-training across both JiT and pMF backbones and across different model scales.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-11 · <a href='https://huggingface.co/papers/2608.11205'>page</a> · <a href='https://arxiv.org/pdf/2608.11205'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution</title>
       <link>https://huggingface.co/papers/2608.08311</link>
@@ -2372,42 +2405,6 @@
 <p><b>Authors:</b> Jun Liu, Zhenglun Kong, Peiyan Dong, Changdi Yang, Tianqi Li, Hao Tang, Geng Yuan, Wei Niu, … <i>(+5 more)</i></p>
 <p>Large language models (LLMs) exhibit strong capabilities as decision-making agents by interleaving reasoning and actions, as seen in ReAct-style frameworks. Yet, their practical deployment is constrained by high inference costs and large model sizes. We propose Structured Agent Distillation, a framework that compresses large LLM-based agents into smaller student models while preserving both reasoning fidelity and action consistency. Unlike standard token-level distillation, our method segments trajectories into [REASON] and [ACT] spans, applying segment-specific losses to align each component with the teacher&#x27;s behavior. This structure-aware supervision enables compact agents to better replicate the teacher&#x27;s decision process. Experiments on ALFWorld, HotPotQA-ReAct, and WebShop show that our approach consistently outperforms token-level and imitation learning baselines, achieving significant compression with minimal performance drop. Scaling and ablation results further highlight the importance of span-level alignment for efficient and deployable agents.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2505.13820'>page</a> · <a href='https://arxiv.org/pdf/2505.13820'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Script is All You Need: An Agentic Framework for Long-Horizon Dialogue-to-Cinematic Video Generation</title>
-      <link>https://arxiv.org/abs/2601.17737</link>
-      <guid isPermaLink="false">arxiv:2601.17737</guid>
-      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> Harvard, U Washington — Linus</p>
-<p><b>Authors:</b> Chenyu Mu, Xin He, Qu Yang, Wanshun Chen, Jiadi Yao, Huang Liu, Zihao Yi, Bo Zhao, … <i>(+8 more)</i></p>
-<p>Recent advances in video generation have produced models capable of synthesizing stunning visual content from simple text prompts. However, these models struggle to generate long-form, coherent narratives from high-level concepts like dialogue, revealing a ``semantic gap&#x27;&#x27; between a creative idea and its cinematic execution. To bridge this gap, we introduce a novel, end-to-end agentic framework for dialogue-to-cinematic-video generation. Central to our framework is ScripterAgent, a model trained to translate coarse dialogue into a fine-grained, executable cinematic script. To enable this, we construct ScriptBench, a new large-scale benchmark with rich multimodal context, annotated via an expert-guided pipeline. The generated script then guides DirectorAgent, which orchestrates state-of-the-art video models using a cross-scene continuous generation strategy to ensure long-horizon coherence. Our comprehensive evaluation, featuring an AI-powered CriticAgent and a new Visual-Script Alignment (VSA) metric, shows our framework significantly improves script faithfulness and temporal fidelity across all tested video models. Furthermore, our analysis uncovers a crucial trade-off in current SOTA models between visual spectacle and strict script adherence, providing valuable insights for the future of automated filmmaking.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2601.17737'>page</a> · <a href='https://arxiv.org/pdf/2601.17737'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Probability-Entropy Calibration: An Elastic Indicator for Adaptive Fine-tuning</title>
-      <link>https://arxiv.org/abs/2602.01745</link>
-      <guid isPermaLink="false">arxiv:2602.01745</guid>
-      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST, Peking U — Irwin King, Wenhao Yu</p>
-<p><b>Authors:</b> Wenhao Yu, Shaohang Wei, Jiahong Liu, Yifan Li, Minda Hu, Aiwei Liu, Hao Zhang, Irwin King</p>
-<p>Token-level reweighting is a simple yet effective mechanism for controlling supervised fine-tuning, but common indicators are largely one-dimensional: the ground-truth probability reflects downstream alignment, while token entropy reflects intrinsic uncertainty induced by the pre-training prior. Ignoring entropy can misidentify noisy or easily replaceable tokens as learning-critical, while ignoring probability fails to reflect target-specific alignment. RankTuner introduces a probability--entropy calibration signal, the Relative Rank Indicator, which compares the rank of the ground-truth token with its expected rank under the prediction distribution. The inverse indicator is used as a token-wise Relative Scale to reweight the fine-tuning objective, focusing updates on truly under-learned tokens without over-penalizing intrinsically uncertain positions. Experiments on multiple backbones show consistent improvements on mathematical reasoning benchmarks, transfer gains on out-of-distribution reasoning, and pre code generation performance over probability-only or entropy-only reweighting baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2602.01745'>page</a> · <a href='https://arxiv.org/pdf/2602.01745'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Aligning Language Model Benchmarks with Pairwise Preferences</title>
-      <link>https://arxiv.org/abs/2602.02898</link>
-      <guid isPermaLink="false">arxiv:2602.02898</guid>
-      <pubDate>Thu, 28 May 2026 05:27:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CUHK, Harvard, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Marco Gutierrez, Xinyi Leng, Hannah Cyberey, Jonathan Richard Schwarz, Ahmed Alaa, Thomas Hartvigsen</p>
-<p>Language model benchmarks are pervasive and computationally-efficient proxies for real-world performance. However, many recent works find that benchmarks often fail to predict real utility. Towards bridging this gap, we introduce benchmark alignment, where we use limited amounts of information about model performance to automatically update offline benchmarks, aiming to produce new static benchmarks that predict model pairwise preferences in given test settings. We then propose BenchAlign, the first solution to this problem, which learns preference-aligned weight- ings for benchmark questions using the question-level performance of language models alongside ranked pairs of models that could be collected during deployment, producing new benchmarks that rank previously unseen models according to these preferences. Our experiments show that our aligned benchmarks can accurately rank unseen models according to models of human preferences, even across different sizes, while remaining interpretable. Overall, our work provides insights into the limits of aligning benchmarks with practical human preferences, which stands to accelerate model development towards real utility.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-27 · <a href='https://arxiv.org/abs/2602.02898'>page</a> · <a href='https://arxiv.org/pdf/2602.02898'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
