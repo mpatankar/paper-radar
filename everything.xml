@@ -5,8 +5,72 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Fri, 14 Aug 2026 05:27:12 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 04:22:16 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>FusionRelight: Relighting Portraits in Real Time via Hybrid Domain Knowledge Fusion</title>
+      <link>https://research.nvidia.com/publication/2026-08_fusionrelight-relighting-portraits-real-time-hybrid-domain-knowledge-fusion</link>
+      <guid isPermaLink="false">nvidia_research:c0d02dd085</guid>
+      <pubDate>Sat, 15 Aug 2026 04:22:16 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-08_fusionrelight-relighting-portraits-real-time-hybrid-domain-knowledge-fusion'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>HorizonRelight: Relighting Long-horizon Videos Consistently via Diffusion Transformers</title>
+      <link>https://research.nvidia.com/publication/2026-08_horizonrelight-relighting-long-horizon-videos-consistently-diffusion</link>
+      <guid isPermaLink="false">nvidia_research:91a16e2d41</guid>
+      <pubDate>Sat, 15 Aug 2026 04:22:16 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-08_horizonrelight-relighting-long-horizon-videos-consistently-diffusion'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Alaya-EVOKE: From Linear-Scaling Supervision to Endless World</title>
+      <link>https://huggingface.co/papers/2608.13546</link>
+      <guid isPermaLink="false">arxiv:2608.13546</guid>
+      <pubDate>Sat, 15 Aug 2026 04:22:16 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuanyang Yin, Gongxuan Wang, Yifan Zhan, Chuanhao Li, Kaipeng Zhang, Feng Zhao, Hugging Face Daily Papers (curated)</p>
+<p>Interactive world models must support persistent memory, responsive interaction, and long-horizon generation, yet these requirements place conflicting demands on the model. Maintaining history in the denoiser context or key-value cache incurs growing cost, forcing a trade-off between session length and retained memory, while low-latency interaction relies on few-step generation whose capabilities are bounded by its teacher. Evoke addresses both limitations by externalizing persistent world state and redesigning the teacher for long-horizon interactive generation. Scene geometry is maintained in an external, camera-indexed world state bank, from which only view-relevant information is retrieved, keeping the denoiser context bounded as the session grows. Rather than treating the teacher as a fixed generator, we design it for long-horizon supervision: its sparse attention combines chunk-wise grouping, retrieval of selected distant frames, and a linear-attention global state, yielding linear growth in memory and compute while enabling supervision over long horizons. Such supervision exposes content drift that stays locally plausible within short windows, while per-chunk conditioning enables prompt changes and event control throughout the sequence. A 30-second distribution-matching objective, applied under self-forced rollouts, transfers both capabilities to a three-step student that uses no classifier-free guidance, improving resistance to long-term drift while preserving responsive conditioning. With bounded context and recurrent external memory, Evoke supports open-ended, continuously evolving generation; on a single H200 at 384times 640, each 1.5,s chunk is generated in 2.11,s. As a three-step world model, Evoke achieves state-of-the-art performance on WBench while remaining competitive on VBench-Long and VBench-2.0.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.13546'>page</a> · <a href='https://arxiv.org/pdf/2608.13546'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DarwinX: Evolving Agent Harnesses Through Natural Selection</title>
+      <link>https://huggingface.co/papers/2608.07545</link>
+      <guid isPermaLink="false">arxiv:2608.07545</guid>
+      <pubDate>Sat, 15 Aug 2026 04:22:16 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Harvard — Yifan Zhang</p>
+<p><b>Authors:</b> Yifan Zhang, Yutong Dai, Juntao Tan, Luyu Yang, Rishi Mullur, Thai Hoang, Zhiyuan Hu, James Zhu, … <i>(+5 more)</i></p>
+<p>An LLM agent&#x27;s capability depends not only on model weights but on its harness: prompts, tools, skills, and control flow. Self-improvement loops already edit harnesses, yet single-lineage search is path-dependent and local wins often regress other tasks. We introduce DarwinX, which treats self-evolution as selection over a population of harnesses with the model frozen: a preserve-and-extend contract admits only variants that extend coverage without regressing, an archive keeps alternative lineages for recombination, and failure-, teacher-, and self-derived evidence share one edit interface. Fitness comes from each benchmark&#x27;s own verifier: no gold solutions, no hand-picked winners. Across four benchmarks that progressively separate the evolution signal from the test, one loop adds about 17 points on average: Terminal-Bench 2.1 rises +7.7 to 83.2% on a matched base and to the verified frontier at 84.7% on a stronger one; TerminalWorld&#x27;s held-out split reaches 68.3%, ahead of every off-the-shelf agent; WebArena-Infinity real-task pass@1 rises from 43.5% to 93.0% audit-clean; and a Terminal-Bench 2.1 harness transfers unchanged to SWE-bench Verified. What evolves is general agent competence, not benchmark-specific patches, so it survives changes of task, verifier, and base model. A frozen model need not be a fixed agent: harness selection turns evaluation compute into durable capability.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-31 · <a href='https://huggingface.co/papers/2608.07545'>page</a> · <a href='https://arxiv.org/pdf/2608.07545'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>How Can Rhetoric Reward-Hack AI Reviewers? Dissecting Rhetorical Sensitivity in AI-Based Peer Review</title>
+      <link>https://huggingface.co/papers/2608.08975</link>
+      <guid isPermaLink="false">arxiv:2608.08975</guid>
+      <pubDate>Sat, 15 Aug 2026 04:22:16 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Ming Li, Chenguang Wang, Xirui Li, Xinyue Zeng, Dianqi Li, Peng Shi, Dawei Zhou, Tianyi Zhou, … <i>(+1 more)</i></p>
+<p>As large language models increasingly participate in scientific evaluation, we investigate a potential form of reward hacking: how rhetorical choices shape AI-review judgments when reported scientific content is preserved and how these effects vary across evaluation conditions. We construct a controlled corpus of 4,200 full-paper manuscripts derived from 120 anonymized ICLR 2026 submissions. Two LLM rewriters transform six rhetorical dimensions in opposing directions, and five LLM reviewers evaluate the resulting manuscripts under standard and strict protocols. We also test joint, recursive, and reviewer-guided rewriting. Our results show that rhetorical sensitivity is structured rather than uniform. Evidence framing and novelty stance produce the largest positive-negative contrasts in overall assessment, with scope framing forming a weaker second tier; the remaining dimensions have smaller or less stable effects. This hierarchy persists across human-assessed quality levels, but score movement depends strongly on the AI reviewer&#x27;s original score: lower scores tend to rise, higher scores tend to fall, and directional contrasts are clearest in the middle ranges. More elaborate workflows do not reliably yield larger gains. Joint rewriting is strongly rewriter-dependent, reviewer guidance does not consistently outperform an unguided second pass, and repeated rewriting yields diminishing, configuration-dependent returns. Across conditions, the rewriter primarily determines the separation between opposing variants, whereas the reviewer determines the magnitude and sign of their score effects. Strict review lowers mean OA by 1.36 points without consistently changing rhetorical sensitivity. These findings identify when rhetorical presentation influences AI scientific review and motivate evaluation systems robust to content-preserving variation in scientific writing.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-10 · <a href='https://huggingface.co/papers/2608.08975'>page</a> · <a href='https://arxiv.org/pdf/2608.08975'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives</title>
+      <link>https://huggingface.co/papers/2608.13552</link>
+      <guid isPermaLink="false">arxiv:2608.13552</guid>
+      <pubDate>Sat, 15 Aug 2026 04:22:16 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Kaixin Ding, Xi Chen, Minghong Cai, Zhiyuan Xu, Yiyang Wang, Yuxiang Lu, Junyi Li, Shuyang Chen, … <i>(+5 more)</i></p>
+<p>Video world models simulate future states conditioned on current observations and user actions. Recent systems have demonstrated impressive video consistency and action controllability over long sequences. However, fairly comparing these interactive models remains challenging. In practice, a human player typically evaluates a world model by pursuing long-horizon objectives through interaction. For example, a user may turn around 360 degrees to see whether the environment remains consistent, or walk into the water and inspect whether realistic water ripples are generated. The action sequence required to achieve the same objective may vary substantially between models, making fixed action-conditioned evaluation unsuitable for cross-model comparison. To address this, we employ multi-modal Agent Players to interact with world models toward specified long-horizon objectives. Building on this paradigm, we introduce PlayWorld, a benchmark providing 171 scenarios, each with a specified objective. To evaluate performance thoroughly, we assess models along four core dimensions: geometry consistency, interaction fidelity, out-of-sight evolution, and insight evolution. In addition, we incorporate basic ability metrics for video quality and controllability. Experiments across nine state-of-the-art world models reveal that current models remain unreliable on long-horizon interactive objectives, particularly in maintaining spatial consistency and persistent state evolution. Code and data are available at https://github.com/kxding/PlayWorld.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.13552'>page</a> · <a href='https://arxiv.org/pdf/2608.13552'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Linguistic Comparison of AI- and Human-Written Responses to Online Mental Health Queries</title>
       <link>https://arxiv.org/abs/2504.09271</link>
@@ -2215,75 +2279,6 @@
 <p><b>Authors:</b> Ruizhe Li, Mingxuan Du, Benfeng Xu, Zhendong Mao, Hugging Face Daily Papers (curated)</p>
 <p>Long-term memory systems store what a user says in an external store and retrieve it when a related query arrives. This interface rests on an assumption so natural that it is rarely stated: a memory that is needed will resemble the query that needs it. World knowledge breaks the assumption. A tree-nut allergy should change the answer to a macaron request through their almond-flour ingredient, yet the two texts share no cue a retriever can see. We call this failure mode the implicit-association blind spot and introduce InMind, a 125-task, expert-verified benchmark spanning ten life domains, with 113 tasks grounded in citable public sources. Its paired controls separate three explanations that existing evaluations conflate: the fact was never stored, the model lacks the bridging knowledge, or the fact was stored and never surfaced. The verdict is clean. With the decisive memory placed in context, the backbone answers 84.0 percent of indirect queries; when the same memory must be retrieved, six vector, graph, and agentic memory systems reach at most 14.4 percent, even though they recall the same facts on demand at up to 100 percent. An embedding with eight times the dimensionality raises answer-blind target recall for every system yet leaves the gap essentially intact. A minimal diagnostic probe that keeps memory visible before the query arrives recovers most of the gap, locating the failure in the query-conditioned interface itself and pointing to routing, deciding which facts must stay visible, as the open problem InMind is built to score.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://huggingface.co/papers/2607.24368'>page</a> · <a href='https://arxiv.org/pdf/2607.24368'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Representation Capacity-Matched QNN-SNN Twin Construction for Rate-Encoded SNNs</title>
-      <link>https://arxiv.org/abs/2409.08290</link>
-      <guid isPermaLink="false">arxiv:2409.08290</guid>
-      <pubDate>Wed, 29 Jul 2026 06:26:06 GMT</pubDate>
-      <category>cs.NE</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Weng-Fai Wong</p>
-<p><b>Authors:</b> Zhanglu Yan, Zhenyu Bai, Kaiwen Tang, Weng-Fai Wong</p>
-<p>Spiking Neural Networks (SNNs) promise higher energy efficiency over conventional Quantized Artificial Neural Networks (QNNs) due to their event-driven, spike-based computation. However, prevailing energy evaluations often oversimplify, focusing on computational aspects while neglecting critical overheads like comprehensive data movements and memory accesses. Such simplifications can lead to misleading conclusions regarding the true energy benefits of SNNs. This paper presents a rigorous re-evaluation. We establish a fair baseline by mapping rate-encoded SNNs with $T$ timesteps to capacity-matched QNNs with $\lceil \log_2(T+1) \rceil$ bits. This ensures both models have comparable representational capacities, as well as similar hardware requirements, enabling meaningful energy comparisons. We introduce a detailed analytical energy model encompassing core computation and data movements. Using this model, we systematically explore a wide parameter space, including intrinsic network characteristics (SNN time window size, spike rate, QNN sparsity, model size, weight bit-level) and hardware characteristics (memory system and network-on-chip). Our analysis identifies specific operational regimes where SNNs genuinely offer superior energy efficiency. For example, under typical neuromorphic hardware conditions, SNNs with moderate time windows ($T = 5$) require an average spike rate ($s_r$) below 5.7% to outperform equivalent QNNs These insights guide the design of truly energy-efficient neural network solutions.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.NE, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-07-28 · <a href='https://arxiv.org/abs/2409.08290'>page</a> · <a href='https://arxiv.org/pdf/2409.08290'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Towards Embodied Cognition in Robots via Spatially Grounded Synthetic Worlds</title>
-      <link>https://arxiv.org/abs/2505.14366</link>
-      <guid isPermaLink="false">arxiv:2505.14366</guid>
-      <pubDate>Wed, 29 Jul 2026 06:26:06 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Agnieszka Wykowska</p>
-<p><b>Authors:</b> Joel Currie, Gioele Migno, Enrico Piacenti, Maria Elena Giannaccini, Patric Bach, Davide De Tommaso, Agnieszka Wykowska</p>
-<p>We present a conceptual framework for training Vision-Language Models (VLMs) to perform Visual Perspective Taking (VPT), a core capability for embodied cognition essential for Human-Robot Interaction (HRI). As a first step toward this goal, we introduce a synthetic dataset, generated in NVIDIA Omniverse, that enables supervised learning for spatial reasoning tasks. Each instance includes an RGB image, a natural language description, and a ground-truth 4X4 transformation matrix representing object pose. We focus on inferring Z-axis distance as a foundational skill, with future extensions targeting full 6 Degrees Of Freedom (DOFs) reasoning. The dataset is publicly available to support further research. This work serves as a foundational step toward embodied AI systems capable of spatial understanding in interactive human-robot scenarios.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://arxiv.org/abs/2505.14366'>page</a> · <a href='https://arxiv.org/pdf/2505.14366'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Discovering cryptographic weaknesses with Claude</title>
-      <link>https://www.anthropic.com/research/discovering-cryptographic-weaknesses</link>
-      <guid isPermaLink="false">anthropic:df6c16550d</guid>
-      <pubDate>Wed, 29 Jul 2026 06:26:06 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Anthropic researchers find weaknesses in cryptographic algorithms with Claude Mythos Preview</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/discovering-cryptographic-weaknesses'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Scientific computing in the age of agentic AI</title>
-      <link>https://openai.com/index/scientific-computing-agentic-ai/</link>
-      <guid isPermaLink="false">openai:9cca7914de</guid>
-      <pubDate>Wed, 29 Jul 2026 06:26:06 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
-<p><b>Authors:</b> OpenAI</p>
-<p>A new field report shows how scientists use AI coding agents to modernize scientific computing, accelerating software development and discovery in genomics and beyond.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/scientific-computing-agentic-ai/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation</title>
-      <link>https://huggingface.co/papers/2607.24731</link>
-      <guid isPermaLink="false">arxiv:2607.24731</guid>
-      <pubDate>Wed, 29 Jul 2026 06:26:06 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Bingnan Li, Haozhe Wang, Haozhong Xiong, Fangtai Wu, Jinpeng Yu, Yang Shi, Jiaming Liu, Ruihua Huang, … <i>(+1 more)</i></p>
-<p>On-policy distillation (OPD) adapts diffusion models by querying a teacher along trajectories generated by the current student, but how it should behave under classifier-free guidance (CFG), a default component of modern diffusion systems, remains poorly understood. Existing OPD methods naturally extend velocity matching to the CFG-composed prediction, directly matching teacher and student guided velocities. We show that this objective is under-identified at the branch level: positive- and negative-branch errors can compensate in the guided prediction. Through two contrasting cases, we find that naive matching remains effective under shared negative conditioning, where both branch errors decrease jointly. When the model&#x27;s native CFG schema retains privileged information in the teacher&#x27;s negative branch that is unavailable to the student, however, this joint reduction breaks down and the composed objective induces antagonistic branch-error dynamics, reducing the positive-branch error while increasing the negative-branch error. We term this failure mode Negative Branch Asymmetry (NBA). To address NBA, we introduce Positive--Direction Matching (PDM), a branch-aware OPD objective that separately constrains the positive prediction and the CFG conditional direction. We apply PDM to dense-to-sparse video control, where naive guided matching is highly sensitive to inference guidance scales, while branch-aware supervision enables more robust and effective knowledge transfer.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://huggingface.co/papers/2607.24731'>page</a> · <a href='https://arxiv.org/pdf/2607.24731'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone</title>
-      <link>https://huggingface.co/papers/2607.25895</link>
-      <guid isPermaLink="false">arxiv:2607.25895</guid>
-      <pubDate>Wed, 29 Jul 2026 06:26:06 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Simple AI, Yuteng Wei, Jinming Ma, Jiawei Wang, Weitao Zhou, Yushen Zuo, Ke Rui, Minglei Li, … <i>(+11 more)</i></p>
-<p>Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capture scales readily, and current practice uses the resulting data mainly for pre-training, adding a small real-robot &quot;anchor&quot; at post-training. We ask whether raising the fidelity of robot-free UMI data, rather than shrinking the real-robot fraction, can remove that anchor. We present HiFi-UMI, a portable UMI data-production system co-designed for trajectory accuracy, inter-gripper relative pose, synchronization, and field of view: head-mounted offline stereo-inertial SLAM, native rather than reconstructed relative pose, a shared microsecond GPIO trigger, and two wide-angle cameras per hand covering ~200 degrees. It reaches 3 mm workspace-local end-effector accuracy without external tracking infrastructure. Using this corpus, we demonstrate zero-robot post-training: a policy post-trained solely on HiFi-UMI demonstrations deploys directly on a real robot and matches in-domain teleoperation across three backbones spanning the vision-language-action and world-action-model families, with success-rate differences of -2.5, +3.1, and -0.6 percentage points on StarVLA-QwenPI, OpenPI-pi_0.5, and LingBot-VA; the strongest policy reaches 85% on a precision insertion task, even though the teleoperation baseline is collected in the evaluation scene and no HiFi-UMI trajectory is. Pre-training on 4,000 hours from the same corpus lowers action error on ten unseen tasks by 41% and, on StarVLA-QwenPI, raises real-robot success by a further 18.1 percentage points. We open-source HiFi-UMI-2K, 2,000 hours of microsecond-synchronized, ultra-wide-FoV demonstrations, each automatically reconstructed and validated through simulation replay, as a large-scale, high-fidelity resource for the robot-learning community.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-28 · <a href='https://huggingface.co/papers/2607.25895'>page</a> · <a href='https://arxiv.org/pdf/2607.25895'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
