@@ -5,8 +5,54 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sun, 16 Aug 2026 04:28:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 04:40:24 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>OTIS: Learning High-Quality Time Series Features With Tiny Encoders</title>
+      <link>https://arxiv.org/abs/2410.07299</link>
+      <guid isPermaLink="false">arxiv:2410.07299</guid>
+      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Imperial College, TU Munich — Daniel Rueckert</p>
+<p><b>Authors:</b> Özgün Turgut, Philip Müller, Martin J. Menten, Daniel Rueckert</p>
+<p>We introduce OTIS, an open time series encoder that yields high-quality time series features for downstream deployment on any system, including resource-constrained wearables and industrial sensors. Currently, the development of powerful general-purpose encoders relies on the scaling laws hypothesis, using large encoder sizes to memorise the heterogeneous distributions of multi-domain training data. However, this reliance on scale creates a barrier to real-world utility, rendering deployment on resource-constrained systems infeasible due to strict memory, energy, and latency constraints. Surprisingly, we find that tailoring standard masked modelling pre-training to time series properties yields a tiny $7.1\,$M encoder that matches the state-of-the-art performance of $54\times$ larger encoders across $162$ tasks, while requiring $10\times$ less memory, $43\times$ less energy, and $37\times$ lower latency. To achieve this without the capacity tax, we introduce three novel components: (1) a domain-aware tokeniser to resolve conflicting semantics within multi-domain training data; (2) a dual masking strategy to capture spatiotemporal structures and temporal causality; and (3) a structure-aware objective to decouple feature learning from modelling noise. Consequently, OTIS produces high-quality time series features that enable state-of-the art performance in discriminative tasks and even extend seamlessly to generative tasks at minimal additional cost. To democratise access to powerful time series features on any system, we release our code and pre-trained weights.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-08-14 · <a href='https://arxiv.org/abs/2410.07299'>page</a> · <a href='https://arxiv.org/pdf/2410.07299'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Metacognitive Bottleneck: Japanese Riddles Reveal Fundamental Limits of Machine Insight and Self-Evaluation in Reasoning AI</title>
+      <link>https://arxiv.org/abs/2509.14704</link>
+      <guid isPermaLink="false">arxiv:2509.14704</guid>
+      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Le Minh Nguyen</p>
+<p><b>Authors:</b> Masaharu Mizumoto, Dat Nguyen, Zhiheng Han, Xingfu Li, Yo Nakawake, Le Minh Nguyen</p>
+<p>Benchmark saturation and training-data contamination increasingly obscure whether reported gains in large language models (LLMs) reflect genuine advances in reasoning or familiarity with recurring patterns in benchmark problems. We introduce the NazoNazo Benchmark, a renewable and extensible evaluation dataset derived from Japanese children&#x27;s riddles that isolates a specific class of reasoning processes: insight-like representational restructuring and metacognitive evaluation. Rather than modeling reasoning in general, these tasks provide a focused test of failure modes that are difficult to detect in standard benchmarks. We curate 201 riddles and establish a human reference on a 120-item subset (n = 126; mean accuracy 52.9%). The benchmark is fully open, low-cost to refresh, and designed for continual evaluation under reduced contamination risk. We evaluate 38 frontier LLMs (2023-2025) under a strict retrieval-free, zero-shot protocol. On the human-comparison subset, non-reasoning models achieve 7.6% accuracy and reasoning-oriented models reach 17.6%, compared with a human mean of 52.9%, although performance varies substantially across models. Beyond accuracy, qualitative analysis of model-generated thought-logs identifies a distinctive failure mode, which we call verification failure: models generate a correct intermediate candidate but fail to endorse it as their final answer. This dissociation between candidate generation and endorsement reveals a metacognitive bottleneck: across the models with usable thought-logs, verification failures account for between 5% and 39% of a model&#x27;s incorrect answers. By isolating the gap between generation and verification, this work provides a practical framework for diagnosing reasoning reliability and suggests concrete directions for improvement, including better calibration, structured verification, and stopping mechanisms.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-14 · <a href='https://arxiv.org/abs/2509.14704'>page</a> · <a href='https://arxiv.org/pdf/2509.14704'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence</title>
+      <link>https://huggingface.co/papers/2608.12743</link>
+      <guid isPermaLink="false">arxiv:2608.12743</guid>
+      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haokai Zhang, Yuhang Ding, Yunshu Zhou, Xinze Du, Shengtao Zhang, Zhiyue Zhao, Yuling Xi, Hao Chen, … <i>(+1 more)</i></p>
+<p>Spatial intelligence is becoming a foundation for embodied agents, robotic planning, and multimodal assistants. To improve the spatial reasoning ability of VLM agents, existing work has mainly followed two lines. One line uses post-training methods, such as supervised fine-tuning and reinforcement learning. Another line adopts an agentic paradigm in which the model calls external spatial tools, such as depth estimation and 3D reconstruction tools, to gather intermediate spatial evidence. We study a complementary and underexplored route: Can a frozen VLM agent improve its spatial reasoning through parameter-update-free self-evolution, without depending on external expert spatial tools at inference time? We present Spatial Memory Agent (SMA), an experience-grounded runtime framework that converts verified spatial experience into reusable transferable lessons. In a verifiable spatial environment, SMA queries the frozen VLM, obtains a predicted answer and reward, and uses verifier-guided reflection to distill compact transferable lessons from spatial experience. SMA further assigns each lesson a Transfer Reliability Score (TRS), which is initialized uniformly and calibrated from later retrieval outcomes as visit evidence of future transfer reliability. During read-only deployment, SMA retrieves lessons by semantic filter and similarity-TRS combined ranking, allowing the retrieved memory to guide frozen model inference. Across five representative spatial benchmarks and four base VLMs, SMA achieves the highest macro average in every base-model block and the best accuracy among the evaluated methods in most of the 20 evaluations, establishing a practical parameter-update-free path for spatial self-evolution across the evaluated frozen model scales and environments.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.12743'>page</a> · <a href='https://arxiv.org/pdf/2608.12743'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Massive Activations in Hybrid Linear Attention Large Language Models: Pre-Attention Spikes and Inter-Spike Plateaus</title>
+      <link>https://huggingface.co/papers/2608.12149</link>
+      <guid isPermaLink="false">arxiv:2608.12149</guid>
+      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zunhai Su, Bohan Sun, Xialie Zhuang, Shuibai Zhang, He Xiao, Jing Xiong, Hengyuan Zhang, Zhongzhu Zhou, … <i>(+4 more)</i></p>
+<p>We present the first systematic study of Massive activations (MAs) in layer-interleaved HLA LLMs and uncover two architecture-aligned morphologies: MAs consistently spike immediately before full attention layers, forming pre-attention spikes (PAS), and can persist through intervening linear attention layers, giving rise to inter-spike plateaus (ISP). As full attention becomes denser, successive PAS become increasingly connected through ISP, ultimately recovering the stable MA morphology of full attention LLMs. We establish the recurrence of this organization across five linear attention architectures, six hybridization configurations, five data domains, and representative open-source hybrid models spanning 1.2B to 397B total parameters. Controlled pretraining of GDN-based hybrids at scales up to 1.3B shows that both morphologies emerge early and respond asymmetrically to output gating: full attention output gating strongly attenuates their absolute magnitudes without eliminating their layerwise organization, whereas removing GDN gates yields comparatively modest amplification. Mechanistically, our systematic-outlier analysis supports a shared lifecycle account governed by the timing of MA cancellation. PAS follows a localized write-sink-cancel process, while the extended persistence of ISP is consistent with delayed cancellation. At the full attention limit, this account recovers the stable MA morphology characteristic of full attention LLMs. Our code is available at https://github.com/StartluxLabs/Massive-Activations-HLA.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-12 · <a href='https://huggingface.co/papers/2608.12149'>page</a> · <a href='https://arxiv.org/pdf/2608.12149'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design</title>
       <link>https://huggingface.co/papers/2608.13560</link>
@@ -2247,50 +2293,6 @@
 <p><b>Authors:</b> Apple ML Research</p>
 <p>Long video summarization presents significant challenges for multimodal large language models (MLLMs), particularly in maintaining temporal fidelity over extended durations and producing summaries that are both semantically and temporally grounded. We introduce LVSum, a human-annotated benchmark for evaluating long-form video summarization with fine-grained temporal alignment. LVSum comprises 72 diverse videos spanning 13 domains with an average duration of 16 minutes, each annotated with up to 10 human-generated summaries containing temporal references. We conduct a comprehensive evaluationâ¦</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://machinelearning.apple.com/research/lvsum-video-summarization'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Length Value Model: Scalable Value Pretraining for Token-Level Length Modeling</title>
-      <link>https://machinelearning.apple.com/research/length-value-model</link>
-      <guid isPermaLink="false">apple_ml:b50690f129</guid>
-      <pubDate>Tue, 21 Jul 2026 06:24:15 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Token serves as the fundamental unit of computation in modern autoregressive models, and generation length directly influences both inference cost and reasoning performance. Despite its importance, existing approaches lack fine-grained length modeling, operating primarily at the coarse-grained sequence level. In this paper, we introduce the Length Value Model (LenVM), a token-level framework that models the remaining generation length at each decoding step. By formulating length modeling as a value estimation problem and assigning a constant negative reward to each generated token, LenVMâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-20 · <a href='https://machinelearning.apple.com/research/length-value-model'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories</title>
-      <link>https://huggingface.co/papers/2607.15330</link>
-      <guid isPermaLink="false">arxiv:2607.15330</guid>
-      <pubDate>Mon, 20 Jul 2026 06:41:15 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xiaomi Robotics Team, Jun Guo, Piaopiao Jin, Jason Li, Peiyan Li, Yingyan Li, Futeng Liu, Wanli Peng, … <i>(+27 more)</i></p>
-<p>We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data. We propose a two-stage training recipe consisting of pre-training and post-training. During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices. Crucially, we develop a scalable auto-labeling pipeline that annotates trajectory clips with natural languages describing scene state transitions, providing rich and precise conditioning for action learning. During post-training, we aim to align these capabilities with robot embodiments and imperative instructions that humans naturally use to prompt robots. Extensive experiments demonstrate strong scaling behavior. Xiaomi-Robotics-1 consistently improves with increased data scales and model sizes during pre-training. This scaling behavior directly transfers to post-training, where a stronger pre-training model yields better out-of-the-box real-robot performance in unseen environments. Furthermore, Xiaomi-Robotics-1 serves as a strong robot foundation policy that can be efficiently fine-tuned on complex, dexterous tasks with high data efficiency. Across multiple simulation benchmarks, Xiaomi-Robotics-1 outperforms state-of-the-art methods. Notably, it establishes a new state-of-the-art with a 57.6% success rate on RoboCasa365, surpassing the previous best of 46.6%. Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07). Code and model checkpoints will be released. Project page: https://robotics.xiaomi.com/xiaomi-robotics-1.html</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-16 · <a href='https://huggingface.co/papers/2607.15330'>page</a> · <a href='https://arxiv.org/pdf/2607.15330'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MultiRef-Compass: Towards Comprehensive Evaluation of Multi-Reference-to-Audio-Video Generation</title>
-      <link>https://huggingface.co/papers/2607.14189</link>
-      <guid isPermaLink="false">arxiv:2607.14189</guid>
-      <pubDate>Mon, 20 Jul 2026 06:41:15 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xiaohan Zhang, Yuqing Wen, Junlin Chen, Yuqi Tang, Yiting He, Lizhuo Shao, Weiming Zhu, Tengfei Liu, … <i>(+5 more)</i></p>
-<p>Multi-reference-to-audio-video (MR2AV) generation aims to generate coherent audio-video content conditioned on multiple references and textual instructions. Existing benchmarks mainly focus on text-driven generation, single-reference subject preservation, or isolated audio-video alignment, leaving the emerging MR2AV setting largely unexplored. Compared with these settings, MR2AV requires models to jointly reason over multiple references while generating synchronized visual and audio content. Models must not only preserve each reference faithfully but also correctly bind and compose multiple referenced entities into coherent audio-visual events. To address this gap, we introduce MultiRef-Compass, a unified benchmark for MR2AV generation. It comprises 350 carefully curated samples constructed through a scalable and controllable asset-composition pipeline, covering multi-view subject preservation, multi-entity binding, and human-object-scene composition. To provide interpretable assessment, MultiRef-Compass defines an evaluation protocol with four dimensions: Basic Quality, Reference Consistency, Audio-Visual Consistency, and Instruction Following, using 14 sub-metrics. MultiRef-Compass integrates automatic metrics with a rejudging-enhanced MLLM-as-a-Judge framework, enabling scalable and auditable evaluation of both perceptual fidelity and reference-conditioned composition. Extensive experiments on eight representative MR2AV systems reveal substantial room for improvement across multiple evaluation dimensions, underscoring the need for a comprehensive benchmark and positioning MultiRef-Compass as a foundation for future MR2AV research.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-15 · <a href='https://huggingface.co/papers/2607.14189'>page</a> · <a href='https://arxiv.org/pdf/2607.14189'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>xHC: Expanded Hyper-Connections</title>
-      <link>https://huggingface.co/papers/2607.14530</link>
-      <guid isPermaLink="false">arxiv:2607.14530</guid>
-      <pubDate>Mon, 20 Jul 2026 06:41:15 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xiangdong Zhang, Xiaohan Qin, Sunan Zou, Tuo Dai, Xiaoming Shi, Huaijin Wu, Yebin Yang, Zhuo Xia, … <i>(+6 more)</i></p>
-<p>Hyper-Connections (HC) expand the residual stream of Transformers into N parallel streams, providing a form of memory scaling beyond model width and depth. Manifold-Constrained HC (mHC) stabilizes this formulation at scale. The large gains from N{=}1 to N{=}4 suggest residual-stream expansion as a promising scaling axis. However, existing HC-family methods typically stop at N{=}4. Our experiments reveal why: scaling mHC beyond this point yields diminishing performance gains and rapidly increasing training cost. We attribute this limitation to two bottlenecks: insufficient write-back information for an expanding number of streams and residual-mixing generation whose cost scales cubically with N. To address both bottlenecks, we propose xHC (Expanded Hyper-Connections), the first HC-family method to achieve meaningful expansion beyond N{=}4. xHC combines temporal feature augmentation for richer write-back with a sparse residual-stream architecture that updates only k=4 of the N=16 streams while retaining dense access to the full residual state. Across 18B and 28B MoE models, xHC delivers strong and consistent downstream improvements. On an 18B MoE model, xHC improves the average downstream score by 4.0 points over mHC, while adding only modest training FLOPs over the vanilla baseline. Scaling-law experiments show that the vanilla and mHC require 1.50times and 1.19times the compute of xHC, respectively, to reach the same loss. Practical large-N training also requires controlling memory traffic from the expanded residual state. We therefore introduce xHC-Flash, which reduces the per-sublayer memory traffic from 73.5C to 40C, comparable to the 34C required by mHC at N{=}4, while retaining the gains of full xHC. Together, xHC and xHC-Flash make large-N residual-stream expansion effective and practical for LLM pre-training.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-16 · <a href='https://huggingface.co/papers/2607.14530'>page</a> · <a href='https://arxiv.org/pdf/2607.14530'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
