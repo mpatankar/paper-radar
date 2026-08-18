@@ -5,8 +5,34 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Mon, 17 Aug 2026 04:40:24 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 04:28:50 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>DirMixE: Harnessing Test Agnostic Long-tail Recognition with Hierarchical Label Variations</title>
+      <link>https://arxiv.org/abs/2405.07780</link>
+      <guid isPermaLink="false">arxiv:2405.07780</guid>
+      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Caltech, Cornell, HKUST, Peking U, U Michigan, UC Berkeley — Zhiyong Yang</p>
+<p><b>Authors:</b> Zhiyong Yang, Qianqian Xu, Sicong Li, Zitai Wang, Xiaochun Cao, Qingming Huang</p>
+<p>This paper explores test-agnostic long-tail recognition, a challenging long-tail task where the test label distributions are unknown and arbitrarily imbalanced. We argue that the variation in these distributions can be broken down hierarchically into global and local levels. The global ones reflect a broad range of diversity, while the local ones typically arise from milder changes, often focused on a particular neighbor. Traditional methods predominantly use a Mixture-of-Expert (MoE) approach, targeting a few fixed test label distributions that exhibit substantial global variations. However, the local variations are left unconsidered. To address this issue, we propose a new MoE strategy, DirMixE, which assigns experts to different Dirichlet meta-distributions of the label distribution, each targeting a specific aspect of local variations. Additionally, the diversity among these Dirichlet meta-distributions inherently captures global variations. This dual-level approach also leads to a more stable objective function, allowing us to sample different test distributions better to quantify the mean and variance of performance outcomes. Building on this idea, we develop a general Latent Skill Finetuning (LSF) framework for parameter-efficient finetuning of foundation models. We provide implementations based on LoRA and Adapter. Theoretically, we derive upper bounds on the generalization error for both standard learning and PEFT. Under mild assumptions, we show that the variance-based regularization helps tighten these bounds. Furthermore, we prove that the covering number of the PEFT hypothesis class scales with the number of trainable parameters. Finally, extensive experiments on CIFAR-10-LT, CIFAR-100-LT, ImageNet-LT, and iNaturalist validate the effectiveness of DirMixE.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-08-17 · <a href='https://arxiv.org/abs/2405.07780'>page</a> · <a href='https://arxiv.org/pdf/2405.07780'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rethinking Token-wise Feature Caching: Accelerating Diffusion Transformers with Dual Feature Caching</title>
+      <link>https://arxiv.org/abs/2412.18911</link>
+      <guid isPermaLink="false">arxiv:2412.18911</guid>
+      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Technion — (senior)</p>
+<p><b>Authors:</b> Chang Zou, Shikang Zheng, Evelyn Zhang, Runlin Guo, Haohang Xu, Zhengyi Shi, Conghui He, Xuming Hu, … <i>(+1 more)</i></p>
+<p>Diffusion Transformers (DiT) have become the dominant methods in image and video generation yet still suffer substantial computational costs. As an effective approach for DiT acceleration, feature caching methods are designed to cache the features of DiT in previous timesteps and reuse them in the next timesteps, allowing us to skip the computation in the next timesteps. Among them, token-wise feature caching has been introduced to perform different caching ratios for different tokens in DiTs, aiming to skip the computation for unimportant tokens while still computing the important ones. In this paper, we propose to carefully check the effectiveness in token-wise feature caching with the following two questions: (1) Is it really necessary to compute the so-called &quot;important&quot; tokens in each step? (2) Are so-called important tokens really important? Surprisingly, this paper gives some counter-intuition answers, demonstrating that consistently computing the selected ``important tokens&#x27;&#x27; in all steps is not necessary. The selection of the so-called ``important tokens&#x27;&#x27; is often ineffective, and even sometimes shows inferior performance than random selection. Based on these observations, this paper introduces dual feature caching referred to as DuCa, which performs aggressive caching strategy and conservative caching strategy iteratively and selects the tokens for computing randomly. Extensive experimental results demonstrate the effectiveness of our method in DiT, PixArt, FLUX, and OpenSora, demonstrating significant improvements than the previous token-wise feature caching.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-08-15 · <a href='https://arxiv.org/abs/2412.18911'>page</a> · <a href='https://arxiv.org/pdf/2412.18911'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>OTIS: Learning High-Quality Time Series Features With Tiny Encoders</title>
       <link>https://arxiv.org/abs/2410.07299</link>
