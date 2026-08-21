@@ -5,8 +5,152 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Thu, 20 Aug 2026 04:30:35 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 04:31:04 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>The Basic B*** Effect: The Use of LLM-based Agents Reduces the Distinctiveness and Diversity of People&#x27;s Choices</title>
+      <link>https://arxiv.org/abs/2509.02910</link>
+      <guid isPermaLink="false">arxiv:2509.02910</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.HC</category>
+      <category>cs.AI</category>
+      <category>cs.CY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Sandra C. Matz</p>
+<p><b>Authors:</b> Sandra C. Matz, Kimberly Klugescheid, C. Blaine Horton, Sofie Goethals</p>
+<p>Large language models (LLMs) increasingly act on people&#x27;s behalf: they write emails, buy groceries, and book restaurants. While the outsourcing of human decision-making to AI can be convenient, it raises a fundamental question: how does delegating identity-defining choices to AI shape who people become? Across a large field study and a controlled experiment, we study the impact of agentic LLMs on two identity-relevant outcomes: interpersonal distinctiveness - how unique a person&#x27;s choices are relative to others - and intrapersonal diversity - the breadth of a single person&#x27;s choices over time. Study 1 uses 110,000 real choices drawn from social media behavior of 1,000 U.S. users to compare generic and personalized agents to a human baseline. Both agents shift people&#x27;s choices toward more popular options, reducing the distinctiveness of their preferences. While the use of personalized agents tempers this homogenization (compared to generic agents), it also more strongly compresses the diversity of people&#x27;s preference portfolios by narrowing their exploration across topics and psychological affinities. Study 2 replicates these patterns in an online experiment which mimics common real-world scenarios (e.g., choosing movies) and allows us to directly compare the AI agent&#x27;s choices to those made by 348 participants (12,097 human choices). The findings also suggest that the flattening effects of AI agents are amplified when choices are made sequentially (vs. batch), and when agents rely on domain-specific user information for personalization. Understanding how AI agents compress human experience (and the trade-offs involved) is critical for designing systems that augment human agency and safeguard diversity in thought, taste, and expression.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://arxiv.org/abs/2509.02910'>page</a> · <a href='https://arxiv.org/pdf/2509.02910'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DiverValue-Bench: A Benchmark and Fine-Tuning Framework for Aligning Large Language Models with Diverse Human Values</title>
+      <link>https://arxiv.org/abs/2509.08022</link>
+      <guid isPermaLink="false">arxiv:2509.08022</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Princeton — Yao Liang</p>
+<p><b>Authors:</b> Yao Liang, Dongcheng Zhao, Feifei Zhao, Guobin Shen, Yuwei Wang, Dongqi Liang, Yi Zeng</p>
+<p>Aligning large language models (LLMs) with diverse human values is essential for safe and effective deployment, yet existing benchmarks often overlook cultural and demographic variation. We introduce DiverValue-Bench, a population-aware benchmark for evaluating multi-dimensional value alignment across 74 countries/regions. It contains 23,763 quality-controlled instances derived from PRISM user feedback and audited through large-scale human validation, with fine-grained value labels, personalized questions, contrastive reference answers, and rich demographic metadata. Using DiverValue-Bench, we evaluate representative LLMs and reveal substantial geographic and demographic disparities that are masked by aggregate performance. We further show that lightweight preference-based fine-tuning with Low-Rank Adaptation (LoRA) and Direct Preference Optimization (DPO) substantially improves in-domain value alignment while yielding consistent out-of-domain gains. These results highlight the need for population-aware alignment evaluation and demonstrate the utility of DiverValue-Bench as a practical foundation for global alignment, personalized value modeling, and equitable AI development.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-08-20 · <a href='https://arxiv.org/abs/2509.08022'>page</a> · <a href='https://arxiv.org/pdf/2509.08022'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Optimal Skill Selection for LLM Agents with Provable Bicriteria Guarantees</title>
+      <link>https://arxiv.org/abs/2608.19993</link>
+      <guid isPermaLink="false">arxiv:2608.19993</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Longbo Huang</p>
+<p><b>Authors:</b> Yu Chen, Ruishuo Chen, Xun Wang, Zhuoran Li, Longbo Huang</p>
+<p>Loading reusable skill documents into a bounded context window is now the primary way large language model (LLM) agents acquire task-specific capabilities, which makes skill selection a first-order determinant of task performance and token cost. Yet current agents score skills independently by semantic relevance and assemble the set by top-$k$ or greedy packing, with no quality guarantee or cost awareness on the selected set. As a result, redundant or poorly chosen skills waste scarce context tokens and can even degrade performance. We give the first model of how the selected skill set shapes execution outcomes and cast skill selection as an optimization problem: choose a skill set under a hard token budget to maximize a monotone submodular benefit minus context penalty. For this problem, we develop Best Prefix Selection (BPS), a polynomial-time algorithm, and prove, to our knowledge, the first performance guarantee for skill selection: a bicriteria $(1-1/e,1)$ approximation whose benefit coefficient is optimal in polynomial time. On a contamination-controlled BigCodeBench variant, BPS outperforms all the baselines, reaching $0.73$ measured task success versus $0.20$--$0.52$ for released skill routers, text retrievers, and the executor&#x27;s own selection, on $28\%$ fewer tokens than the strongest released router.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-20 · <a href='https://arxiv.org/abs/2608.19993'>page</a> · <a href='https://arxiv.org/pdf/2608.19993'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Agentic Search. More accurate and efficient results from your AI systems.</title>
+      <link>https://mistral.ai/news/agentic-search</link>
+      <guid isPermaLink="false">mistral:c4718f6f11</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
+<p><b>Authors:</b> Mistral AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/agentic-search'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>ProductAgentic Search. More accurate and efficient results from your AI systems.The retrieval layer that helps AI systems navigate, read, and verify information inside and across even the most complex documents.August 20, 2026By Mistral</title>
+      <link>https://mistral.ai/news/agentic-search/</link>
+      <guid isPermaLink="false">mistral:234f8833cf</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
+<p><b>Authors:</b> Mistral AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/agentic-search/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation</title>
+      <link>https://huggingface.co/papers/2608.18565</link>
+      <guid isPermaLink="false">arxiv:2608.18565</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yanlun Tu, Huacan Wang, Ziyue Zhou, Jie Zhou, Ningyan Zhu, Ge Chen, Wangyi Chen, Tengfei Zhou, … <i>(+6 more)</i></p>
+<p>Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into an existing PLC project and then runs correctly has been checked only in limited tests. We present SemaPLC, a project-grounded and verification-gated agent harness assembled from conventional tools but governed by a strict completion rule. Rather than stopping when the model judges its own output adequate, SemaPLC declares a task complete only when logged external checks confirm it. Those checks cover the specification, the compilation, and the behavior on a live runtime. On 117 independent-POU tasks matching existing benchmarks, it attains the highest strict verified pass rate on all seven models (72.6\% mean). On a project-context track of 65 tasks whose generated logic must compile and run inside a real project, it attains the highest mean on integrated compilation, static behavior, and dynamic behavior. Of the three layers, dynamic behavior is the most revealing. We measure it by deploying the generated and the reference logic to a live PLC runtime and comparing their executed traces. All methods fall within 10 static points of one another, whereas dynamic scores separate them sharply, from 22.4 to 31.4 for the baselines against 52.2 for SemaPLC. Overall, our verification-gated harness raises the mean at every layer and most sharply at runtime. Execution, not static scoring, is the faithful test of whether generated control logic actually works. SemaPLC is open-sourced at https://github.com/midea-ai/SemaPLC.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://huggingface.co/papers/2608.18565'>page</a> · <a href='https://arxiv.org/pdf/2608.18565'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL</title>
+      <link>https://huggingface.co/papers/2608.17253</link>
+      <guid isPermaLink="false">arxiv:2608.17253</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yunhao Yang, Yuexin Bian, Yunjie Tian, Di Fu, Tianjin Huang, Yuanyuan Shi, Ziang Xiao, Nuno Vasconcelos, … <i>(+2 more)</i></p>
+<p>Reinforcement learning (RL) has emerged as a powerful approach for improving reasoning in language and vision-language models, yet its strongest successes still depend heavily on ground-truth supervision (e.g., verifiable reward). Such annotations are costly to obtain and become increasingly scarce as reasoning capabilities advance beyond what humans can reliably evaluate. Self-rewarding RL reduces this dependence by enabling models to derive reward signals from their own completions. However, training solely on self-generated feedback can reinforce existing biases and suboptimal behaviors, reduce response diversity, and ultimately lead to homogenized responses and training collapse. In this work, we show that unsupervised reasoning can emerge through cooperative multi-agent training. We introduce Co-RL, a framework in which multiple decoupled models, sharing no parameters, are simultaneously optimized through RL using rewards derived from their peers. We further show that increasing cohort diversity, through heterogeneous model families, sizes, and rephrased training samples, reduces the correlated errors that drive self-reinforcing feedback loops. This diversity consistently improves reasoning performance, maintains behavioral diversity, and mitigates training collapse. Across text-only and multimodal domains, Co-RL consistently outperforms the base models and prior label-free approaches, while matching or surpassing supervised methods, without access to any ground-truth labels. Concretely, Co-RL yields average gains of 3.0-8.6% across seven text-only benchmarks for LLMs and 2.3-7.2% across four multimodal benchmarks for VLMs. Code is available at https://github.com/DrStranded/Co-RL.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://huggingface.co/papers/2608.17253'>page</a> · <a href='https://arxiv.org/pdf/2608.17253'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EnvHarness: Awakening Static Worlds for Agent Learning</title>
+      <link>https://huggingface.co/papers/2608.19880</link>
+      <guid isPermaLink="false">arxiv:2608.19880</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chengsong Huang, Zifeng Wang, Rujun Han, Jun Yan, Yanfei Chen, Zoey CuiZhu, Ke Jiang, Peng Xia, … <i>(+10 more)</i></p>
+<p>LLM agents learn by interacting with environments, yet these environments are hand-built and static: blind to an agent&#x27;s weaknesses, and quickly left behind as it improves. While recent environment generation methods attempt to address this, they require domain-specific pipelines, rely on expensive or unreliable verifiers, and still produce static environments. To alleviate the engineering burden of rebuilding environments from scratch, we propose Environment Harness (EnvHarness), a programmable layer of plug-in components that wraps a static environment to reshape its behavior without modifying the underlying logic. Operating through standard interfaces, EnvHarness applies across diverse domains while ensuring every reshaped environment retains its original verifier. To automate this process, we introduce EnvRigger, which treats the target policy as a black box, observing its execution trajectories to synthesize EnvHarness components targeting diagnosed flaws, and validating them via fresh rollouts. Across five benchmarks in four domains, EnvHarness outperforms both original environments and domain-specific environment generation pipelines, achieving up to a 9.0-point improvement on held-out instances with 9.8% fewer execution steps. Furthermore, EnvHarness provides a superior optimization signal for reinforcement learning, enabling continuous, targeted co-evolution of the policy and its environment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-20 · <a href='https://huggingface.co/papers/2608.19880'>page</a> · <a href='https://arxiv.org/pdf/2608.19880'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SPADE: Self-Play in Adaptive Synthetic Executable Environments</title>
+      <link>https://huggingface.co/papers/2608.19197</link>
+      <guid isPermaLink="false">arxiv:2608.19197</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao, Zichen Liu, Junsu Kim, Zijian Zhou, … <i>(+11 more)</i></p>
+<p>Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self-Play in Adaptive Synthetic Executable Environments), a self-play RL framework in which a single LLM plays two roles: an Environment Designer that writes complete, long-horizon training environments as executable code with an OpenAI Gym-style reset()/step() interface, and a Reasoning Agent that learns to act in them. Each is a stateful, multi-turn environment (state transitions, reward functions, and verification code), so one interface spans reasoning problems and multi-step agentic tool use. The Reasoning Agent&#x27;s regret is estimated using the gap between its reward with and without privileged hints; in optimizing this regret signal the Environment Designer learns to target environments at the edge of the agent&#x27;s capabilities while keeping them feasible. Through extensive experimentation, we find several components critical to success: grounding the Environment Designer on documents sampled from a large pretraining corpus, and giving it an accumulated environment memory. Scaling to 30B-parameter models, SPADE improves over the strongest fixed-environment baseline by +5.3 on average across eight held-out math, science, code, and reasoning benchmarks, and lifts the tool-use setting by +5.7 on BFCL-v4 multi-turn and +13.9 on ACEBench-Agent; on the games setting, the margin over the strongest baseline grows with model scale. By making environment design itself a learnable component, SPADE takes a concrete step toward open-ended self-improvement.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://huggingface.co/papers/2608.19197'>page</a> · <a href='https://arxiv.org/pdf/2608.19197'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Training Chemical Plausibility-Aware Large Language Models for Single-Step Retrosynthesis</title>
+      <link>https://huggingface.co/papers/2608.18940</link>
+      <guid isPermaLink="false">arxiv:2608.18940</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bogdan Zagribelnyy, Ivan Ilin, Nikita Bondarev, Maksim Kuznetsov, Mathieu Reymond, Vladimir Aladinskiy, Alex Aliper, Alex Zhavoronkov, … <i>(+1 more)</i></p>
+<p>Single-step retrosynthesis is a central component of computer-aided synthesis planning, yet its intrinsically one-to-many nature is poorly captured by single-answer evaluation and benchmarking protocols. To address this, we introduce Top-K prompting as a robust training and inference paradigm to better capture diverse, plausible reaction predictions. We compile CREED-CCV-2+USPTO-XL, an ultra-large-scale dataset of ~45.6 million verified reactions to train the C3LM (Chemistry Constraint-Consistent Language Model). By integrating fine-tuning with ChemCensor-based and novelty-oriented rewards, our model achieves state-of-the-art performance on the OOD URSA-expert-2026 benchmark. Further analysis of reaction uniqueness shows that LLMs and conventional models explore complementary reaction spaces, motivating ensemble-based retrosynthesis systems. Overall, our results establish Top-K, plausibility-aware training as a practical new direction for robust future LLM-based synthesis planning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://huggingface.co/papers/2608.18940'>page</a> · <a href='https://arxiv.org/pdf/2608.18940'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis</title>
+      <link>https://huggingface.co/papers/2608.18580</link>
+      <guid isPermaLink="false">arxiv:2608.18580</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Kou Shi, Zun Wang, Qisheng Su, Shiting Huang, Ziao Zhang, Zhen Fang, Qingnan Ren, Jin Liu, … <i>(+6 more)</i></p>
+<p>Training terminal agents requires scalable executable supervision, yet synthesizing high-quality terminal tasks remains challenging. Each task couples an instruction, an initialized environment, a reference solution, and an executable verifier; if these artifacts are generated from inconsistent assumptions, the resulting task may be unsolvable or incorrectly evaluated. Meanwhile, multi-stage synthesis can discard the goals, dependencies, state transitions, and procedural constraints encoded in the original sources. We present FACET (Fine-grained Agentic Construction of Executable Tasks), a framework that addresses both information preservation and cross-artifact consistency. FACET reconstructs related agent skills into coherent, information-rich scenarios, then realizes and repairs the execution environment before generating the final task artifacts. The resulting container state serves as shared grounding for the instruction, solution, and verifier, while execution-based validation and targeted repair correct artifact-specific failures without unnecessarily regenerating valid components. FACET produces complex terminal tasks with dense executable checks, and successful trajectories collected from these tasks provide effective, data-efficient supervision. Fine-tuning models across multiple scales consistently improves performance on Terminal-Bench 2.1, while analyses of alternative generation schemes support the importance of environment-grounded construction for task validity and solution-verifier alignment. These results establish source-intent preservation and shared executable-state grounding as key principles for scalable terminal-task synthesis.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://huggingface.co/papers/2608.18580'>page</a> · <a href='https://arxiv.org/pdf/2608.18580'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multilingual Knowledge Transfer under Data Constraints via Lexical Interventions</title>
+      <link>https://machinelearning.apple.com/research/multilingual-knowledge-transfer-lexical-interventions</link>
+      <guid isPermaLink="false">apple_ml:1bb0086602</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Cross-lingual knowledge transfer is critical for building high-performing multilingual language models for languages with insufficient training data. When target language data is scarce, the knowledge required for many downstream tasks involving scientific reasoning, commonsense inference, and world knowledge must be acquired primarily from the high-resource language, making effective knowledge transfer essential. Existing methods for improving such cross-lingual knowledge transfer require large amounts of parallel data, translation systems, auxiliary models, or additional training stages thatâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-20 · <a href='https://machinelearning.apple.com/research/multilingual-knowledge-transfer-lexical-interventions'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling Laws for Mixture Pretraining Under Data Constraints</title>
+      <link>https://machinelearning.apple.com/research/scaling-laws-mixture-pretraining</link>
+      <guid isPermaLink="false">apple_ml:6e17c6a9cb</guid>
+      <pubDate>Fri, 21 Aug 2026 04:31:04 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>As language models scale, the amount of data they require grows â yet many target data sources, such as low-resource languages or specialized domains, are inherently limited in size. A common strategy is to mix this scarce but valuable target data with abundant generic data, which presents a fundamental trade-off: too little target data in the mixture underexposes the model to the target domain, while too much target data repeats the same examples excessively, yielding diminishing returns and eventual overfitting. We study this trade-off across more than 2,000 language-model training runsâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-20 · <a href='https://machinelearning.apple.com/research/scaling-laws-mixture-pretraining'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Demystifying Agent Skills: Why They Work-Until They Don&#x27;t</title>
       <link>https://huggingface.co/papers/2608.14036</link>
@@ -2148,156 +2292,6 @@
 <p><b>Authors:</b> Kimi Team, Tongtong Bai, Yifan Bai, Yiping Bao, M. C., Jianfeng Cai, Xinyuan Cai, Peizhou Cao, … <i>(+395 more)</i></p>
 <p>We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window. Kimi K3 is built on Kimi Delta Attention and Attention Residuals, which improve information flow across sequence length and model depth. Together with Stable LatentMoE, which effectively activates 16 of 896 routed experts per token, and refined training and data recipes, these advances yield an approximately 2.5x improvement in overall scaling efficiency over Kimi K2. Post-training highlights reinforcement learning across general, agentic, and coding domains and multiple reasoning-effort levels, enabling compositional generalization and robust long-horizon execution. At 2.8T scale, Kimi K3 is supported by infrastructure advances in multiple areas: algorithm-system co-design for KDA, perfectly balanced expert-parallel training with efficient memory management, million-token agentic RL with persistent rollout and sandbox states, and deployment innovations. Extensive evaluations show that Kimi K3 achieves frontier-level performance across long-horizon coding, agentic, knowledge, reasoning, and vision tasks. While its overall performance still trails the most powerful proprietary models, namely Claude Fable 5 and GPT-5.6 Sol, Kimi K3 consistently outperforms other open and proprietary models evaluated in our suite. We release the full Kimi K3 model weights to facilitate future research and accelerate the broader deployment and adoption of frontier intelligence.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-27 · <a href='https://huggingface.co/papers/2607.24653'>page</a> · <a href='https://arxiv.org/pdf/2607.24653'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents</title>
-      <link>https://huggingface.co/papers/2607.22798</link>
-      <guid isPermaLink="false">arxiv:2607.22798</guid>
-      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yan Yang, Xiangru Jian, Ziyang Luo, Zirui Zhao, Yutong Dai, Ziji Shi, Hanshu Yan, Jun Hao Liew, … <i>(+3 more)</i></p>
-<p>Computer-use agents are usually improved by strengthening perception: better models for reading a screenshot and choosing where to click. Yet a screenshot is only a lossy rendering of the underlying program state, e.g., the files, application backends, and DOM that hold the task data. Different states can produce the same pixels, while code can inspect and modify that state directly. StateAct is a code-first, multi-agent harness built around this distinction. Its main agent works directly with program state by using code, while a dedicated GUI subagent handles screenshot-and-click interaction on the few subgoals that need it, just 28 of 108 tasks and 1.1% of main-agent steps. The same direct access to program state also supports verification: an independent finish gate double-checks the saved result for structural failures, e.g., output that is missing, unsaved, or written to the wrong path. To stay on track over hundreds of steps, the main agent hands subgoals to fresh subagents, keeping its own context focused. On OSWorld 2.0, StateAct lifts Claude Opus 4.8 from 20.6% to 26.9% on binary success, and from 54.8% to 61.6% on partial success, at ~ 9x lower cost per task than the same model driven by screenshots alone; a code-only variant with no GUI subagent reaches only 45.9% partial, below that screenshot-based baseline&#x27;s 54.8%. In general, grounding action, verification, and memory in state, what we call state-grounding, shifts the main bottleneck from perception toward reasoning: failures depend more on what the agent thinks than on what it sees.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://huggingface.co/papers/2607.22798'>page</a> · <a href='https://arxiv.org/pdf/2607.22798'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills</title>
-      <link>https://huggingface.co/papers/2607.22529</link>
-      <guid isPermaLink="false">arxiv:2607.22529</guid>
-      <pubDate>Tue, 28 Jul 2026 06:21:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS — (senior)</p>
-<p><b>Authors:</b> Siyuan Huang, Pengyu Cheng, Haotian Liu, Tao Chen, Yihao Liu, Jingwei Ni, Shijie Zhou, Ziyi Yang, … <i>(+6 more)</i></p>
-<p>LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability: environment-bound methods obtain precise feedback but confine learning to narrow domains, while open-ended self-generation broadens the task space but lacks reliable verification, allowing misleading rewards to pollute the training loop. We identify agent skills as a powerful middle ground to reconcile this tension: each skill ensures deep, verifiable execution in a specific scenario, while dynamic routing across skills maintains open-ended task variety. Leveraging this insight, we introduce Skill Self-Play (Skill-SP), a co-evolutionary framework comprising a proposer, a solver, and a dynamic skill controller. Orchestrated via a reinforcement learning loop, these components co-evolve in a continuous self-play loop: the proposer generates challenging tasks conditioned on dynamically sampled skills; the solver explores candidate solutions to push its capability boundaries; and the skill controller collects execution feedback to update and expand the skill library. This interactive co-evolution effectively bridges the gap between structured verification and open-ended exploration. Empirical evaluations on tool-use and reasoning benchmarks demonstrate that Skill-SP, serving as a robust evolution engine, consistently pushes the performance ceiling of competent backbones while catalyzing striking turnarounds for initially misaligned models. Our code is available at https://github.com/Qwen-Applications/skill-self-play.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://huggingface.co/papers/2607.22529'>page</a> · <a href='https://arxiv.org/pdf/2607.22529'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Trajectory-Regularized Stochastic Optimal Control via KL Divergence</title>
-      <link>https://arxiv.org/abs/2607.22201</link>
-      <guid isPermaLink="false">arxiv:2607.22201</guid>
-      <pubDate>Mon, 27 Jul 2026 06:57:13 GMT</pubDate>
-      <category>eess.SY</category>
-      <category>cs.LG</category>
-      <category>cs.SY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Koushil Sreenath</p>
-<p><b>Authors:</b> Mintae Kim, Koushil Sreenath</p>
-<p>We introduce trajectory-regularized stochastic optimal control (TRSOC), which augments standard stochastic optimal control (SOC) with a Kullback--Leibler (KL) divergence between controlled and reference trajectory distributions. Using Girsanov&#x27;s theorem, the trajectory KL reduces to a quadratic drift mismatch penalty, yielding a modified running cost that preserves the dynamic programming (DP) structure. We derive the corresponding Hamilton--Jacobi--Bellman (HJB) equation and characterize the optimal policy. In the linear-quadratic (LQ) setting, the formulation admits a closed-form solution with an augmented control cost. Experiments show that the regularization parameter induces a trade-off between performance-driven and reference-preserving behavior, including cases with reference dynamics learned from offline data.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SY, cs.LG, cs.SY · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://arxiv.org/abs/2607.22201'>page</a> · <a href='https://arxiv.org/pdf/2607.22201'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation</title>
-      <link>https://huggingface.co/papers/2607.21553</link>
-      <guid isPermaLink="false">arxiv:2607.21553</guid>
-      <pubDate>Mon, 27 Jul 2026 06:57:13 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junsong Chen, Jincheng Yu, Yitong Li, Shuchen Xue, Haozhe Liu, Jingyu Xin, Yuyang Zhao, Tian Ye, … <i>(+7 more)</i></p>
-<p>We introduce SANA-Video 2.0, a hybrid video diffusion transformer instantiated at 5B and 14B scales under a unified architecture. Designed to generate high-quality video up to 720p on a single GPU, SANA-Video 2.0 matches full-softmax video DiTs in quality while retaining the favorable long-sequence scaling of linear attention. To avoid quadratic attention throughout, Hybrid Linear-Softmax Attention combines gated linear attention for O(N)-dominated mixing with periodic gated-softmax anchors at a 3:1 ratio, restoring the full-rank token interactions that pure linear attention lacks. To propagate these refreshed representations across depth, Block Attention Residuals (AttnRes) route completed block summaries into later linear layers, enabling anchor-feature reuse and boosting deep-layer effective rank by ~12%. Through from-scratch training, SANA-Video 2.0 learns the complete hybrid directly rather than linearizing pretrained models, with reduced-resolution proxy studies establishing 25% softmax as the optimal quality-efficiency trade-off. With 40-step sampling, SANA-Video 2.0 achieves a VBench score of 84.30 in 13.2s at 480p on a single H100, remaining competitive with far larger softmax video DiTs at a fraction of the latency. Its compiled DiT forward pass is 3.2x faster than a matched full-softmax baseline at 720p/60s, a gap that expands with video duration. Furthermore, full-stack Sol-Engine optimization (kernel fusion, caching, and sparse attention) accelerates this hardware-friendly backbone by a further 3.58x, bringing the 5B pipeline to 13.06s at 720p/5s and making it 120x faster than Wan 2.2-A14B on one H100. Overall, our hybrid design recovers softmax-level expressiveness at substantially reduced cost, unlocking scalable long, high resolution video generation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2607.21553'>page</a> · <a href='https://arxiv.org/pdf/2607.21553'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>NVIDIA-labs OO Agents: Native Python Object-Oriented Agents</title>
-      <link>https://huggingface.co/papers/2607.20709</link>
-      <guid isPermaLink="false">arxiv:2607.20709</guid>
-      <pubDate>Sun, 26 Jul 2026 06:31:26 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, NVIDIA Research · <b>Tier-2 senior:</b> ETH Zürich, U Toronto — Paul Furgale</p>
-<p><b>Authors:</b> Paul Furgale, Severin Klingler, James Nolan, Matt Staats, Gaia Di Lorenzo, Elisa Martinez Abad, Christian Schüller, Razvan Dinu, … <i>(+8 more)</i></p>
-<p>Traditional agent development is split across prompt templates, tool schemas, callback code, and workflow graphs. We present NVIDIA Object-Oriented Agents (NOOA), a model-agnostic Python framework for building reliable AI agents. NOOA takes a simpler approach: an agent is a Python object. Its methods are the actions the model can take, fields are its state, docstrings are its prompts, and its type annotations are contracts. A method whose code body consists of &quot;...&quot; is completed at runtime by an LLM-driven agent loop, while methods with normal bodies remain standard deterministic Python. This gives developers and agents the same interface, so agent behavior can be tested, traced, refactored, and improved just like other software.
-  This paper makes three contributions. (1) We present the agent-as-a-Python-object programming model and the design principles behind it. Where Python has existing abstractions, we adopt them directly. Agent-specific capabilities--context, events, state rendering, long-term memory, and validated LLM loops--are exposed through simple Pythonic APIs, so both developers and agents share one familiar programming model. (2) We identify six model-facing ideas that NOOA is, to our knowledge, the first to combine on a single surface: typed input/output, pass-by-reference over live objects, code as action, programmable loop engineering, explicit object state, and model-callable harness APIs for context and events. We find the community already converging on several of these ideas--often as experimental or partial features--and present the comparison to encourage further adoption. (3) We demonstrate that current models use this interface effectively, both in targeted capability tests and on agentic and reasoning benchmarks such as SWE-bench Verified and Terminal-Bench 2.0 and ARC-AGI-3.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://huggingface.co/papers/2607.20709'>page</a> · <a href='https://arxiv.org/pdf/2607.20709'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ReferTrack: Referring Then Tracking for Embodied Visual Tracking</title>
-      <link>https://huggingface.co/papers/2607.20061</link>
-      <guid isPermaLink="false">arxiv:2607.20061</guid>
-      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Hanjing Ye, Tianle Zeng, Jiazhao Zhang, Shaoan Wang, Zibo Zhang, Weisi Situ, Yuchen Zhou, Yonggen Ling, … <i>(+2 more)</i></p>
-<p>Embodied visual tracking (EVT) requires a mobile agent to continuously follow a specific target described in natural language using only onboard vision. While recent vision-language-action (VLA) policies unify target identification and trajectory planning, their chain-of-thought (CoT) reasoning often operates in abstract spatial latents that are difficult to supervise and weakly aligned with explicit image-space detections. To address this, we introduce ReferTrack, a referring-then-tracking paradigm that grounds EVT using a single forward-facing camera. Our model first selects the target from an indexed set of bounding boxes, then decodes tracking waypoints conditioned on this image-grounded decision. To preserve target motion cues over time, ReferTrack maintains a sliding-window queue of previously selected bounding boxes, injecting their geometric features into the visual history via temporal-viewpoint-bbox indicator (TVBI) tokens. We further enhance target identification by co-training on a custom Refer-QA dataset. On EVT-Bench, ReferTrack achieves state-of-the-art single-view performance with success rates of 89.4%, 73.3%, and 74.1% on the single-target, distracted, and ambiguity tracking splits, respectively -- matching or even surpassing several multi-camera baselines on identification-heavy tasks. Finally, real-world deployments on legged and humanoid robots validate its robust sim-to-real transfer capabilities. Code is available at https://github.com/MedlarTea/referTrack.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-22 · <a href='https://huggingface.co/papers/2607.20061'>page</a> · <a href='https://arxiv.org/pdf/2607.20061'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs</title>
-      <link>https://huggingface.co/papers/2605.09635</link>
-      <guid isPermaLink="false">arxiv:2605.09635</guid>
-      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U — (senior)</p>
-<p><b>Authors:</b> Hao Liang, Qihan Lin, Zhaoyang Han, Xiaochen Ma, Zhen Hao Wong, Meiyi Qiang, Linzhuang Sun, Wentao Zhang, … <i>(+1 more)</i></p>
-<p>Large language models are increasingly used in K-12 education, but existing benchmarks mainly test exam question answering rather than understanding how curriculum knowledge is structured and visually presented. We call this capability curriculum cognition. It covers prerequisite chains, concept taxonomies, experiment-concept links, pedagogical sequencing, and visual grounding. We introduce K12-KGraph, a curriculum-aligned knowledge graph extracted from official People&#x27;s Education Press textbooks in mathematics, physics, chemistry, and biology across primary, middle, and high school. It contains nine node types and fourteen relation types covering curriculum structure and visual grounding. From this graph, we derive K12-Bench, a 23,640-question multi-select benchmark with five task families: Ground, Prereq, Neighbor, Evidence, and Locate. We also build K12-Train, a graph-guided supervised fine-tuning corpus of 7,335 samples, including 2,267 text-only QA pairs and 5,068 multimodal VQA pairs. On K12-Bench, Gemini-3-Flash achieves only 57 percent exact match and Gemma-4-31B-IT reaches 46 percent, with Prereq and Neighbor being the hardest tasks. Our training experiments show that domain-specific supervision can reduce this gap. Under a matched 2,300-sample budget, K12-Train-Text consistently outperforms equally sized subsets of eight mainstream instruction-tuning corpora on GaokaoBench and EduEval. For vision-language models, K12-Train-Full achieves the best overall results on Gaokao-MM, MDK12-medium, and K12Vista among all compared training configurations, despite using fewer samples than the full DataFlow and WizardLM baselines. It also surpasses both text-only and multimodal-only variants, showing that textual and visual supervision are complementary. We release the graph, benchmark, training data, and complete construction pipeline.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2605.09635'>page</a> · <a href='https://arxiv.org/pdf/2605.09635'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Show, Don&#x27;t Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text</title>
-      <link>https://huggingface.co/papers/2607.21072</link>
-      <guid isPermaLink="false">arxiv:2607.21072</guid>
-      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Cornell, HKUST, Peking U, U Toronto, U Washington — (senior)</p>
-<p><b>Authors:</b> Xu Wang, Kaixiang Yao, Miao Pan, Xiaohe Zhou, Xuanyu Liu, Wenqi Zhang, Xuhong Zhang, Hugging Face Daily Papers (curated)</p>
-<p>Spatial intelligence is essential for agents to move from static semantic understanding toward interacting with the physical world. Many spatial tasks are grounded in continuous visual scenes, where locations, regions, and paths are more naturally expressed by pointing, marking, or drawing than by reporting precise coordinates or discrete textual symbols. Yet existing spatial reasoning benchmarks usually require coordinates, options, or text, creating an answer-interface mismatch for image-generation models. This makes it difficult to evaluate image-generation models under the same task semantics as text-output VLMs, despite their ability to externalize spatial judgments directly in pixel space. We propose ProVisE (Protocolized Visual Evaluation), a benchmark-agnostic framework that elicits protocol-constrained visual answers from image-generation models and parses them into structured predictions compatible with original metrics. ProVisE also includes an Agentic builder that constructs and validates task-specific protocols for new benchmarks. We further introduce SpatialGen-Bench, a curated diagnostic benchmark of 470 samples across 14 spatial subtasks, four capability levels, and diverse answer forms. We evaluate representative text-output VLMs and image-generation models in a unified setting and validate Agentic protocol construction on six external spatial benchmarks. Results show that image-generation models are competitive when spatial answers can be externalized directly in pixel space, while text-output VLMs retain a clear advantage in compositional spatial reasoning. These findings reveal complementary strengths of pixel-space expression and text-based reasoning and establish a metric-compatible testbed for studying spatial cognition in image-generation models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2607.21072'>page</a> · <a href='https://arxiv.org/pdf/2607.21072'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LEAD: Breaking the No-Recovery Bottleneck in Long-Horizon Reasoning</title>
-      <link>https://machinelearning.apple.com/research/lead-no-recovery-bottleneck</link>
-      <guid isPermaLink="false">apple_ml:efa034feb9</guid>
-      <pubDate>Sat, 25 Jul 2026 06:32:47 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Long-horizon execution in Large Language Models (LLMs) remains unstable even when high-level strategies are provided. Evaluating on controlled algorithmic puzzles, we demonstrate that while decomposition is essential for stability, extreme decomposition creates a âno-recovery bottleneckâ. We show that this bottleneck becomes critical due to highly non-uniform error distribution, where consistent errors on a few âhardâ steps become irreversible. To address this, we propose Lookahead-Enhanced Atomic Decomposition (LEAD). By incorporating short-horizon future validation and aggregatingâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-24 · <a href='https://machinelearning.apple.com/research/lead-no-recovery-bottleneck'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>MELLA: Bridging Linguistic Capability and Cultural Groundedness for Low-Resource Language MLLMs</title>
-      <link>https://arxiv.org/abs/2508.05502</link>
-      <guid isPermaLink="false">arxiv:2508.05502</guid>
-      <pubDate>Fri, 24 Jul 2026 06:21:09 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab</p>
-<p><b>Authors:</b> Yufei Gao, Jiaying Fei, Nuo Chen, Ruirui Chen, Guohang Yan, Yunshi Lan, Botian Shi</p>
-<p>Multimodal Large Language Models (MLLMs) perform strongly in high-resource languages, yet often produce fluent but culturally &quot;thin&quot; descriptions in low-resource settings. We argue that this failure is not merely a linguistic limitation: culture-specific visual knowledge depends on native visual-textual alignments that translation-centric pipelines rarely provide. We present MELLA, a multimodal dataset across eight low-resource languages, designed to support linguistic fluency and cultural groundedness. MELLA uses a dual-source strategy that combines native web image-alt-text pairs for culture-grounded supervision with generated-and-translated image descriptions for linguistically rich supervision, explicitly separating two learning signals often conflated in multilingual multimodal data. Through controlled diagnostic fine-tuning on multiple MLLM backbones, we show that MELLA mitigates cultural hallucination by helping models recognize and articulate culturally specific entities overlooked by translation-based adaptation. Our findings highlight data alignment, rather than model modification alone, as a path toward culturally grounded multimodal understanding in low-resource languages. The dataset is available at https://opendatalab.com/applyMultilingualCorpus.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://arxiv.org/abs/2508.05502'>page</a> · <a href='https://arxiv.org/pdf/2508.05502'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Student-Centered Distillation Narrows the Agentic Gap Between Small and Large LLMs</title>
-      <link>https://arxiv.org/abs/2509.14257</link>
-      <guid isPermaLink="false">arxiv:2509.14257</guid>
-      <pubDate>Fri, 24 Jul 2026 06:21:09 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Peking U — Tong Xu</p>
-<p><b>Authors:</b> Yuanjie Lyu, Chengyu Wang, Jun Huang, Tong Xu</p>
-<p>Large Language Model agents achieve strong performance on multi-step reasoning and tool-use tasks, but their impressive capabilities typically rely on extremely large backbones. Existing distillation approaches train smaller students to imitate full teacher trajectories, yet reasoning and knowledge gaps between the teacher and student can cause compounding errors. We propose SCoRe, a student-centered framework in which the student generates training trajectories and the teacher corrects only the earliest error, producing training data matched to the student&#x27;s abilities and exposing specific weaknesses. The student is first fine-tuned on corrected trajectories. Subsequently, short-horizon reinforcement learning starts from the verified prefix preceding the earliest error, with target rewards assigned at that step. This design enables the student to solve problems through unconstrained RL exploration rather than teacher imitation, while the short-horizon setup improves training stability. On 12 challenging benchmarks, a 7B-parameter student distilled with SCoRe closes the agentic performance gap with a 72B-parameter teacher.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://arxiv.org/abs/2509.14257'>page</a> · <a href='https://arxiv.org/pdf/2509.14257'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Answer-then-Edit: Reasoning Skeleton Editing for Anti-Distillation with Preserved Utility</title>
-      <link>https://arxiv.org/abs/2607.20440</link>
-      <guid isPermaLink="false">arxiv:2607.20440</guid>
-      <pubDate>Fri, 24 Jul 2026 06:21:09 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Max Planck — Wenjie Zhang</p>
-<p><b>Authors:</b> Fan Li, Mengting Pan, Sijia Xu, Xiaoyang Wang, Chen Chen, Wenjie Zhang</p>
-<p>Proprietary large language models (LLMs) entail substantial intellectual and financial investment, making them valuable intellectual property (IP). However, even when deployed via black-box APIs, these models remain vulnerable to unauthorized knowledge distillation, which allows adversaries to cheaply extract and replicate model capabilities. To address this issue, anti-distillation (AD) has been proposed to generate defensive outputs that hinder distillation effectiveness, overcoming the limitation of watermarking-based approaches that rely on post-hoc verification. However, existing AD methods based on internal model perturbations struggle to balance anti-distillability and utility (e.g., answer accuracy and naturalness) of reasoning traces, with stronger defenses often causing significant utility loss. To fill this gap, we propose \textbf{\underline{S}}keleton-\textbf{\underline{G}}uided \textbf{\underline{R}}easoning \textbf{\underline{E}}diting (SGRE), an \textit{Answer-then-Edit} framework that performs post-hoc trace modification for anti-distillation. In the answer stage, the teacher model first generates clean reasoning traces, preserving the original reasoning accuracy while enabling more flexible control over trace naturalness. In the editing stage, we draw inspiration from Cognitive Load Theory (CLT) and introduce a three-stage strategy consisting of reasoning skeleton extraction, skeleton graph coarsening, and skeleton verbalization. These operations jointly perturb reasoning structures and augment textual complexity to amplify extraneous load on student models, hindering their acquisition of underlying reasoning patterns. Extensive experiments across diverse LLMs demonstrate that SGRE achieves state-of-the-art performance in reducing distillation effectiveness, while maintaining lossless reasoning accuracy and superior trace naturalness.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-05-12 · <a href='https://arxiv.org/abs/2607.20440'>page</a> · <a href='https://arxiv.org/pdf/2607.20440'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AREX: Towards a Recursively Self-Improving Agent for Deep Research</title>
-      <link>https://huggingface.co/papers/2607.21461</link>
-      <guid isPermaLink="false">arxiv:2607.21461</guid>
-      <pubDate>Fri, 24 Jul 2026 06:21:09 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shuqi Lu, Chaofan Li, Kun Luo, Zhang Zhang, Hui Wang, Hongwang Xiao, Zheng Liu, Lei Xiong, … <i>(+17 more)</i></p>
-<p>Deep research requires agents to find answers that jointly satisfy multiple constraints. Discovering such answers is costly, whereas verifying a candidate can often be decomposed into tractable constraint-wise checks. This discovery--verification asymmetry suggests that a research agent should do more than simply search longer: it should recursively improve its current answer by verifying intermediate results and using the partially verified state to guide subsequent refinement. We introduce AREX, a family of Recursively Self-Improving (RSI) deep research agents. AREX alternates between an inner research loop that gathers evidence and constructs a provisional answer, and an outer self-improvement loop that audits the answer constraint-wise, identifies unresolved claims, and launches targeted follow-up research. To sustain RSI over long horizons, AREX learns an autonomous context-update tool that compresses growing interaction history into a compact improvement state preserving verified evidence and unresolved constraints, without relying on an external model. We train AREX on verified synthetic tasks and high-quality trajectories through agentic mid-training and long-horizon reinforcement learning. To mitigate sparse final rewards during long horizon learning, we emphasize key steps where decisive evidence is acquired or erroneous research directions are corrected. We instantiate a dense 4B model and a 122B-A10B Mixture-of-Experts model. Across BrowseComp, WideSearch, DeepSearchQA, Humanity&#x27;s Last Exam (HLE), and other reasoning and tool-use benchmarks, AREX substantially outperforms comparable-scale baselines and remains competitive with models using substantially more activated parameters.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-23 · <a href='https://huggingface.co/papers/2607.21461'>page</a> · <a href='https://arxiv.org/pdf/2607.21461'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
