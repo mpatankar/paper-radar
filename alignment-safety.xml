@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 25 Aug 2026 04:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 04:32:56 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>LION: A Clifford Neural Paradigm for Multimodal-Attributed Graph Learning</title>
+      <link>https://arxiv.org/abs/2608.24795</link>
+      <guid isPermaLink="false">arxiv:2608.24795</guid>
+      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Peking U — Xunkai Li</p>
+<p><b>Authors:</b> Xunkai Li, Zekai Chen, Zhengyu Wu, Henan Sun, Daohan Su, Guang Zeng, Hongchao Qin, Rong-Hua Li, … <i>(+1 more)</i></p>
+<p>Recently, the rapid advancement of multimodal domains has driven a data-centric paradigm shift in graph ML, transitioning from text-attributed to multimodal-attributed graphs. This advancement significantly enhances data representation and expands the scope of graph downstream tasks, such as modality-oriented tasks, thereby improving the practical utility of graph ML. Despite its promise, limitations exist in the current neural paradigms:(1) Neglect Context in Modality Alignment: Most existing methods adopt topology-constrained or modality-specific operators as tokenizers.These aligners inevitably neglect graph context and inhibit modality interaction, resulting in suboptimal alignment.(2) Lack of Adaptation in Modality Fusion: Most existing methods are simple adaptations for 2-modality graphs and fail to adequately exploit aligned tokens equipped with topology priors during fusion, leading to poor generalizability and performance degradation.To address the above issues, we propose LION (c\underline{LI}ff\underline{O}rd \underline{N}eural paradigm) based on the Clifford algebra and decoupled graph neural paradigm (i.e., propagation-then-aggregation) to implement alignment-then-fusion in multimodal-attributed graphs. Specifically, we first construct a modality-aware geometric manifold grounded in Clifford algebra.This geometric-induced high-order graph propagation efficiently achieves modality interaction, facilitating modality alignment.Then, based on the topology-aware Clifford components of aligned tokens, we propose adaptive holographic aggregation. This module integrates component-wise energy and propagation-scale information with learnable parameters to improve modality fusion. Extensive experiments on 9 text-image MAG datasets demonstrate that LION significantly outperforms SOTA baselines across 3 graph and 3 modality downstream tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG · <b>arXiv submitted:</b> 2026-08-25 · <a href='https://arxiv.org/abs/2608.24795'>page</a> · <a href='https://arxiv.org/pdf/2608.24795'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report</title>
+      <link>https://huggingface.co/papers/2608.24053</link>
+      <guid isPermaLink="false">arxiv:2608.24053</guid>
+      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Junjie Zhou, Ke Mei, Lei Li, Tianyi Wang, Fengyun Rao, Jing Lyu, Hugging Face Daily Papers (curated)</p>
+<p>Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendation, classification, and agentic systems. In this report, we present WeMM-Embedding, a family of universal multimodal embedding models supporting text, images, videos, visual documents, and arbitrarily interleaved multimodal inputs with flexible output dimensions. The family comprises 2B, 4B, and 9B variants and is trained in two stages: a large-scale multimodal alignment stage, followed by a refinement stage using curated data, fine-grained relevance supervision, and cross-scale knowledge transfer. Across extensive evaluations, WeMM-Embedding achieves leading performance on multiple public benchmarks. Notably, the 2B variant already surpasses the previously leading 8B open-source baseline on MMEB-v2, while the 9B variant further achieves a new state-of-the-art overall score of 80.6. WeMM-Embedding also demonstrates strong practical performance across WeChat applications, with substantial gains on a 26-task in-house benchmark and consistent improvements across 14 online A/B tests. It has been deployed at scale across recommendation and search applications, including WeChat Channels, Official Accounts, Moments, and e-commerce services. We have released the model weights and code to facilitate future research at https://github.com/Tencent/WeMM-Embedding.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-25 · <a href='https://huggingface.co/papers/2608.24053'>page</a> · <a href='https://arxiv.org/pdf/2608.24053'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Reasoning as a Weapon: Adaptive Dual-Path Jailbreak Attack on Large Language Models</title>
       <link>https://arxiv.org/abs/2407.16205</link>
@@ -2374,30 +2396,6 @@
 <p><b>Authors:</b> Yujie Luo, Xiangyuan Ru, Jingsheng Zheng, Jingjing Wang, Yuqi Zhu, Jintian Zhang, Runnan Fang, Kewei Xu, … <i>(+5 more)</i></p>
 <p>Large Language Models (LLMs) have demonstrated strong performance on general tasks, while often struggling to adapt to specialized domains without high-quality domain-specific data. Existing LLM-based data curation methods primarily rely on human-designed workflows, leaving it unexamined whether LLMs can autonomously execute an end-to-end data engineering pipeline for model specialization. We formalize \textbf{Autonomous Agentic Data Engineering}, a novel task designed to evaluate LLMs as autonomous data engineers that drive model specialization through end-to-end data curation. We frame data as an optimizable component and study agents that plan, generate, and iteratively optimize training data across multiple domains, guided by post-training performance improvement. Experiments show that autonomous LLM data engineers yield substantial gains, as GPT-5.2 constructs a training curriculum that improves a student model by \textbf{57.29\%}, entirely through iterative, agent-driven data adaptation. By illuminating both potential and bottlenecks, our study establishes autonomous data engineering as a measurable capability and charts a path toward agent-driven model specialization\footnote{Code will be released at https://github.com/zjunlp/DataAgent.}.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.IR, cs.LG · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2605.30407'>page</a> · <a href='https://arxiv.org/pdf/2605.30407'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Rationalize: Shared Semantic Reasoning for Human-AI Alignment</title>
-      <link>https://arxiv.org/abs/2605.30632</link>
-      <guid isPermaLink="false">arxiv:2605.30632</guid>
-      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
-      <category>cs.HC</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Xun Song</p>
-<p><b>Authors:</b> Aritra Dasgupta, Naga Datha Saikiran Battula, Avina Nakarmi, Sohom Sen, Subhodeep Ghosh, Xun Song</p>
-<p>We introduce Rationalize, a role-pair framework for shared semantic reasoning between humans and AI models in data-driven sensemaking. Building on ideas in human-machine teaming and critical thinking, we conceptualize human-AI interaction as a series of complementary role pairs (Explorer-Guide, Investigator-Informant, Teacher-Student, Judge-Advocate) operating in a shared reasoning space. In this space, human analysts and AI models (such as LLMs) make purposes, questions, assumptions, evidence, inferences, and implications explicit, facilitating alignment not only at the output level but at the level of rationalization of intent and action by each side. We relate these role pairs to the bidirectional human-AI alignment framework, illustrating how &quot;aligning AI to humans&quot; and &quot;aligning humans to AI&quot; differ by role, and sketch a collaborative research agenda for alignment design and assessment using element-level and role-specific approaches.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://arxiv.org/abs/2605.30632'>page</a> · <a href='https://arxiv.org/pdf/2605.30632'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SwanVoice: Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue</title>
-      <link>https://huggingface.co/papers/2605.30993</link>
-      <guid isPermaLink="false">arxiv:2605.30993</guid>
-      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Ruiqi Li, Yu Zhang, Changhao Pan, Ke Lei, Xiang Yin, Cheng Yang, Hugging Face Daily Papers (curated)</p>
-<p>Zero-shot text-to-speech (TTS) has improved substantially for single-speaker synthesis, yet expressive long-form multi-speaker dialogue remains difficult. A common workaround is to synthesize each turn with a monologue TTS model and stitch the outputs together. This adds inference cost and often breaks acoustic consistency, conversational coherence, and affective continuity across turns. Recent dialogue TTS systems have begun to address this setting, but they still struggle to keep expressive coherence, controllable speaker switching, and monologue quality at the same time. We present SwanData-Speech and SwanVoice. SwanData-Speech builds monologue and dialogue corpora from in-the-wild audio, using Swan Forced Aligner for pause-aware word-level alignment and RobustMegaTTS3 for pronunciation-hard cases. Built on these data, SwanVoice is a zero-shot TTS model for 1--4 speakers, combining a 25 Hz VAE, raw-text conditioning with pause-aware symbols and pinyin substitution, and a flow-matching DiT with speaker-turn conditioning. Training starts from monologue speech, moves through mixed and real dialogue data, and then uses DiffusionNFT post-training with phone-level and speaker-similarity rewards. On SwanBench-Speech, SwanVoice obtains higher richness and hierarchy scores than all evaluated open-source baselines in both monologue and dialogue settings, while content accuracy remains the main limitation. Audio demos are available at https://swanaigc.github.io//#swanvoice.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://huggingface.co/papers/2605.30993'>page</a> · <a href='https://arxiv.org/pdf/2605.30993'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
