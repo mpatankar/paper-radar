@@ -5,8 +5,53 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 27 Aug 2026 14:54:46 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 15:50:02 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Communication styles and reader preferences of LLM- and human-authored COVID-19 information explanations: a case study</title>
+      <link>https://arxiv.org/abs/2505.08143</link>
+      <guid isPermaLink="false">arxiv:2505.08143</guid>
+      <pubDate>Fri, 28 Aug 2026 15:50:02 GMT</pubDate>
+      <category>cs.HC</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Georgia Tech, Stanford — Jiawei Zhou, Munmun De Choudhury</p>
+<p><b>Authors:</b> Jiawei Zhou, Kritika Venkatachalam, Minje Choi, Koustuv Saha, Munmun De Choudhury</p>
+<p>With the wide adoption of large language models (LLMs) in information assistance, it is essential to examine their alignment with human communication styles and values. We situate this study within health fact-checking, where effective communication is critical for correcting misconceptions and building trust. Although recent studies have explored LLMs for fact-checking and health communication, differences between LLM and human communication styles and associated reader perceptions remain under-explored. We compiled a dataset of 1,498 health misinformation claims and explanations from authoritative fact-checking organizations and generated LLM responses to inaccurate health information. Drawing on health communication theories, we evaluated communication styles across three dimensions: information linguistic features, sender persuasive strategies, and receiver value alignments. We further assessed reader perceptions through a blinded evaluation with 99 participants. LLM-generated articles scored significantly lower in persuasive strategies, certainty expressions, and alignment with social values and moral foundations. However, participants strongly preferred LLM content, with over 60% of responses favoring LLM articles for clarity, completeness, and persuasiveness. This preference was associated with structured presentation, clarity, and neutral tone, which may convey completeness and professionalism despite reduced nuance or rigor. These findings highlight both the potential and limitations of LLMs in health communication and fact-checking, suggesting that reader preference may not necessarily correspond to established measures of communication quality.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://arxiv.org/abs/2505.08143'>page</a> · <a href='https://arxiv.org/pdf/2505.08143'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PAWBench: How Far Are We from Probabilistically Aligned World Modeling?</title>
+      <link>https://huggingface.co/papers/2608.27345</link>
+      <guid isPermaLink="false">arxiv:2608.27345</guid>
+      <pubDate>Fri, 28 Aug 2026 15:50:02 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuandong Pu, Le Zhuo, Sayak Paul, Gabriel Jorge Menezes, Avram Đorđević, Shiyang Li, Yifan Zhou, Bin Fu, … <i>(+7 more)</i></p>
+<p>Recent video generation models are increasingly framed as world models. Many physical processes can unfold in more than one valid way. Therefore, a world model should reproduce not only a plausible trajectory, but also the distribution of possible behaviors under the same initial observation and action. We call this distribution-level requirement probabilistic alignment. However, existing evaluations largely assess individual-video plausibility and do not test whether repeated generations recover the correct distribution. This raises a central question: how far are current video generators from probabilistically aligned world modeling? To answer it, we formalize probabilistic alignment as a distributional criterion for world models and introduce PAWBench, a benchmark for evaluating video generators as stochastic samplers of world dynamics. We further introduce PAWEval, an outcome-level protocol that converts repeated video rollouts into empirical distributions over possible physical behaviors. Across 50 scenarios and eleven current systems, no model consistently matches the reference probabilities while recovering the range of valid behaviors. Having established this gap, we test whether language prompts, initial noise sampling, or model training can reshape the model&#x27;s predictive distribution. We believe our work can serve as a foundation for future efforts to move towards probabilistically aligned world modeling.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://huggingface.co/papers/2608.27345'>page</a> · <a href='https://arxiv.org/pdf/2608.27345'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Self-OPD: On-Policy Distillation for Flow Matching Models without Teacher</title>
+      <link>https://huggingface.co/papers/2608.26872</link>
+      <guid isPermaLink="false">arxiv:2608.26872</guid>
+      <pubDate>Fri, 28 Aug 2026 15:50:02 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shiyi Zhang, Mushui Liu, Yunze Tong, Wanggui He, Siyu Zou, Jinlong Liu, Yunlong Yu, Jian Song, … <i>(+4 more)</i></p>
+<p>On-policy distillation (OPD), which leverages a pre-trained, specialized teacher model to provide dense supervisory signals, has achieved significant success in Large Language Models (LLMs) and has recently been adapted to flow matching models. However, this paradigm suffers from two major issues: First, training a separate, task-specific teacher for every new objective incurs high computational costs. Second, the discrepancy between teacher and student distributions often leads to compounding errors along the generation trajectory. In this paper, we introduce Self-OPD, a teacher-free OPD framework for flow matching models that turns the student&#x27;s own self-exploration into step-wise supervision. At each timestep, Self-OPD branches the deterministic next-state prediction into K stochastic SDE candidates, rolls them out with the ODE sampler, and compares their rewards against a deterministic self-reference baseline to obtain normalized advantages. The velocity field is optimized with an all-branch pull-push objective, where high-advantage branches attract the student and low-advantage branches repel it under direction-aware attenuation and SDE-variance normalization. For multi-objective alignment, Self-OPD fuses normalized scores at the reward level, avoiding direct gradient conflict. Experiments on single and mixed reward benchmarks show that Self-OPD outperforms prior RL and OPD methods without task-specific teachers.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://huggingface.co/papers/2608.26872'>page</a> · <a href='https://arxiv.org/pdf/2608.26872'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Preferences to Principles: Rubric-Based Alignment for Grounded Knowledge Answers</title>
+      <link>https://machinelearning.apple.com/research/rubric-based-alignment</link>
+      <guid isPermaLink="false">apple_ml:3fc80afb4c</guid>
+      <pubDate>Fri, 28 Aug 2026 15:50:02 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Designing effective reward signals for open-domain question answering is challenging because high-quality responses must simultaneously satisfy multiple aspects of answer quality that are difficult to capture with a holistic scalar objective. We introduce a rubric-based reward framework that generates query-specific rubrics grounded in retrieved evidence and decomposed into multiple quality dimensions, providing fine-grained supervision during post-training. Averaged across three evaluation axes (composition, grounding, and instruction-following), our approach improves over theâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://machinelearning.apple.com/research/rubric-based-alignment'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Learning to summarize user information for personalized reinforcement learning from human feedback</title>
       <link>https://arxiv.org/abs/2507.13579</link>
@@ -2346,51 +2391,6 @@
 <p><b>Authors:</b> Songze Li, Xiaoke Guo, Tianqi Liu, Biao Yi, Zhaoyan Gong, Zhiqiang Liu, Huajun Chen, Wen Zhang</p>
 <p>Existing Graphical User Interface (GUI) reasoning tasks remain challenging, particularly in UI understanding. Current methods typically rely on direct screen-based decision-making, which lacks interpretability and overlooks a comprehensive understanding of UI elements, ultimately leading to task failure. To enhance the understanding and interaction with UIs, we propose an innovative GUI reasoning paradigm called UI-in-the-Loop (UILoop). Our approach treats the GUI reasoning task as a cyclic Screen-UI elements-Action process. By enabling Multimodal Large Language Models (MLLMs) to explicitly learn the localization, semantic functions, and practical usage of key UI elements, UILoop achieves precise element discovery and performs interpretable reasoning. Furthermore, we introduce a more challenging UI Comprehension task centered on UI elements with three evaluation metrics. Correspondingly, we contribute a benchmark of 26K samples (UI Comprehension-Bench) to comprehensively evaluate existing methods&#x27; mastery of UI elements. Extensive experiments demonstrate that UILoop achieves state-of-the-art UI understanding performance while yielding superior results in GUI reasoning tasks.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-30 · <a href='https://arxiv.org/abs/2604.06995'>page</a> · <a href='https://arxiv.org/pdf/2604.06995'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SentGuard: Sentence-Level Streaming Guardrails for Large Language Models</title>
-      <link>https://arxiv.org/abs/2606.02041</link>
-      <guid isPermaLink="false">arxiv:2606.02041</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U — Yingchun Wang</p>
-<p><b>Authors:</b> Jiaqi Yu, Xin Wang, Yixu Wang, Jie Li, Yan Teng, Xingjun Ma, Yingchun Wang</p>
-<p>Large language models increasingly stream long, reasoning-intensive responses in real time, making when to moderate as critical as whether to moderate. Existing guardrails fall into two unsatisfactory extremes: response-level methods delay intervention until the full output is generated, whereas token-level methods act on incomplete semantics, often producing unstable decisions and excessive guard invocations. To address this challenge, we propose SentGuard, a sentence-level streaming guardrail that operates in parallel with generation. A lightweight waiting buffer groups streamed tokens into sentence chunks and releases only verified chunks to the user, introducing a small offset that enables SentGuard to assess the current prefix while the target LLM decodes subsequent content. To support this, we construct StreamSafe, a benchmark with structured per-sentence annotations across 8 harm categories, capturing the evolution of safety risks across both reasoning and response segments. We further train SentGuard with a coarse-to-fine objective to detect unsafe intent as soon as it emerges at sentence boundaries. Experiments on 5 safety benchmarks show that SentGuard outperforms existing baselines, detecting 90.5% of unsafe cases within two sentences while maintaining a low streaming false-positive rate of 7.41%.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL · <b>arXiv submitted:</b> 2026-06-01 · <a href='https://arxiv.org/abs/2606.02041'>page</a> · <a href='https://arxiv.org/pdf/2606.02041'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Circuits Updates â May 2026A short update on understanding features through downstream connections.</title>
-      <link>https://transformer-circuits.pub/2026/may-update/index.html</link>
-      <guid isPermaLink="false">transformer_circuits:fafd5ed0b3</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic Interpretability</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://transformer-circuits.pub/2026/may-update/index.html'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mellum2 Technical Report</title>
-      <link>https://huggingface.co/papers/2605.31268</link>
-      <guid isPermaLink="false">arxiv:2605.31268</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Marko Kojic, Ivan Bondyrev, Aral de Moor, Joseph Shtok, Petr Borovlev, Kseniia Lysaniuk, Madeeswaran Kannan, Ivan Dolgov, … <i>(+2 more)</i></p>
-<p>We present Mellum 2, an open-weight 12B-parameter Mixture-of-Experts (MoE) language model with 2.5B active parameters per token. Mellum 2 is a general-purpose language model specialized in software engineering, spanning code generation and editing, debugging, multi-step reasoning, tool use and function calling, agentic coding, and conversational programming assistance, and it is the successor to the completion-focused 4B dense Mellum model. The architecture builds on the Mixture-of-Experts (64 experts, 8 active) and combines Grouped-Query Attention with 4 KV heads, Sliding Window Attention on three of every four layers, and a single Multi-Token Prediction head that doubles as both an auxiliary pre-training objective and a built-in draft model for speculative decoding; each choice was validated by ablation with inference efficiency on commodity GPUs as a design constraint. Pre-training spans approximately 10.6 trillion tokens through a three-phase curriculum that progressively shifts the mixture from diverse web data toward curated code and mathematical content, optimized with Muon under FP8 hybrid precision and a Warmup-Hold-Decay schedule with linear decay to zero. The pre-trained base is extended to a 128K context window via a layer-selective YaRN and then post-trained in two stages (supervised fine-tuning followed by RLVR), yielding two released variants: an Instruct model that answers directly and a Thinking model that emits an explicit reasoning trace before its final answer. Across code generation, math and reasoning, tool use, knowledge, and safety benchmarks, Mellum 2 is competitive with open-weight baselines in the 4B-14B range while running at the per-token compute of a 2.5B dense model. We release the base, instruct, and thinking checkpoints, together with this report on the architecture decisions, data pipeline, and training recipe behind them, under the Apache 2.0 license.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://huggingface.co/papers/2605.31268'>page</a> · <a href='https://arxiv.org/pdf/2605.31268'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Who Gets Credit or Blame? Attributing Accountability in Modern AI Systems</title>
-      <link>https://arxiv.org/abs/2506.00175</link>
-      <guid isPermaLink="false">arxiv:2506.00175</guid>
-      <pubDate>Mon, 01 Jun 2026 05:39:12 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Himabindu Lakkaraju</p>
-<p><b>Authors:</b> Shichang Zhang, Hongzhe Du, Jiaqi W. Ma, Himabindu Lakkaraju</p>
-<p>Modern AI systems are typically developed through multiple stages-pretraining, fine-tuning rounds, and subsequent adaptation or alignment, where each stage builds on the previous ones and updates the model in distinct ways. This raises a critical question of accountability: when a deployed model succeeds or fails, which stage is responsible, and to what extent? We pose the accountability attribution problem for tracing model behavior back to specific stages of the model development process. To address this challenge, we propose a general framework that answers counterfactual questions about stage effects: how would the model&#x27;s behavior have changed if the updates from a particular stage had not occurred? Within this framework, we introduce estimators that efficiently quantify stage effects without retraining the model, accounting for both the data and key aspects of model optimization dynamics, including learning rate schedules, momentum, and weight decay. We demonstrate that our approach successfully quantifies the accountability of each stage to the model&#x27;s behavior. Based on the attribution results, our method can identify and remove spurious correlations learned during image classification and text toxicity detection tasks that were developed across multiple stages. Our approach provides a practical tool for model analysis and represents a significant step toward more accountable AI development.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2506.00175'>page</a> · <a href='https://arxiv.org/pdf/2506.00175'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
