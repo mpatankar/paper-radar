@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Fri, 28 Aug 2026 15:50:02 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 10:38:45 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>LLMs Are Not (Consistently) Bayesian: Quantifying Internal (In)consistencies of LLMsâ Probabilistic Beliefs</title>
+      <link>https://machinelearning.apple.com/research/llms-not-consistently-bayesian</link>
+      <guid isPermaLink="false">apple_ml:d6230534a0</guid>
+      <pubDate>Sat, 29 Aug 2026 10:38:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Modern AI systems are being deployed in complex domains such as medicine, science, and law, where there is often not a single correct answer given the observed evidence. Such systems must be able to represent and update uncertain beliefs about the world as new evidence arrives to make rational decisions. We introduce the novel technique of studying LLMs as information processing rules and utilize the information processing gapâthe deviation from Bayes updatesâto study the internal (in)consistencies of how LLMs update their probabilistic beliefs from evidence. Our extensive experiments evaluateâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://machinelearning.apple.com/research/llms-not-consistently-bayesian'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Agent Seer: Synthesizing Scenarios from Specification Understanding</title>
+      <link>https://machinelearning.apple.com/research/agent-seer-synthesizing-scenarios</link>
+      <guid isPermaLink="false">apple_ml:0665947866</guid>
+      <pubDate>Sat, 29 Aug 2026 10:38:45 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Evaluating AI agents that use external tools requires realistic test scenarios that capture how practitioners compose tools and iterate across conversation turns. Constructing such scenarios by hand demands deep domain expertise, does not scale across tool ecosystems, and produces static benchmarks that cannot track evolving APIs. We observe that tool specificationsâfunction names, natural-language descriptions, and typed parameter schemasâalready encode sufficient semantic information to synthesize realistic evaluation scenarios without manual curation or live tool execution. Agent Seerâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://machinelearning.apple.com/research/agent-seer-synthesizing-scenarios'>page</a></p>]]></description>
+    </item>
     <item>
       <title>ProgRouter: Online Progress-Guided Orchestration for Multi-Agent LLM Workflows under Quality-Cost Tradeoffs</title>
       <link>https://arxiv.org/abs/2608.25992</link>
@@ -2268,28 +2290,6 @@
 <p><b>Authors:</b> Hao Fei, Yiran Zhao, Hugging Face Daily Papers (curated)</p>
 <p>World models enable a predictive substrate for planning and action, yet existing formulations merely answer a physical question: what/where it is, and how will it evolve. Human behavior, however, is driven by hidden mental state (what a person believes, wants, intends, feels, and considers socially permissible), so a model that tracks the physical scene but not what each agent knows and believes about it predicts the wrong action for the right-looking scene. We formulate Mental World Modeling (MWM), a generic theoretical framework that makes mental variables core components of a world model rather than posthoc rationales: MWM aintains a coupled physical-mental world state, renders a target-specific partial observation, and simulates how candidate actions jointly update both components. We instantiate the framework in MENTIS, a training-free and fully inspectable baseline that decomposes the process into state parsing, target-observation generation, action decomposition, coupled physical and mental transition, and branch-level value evaluation. On a manually constructed, quality-controlled dataset of situated decision scenarios spanning text, image, and sounding-video stories, experiments with 8 modern LLM-based world models demonstrate that explicitly modeling the mental state is essential for predicting human decisions. Deeper analyses further expose the bottlenecks of current mental world modeling. We expect MWM as a next stage of world modeling, from simulating physical scenes to simulating the minds that act in them.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-29 · <a href='https://huggingface.co/papers/2607.27201'>page</a> · <a href='https://arxiv.org/pdf/2607.27201'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>N_0-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens</title>
-      <link>https://huggingface.co/papers/2607.23782</link>
-      <guid isPermaLink="false">arxiv:2607.23782</guid>
-      <pubDate>Tue, 04 Aug 2026 06:22:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> NeoteAI Team, Fudan TEAI Team, Hugging Face Daily Papers (curated)</p>
-<p>We present N_0-VTLA, a vision-tactile-language-action (VTLA) foundation model capable of (1) fine-grained contact-rich manipulation with tactile perception and tactile-feedback control, and (2) offline policy improvement from stored deployment data. Building on current vision-based backbones, we propose a training recipe for tactile integration consisting of visuo-tactile pre-training, staged tactile-pathway integration, and advantage-conditioned offline policy improvement. During pre-training, the policy learns broad contact priors from NeoData, our large-scale visuo-tactile robot dataset; to our knowledge, N_0-VTLA is the first VTLA model pretrained on tactile data at scale. During post-training, we augment the policy with a predictive tactile pathway that distills the contact patterns learned at scale into the fine motion adjustments required by downstream tactile-centric manipulation. For offline policy improvement, we introduce ALTER, an advantage-conditioned offline reinforcement learning method that converts relative progress and trajectory-event comparisons into binary advantage labels for policy training on a fixed deployment corpus, further improving task-specific learning on contact-rich skills such as deformable object manipulation. Across contact-rich benchmarks, N_0-VTLA outperforms strong baselines by wide margins: it wins all nine real-robot NeoReal tasks and reaches 63.8% mean success on a twenty-task simulation suite, against 44.0% for the strongest baseline. N_0-VTLA policies trained with ALTER reach 75-95% success on three long-horizon real-robot tasks. These results lay a foundation for versatile tactile-driven manipulation policies.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-26 · <a href='https://huggingface.co/papers/2607.23782'>page</a> · <a href='https://arxiv.org/pdf/2607.23782'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Weak-to-Strong On-Policy Distillation</title>
-      <link>https://huggingface.co/papers/2607.26246</link>
-      <guid isPermaLink="false">arxiv:2607.26246</guid>
-      <pubDate>Tue, 04 Aug 2026 06:22:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Fangxu Yu, Zinan Lin, Xiaodong Liu, Weijia Xu, Michael Xu, Tianyi Zhou, Jianfeng Gao, Hugging Face Daily Papers (curated)</p>
-<p>On-policy distillation (OPD), which aligns a student with the teacher&#x27;s token-level distribution on the student&#x27;s own rollouts, is an effective paradigm for transferring capabilities across LLMs. Prevailing approaches assume a teacher at least as capable as the student: they either distill a larger model into a smaller one, which fails at the frontier where no larger teacher exists, or consolidate multiple domain experts trained from a shared base, which requires costly training at the student&#x27;s scale. We introduce Weak-to-Strong On-Policy Distillation (W2S-OPD), a simple yet effective OPD framework that improves the strong student by distilling from multiple weak models. W2S-OPD constructs a proxy teacher in logit space from a contrast pair of a positive and a negative model, both smaller than the student and cheap to obtain. Their logit difference isolates the capability direction, which is added to the student&#x27;s own base model, yielding a proxy teacher that couples this direction while staying distributionally adjacent to the student. The student then distills it by minimizing the per-token reverse KL on its own rollouts. We instantiate the contrast pair as i) a post-RL expert against its pre-RL initialization, isolating the skill RL instills, ii) a larger against a smaller base model, isolating the capability from scale, and iii) a small base model with correct versus wrong hints, isolating the instance-level direction toward the solution. Across four math and three code benchmarks, W2S-OPD outperforms OPD, enables the student to surpass the domain teacher, and keeps improving the student even when every supervision source is weaker. Analysis shows different contrasts yield distinct signals: the post-RL and hint contrasts emphasize reasoning frameworks, while the scale contrast emphasizes the solving procedure. Our code will be available at https://github.com/Yu-Fangxu/W2S-OPD.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-28 · <a href='https://huggingface.co/papers/2607.26246'>page</a> · <a href='https://arxiv.org/pdf/2607.26246'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
