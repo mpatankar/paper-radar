@@ -5,8 +5,48 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 30 Aug 2026 09:37:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 10:19:48 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Cognitive Chain-of-Thought (CoCoT): Structured Multimodal Reasoning about Social Situations</title>
+      <link>https://arxiv.org/abs/2507.20409</link>
+      <guid isPermaLink="false">arxiv:2507.20409</guid>
+      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.CY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> CMU — Maarten Sap</p>
+<p><b>Authors:</b> Eunkyu Park, Wesley Hanwen Deng, Gunhee Kim, Motahhare Eslami, Maarten Sap</p>
+<p>Chain-of-Thought (CoT) prompting helps models think step by step. But naive CoT breaks down in visually grounded social tasks, where models must perceive, understand, and judge all at once; bridging perception with norm-grounded reasoning. Recent work has introduced structured reasoning for multi-turn agent planning and visual QA, decomposing tasks into sequential sub-goals. To extend this to single-shot multimodal social reasoning, we introduce Cognitive Chain-of-Thought (CoCoT), a reasoning framework that structures vision-language-model (VLM) reasoning through three cognitively inspired stages: Perception (extract grounded facts), Situation (infer situations), and Norm (applying social norms). Evaluation across multiple distinct tasks such as multimodal intent disambiguation, multimodal theory of mind, social commonsense reasoning, and safety instruction following, shows consistent improvements (5.9% to 4.6% on average). We further explore the utility of CoCoT for improving models&#x27; reasoning through training and show that supervised fine-tuning on CoCoT-structured traces yields 5-6% improvements without explicit CoCoT prompting at inference, demonstrating that models internalize the structured reasoning pattern rather than merely following instructions. We show that structuring model reasoning through cognitively grounded stages enhances interpretability and social alignment, laying the groundwork for more reliable multimodal systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2507.20409'>page</a> · <a href='https://arxiv.org/pdf/2507.20409'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Aligning Agentic World Models via Knowledgeable Experience Learning</title>
+      <link>https://arxiv.org/abs/2601.13247</link>
+      <guid isPermaLink="false">arxiv:2601.13247</guid>
+      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <category>cs.MM</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> U Edinburgh — (senior)</p>
+<p><b>Authors:</b> Baochang Ren, Yunzhi Yao, Rui Sun, Shuofei Qiao, Ningyu Zhang, Huajun Chen</p>
+<p>Current Large Language Models (LLMs) exhibit a critical modal disconnect: they possess vast semantic knowledge but lack the procedural grounding to respect the immutable laws of the physical world. Consequently, while these agents implicitly function as world models, their simulations often suffer from physical hallucinations-generating plans that are logically sound but physically unexecutable. Existing alignment strategies predominantly rely on resource-intensive training or fine-tuning, which attempt to compress dynamic environmental rules into static model parameters. However, such parametric encapsulation is inherently rigid, struggling to adapt to the open-ended variability of physical dynamics without continuous, costly retraining. To bridge this gap, we introduce WorldMind, a framework that autonomously constructs a symbolic World Knowledge Repository by synthesizing environmental feedback. Specifically, it unifies Process Experience to enforce physical feasibility via prediction errors and Goal Experience to guide task optimality through successful trajectories. Experiments on EB-ALFRED and EB-Habitat demonstrate that WorldMind achieves superior performance compared to baselines with remarkable cross-model and cross-environment transferability.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV, cs.LG, cs.MM · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2601.13247'>page</a> · <a href='https://arxiv.org/pdf/2601.13247'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Beyond Pixels: Visual Metaphor Transfer via Schema-Driven Agentic Reasoning</title>
+      <link>https://arxiv.org/abs/2602.01335</link>
+      <guid isPermaLink="false">arxiv:2602.01335</guid>
+      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Peking U — Yu Xu</p>
+<p><b>Authors:</b> Yu Xu, Yuxin Zhang, Lin Gao, Oliver Deussen, Tong-Yee Lee, Fan Tang</p>
+<p>A visual metaphor constitutes a high-order form of human creativity, employing cross-domain semantic fusion to transform abstract concepts into impactful visual rhetoric. Despite the remarkable progress of generative AI, existing models remain largely confined to pixel-level instruction alignment and surface-level appearance preservation, failing to capture the underlying abstract logic necessary for genuine metaphorical generation. To bridge this gap, we introduce the task of Visual Metaphor Transfer (VMT), which challenges models to autonomously decouple the &quot;creative essence&quot; from a reference image and re-materialize that abstract logic onto a user-specified target subject. We propose a cognitive-inspired, multi-agent framework that operationalizes Conceptual Blending Theory (CBT) through a novel Schema Grammar (&quot;G&quot;). This structured representation decouples relational invariants from specific visual entities, providing a rigorous foundation for cross-domain logic re-instantiation. Our pipeline executes VMT through a collaborative system of specialized agents: a perception agent that distills the reference into a schema, a transfer agent that maintains generic space invariance to discover apt carriers, a generation agent for high-fidelity synthesis and a hierarchical diagnostic agent that mimics a professional critic, performing closed-loop backtracking to identify and rectify errors across abstract logic, component selection, and prompt encoding. Extensive experiments and human evaluations demonstrate that our method significantly outperforms SOTA baselines in metaphor consistency, analogy appropriateness, and visual creativity, paving the way for automated high-impact creative applications in advertising and media. Project page with source code and self-contained skills is at https://yuci-gpt.github.io/Beyond-Pixels/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://arxiv.org/abs/2602.01335'>page</a> · <a href='https://arxiv.org/pdf/2602.01335'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Automated researchers can reliably mitigate alignment failures</title>
       <link>https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures</link>
@@ -2354,43 +2394,6 @@
 <p><b>Authors:</b> Maris Basha, Anja Zai, Sabine Stoll, Richard Hahnloser</p>
 <p>General-purpose audio representations aim to map acoustically variable instances of the same event to nearby points, resolving content identity in a zero-shot setting. Unlike supervised classification benchmarks that measure adaptability via parameter updates, we introduce VocSim, a training-free benchmark probing the intrinsic geometric alignment of frozen embeddings, with no parameters updated and no labels used (a label-free PCA whitening is fit per subset to correct anisotropy). VocSim aggregates 125k single-source clips from 19 corpora spanning human speech, animal vocalizations, and environmental sounds, isolating content representation from source separation (polyphonic mixtures are out of scope). We evaluate embeddings with Precision@k for local purity and the Global Separation Rate (GSR) for point-wise class separation, calibrated by lift over an empirical permutation baseline. A simple pipeline of frozen Whisper features, time-frequency pooling, and label-free PCA yields strong zero-shot performance with stable GSR rankings across domains (Kendall&#x27;s tau = 0.60). However, on blind low-resource speech (Shipibo-Conibo, Chintang), local retrieval collapses while remaining above chance, exposing a cross-lingual speech generalization gap. As external validation, our top embeddings predict avian perceptual similarity, improve bioacoustic classification, and achieve state-of-the-art on the HEAR benchmark. We release data, code, and a public leaderboard.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2512.10120'>page</a> · <a href='https://arxiv.org/pdf/2512.10120'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Uncovering Competency Gaps in Large Language Models and Their Benchmarks</title>
-      <link>https://arxiv.org/abs/2512.20638</link>
-      <guid isPermaLink="false">arxiv:2512.20638</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Maty Bohacek, Nino Scherrer, Nicholas Dufour, Thomas Leung, Christoph Bregler, Stephanie C. Y. Chan</p>
-<p>The evaluation of large language models relies heavily on standardized benchmarks. These benchmarks provide useful aggregated metrics, but can obscure (i) particular sub-areas where the models are weak (&quot;model gaps&quot;) and (ii) imbalanced coverage in the benchmarks themselves (&quot;benchmark gaps&quot;). To automatically uncover both types of gaps, we propose a simple new method using concept activations from sparse autoencoders, to identify fine-grained gaps on a per-concept basis. The method also benefits from grounding evaluation in the model&#x27;s internal representations, as well as easy comparison across benchmarks. We applied the method to five popular open-source models and more than a dozen benchmarks, as illustrative examples. As validation of the approach, we found that our automatic, unsupervised method was able to recover model gaps that have been previously documented in the literature (e.g. relating to sycophancy), in addition to identifying novel model gaps. We were also able to automatically uncover benchmark gaps: core concepts that should fall within the scope of a given benchmark. Our &quot;competency gaps&quot; method can be used to complement existing benchmarks, by providing a concept-level decomposition of model behavior, and by helping benchmark developers iterate upon benchmark design. Code is available at https://competency-gaps.github.io.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-29 · <a href='https://arxiv.org/abs/2512.20638'>page</a> · <a href='https://arxiv.org/pdf/2512.20638'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Safety Alignment of LMs via Non-cooperative Games</title>
-      <link>https://arxiv.org/abs/2512.20806</link>
-      <guid isPermaLink="false">arxiv:2512.20806</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Anselm Paulus, Ilia Kulikov, Brandon Amos, Rémi Munos, Ivan Evtimov, Kamalika Chaudhuri, Arman Zharmagambetov</p>
-<p>Ensuring the safety of language models (LMs) while maintaining their usefulness remains a critical challenge in AI alignment. Current approaches rely on sequential adversarial training: generating adversarial prompts and fine-tuning LMs to defend against them. We introduce a different paradigm: framing safety alignment as a non-zero-sum game between an Attacker LM and a Defender LM trained jointly via online reinforcement learning. Each LM continuously adapts to the other&#x27;s evolving strategies, driving iterative improvement. Our method uses a preference-based reward signal derived from pairwise comparisons instead of point-wise scores, providing more robust supervision and potentially reducing reward hacking. Our RL recipe, AdvGame, shifts the Pareto frontier of safety and utility, yielding a Defender LM that is simultaneously more helpful and more resilient to adversarial attacks. In addition, the resulting Attacker LM converges into a strong, general-purpose red-teaming agent that can be directly deployed to probe arbitrary target models. Code at github.com/facebookresearch/advgame.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2512.20806'>page</a> · <a href='https://arxiv.org/pdf/2512.20806'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Better Source, Better Flow: Learning Condition-Dependent Source Distribution for Flow Matching</title>
-      <link>https://arxiv.org/abs/2602.05951</link>
-      <guid isPermaLink="false">arxiv:2602.05951</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Seungryong Kim</p>
-<p><b>Authors:</b> Junwan Kim, Jiho Park, Seonghu Jeon, Seungryong Kim</p>
-<p>Flow matching has recently emerged as a promising alternative to diffusion-based generative models, particularly for text-to-image generation. Despite its flexibility in allowing arbitrary source distributions, most existing approaches rely on a standard Gaussian distribution, a choice inherited from diffusion models, and rarely consider the source distribution itself as an optimization target in such settings. In this work, we show that principled design of the source distribution is not only feasible but also beneficial at the scale of modern text-to-image systems. Specifically, we propose learning a condition-dependent source distribution under flow matching objective that better exploit rich conditioning signals. We identify key failure modes that arise when directly incorporating conditioning into the source, including distributional collapse and instability, and show that appropriate variance regularization and directional alignment between source and target are critical for stable and effective learning. We further analyze how the choice of target representation space impacts flow matching with structured sources, revealing regimes in which such designs are most effective. Extensive experiments across multiple text-to-image benchmarks demonstrate consistent and robust improvements, including up to a 3x faster convergence in FID, highlighting the practical benefits of a principled source distribution design for conditional flow matching.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-05-30 · <a href='https://arxiv.org/abs/2602.05951'>page</a> · <a href='https://arxiv.org/pdf/2602.05951'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
