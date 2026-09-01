@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 31 Aug 2026 10:19:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 09:03:45 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Mnemosyne: Agentic Transaction Processing for Validating and Repairing AI-generated Workflows</title>
+      <link>https://arxiv.org/abs/2607.00269</link>
+      <guid isPermaLink="false">arxiv:2607.00269</guid>
+      <pubDate>Tue, 01 Sep 2026 09:03:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Edward Y. Chang</p>
+<p><b>Authors:</b> Edward Y. Chang, Longling Geng</p>
+<p>LLMs increasingly generate workflow actions and repairs that may be well formed yet stale, infeasible, conflicting, or destructive of their own evidence. We introduce Agentic Transaction Processing (ATP), which treats generated actions as untrusted proposals until deterministic admission accepts them under an executable constraint set C. Its two-sided principle is: a proposal is not truth, and no proposal foresees every disruption. Anything may propose, but only the runtime admits and commits; unforeseen disruptions trigger bounded reactive repair whose output re-enters admission. Mnemosyne realizes ATP with an append-only transition log, effective-state projection, dependency-safe compensation, and active contract records. Under stated assumptions and relative to C, we prove four safety properties (authority separation, serial-equivalent generative admission, evidence-preserving repair, and obligation containment) and establish bounded reactive repair. Across nine safety benchmarks and a four-case Temporal SDK comparison, ATP rejects every targeted violation while admitting valid work. A matched data-size sweep measures 5.2-6.6% incremental throughput cost over the same local durable commit path and exposes local saturation. In a companion scheduling harness, local repair edits nearly an order of magnitude fewer operations than global recompute; a 12-scenario interruption stress test rejects every stale recovery candidate without losing observations or producing invalid commits. Two bounded pilots route 80 proposals from four heterogeneous LLMs through the same gate with zero invalid commits; 24 of 40 mid-execution proposals are admitted and 16 are rejected, including four explicit safety rejections.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-31 · <a href='https://arxiv.org/abs/2607.00269'>page</a> · <a href='https://arxiv.org/pdf/2607.00269'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling</title>
+      <link>https://huggingface.co/papers/2608.30821</link>
+      <guid isPermaLink="false">arxiv:2608.30821</guid>
+      <pubDate>Tue, 01 Sep 2026 09:03:45 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Minghan Qin, Yuang Wang, Xiuyu Yang, Yushi Long, Yujian Zhang, Ruihuan Wang, Kai Ye, Yangang Zhang, … <i>(+2 more)</i></p>
+<p>Composable scene modeling aims to recover a real indoor scene as complete, editable object assets arranged as observed, giving robot simulation and embodied AI a simulation-ready replica of the real environment whose objects can be manipulated individually. Existing pipelines decompose the task into three steps---parse the observations into instances, generate an asset for each, and place each asset back---but every step presumes an input that a cluttered capture rarely provides: accurate instance geometry, unoccluded views, and assets that accurately match the observations. We propose Lucida, which keeps this order but redistributes the requirements, so each step consumes only what a real capture reliably provides and precision is reached at the end of the pipeline rather than demanded at its start. Lucida parses the video into a scene graph whose nodes carry per-instance multi-view evidence, generates a complete asset for each instance from its evidence, and places assets with GizmoAct, a VLM policy that casts placement as multi-turn GUI interaction, manipulating the object&#x27;s gizmo in a closed loop and deciding itself when alignment is reached. Across scene-level 3D object detection, object pose estimation, and scene reconstruction, Lucida improves mAP over Boxer by 69% on R2S-Scene, raises ADD-SB@0.05 from 57.8% to 83.4% on CA-1M, and increases scene F-Score from 0.794 for SAM3D to 0.924.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-31 · <a href='https://huggingface.co/papers/2608.30821'>page</a> · <a href='https://arxiv.org/pdf/2608.30821'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Cognitive Chain-of-Thought (CoCoT): Structured Multimodal Reasoning about Social Situations</title>
       <link>https://arxiv.org/abs/2507.20409</link>
@@ -2369,31 +2391,6 @@
 <p><b>Authors:</b> Zhihao Wu, Gracia Gong, Qinglin Zhu, Yudong Chen, Runcong Zhao, Hugging Face Daily Papers (curated)</p>
 <p>Watermarking embeds statistical signatures in AI-generated text for detection and attribution. We reveal a fundamental vulnerability: when users access multiple models (today&#x27;s reality), watermarks trivially fail. Watermarks perturb output distributions away from the original, and in competitive markets, these perturbations are typically independent across providers. We theoretically prove that averaging output probability distributions recovers the unwatermarked distribution with up to a second-order error term. Empirically, simply averaging 3-5 models cancels out these perturbations. We introduce WASH (Watermark Attenuation via Statistical Hybridisation), which solves practical challenges in ensemble generation: vocabulary misalignment and tokenisation differences across heterogeneous models. Experiments across six watermarking schemes and three LLMs show that averaging across 3 models suppresses detection z-scores from 5-300 to below 2 (below the detection threshold of 4) and reduces TPR at 5% FPR to below 50%, while improving quality by 27.5% and running 6 times faster than the best baseline on the long sequence generation. Our results suggest that robust AI-text detection via watermarking requires either accepting this fundamental vulnerability or unprecedented coordination among model providers.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-05-28 · <a href='https://huggingface.co/papers/2605.30501'>page</a> · <a href='https://arxiv.org/pdf/2605.30501'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>StreamingVLM: Real-Time Understanding for Infinite Video Streams</title>
-      <link>https://arxiv.org/abs/2510.09608</link>
-      <guid isPermaLink="false">arxiv:2510.09608</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MIT — Song Han</p>
-<p><b>Authors:</b> Ruyi Xu, Guangxuan Xiao, Yukang Chen, Liuning He, Yao Lu, Song Han</p>
-<p>Vision-language models (VLMs) could power real-time assistants and autonomous agents, but they face a critical challenge: understanding near-infinite video streams without escalating latency and memory usage. Processing entire videos with full attention leads to quadratic computational costs and poor performance on long videos. Meanwhile, simple sliding window methods are also flawed, as they either break coherence or suffer from high latency due to redundant recomputation. In this paper, we introduce StreamingVLM, a model designed for real-time, stable understanding of infinite visual input. Our approach is a unified framework that aligns training with streaming inference. During inference, we maintain a compact KV cache by reusing states of attention sinks, a short window of recent vision tokens, and a long window of recent text tokens. This streaming ability is instilled via a simple supervised fine-tuning (SFT) strategy that applies full attention on short, overlapped video chunks, which effectively mimics the inference-time attention pattern without training on prohibitively long contexts. For evaluation, we build Inf-Streams-Eval, a new benchmark with videos averaging over two hours that requires dense, per-second alignment between frames and text. On Inf-Streams-Eval, StreamingVLM achieves a 66.18% win rate against GPT-4O mini and maintains stable, real-time performance at up to 8 FPS on a single NVIDIA H100. Notably, our SFT strategy also enhances general VQA abilities without any VQA-specific fine-tuning, improving performance on LongVideoBench by +4.30 and OVOBench Realtime by +5.96. Code is available at https://github.com/mit-han-lab/streaming-vlm.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2510.09608'>page</a> · <a href='https://arxiv.org/pdf/2510.09608'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>VocSim: A Training-free Benchmark for Zero-shot Content Identity in Single-source Audio</title>
-      <link>https://arxiv.org/abs/2512.10120</link>
-      <guid isPermaLink="false">arxiv:2512.10120</guid>
-      <pubDate>Tue, 02 Jun 2026 05:37:47 GMT</pubDate>
-      <category>cs.SD</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Richard Hahnloser</p>
-<p><b>Authors:</b> Maris Basha, Anja Zai, Sabine Stoll, Richard Hahnloser</p>
-<p>General-purpose audio representations aim to map acoustically variable instances of the same event to nearby points, resolving content identity in a zero-shot setting. Unlike supervised classification benchmarks that measure adaptability via parameter updates, we introduce VocSim, a training-free benchmark probing the intrinsic geometric alignment of frozen embeddings, with no parameters updated and no labels used (a label-free PCA whitening is fit per subset to correct anisotropy). VocSim aggregates 125k single-source clips from 19 corpora spanning human speech, animal vocalizations, and environmental sounds, isolating content representation from source separation (polyphonic mixtures are out of scope). We evaluate embeddings with Precision@k for local purity and the Global Separation Rate (GSR) for point-wise class separation, calibrated by lift over an empirical permutation baseline. A simple pipeline of frozen Whisper features, time-frequency pooling, and label-free PCA yields strong zero-shot performance with stable GSR rankings across domains (Kendall&#x27;s tau = 0.60). However, on blind low-resource speech (Shipibo-Conibo, Chintang), local retrieval collapses while remaining above chance, exposing a cross-lingual speech generalization gap. As external validation, our top embeddings predict avian perceptual similarity, improve bioacoustic classification, and achieve state-of-the-art on the HEAR benchmark. We release data, code, and a public leaderboard.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI · <b>arXiv submitted:</b> 2026-05-31 · <a href='https://arxiv.org/abs/2512.10120'>page</a> · <a href='https://arxiv.org/pdf/2512.10120'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
