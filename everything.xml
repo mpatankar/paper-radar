@@ -5,8 +5,215 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Thu, 03 Sep 2026 08:26:53 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 08:22:30 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Data Market Design through Deep Learning</title>
+      <link>https://arxiv.org/abs/2310.20096</link>
+      <guid isPermaLink="false">arxiv:2310.20096</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.GT</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — David C. Parkes</p>
+<p><b>Authors:</b> Sai Srivatsa Ravindranath, Yanchen Jiang, David C. Parkes</p>
+<p>The data market design problem is a problem in economic theory to find a set of signaling schemes (statistical experiments) to maximize expected revenue to the information seller, where each experiment reveals some of the information known to a seller and has a corresponding price [Bergemann et al., 2018]. Each buyer has their own decision to make in a world environment, and their subjective expected value for the information associated with a particular experiment comes from the improvement in this decision and depends on their prior and value for different outcomes. In a setting with multiple buyers, a buyer&#x27;s expected value for an experiment may also depend on the information sold to others [Bonatti et al., 2022]. We introduce the application of deep learning for the design of revenue-optimal data markets, looking to expand the frontiers of what can be understood and achieved. Relative to earlier work on deep learning for auction design [Dütting et al., 2023], we must learn signaling schemes rather than allocation rules and handle obedience constraints $-$ these arising from modeling the downstream actions of buyers $-$ in addition to incentive constraints on bids. Our experiments demonstrate that this new deep learning framework can almost precisely replicate all known solutions from theory, expand to more complex settings, and be used to establish the optimality of new designs for data markets and make conjectures in regard to the structure of optimal designs.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.GT, cs.AI · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://arxiv.org/abs/2310.20096'>page</a> · <a href='https://arxiv.org/pdf/2310.20096'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AgentRM: Enhancing Agent Generalization with Reward Modeling</title>
+      <link>https://arxiv.org/abs/2502.18407</link>
+      <guid isPermaLink="false">arxiv:2502.18407</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Maosong Sun</p>
+<p><b>Authors:</b> Yu Xia, Jingru Fan, Weize Chen, Siyu Yan, Xin Cong, Zhong Zhang, Yaxi Lu, Yankai Lin, … <i>(+2 more)</i></p>
+<p>Existing LLM-based agents have achieved strong performance on held-in tasks, but their generalizability to unseen tasks remains poor. Hence, some recent work focus on fine-tuning the policy model with more diverse tasks to improve the generalizability. In this work, we find that finetuning a reward model to guide the policy model is more robust than directly finetuning the policy model. Based on this finding, we propose AgentRM, a generalizable reward model, to guide the policy model for effective test-time search. We comprehensively investigate three approaches to construct the reward model, including explicit reward modeling, implicit reward modeling and LLM-as-a-judge. We then use AgentRM to guide the answer generation with Best-of-N sampling and step-level beam search. On four types of nine agent tasks, AgentRM enhances the base policy model by $8.8$ points on average, surpassing the top general agent by $4.0$. Moreover, it demonstrates weak-to-strong generalization, yielding greater improvement of $12.6$ on LLaMA-3-70B policy model. As for the specializability, AgentRM can also boost a finetuned policy model and outperform the top specialized agent by $11.4$ on three held-in tasks. Further analysis verifies its effectiveness in test-time scaling. Codes will be released to facilitate the research in this area.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://arxiv.org/abs/2502.18407'>page</a> · <a href='https://arxiv.org/pdf/2502.18407'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RECAST: Expanding the Boundaries of LLMs&#x27; Complex Instruction Following with Multi-Constraint Data</title>
+      <link>https://arxiv.org/abs/2505.19030</link>
+      <guid isPermaLink="false">arxiv:2505.19030</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Zhengkang Guo, Wenhao Liu, Mingchen Xie, Jingwen Xu, Zisu Huang, Muzhao Tian, Jianhan Xu, Yuanzhe Shen, … <i>(+8 more)</i></p>
+<p>Large language models (LLMs) are increasingly expected to tackle complex tasks, driven by their expanding applications and users&#x27; growing proficiency in crafting sophisticated prompts. However, as the number of explicitly stated requirements increases (particularly more than 10 constraints), LLMs often struggle to accurately follow such complex instructions, which limits their applicability in complex real-world scenarios. To the best of our knowledge, existing datasets do not exceed 10 constraints per instance. To address this challenge, we propose RECAST, an efficient and scalable framework for synthesizing datasets where each example incorporates far more constraints than those in existing benchmarks, aiming to challenge and extend the boundaries of models&#x27; ability to follow complex instructions. These constraints are extracted from real-world prompt-response pairs to ensure practical relevance. Using this framework, we construct RECAST-30K, a large-scale, high-quality dataset comprising 30k instances spanning 19 constraint types. Experimental results demonstrate that models finetuned on RECAST-30K substantially improve in following complex instructions while maintaining their general capabilities without degradation. Moreover, RECAST enables automatic verification of constraint satisfaction via rule-based validators for quantitative constraints and LLM-based validators for qualitative ones; the verifiability provided by RECAST enables the design of reward functions for reinforcement learning, which further boosts model performance on complex and challenging tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://arxiv.org/abs/2505.19030'>page</a> · <a href='https://arxiv.org/pdf/2505.19030'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Medical Reasoning in the Era of LLMs: A Systematic Review of Enhancement Techniques and Applications</title>
+      <link>https://arxiv.org/abs/2508.00669</link>
+      <guid isPermaLink="false">arxiv:2508.00669</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua, U Edinburgh — Zizhan Ma</p>
+<p><b>Authors:</b> Zizhan Ma, Wenxuan Wang, Meidan Ding, Shiyi Zheng, Shengyuan Liu, Jie Liu, Jiaming Ji, Linlin Shen, … <i>(+2 more)</i></p>
+<p>The proliferation of Large Language Models (LLMs) in medicine has enabled impressive capabilities, yet a critical gap remains in their ability to perform systematic, transparent, and verifiable reasoning, a cornerstone of clinical practice. This has catalyzed a shift from single-step answer generation to the development of LLMs explicitly designed for medical reasoning. This paper provides the first systematic review of this emerging field. We propose a taxonomy of reasoning enhancement techniques, categorized into training-time strategies (e.g., supervised fine-tuning, reinforcement learning) and test-time mechanisms (e.g., prompt engineering, multi-agent systems). We analyze how these techniques are applied across different data modalities (text, image, code) and in key clinical applications such as diagnosis, education, and treatment planning. Furthermore, we survey the evolution of evaluation benchmarks from simple accuracy metrics to sophisticated assessments of reasoning quality and visual interpretability. Based on an analysis of 60 seminal studies from 2022-2025, we conclude by identifying critical challenges, including the faithfulness-plausibility gap and the need for native multimodal reasoning, and outlining future directions toward building efficient, robust, and sociotechnically responsible medical AI.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://arxiv.org/abs/2508.00669'>page</a> · <a href='https://arxiv.org/pdf/2508.00669'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Decentralized Vision-Based Autonomous Aerial Wildlife Monitoring</title>
+      <link>https://arxiv.org/abs/2508.15038</link>
+      <guid isPermaLink="false">arxiv:2508.15038</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.MA</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, MIT — Daniela Rus</p>
+<p><b>Authors:</b> Makram Chahine, William Yang, Alaa Maalouf, Justin Siriska, Ninad Jadhav, Daniel Vogt, Stephanie Gil, Robert Wood, … <i>(+1 more)</i></p>
+<p>Wildlife field operations demand efficient parallel deployment methods to identify and interact with specific individuals, enabling simultaneous collective behavioral analysis, and health and safety interventions. Previous robotics solutions approach the problem from the herd perspective, or are manually operated and limited in scale. We propose a decentralized vision-based multi-quadrotor system for wildlife monitoring that is scalable, low-bandwidth, and sensor-minimal (single onboard RGB camera). Our approach enables robust identification and tracking of large species in their natural habitat. We develop novel vision-based coordination and tracking algorithms designed for dynamic, unstructured environments without reliance on centralized communication or control. We validate our system through real-world experiments, demonstrating reliable deployment in diverse field conditions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.MA · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://arxiv.org/abs/2508.15038'>page</a> · <a href='https://arxiv.org/pdf/2508.15038'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EasySteer: A Unified Framework for High-Performance and Extensible LLM Steering</title>
+      <link>https://arxiv.org/abs/2509.25175</link>
+      <guid isPermaLink="false">arxiv:2509.25175</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
+<p><b>Authors:</b> Haolei Xu, Xinyu Mei, Yuchen Yan, Rui Zhou, Wenqi Zhang, Weiming Lu, Yueting Zhuang, Yongliang Shen</p>
+<p>Large language model (LLM) steering has emerged as a promising paradigm for controlling model behavior at inference time through targeted manipulation of hidden states, offering a lightweight alternative to expensive retraining. However, existing steering frameworks suffer from critical limitations: computational inefficiency, limited extensibility, and restricted functionality that hinder both research progress and practical deployment. We present EasySteer, a unified framework for high-performance, extensible LLM steering built on vLLM. Our system features modular architecture with pluggable interfaces for both analysis-based and learning-based methods, fine-grained parameter control, pre-computed steering vectors for eight application domains, and an interactive demonstration system. Through deep integration with vLLM&#x27;s optimized inference engine, EasySteer achieves 10.8-22.3$\times$ speedup over existing frameworks. Extensive experiments demonstrate its effectiveness in overthinking mitigation, hallucination reduction, and other key applications. EasySteer transforms steering from research technique to production-ready capability, establishing critical infrastructure for deployable, controllable language models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://arxiv.org/abs/2509.25175'>page</a> · <a href='https://arxiv.org/pdf/2509.25175'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GPT-6 Astra: A new generation of intelligence</title>
+      <link>https://openai.com/index/gpt-6-astra/</link>
+      <guid isPermaLink="false">openai:c59c597501</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
+<p><b>Authors:</b> OpenAI</p>
+<p>Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/gpt-6-astra/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Introducing WeatherNext 3, our most advanced and accurate global weather AI model</title>
+      <link>https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/</link>
+      <guid isPermaLink="false">deepmind:56da2c8ef8</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>The ancient anaerobic pathways still at work inside our cells</title>
+      <link>https://arcinstitute.org/news/ancient-anaerobic-pathways</link>
+      <guid isPermaLink="false">arc_institute:54182da143</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>blog</category>
+      <category>biology</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Arc Institute</p>
+<p><b>Authors:</b> Arc Institute</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, biology · <a href='https://arcinstitute.org/news/ancient-anaerobic-pathways'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?</title>
+      <link>https://huggingface.co/papers/2609.01437</link>
+      <guid isPermaLink="false">arxiv:2609.01437</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuhao Wu, Jingyuan Zhang, Jiajun Shi, Xinping Lei, Qingshui Gu, Yuxuan Zhang, Zexuan Wang, Chen He, … <i>(+12 more)</i></p>
+<p>As agents move from research prototypes to deployed tools, their capability increasingly depends on model-external execution infrastructure, commonly termed the agent harness. Changing this harness while holding model weights fixed can substantially alter task performance. Current agent evaluations typically report downstream performance under a chosen harness, leaving a model&#x27;s ability to develop the harness itself comparatively underexplored. We introduce HarnessDev, a benchmark that shifts the unit of evaluation from task outputs to runnable infrastructure. HarnessDev covers two stages. In Creation, the agent starts from a minimal seed and a small number of cases, then builds a complete execution system. In Evolution, it starts from its own created harness and iteratively revises it using downstream execution feedback, with the goal of improving benchmark performance. We then evaluate each constructed harness on capability (task success on held-out benchmarks) and efficiency (execution-token cost). The reported Creation results cover six creator LLMs, four domains, and five downstream benchmarks totaling 2,207 unique downstream instances, with hidden evaluation tasks withheld from development. We find that generated harnesses remain substantially behind mature human-engineered references on code and on search and research, while matching or exceeding the selected references on writing and machine-learning experimentation, with large variation in execution cost. Evolution produces some performance gains, but they are unstable and transfer only partially to held-out tasks. Experiments with a fixed runtime model further show that the gains depend strongly on the model executing the harness, indicating limited transfer across models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-01 · <a href='https://huggingface.co/papers/2609.01437'>page</a> · <a href='https://arxiv.org/pdf/2609.01437'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Aspire: Can Models Self-Evolve from Vague Goals?</title>
+      <link>https://huggingface.co/papers/2608.31111</link>
+      <guid isPermaLink="false">arxiv:2608.31111</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuhao Wu, Jingyuan Zhang, Jiajun Shi, Yuxuan Zhang, Xinping Lei, Junting Zhou, Zexuan Wang, Yuchen Wu, … <i>(+14 more)</i></p>
+<p>Many important forms of human learning begin with a vague goal, such as &quot;become a better physicist&quot; or &quot;improve at research.&quot; Learners must interpret the goal, identify capability gaps, decide how to learn, and determine whether they have actually improved. In contrast, existing work on LLM self-evolution typically begins with tasks and evaluation metrics specified by humans, reducing self-evolution to optimizing an explicit objective rather than deciding what and how to learn. We introduce ASPIRE, a benchmark for vague-goal-driven self-evolution. ASPIRE provides only a natural-language capability goal while downstream evaluation tasks remain hidden. The agent must operationalize the goal by choosing data and update methods, constructing training and validation signals, and deciding when to evaluate. ASPIRE supports both model-weight and agent-harness evolution in a unified interactive environment and evaluates the resulting systems on a hidden, expert-authored set of 520 items spanning six goals. Our experiments show that vague goals redirect search effort toward goal interpretation. Current agents routinely complete training and harness-editing loops, but weight-level gains remain sparse and unstable, and the strongest evolved harness remains below the engineered Qwen-Agent reference. Agents often train on mismatched data and trust narrow self-evaluations, so local gains fail to transfer to hidden evaluation and continued search and training can erase earlier improvements.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-31 · <a href='https://huggingface.co/papers/2608.31111'>page</a> · <a href='https://arxiv.org/pdf/2608.31111'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes</title>
+      <link>https://huggingface.co/papers/2609.03796</link>
+      <guid isPermaLink="false">arxiv:2609.03796</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chuyan Chen, Haoxing Chen, Kun Chen, Zhenglin Cheng, Long Cui, Ruishan Fang, Zhangxuan Gu, Zhicheng Huang, … <i>(+23 more)</i></p>
+<p>We introduce LLaDA-Image, a unified framework that pairs a 6B Diffusion Transformer (DiT) trained from scratch with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion language model backbone. Instead of relying heavily on paired image-text data from the beginning, we first build a strong visual generative prior through image-only pre-training and mid-training. The generation pipeline comprises 220M samples, 98 of which are real images. For efficient and scalable optimization, we use parameter-free RMSNorm throughout the DiT together with the Muon optimizer. The resulting unified model produces highly photorealistic images while accurately following fine-grained editing instructions. We further distill LLaDA-Image into LLaDA-Image-Turbo, enabling fast inference in 2-4 sampling steps. On Qwen-Image-Bench, LLaDA-Image achieves overall scores of 53.53 and 53.38 on the English and Chinese tracks, respectively, setting a new state-of-the-art among open-source models on both tracks. To support further research on capable and efficient generative models, we release our model weights, training code, and detailed recipes.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.03796'>page</a> · <a href='https://arxiv.org/pdf/2609.03796'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LatentPress: Context Compression Beyond Text and Vision</title>
+      <link>https://huggingface.co/papers/2609.01507</link>
+      <guid isPermaLink="false">arxiv:2609.01507</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhengze Zhou, Hejian Sang, Hugging Face Daily Papers (curated)</p>
+<p>Compressed context is usually carried as human-readable text or as rendered images that must be decoded, even when its consumer is a language model. We introduce LatentPress, which writes conversational histories and long documents into a third representation: continuous memory tokens that a frozen decoder reads directly through its input-embedding interface, with no text reconstruction at inference. A small reader-matched writer compresses 4-16times while training only an adapter (4.2M-26.2M parameters, sim!0.1% of the decoder). On LongMemEval, LatentPress reaches 0.504 accuracy at 7.70times compression versus 0.490 for uncompressed evidence, outperforming text summaries (0.184) and OCR-based compression (0.426 to 0.312). On LongBench-QA, in-domain writers match or exceed raw-context reading at 4-8times compression, while 16times trails raw. Writing takes 43ms per conversation, roughly an order of magnitude faster than text summarization or OCR reconstruction, and reading is 5-9times faster than raw context or cached OCR. We validate the interface under two transfer settings, zero-shot from UltraChat to LongMemEval memory QA and from LongMemEval-derived QA to unseen LongBench document domains, establishing direct soft tokens as a practical machine-facing context interface beyond text and vision. The implementation of the experiments could be found at: https://github.com/xuyd16ai/context_softtoken_compress .</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-01 · <a href='https://huggingface.co/papers/2609.01507'>page</a> · <a href='https://arxiv.org/pdf/2609.01507'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Language Models Can Control Their Own Attention</title>
+      <link>https://huggingface.co/papers/2609.02737</link>
+      <guid isPermaLink="false">arxiv:2609.02737</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Namgyu Ho, Huzama Ahmad, Woosung Koh, Se-Young Yun, Tal Schuster, Cicero Nogueira dos Santos, Hugging Face Daily Papers (curated)</p>
+<p>Language models spend most of their attention on a small fraction of context, yet they read the entire KV cache to find the few tokens that matter. If the user asks about a previous detail in a 1M-token conversation, global attention layers must scan the full context to generate each token of the reply. A prominent approach mitigates this cost by pre-selecting relevant tokens via lightweight proxy scores, but this extrinsic scoring still incurs O(N) per step. We take an intrinsic approach motivated by the simple question: wouldn&#x27;t the model already know which parts of the context are relevant? To this end, we introduce Declarative Attention (DA), a protocol that elicits the model to declare where it needs to attend within its chain-of-thought, partitioning generation into three modes: &lt;global&gt; (full context), &lt;focus&gt; (a specific region), and &lt;local&gt; (recent output only). The inference engine parses these declarations like tool calls and skips most of the KV cache read. Under zero-shot evaluation across 15 long-context tasks, DA on off-the-shelf models (Gemma-4-31B, Qwen-3.6-27B) significantly reduces total attended tokens during decoding (52.0%, 31.1%) with modest accuracy drops (1.27pp, 2.75pp) that shrink with model scale. DA unlocks a new axis of sparse attention, with further potential under training-based methods that future work can explore.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://huggingface.co/papers/2609.02737'>page</a> · <a href='https://arxiv.org/pdf/2609.02737'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM</title>
+      <link>https://huggingface.co/papers/2609.04098</link>
+      <guid isPermaLink="false">arxiv:2609.04098</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Sergii Kozyrev, Davyd Maiboroda, Hugging Face Daily Papers (curated)</p>
+<p>Hybrid LLMs pair softmax attention with linear-attention layers such as Gated DeltaNet (GDN), whose recurrent state summarizes the context in fixed size. Early community 4-bit quantizations of Qwen3.8-27B (48 GDN layers, 16 attention layers) left the GDN block in 8- or 16-bit precision -- especially its decay and write-strength gates -- on the intuition that errors in a recurrence accumulate over long contexts. We test that intuition by building Minima: NVFP4 W4A4 on all 496 linear layers, GDN included. Across perplexity at 4K/32K, MMLU-Pro, GSM8K, AIME&#x27;25, GPQA-Diamond, LiveCodeBench, and RULER retrieval to 64K, Minima matches BF16 within seed noise (5-task average -0.52) while being the smallest (17.5 GiB) and fastest-prefill (+14-19%) recipe we compare, and its 32K perplexity gap shrinks with position. A four-part mechanism study explains why: (i) NVFP4&#x27;s 16-element block scaling localizes the residual stream&#x27;s extreme outliers, equalizing activation error across layer roles; (ii) the supposedly fragile gate projections are the least sensitive -- softplus/exponential and sigmoid parameterizations compress ~11% GEMM error to ~2% output error; (iii) the delta-rule recurrence holds injected noise at a flat plateau over 32K tokens and forgets a state impulse within hundreds of steps, because each write overwrites the state along the current key direction; (iv) the per-token quantization cost washes out with context instead of compounding. We also repair a global-scale mismatch that arises when per-module-calibrated NVFP4 checkpoints are served by kernels that fuse those modules into one GEMM, and show calibrated FP8 KV-cache scales are performance-free. The result: a practical recipe -- quantize everything, ship KV scales -- and a mechanistic account of why the recurrent half of a hybrid LLM is the easy half to quantize. Checkpoint: https://huggingface.co/minima-ai/mnma_qwen3.8_27b_nvfp4</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.04098'>page</a> · <a href='https://arxiv.org/pdf/2609.04098'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning</title>
+      <link>https://huggingface.co/papers/2609.03430</link>
+      <guid isPermaLink="false">arxiv:2609.03430</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Heng Wang, Jielin Qiu, Wenting Zhao, Cheng Qian, Liangwei Yang, Jiawei Han, Heng Ji, Silvio Savarese, … <i>(+3 more)</i></p>
+<p>Large language models achieve superior performance on tasks that require extended reasoning, but long chains of thought make the KV cache a severe memory bottleneck. Existing KV cache compression methods share one paradigm: score each cached token by some estimate of how much it will matter later, and keep the top-scoring ones. We show that the selection signal contributes almost nothing. Random Attention keeps the prompt and evicts uniformly at random within each attention head, computing no score at all; across four models and six reasoning tasks it matches the strongest prior evictor while serving 32-43% higher throughput than it in vLLM deployment. Controlled experiments explain this by showing that 1) the prompt is the fragile part of the cache, and most of the gap between selectors is just whether their selection signal happened to keep it; 2) the reasoning trace protects itself against eviction with redundancy at two levels, in the text (the model restates what it still needs as it works) and across attention heads (each keeps its own copy of the trace), so once the prompt is safe, a random draw retains enough copies of what the model still needs, and no score is required to pick them. Our code is publicly available at https://github.com/SalesforceAIResearch/Random-Attention.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.03430'>page</a> · <a href='https://arxiv.org/pdf/2609.03430'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rethinking On-Policy Distillation of Large Language Models II: One Training Example</title>
+      <link>https://huggingface.co/papers/2609.04172</link>
+      <guid isPermaLink="false">arxiv:2609.04172</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zixuan Fu, Bingxiang He, Yuxin Zuo, Haohuan Huang, Jinqian Zhang, Ruhang Xiao, Cheng Qian, Qinyu Luo, … <i>(+6 more)</i></p>
+<p>On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of training data unclear. We examine this role at the data-minimal limit by training on a single query. One-shot OPD keeps improving for hundreds of steps and recovers most of full-data OPD&#x27;s gain across task domains and model families. We explain this result through the states visited during training and the rate at which the student aligns with the teacher. We measure state coverage, the fraction of the states full-data OPD visits that a query set&#x27;s rollouts reach. A single query already reaches \(71.5\%\), most of it within the first 100 steps. Adding semantically distinct queries raises coverage and validation accuracy together, until 16 queries reach \(98.9\%\) and match full-data training. Yet alignment slows at a similar pace whether OPD trains on one query or the whole dataset, and even a fixed set of states takes hundreds of steps to absorb. OPD is therefore data-overfed but algorithm-starved. Its rollouts quickly expose broad supervision, while the student absorbs that supervision increasingly slowly. The state-coverage result extends to multi-teacher OPD, where 16 semantically diverse queries per domain match full-data MOPD. As a further stress test, content-light templates and off-domain WildChat queries also approach the real-query baseline. Task content and induced state coverage can therefore come apart. We hope these findings direct future work toward the step efficiency of OPD, and prompt a re-examination of the data and the mechanisms behind its recent successes in frontier post-training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.04172'>page</a> · <a href='https://arxiv.org/pdf/2609.04172'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Figure and Nscale Sign Strategic Partnership For Up to 100,000 GPUs on the NVIDIA Vera Rubin Platform</title>
+      <link>https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership</link>
+      <guid isPermaLink="false">figure_ai:6515ef54a0</guid>
+      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
+      <category>blog</category>
+      <category>robotics</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
+<p><b>Authors:</b> Figure AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Proactive cyber defense for governments and enterprises</title>
       <link>https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/</link>
@@ -2092,213 +2299,6 @@
 <p><b>Authors:</b> Tao Zhang, Ziqi Zhang, Zongyang Ma, Yuxin Chen, Zhongang Qi, Chunfeng Yuan, Bing Li, Junfu Pu, … <i>(+5 more)</i></p>
 <p>Advanced Multimodal Large Language Models (MLLMs) struggle with recent Knowledge-based Visual Question Answering (VQA) tasks, such as INFOSEEK and Encyclopedic-VQA, due to their limited and frozen knowledge scope, often leading to ambiguous and inaccurate responses. Thus, multimodal Retrieval-Augmented Generation (mRAG) is naturally introduced to provide MLLMs with comprehensive and up-to-date knowledge, effectively expanding the knowledge scope. However, current mRAG methods have inherent drawbacks, including: 1) Performing retrieval even when external knowledge is not needed. 2) Lacking of identification of evidence that supports the query. 3) Increasing model complexity due to additional information filtering modules or rules. To address these shortcomings, we propose a novel generalized framework called \textbf{m}ultimodal \textbf{R}etrieval-\textbf{R}eflection-\textbf{A}ugmented \textbf{G}eneration (mR$^2$AG), which achieves adaptive retrieval and useful information localization to enable answers through two easy-to-implement reflection operations, preventing high model complexity. In mR$^2$AG, Retrieval-Reflection is designed to distinguish different user queries and avoids redundant retrieval calls, and Relevance-Reflection is introduced to guide the MLLM in locating beneficial evidence of the retrieved content and generating answers accordingly. In addition, mR$^2$AG can be integrated into any well-trained MLLM with efficient fine-tuning on the proposed mR$^2$AG Instruction-Tuning dataset (mR$^2$AG-IT). mR$^2$AG significantly outperforms state-of-the-art MLLMs (e.g., GPT-4o) and mRAG-based MLLMs on INFOSEEK and Encyclopedic-VQA, while maintaining the exceptional capabilities of base MLLMs across a wide range of Visual-dependent tasks.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-08-17 · <a href='https://arxiv.org/abs/2411.15041'>page</a> · <a href='https://arxiv.org/pdf/2411.15041'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Rethinking Token-wise Feature Caching: Accelerating Diffusion Transformers with Dual Feature Caching</title>
-      <link>https://arxiv.org/abs/2412.18911</link>
-      <guid isPermaLink="false">arxiv:2412.18911</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Technion — (senior)</p>
-<p><b>Authors:</b> Chang Zou, Shikang Zheng, Evelyn Zhang, Runlin Guo, Haohang Xu, Zhengyi Shi, Conghui He, Xuming Hu, … <i>(+1 more)</i></p>
-<p>Diffusion Transformers (DiT) have become the dominant methods in image and video generation yet still suffer substantial computational costs. As an effective approach for DiT acceleration, feature caching methods are designed to cache the features of DiT in previous timesteps and reuse them in the next timesteps, allowing us to skip the computation in the next timesteps. Among them, token-wise feature caching has been introduced to perform different caching ratios for different tokens in DiTs, aiming to skip the computation for unimportant tokens while still computing the important ones. In this paper, we propose to carefully check the effectiveness in token-wise feature caching with the following two questions: (1) Is it really necessary to compute the so-called &quot;important&quot; tokens in each step? (2) Are so-called important tokens really important? Surprisingly, this paper gives some counter-intuition answers, demonstrating that consistently computing the selected ``important tokens&#x27;&#x27; in all steps is not necessary. The selection of the so-called ``important tokens&#x27;&#x27; is often ineffective, and even sometimes shows inferior performance than random selection. Based on these observations, this paper introduces dual feature caching referred to as DuCa, which performs aggressive caching strategy and conservative caching strategy iteratively and selects the tokens for computing randomly. Extensive experimental results demonstrate the effectiveness of our method in DiT, PixArt, FLUX, and OpenSora, demonstrating significant improvements than the previous token-wise feature caching.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-08-15 · <a href='https://arxiv.org/abs/2412.18911'>page</a> · <a href='https://arxiv.org/pdf/2412.18911'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>From Prompts to Constructs: A Dual-Validity Framework for Large Language Model Research in Psychology</title>
-      <link>https://arxiv.org/abs/2506.16697</link>
-      <guid isPermaLink="false">arxiv:2506.16697</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.CY</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.HC</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Zhicheng Lin</p>
-<p><b>Authors:</b> Zhicheng Lin</p>
-<p>Large language models (LLMs) are entering psychological research both as tools and as objects of inquiry. Yet many studies apply human instruments to LLMs without establishing that the outputs are reliable or interpretable, raising the risk of measurement phantoms--statistical regularities mistaken for genuine psychological phenomena. This review argues that robust AI psychological research requires integrating two methodological traditions: psychometric validation of what a score means and causal inference standards for what the results warrant. It develops a dual-validity framework in which evidentiary demands scale with scientific ambition: from tool use through behavioral characterization and human simulation to cognitive modeling. Classifying text may require only accuracy and reliability; claiming that an LLM simulates anxiety or illuminates cognitive mechanisms requires additional evidence, including construct validity evidence and experimental controls. Progress depends on developing computational analogs of psychological constructs rather than assuming human measures automatically apply to language models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.AI, cs.CL, cs.HC · <b>arXiv submitted:</b> 2026-08-15 · <a href='https://arxiv.org/abs/2506.16697'>page</a> · <a href='https://arxiv.org/pdf/2506.16697'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>John Pluvinage on a new vitamin B12 transport disorder</title>
-      <link>https://arcinstitute.org/news/john-pluvinage-abcd</link>
-      <guid isPermaLink="false">arc_institute:403383ca05</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>blog</category>
-      <category>biology</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Arc Institute</p>
-<p><b>Authors:</b> Arc Institute</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, biology · <a href='https://arcinstitute.org/news/john-pluvinage-abcd'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination</title>
-      <link>https://huggingface.co/papers/2608.14391</link>
-      <guid isPermaLink="false">arxiv:2608.14391</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shuo Liang, Yixing Ma, Pengfei Zhou, Xingyan Chen, Zihan Mei, Manting Li, Feihan Chen, Zhiwen Wang, … <i>(+28 more)</i></p>
-<p>Recent video generators can fabricate realistic depictions of wars, disasters, public emergencies, and other real-world crises, creating substantial risks of misinformation. Existing benchmarks, however, provide limited evidence on detector and generator behavior in such settings, including how detectability varies with generation conditions, how people perceive generated videos, and whether detectors remain reliable during social dissemination. To address this gap, we introduce RA-Bench, a benchmark for AI-generated video detection that uses Real videos as Anchors. RA-Bench contains 17,886 videos, comprising 1,830 real-video anchors across 10 social-risk categories and 16,056 generated clips from four open-source and five closed-source generators. Based on RA-Bench, we organize our evaluation along three dimensions. We first assess detector generalization across seven traditional detectors, ten zero-shot multimodal models under three review settings, and two MLLMs specifically fine-tuned on AI-generated video detection. Across these methods, none of the three detector families generalizes consistently across RA-Bench instances. We then examine how detectability varies with generation quality, conditioning information, and sampling seeds. These analyses show that generation properties affect detector families differently, while source-level detection patterns remain stable across seeds. Finally, we study human authenticity judgments and detector reliability during social dissemination. We find that videos that mislead people are also difficult for current detectors, and that social dissemination makes detection harder. Together, these findings show that current methods struggle to detect realistic AI-generated videos, highlighting the need for detectors robust to evolving video generators.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-14 · <a href='https://huggingface.co/papers/2608.14391'>page</a> · <a href='https://arxiv.org/pdf/2608.14391'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Self-Supervised Visual On-Policy Distillation</title>
-      <link>https://huggingface.co/papers/2608.14144</link>
-      <guid isPermaLink="false">arxiv:2608.14144</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yijiang Li, Yijun Liang, Yunjie Tian, Bingyang Wang, Ke Zhang, Zhenfei Yin, Di Fu, Philip Torr, … <i>(+2 more)</i></p>
-<p>Visual on-policy distillation relies heavily on an informative teacher-student asymmetry, through either a larger, stronger teacher or privileged supervision, such as reference answers or ground-truth regions of interest. This raises a fundamental question: where can informative asymmetry come from when nothing privileged is available? We answer this by inverting where the asymmetry comes from. Rather than adding privileged information to the teacher, we subtract information from the student. This asymmetry creates the same effective learning signal for free as a teacher with access to information unavailable to the student, without ground-truth annotations, rewards, or a separate stronger teacher model. Building on this principle, we introduce Self-Supervised Visual On-Policy Distillation (S^2VOPD), a simple yet effective method that constructs on-policy learning signals from asymmetric augmented views. S^2VOPD distills the teacher&#x27;s distribution conditioned on the original image on-policy into the student distribution conditioned on a strongly augmented view of the same image. We systematically explore a broad design space of visual augmentations and uncover that (1) asymmetry matters: all four augmentation families improve performance, while symmetric self-distillation degrades it; (2) strength matters: performance peaks at a moderate strength; and (3) the gap must remain task-consistent: augmentations that completely remove the question-relevant evidence can induce large but uninformative discrepancies. Across six fine-grained perception benchmarks, S^2VOPD improves Qwen3.5-4B from 70.7% to 77.4%, above all open-source models compared, up to Qwen3-VL at 235B, and surpasses GPT-5.4. While holding training data the same, it recovers 96% of the improvement achieved by methods with privileged information. Website is at https://williamium3000.github.io/s2vopd</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-14 · <a href='https://huggingface.co/papers/2608.14144'>page</a> · <a href='https://arxiv.org/pdf/2608.14144'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development</title>
-      <link>https://huggingface.co/papers/2608.13417</link>
-      <guid isPermaLink="false">arxiv:2608.13417</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yiwei Li, Wanli Yang, Hexiang Tan, Xiangzhou Huang, Zhengyu Chen, Ziran Li, Borun Chen, Shanglin Lei, … <i>(+6 more)</i></p>
-<p>Autonomous agents are increasingly capable of improving models, systems, and other technical artifacts through long-horizon experimentation. To understand the current state of this capability, however, evaluation must go beyond final scores, which neither reveal where progress is gained or lost nor indicate whether accumulated experience improves later decisions. We therefore present a systematic evaluation of seven frontier models on 36 long-horizon tasks based on a new framework that uses rule-based metrics to characterize within-run behavior through Solution Framing, Execution, and Feedback Control and controlled comparisons to assess experience reuse within and across tasks. The results show that current agents operate more like engineering optimizers than fully autonomous researchers: they can formulate and implement practical solutions, but their performance varies substantially across runs, their strongest solutions mainly adapt or combine established techniques, and genuine methodological novelty remains rare. Detailed analysis reveals that observed performance is shaped by multiple factors, including distinct process bottlenecks behind similar final outcomes, experience reuse that can help or mislead subsequent decisions, and harness designs that affect performance stability. These findings suggest concrete directions for improving model training, inference-time strategies, experience management, and harness design.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.13417'>page</a> · <a href='https://arxiv.org/pdf/2608.13417'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?</title>
-      <link>https://huggingface.co/papers/2608.15265</link>
-      <guid isPermaLink="false">arxiv:2608.15265</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yansong Ning, Jingwen Ye, Zhongkai Wu, Yang Sun, Yiqin Zhu, Xingyi Li, Weidong Zhang, Hao Liu, … <i>(+1 more)</i></p>
-<p>Constructing an interactive 3D open world from a user query is important. However, existing methods are primarily evaluated on idealized, simple queries, making it difficult to systematically analyze and compare how multimodal agents understand user intent, use 3D tools, and reason over textual and visual 3D world information. To this end, we propose VibeWorlding, a unified framework for benchmarking and training vibe worlding agents: a multimodal agent that can autonomously infer user intent, plan scene layout, invoke 3D tools, and reflect on the multimodal feedback in a multi-turn agent-environment interaction process. To achieve this, we first build VWE-BENCH, a benchmark of 2,616 high-quality 3D assets, 323 human-annotated seed 3D worlds, and 6,828 reverse-synthesized multimodal user queries, split into verified queries with ground-truth and unverified queries with carefully designed rubrics. Moreover, we develop VibeWorlding-Gym, a joint multimodal RL post-training framework that integrates (1) a sandbox environment unifying asset retrieval, editing, and image rendering as MCP tools, and (2) a rubric-based verifier that combines physical feasibility and intent fulfillment verification, supporting both fair model evaluation and scalable multimodal RL reward service. Our experiments show that current frontier MLLMs are far from solving the vibe worlding agent task, with even GPT-5.5 and Qwen3.8-Max reaching below 60% success rate, and trace the bottleneck to precise 3D world editing. We further find that RL training can ease this weakness and enable open-source MLLMs to even surpass closed-source frontiers: our VibeWorlder-8B is comparable to frontier MLLMs, while our flagship VibeWorlder-30B-A3B attains the best overall Pass@1 among all evaluated models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-15 · <a href='https://huggingface.co/papers/2608.15265'>page</a> · <a href='https://arxiv.org/pdf/2608.15265'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Apodex Discovery: Reality Benchmarks and Environments for Evaluating and Building Discoverative Artificial Intelligence</title>
-      <link>https://huggingface.co/papers/2608.11341</link>
-      <guid isPermaLink="false">arxiv:2608.11341</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Brian Wang, Bin Feng, Xiaoman Pan, Chenyang An, Felix Liu, Tangqi Fang, Gongbo Sun, Lingfeng Shen, … <i>(+22 more)</i></p>
-<p>Apollo did not reach the Moon merely because its engineers could solve difficult equations. It succeeded by turning a distant ambition into a mission architecture of explicit objectives, simulation, verification, and repeated correction. AI now faces a similar transition: frontier models can solve difficult tasks once the problem, tools, and success criteria are specified, yet consequential real-world challenges rarely arrive in an executable or verifiable form.
-  We introduce Apodex Discovery, a framework for building and evaluating discoverative AI through the heavy-duty solver, a system comprising a foundation model, harness, tools, and control policies that pursues extended, stateful, verifiable investigations. It has three core components. First, a problem-scouting process surveyed 561 industries across 16 sectors, assembled 423 high-value real-world problems, and selected 20 for the initial release. Second, a common environment-task-episode abstraction provides data, tools, constraints, feedback, trajectory recording, and verification of intermediate artifacts and final submissions. Third, HDS6 evaluates Tools, Repair, Alternatives, Coherence, Evidence, and Scope independently of final-task success.
-  In AAV capsid design, Apodex surpassed the published state of the art by 7% across viability, tropism, structure prediction, and generative design. In drug repurposing and reformulation, a task-specific biomedical environment improved the mean normalized prediction score of GPT-5.5 and GPT-5.6-sol by 2.5 and 7.6 points over the same closed-book backbone. Controlled ablations show that the fixed TRACES episode interface enables attribution of performance differences to specific solver components. Apodex Discovery moves AI evaluation beyond predefined benchmarks toward verifiable investigations aimed at genuine discovery.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-11 · <a href='https://huggingface.co/papers/2608.11341'>page</a> · <a href='https://arxiv.org/pdf/2608.11341'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning</title>
-      <link>https://huggingface.co/papers/2608.14277</link>
-      <guid isPermaLink="false">arxiv:2608.14277</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Haonan He, Haodi Lei, Yun Luo, Haoran Zhang, Shunkai Zhang, Yizhuo Li, Shengji Tang, Zhilin Wang, … <i>(+9 more)</i></p>
-<p>On-policy distillation (OPD) offers a promising way to transfer reasoning capabilities from stronger teacher models, but applying it to long-context reasoning teachers and short-context students introduces practical challenges, including tokenizer mismatch, teacher-student distribution mismatch, response length explosion, and training instability. In this work, we study this setting by transferring proof-reasoning capabilities from the long-context reasoning model SU-01 to short-context student models. To handle tokenizer differences, we perform OPD in a shared text space and align only tokens that occupy identical text spans under the student and teacher tokenizers. To mitigate the problem of excessive generation length and frequent truncation, we introduce a student reference KL loss and mask the advantages of special termination tokens such as &lt;/think&gt; and &lt;|im_end|&gt;. This strategy constrains the student from drifting excessively from its initial policy, thereby mitigating the teacher-student distribution mismatch problem and fostering steady length growth. Experiments on both same-family and different-family student models, including Qwen3, Qwen3.5, Intern-S2, GLM-4.7, Gemma-4, show consistent gains in mathematical reasoning, especially natural-language math proving. Notably, Intern-S2-Preview improves by 21.2 points on ProofBench, reaching 55.2 and surpassing Gemini-2.5-Pro. It also improves on science benchmarks such as HLE and HiPhO, suggesting that OPD transfers reasoning capabilities that generalize beyond the mathematical training domain.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-14 · <a href='https://huggingface.co/papers/2608.14277'>page</a> · <a href='https://arxiv.org/pdf/2608.14277'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>HarnessEval-W: Agentifying the Evaluation of Visual Worlds</title>
-      <link>https://huggingface.co/papers/2608.16859</link>
-      <guid isPermaLink="false">arxiv:2608.16859</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Weiliang Chen, Haowen Sun, Jun Gao, Jiawei Chi, Hanyang Wang, Qiyu Dai, Yihao Li, Hao Li, … <i>(+36 more)</i></p>
-<p>A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollout requires understanding whether physics, causality, and world state evolve correctly. Humans spot such violations naturally, yet no existing benchmark automates this capability: metrics are computed brute-force, leaving no reasoning chain that can be examined or verified. We introduce HarnessEval-W, an agentified evaluation pipeline that brings the harness paradigm from the LLM ecosystem to world model benchmarking. Rather than applying a fixed rubric, HarnessEval-W interprets the context of each evaluation case, decomposes the evaluation question into measurable subproblems, and spawns specialized sub-agents, each equipped with tailored context and diagnostic tools to reason over its own subproblem. The parent agent then validates the gathered evidence and summarizes it into the final verdict. This hierarchical workflow turns every evaluation into a transparent evidence tree whose complete reasoning chain justifies the result. We apply HarnessEval-W to 18 representative world models over 330 evaluation cases. Its judgments closely align with human preferences while providing verifiable, fine-grained diagnoses of every generated rollout. We open-source the full pipeline as a live benchmark and invite the broad community to contribute to grow new skills and evaluation cases as world models evolve.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-17 · <a href='https://huggingface.co/papers/2608.16859'>page</a> · <a href='https://arxiv.org/pdf/2608.16859'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ClawGym II: Exploring Black-Box RL on Agent Harness</title>
-      <link>https://huggingface.co/papers/2608.16798</link>
-      <guid isPermaLink="false">arxiv:2608.16798</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Huatong Song, Fei Bai, Ming Yang, Renyuan Li, Jia Deng, Jujie He, Zhange Zhang, Daixuan Cheng, … <i>(+13 more)</i></p>
-<p>Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains largely unexplored, as scaling such training to long-horizon agent tasks introduces fundamental challenges. In this work, we present a unified black-box RL framework for stable and scalable optimization of general agents through complex harnesses. Concretely, we first build a sandbox-based execution infrastructure that isolates task environments and harnesses within temporary sandboxes for large-scale concurrent rollouts. We then decouple policy optimization from opaque harness execution and place a serving proxy at the model boundary to capture model calls. To reconstruct multi-turn trajectories and improve training efficiency, we organize the captured calls into prefix trees and further adapt both critic-based PPO and critic-free GRPO to optimize over the recovered tree structure. Meanwhile, we maintain training-inference consistency throughout the optimization process. Finally, we introduce mix-harness training, allowing a single model to be jointly optimized by heterogeneous harnesses. With Qwen3-30A3B, black-box RL improves Pass@1 on ClawGym-Bench by 9.98 and 14.81 points through OpenClaw and Claude Code, respectively, while remaining stable over 200-400 optimization steps. Moreover, the framework yields consistent gains on more challenging tasks such as JobBench and OfficeQA. Overall, our framework enables effective, stable, and scalable optimization of general agents through black-box harnesses, supporting unified training across heterogeneous execution systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-17 · <a href='https://huggingface.co/papers/2608.16798'>page</a> · <a href='https://arxiv.org/pdf/2608.16798'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data</title>
-      <link>https://huggingface.co/papers/2608.13517</link>
-      <guid isPermaLink="false">arxiv:2608.13517</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Peter Schneider-Kamp, Jacob Nielsen, Gianluca Barmina, Kenneth Enevoldsen, Lukas Galke Poech, Hugging Face Daily Papers (curated)</p>
-<p>Current large language model development relies on massive, often non-permissible datasets, creating a high barrier for researchers committed to open-source and ethically sourced data. We introduce Mimir v1, a 1-billion-parameter language model based on the Hierarchical Reasoning Model (HRM) architecture, that is trained from scratch and delivers highly competitive performance for English and sets a new state of the art for Danish using only permissible post-training data. Trained on a mixture of 161 datasets, Mimir v1 outperforms the original HRM-Text 1B and competes with larger frontier models like Qwen 3.5 4B and Gemma 4 E2B, tested across 20 benchmarks for English, Math &amp; Code and Danish. The model is available on the Hugging Face Hub: https://huggingface.co/danish-foundation-models/DFM-Mimir</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.13517'>page</a> · <a href='https://arxiv.org/pdf/2608.13517'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MobileMem: Learning from a Year of Mobile Experiences</title>
-      <link>https://huggingface.co/papers/2608.13606</link>
-      <guid isPermaLink="false">arxiv:2608.13606</guid>
-      <pubDate>Tue, 18 Aug 2026 04:28:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xinle Deng, Yida Xue, Xiangyuan Ru, Haoming Xu, Shuofei Qiao, Mengru Wang, Yijun Chen, Buqiang Xu, … <i>(+10 more)</i></p>
-<p>The next generation of AI agents is increasingly moving beyond systems that answer isolated questions toward persistent personal assistants that can understand, remember, and continuously learn from users&#x27; experiences. Such assistants require long-term memory to accumulate and leverage user-specific experiences over time, yet existing benchmarks remain inadequate for realistic mobile settings, where experiences are heterogeneous, multimodal, evolving, and deeply personal. We introduce MobileMem, a benchmark and framework for studying on-device long-term memory, grounded in a year-scale collection of mobile experiences. MobileMem employs a knowledge-grounded synthesis pipeline to construct coherent and temporally consistent long-horizon trajectories from user-app sessions. It provides complementary text and multimodal settings covering multi-hop and temporal reasoning, knowledge updating, and implicit preference inference. Specifically, MobileMem enables agents to remember the past, understand the present, and adapt to the future. By modeling experiences rather than isolated facts, MobileMem moves memory beyond information retrieval toward experiential intelligence for continuous personal learning.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-11 · <a href='https://huggingface.co/papers/2608.13606'>page</a> · <a href='https://arxiv.org/pdf/2608.13606'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OTIS: Learning High-Quality Time Series Features With Tiny Encoders</title>
-      <link>https://arxiv.org/abs/2410.07299</link>
-      <guid isPermaLink="false">arxiv:2410.07299</guid>
-      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Imperial College, TU Munich — Daniel Rueckert</p>
-<p><b>Authors:</b> Özgün Turgut, Philip Müller, Martin J. Menten, Daniel Rueckert</p>
-<p>We introduce OTIS, an open time series encoder that yields high-quality time series features for downstream deployment on any system, including resource-constrained wearables and industrial sensors. Currently, the development of powerful general-purpose encoders relies on the scaling laws hypothesis, using large encoder sizes to memorise the heterogeneous distributions of multi-domain training data. However, this reliance on scale creates a barrier to real-world utility, rendering deployment on resource-constrained systems infeasible due to strict memory, energy, and latency constraints. Surprisingly, we find that tailoring standard masked modelling pre-training to time series properties yields a tiny $7.1\,$M encoder that matches the state-of-the-art performance of $54\times$ larger encoders across $162$ tasks, while requiring $10\times$ less memory, $43\times$ less energy, and $37\times$ lower latency. To achieve this without the capacity tax, we introduce three novel components: (1) a domain-aware tokeniser to resolve conflicting semantics within multi-domain training data; (2) a dual masking strategy to capture spatiotemporal structures and temporal causality; and (3) a structure-aware objective to decouple feature learning from modelling noise. Consequently, OTIS produces high-quality time series features that enable state-of-the art performance in discriminative tasks and even extend seamlessly to generative tasks at minimal additional cost. To democratise access to powerful time series features on any system, we release our code and pre-trained weights.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-08-14 · <a href='https://arxiv.org/abs/2410.07299'>page</a> · <a href='https://arxiv.org/pdf/2410.07299'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Metacognitive Bottleneck: Japanese Riddles Reveal Fundamental Limits of Machine Insight and Self-Evaluation in Reasoning AI</title>
-      <link>https://arxiv.org/abs/2509.14704</link>
-      <guid isPermaLink="false">arxiv:2509.14704</guid>
-      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Le Minh Nguyen</p>
-<p><b>Authors:</b> Masaharu Mizumoto, Dat Nguyen, Zhiheng Han, Xingfu Li, Yo Nakawake, Le Minh Nguyen</p>
-<p>Benchmark saturation and training-data contamination increasingly obscure whether reported gains in large language models (LLMs) reflect genuine advances in reasoning or familiarity with recurring patterns in benchmark problems. We introduce the NazoNazo Benchmark, a renewable and extensible evaluation dataset derived from Japanese children&#x27;s riddles that isolates a specific class of reasoning processes: insight-like representational restructuring and metacognitive evaluation. Rather than modeling reasoning in general, these tasks provide a focused test of failure modes that are difficult to detect in standard benchmarks. We curate 201 riddles and establish a human reference on a 120-item subset (n = 126; mean accuracy 52.9%). The benchmark is fully open, low-cost to refresh, and designed for continual evaluation under reduced contamination risk. We evaluate 38 frontier LLMs (2023-2025) under a strict retrieval-free, zero-shot protocol. On the human-comparison subset, non-reasoning models achieve 7.6% accuracy and reasoning-oriented models reach 17.6%, compared with a human mean of 52.9%, although performance varies substantially across models. Beyond accuracy, qualitative analysis of model-generated thought-logs identifies a distinctive failure mode, which we call verification failure: models generate a correct intermediate candidate but fail to endorse it as their final answer. This dissociation between candidate generation and endorsement reveals a metacognitive bottleneck: across the models with usable thought-logs, verification failures account for between 5% and 39% of a model&#x27;s incorrect answers. By isolating the gap between generation and verification, this work provides a practical framework for diagnosing reasoning reliability and suggests concrete directions for improvement, including better calibration, structured verification, and stopping mechanisms.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-14 · <a href='https://arxiv.org/abs/2509.14704'>page</a> · <a href='https://arxiv.org/pdf/2509.14704'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence</title>
-      <link>https://huggingface.co/papers/2608.12743</link>
-      <guid isPermaLink="false">arxiv:2608.12743</guid>
-      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Haokai Zhang, Yuhang Ding, Yunshu Zhou, Xinze Du, Shengtao Zhang, Zhiyue Zhao, Yuling Xi, Hao Chen, … <i>(+1 more)</i></p>
-<p>Spatial intelligence is becoming a foundation for embodied agents, robotic planning, and multimodal assistants. To improve the spatial reasoning ability of VLM agents, existing work has mainly followed two lines. One line uses post-training methods, such as supervised fine-tuning and reinforcement learning. Another line adopts an agentic paradigm in which the model calls external spatial tools, such as depth estimation and 3D reconstruction tools, to gather intermediate spatial evidence. We study a complementary and underexplored route: Can a frozen VLM agent improve its spatial reasoning through parameter-update-free self-evolution, without depending on external expert spatial tools at inference time? We present Spatial Memory Agent (SMA), an experience-grounded runtime framework that converts verified spatial experience into reusable transferable lessons. In a verifiable spatial environment, SMA queries the frozen VLM, obtains a predicted answer and reward, and uses verifier-guided reflection to distill compact transferable lessons from spatial experience. SMA further assigns each lesson a Transfer Reliability Score (TRS), which is initialized uniformly and calibrated from later retrieval outcomes as visit evidence of future transfer reliability. During read-only deployment, SMA retrieves lessons by semantic filter and similarity-TRS combined ranking, allowing the retrieved memory to guide frozen model inference. Across five representative spatial benchmarks and four base VLMs, SMA achieves the highest macro average in every base-model block and the best accuracy among the evaluated methods in most of the 20 evaluations, establishing a practical parameter-update-free path for spatial self-evolution across the evaluated frozen model scales and environments.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.12743'>page</a> · <a href='https://arxiv.org/pdf/2608.12743'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Massive Activations in Hybrid Linear Attention Large Language Models: Pre-Attention Spikes and Inter-Spike Plateaus</title>
-      <link>https://huggingface.co/papers/2608.12149</link>
-      <guid isPermaLink="false">arxiv:2608.12149</guid>
-      <pubDate>Mon, 17 Aug 2026 04:40:24 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zunhai Su, Bohan Sun, Xialie Zhuang, Shuibai Zhang, He Xiao, Jing Xiong, Hengyuan Zhang, Zhongzhu Zhou, … <i>(+4 more)</i></p>
-<p>We present the first systematic study of Massive activations (MAs) in layer-interleaved HLA LLMs and uncover two architecture-aligned morphologies: MAs consistently spike immediately before full attention layers, forming pre-attention spikes (PAS), and can persist through intervening linear attention layers, giving rise to inter-spike plateaus (ISP). As full attention becomes denser, successive PAS become increasingly connected through ISP, ultimately recovering the stable MA morphology of full attention LLMs. We establish the recurrence of this organization across five linear attention architectures, six hybridization configurations, five data domains, and representative open-source hybrid models spanning 1.2B to 397B total parameters. Controlled pretraining of GDN-based hybrids at scales up to 1.3B shows that both morphologies emerge early and respond asymmetrically to output gating: full attention output gating strongly attenuates their absolute magnitudes without eliminating their layerwise organization, whereas removing GDN gates yields comparatively modest amplification. Mechanistically, our systematic-outlier analysis supports a shared lifecycle account governed by the timing of MA cancellation. PAS follows a localized write-sink-cancel process, while the extended persistence of ISP is consistent with delayed cancellation. At the full attention limit, this account recovers the stable MA morphology characteristic of full attention LLMs. Our code is available at https://github.com/StartluxLabs/Massive-Activations-HLA.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-12 · <a href='https://huggingface.co/papers/2608.12149'>page</a> · <a href='https://arxiv.org/pdf/2608.12149'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design</title>
-      <link>https://huggingface.co/papers/2608.13560</link>
-      <guid isPermaLink="false">arxiv:2608.13560</guid>
-      <pubDate>Sun, 16 Aug 2026 04:28:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> MIT, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Yaxin Luo, Haobin Jiang, Jialv Zou, Xu Huang, Wenhao Yan, Haodong Li, Zhengrong Yue, Jing Li, … <i>(+7 more)</i></p>
-<p>Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empirical exploration to drive recursive self-improvement, existing paradigms remain static and fall short of this capability. In this paper, we present AutoDesign, a framework that aligns with human design priors, where a meta-harness optimizer guides a code agent to recursively improve harness based on rollout feedback. To instantiate and evaluate this framework, we focus on the academic paper-to-poster generation task and introduce PosterBench, comprising a 100-paper Main Track spanning five disciplines and PosterBench-mini, a shared 10-paper subset for controlled evaluation. On the PosterBench Main Track, AutoDesign achieves the highest score of 78.32, surpassing the closed-source commercial system Claude Design by 7.45 points. Across seven controlled code-agent-model configurations, integrating the learned DesignHarness consistently improves performance, increasing the average PosterBench Score from 54.99 to 67.39 (+12.4%). In a fully autonomous long-horizon loop, it executes 253 tool calls and 11 editing turns within 40 minutes for under $3, reaching average conference-poster quality in human evaluation. A system-blind human study further demonstrates that AutoDesign achieves the highest human preference among evaluated systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.13560'>page</a> · <a href='https://arxiv.org/pdf/2608.13560'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
