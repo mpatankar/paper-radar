@@ -5,8 +5,31 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 10 Sep 2026 08:33:25 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 08:28:06 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Measuring tactical intelligence targeting and conventional weapons capabilities of AI models</title>
+      <link>https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities</link>
+      <guid isPermaLink="false">anthropic:b007b558c7</guid>
+      <pubDate>Fri, 11 Sep 2026 08:28:06 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
+<p><b>Authors:</b> Anthropic</p>
+<p>Anthropic’s Frontier Red Team developed new evaluations to measure AI capabilities in tactical intelligence targeting and conventional weapons development.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents</title>
+      <link>https://huggingface.co/papers/2609.05903</link>
+      <guid isPermaLink="false">arxiv:2609.05903</guid>
+      <pubDate>Fri, 11 Sep 2026 08:28:06 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Nanxi Li, Yingzi Ma, Yulong Cao, Edward Suh, Bo Li, Dawn Song, Chaowei Xiao, Hugging Face Daily Papers (curated)</p>
+<p>Large Language Model (LLM) agents are turning language into real-world effects, making safety necessary against both indirect prompt injections and direct harmful requests. System-level safety harnesses add an enforcement layer beyond model-level defenses, but existing harnesses are usually designed once by experts and applied across heterogeneous models and domains. Effective protection is deployment-dependent: models differ in how much enforcement they need before utility declines, while domains differ in the effects, state, and action sequences that must be governed. A harness that is strict enough for one model may over-block another, and a policy that transfers across domains may miss application-specific safety relations.
+  We present EvoSafeHarness, a safety-specific optimization framework that synthesizes a deployable harness for a frozen model in a target domain. It jointly searches a natural-language policy and executable code logic, guided by model behavior, domain specifications, and fresh-context adversarial review to reject benchmark-specific rules. Across four agent benchmark families, EvoSafeHarness achieves a stronger safety-utility frontier than fixed expert-designed defenses. On DecodingTrust-Agent, it reduces average attack success rate from 45.6% to 10.0% at a 3.3-point utility cost and achieves the best score in 14 of 15 cells. On AgentDojo, it reaches 82.8% utility at 0.0% ASR, twice CaMeL&#x27;s utility at the same operating point, and transfers unchanged to unseen AgentDyn suites. It also achieves the best score on Agent-SafetyBench for every victim and keeps mean ASR below 20% under adaptive PAIR attacks with a refinement budget of 16. Analysis shows that domain semantics determine which safety relations and trajectory state are needed, while model and runtime behavior determine how and where those relations should be enforced.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-05 · <a href='https://huggingface.co/papers/2609.05903'>page</a> · <a href='https://arxiv.org/pdf/2609.05903'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Influence-Oriented Personalized Federated Learning</title>
       <link>https://arxiv.org/abs/2410.03315</link>
@@ -2361,32 +2384,6 @@
 <p><b>Authors:</b> Erdem Bıyık, Jonathan Margoliash, Shahrouz Ryan Alimo, Dorsa Sadigh</p>
 <p>We propose a safe exploration algorithm for deterministic Markov Decision Processes with unknown transition models. Our algorithm guarantees safety by leveraging Lipschitz-continuity to ensure that no unsafe states are visited during exploration. Unlike many other existing techniques, the provided safety guarantee is deterministic. Our algorithm is optimized to reduce the number of actions needed for exploring the safe space. We demonstrate the performance of our algorithm in comparison with baseline methods in simulation on navigation tasks.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.LG, cs.SY, eess.SY · <b>arXiv submitted:</b> 2019-04-01 · <a href='https://arxiv.org/abs/1904.01068'>page</a> · <a href='https://arxiv.org/pdf/1904.01068'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Online Risk-Bounded Motion Planning for Autonomous Vehicles in Dynamic Environments</title>
-      <link>https://arxiv.org/abs/1904.02341</link>
-      <guid isPermaLink="false">arxiv:1904.02341</guid>
-      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <category>cs.SY</category>
-      <category>eess.SY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge — Xin Huang</p>
-<p><b>Authors:</b> Xin Huang, Sungkweon Hong, Andreas Hofmann, Brian C. Williams</p>
-<p>A crucial challenge to efficient and robust motion planning for autonomous vehicles is understanding the intentions of the surrounding agents. Ignoring the intentions of the other agents in dynamic environments can lead to risky or over-conservative plans. In this work, we model the motion planning problem as a partially observable Markov decision process (POMDP) and propose an online system that combines an intent recognition algorithm and a POMDP solver to generate risk-bounded plans for the ego vehicle navigating with a number of dynamic agent vehicles. The intent recognition algorithm predicts the probabilistic hybrid motion states of each agent vehicle over a finite horizon using Bayesian filtering and a library of pre-learned maneuver motion models. We update the POMDP model with the intent recognition results in real time and solve it using a heuristic search algorithm which produces policies with upper-bound guarantees on the probability of near colliding with other dynamic agents. We demonstrate that our system is able to generate better motion plans in terms of efficiency and safety in a number of challenging environments including unprotected intersection left turns and lane changes as compared to the baseline methods.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2019-04-04 · <a href='https://arxiv.org/abs/1904.02341'>page</a> · <a href='https://arxiv.org/pdf/1904.02341'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>IDEAL: Leveraging Infinite and Dynamic Characterizations of Large Language Models for Query-focused Summarization</title>
-      <link>https://arxiv.org/abs/2407.10486</link>
-      <guid isPermaLink="false">arxiv:2407.10486</guid>
-      <pubDate>Fri, 05 Jun 2026 05:33:24 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> NUS — (senior)</p>
-<p><b>Authors:</b> Jie Cao, Dian Jiao, Yang Dai, Rolan Yan, Wenqiao Zhang, Siliang Tang</p>
-<p>Query-focused summarization (QFS) aims to produce summaries that answer particular questions of interest, enabling greater user control and personalization. The advent of large language models (LLMs), shows their impressive capability of textual understanding through large-scale pretraining, which implies the great potential of extractive snippet generation. In this paper, we systematically investigated two indispensable characteristics that the LLMs-based QFS models should be harnessed, \emph{Efficiently Fine-grained Query-LLM Alignment} and \emph{Lengthy Document Summarization}, respectively. Correspondingly, we propose two modules called Query-aware HyperExpert and Query-focused Infini-attention to access the aforementioned characteristics. These innovations pave the way for broader application and accessibility in the field of QFS technology. Extensive experiments conducted on existing QFS benchmarks indicate the effectiveness and generalizability of the proposed approach.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://arxiv.org/abs/2407.10486'>page</a> · <a href='https://arxiv.org/pdf/2407.10486'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
