@@ -5,8 +5,92 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Thu, 17 Sep 2026 09:04:39 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 08:39:24 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>FOCAL: Fine-Grained Optimal-Transport-Driven Contrastive Alignment of Language and ECGs with Waveform Enhancement</title>
+      <link>https://arxiv.org/abs/2505.11939</link>
+      <guid isPermaLink="false">arxiv:2505.11939</guid>
+      <pubDate>Fri, 18 Sep 2026 08:39:24 GMT</pubDate>
+      <category>eess.SP</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab</p>
+<p><b>Authors:</b> Haitao Li, Che Liu, Zhengyao Ding, Ziyi Liu, Wenqi Shao, Zhengxing Huang</p>
+<p>Electrocardiograms (ECGs) are essential non-invasive tools for diagnosing cardiovascular diseases. While recent multimodal ECG-Report contrastive learning methods have shown promise for zero-shot ECG interpretation, they predominantly rely on global representations, failing to capture the fine-grained relationship between localized waveform patches and specific pathological tags. This limitation is further exacerbated by the fact that nearly 55% of standard clinical reports (e.g., in MIMIC-ECG) lack explicit waveform descriptions. In this paper, we propose FOCAL, a novel framework that achieves precise, fine-grained alignment between localized ECG segments and individual report tags via Optimal Transport. Furthermore, because fine-grained alignment at the tag level exacerbates the false negative problem among reports sharing common diagnoses, we introduce a semantic similarity matrix to guide the contrastive objective and correct misalignments. To address the scarcity of detailed waveform text, we introduce a coarse-to-fine enrichment pipeline that leverages Large Language Models (LLMs) to recover missing semantics, utilizing a coarse model verification step to rigorously filter out hallucinations. Extensive experiments across six datasets demonstrate that FOCAL establishes new state-of-the-art performance in zero-shot prediction and linear probing.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> eess.SP, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-09-17 · <a href='https://arxiv.org/abs/2505.11939'>page</a> · <a href='https://arxiv.org/pdf/2505.11939'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Watermarking Diffusion Language Models</title>
+      <link>https://arxiv.org/abs/2509.24368</link>
+      <guid isPermaLink="false">arxiv:2509.24368</guid>
+      <pubDate>Fri, 18 Sep 2026 08:39:24 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Martin Vechev</p>
+<p><b>Authors:</b> Thibaud Gloaguen, Robin Staab, Nikola Jovanović, Martin Vechev</p>
+<p>We introduce the first watermark tailored for diffusion language models (DLMs), an emergent LLM paradigm able to generate tokens in arbitrary order, in contrast to standard autoregressive language models (ARLMs) which generate tokens sequentially. While there has been much work in ARLM watermarking, a key challenge when attempting to apply these schemes directly to the DLM setting is that they rely on previously generated tokens, which are not always available with DLM generation. In this work we address this challenge by: (i) applying the watermark in expectation over the context even when some context tokens are yet to be determined, and (ii) promoting tokens which increase the watermark strength when used as context for other tokens. This is accomplished while keeping the watermark detector unchanged. Our experimental evaluation demonstrates that the DLM watermark leads to a &gt;99% true positive rate with minimal quality impact and achieves similar robustness to existing ARLM watermarks, enabling for the first time reliable DLM watermarking.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CR · <b>arXiv submitted:</b> 2026-09-17 · <a href='https://arxiv.org/abs/2509.24368'>page</a> · <a href='https://arxiv.org/pdf/2509.24368'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>BuildBench: Benchmarking LLM Agents on Compiling Real-World Open-Source Software</title>
+      <link>https://arxiv.org/abs/2509.25248</link>
+      <guid isPermaLink="false">arxiv:2509.25248</guid>
+      <pubDate>Fri, 18 Sep 2026 08:39:24 GMT</pubDate>
+      <category>cs.SE</category>
+      <category>cs.AI</category>
+      <category>cs.PL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, HKUST, NUS, Peking U, Stanford, Tsinghua — Zehua Zhang</p>
+<p><b>Authors:</b> Zehua Zhang, Ati Priya Bajaj, Divij Handa, Siyu Liu, Arvind S Raj, Hongkai Chen, Hulin Wang, Yibo Liu, … <i>(+9 more)</i></p>
+<p>Automatically compiling open-source software (OSS) projects is a vital, labor-intensive, and complex task, which makes it a good challenge for LLM Agents. Existing methods rely on manually curated rules and workflows, which cannot adapt to OSS that requires customized configuration or environment setup. Recent attempts using Large Language Models (LLMs) used selective evaluation on a subset of highly rated OSS, a practice that underestimates the realistic challenges of OSS compilation. In practice, compilation instructions are often absent, dependencies are undocumented, and successful builds may even require patching source files or modifying build scripts. We propose a more challenging and realistic benchmark, BUILD-BENCH, comprising OSS that are more diverse in quality, scale, and characteristics. Furthermore, we propose a strong baseline LLM-based agent, OSS-BUILD-AGENT, an effective system with enhanced build instruction retrieval module that achieves state-of-the-art performance on BUILD-BENCH and is adaptable to heterogeneous OSS characteristics. We also provide detailed analysis regarding different compilation method design choices and their influence to the whole task, offering insights to guide future advances. We believe performance on BUILD-BENCH can faithfully reflect an agent&#x27;s ability to tackle compilation as a complex software engineering tasks, and, as such, our benchmark will spur innovation with a significant impact on downstream applications in the fields of software development and software security.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI, cs.PL · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://arxiv.org/abs/2509.25248'>page</a> · <a href='https://arxiv.org/pdf/2509.25248'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>oMeBench: Towards Robust Benchmarking of LLMs in Organic Mechanism Elucidation and Reasoning</title>
+      <link>https://arxiv.org/abs/2510.07731</link>
+      <guid isPermaLink="false">arxiv:2510.07731</guid>
+      <pubDate>Fri, 18 Sep 2026 08:39:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yifan Zhang</p>
+<p><b>Authors:</b> Ruiling Xu, Yifan Zhang</p>
+<p>Organic reaction mechanisms describe the step-wise elementary processes by which reactants transform into intermediates and products, and are fundamental to understanding chemical reactivity and guiding molecular and reaction de-sign. While large language models (LLMs) have shown promise on chemical tasks such as synthesis design, it remains unclear to what extent this reflects genuine chemical reasoning capabilities: the ability to generate chemically valid intermediates, maintain consistency across reaction steps, and follow logically coherent multi-step pathways. To investigate this, we introduce oMeBench, the first large-scale, expert-curated benchmark for organic mechanism reasoning, comprising over 10,000 annotated mechanistic steps with reaction type labels, intermediate structures, and difficulty ratings. To enable fine-grained evaluation, we further propose oMeS, a dynamic scoring framework that jointly assesses step-level logical consistency and chemical structural similarity. Systematic evaluation of state-of-the-art LLMs reveals that while current models exhibit promising chemical intuition, they struggle to produce correct and consistent reasoning across multi-step mechanisms. Notably, combining prompting strategies with fine-tuning enables smaller-scale models to achieve performance comparable to closed-source frontier models. We hope oMeBench will serve as a rigorous foundation for advancing AI systems toward genuine chemical reasoning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-09-17 · <a href='https://arxiv.org/abs/2510.07731'>page</a> · <a href='https://arxiv.org/pdf/2510.07731'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rethinking Critic Learning in PPO: Understanding and Mitigating Value Flattening</title>
+      <link>https://huggingface.co/papers/2609.18708</link>
+      <guid isPermaLink="false">arxiv:2609.18708</guid>
+      <pubDate>Fri, 18 Sep 2026 08:39:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yizhuo Li, Jianhao Yan, Yun Luo, Zhi Wang, Futing Wang, Rong-Xi Tan, Kanghui Tian, Ganqu Cui, … <i>(+5 more)</i></p>
+<p>In reinforcement learning for large language models, Proximal Policy Optimization (PPO) commonly uses a critic to estimate state values and reduce the variance of policy updates. However, we uncover a systematic failure mode in PPO critics, which we call Value Flattening: state values, estimated from multiple Monte Carlo continuations, change sharply across intermediate states while critic predictions remain comparatively flat. We further observe this phenomenon in a controlled FrozenLake environment and find that it becomes more pronounced as the state space grows. Our theoretical and empirical analyses relate Value Flattening to an implicit variance penalty in the critic loss and redundant updates from temporally correlated states with similar gradients. Motivated by these findings, we introduce SParse Proximal Policy Optimization (SP^3O), which applies the value loss to only a few well-separated states in each response to mitigate both effects. Experiments on Qwen3-Base show that SP^3O with only three states supervised per response can mitigate Value Flattening and consistently improve the learned policy across model sizes and evaluation suites. Together, our results identify Value Flattening as an important yet overlooked failure mode of critic learning in standard PPO and show that a simple sparse supervision strategy can mitigate it.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://huggingface.co/papers/2609.18708'>page</a> · <a href='https://arxiv.org/pdf/2609.18708'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Agora: Git as Shared Memory for Collective AutoResearch</title>
+      <link>https://huggingface.co/papers/2609.18094</link>
+      <guid isPermaLink="false">arxiv:2609.18094</guid>
+      <pubDate>Fri, 18 Sep 2026 08:39:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yifan Zhang, Yunheng Zou, Shaokun Zhang, Jian Hu, Hao Zhang, Binfeng Xu, Jan Kautz, Yi Dong, … <i>(+1 more)</i></p>
+<p>Autonomous research loops such as AutoResearch show that one coding agent can improve a training setup unattended. Run several of them and each session starts from scratch, so more agents tend to mean more duplicated search rather than more discovery. Agora is a shared memory for such agents: research is recorded as an append-only directed acyclic graph (DAG) stored in Git, so that every claim is a commit anyone can check out and rerun. Each result, insight, hypothesis, verification, and report is an immutable commit whose parent edges say what it builds on; a derived index exposes the frontier, the neglected branches, and the verification status of each claim, and a diversity-aware selection rule keeps the community from collapsing onto one leader. We describe the system and report its first sustained use: a run of nearly 12 days in which 13 language-model workers, with no assigned tasks and no central planner, worked on a weight-transfer problem. Given 141 pretrained donor models and a frozen 119.6M-parameter attention-SSM hybrid whose dimensions match no donor, the workers had to initialize the target without training data or gradient updates. They published 1,703 contributions and drove the evaluator from 3.39 to 1.899 bits per byte, closing 62% of the gap to a trained GPT-2 124M. The winning recipe compresses donor next-token statistics into the target&#x27;s embedding and output head, then adds a short-range context signal through sparse edits to attention, feed-forward, and state-space blocks. Its 145-commit ancestry spans 15 accounts, and 165 independent reproductions were posted, none of which failed. We describe the single mid-run human intervention that pulled the community out of a monoculture, what the trace does and does not establish, and the controlled comparison that would settle whether shared research state improves discovery per unit of compute.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://huggingface.co/papers/2609.18094'>page</a> · <a href='https://arxiv.org/pdf/2609.18094'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness</title>
+      <link>https://huggingface.co/papers/2609.20519</link>
+      <guid isPermaLink="false">arxiv:2609.20519</guid>
+      <pubDate>Fri, 18 Sep 2026 08:39:24 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haozhe Liu, Tian Ye, Sensen Gao, Qihang Cao, Yitong Li, Mingchen Zhuge, Duomin Wang, Ruihua Zhang, … <i>(+7 more)</i></p>
+<p>As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \8.75-13.50 relative to native Codex and Claude Code harnesses, and \4.36-5.71 relative to Pi.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-17 · <a href='https://huggingface.co/papers/2609.20519'>page</a> · <a href='https://arxiv.org/pdf/2609.20519'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Unleash LLMs Potential for Sequential Recommendation by Coordinating Dual Dynamic Index Mechanism</title>
       <link>https://arxiv.org/abs/2409.09253</link>
@@ -2206,85 +2290,6 @@
 <p><b>Authors:</b> Zhi Zheng, Rongsheng Chen, Yunpeng Ba, Zhenkun Wang, Yee Whye Teh, Wee Sun Lee, Hugging Face Daily Papers (curated)</p>
 <p>Reinforcement Learning (RL) has been promising in single-turn LLM fine-tuning. However, long-horizon agentic reasoning introduces increasingly branching interactions and sparse rewards, exposing several limitations of RL: its heavyweight backpropagation-based training stack makes it impractical to fine-tune larger LLMs, and longer-horizon trajectories make credit assignment in RL substantially harder. This paper argues that evolution strategies (ES) can be a better choice for fine-tuning long-horizon LLM agents. Compared with agentic RL, ES offers three key advantages: 1) Model Scalability: ES enables full-parameter optimization with only minimal, inference-level GPU memory, making it possible to fine-tune large LLMs. 2) Flexibility: its lightweight, black-box feedback interface makes ES fine-tuning easy to compose with prompt-space evolution (e.g., skill optimization &amp; test-time compute); and 3) Long-Horizon Scalability: ES performs trajectory-level parameter attribution without decomposing rewards across horizons, yielding better scalability than Agentic RL as the horizon length grows. Based on this insight, we propose Agentic ESOpt, a full-parameter agentic fine-tuning framework tailored to flexible parameter--context co-evolution. At each step, Agentic ESOpt samples perturbations around the current LLM parameters, evaluates the resulting agents with rewards, and applies an online reward-weighted update. To improve the exploration--adaptation trade-off, Agentic ESOpt further introduces a cosine decay schedule of the perturbation scale σ. On WebArena-Lite, full-parameter optimization of Qwen-3.5-27B improves the No Skill baseline by 6.69%. In test-time automatic heuristic design, Agentic ESOpt performs online prompt--parameter co-evolution, improving its matched baseline in 28 of 36 settings.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-18 · <a href='https://huggingface.co/papers/2608.17310'>page</a> · <a href='https://arxiv.org/pdf/2608.17310'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ASI-Bench: At the Dawn of Artificial Superintelligence</title>
-      <link>https://huggingface.co/papers/2608.17271</link>
-      <guid isPermaLink="false">arxiv:2608.17271</guid>
-      <pubDate>Thu, 20 Aug 2026 04:30:35 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junwei Zhou, Zhen Sun, Binyu Li, Jiangyu Zhou, Yuexi Pan, Hengyu Wang, Honghe Ren, Xiaohan Jia, … <i>(+35 more)</i></p>
-<p>Artificial superintelligence (ASI) requires AI to move beyond mastering existing knowledge toward exploring the unknown, creating new knowledge, and turning new ideas into verifiable results. However, the capabilities of today&#x27;s AI systems are still largely built on learning, compressing, and applying existing human knowledge. Accordingly, existing benchmarks primarily test whether AI can produce correct answers based on learned knowledge, or whether it can complete tasks under extensive human guidance. We therefore introduce ASI-Bench, the first benchmark to jointly evaluate AI systems&#x27; capabilities of innovative exploration and autonomous scientific execution across general research domains, and the first to progressively withdraw human methodological guidance within the same research project to test how far AI can proceed on its own. Built by over 40 experts with the cost of 31,000+ human hours, ASI-Bench contains 60 project-level research tasks across 11 scientific domains and progressively reduces methodological guidance to test whether AI can independently select methods, conduct research, and produce verifiable results. All tasks undergo expert review, AI-assisted auditing, sandbox execution, and scorer validation. Across 18 state-of-the-art agent--model configurations, the average score drops from 50.91 with full methodological guidance to 29.10 with only the method specified and 26.62 when agents must determine the method themselves. This sharp decline shows that current systems remain heavily dependent on human guidance and are still far from autonomously conducting end-to-end, project-level scientific research. ASI-Bench is open to the world. We invite researchers and builders everywhere to contribute new tasks, challenge the limits of today&#x27;s AI, and help accelerate humanity&#x27;s collective path toward artificial superintelligence at https://asibench.apexin.ai/submit.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-18 · <a href='https://huggingface.co/papers/2608.17271'>page</a> · <a href='https://arxiv.org/pdf/2608.17271'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation</title>
-      <link>https://huggingface.co/papers/2608.17512</link>
-      <guid isPermaLink="false">arxiv:2608.17512</guid>
-      <pubDate>Thu, 20 Aug 2026 04:30:35 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Hongyan Feng, Sunlai Chen, Xuanyu Liu, Miao Pan, Yangfan Xie, Yuxiang Cui, Zhongxiang Zhou, Rong Xiong, … <i>(+5 more)</i></p>
-<p>Although Large Vision-Language Models (VLMs) have significantly advanced embodied navigation, their direct deployment remains challenging, as existing methods often force VLMs into unnatural action spaces that misalign with their 2D pre-training priors, compounded by rigid reasoning schedules and inefficient memory management. To overcome these limitations, we propose TAMP-Nav, a unified framework for efficient embodied navigation. First, we introduce a Pixel-to-3D Action Formulation (Point) that reformulates navigation into 2D visual prompting. Specifically, the VLM merely selects 2D pixels, which are then projected into 3D coordinates for a low-level SLAM controller. This design naturally aligns embodied execution with the VLM&#x27;s inherent 2D visual capabilities. Second, we propose an integrated Selective Reasoning and Anchor-Trajectory Memory mechanism (Think and Memorize), which dynamically triggers Chain-of-Thought and retains high-fidelity memory only at critical nodes, compressing redundant trajectories into lightweight Space-Time Indicators, thereby preserving critical historical information and enhancing spatio-temporal perception. Finally, we design an efficient Two-Level Alignment Paradigm (Align) via Group Relative Policy Optimization (GRPO). By superimposing global outcome rewards with fine-grained process rewards, this dense supervision tightly aligns the agent&#x27;s cognitive planning with physical environmental feedback, endowing the model with adaptive reasoning capabilities. Experiments demonstrate that TAMP-Nav achieves state-of-the-art performance (e.g., 66.2% SR on R2R-CE) with high runtime and sample efficiency (requiring only 90k training trajectories).</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-18 · <a href='https://huggingface.co/papers/2608.17512'>page</a> · <a href='https://arxiv.org/pdf/2608.17512'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AVA-Encoder: Towards Agent-Native Video Representation Learning</title>
-      <link>https://huggingface.co/papers/2608.12313</link>
-      <guid isPermaLink="false">arxiv:2608.12313</guid>
-      <pubDate>Thu, 20 Aug 2026 04:30:35 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Chuyue Li, Jinpeng Yu, Haozhe Wang, Tian Xueyun, Zhijing Zhang, Bingnan Li, Shuqi Gu, Kan Ren, … <i>(+3 more)</i></p>
-<p>Creative agents still lack an effective way to learn from high-quality human films, limiting their ability to produce cinematic-grade videos. A key challenge is the absence of a structured video representation that is both faithful to film content and directly usable for agentic reasoning and manipulation. To address the challenge, we propose the Agentic Video Auto-Encoder (AVA-Encoder), a framework for learning agent-native video representations via agentic auto-encoding.
-  AVA-Encoder transforms a video into a knowledge graph (KG) representation and then reconstructs it back into video. Its hierarchy and state nodes store structured text, while a linked asset layer holds generated images, audio, and video. Typed edges preserve the relations between these text descriptions and assets in a form that agents can easily understand, query, and edit. The video reconstruction differences drive a textual-gradient optimization framework, which expresses evaluation feedback as natural-language update directions for Data-Independent Encoding Policy Pseudo-Training in the outer loop and optional Data-Dependent KG Representation Refinement in the test-time inner loop.
-  Extensive experiments show that AVA-Encoder improves by 20.7 percentage points over the strongest external baseline. In the controlled policy-only setting, its pseudo-trained shot-level Agentic Video Encoder policy also outperforms a carefully human-tuned policy while using 74.3% fewer system-prompt tokens. We release the complete AVA-Encoder framework, a reliable agentic video reconstruction benchmark, and the first dataset of high-quality film KG representations.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-12 · <a href='https://huggingface.co/papers/2608.12313'>page</a> · <a href='https://arxiv.org/pdf/2608.12313'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence</title>
-      <link>https://huggingface.co/papers/2608.16590</link>
-      <guid isPermaLink="false">arxiv:2608.16590</guid>
-      <pubDate>Thu, 20 Aug 2026 04:30:35 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xin Ding, Liang Mi, Mingzhe Huang, Zixuan Wang, Chao Zhang, Zixu Hao, Fu Chen, Xiangyu Li, … <i>(+8 more)</i></p>
-<p>Embodied agents are increasingly used to close the gap left by end-to-end policy models. Yet the agentic path has not realized closed-loop learning in physical execution: existing harnesses remain largely open-loop, following fixed skills during rollout and reflecting only after an episode completes. Such post-hoc reflection cannot govern execution as it unfolds, because physical interaction requires decisions to track rapidly changing robot-environment states at a frequency beyond today&#x27;s large agentic models. We present Zetta, a closed-loop embodied harness that evolves code-based runtime critics and recovery skills online while keeping the base policy frozen. Through three timescale-separated loops, Zetta provides action-frequency governance, rollout-level critic-recovery proposal, and validation-gated skill updates. Together with Z-Infra, a rollout infrastructure decoupling agent logic from heterogeneous execution resources, Zetta achieves state-of-the-art success on LIBERO-Pro and RoboCasa under our current rollout budget, reaching 90.8% and 93.6%, with an 11.1x inference speedup; success continues to scale with self-exploration experience; learned skills transfer zero-shot, and clear robotic &quot;Aha Moments&quot; emerge. These results show that closed-loop harness self-evolution opens a scaling path for reliable physical intelligence.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-17 · <a href='https://huggingface.co/papers/2608.16590'>page</a> · <a href='https://arxiv.org/pdf/2608.16590'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SemComp-Bench: Benchmarking Semantic Task Completion in Video Generation</title>
-      <link>https://huggingface.co/papers/2608.17426</link>
-      <guid isPermaLink="false">arxiv:2608.17426</guid>
-      <pubDate>Thu, 20 Aug 2026 04:30:35 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Keyu Tu, Zhuowei Chen, Mengqi Huang, Yuxin Wang, Jiahao Zhu, Zhendong Mao, Yongdong Zhang, Hugging Face Daily Papers (curated)</p>
-<p>We introduce Semantic Task Completion Video Generation, an outcome-oriented video generation task. Under this formulation, success requires both achievement of the intended outcome and semantic grounding. Semantic grounding characterizes the correspondence between the reference image and the generated outcome in terms of high-level semantics relevant to the task. Evaluation focuses on the generated outcome and requires neither the presentation of a complete sequence of intermediate task steps nor conventional appearance consistency with the reference image. To support systematic evaluation, we construct SemComp-Data, an evaluation dataset covering six domains. Each instance comprises a reference image, a detailed instruction, a brief instruction, and an outcome-centric video clip. A scalable four-stage curation pipeline converts raw videos into standardized SemComp-Data instances. We further introduce SemComp-Bench, an evaluation protocol that uses a vision-language model (VLM) to answer structured binary questions. SemComp-Bench reports the OA Score and the GR Score for Outcome Achievement and Generation Reliability, respectively. Experiments on representative video generation models show that achieving intended outcomes while maintaining task-relevant semantic grounding in reference images remains challenging.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-18 · <a href='https://huggingface.co/papers/2608.17426'>page</a> · <a href='https://arxiv.org/pdf/2608.17426'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OmniScientist: An Omni-Modal Omni-Discipline AI Scientist</title>
-      <link>https://huggingface.co/papers/2608.13558</link>
-      <guid isPermaLink="false">arxiv:2608.13558</guid>
-      <pubDate>Thu, 20 Aug 2026 04:30:35 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Bobo Li, Hao Fei, Tianjie Ju, Mong-Li Lee, Wynne Hsu, Hugging Face Daily Papers (curated)</p>
-<p>Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workflow coverage alone does not provide access to the full evidence on which scientific discovery depends. Existing systems typically reason over text, code, labels, or precomputed summaries, leaving scientifically decisive spatial, temporal, cross-channel, and procedural relations unavailable to the agent. We introduce OmniScientist, an end-to-end, omni-modal AI scientist that conducts multidisciplinary research directly from heterogeneous raw evidence. A perception layer and 3 autonomous agents for ideation, experiment, and writeup operate within a deterministic pipeline, allowing observations to shape research questions, experimental decisions, and final claims throughout the research lifecycle. By running idea, rigour, and claim checks in code, the system enforces novelty screening, statistical validity, execution provenance, and numerical traceability. We evaluate OmniScientist on 36 real-data cases spanning 5 discipline families, 4 families of scientific evidence, and modalities including images, signals, audio, video, 3-D structures, trajectories, tables, formulae, and graphs. The system completes the full path from raw data to a compiled manuscript in all 36 cases and achieves a mean overall paper score of 6.3 with the reference reasoning backbone. In paired comparisons against a blind variant that receives only precomputed scalar features, direct perception improves all 7 evaluation dimensions and wins 85% of head-to-head judgments. These results show that lifecycle-wide perception is essential for evidence-grounded scientific discovery and provides a practical path toward broadly capable AI scientists.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-13 · <a href='https://huggingface.co/papers/2608.13558'>page</a> · <a href='https://arxiv.org/pdf/2608.13558'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Examining Human-Like Behaviors in LLMs: A Multi-Dimensional Analysis of Model Behaviors, User Factors, and System Prompts</title>
-      <link>https://machinelearning.apple.com/research/human-like-behaviors-llms</link>
-      <guid isPermaLink="false">apple_ml:158bcae259</guid>
-      <pubDate>Thu, 20 Aug 2026 04:30:35 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Large language models (LLMs) exhibit a wide range of human-like behaviors, from expressing thoughts and emotions, to engaging in relationship-building with users, to refusing requests and maintaining boundaries. Despite their prevalence, researchers and practitioners lack methods and empirical insights to make informed decisions about when and what types of human-like behaviors LLMs should exhibit. To fill this gap, we present a multi-dimensional analysis of the prevalence, potential effects, and controllability of these behaviors using LLM-as-a-judge and human evaluation. Across 21,000â¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://machinelearning.apple.com/research/human-like-behaviors-llms'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
