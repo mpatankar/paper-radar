@@ -5,8 +5,63 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Fri, 18 Sep 2026 08:39:24 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 08:26:10 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression</title>
+      <link>https://huggingface.co/papers/2609.19969</link>
+      <guid isPermaLink="false">arxiv:2609.19969</guid>
+      <pubDate>Sat, 19 Sep 2026 08:26:10 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CUHK, HKUST, Harvard, Peking U, Tsinghua, U Cambridge, U Michigan — (senior)</p>
+<p><b>Authors:</b> DeepSeek-AI, Anyi Xu, B. Li, Bangcai Lin, Bing Xue, BingCheng Xian, Bingzheng Xu, Bochao Wu, … <i>(+585 more)</i></p>
+<p>The widespread adoption of long-horizon agents has made model workloads increasingly input-heavy. Although prior work has substantially reduced the cost of long-context computation, prefill remains computationally expensive, and large KV caches continue to strain HBM and SSD capacity and data-transfer bandwidth. Together, these compute, storage, and bandwidth demands constitute the primary bottleneck to further lowering deployment costs. To address this challenge, we introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens. With its Causal Encoder-Decoder (CED) architecture, the model activates 16B parameters per token during decode but only 8B parameters during prefill, substantially improving cost efficiency for agentic workloads. To push the limits of KV cache compression, DeepSeek-V4.1-Flash combines cross-layer KV cache reuse in Compressed Sparse Attention 2 (CSA2) with FP4 KV caching. These designs reduce its global KV cache footprint (always in HBM) to 890 bytes per token, roughly 1/4 of the corresponding footprint of DeepSeek-V4-Flash. Further, through a dedicated deployment optimization known as SWA Bounded Replay, DeepSeek-V4.1-Flash reduces its persistent KV cache footprint (always on SSD or in host memory) to roughly 1/8 of that of DeepSeek-V4-Flash. Despite its much smaller KV cache footprint, the model delivers substantially better performance than the baseline. In addition, we streamline the DeepSeek-V4 architecture and introduce several efficient architectural extensions. We pretrain DeepSeek-V4.1-Flash on a multimodal corpus comprising 45T tokens and conduct comprehensive post-training, yielding strong performance across diverse text-based and multimodal agentic scenarios. Model checkpoints are available at https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-17 · <a href='https://huggingface.co/papers/2609.19969'>page</a> · <a href='https://arxiv.org/pdf/2609.19969'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>When EOS Tokens Disagree: Understanding Length Inflation in On-Policy Distillation</title>
+      <link>https://huggingface.co/papers/2609.20511</link>
+      <guid isPermaLink="false">arxiv:2609.20511</guid>
+      <pubDate>Sat, 19 Sep 2026 08:26:10 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Microsoft Research · <b>Tier-2 senior:</b> HKUST — (senior)</p>
+<p><b>Authors:</b> Yuxiao Yang, Tianrun Yu, Shangzhe Li, Kaixiang Zhao, Xuchao Zhang, Chetan Bansal, Huaxiu Yao, Taylor W. Killian, … <i>(+2 more)</i></p>
+<p>We study length inflation in on-policy distillation (OPD), where student responses can become excessively long and even exhaust the generation budget. We identify termination-token mismatch between base students and post-trained teachers as an important source of this behavior. Across Qwen3, Llama, and Gemma, the two models can place their stopping probability on different EOS tokens, even when their declared stopping sets are identical. This mismatch can suppress the student&#x27;s preferred termination action without reliably transferring the teacher-preferred alternative. We show that aligning the decoding stopping set alone is insufficient, while treating functionally equivalent EOS tokens as a shared semantic stopping action substantially mitigates mismatch-induced length inflation across all three model families. To further understand how termination behavior evolves over training, we study OPD across different K2-Horizon training stages. This stage-wise analysis shows that termination preferences can shift substantially during training, while also revealing a distinct length inflation late in the OPD run that persists beyond termination alignment. Together, these results identify termination mismatch as an important, but not exhaustive, source of OPD length dynamics. We release an implementation incorporating the proposed termination-handling corrections.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-17 · <a href='https://huggingface.co/papers/2609.20511'>page</a> · <a href='https://arxiv.org/pdf/2609.20511'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>An Empirical Study of Harness Design for Coding Agents</title>
+      <link>https://huggingface.co/papers/2609.20804</link>
+      <guid isPermaLink="false">arxiv:2609.20804</guid>
+      <pubDate>Sat, 19 Sep 2026 08:26:10 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers · <b>Tier-2 senior:</b> Peking U, U Toronto — (senior)</p>
+<p><b>Authors:</b> Run-Ze Fan, Zihao Zhang, Simin Ma, Yebowen Hu, Shouju Wang, Kaiqiang Song, Fei Liu, Hamed Zamani, … <i>(+2 more)</i></p>
+<p>Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic systems, leaving the effectiveness of individual components unclear. To enable component-level comparisons, we study this question with a lightweight coding harness whose execution loop is fixed while three components are varied: planning, action space, and context management. Across four models evaluated on SWE-Bench Verified and Terminal-Bench 2.1, we evaluate 176 matched settings spanning five context-management strategies, four context-window budgets, and targeted ablations of planning and action space. We find that: (1) Context management becomes increasingly valuable as the context-window budget tightens, with most of its benefit coming from preventing context-overflow failures. (2) Staging rule-based elision before LLM-based summarization provides the strongest overall efficiency among the context-management strategies, whereas making elided content recoverable adds machinery that models rarely use and yields no accuracy gain. (3) Planning shifts from an accuracy scaffold for weaker models to a cost saver for stronger models, with little change in accuracy. (4) Predefined tools improve performance for models with weaker bash proficiency, whereas bash-capable models can operate effectively with a bash-only interface and achieve substantially lower cost, especially on command-line-centric tasks. Trajectory-level analysis explains these effects: context management extends execution trajectories without substantially altering agent behavior, planning changes where trajectories stop, and the action space changes the granularity at which code is written. These findings inform model- and budget-aware harness design and provide a modular framework for evaluating future harness components.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-17 · <a href='https://huggingface.co/papers/2609.20804'>page</a> · <a href='https://arxiv.org/pdf/2609.20804'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Can MiniMax-H3 Reason About the Physical World? An Evaluation of Omni-Modal Generative Model</title>
+      <link>https://huggingface.co/papers/2609.18323</link>
+      <guid isPermaLink="false">arxiv:2609.18323</guid>
+      <pubDate>Sat, 19 Sep 2026 08:26:10 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Tsinghua, U Michigan — (senior)</p>
+<p><b>Authors:</b> Haoyu Zhao, Zihao Zhao, Tianyu Deng, Ziqin Xu, Zihao Zhang, Xudong Wang, Jinxiang Guo, Chen Gao, … <i>(+6 more)</i></p>
+<p>Recent Omni-Modal Generative Models (Omni-Models) have advanced content generation toward unified modeling of text, images, video, and audio. MiniMax-H3 exemplifies this transition by combining multimodal context understanding with joint audio-visual generation in a shared latent framework. Its unified architecture raises a fundamental question: Can multimodal alignment improve the model&#x27;s world reasoning, and what new evaluation paradigms do omni-modal inputs enable? To investigate this question, this work introduces a comprehensive evaluation framework organized around four complementary dimensions of physical world reasoning. Unlike existing evaluation frameworks for video generation and world models, which are often constrained by limited input modalities and evaluation settings where prompts closely match the target video content, our evaluation is specifically designed to exploit the multimodal inputs of Omni-Model. We construct a diverse set of novel tasks that require models to integrate complementary information across modalities. Specifically, we consider four scenarios, including implicit prompts paired with multiple frames, audio-image, prefix-videos, and audio-video inputs. Every single modality provides only partial evidence about the underlying event, requiring the model to jointly reason over the complementary semantic cues to infer latent event states and future dynamics. Across 517 evaluation instances, MiniMax-H3 achieves an overall success rate of 41.97%. Video-based Decision Reasoning yields the highest success rate at 56.00%, while Audio-based Disambiguation Reasoning is the weakest, reaching only 27.40%. These results indicate that effective multimodal integration remains key to fully exploiting the benefits of diverse input modalities. The project is available at https://github.com/gulucaptain/MiniMax-H3-Reason.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://huggingface.co/papers/2609.18323'>page</a> · <a href='https://arxiv.org/pdf/2609.18323'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Dynamically Scaled Activation Steering</title>
+      <link>https://machinelearning.apple.com/research/dynamically-scaled-activation-steering</link>
+      <guid isPermaLink="false">apple_ml:18ceb7a2b9</guid>
+      <pubDate>Sat, 19 Sep 2026 08:26:10 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Activation steering has emerged as a powerful method for guiding the behavior of generative models towards desired outcomes such as toxicity mitigation. However, most existing methods apply interventions uniformly across all inputs, degrading model performance when steering is unnecessary. We introduce Dynamically Scaled Activation Steering (DSAS), a method-agnostic steering framework that decouples when to steer from how to steer. DSAS adaptively modulates the strength of existing steering transformations across layers and inputs, intervening strongly only when undesired behavior is detectedâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-18 · <a href='https://machinelearning.apple.com/research/dynamically-scaled-activation-steering'>page</a></p>]]></description>
+    </item>
     <item>
       <title>FOCAL: Fine-Grained Optimal-Transport-Driven Contrastive Alignment of Language and ECGs with Waveform Enhancement</title>
       <link>https://arxiv.org/abs/2505.11939</link>
@@ -2226,71 +2281,6 @@
 <p><b>Authors:</b> Eunkyu Park, Wesley Hanwen Deng, Gunhee Kim, Motahhare Eslami, Maarten Sap</p>
 <p>Chain-of-Thought (CoT) prompting helps models think step by step. But naive CoT breaks down in visually grounded social tasks, where models must perceive, understand, and judge all at once; bridging perception with norm-grounded reasoning. Recent work has introduced structured reasoning for multi-turn agent planning and visual QA, decomposing tasks into sequential sub-goals. To extend this to single-shot multimodal social reasoning, we introduce Cognitive Chain-of-Thought (CoCoT), a reasoning framework that structures vision-language-model (VLM) reasoning through three cognitively inspired stages: Perception (extract grounded facts), Situation (infer situations), and Norm (applying social norms). Evaluation across multiple distinct tasks such as multimodal intent disambiguation, multimodal theory of mind, social commonsense reasoning, and safety instruction following, shows consistent improvements (5.9% to 4.6% on average). We further explore the utility of CoCoT for improving models&#x27; reasoning through training and show that supervised fine-tuning on CoCoT-structured traces yields 5-6% improvements without explicit CoCoT prompting at inference, demonstrating that models internalize the structured reasoning pattern rather than merely following instructions. We show that structuring model reasoning through cognitively grounded stages enhances interpretability and social alignment, laying the groundwork for more reliable multimodal systems.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2507.20409'>page</a> · <a href='https://arxiv.org/pdf/2507.20409'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Talk in Pieces, See in Whole: Disentangled and Hierarchical Representation Learning in Language-based Object Detection</title>
-      <link>https://arxiv.org/abs/2509.24192</link>
-      <guid isPermaLink="false">arxiv:2509.24192</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST, UC Berkeley — Donghyun Kim</p>
-<p><b>Authors:</b> Sojung An, Kwanyong Park, Yong Jae Lee, Donghyun Kim</p>
-<p>Vision-language models (VLMs) have advanced multimodal perception, demonstrated by open-vocabulary object detection with simple language queries. State-of-the-art VLMs still struggle to handle complex queries involving descriptive attributes and relational clauses. To address this problem, we propose restructuring linguistic representations according to the hierarchical relations within sentences for language-based object detection. A key insight is that textual tokens should be disentangled into core components-objects, attributes, and relations-and aggregated into hierarchically structured sentence-level representations. Building on this principle, we introduce the TaSe (Talk in Pieces, See in Whole) framework with three main contributions: (1) a hierarchical synthetic captioning dataset spanning three tiers from category names to descriptive sentences; (2) the three-component disentanglement module guided by a novel disentanglement loss function, transforms text embeddings into subspace compositions; and (3) aggregating disentangled components into hierarchically structured embeddings guided by the proposed hierarchical objectives. Experimental results under the OmniLabel benchmark show a 24% performance improvement, demonstrating the importance of linguistic compositionality.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2509.24192'>page</a> · <a href='https://arxiv.org/pdf/2509.24192'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OceanGym: A Benchmark Environment for Underwater Embodied Agents</title>
-      <link>https://arxiv.org/abs/2509.26536</link>
-      <guid isPermaLink="false">arxiv:2509.26536</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> U Edinburgh, U Washington — (senior)</p>
-<p><b>Authors:</b> Yida Xue, Mingjun Mao, Xiangyuan Ru, Yuqi Zhu, Baochang Ren, Shuofei Qiao, Mengru Wang, Shumin Deng, … <i>(+4 more)</i></p>
-<p>We introduce OceanGym, the first comprehensive benchmark for ocean underwater embodied agents, designed to advance AI in one of the most demanding real-world environments. Unlike terrestrial or aerial domains, underwater settings present extreme perceptual and decision-making challenges, including low visibility, dynamic ocean currents, making effective agent deployment exceptionally difficult. OceanGym encompasses eight realistic task domains and a unified agent framework driven by Multi-modal Large Language Models (MLLMs), which integrates perception, memory, and sequential decision-making. Agents are required to comprehend optical and sonar data, autonomously explore complex environments, and accomplish long-horizon objectives under these harsh conditions. Extensive experiments reveal substantial gaps between state-of-the-art MLLM-driven agents and human experts, highlighting the persistent difficulty of perception, planning, and adaptability in ocean underwater environments. By providing a high-fidelity, rigorously designed platform, OceanGym establishes a testbed for developing robust embodied AI and transferring these capabilities to real-world autonomous ocean underwater vehicles, marking a decisive step toward intelligent agents capable of operating in one of Earth&#x27;s last unexplored frontiers. The code and data are available at https://github.com/OceanGPT/OceanGym.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2509.26536'>page</a> · <a href='https://arxiv.org/pdf/2509.26536'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Aligning Agentic World Models via Knowledgeable Experience Learning</title>
-      <link>https://arxiv.org/abs/2601.13247</link>
-      <guid isPermaLink="false">arxiv:2601.13247</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <category>cs.MM</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> U Edinburgh — (senior)</p>
-<p><b>Authors:</b> Baochang Ren, Yunzhi Yao, Rui Sun, Shuofei Qiao, Ningyu Zhang, Huajun Chen</p>
-<p>Current Large Language Models (LLMs) exhibit a critical modal disconnect: they possess vast semantic knowledge but lack the procedural grounding to respect the immutable laws of the physical world. Consequently, while these agents implicitly function as world models, their simulations often suffer from physical hallucinations-generating plans that are logically sound but physically unexecutable. Existing alignment strategies predominantly rely on resource-intensive training or fine-tuning, which attempt to compress dynamic environmental rules into static model parameters. However, such parametric encapsulation is inherently rigid, struggling to adapt to the open-ended variability of physical dynamics without continuous, costly retraining. To bridge this gap, we introduce WorldMind, a framework that autonomously constructs a symbolic World Knowledge Repository by synthesizing environmental feedback. Specifically, it unifies Process Experience to enforce physical feasibility via prediction errors and Goal Experience to guide task optimality through successful trajectories. Experiments on EB-ALFRED and EB-Habitat demonstrate that WorldMind achieves superior performance compared to baselines with remarkable cross-model and cross-environment transferability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV, cs.LG, cs.MM · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2601.13247'>page</a> · <a href='https://arxiv.org/pdf/2601.13247'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond Pixels: Visual Metaphor Transfer via Schema-Driven Agentic Reasoning</title>
-      <link>https://arxiv.org/abs/2602.01335</link>
-      <guid isPermaLink="false">arxiv:2602.01335</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Peking U — Yu Xu</p>
-<p><b>Authors:</b> Yu Xu, Yuxin Zhang, Lin Gao, Oliver Deussen, Tong-Yee Lee, Fan Tang</p>
-<p>A visual metaphor constitutes a high-order form of human creativity, employing cross-domain semantic fusion to transform abstract concepts into impactful visual rhetoric. Despite the remarkable progress of generative AI, existing models remain largely confined to pixel-level instruction alignment and surface-level appearance preservation, failing to capture the underlying abstract logic necessary for genuine metaphorical generation. To bridge this gap, we introduce the task of Visual Metaphor Transfer (VMT), which challenges models to autonomously decouple the &quot;creative essence&quot; from a reference image and re-materialize that abstract logic onto a user-specified target subject. We propose a cognitive-inspired, multi-agent framework that operationalizes Conceptual Blending Theory (CBT) through a novel Schema Grammar (&quot;G&quot;). This structured representation decouples relational invariants from specific visual entities, providing a rigorous foundation for cross-domain logic re-instantiation. Our pipeline executes VMT through a collaborative system of specialized agents: a perception agent that distills the reference into a schema, a transfer agent that maintains generic space invariance to discover apt carriers, a generation agent for high-fidelity synthesis and a hierarchical diagnostic agent that mimics a professional critic, performing closed-loop backtracking to identify and rectify errors across abstract logic, component selection, and prompt encoding. Extensive experiments and human evaluations demonstrate that our method significantly outperforms SOTA baselines in metaphor consistency, analogy appropriateness, and visual creativity, paving the way for automated high-impact creative applications in advertising and media. Project page with source code and self-contained skills is at https://yuci-gpt.github.io/Beyond-Pixels/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://arxiv.org/abs/2602.01335'>page</a> · <a href='https://arxiv.org/pdf/2602.01335'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report</title>
-      <link>https://huggingface.co/papers/2608.15763</link>
-      <guid isPermaLink="false">arxiv:2608.15763</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> TaoLive AIGC LLM Team, Yuhan Sun, Wenhao Lin, Yongdong Luo, Yibo Hu, Meiguang Jin, Junfeng Ma, Weihang Pan, … <i>(+3 more)</i></p>
-<p>AI-powered digital avatar streamers must answer product questions, engage viewers, and execute marketing strategies in real time, demanding low latency, frequent strategy updates, and accurate yet effective responses. Evolvable Harnesses, whose Skills, Hooks, prompts, and tools can be updated independently of model weights, enable rapid iteration but expose a trade-off: large models adapt zero-shot yet are too slow, whereas compact models meet latency targets but overfit to fixed Harness configurations. We propose Harness-Aware Training (HAT), which trains compact models to adapt to changing Harnesses. Its key component, Harness-State Augmentation (HSA), applies task-preserving transformations to Skill identifiers and content, tool schemas, prompt structures, and Hook functions. Training proceeds in three stages: HSA-SFT learns reasoning and tool use from strong-model trajectories across diverse environments; General On-Policy Distillation restores generalization lost during SFT; and HSA-RL improves robustness to changing Harnesses through reinforcement learning in augmented environments. Across four evaluation sets, HAT achieves 94.8 on Live-Stream QA (base: 80.3; strongest general LLM: 93.0) and 94.6 on Harness-Variant QA (base: 75.4). Unlike Fixed-Harness SFT, which lowers IFEval by 7.7 points from the base model, HAT avoids this regression and reaches 83.5. On one NVIDIA H20 GPU, the optimized system delivers P50 and P95 latencies of 3.4 s and 8.1 s. Deployed in Taobao Live&#x27;s digital-avatar service, it also yields positive online A/B test results for GMV and item-page views.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-22 · <a href='https://huggingface.co/papers/2608.15763'>page</a> · <a href='https://arxiv.org/pdf/2608.15763'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
