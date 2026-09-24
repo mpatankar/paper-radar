@@ -5,8 +5,210 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Wed, 23 Sep 2026 08:58:58 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 08:55:09 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Enhancing the Non-Functional Quality Compliance of LLM-Generated Code through Quality-Aware Preference Learning</title>
+      <link>https://arxiv.org/abs/2503.09020</link>
+      <guid isPermaLink="false">arxiv:2503.09020</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.SE</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Michael R. Lyu</p>
+<p><b>Authors:</b> Liang Lu, Yuan Jiang, Christoph Treude, Jingyu Xiao, Xiaohong Su, Michael R. Lyu</p>
+<p>Large Language Models (LLMs) have been widely adopted in commercial code completion engines, significantly enhancing coding efficiency and productivity. However, even functionally correct LLM-generated code may exhibit non-functional quality issues that violate coding standards and best practices, such as poor style and limited maintainability. To address this, we propose a framework for quality-aware preference learning that guides LLMs toward generating criteria-compliant code. Our approach consists of three phases. First, we construct a dataset of paired criteria-violating and criteria-compliant samples, where each pair contains code exhibiting a specific non-functional quality issue and its repaired version that resolves the issue. Second, we design an adaptive token weighting mechanism to emphasize quality-sensitive code regions. Third, we introduce a hybrid optimization objective that combines ranking loss with language modeling loss and KL divergence to enable effective comparative optimization. Extensive experiments on DeepSeek-Coder and Qwen2.5-Coder show that our method substantially improves compliance with the targeted non-functional quality criteria while maintaining functional correctness, achieving a 75.7% relative increase in Quality Reciprocal Score (QRS) on MBPP-sanitized for Qwen2.5-Coder. Fine-tuning a 7B model requires less than three hours, indicating strong practical viability. Ablation studies and a user study further support the effectiveness of the proposed framework.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://arxiv.org/abs/2503.09020'>page</a> · <a href='https://arxiv.org/pdf/2503.09020'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AdaDim: Dimensionality Adaptation for SSL Representational Dynamics</title>
+      <link>https://arxiv.org/abs/2505.12576</link>
+      <guid isPermaLink="false">arxiv:2505.12576</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Ghassan AlRegib</p>
+<p><b>Authors:</b> Kiran Kokilepersaud, Mohit Prabhushankar, Ghassan AlRegib</p>
+<p>A key factor in effective Self-Supervised learning (SSL) is preventing dimensional collapse, where higher-dimensional representation spaces ($R$) span a lower-dimensional subspace. Therefore, SSL optimization strategies involve guiding a model to produce $R$ with a higher dimensionality ($H(R)$) through objectives that encourage decorrelation of features or sample uniformity in $R$. A higher $H(R)$ indicates that $R$ has greater feature diversity which is useful for generalization to downstream tasks. Alongside dimensionality optimization, SSL algorithms also utilize a projection head that maps $R$ into an embedding space $Z$. Recent work has characterized the projection head as a filter of noisy or irrelevant features from the SSL objective by reducing the mutual information $I(R;Z)$. Therefore, the current literature&#x27;s view is that a good SSL representation space should have a high $H(R)$ and a low $I(R;Z)$. However, this view of SSL is lacking in terms of an understanding of the underlying training dynamics that influences the relationship between both terms. Our analysis shows that the best performing SSL models do not have the highest $H(R)$ nor the lowest $I(R;Z)$, but effectively arrive at a balance between both. To take advantage of this analysis, we introduce AdaDim, a training strategy that leverages SSL training dynamics by adaptively balancing between increasing $H(R)$ through feature decorrelation and sample uniformity as well as gradual regularization of $I(R;Z)$ as training progresses. We show performance improvements of up to 3% over common SSL baselines despite our method not utilizing expensive techniques such as queues, clustering, predictor networks, or student-teacher architectures.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://arxiv.org/abs/2505.12576'>page</a> · <a href='https://arxiv.org/pdf/2505.12576'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LitPivot: Developing Well-Situated Research Ideas Through Dynamic Contextualization and Critique within the Literature Landscape</title>
+      <link>https://arxiv.org/abs/2604.02600</link>
+      <guid isPermaLink="false">arxiv:2604.02600</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.HC</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CMU, Harvard — (senior)</p>
+<p><b>Authors:</b> Hita Kambhamettu, Bhavana Dalvi Mishra, Andrew Head, Jonathan Bragg, Aakanksha Naik, Joseph Chee Chang, Pao Siangliulue</p>
+<p>Developing a novel research idea is hard. It must be distinct enough from prior work to claim a contribution while also building on it. This requires iteratively reviewing literature and refining an idea based on what a researcher reads; yet when an idea changes, the literature that matters often changes with it. Most tools offer limited support for this interplay: literature tools help researchers understand a fixed body of work, while ideation tools evaluate ideas against a static, pre-curated set of papers. We introduce literature-initiated pivots, a mechanism where engagement with literature prompts revision to a developing idea, and where that revision changes which literature is relevant. We operationalize this in LitPivot, where researchers concurrently draft and vet an idea. LitPivot dynamically retrieves clusters of papers relevant to a selected part of the idea and proposes literature-informed critiques for how to revise it. A lab study ($n{=}17$) shows researchers produced higher-rated ideas with stronger self-reported understanding of the literature space; an open-ended study ($n{=}5$) reveals how researchers use LitPivot to iteratively evolve their own ideas.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI · <b>arXiv submitted:</b> 2026-09-22 · <a href='https://arxiv.org/abs/2604.02600'>page</a> · <a href='https://arxiv.org/pdf/2604.02600'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Recall Ceiling of LLM Recommendation Reranking</title>
+      <link>https://arxiv.org/abs/2609.27953</link>
+      <guid isPermaLink="false">arxiv:2609.27953</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.IR</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhaohui Wang</p>
+<p><b>Authors:</b> Zhaohui Wang</p>
+<p>Some LLM-based recommendation rerankers are evaluated under an oracle protocol that guarantees the ground-truth item is present in the scored set, either by injecting it into the candidate list or by scoring it against sampled negatives. Across three primary Amazon datasets, we show that this protocol overestimates realistic NDCG@10 by 92--95%. The cause is a recall ceiling: realistic retrieval covers only 2--19% of relevant items at $K=100$ across eight datasets in three domains, imposing a deterministic upper bound on any closed-candidate reranker&#x27;s top-$k$ NDCG. Under leave-one-out evaluation, $\mathbb{E}[\mathrm{NDCG}@k] \leq \mathrm{Recall}@|W_π|$, where $W_π$ is the reranker&#x27;s candidate window. Under realistic retrieval, none of the tested optimisation strategies significantly improves over the collaborative-filtering baseline on our primary Amazon datasets. These strategies include prompt engineering, model scaling over a 168$\times$ parameter range, sequential models, supervised neural rerankers, LoRA fine-tuning, hybrid retrieval, score-aware prompting, and LLM+CF fusion. Text-aware retrieval increases recall on one dataset but does not improve end-to-end NDCG, while providing upstream CF scores mainly makes the LLM reproduce the CF order. We therefore propose the Recall-Aware Evaluation Protocol (RAEP): first classify the retrieval-recall regime, then evaluate reranking where the ceiling permits meaningful differentiation. In the low-recall regimes measured here, improving retrieval is more consequential than increasing reranker sophistication; this ordering need not hold in production systems with higher recall, richer features, or online feedback.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.IR, cs.LG · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://arxiv.org/abs/2609.27953'>page</a> · <a href='https://arxiv.org/pdf/2609.27953'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Introducing MentalHealthBench</title>
+      <link>https://openai.com/index/introducing-mentalhealthbench/</link>
+      <guid isPermaLink="false">openai:5ed3fc2197</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
+<p><b>Authors:</b> OpenAI</p>
+<p>MentalHealthBench is an expert-informed benchmark for evaluating helpful and safe AI responses across realistic mental health conversations.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/introducing-mentalhealthbench/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Advancing Private AI Compute with secure, server-side memory</title>
+      <link>https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</link>
+      <guid isPermaLink="false">deepmind:4c4abcff4a</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p>Introducing private, server-side memory to Private AI Compute for personal AI.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Gemini 3.8 text-to-speech says hello</title>
+      <link>https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/</link>
+      <guid isPermaLink="false">deepmind:be2314c629</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Offloaded inference for real-world physical AI robotics</title>
+      <link>https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/</link>
+      <guid isPermaLink="false">microsoft_research:c5e21f3362</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Ganesh Ananthanarayanan, Matthew Balkwill, Xenofon Foukas, Sanjeev Mehrotra, Bozidar Radunovic, Connor Settle, Ankit Verma, David White, … <i>(+4 more)</i></p>
+<p>&lt;p&gt;Robots are getting smarter, but how can their hardware match that growth? New Microsoft Research findings show that moving AI inference beyond the robot can improve task success, boost efficiency, and support more advanced physical AI workloads.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/&quot;&gt;Offloaded inference for real-world physical AI robotics&lt;/a&gt; appeared first on &lt;a href=&quot;https://www.microsoft.com/en-us/research&quot;&gt;Microsoft Research&lt;/a&gt;.&lt;/p&gt;</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks</title>
+      <link>https://huggingface.co/papers/2609.25804</link>
+      <guid isPermaLink="false">arxiv:2609.25804</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Wenbo Pan, Zhichao Liu, Shujie Liu, Jingying Zeng, Chin-Yew Lin, Xianfeng Tang, Yan Lu, Qi He, … <i>(+2 more)</i></p>
+<p>LLM agents increasingly work on long-horizon tasks, and the decisions they make along the way, such as which hypothesis to test or which implementation to build on, determine the outcome of the whole run. Making these decisions well is becoming a key capability for both engineering and research agents. We refer to the ability to make good long-horizon decisions as the taste of an agent. While existing benchmarks measure the end-to-end success of agents on long-horizon tasks, none of them measures the taste of an agent. To address this problem, we build Taste-Bench, a benchmark of taste questions constructed automatically from trajectories that agents produced in engineering and research tasks. Each question presents a decision fork, a point in a trajectory where multiple directions are available and one of them leads to a better outcome, and the evaluated model chooses among these directions without seeing what happens after the fork. We mine these forks automatically from parallel attempts at the same task and from detours inside a single trajectory, without needing human annotation. We evaluate frontier models on Taste-Bench and find that the best model answers only 59.7% of the questions correctly. We further find that forks whose deciding evidence appears later in the trajectory are much harder for every model, and that a larger reasoning budget does not improve the accuracy. Finally, we show that taste can be trained. We distill the judgment of a teacher that has seen the outcome into a student model, and the student makes better decisions on unseen tasks and improves end-to-end success on held-out SWE-bench Pro tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-22 · <a href='https://huggingface.co/papers/2609.25804'>page</a> · <a href='https://arxiv.org/pdf/2609.25804'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation</title>
+      <link>https://huggingface.co/papers/2609.24981</link>
+      <guid isPermaLink="false">arxiv:2609.24981</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiahao Lu, Minghao Yin, Wenbo Hu, Hengyu Liu, Wang Zhao, Sai-Kit Yeung, Ying Shan, Yuan Liu, … <i>(+1 more)</i></p>
+<p>We present a compact geometry-native latent space as a shared foundation for perception and generation. Visual generators can produce photorealistic frames without preserving a consistent 3D scene. We argue that this is not only a modeling problem but also a representation problem: generators typically evolve appearance-centric latents, while perception models recover geometry in a semantically rich space that encodes cross-view structure. Rather than adding geometry as another output, we reparameterize a geometry foundation model&#x27;s features into a compact latent space for generation. We realize this shift with the geometry-native autoencoder (GAE), whose latent is jointly decodable to appearance, depth, cameras, and point maps. With this state, a standard conditional flow supports diverse generation tasks. In controlled comparisons that hold the generator and training protocol fixed, replacing the latent with GAE improves both visual quality and independently measured 3D coherence: FVD falls by 12.7% and 23.1% on RealEstate10K and DL3DV, and camera-trajectory error is halved on RealEstate10K. Together, these results show that the latent space is central to geometry-consistent generation and can serve as a shared interface between perception and generation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.24981'>page</a> · <a href='https://arxiv.org/pdf/2609.24981'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>All-in-One Multilingual Scene Text Recognition with Script-aware Mixture-of-Experts</title>
+      <link>https://huggingface.co/papers/2609.24058</link>
+      <guid isPermaLink="false">arxiv:2609.24058</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xingsong Ye, Yongkun Du, Jiaxin Zhang, Zhixian Li, Chong Sun, Chen Li, Jing Lyu, Lianwen Jin, … <i>(+2 more)</i></p>
+<p>Multilingual scene text recognition (STR) remains challenging due to the scarcity of training data for most languages and the difficulty of serving diverse scripts within a single model. Existing solutions either deploy one recognizer per language, inflating cost and introducing error accumulation, or rely on massive vision-language models (VLMs) that are expensive and still inaccurate on many scripts. In this work, we pursue an all-in-one multilingual recognizer that is simpler than per-language experts, lighter than VLMs, and more accurate than both. First, we construct TextMuSS-10M, a large-scale synthetic scene text dataset spanning 10 scripts and 229 languages. It provides balanced and sufficient supervision where real data is unavailable. Second, we propose ScriptMoE, a script-aware Mixture-of-Experts (MoE) architecture. It shares a single visual encoder and replaces the dense decoder with a sparse MoE block, which consists of an image-level router dispatches each image to the top-2 script-aligned experts and a shared expert absorbs cross-script knowledge. Extensive experiments on our assembled TextMuSS-Bench (10 scripts, 10,899 images) show that ScriptMoE achieves the highest accuracy of 82.06%, outperforming the strongest STR baseline by 1.31%. On the CC-OCR end-to-end multilingual task, replacing only the recognizer in PP-OCRv5 with ScriptMoE lifts F1 score from 65.71% to 80.89%, slightly surpassing the best VLM (80.73%) at a fraction of the parameter count.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.24058'>page</a> · <a href='https://arxiv.org/pdf/2609.24058'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HappyWorld-Bench</title>
+      <link>https://huggingface.co/papers/2609.24308</link>
+      <guid isPermaLink="false">arxiv:2609.24308</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhiqi Bai, Junai Cai, Yixin Chen, Jingrun Du, Tao Feng, Wei Gong, Siyuan Huang, Xiao Lin, … <i>(+29 more)</i></p>
+<p>Evaluating world models requires assessing both the quality of the worlds they generate and their consistency and responsiveness under exploration, interaction, and modification. We introduce HappyWorld-Bench, a comprehensive benchmark that evaluates whether generated worlds remain reliable as agents interact with them. Our design is built on a hierarchical capability framework of six world capabilities (W1-W6), from generative construction to unified world modeling, instantiated across three independent evaluation tracks: video world models, spatial world models, and embodied world models. HappyWorld-Bench comprises 1,138 video prompts, 300 spatial scenes, and 254 embodied test cases. Across all three tracks, we build and operate HappyWorld-Arena to organize human A/B comparisons and derive model-level Elo ratings, which complement newly designed automated metrics that capture behavioral correctness. We evaluate 14 video world models, 9 spatial systems, and 8 embodied candidates under this unified framework. Results reveal remaining reliability gaps across all three tracks: video models exhibit reduced consistency during extended rollouts and revisits, spatial models achieve at best 70.14% placement accuracy and 73.33% edit execution, and embodied models struggle to preserve state across multi-step actions and respond precisely to altered action conditions and physical rules. These findings highlight the need to evaluate world models not only by visual quality, but also by state consistency and the correctness of their responses to actions and interventions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.24308'>page</a> · <a href='https://arxiv.org/pdf/2609.24308'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Past Frames the Future: Memory for Autoregressive Video Generation</title>
+      <link>https://huggingface.co/papers/2609.28466</link>
+      <guid isPermaLink="false">arxiv:2609.28466</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Harold Haodong Chen, Rongjin Guo, Disen Lan, Wen-Jie Shu, Hongfei Zhang, Hanzhe Hu, Shengtao Yao, Zixin Zhang, … <i>(+18 more)</i></p>
+<p>Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends visual sequences through causal rollouts. However, a fundamental bottleneck emerges: as the generated sequence expands, practical models must operate under strictly bounded context windows, storage, and computational limits. Consequently, critical historical information, e.g., entity identities, dynamic states, and intervention-induced causal changes, often leaves the active context long before its relevance diminishes. Overcoming this limitation and maintaining temporal persistence constitutes a fundamental memory problem. We present a systematic and comprehensive review of memory mechanisms in AR video generation. We formulate memory operationally as persistent historical information maintained across outer AR steps, capable of influencing future generation even after the originating evidence is no longer locally accessible. Building upon this unified framework, we organize the literature through five complementary perspectives: (I) Forms, the representational carriers of history; (II) Functions, the specific semantic and physical information requiring preservation; (III) Operations, the lifecycle of writing, reading, updating, managing, and integrating memory; (IV) Learning, the optimization of memory behaviors under closed-loop rollouts; and (V) Evaluation, the paradigms for diagnosing genuine memory capabilities. We conclude by synthesizing open challenges, including composable and resource-aware memory architectures, trustworthy state updating, self-rollout learning, and standardized evaluation. By bridging representations, mechanisms, and learning paradigms, this paper establishes a structured foundation for developing reliable, memory-conditioned video generation systems.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://huggingface.co/papers/2609.28466'>page</a> · <a href='https://arxiv.org/pdf/2609.28466'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Ovis-Embedding: Pushing the Frontiers of Universal Omni-Modal Embeddings</title>
+      <link>https://huggingface.co/papers/2609.25165</link>
+      <guid isPermaLink="false">arxiv:2609.25165</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Embedding Team, Hugging Face Daily Papers (curated)</p>
+<p>In this report, we introduce Ovis-Embedding, a state-of-the-art omni-modal embedding family built on native integration of text, image, video, and audio. Instead of assembling separate modality towers, Ovis-Embedding uses a shared multimodal backbone to encode different modalities in a common representation space. Specifically, we make three key advances: (1) native omni-modal initialization: we adopt a pretrained Qwen-omni model as the embedding backbone and adapt it through contrastive training with low-rank initialization; (2) data-centric omni-modal training: we construct a broad, high-quality corpus spanning text, images, video, audio, and interleaved multimodal data. To improve data efficiency, we introduce homogeneous-source sampling to form task-consistent batches with informative in-batch negatives; and (3) embedding-specific training and inference optimization: we use focal loss to emphasize hard examples and similarity-based Embedding Distillation to transfer fine-grained similarity structure from complementary experts. At inference time, low-rank feature decomposition enables compact embeddings with flexible dimensionality and minimal performance loss. Empirical evaluations show that the Ovis-Embedding family achieves state-of-the-art performance on MMEB-v3, MMEB-v2, MVEB, MAEB, and RTEB, demonstrating its effectiveness across text, image, video, and audio modalities. These results highlight the potential of unified omni-modal training to overcome modality fragmentation and advance universal embedding models for any-to-any retrieval.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.25165'>page</a> · <a href='https://arxiv.org/pdf/2609.25165'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Bellman Policy Optimization</title>
+      <link>https://huggingface.co/papers/2609.15987</link>
+      <guid isPermaLink="false">arxiv:2609.15987</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhuoqing Song, Haotian Xu, Xikun Zhang, Lidong Bing, Hugging Face Daily Papers (curated)</p>
+<p>Reinforcement learning with verifiable rewards (RLVR) improves the reasoning capabilities of large language models (LLMs). We introduce Bellman Policy Optimization (BPO), a critic-free method derived from Policy Mirror Descent (PMD). For autoregressive generation with terminal rewards, BPO uses the Bellman equations to reformulate PMD as a trajectory-level objective. The reformulation avoids estimating state values at intermediate states. We prove that it has the same unique optimal solution as the original PMD objective. We derive the practical BPO loss by approximating this objective. Its mismatch-correction weight is a smoothed ratio of complementary token probabilities. Experiments on mathematical reasoning benchmarks demonstrate the effectiveness of BPO.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-14 · <a href='https://huggingface.co/papers/2609.15987'>page</a> · <a href='https://arxiv.org/pdf/2609.15987'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models</title>
+      <link>https://huggingface.co/papers/2609.24657</link>
+      <guid isPermaLink="false">arxiv:2609.24657</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xiaoqiang Wang, Mengyang Xiong, Jun Dai, Bang Liu, Hugging Face Daily Papers (curated)</p>
+<p>Language models can be adapted by changing the computations applied to individual tokens. Quantum circuits offer one such approach, but evaluating wider circuits inside a large model can be computationally demanding. Here we introduce HyperQ, which adds token-conditioned quantum residual branches to a frozen masked-diffusion language model. A quantum residual branch is a module in each transformer block that reads a token&#x27;s hidden state, emits the coordinates of that token&#x27;s circuit, executes it, and adds the measured values back through a residual connection. The backbone remains frozen, and only the added branches are trained. Within each branch, a lightweight circuit hypernetwork emits token-specific rotation angles, coupling strengths, and measurement axes in a shared sparse circuit structure. The required expectation values have an exact classical expression whose evaluation cost grows linearly with the qubit count, enabling circuits from 16 to 64 qubits to be trained within a 1.1-billion-parameter backbone. Across downstream benchmarks, increasing circuit width raises the average score from 47.65 to 54.30. At 64 qubits, HyperQ exceeds the backbone and its low-rank-adapted counterpart by 4.71 and 3.67 points, respectively. HyperQ is fine-tuned on 20,000 prompt-response pairs, compared with 200,000 for the classical baselines. These findings support token-conditioned circuit emission as a tractable architectural approach to quantum-augmented language modelling.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.24657'>page</a> · <a href='https://arxiv.org/pdf/2609.24657'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>JEV-as-a-Judge: Accept When Confident, Escalate When Unsure</title>
+      <link>https://huggingface.co/papers/2609.26550</link>
+      <guid isPermaLink="false">arxiv:2609.26550</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yubo Li, Yidi Miao, Ramayya Krishnan, Rema Padman, Hugging Face Daily Papers (curated)</p>
+<p>LLM-as-a-judge enables evaluation across diverse tasks, but inference cost and confidence reliability become critical at scale. We study whether a decision-only judge can provide an economical first pass and identify when stronger evaluation is needed. Comparing jev-as-a-judge with sixteen generative and reward-model judges, with blinded human adjudication, we find it within three percentage points of a state-of-the-art LLM judge, our strongest comparator, on ordinary preference and evidence-grounded factuality at 0.36% of the comparator&#x27;s fee. Larger gaps arise when judgments require checking a derivation or resisting an elaborately written wrong answer. On several benchmarks, JEV&#x27;s gap to this comparator is concentrated in low-confidence decisions. A frozen cascade that accepts confident verdicts and escalates uncertain ones retains 99% of the comparator&#x27;s accuracy at lower cost.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-22 · <a href='https://huggingface.co/papers/2609.26550'>page</a> · <a href='https://arxiv.org/pdf/2609.26550'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>How to Guide Your Language Flow</title>
+      <link>https://machinelearning.apple.com/research/guide-language-flow</link>
+      <guid isPermaLink="false">apple_ml:e2e1979166</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>We introduce a new method to guide flow matching models. Our approach, which we call probe guidance, uses the frozen internal states of an existing diffusion model to construct a guidance signal. This works using a similar principle as autoguidance, but eliminates the need for an additional forward pass at inference time and provides a reliable path to ensure that the weak and strong model share similar dynamics. We apply and benchmark this method on continuous diffusion language models, where probe guidance sets a new state-of-the-art performance on unconditional generation. When applied to aâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://machinelearning.apple.com/research/guide-language-flow'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Learning to Find Proofs and Theorems by Learning to Refine Search Strategies: The Case of Loop Invariant Synthesis</title>
       <link>https://arxiv.org/abs/2205.14229</link>
@@ -2085,202 +2287,6 @@
 <p><b>Authors:</b> Haolei Xu, Xinyu Mei, Yuchen Yan, Rui Zhou, Wenqi Zhang, Weiming Lu, Yueting Zhuang, Yongliang Shen</p>
 <p>Large language model (LLM) steering has emerged as a promising paradigm for controlling model behavior at inference time through targeted manipulation of hidden states, offering a lightweight alternative to expensive retraining. However, existing steering frameworks suffer from critical limitations: computational inefficiency, limited extensibility, and restricted functionality that hinder both research progress and practical deployment. We present EasySteer, a unified framework for high-performance, extensible LLM steering built on vLLM. Our system features modular architecture with pluggable interfaces for both analysis-based and learning-based methods, fine-grained parameter control, pre-computed steering vectors for eight application domains, and an interactive demonstration system. Through deep integration with vLLM&#x27;s optimized inference engine, EasySteer achieves 10.8-22.3$\times$ speedup over existing frameworks. Extensive experiments demonstrate its effectiveness in overthinking mitigation, hallucination reduction, and other key applications. EasySteer transforms steering from research technique to production-ready capability, establishing critical infrastructure for deployable, controllable language models.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://arxiv.org/abs/2509.25175'>page</a> · <a href='https://arxiv.org/pdf/2509.25175'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>GPT-6 Astra: A new generation of intelligence</title>
-      <link>https://openai.com/index/gpt-6-astra/</link>
-      <guid isPermaLink="false">openai:c59c597501</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
-<p><b>Authors:</b> OpenAI</p>
-<p>Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/gpt-6-astra/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Introducing WeatherNext 3, our most advanced and accurate global weather AI model</title>
-      <link>https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/</link>
-      <guid isPermaLink="false">deepmind:56da2c8ef8</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>The ancient anaerobic pathways still at work inside our cells</title>
-      <link>https://arcinstitute.org/news/ancient-anaerobic-pathways</link>
-      <guid isPermaLink="false">arc_institute:54182da143</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>blog</category>
-      <category>biology</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Arc Institute</p>
-<p><b>Authors:</b> Arc Institute</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, biology · <a href='https://arcinstitute.org/news/ancient-anaerobic-pathways'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?</title>
-      <link>https://huggingface.co/papers/2609.01437</link>
-      <guid isPermaLink="false">arxiv:2609.01437</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yuhao Wu, Jingyuan Zhang, Jiajun Shi, Xinping Lei, Qingshui Gu, Yuxuan Zhang, Zexuan Wang, Chen He, … <i>(+12 more)</i></p>
-<p>As agents move from research prototypes to deployed tools, their capability increasingly depends on model-external execution infrastructure, commonly termed the agent harness. Changing this harness while holding model weights fixed can substantially alter task performance. Current agent evaluations typically report downstream performance under a chosen harness, leaving a model&#x27;s ability to develop the harness itself comparatively underexplored. We introduce HarnessDev, a benchmark that shifts the unit of evaluation from task outputs to runnable infrastructure. HarnessDev covers two stages. In Creation, the agent starts from a minimal seed and a small number of cases, then builds a complete execution system. In Evolution, it starts from its own created harness and iteratively revises it using downstream execution feedback, with the goal of improving benchmark performance. We then evaluate each constructed harness on capability (task success on held-out benchmarks) and efficiency (execution-token cost). The reported Creation results cover six creator LLMs, four domains, and five downstream benchmarks totaling 2,207 unique downstream instances, with hidden evaluation tasks withheld from development. We find that generated harnesses remain substantially behind mature human-engineered references on code and on search and research, while matching or exceeding the selected references on writing and machine-learning experimentation, with large variation in execution cost. Evolution produces some performance gains, but they are unstable and transfer only partially to held-out tasks. Experiments with a fixed runtime model further show that the gains depend strongly on the model executing the harness, indicating limited transfer across models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-01 · <a href='https://huggingface.co/papers/2609.01437'>page</a> · <a href='https://arxiv.org/pdf/2609.01437'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Aspire: Can Models Self-Evolve from Vague Goals?</title>
-      <link>https://huggingface.co/papers/2608.31111</link>
-      <guid isPermaLink="false">arxiv:2608.31111</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yuhao Wu, Jingyuan Zhang, Jiajun Shi, Yuxuan Zhang, Xinping Lei, Junting Zhou, Zexuan Wang, Yuchen Wu, … <i>(+14 more)</i></p>
-<p>Many important forms of human learning begin with a vague goal, such as &quot;become a better physicist&quot; or &quot;improve at research.&quot; Learners must interpret the goal, identify capability gaps, decide how to learn, and determine whether they have actually improved. In contrast, existing work on LLM self-evolution typically begins with tasks and evaluation metrics specified by humans, reducing self-evolution to optimizing an explicit objective rather than deciding what and how to learn. We introduce ASPIRE, a benchmark for vague-goal-driven self-evolution. ASPIRE provides only a natural-language capability goal while downstream evaluation tasks remain hidden. The agent must operationalize the goal by choosing data and update methods, constructing training and validation signals, and deciding when to evaluate. ASPIRE supports both model-weight and agent-harness evolution in a unified interactive environment and evaluates the resulting systems on a hidden, expert-authored set of 520 items spanning six goals. Our experiments show that vague goals redirect search effort toward goal interpretation. Current agents routinely complete training and harness-editing loops, but weight-level gains remain sparse and unstable, and the strongest evolved harness remains below the engineered Qwen-Agent reference. Agents often train on mismatched data and trust narrow self-evaluations, so local gains fail to transfer to hidden evaluation and continued search and training can erase earlier improvements.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-31 · <a href='https://huggingface.co/papers/2608.31111'>page</a> · <a href='https://arxiv.org/pdf/2608.31111'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes</title>
-      <link>https://huggingface.co/papers/2609.03796</link>
-      <guid isPermaLink="false">arxiv:2609.03796</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Chuyan Chen, Haoxing Chen, Kun Chen, Zhenglin Cheng, Long Cui, Ruishan Fang, Zhangxuan Gu, Zhicheng Huang, … <i>(+23 more)</i></p>
-<p>We introduce LLaDA-Image, a unified framework that pairs a 6B Diffusion Transformer (DiT) trained from scratch with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion language model backbone. Instead of relying heavily on paired image-text data from the beginning, we first build a strong visual generative prior through image-only pre-training and mid-training. The generation pipeline comprises 220M samples, 98 of which are real images. For efficient and scalable optimization, we use parameter-free RMSNorm throughout the DiT together with the Muon optimizer. The resulting unified model produces highly photorealistic images while accurately following fine-grained editing instructions. We further distill LLaDA-Image into LLaDA-Image-Turbo, enabling fast inference in 2-4 sampling steps. On Qwen-Image-Bench, LLaDA-Image achieves overall scores of 53.53 and 53.38 on the English and Chinese tracks, respectively, setting a new state-of-the-art among open-source models on both tracks. To support further research on capable and efficient generative models, we release our model weights, training code, and detailed recipes.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.03796'>page</a> · <a href='https://arxiv.org/pdf/2609.03796'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LatentPress: Context Compression Beyond Text and Vision</title>
-      <link>https://huggingface.co/papers/2609.01507</link>
-      <guid isPermaLink="false">arxiv:2609.01507</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zhengze Zhou, Hejian Sang, Hugging Face Daily Papers (curated)</p>
-<p>Compressed context is usually carried as human-readable text or as rendered images that must be decoded, even when its consumer is a language model. We introduce LatentPress, which writes conversational histories and long documents into a third representation: continuous memory tokens that a frozen decoder reads directly through its input-embedding interface, with no text reconstruction at inference. A small reader-matched writer compresses 4-16times while training only an adapter (4.2M-26.2M parameters, sim!0.1% of the decoder). On LongMemEval, LatentPress reaches 0.504 accuracy at 7.70times compression versus 0.490 for uncompressed evidence, outperforming text summaries (0.184) and OCR-based compression (0.426 to 0.312). On LongBench-QA, in-domain writers match or exceed raw-context reading at 4-8times compression, while 16times trails raw. Writing takes 43ms per conversation, roughly an order of magnitude faster than text summarization or OCR reconstruction, and reading is 5-9times faster than raw context or cached OCR. We validate the interface under two transfer settings, zero-shot from UltraChat to LongMemEval memory QA and from LongMemEval-derived QA to unseen LongBench document domains, establishing direct soft tokens as a practical machine-facing context interface beyond text and vision. The implementation of the experiments could be found at: https://github.com/xuyd16ai/context_softtoken_compress .</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-01 · <a href='https://huggingface.co/papers/2609.01507'>page</a> · <a href='https://arxiv.org/pdf/2609.01507'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Language Models Can Control Their Own Attention</title>
-      <link>https://huggingface.co/papers/2609.02737</link>
-      <guid isPermaLink="false">arxiv:2609.02737</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Namgyu Ho, Huzama Ahmad, Woosung Koh, Se-Young Yun, Tal Schuster, Cicero Nogueira dos Santos, Hugging Face Daily Papers (curated)</p>
-<p>Language models spend most of their attention on a small fraction of context, yet they read the entire KV cache to find the few tokens that matter. If the user asks about a previous detail in a 1M-token conversation, global attention layers must scan the full context to generate each token of the reply. A prominent approach mitigates this cost by pre-selecting relevant tokens via lightweight proxy scores, but this extrinsic scoring still incurs O(N) per step. We take an intrinsic approach motivated by the simple question: wouldn&#x27;t the model already know which parts of the context are relevant? To this end, we introduce Declarative Attention (DA), a protocol that elicits the model to declare where it needs to attend within its chain-of-thought, partitioning generation into three modes: &lt;global&gt; (full context), &lt;focus&gt; (a specific region), and &lt;local&gt; (recent output only). The inference engine parses these declarations like tool calls and skips most of the KV cache read. Under zero-shot evaluation across 15 long-context tasks, DA on off-the-shelf models (Gemma-4-31B, Qwen-3.6-27B) significantly reduces total attended tokens during decoding (52.0%, 31.1%) with modest accuracy drops (1.27pp, 2.75pp) that shrink with model scale. DA unlocks a new axis of sparse attention, with further potential under training-based methods that future work can explore.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://huggingface.co/papers/2609.02737'>page</a> · <a href='https://arxiv.org/pdf/2609.02737'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM</title>
-      <link>https://huggingface.co/papers/2609.04098</link>
-      <guid isPermaLink="false">arxiv:2609.04098</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Sergii Kozyrev, Davyd Maiboroda, Hugging Face Daily Papers (curated)</p>
-<p>Hybrid LLMs pair softmax attention with linear-attention layers such as Gated DeltaNet (GDN), whose recurrent state summarizes the context in fixed size. Early community 4-bit quantizations of Qwen3.8-27B (48 GDN layers, 16 attention layers) left the GDN block in 8- or 16-bit precision -- especially its decay and write-strength gates -- on the intuition that errors in a recurrence accumulate over long contexts. We test that intuition by building Minima: NVFP4 W4A4 on all 496 linear layers, GDN included. Across perplexity at 4K/32K, MMLU-Pro, GSM8K, AIME&#x27;25, GPQA-Diamond, LiveCodeBench, and RULER retrieval to 64K, Minima matches BF16 within seed noise (5-task average -0.52) while being the smallest (17.5 GiB) and fastest-prefill (+14-19%) recipe we compare, and its 32K perplexity gap shrinks with position. A four-part mechanism study explains why: (i) NVFP4&#x27;s 16-element block scaling localizes the residual stream&#x27;s extreme outliers, equalizing activation error across layer roles; (ii) the supposedly fragile gate projections are the least sensitive -- softplus/exponential and sigmoid parameterizations compress ~11% GEMM error to ~2% output error; (iii) the delta-rule recurrence holds injected noise at a flat plateau over 32K tokens and forgets a state impulse within hundreds of steps, because each write overwrites the state along the current key direction; (iv) the per-token quantization cost washes out with context instead of compounding. We also repair a global-scale mismatch that arises when per-module-calibrated NVFP4 checkpoints are served by kernels that fuse those modules into one GEMM, and show calibrated FP8 KV-cache scales are performance-free. The result: a practical recipe -- quantize everything, ship KV scales -- and a mechanistic account of why the recurrent half of a hybrid LLM is the easy half to quantize. Checkpoint: https://huggingface.co/minima-ai/mnma_qwen3.8_27b_nvfp4</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.04098'>page</a> · <a href='https://arxiv.org/pdf/2609.04098'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning</title>
-      <link>https://huggingface.co/papers/2609.03430</link>
-      <guid isPermaLink="false">arxiv:2609.03430</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Heng Wang, Jielin Qiu, Wenting Zhao, Cheng Qian, Liangwei Yang, Jiawei Han, Heng Ji, Silvio Savarese, … <i>(+3 more)</i></p>
-<p>Large language models achieve superior performance on tasks that require extended reasoning, but long chains of thought make the KV cache a severe memory bottleneck. Existing KV cache compression methods share one paradigm: score each cached token by some estimate of how much it will matter later, and keep the top-scoring ones. We show that the selection signal contributes almost nothing. Random Attention keeps the prompt and evicts uniformly at random within each attention head, computing no score at all; across four models and six reasoning tasks it matches the strongest prior evictor while serving 32-43% higher throughput than it in vLLM deployment. Controlled experiments explain this by showing that 1) the prompt is the fragile part of the cache, and most of the gap between selectors is just whether their selection signal happened to keep it; 2) the reasoning trace protects itself against eviction with redundancy at two levels, in the text (the model restates what it still needs as it works) and across attention heads (each keeps its own copy of the trace), so once the prompt is safe, a random draw retains enough copies of what the model still needs, and no score is required to pick them. Our code is publicly available at https://github.com/SalesforceAIResearch/Random-Attention.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.03430'>page</a> · <a href='https://arxiv.org/pdf/2609.03430'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Rethinking On-Policy Distillation of Large Language Models II: One Training Example</title>
-      <link>https://huggingface.co/papers/2609.04172</link>
-      <guid isPermaLink="false">arxiv:2609.04172</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zixuan Fu, Bingxiang He, Yuxin Zuo, Haohuan Huang, Jinqian Zhang, Ruhang Xiao, Cheng Qian, Qinyu Luo, … <i>(+6 more)</i></p>
-<p>On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of training data unclear. We examine this role at the data-minimal limit by training on a single query. One-shot OPD keeps improving for hundreds of steps and recovers most of full-data OPD&#x27;s gain across task domains and model families. We explain this result through the states visited during training and the rate at which the student aligns with the teacher. We measure state coverage, the fraction of the states full-data OPD visits that a query set&#x27;s rollouts reach. A single query already reaches \(71.5\%\), most of it within the first 100 steps. Adding semantically distinct queries raises coverage and validation accuracy together, until 16 queries reach \(98.9\%\) and match full-data training. Yet alignment slows at a similar pace whether OPD trains on one query or the whole dataset, and even a fixed set of states takes hundreds of steps to absorb. OPD is therefore data-overfed but algorithm-starved. Its rollouts quickly expose broad supervision, while the student absorbs that supervision increasingly slowly. The state-coverage result extends to multi-teacher OPD, where 16 semantically diverse queries per domain match full-data MOPD. As a further stress test, content-light templates and off-domain WildChat queries also approach the real-query baseline. Task content and induced state coverage can therefore come apart. We hope these findings direct future work toward the step efficiency of OPD, and prompt a re-examination of the data and the mechanisms behind its recent successes in frontier post-training.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-03 · <a href='https://huggingface.co/papers/2609.04172'>page</a> · <a href='https://arxiv.org/pdf/2609.04172'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Figure and Nscale Sign Strategic Partnership For Up to 100,000 GPUs on the NVIDIA Vera Rubin Platform</title>
-      <link>https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership</link>
-      <guid isPermaLink="false">figure_ai:6515ef54a0</guid>
-      <pubDate>Fri, 04 Sep 2026 08:22:30 GMT</pubDate>
-      <category>blog</category>
-      <category>robotics</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Figure AI</p>
-<p><b>Authors:</b> Figure AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, robotics · <a href='https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Proactive cyber defense for governments and enterprises</title>
-      <link>https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/</link>
-      <guid isPermaLink="false">deepmind:383dbcd782</guid>
-      <pubDate>Thu, 03 Sep 2026 08:26:53 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Introducing Gemini 3.8 Flash and 3.8 Flash Cyber</title>
-      <link>https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/</link>
-      <guid isPermaLink="false">deepmind:18ef68f776</guid>
-      <pubDate>Thu, 03 Sep 2026 08:26:53 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Why Jingtian Zhou is building high-resolution maps of the 3D genome</title>
-      <link>https://arcinstitute.org/news/jingtian-zhou-3d-genome</link>
-      <guid isPermaLink="false">arc_institute:82246574df</guid>
-      <pubDate>Thu, 03 Sep 2026 08:26:53 GMT</pubDate>
-      <category>blog</category>
-      <category>biology</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Arc Institute</p>
-<p><b>Authors:</b> Arc Institute</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, biology · <a href='https://arcinstitute.org/news/jingtian-zhou-3d-genome'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills</title>
-      <link>https://huggingface.co/papers/2609.02749</link>
-      <guid isPermaLink="false">arxiv:2609.02749</guid>
-      <pubDate>Thu, 03 Sep 2026 08:26:53 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Jianlyu Chen, Yuyang Hu, Hongjin Qian, Jiawei Liu, Wenqing Wei, Xiaolong Chen, Defu Lian, Zhicheng Dou, … <i>(+4 more)</i></p>
-<p>Autonomous agents are beginning to carry out machine-learning (ML) research end to end. These agents combine a model backbone with a harness for planning, execution, memory, and verification, but this architecture still leaves domain-specific know-how outside the agent. We call this missing layer operational knowledge, the know-how that separates knowing a method from making it work. That knowledge is not absent from the field. It appears in repositories and papers, but in forms written for human readers and too large to load during a task. Once distilled into compact, verified skills, this knowledge can be reused across tasks rather than rediscovered during each run.
-  We present DisCo, a skill-powered research agent that creates skills and uses them during research. Its distillation runs in two complementary forms: task-agnostic, condensing the field&#x27;s widely used repositories into reusable skills, and task-oriented, producing the skills a concrete task calls for. The former, applied across the open ecosystem, yields the AREX-Skill Library, with 5,000+ verified skills distilled from 1,000 widely used ML repositories and organized into 20 areas and 178 capability families. With the GPT-5.5 backbone, research harness, and downstream execution budget held fixed, the skill-equipped research agent scores 134.3% higher on MLE-bench, 34.4% higher on PaperBench, 9.2% higher on FrontierCS, and 14.0% higher on PassNet than the same agent without skills. These gains come from adding distilled operating context under that fixed setup.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://huggingface.co/papers/2609.02749'>page</a> · <a href='https://arxiv.org/pdf/2609.02749'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models</title>
-      <link>https://huggingface.co/papers/2609.02886</link>
-      <guid isPermaLink="false">arxiv:2609.02886</guid>
-      <pubDate>Thu, 03 Sep 2026 08:26:53 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junchao Huang, Guian Fang, Shengju Qian, Xianghao Kong, Zhuoran Zhao, Wei Huang, Yihua Du, Zixin Zhang, … <i>(+11 more)</i></p>
-<p>We introduce SolarWM, a fully open foundation for building interactive video world models from data preparation through long-horizon inference. Training across heterogeneous data sources and video backbones is challenging: datasets differ in temporal scale, camera geometry, visual quality, motion, and captioning styles, while video generators use distinct representations and architectures. Naive data mixing and model-specific implementations therefore produce inconsistent supervision and make results difficult to reproduce and compare. SolarWM addresses this coupling with a reconfigurable multi-source data engine and a backbone-native adaptation framework. The engine converts 1.43 million canonical clips from 10 datasets into a unified, frame-aligned contract covering visual observations, metric camera geometry, captions, quality metadata, selection decisions, and provenance, while decoupling source processing from mixture construction. Under shared camera-conditioning, training, and inference interfaces, we instantiate four 5B--33B models based on Wan2.2, LTX-2.5, and MiniMax-H3 while preserving their native representations and objectives. A unified three-stage recipe combines bidirectional adaptation, teacher-forced autoregressive initialization, and distribution matching distillation. The resulting causal models enable real-time interaction over rollouts ranging from minutes to hours after being trained on only 5s sequences. By releasing the resulting data, pipeline, recipes, weights, and framework, SolarWM provides a reproducible and extensible foundation for interactive world-model research.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://huggingface.co/papers/2609.02886'>page</a> · <a href='https://arxiv.org/pdf/2609.02886'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction</title>
-      <link>https://huggingface.co/papers/2609.02783</link>
-      <guid isPermaLink="false">arxiv:2609.02783</guid>
-      <pubDate>Thu, 03 Sep 2026 08:26:53 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yuling Shi, Zhensu Sun, Junsen Dong, Chengcheng Wan, David Lo, Xiaodong Gu, Hugging Face Daily Papers (curated)</p>
-<p>Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands of dollars, a price paid repeatedly across iterative development cycles. Prior efforts, centered on benchmark distillation, reduce the number of evaluation tasks but leave the cost of executing each retained task untouched. In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task. Our key insight is that an agent&#x27;s final outcome is often evident from its intermediate behavior well before execution completes. We instantiate this idea in EarlyEval, a lightweight framework that trains a pair of LightGBM success and failure classifiers over behavioral, textual, and reference-solution features, and halts an agent run the moment either classifier crosses a calibrated confidence threshold, adding negligible per-step overhead. Across three benchmarks, SWE-bench Verified, TerminalBench, and Toolathlon, EarlyEval can eliminate 13%-26% of agent steps and up to 44.1% input tokens and 29.4% output tokens at 89%-97% prediction accuracy, while perturbing per-agent resolve rates by only one to two percentage points on average.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-02 · <a href='https://huggingface.co/papers/2609.02783'>page</a> · <a href='https://arxiv.org/pdf/2609.02783'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

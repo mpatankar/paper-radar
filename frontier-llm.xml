@@ -5,8 +5,109 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Wed, 23 Sep 2026 08:58:58 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 08:55:09 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Enhancing the Non-Functional Quality Compliance of LLM-Generated Code through Quality-Aware Preference Learning</title>
+      <link>https://arxiv.org/abs/2503.09020</link>
+      <guid isPermaLink="false">arxiv:2503.09020</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.SE</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Michael R. Lyu</p>
+<p><b>Authors:</b> Liang Lu, Yuan Jiang, Christoph Treude, Jingyu Xiao, Xiaohong Su, Michael R. Lyu</p>
+<p>Large Language Models (LLMs) have been widely adopted in commercial code completion engines, significantly enhancing coding efficiency and productivity. However, even functionally correct LLM-generated code may exhibit non-functional quality issues that violate coding standards and best practices, such as poor style and limited maintainability. To address this, we propose a framework for quality-aware preference learning that guides LLMs toward generating criteria-compliant code. Our approach consists of three phases. First, we construct a dataset of paired criteria-violating and criteria-compliant samples, where each pair contains code exhibiting a specific non-functional quality issue and its repaired version that resolves the issue. Second, we design an adaptive token weighting mechanism to emphasize quality-sensitive code regions. Third, we introduce a hybrid optimization objective that combines ranking loss with language modeling loss and KL divergence to enable effective comparative optimization. Extensive experiments on DeepSeek-Coder and Qwen2.5-Coder show that our method substantially improves compliance with the targeted non-functional quality criteria while maintaining functional correctness, achieving a 75.7% relative increase in Quality Reciprocal Score (QRS) on MBPP-sanitized for Qwen2.5-Coder. Fine-tuning a 7B model requires less than three hours, indicating strong practical viability. Ablation studies and a user study further support the effectiveness of the proposed framework.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://arxiv.org/abs/2503.09020'>page</a> · <a href='https://arxiv.org/pdf/2503.09020'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Recall Ceiling of LLM Recommendation Reranking</title>
+      <link>https://arxiv.org/abs/2609.27953</link>
+      <guid isPermaLink="false">arxiv:2609.27953</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.IR</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Zhaohui Wang</p>
+<p><b>Authors:</b> Zhaohui Wang</p>
+<p>Some LLM-based recommendation rerankers are evaluated under an oracle protocol that guarantees the ground-truth item is present in the scored set, either by injecting it into the candidate list or by scoring it against sampled negatives. Across three primary Amazon datasets, we show that this protocol overestimates realistic NDCG@10 by 92--95%. The cause is a recall ceiling: realistic retrieval covers only 2--19% of relevant items at $K=100$ across eight datasets in three domains, imposing a deterministic upper bound on any closed-candidate reranker&#x27;s top-$k$ NDCG. Under leave-one-out evaluation, $\mathbb{E}[\mathrm{NDCG}@k] \leq \mathrm{Recall}@|W_π|$, where $W_π$ is the reranker&#x27;s candidate window. Under realistic retrieval, none of the tested optimisation strategies significantly improves over the collaborative-filtering baseline on our primary Amazon datasets. These strategies include prompt engineering, model scaling over a 168$\times$ parameter range, sequential models, supervised neural rerankers, LoRA fine-tuning, hybrid retrieval, score-aware prompting, and LLM+CF fusion. Text-aware retrieval increases recall on one dataset but does not improve end-to-end NDCG, while providing upstream CF scores mainly makes the LLM reproduce the CF order. We therefore propose the Recall-Aware Evaluation Protocol (RAEP): first classify the retrieval-recall regime, then evaluate reranking where the ceiling permits meaningful differentiation. In the low-recall regimes measured here, improving retrieval is more consequential than increasing reranker sophistication; this ordering need not hold in production systems with higher recall, richer features, or online feedback.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.IR, cs.LG · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://arxiv.org/abs/2609.27953'>page</a> · <a href='https://arxiv.org/pdf/2609.27953'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks</title>
+      <link>https://huggingface.co/papers/2609.25804</link>
+      <guid isPermaLink="false">arxiv:2609.25804</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Wenbo Pan, Zhichao Liu, Shujie Liu, Jingying Zeng, Chin-Yew Lin, Xianfeng Tang, Yan Lu, Qi He, … <i>(+2 more)</i></p>
+<p>LLM agents increasingly work on long-horizon tasks, and the decisions they make along the way, such as which hypothesis to test or which implementation to build on, determine the outcome of the whole run. Making these decisions well is becoming a key capability for both engineering and research agents. We refer to the ability to make good long-horizon decisions as the taste of an agent. While existing benchmarks measure the end-to-end success of agents on long-horizon tasks, none of them measures the taste of an agent. To address this problem, we build Taste-Bench, a benchmark of taste questions constructed automatically from trajectories that agents produced in engineering and research tasks. Each question presents a decision fork, a point in a trajectory where multiple directions are available and one of them leads to a better outcome, and the evaluated model chooses among these directions without seeing what happens after the fork. We mine these forks automatically from parallel attempts at the same task and from detours inside a single trajectory, without needing human annotation. We evaluate frontier models on Taste-Bench and find that the best model answers only 59.7% of the questions correctly. We further find that forks whose deciding evidence appears later in the trajectory are much harder for every model, and that a larger reasoning budget does not improve the accuracy. Finally, we show that taste can be trained. We distill the judgment of a teacher that has seen the outcome into a student model, and the student makes better decisions on unseen tasks and improves end-to-end success on held-out SWE-bench Pro tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-22 · <a href='https://huggingface.co/papers/2609.25804'>page</a> · <a href='https://arxiv.org/pdf/2609.25804'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>All-in-One Multilingual Scene Text Recognition with Script-aware Mixture-of-Experts</title>
+      <link>https://huggingface.co/papers/2609.24058</link>
+      <guid isPermaLink="false">arxiv:2609.24058</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xingsong Ye, Yongkun Du, Jiaxin Zhang, Zhixian Li, Chong Sun, Chen Li, Jing Lyu, Lianwen Jin, … <i>(+2 more)</i></p>
+<p>Multilingual scene text recognition (STR) remains challenging due to the scarcity of training data for most languages and the difficulty of serving diverse scripts within a single model. Existing solutions either deploy one recognizer per language, inflating cost and introducing error accumulation, or rely on massive vision-language models (VLMs) that are expensive and still inaccurate on many scripts. In this work, we pursue an all-in-one multilingual recognizer that is simpler than per-language experts, lighter than VLMs, and more accurate than both. First, we construct TextMuSS-10M, a large-scale synthetic scene text dataset spanning 10 scripts and 229 languages. It provides balanced and sufficient supervision where real data is unavailable. Second, we propose ScriptMoE, a script-aware Mixture-of-Experts (MoE) architecture. It shares a single visual encoder and replaces the dense decoder with a sparse MoE block, which consists of an image-level router dispatches each image to the top-2 script-aligned experts and a shared expert absorbs cross-script knowledge. Extensive experiments on our assembled TextMuSS-Bench (10 scripts, 10,899 images) show that ScriptMoE achieves the highest accuracy of 82.06%, outperforming the strongest STR baseline by 1.31%. On the CC-OCR end-to-end multilingual task, replacing only the recognizer in PP-OCRv5 with ScriptMoE lifts F1 score from 65.71% to 80.89%, slightly surpassing the best VLM (80.73%) at a fraction of the parameter count.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.24058'>page</a> · <a href='https://arxiv.org/pdf/2609.24058'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HappyWorld-Bench</title>
+      <link>https://huggingface.co/papers/2609.24308</link>
+      <guid isPermaLink="false">arxiv:2609.24308</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhiqi Bai, Junai Cai, Yixin Chen, Jingrun Du, Tao Feng, Wei Gong, Siyuan Huang, Xiao Lin, … <i>(+29 more)</i></p>
+<p>Evaluating world models requires assessing both the quality of the worlds they generate and their consistency and responsiveness under exploration, interaction, and modification. We introduce HappyWorld-Bench, a comprehensive benchmark that evaluates whether generated worlds remain reliable as agents interact with them. Our design is built on a hierarchical capability framework of six world capabilities (W1-W6), from generative construction to unified world modeling, instantiated across three independent evaluation tracks: video world models, spatial world models, and embodied world models. HappyWorld-Bench comprises 1,138 video prompts, 300 spatial scenes, and 254 embodied test cases. Across all three tracks, we build and operate HappyWorld-Arena to organize human A/B comparisons and derive model-level Elo ratings, which complement newly designed automated metrics that capture behavioral correctness. We evaluate 14 video world models, 9 spatial systems, and 8 embodied candidates under this unified framework. Results reveal remaining reliability gaps across all three tracks: video models exhibit reduced consistency during extended rollouts and revisits, spatial models achieve at best 70.14% placement accuracy and 73.33% edit execution, and embodied models struggle to preserve state across multi-step actions and respond precisely to altered action conditions and physical rules. These findings highlight the need to evaluate world models not only by visual quality, but also by state consistency and the correctness of their responses to actions and interventions.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.24308'>page</a> · <a href='https://arxiv.org/pdf/2609.24308'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Bellman Policy Optimization</title>
+      <link>https://huggingface.co/papers/2609.15987</link>
+      <guid isPermaLink="false">arxiv:2609.15987</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhuoqing Song, Haotian Xu, Xikun Zhang, Lidong Bing, Hugging Face Daily Papers (curated)</p>
+<p>Reinforcement learning with verifiable rewards (RLVR) improves the reasoning capabilities of large language models (LLMs). We introduce Bellman Policy Optimization (BPO), a critic-free method derived from Policy Mirror Descent (PMD). For autoregressive generation with terminal rewards, BPO uses the Bellman equations to reformulate PMD as a trajectory-level objective. The reformulation avoids estimating state values at intermediate states. We prove that it has the same unique optimal solution as the original PMD objective. We derive the practical BPO loss by approximating this objective. Its mismatch-correction weight is a smoothed ratio of complementary token probabilities. Experiments on mathematical reasoning benchmarks demonstrate the effectiveness of BPO.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-14 · <a href='https://huggingface.co/papers/2609.15987'>page</a> · <a href='https://arxiv.org/pdf/2609.15987'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models</title>
+      <link>https://huggingface.co/papers/2609.24657</link>
+      <guid isPermaLink="false">arxiv:2609.24657</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xiaoqiang Wang, Mengyang Xiong, Jun Dai, Bang Liu, Hugging Face Daily Papers (curated)</p>
+<p>Language models can be adapted by changing the computations applied to individual tokens. Quantum circuits offer one such approach, but evaluating wider circuits inside a large model can be computationally demanding. Here we introduce HyperQ, which adds token-conditioned quantum residual branches to a frozen masked-diffusion language model. A quantum residual branch is a module in each transformer block that reads a token&#x27;s hidden state, emits the coordinates of that token&#x27;s circuit, executes it, and adds the measured values back through a residual connection. The backbone remains frozen, and only the added branches are trained. Within each branch, a lightweight circuit hypernetwork emits token-specific rotation angles, coupling strengths, and measurement axes in a shared sparse circuit structure. The required expectation values have an exact classical expression whose evaluation cost grows linearly with the qubit count, enabling circuits from 16 to 64 qubits to be trained within a 1.1-billion-parameter backbone. Across downstream benchmarks, increasing circuit width raises the average score from 47.65 to 54.30. At 64 qubits, HyperQ exceeds the backbone and its low-rank-adapted counterpart by 4.71 and 3.67 points, respectively. HyperQ is fine-tuned on 20,000 prompt-response pairs, compared with 200,000 for the classical baselines. These findings support token-conditioned circuit emission as a tractable architectural approach to quantum-augmented language modelling.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-21 · <a href='https://huggingface.co/papers/2609.24657'>page</a> · <a href='https://arxiv.org/pdf/2609.24657'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>JEV-as-a-Judge: Accept When Confident, Escalate When Unsure</title>
+      <link>https://huggingface.co/papers/2609.26550</link>
+      <guid isPermaLink="false">arxiv:2609.26550</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yubo Li, Yidi Miao, Ramayya Krishnan, Rema Padman, Hugging Face Daily Papers (curated)</p>
+<p>LLM-as-a-judge enables evaluation across diverse tasks, but inference cost and confidence reliability become critical at scale. We study whether a decision-only judge can provide an economical first pass and identify when stronger evaluation is needed. Comparing jev-as-a-judge with sixteen generative and reward-model judges, with blinded human adjudication, we find it within three percentage points of a state-of-the-art LLM judge, our strongest comparator, on ordinary preference and evidence-grounded factuality at 0.36% of the comparator&#x27;s fee. Larger gaps arise when judgments require checking a derivation or resisting an elaborately written wrong answer. On several benchmarks, JEV&#x27;s gap to this comparator is concentrated in low-confidence decisions. A frozen cascade that accepts confident verdicts and escalates uncertain ones retains 99% of the comparator&#x27;s accuracy at lower cost.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-22 · <a href='https://huggingface.co/papers/2609.26550'>page</a> · <a href='https://arxiv.org/pdf/2609.26550'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>How to Guide Your Language Flow</title>
+      <link>https://machinelearning.apple.com/research/guide-language-flow</link>
+      <guid isPermaLink="false">apple_ml:e2e1979166</guid>
+      <pubDate>Thu, 24 Sep 2026 08:55:09 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>We introduce a new method to guide flow matching models. Our approach, which we call probe guidance, uses the frozen internal states of an existing diffusion model to construct a guidance signal. This works using a similar principle as autoguidance, but eliminates the need for an additional forward pass at inference time and provides a reliable path to ensure that the weak and strong model share similar dynamics. We apply and benchmark this method on continuous diffusion language models, where probe guidance sets a new state-of-the-art performance on unconditional generation. When applied to aâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://machinelearning.apple.com/research/guide-language-flow'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Learning to Find Proofs and Theorems by Learning to Refine Search Strategies: The Case of Loop Invariant Synthesis</title>
       <link>https://arxiv.org/abs/2205.14229</link>
@@ -2198,109 +2299,6 @@
 <p><b>Authors:</b> Shaojie Zhu, Zhaobin Wang, Chengxiang Zhuo, Hui Lu, Bo Hu, Zang Li</p>
 <p>In the past two years, the outstanding performance of ChatGPT in multilingual and multitasking has led to large language models (LLMs) attracting widespread attention. However, restricted by expensive costs, many studies have to focus on the ability of only one major language. How can we quickly improve the model&#x27;s capabilities in new languages without reducing its original capabilities under limited data and computing power? In this work, we focus on improving the Chinese mathematical reasoning capability based on Llama-2-13B, which is weak in Chinese mathematical reasoning. We proposed the Mathematical Chain of Thought method (Olapa-MCoT). First, we propose Similarity RRHF (SimRRHF), which adds the constraint of model optimization direction by introducing similarity loss based on RRHF. Furthermore, the novelty Incorrect Data Relearning (IDRL) method is designed, which improves the model&#x27;s ability to learn difficult knowledge. The experiment achieves significant performance, with the accuracy of Chinese mathematical reasoning up to 50%, a 36% rise compared to Llama-2-13B-chat. In addition, the accuracy of English reasoning ability also increased by nearly 4%. It is worth mentioning that our method can be applied to any language major LLMs.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.HC · <b>arXiv submitted:</b> 2026-08-25 · <a href='https://arxiv.org/abs/2312.17535'>page</a> · <a href='https://arxiv.org/pdf/2312.17535'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>EchoWM: Open and Enterable Omnimodal World Models</title>
-      <link>https://huggingface.co/papers/2608.23189</link>
-      <guid isPermaLink="false">arxiv:2608.23189</guid>
-      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Songchun Zhang, Yaowei Li, Junhao Zhuang, Weiyang Jin, Haoyu Wang, Xin Lu, Yilang Sun, Shiyi Zhang, … <i>(+15 more)</i></p>
-<p>We present EchoWM, an omnimodal world model for enterable generative media that responds to continuous navigation while jointly generating 720p video, environmental sound, music and speech. We organize interaction around camera intent: in first-person scenes, it specifies observer motion, while in third-person scenes, camera--character dynamics are learned from data without view-specific controllers. Discrete commands and continuous poses are mapped to a shared metric-scale relative 6-DoF trajectory, with dataset-level calibration preserving motion magnitude across heterogeneous data. To jointly learn audio-visual generation and trajectory control, we construct a complementary data engine and adopt progressive training followed by autoregressive post-training for long-horizon generation. Extensive evaluations show that \model achieves strong trajectory following and high visual quality on public world-model benchmarks, supporting both first- and third-person interaction across varied subjects, and maintaining synchronized environmental sound and speech over long-horizon generation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-24 · <a href='https://huggingface.co/papers/2608.23189'>page</a> · <a href='https://arxiv.org/pdf/2608.23189'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Unlocking the Potential of Image Editing via Concept Scaling and Dense Supervision</title>
-      <link>https://huggingface.co/papers/2608.16812</link>
-      <guid isPermaLink="false">arxiv:2608.16812</guid>
-      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Long Cui, Xiaoqian Liu, Qi Qin, Yi Xin, Tao Lin, Jianguo Li, Linfeng Zhang, Hugging Face Daily Papers (curated)</p>
-<p>Existing image editing frameworks predominantly follow the training paradigm of text-to-image diffusion models. However, extending this paradigm to image editing highlights two inherent discrepancies, specifically, the insufficient attention to edit concept granularity and the training inefficiency caused by sparse supervision signals. To address these issues, we establish a comprehensive hierarchical taxonomy featuring over 1,000 fine-grained edit concepts and build ConceptEdit-12M, a massive dataset of 12 million high-quality editing pairs via an improved synthesis framework. This library-driven approach effectively rectifies the distribution collapse of generated data while ensuring high data fidelity. Furthermore, we propose a dense supervision training strategy that synthesizes multiple non-interfering concepts into single image pairs. By providing richer learning signals, this strategy significantly enhances both training efficiency and overall model performance. Training results validate our strategy, significantly outperforming prior works. Finally, we present ConceptEdit-Bench, a granular evaluation suite designed to diagnose model capabilities across a vast array of real-world scenarios.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-17 · <a href='https://huggingface.co/papers/2608.16812'>page</a> · <a href='https://arxiv.org/pdf/2608.16812'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MobilePA-Bench: Benchmarking Mobile Planner Agents on Complex Real-World Tasks</title>
-      <link>https://huggingface.co/papers/2608.23035</link>
-      <guid isPermaLink="false">arxiv:2608.23035</guid>
-      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yi Zhu, Xiongwei Wu, Qiyi Wang, Tingyu Qu, Jiajun Liu, Sihan Cao, Long Chen, Weigao Sun, … <i>(+4 more)</i></p>
-<p>As on-device LLM agents evolve into personal copilots, the mobile operating system has become a key testbed for this paradigm, making rigorous capability evaluation essential. Yet existing benchmarks fall into two camps, each with a critical blind spot: GUI-centric benchmarks test surface-level screen manipulation while overlooking background tool use and long-horizon planning, whereas static function-calling benchmarks rely on offline API matching that is detached from real runtime constraints. To close this gap, we present MobilePA-Bench, an interactive, stateful, and tool-centric benchmark for evaluating the tool-calling and planning abilities of mobile planning agents. MobilePA-Bench runs on an executable sandbox that maintains live application databases and returns structured feedback, spanning 13 functional domains and 212 realistic mobile tools. Beyond basic tool use, it evaluates a central planning agent along three advanced dimensions: (1)~Sub-agent Collaboration---decomposing a complex task and delegating specialized work to capable sub-agents; (2)~Memory Usage---recalling stored memories, user profiles, and past preferences to resolve implicit requests; and (3)~Skill Usage---invoking pre-packaged composite skills instead of planning every step from scratch. Extensive experiments show that current frontier LLMs remain unreliable in mobile settings: performance drops sharply under strict tool ordering, permission limits, and unexpected runtime errors. By pairing an interactive function-calling sandbox with evidence-based verification, MobilePA-Bench serves as both a practical diagnostic benchmark and an interactive foundation for agentic reinforcement learning---accelerating the development of dependable mobile agents.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-24 · <a href='https://huggingface.co/papers/2608.23035'>page</a> · <a href='https://arxiv.org/pdf/2608.23035'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report</title>
-      <link>https://huggingface.co/papers/2608.24053</link>
-      <guid isPermaLink="false">arxiv:2608.24053</guid>
-      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junjie Zhou, Ke Mei, Lei Li, Tianyi Wang, Fengyun Rao, Jing Lyu, Hugging Face Daily Papers (curated)</p>
-<p>Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendation, classification, and agentic systems. In this report, we present WeMM-Embedding, a family of universal multimodal embedding models supporting text, images, videos, visual documents, and arbitrarily interleaved multimodal inputs with flexible output dimensions. The family comprises 2B, 4B, and 9B variants and is trained in two stages: a large-scale multimodal alignment stage, followed by a refinement stage using curated data, fine-grained relevance supervision, and cross-scale knowledge transfer. Across extensive evaluations, WeMM-Embedding achieves leading performance on multiple public benchmarks. Notably, the 2B variant already surpasses the previously leading 8B open-source baseline on MMEB-v2, while the 9B variant further achieves a new state-of-the-art overall score of 80.6. WeMM-Embedding also demonstrates strong practical performance across WeChat applications, with substantial gains on a 26-task in-house benchmark and consistent improvements across 14 online A/B tests. It has been deployed at scale across recommendation and search applications, including WeChat Channels, Official Accounts, Moments, and e-commerce services. We have released the model weights and code to facilitate future research at https://github.com/Tencent/WeMM-Embedding.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-25 · <a href='https://huggingface.co/papers/2608.24053'>page</a> · <a href='https://arxiv.org/pdf/2608.24053'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Prime Agent: A Self-Improving RLM Harness</title>
-      <link>https://huggingface.co/papers/2608.23552</link>
-      <guid isPermaLink="false">arxiv:2608.23552</guid>
-      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Seth Karten, Alex L. Zhang, Kevin Thomas, Sebastian Müller, Elie Bakouch, Daniel Auras, Mika Senghaas, Fares Obeid, … <i>(+4 more)</i></p>
-<p>Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follows the Recursive Language Model abstraction for programmatic context processing and test-time compute, while Continual Harness preserves histories, memories, skills, prompts, and subagent specifications across trajectories. Recursive subagents coordinate through direct agent-to-agent communication, and the Agents View lets humans inspect and manage daemon-backed sessions. Prime Agent standardizes execution, recovery, verification, and resource accounting while leaving strategy construction to the model. This low-friction, expressive membrane prevents harness failures from becoming model failures and pushes measurement toward the model&#x27;s true maximal underlying capability. Prime Agent raises ARC-AGI-3 RHAE Best@1 from 30% to 95.5% and matches or exceeds native and popular harnesses across long-context coding, GPU-kernel generation, emulator construction, and autonomous nanoGPT speedruns. On Factorio, we find refinement allows for continuous technology progression and dedicated subagents enable parallelized work. Code is available at https://github.com/PrimeIntellect-ai/prime-agent.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-24 · <a href='https://huggingface.co/papers/2608.23552'>page</a> · <a href='https://arxiv.org/pdf/2608.23552'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces</title>
-      <link>https://huggingface.co/papers/2608.23041</link>
-      <guid isPermaLink="false">arxiv:2608.23041</guid>
-      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Sungho Park, Wonjoong Kim, Rongyuan Tan, Jue Zhang, Wook-Shin Han, Pengfei Gao, Chanyoung Park, Yongqiang Yao, … <i>(+6 more)</i></p>
-<p>LLM agents remain unreliable on long-horizon tasks, where small local failures can compound over extended interactions and lead to overall task failure. Although external harnesses can substantially improve robustness, harness design remains a manual and expensive process that requires searching over a large space of prompts, tool configurations, and control logic. We propose AutoSaddler, an automatic harness optimization framework that formulates harness improvement as an offline learning problem and iteratively updates the harness using failure signals from mini-batches. AutoSaddler combines failure-trace diagnosis, structured patch generation that treats the harness as code, and validation-based update selection. Experiments on GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 show that AutoSaddler substantially improves agent performance over the corresponding base harnesses, achieving gains of 9.0, 9.6, and 10.0 percentage points, respectively. Ablation studies further suggest that effective harness optimization benefits from three ingredients: deep debugging rather than shallow reflection, targeted modifications rather than unconstrained editing, and generalization-aware selection rather than trajectory-specific repair. Together, these results suggest that automatic harness optimization is a promising path toward more performant and reliable agent systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-24 · <a href='https://huggingface.co/papers/2608.23041'>page</a> · <a href='https://arxiv.org/pdf/2608.23041'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>STARFlow2: Bridging Language Models and Normalizing Flows for Unified Multimodal Generation</title>
-      <link>https://machinelearning.apple.com/research/starflow2-multimodal-generation</link>
-      <guid isPermaLink="false">apple_ml:e96c70acbd</guid>
-      <pubDate>Wed, 26 Aug 2026 04:32:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Unified multimodal models that understand, reason over, and generate interleaved textâimage sequences remain structurally fragmented: existing approaches either sacrifice visual fidelity through discrete tokenization, impose structural asymmetry by combining causal text generation with iterative diffusion-based denoising, or degrade pretrained understanding when adapting vision-language models for generation. We observe that autoregressive normalizing flows are autoregressive Transformersâsharing the same causal mask, KV-cache mechanism, and left-to-right structure as LLMsâmaking them the mostâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-25 · <a href='https://machinelearning.apple.com/research/starflow2-multimodal-generation'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Memory-Enhanced Neural Solvers for Routing Problems</title>
-      <link>https://arxiv.org/abs/2406.16424</link>
-      <guid isPermaLink="false">arxiv:2406.16424</guid>
-      <pubDate>Tue, 25 Aug 2026 04:32:22 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Felix Chalumeau, Refiloe Shabe, Noah De Nicola, Arnu Pretorius, Thomas D. Barrett, Nathan Grinsztajn</p>
-<p>Routing Problems are central to many real-world applications, yet remain challenging due to their (NP-)hard nature. Amongst existing approaches, heuristics often offer the best trade-off between quality and scalability, making them suitable for industrial use. While Reinforcement Learning (RL) offers a flexible framework for designing heuristics, its adoption over handcrafted heuristics remains incomplete. Existing learned methods still lack the ability to adapt to specific instances and fully leverage the available computational budget. Current best methods either rely on a collection of pre-trained policies, or on RL fine-tuning; hence failing to fully utilize newly available information within the constraints of the budget. In response, we present MEMENTO, an approach that leverages memory to improve the search of neural solvers at inference. MEMENTO leverages online data collected across repeated attempts to dynamically adjust the action distribution based on the outcome of previous decisions. We validate its effectiveness on the Traveling Salesman and Capacitated Vehicle Routing problems, demonstrating its superiority over tree-search and policy-gradient fine-tuning; and showing that it can be zero-shot combined with diversity-based solvers. We successfully train all RL auto-regressive solvers on large instances, and verify MEMENTO&#x27;s scalability and data-efficiency: pushing the state-of-the-art on 11 out of 12 evaluated tasks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-08-24 · <a href='https://arxiv.org/abs/2406.16424'>page</a> · <a href='https://arxiv.org/pdf/2406.16424'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Reasoning as a Weapon: Adaptive Dual-Path Jailbreak Attack on Large Language Models</title>
-      <link>https://arxiv.org/abs/2407.16205</link>
-      <guid isPermaLink="false">arxiv:2407.16205</guid>
-      <pubDate>Tue, 25 Aug 2026 04:32:22 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Xun Wang</p>
-<p><b>Authors:</b> Shi Lin, Peng Qian, Hongming Yang, Renjie Sun, Dezhang Kong, Xun Wang</p>
-<p>Large language models (LLMs) have achieved remarkable progress across a wide range of applications. Despite advances in safety alignment, they remain vulnerable to jailbreak attacks. Existing methods mainly rely on input-level deception to conceal harmful intent, overlooking a more fundamental attack surface: harmful intent can emerge during reasoning even when absent from the input. To study this gap, we propose ReDPJ, a Reasoning-guided Dual-Path Jailbreak framework that shifts attacks from prompt manipulation to reasoning manipulation. ReDPJ first converts harmful intent into benign dual-modal adversarial anchors, then adaptively guides reasoning to reconstruct latent harmful intent and steer the model toward unsafe trajectories. This design reduces explicit malicious signals in the input while exploiting vulnerabilities in the model&#x27;s reasoning process. Experiments on state-of-the-art LLMs demonstrate strong effectiveness, achieving ASRs of 82.1% on GPT-4o-2024-11-20, 85.1% on Llama-3-8B-Instruct, and 88.2% on DeepSeek-V3.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI, cs.CL, cs.LG · <b>arXiv submitted:</b> 2026-08-24 · <a href='https://arxiv.org/abs/2407.16205'>page</a> · <a href='https://arxiv.org/pdf/2407.16205'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
