@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 24 Sep 2026 08:55:09 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 09:16:04 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>PACT: From Credit Assignment to Critic Alignment</title>
+      <link>https://huggingface.co/papers/2609.26355</link>
+      <guid isPermaLink="false">arxiv:2609.26355</guid>
+      <pubDate>Fri, 25 Sep 2026 09:16:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiayan Fu, Hang Xu, Yong Zhang, Zhaokai Luo, Yao Hu, Dongyan Zhao, Mu Chuan, Hugging Face Daily Papers (curated)</p>
+<p>Reinforcement learning has become a central component of large language model (LLM) post-training, yet token-level credit lacks a generally accepted mathematical definition, leaving its relationship to commonly used training signals unclear. We formulate three regularity conditions, namely Completeness, Prefix Consistency, and Neutrality, and prove that they uniquely determine token-level credit. This characterization provides a unified basis for explaining phenomena across existing algorithms and guides the development of an improved actor-critic training procedure. Through this lens, an ideal teacher in On-Policy Distillation (OPD) acts as an implicit critic, yielding an expected policy gradient proportional to that induced by token-level credit. Response-level REINFORCE Leave-One-Out (RLOO) signals match the expected policy-gradient contribution of token-level credit despite their coarser granularity. We further establish approximate credit sparsity under bounded outcome rewards and show how intermediate critic errors in Generalized Advantage Estimation (GAE) can become comparable to the underlying credit. These motivate Policy Aligned Critic Training (PACT), which adopts an Actor-then-Critic update order to apply importance sampling correction to critic training and better align the critic with the updated policy. In agentic mathematical reasoning, PACT achieves 72.87% average accuracy across four benchmarks, outperforming GRPO and PPO by 8.80 and 13.16 percentage points, respectively. On SWE-bench Verified, PACT achieves a pass rate of 67.4%, outperforming PPO, GRPO, and SAO by 2.4, 2.0, and 3.8 percentage points, respectively.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-22 · <a href='https://huggingface.co/papers/2609.26355'>page</a> · <a href='https://arxiv.org/pdf/2609.26355'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models</title>
       <link>https://huggingface.co/papers/2609.24657</link>
@@ -2343,19 +2354,6 @@
 <p><b>Authors:</b> Yijie Lu, Manman Zhao, Tianjie Ju, Zihe Yan, Xinbei Ma, Yuan Guo, Daizong Ding, Gongshen Liu, … <i>(+1 more)</i></p>
 <p>Graphical User Interface (GUI) agents powered by Multimodal Large Language Models (MLLMs) are increasingly deployed yet vulnerable to Environmental Injection Attacks (EIAs).However, current red-teaming methods are hindered by prohibitive computational costs and limited adaptability. A fundamental question remains unaddressed: does the bottleneck of attack success lie in visual perception or semantic understanding? Through controlled experiments, we observe that semantic deception, rather than visual appearance, serves as the primary determinant of attack success. Based on this insight, we introduce EVA, an evolutionary framework that evolves adversarial payloads exclusively within the semantic dimension. EVA employs a discovery-deployment framework to mine linguistic vulnerability patterns and distill them into generalizable rules. Experimental results across five representative victim agents demonstrate that EVA achieves up to 85\% attack success rate, evolving benign seeds into successful attacks within only 1.18 to 1.71 iterations. This rapid convergence uncovers a dense semantic attack space in the model&#x27;s latent representation, unveiling a critical alignment paradox: the instruction-following capabilities reinforced by alignment training render agents inherently susceptible to authoritative, semantically deceptive environmental cues.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2505.14289'>page</a> · <a href='https://arxiv.org/pdf/2505.14289'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Endogenous Resistance to Activation Steering in Language Models</title>
-      <link>https://arxiv.org/abs/2602.06941</link>
-      <guid isPermaLink="false">arxiv:2602.06941</guid>
-      <pubDate>Mon, 08 Jun 2026 05:36:21 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Princeton — Michael S. A. Graziano</p>
-<p><b>Authors:</b> Alex McKenzie, Keenan Pepper, Stijn Servaes, Martin Leitgab, Murat Cubuktepe, Mike Vaiana, Diogo de Lucena, Judd Rosenblatt, … <i>(+1 more)</i></p>
-<p>Large language models can recover mid-generation from task-misaligned activation steering, producing explicit verbal restarts (e.g., ``wait, that&#x27;s not right&#x27;&#x27;) and continuing on-topic even while the steering perturbation remains active. We term this Endogenous Steering Resistance (ESR). Using sparse autoencoder (SAE) latents to steer model activations, we find that Llama-3.3-70B exhibits explicit ESR at \llamaseventyEsrRate\%, with smaller models from the Llama-3 and Gemma-2 families showing the explicit form less frequently. Two controls dissociate ESR into a detection event and a sustained-resistance component that conditioning on recent on-topic tokens does not fully explain. We identify \numOtdLatents{} SAE latents through contrastive on-topic/off-topic search; zero-ablating them reduces the multi-attempt rate by \multiAttemptReductionPct\%, with random-latent and held-out-prompt controls supporting specificity. ESR can also be deliberately enhanced through both meta-prompting and fine-tuning on synthetic self-correction examples. ESR has dual implications for safety: it could harden models against adversarial activation-space manipulation, but may equally interfere with beneficial steering-based interventions, since the model has no way to distinguish the two. Code is available at \href{https://github.com/agencyenterprise/endogenous-steering-resistance}{github.com/agencyenterprise/endogenous-steering-resistance}.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://arxiv.org/abs/2602.06941'>page</a> · <a href='https://arxiv.org/pdf/2602.06941'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
