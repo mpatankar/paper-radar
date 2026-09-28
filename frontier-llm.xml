@@ -5,8 +5,41 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sun, 27 Sep 2026 09:42:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 10:22:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>RayOrch: Programming and Executing Lineage-Controlled Multi-Grain Dataflows for Foundation-Model Data Preparation</title>
+      <link>https://huggingface.co/papers/2609.18703</link>
+      <guid isPermaLink="false">arxiv:2609.18703</guid>
+      <pubDate>Mon, 28 Sep 2026 10:22:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xiaochen Ma, Zimo Meng, Junzhu Liang, Youhe Jiang, Yue Cheng, Hao Liang, Bohan Zeng, Dengchun Li, … <i>(+9 more)</i></p>
+<p>Preparing high quality training data for foundation models requires scalable pipelines that transform heterogeneous documents and videos into structured records. Such pipelines expand each parent item into an ordered and input dependent sequence of children, whose counts may be long tailed. GPUs should batch children across parents while preserving parent relationships, child order, completion status, and result routing. Existing systems either hide parallelism behind coarse grained jobs or expose flat records that force applications to manage lineage and regrouping. We present RayOrch, a programming model and distributed execution engine that preserves parent child relations throughout execution. Programs declare ordered variable cardinality expansions and matching gathers. The compiler validates each pair, while the runtime records child membership, immediate parents, immutable ordinals, and terminal states. Per Call FIFO Ready Queues batch ready children across parents. Gathers reconstruct results from declared membership and ordinals rather than batch boundaries or completion order. Parents can advance as soon as all required children become terminal. Typed parent scoped failures suppress undispatched siblings of the failed parent while allowing unrelated parents to continue. On NVIDIA H20 GPUs, RayOrch achieves 15.14 times speedup when scaling MinerU from 4 to 64 GPUs and 7.82 times speedup when scaling a video pipeline from 8 to 64 GPUs. It reduces end to end time by 13.1 percent versus Ray Data and 29.0 percent versus Daft on MinerU, and by 16.0 percent versus Ray Data on Docling. Code available at https://github.com/OpenDCAI/RayOrch .</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://huggingface.co/papers/2609.18703'>page</a> · <a href='https://arxiv.org/pdf/2609.18703'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Agent-Editing World Model: Rethinking World Modeling for LLM Agents</title>
+      <link>https://huggingface.co/papers/2609.28416</link>
+      <guid isPermaLink="false">arxiv:2609.28416</guid>
+      <pubDate>Mon, 28 Sep 2026 10:22:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shuang Sun, Guoxin Chen, Fanzhe Meng, Jia Deng, Huatong Song, Jinhao Jiang, Wayne Xin Zhao, Hongteng Xu, … <i>(+2 more)</i></p>
+<p>Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments. To further improve agent performance, existing language world models typically predict environment observations, yet reconstructing high-entropy, execution-dependent tool responses offers limited value when real feedback is available. Meanwhile, agents suffer from task-state contamination, where unsupported assumptions and outdated plans persist in history and distort subsequent decisions. We propose the Agent-Editing World Model (AEWM), which models how reasoning and actions shape future task progress rather than simulating tool responses. AEWM combines Action Judge to distinguish Critical, Exploratory, and Noisy decisions with State Revision to edit noisy reasoning--action continuations from the same observed history. EditAct integrates these capabilities with real execution, directly changing the state underlying subsequent decisions rather than merely providing critiques. We train AEWM across Search, Terminal, and Software Engineering through mid-training and supervised fine-tuning. AEWM achieves 70.5\% macro-F1 on our Action Judge benchmark, exceeding the strongest frontier baseline by 10.6 points. Across six benchmarks and three agent backbones, EditAct improves average scores by 3.2--6.7 points over the strongest baseline. Furthermore, rejection sampling fine-tuning on verified EditAct trajectories, termed AEWM-RFT, improves over Self-RFT by 2.2--2.6 points across three domains without online AEWM guidance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-23 · <a href='https://huggingface.co/papers/2609.28416'>page</a> · <a href='https://arxiv.org/pdf/2609.28416'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rufus-Air: An Open LLM Post-Training Recipe</title>
+      <link>https://huggingface.co/papers/2609.29421</link>
+      <guid isPermaLink="false">arxiv:2609.29421</guid>
+      <pubDate>Mon, 28 Sep 2026 10:22:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chia-Yuan Chang, Renyuan Cheng, Rui Feng, Xiaotian Han, Yuan He, Hongye Jin, Linwei Li, Shiyang Li, … <i>(+15 more)</i></p>
+<p>Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL, Instruction-Following RL, General Agent, Coding Agent, Search Agent, and RLHF. We document the data, reward design, infrastructure, stage order, and stagewise results needed to reproduce the recipe. Stages progress from basic to advanced capabilities and from hard, verifiable rewards to softer judge-based signals. Training builds on open-source components and public data, much of it used as released, without new human annotation or an in-house distillation teacher. Our main findings are that (i) diverse, high-quality SFT establishes a strong capability floor; (ii) difficulty filtering keeps RL prompts within a productive learning range; (iii) reward reliability provides a practical principle for ordering stages; and (iv) infrastructure and engineering choices are part of the recipe, not just an implementation detail. Rufus-Air improves over the official GLM-4.5-Air post-trained release and is competitive with similarly sized open models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-24 · <a href='https://huggingface.co/papers/2609.29421'>page</a> · <a href='https://arxiv.org/pdf/2609.29421'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Your Transformer Can Hold Two Thoughts at Once: Evidence of Linear Superposition in LLMs</title>
       <link>https://huggingface.co/papers/2609.29845</link>
@@ -2266,40 +2299,6 @@
 <p><b>Authors:</b> Shiyi Zhang, Mushui Liu, Yunze Tong, Wanggui He, Siyu Zou, Jinlong Liu, Yunlong Yu, Jian Song, … <i>(+4 more)</i></p>
 <p>On-policy distillation (OPD), which leverages a pre-trained, specialized teacher model to provide dense supervisory signals, has achieved significant success in Large Language Models (LLMs) and has recently been adapted to flow matching models. However, this paradigm suffers from two major issues: First, training a separate, task-specific teacher for every new objective incurs high computational costs. Second, the discrepancy between teacher and student distributions often leads to compounding errors along the generation trajectory. In this paper, we introduce Self-OPD, a teacher-free OPD framework for flow matching models that turns the student&#x27;s own self-exploration into step-wise supervision. At each timestep, Self-OPD branches the deterministic next-state prediction into K stochastic SDE candidates, rolls them out with the ODE sampler, and compares their rewards against a deterministic self-reference baseline to obtain normalized advantages. The velocity field is optimized with an all-branch pull-push objective, where high-advantage branches attract the student and low-advantage branches repel it under direction-aware attenuation and SDE-variance normalization. For multi-objective alignment, Self-OPD fuses normalized scores at the reward level, avoiding direct gradient conflict. Experiments on single and mixed reward benchmarks show that Self-OPD outperforms prior RL and OPD methods without task-specific teachers.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://huggingface.co/papers/2608.26872'>page</a> · <a href='https://arxiv.org/pdf/2608.26872'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents</title>
-      <link>https://huggingface.co/papers/2608.27260</link>
-      <guid isPermaLink="false">arxiv:2608.27260</guid>
-      <pubDate>Fri, 28 Aug 2026 15:50:02 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xingshan Zeng, Zishan Xu, Boju Zhang, Yuzhou Wu, Lingzhi Wang, Jianghao Lin, Liangyou Li, Yasheng Wang, … <i>(+7 more)</i></p>
-<p>LLM agents increasingly rely on generated interaction data to learn how to interact with external environments. Agentic data generation must maintain consistency among environments, tasks, interactions, and success signals while producing experience that is useful rather than merely abundant. Existing work spans many agent domains, but domain-centered organization and heterogeneous evaluation often obscure common generation mechanisms and conflate candidate construction with verification and selection. This work develops a two-level framework for the field. First, we represent agentic data as a common factorized object (E,q,τ,v), comprising an environment specification, task signal, interaction realization, and optional verifier. We organize generation paradigms by their primary anchor and dependency structure. Second, we formulate generation as constrained distribution design through the Accuracy-Complexity-divErsity (ACE) lens. Accuracy establishes the feasible support of grounded and internally consistent data. Within this support, Complexity places learning mass relative to the capability of a declared learner and execution configuration, while divErsity controls coverage and redundancy of data. Using this framework, we explore how prior work verifies generated experience, constructs and calibrates difficulty, and expands behavioral coverage. The literature reveals a shift toward execution-grounded accuracy, learner-relative complexity, and diversity beyond surface variation or dataset size. We further discuss broader directions and emerging trends in agentic data generation through the ACE lens, including their implications for scaling, data sources, training regimes and adaptive learning. Overall, the central challenge is not simply to generate more data, but to continually allocate valid, informative, and non-redundant experience as agents and environments evolve.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://huggingface.co/papers/2608.27260'>page</a> · <a href='https://arxiv.org/pdf/2608.27260'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>From Preferences to Principles: Rubric-Based Alignment for Grounded Knowledge Answers</title>
-      <link>https://machinelearning.apple.com/research/rubric-based-alignment</link>
-      <guid isPermaLink="false">apple_ml:3fc80afb4c</guid>
-      <pubDate>Fri, 28 Aug 2026 15:50:02 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Designing effective reward signals for open-domain question answering is challenging because high-quality responses must simultaneously satisfy multiple aspects of answer quality that are difficult to capture with a holistic scalar objective. We introduce a rubric-based reward framework that generates query-specific rubrics grounded in retrieved evidence and decomposed into multiple quality dimensions, providing fine-grained supervision during post-training. Averaged across three evaluation axes (composition, grounding, and instruction-following), our approach improves over theâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://machinelearning.apple.com/research/rubric-based-alignment'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Giving AI Agents Access to Cryptocurrency and Smart Contracts Creates New Vectors of AI Harm</title>
-      <link>https://arxiv.org/abs/2507.08249</link>
-      <guid isPermaLink="false">arxiv:2507.08249</guid>
-      <pubDate>Thu, 27 Aug 2026 14:54:46 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CR</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Cornell, U Cambridge — Ari Juels</p>
-<p><b>Authors:</b> Bill Marino, Ari Juels</p>
-<p>There is growing interest in giving AI agents access to cryptocurrencies and smart contracts. But doing so, this position paper argues, could spawn categorically new vectors of AI harm. To support this notion, we first examine the unique technical properties of cryptocurrencies and smart contracts that, when paired with AI agents, make this so. Next, we describe three of these new vectors of AI harm in detail, providing a first-of-its-kind taxonomy. Finally, we call for more research into ways to prevent or mitigate these risks, proposing several as a starting point.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CR · <b>arXiv submitted:</b> 2026-08-26 · <a href='https://arxiv.org/abs/2507.08249'>page</a> · <a href='https://arxiv.org/pdf/2507.08249'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
