@@ -5,8 +5,156 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Tue, 29 Sep 2026 10:18:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 10:10:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>BrainWave: A Brain Signal Foundation Model for Clinical Applications</title>
+      <link>https://arxiv.org/abs/2402.10251</link>
+      <guid isPermaLink="false">arxiv:2402.10251</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>q-bio.NC</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>eess.SP</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab</p>
+<p><b>Authors:</b> Zhizhang Yuan, Fanqi Shen, Meng Li, Yuguo Yu, Fei Wu, Chenhao Tan, Yang Yang</p>
+<p>Neural electrical activity is fundamental to brain function, underlying a range of cognitive and behavioral processes, including movement, perception, decision-making, and consciousness. Abnormal patterns of neural signaling often indicate the presence of underlying brain diseases. The variability among individuals, the diverse array of clinical symptoms from various brain disorders, and the limited availability of diagnostic classifications, have posed significant barriers to formulating reliable model of neural signals for diverse application contexts. Here, we present BrainWave, the first foundation model for both invasive and non-invasive neural recordings, pretrained on more than 40,000 hours of electrical brain recordings (13.79 TB of data) from approximately 16,000 individuals. Our analysis show that BrainWave outperforms all other competing models and consistently achieves state-of-the-art performance in the diagnosis and identification of neurological disorders. We also demonstrate robust capabilities of BrainWave in enabling zero-shot transfer learning across varying recording conditions and brain diseases, as well as few-shot classification without fine-tuning, suggesting that BrainWave learns highly generalizable representations of neural signals. We hence believe that open-sourcing BrainWave will facilitate a wide range of clinical applications in medicine, paving the way for AI-driven approaches to investigate brain disorders and advance neuroscience research.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI, cs.LG, eess.SP · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://arxiv.org/abs/2402.10251'>page</a> · <a href='https://arxiv.org/pdf/2402.10251'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Long-Term Memory-Guided Enhancement for Target Perception in Audio-Language Models</title>
+      <link>https://arxiv.org/abs/2609.36577</link>
+      <guid isPermaLink="false">arxiv:2609.36577</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.SD</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Yang Liu</p>
+<p><b>Authors:</b> Zhenhong Zhou, Xuanyue Zhao, Youji Liu, Yuanhe Zhang, Xiaoyu Ma, Lianyu Hu, Yang Liu</p>
+<p>Audio large language models (ALLMs) can reason about the content of audio recordings to perform complex tasks. However, these capabilities usually collapse in real-world environments when background noise and competing sources mix the target sound. Inspired by long-term memory in human listening, we propose Long-Term Memory-Guided Audio Enhancement (LTM-AE) to improve selective target perception by refining the audio representations of ALLMs without training. LTM-AE extracts representations in hidden states from separate clean reference recordings as long-term memory for each category, guiding enhancement toward a user-specified listening target. We reconstruct incoming audio tokens in the selected category long-term memory and interpolate the reconstructions with the original tokens before language backbone decoding. This interpolation controls the influence of stored auditory experience while keeping all ALLM parameters fixed. Diagnostic readouts across twenty sound categories and three ALLMs show that LTM-AE strengthens responses to a specified target amid three interfering sources. Averaged over constrained and free-form classification, accuracy gains over raw mixtures range from 29.53 to 46.15 percentage points across multiple open source models. For speech content recovery, LTM-AE with an additional learned token-level gate reduces Qwen2-Audio&#x27;s word error rate from 23.07% to 14.77%. This work takes an initial step toward using principles of human long-term memory to enhance ALLMs for real-world listening. Our code is available at https://github.com/aynlp/ltm-audio-code</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SD, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://arxiv.org/abs/2609.36577'>page</a> · <a href='https://arxiv.org/pdf/2609.36577'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PanoVLN: Towards Effective Panoramic Vision-and-Language Navigation</title>
+      <link>https://huggingface.co/papers/2609.34759</link>
+      <guid isPermaLink="false">arxiv:2609.34759</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhen Wang, Changpeng Wang, Zhe Liu, Zhangyang Qi, Yuxiang Lu, Zimo Zeng, Donglian Qi, Xi Chen, … <i>(+1 more)</i></p>
+<p>Recent vision-language models (VLMs) have advanced vision-and-language navigation (VLN), enabling models to predict navigation actions from visual observations and language instructions. In this work, we explore VLN with panoramic observations and introduce PanoVLN. The motivation is straightforward: more complete visual context should enable better-informed navigation decisions. For example, a panorama can reveal a passage outside a perspective camera&#x27;s field of view, allowing the model to identify the intended route without additional exploration. However, we find that simply replacing perspective images with panoramas yields only limited gains. Our diagnosis suggests that fully exploiting wider visibility requires modifications to action prediction, training supervision, and visual representation. First, wider visibility supports longer-horizon action planning. We make the model predict longer action sequences, enabling larger turns and subsequent movement from a single panorama. Specifically, we introduce a confidence-guided execution (CGE) strategy that dynamically determines how many predicted actions to execute before replanning. Second, wider visibility also brings more complex route choices. We therefore construct training routes with frequent branching points and clear instructions to provide targeted supervision for route selection. Third, panoramic navigation requires understanding spatial relationships across viewing directions, beyond recognizing individual landmarks. We combine semantic and geometric features from RGB panoramas to capture both scene content and spatial layout without adding visual tokens. With a 4B backbone and RGB-only input, PanoVLN surpasses the previous SOTA by 11.9% and 8.7% in success rate on R2R-CE and RxR-CE Val-Unseen. Real-world experiments on a quadruped further demonstrate faster navigation with fewer pauses than prior VLN methods.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.34759'>page</a> · <a href='https://arxiv.org/pdf/2609.34759'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Omni-IO Skills: Harnessing Your Agent Omni-Native</title>
+      <link>https://huggingface.co/papers/2609.31847</link>
+      <guid isPermaLink="false">arxiv:2609.31847</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yanlin Li, Mingyang Hao, Shengqiong Wu, Hao Fei, Mong-Li Lee, Wynne Hsu, Hugging Face Daily Papers (curated)</p>
+<p>General-purpose agents can plan, reason, and act over long horizons, yet their production capabilities remain fragmented across text, images, audio, video, documents, 3D assets, and code. Extending a foundation model to additional modalities ties capability growth to costly model updates, while assembling specialist models and tools leaves unresolved how procedures, dependencies, intermediate assets, and cross-turn revisions should be coordinated. We present Omni-IO Skills, a plug-and-play Agent Harness that makes existing agents omni-native through hierarchical Skills, a standardized multimodal execution interface, dependency-aware orchestration, and a persistent Asset Registry. Multi-asset workflows are represented as Declare Execution Graphs, which schedule independent operations concurrently and register successful outputs for downstream and cross-turn reuse across replaceable execution backends. Its 27 Skills cover 38 representative tasks spanning seven artifact modalities and four capability families: understanding, generation, reasoning, and retrieval. On UniM-90, the harness raises the input-support rates of GPT-5.6 Sol and Claude Sonnet 5 from 40.00% and 38.89% to 100%, while increasing relative Semantic--Quality Coupled Score from 26.99 to 74.94 and from 27.82 to 77.78, respectively; Strict Structure Score reaches 100.00 and 99.78. These results establish harness-level capability composition as a practical route to broad, evolvable Omni systems without changing the host agent&#x27;s reasoning core.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-25 · <a href='https://huggingface.co/papers/2609.31847'>page</a> · <a href='https://arxiv.org/pdf/2609.31847'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VoxMem: Benchmarking Multimodal Memory in Large Audio Language Models</title>
+      <link>https://huggingface.co/papers/2609.32607</link>
+      <guid isPermaLink="false">arxiv:2609.32607</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yang Xiao, Vidhyasaharan Sethu, Eun-Jung Holden, Ting Dang, Hugging Face Daily Papers (curated)</p>
+<p>Spoken conversational systems must recover information from prior interactions (i.e., memory), yet relevant information in speech extends beyond what was said to who said it, how it was spoken, and what was audible, information that exists only in the audio signal and cannot be recovered from a transcript. Beyond what to remember, memory also demands diverse operations: retrieving a single fact, integrating evidence across turns, tracking an evolving state. Real interactions further unfold across sessions, meaning information accumulates across distinct episodes rather than a single continuous recording. Existing benchmarks fall short on all three dimensions: they focus primarily on lexical content, adopt limited and ad hoc memory operations, and treat memory as a single-session problem. We argue that principled memory evaluation requires jointly characterizing the acoustic evidence to be retained and the operations applied to it, and introduce a taxonomy along these two axes. Building on this taxonomy, we present VoxMem: 3,196 evaluation instances over 34,743 spoken sessions (177 hours) crossing four acoustic evidence types (speech semantics, speaker identity, paralinguistic cues, environmental sound) with four memory operations (information extraction, multi-session reasoning, temporal tracking, and answer refusal), grounded in multi-session histories and stratified across context budgets from 8K to 64K tokens. Evaluating 15 LALMs, no model exceeds 40% at 32K. Models retain what was said far better than who said it, how, or what was audible, a gap that widens for complex operations, grows with history length, and manifests as qualitatively distinct failure modes across evidence types. VoxMem aims to provide a foundation to measure and drive progress on the full scope of spoken conversational memory.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-26 · <a href='https://huggingface.co/papers/2609.32607'>page</a> · <a href='https://arxiv.org/pdf/2609.32607'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Beyond Dyadic Memory: Interaction-Aware Multimodal Memory with Adaptive Agentic Retrieval for Multi-Party Spoken Conversations</title>
+      <link>https://huggingface.co/papers/2609.32522</link>
+      <guid isPermaLink="false">arxiv:2609.32522</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Wenxu Jia, Xize Cheng, Zihan Zhang, Dongjie Fu, Linjun Li, Wenshi Chen, Yangyang Wu, Tao Jin, … <i>(+1 more)</i></p>
+<p>Long-term memory enables agents to accumulate information and reason across sessions, yet existing research primarily focuses on dyadic text or image-text conversations, leaving long-term memory for multi-party spoken conversations underexplored. This setting requires preserving conversational content, identifying participants across sessions, and retaining who speaks to whom. To this end, we propose VoxPolyMem, an interaction-aware multimodal memory framework combining incremental speaker identification with a memory hierarchy comprising interaction memory, fact memory, and participant profiles. We formulate retrieval as sequential decision-making, where an agent rewrites queries and selects retrieval tools and memory layers based on accumulated evidence to address information gaps. We further introduce Evidence-Gain GRPO (EG-GRPO), which uses round-wise credit assignment to encourage complementary evidence acquisition. We also construct VoxPolyBench to evaluate memory evolution, personalized answering, memory retrieval and reasoning, and interaction reasoning and attribution in multi-party spoken conversations. VoxPolyMem achieves an overall score of 85.0 on VoxPolyBench, surpassing the strongest evaluated baseline by 23.6 points. On Mem-Gallery and H2HMem-Multi, it scores 89.6 and 74.4, respectively, exceeding the strongest evaluated public memory baselines by over 8 points each. These results highlight its potential for persistent, personalized assistance in multi-party multimodal interactions. Code and datasets are available at https://voxpolymem.github.io/VoxPolyBench/demo/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-26 · <a href='https://huggingface.co/papers/2609.32522'>page</a> · <a href='https://arxiv.org/pdf/2609.32522'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EngiWorld: What Can Frontier Agents Deliver in Professional Engineering Environments?</title>
+      <link>https://huggingface.co/papers/2609.37686</link>
+      <guid isPermaLink="false">arxiv:2609.37686</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Hongcheng Gao, Hailong Qu, Yu Lei, Henghui Sun, Haoyang Li, Yipeng Wei, Naihao Xue, Xiaohan Yu, … <i>(+15 more)</i></p>
+<p>Autonomous agents have made rapid progress in general-purpose computer use, but reliable automation of professional industrial engineering remains out of reach, as engineering workflows demand reasoning over geometric and physical constraints and dependencies preserved across software and design stages. We present EngiWorld, the first benchmark structured around the complete design loop: 1,301 expert-curated tasks spanning 6 engineering domains (CAD, CAE, CAM, BIM, EDA, and 3D visualization) and 26 professional software platforms, with both GUI and CLI interfaces and 6 task types ranging from software-selection to open-ended tasks. We further introduce an artifact-centric evaluation methodology built on a unified domain-verifier suite, which programmatically checks the geometric validity, physical feasibility, and rule compliance of final and intermediate artifacts, and scores quantitative design tasks continuously by specification attainment rather than binary success. Evaluation of seven frontier models reveals a substantial capability gap: the strongest model achieves an EngiScore of only 44.3, and just 3.6% of multi-software attempts succeed. EngiWorld provides the first rigorous foundation for measuring progress toward agents that operate professional engineering software end to end.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://huggingface.co/papers/2609.37686'>page</a> · <a href='https://arxiv.org/pdf/2609.37686'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Follow the Entities: A Corpus Map for Agentic Search</title>
+      <link>https://huggingface.co/papers/2609.37226</link>
+      <guid isPermaLink="false">arxiv:2609.37226</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Soyeong Jeong, Sujay Kumar Jauhar, Sung Ju Hwang, Andrew Joohun Nam, Hugging Face Daily Papers (curated)</p>
+<p>Answering questions and completing tasks over large document collections often requires connecting evidence spread across multiple documents, such as a project&#x27;s approval recorded in one, its requirements in another, and its latest status in a third. Recent LLM agents approach this by iteratively searching the full corpus rather than reading only a fixed set of top-ranked documents. However, when the corpus is exposed only as a flat collection of files, a relevant document gives no indication of how it relates to others, so the agent must rediscover these relationships for every query, often missing complementary evidence while simultaneously consuming substantial additional tokens. To address this, we introduce CorpusMap, a navigation layer that organizes the corpus around its recurring entities, which are identifiable from the documents themselves and can link a single document to many others across sources. Specifically, CorpusMap represents each recurring entity as an Entity Page that aggregates information about it and links to every document that refers to it, forming a graph between entities and documents that the agent can traverse to gather otherwise disconnected evidence. Moreover, since CorpusMap is constructed offline by resolving mentions of the same entity across documents, its links are shared across queries rather than rediscovered repeatedly at inference time. Using 7 different models with 3 benchmark datasets, we show that CorpusMap improves both evidence discovery and answer quality over raw-corpus agentic search while using fewer tokens on average, and further outperforms 4 alternative navigation layers, suggesting that entities serve as effective anchors for navigating large document collections.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://huggingface.co/papers/2609.37226'>page</a> · <a href='https://arxiv.org/pdf/2609.37226'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LongCat-DeepResearch Technical Report</title>
+      <link>https://huggingface.co/papers/2609.36071</link>
+      <guid isPermaLink="false">arxiv:2609.36071</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Meituan LongCat Team, He Zhu, Yue Xu, Wanli Wu, Haolin Ren, Yuxin Bian, Jiarui Zhao, Rongzhi Zhang, … <i>(+24 more)</i></p>
+<p>We present LongCat-DeepResearch, a deep research system that combines an enhanced LongCat model with a multi-agent workflow for producing comprehensive, evidence-grounded reports. The workflow separates global planning from detailed investigation and coordinates revision at the section level. Multiple planning agents first explore external sources and refine an actionable research plan, termed ResearchSpec. Research agents then investigate and draft their assigned sections in parallel, gathering additional evidence in separate contexts as their analyses develop. Once the sections are assembled, global review guides targeted local revisions, reducing reliance on repeated full-report rewriting. This workflow also supports the construction of research tasks and trajectories for the mid-training and post-training of LongCat&#x27;s general-purpose models. LongCat-DeepResearch achieves 55.25 on DeepResearchBench, 51.35 on DeepResearchBench II, and 79.83 on ResearchRubrics. On an in-house benchmark, it scores 76.04, ranking second among four compared systems. Development-set analyses show benefits from combining planning perspectives, while further planning refinement has mixed effects. Additional editing improves average automatic readability preference across two benchmarks, with different trends on each.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.36071'>page</a> · <a href='https://arxiv.org/pdf/2609.36071'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LLMs are General Asynchronous Agents</title>
+      <link>https://huggingface.co/papers/2609.35427</link>
+      <guid isPermaLink="false">arxiv:2609.35427</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> George Yakushev, Denis Mazur, Vladimir Bartenev, Vyacheslav Zhdanovskiy, Timofey Byzov, Vladimir Kaurkin, Vadim Pastushenko, Hugging Face Daily Papers (curated)</p>
+<p>Modern LLMs are increasingly capable as autonomous agents, but they follow sequential interaction cycles: read, think, reply or call tools, repeat. Many real-world use cases are not sequential: voice assistants, embodied agents, and monitoring systems receive new inputs while they think or perform another task. Modern LLMs address this with specialized architectures for voice interaction and video streams, VLAs for robot control, asynchronous tool calling for API usage, and others. In this work, we generalize from different asynchronous tasks to general asynchronous agents that can adapt to different types of concurrency. To achieve this, we develop an asynchronous LLM framework that lets users (or the agents themselves) define inference coroutines with overlapping memory states. We showcase that Qwen 3.x models are capable of asynchronous operation for streaming video understanding, videogames, and monitoring, without task-specific training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.35427'>page</a> · <a href='https://arxiv.org/pdf/2609.35427'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LEGO-Anything: Coding Agents for 3D Scene Reconstruction</title>
+      <link>https://huggingface.co/papers/2609.36380</link>
+      <guid isPermaLink="false">arxiv:2609.36380</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xirui Li, Peng Shi, Mingwen Dong, Sheng Zhang, Zhuoyan Xu, Dongkyu Lee, Shuaichen Chang, Yi Xiang, … <i>(+3 more)</i></p>
+<p>A 3D scene reconstructed from a single image is most useful when represented not as a rendering or a fixed 3D output, but as an explicit scene program whose execution yields a scene that can be inspected, edited, and queried. We present LEGO-Anything, an Image-to-Code framework in which a coding agent iteratively writes and executes Blender code, inspects scenes and renderings, and revises the program. To evaluate end-to-end scene recovery, we introduce LEGO-Bench, a simulator-grounded benchmark with 208 images from 104 diverse indoor and outdoor scenes. LEGO-Bench separately scores artifact validity, visible-surface geometry, and rendered appearance. Its simulator-grounded design enables extensibility and precise automatic evaluation. Among evaluated agents, GPT-6-astra achieves the strongest overall results, with 53.4% indoor and 39.6% outdoor scores, yet substantial gaps remain between delivering valid scene artifacts and faithfully recovering scene geometry and appearance. Analysis of agent construction trajectories reveals three recurring issues: weak scene initialization, regressive edits during iteration, and unreliable self-evaluation. These findings motivate LEGO-Plugin, a training-free harness plugin for more controlled iterative scene construction, which improves all six evaluated models, with relative gains of up to 62.7% in overall score. Finally, we test whether reconstructed scenes can represent natural images and support vision tasks. In LEGO-World, we derive object detections, instance masks, and relative depth as deterministic queries on scenes reconstructed by GPT-6-astra. These readouts show non-trivial performance across all three tasks but fall well short of specialized vision models, suggesting that program-constructed scenes from current coding agents are a promising but not yet sufficiently precise representation of natural images.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.36380'>page</a> · <a href='https://arxiv.org/pdf/2609.36380'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SoL-Refiner: Speed-of-Light One-Step Refinement for High-Resolution Video</title>
+      <link>https://huggingface.co/papers/2609.37969</link>
+      <guid isPermaLink="false">arxiv:2609.37969</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haozhe Liu, Tian Ye, Shuchen Xue, Yitong Li, Junsong Chen, Haopeng Li, Jincheng Yu, Duomin Wang, … <i>(+5 more)</i></p>
+<p>High-resolution video generation is expensive, as its cost grows rapidly with the number of spatiotemporal tokens. A practical alternative first generates a lower-resolution video and then applies a refiner, but conventional multi-step refinement introduces a second sampling bottleneck. We present SoL-Refiner, a one-step video refiner that transforms low-resolution model outputs into 4K videos with a single denoising step. Our three-stage recipe combines high-resolution continual training, reinforcement learning (RL) post-training, and a final one-step distillation. We introduce Refiner-Bench, a video refinement benchmark constructed from the outputs of different video generators, and use a shared-input protocol to compare refiners at approximately 2K output resolution. At 2K, the one-step SoL-Refiner outperforms all external refiners on the VBench and UniPercept averages, while at 3840!times!2176 it improves both metrics over the three-step LTX-2.3 Refiner. With the complete acceleration stack, SoL-Refiner achieves an 8.91times speedup in refinement latency over the same baseline in our 2K latency setting.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://huggingface.co/papers/2609.37969'>page</a> · <a href='https://arxiv.org/pdf/2609.37969'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Communication Bottleneck: A Round-Trip Study of Tree-Structured Expression Serialization in Language Models</title>
+      <link>https://machinelearning.apple.com/research/communication-bottleneck-serialization</link>
+      <guid isPermaLink="false">apple_ml:bc1b279b6d</guid>
+      <pubDate>Wed, 30 Sep 2026 10:10:44 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>When language models reason in chain-of-thought or exchange free-text intermediates, they serialize structured information into natural language. How much tree-structured compositional content survives this bottleneck? We propose a round-trip protocol that answers this question empirically for tree-structured expressions. A generator converts a procedurally generated arithmetic expression into a word problem, a separate extractor recovers the expression from the word problem alone, and symbolic equivalence provides an exact oracle. Evaluating all pairwise combinations of sixteen models yieldsâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://machinelearning.apple.com/research/communication-bottleneck-serialization'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Focus on Likely Classes for Test-Time Prediction</title>
       <link>https://arxiv.org/abs/2505.03819</link>
@@ -2143,162 +2291,6 @@
 <p><b>Authors:</b> Hamed Khosravi, Xiaoming Huo</p>
 <p>A company with a fixed artificial intelligence (AI) budget must decide which large language model (LLM) handles each recurring workload. What it lacks is the quality table, how well each model performs on each workload. Given that table, the decision is a multiple-choice knapsack problem and is routine to solve, so estimating it is the difficulty, and that estimation fails in two ways. Models are rarely compared on the same work, and the recorded score is usually a proxy rather than the outcome the company values. Causal and off-policy methods repair the first but condition on the second, while evaluator-validation methods estimate the second but stop short of the decision. Worse, buying more re-evaluation cannot settle the second: randomization governs which requests are scored, not how a score is produced, so the table stays uncertain however much evaluation is purchased. Yet the deployment decision may still be determined even when the table is not. We therefore ask whether one assignment stays optimal across every quality table consistent with the evidence. For the fixed-budget problem, this admits an exact two-solve certificate: solve once at the estimated table and once at a least-favourable table. Agreement certifies the assignment; disagreement identifies the model-workload pairs where further evidence can matter. We propose CASE (causal active sequential experimentation), which targets evaluation to those pairs and repeats the test as evidence accumulates. On a production log, the measurement failure is the larger of the two: correcting assignment exactly still leaves most of the loss, and randomized re-evaluation does not remove it. In our experiments, the available evidence often does not determine the assignment. On paid software tasks, better information about model quality yields more savings than further optimization of the assignment on the same estimates.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, math.OC, stat.ML · <b>arXiv submitted:</b> 2026-08-30 · <a href='https://arxiv.org/abs/2608.29560'>page</a> · <a href='https://arxiv.org/pdf/2608.29560'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering</title>
-      <link>https://huggingface.co/papers/2608.28281</link>
-      <guid isPermaLink="false">arxiv:2608.28281</guid>
-      <pubDate>Tue, 01 Sep 2026 09:03:45 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yi Wang, Haopeng Zhang, Chengxiang Huang, Rui Dai, Kaikui Liu, Piotr Koniusz, Xiangxiang Chu, Hugging Face Daily Papers (curated)</p>
-<p>Loop Engineering is emerging as a practice for organizing development work around coding agents. Instead of writing each prompt by hand, practitioners design loops that monitor progress, assign work, run checks, and decide what the agent should do next. Even with a capable coding agent, a loop may trust a stale progress note, skip needed verification, spend its budget in the wrong direction, or stop before the task is safe to submit. Yet the final outcome of one end-to-end run cannot tell whether success or failure reflects the loop&#x27;s guidance or the coding agent&#x27;s ability to carry out the task. We introduce LoopArena, a benchmark for evaluating how well one model can guide a separate coding agent through a long-running task. The model under evaluation is the Controller: after each coding round, it receives a structured summary of the run and instructs a separate, fixed coding agent, the Worker, on what to do or verify next, or decides whether to stop. LoopArena evaluates this ability in three complementary settings that differ in execution scope and cost. Type I scores next-step Loop Contract selection through execution-validated questions without running the Worker at evaluation time. Type II executes repeated control over a selected slice of a full task, while Type III evaluates the paired full task from its original state. On full tasks, the best observed Strict Success Rate is 24.69\%, leaving substantial room for improvement in long-horizon loop control. Across Controllers, the paired reduction in estimated inference cost averages 64.4\%, and Type II produces a similar ordering under the main Core criterion (Spearman&#x27;s \(ρ=0.9747\)). We release the benchmark data and evaluation code at https://github.com/AMAP-ML/LoopArena .</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://huggingface.co/papers/2608.28281'>page</a> · <a href='https://arxiv.org/pdf/2608.28281'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>J-Zero: Unified Challenger--Solver--Judge Co-Evolution from Zero Data</title>
-      <link>https://huggingface.co/papers/2608.26582</link>
-      <guid isPermaLink="false">arxiv:2608.26582</guid>
-      <pubDate>Tue, 01 Sep 2026 09:03:45 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Gyouk Chu, Myeongho Jeon, Eunho Yang, Hugging Face Daily Papers (curated)</p>
-<p>Self-evolving language models have recently emerged as a promising path toward superintelligence, with the advantage of reducing the cost of human supervision. While considerable progress has been made in verifiable domains, self-evolution in unverifiable domains remains substantially less explored. We propose Judge co-adaptation from Zero data (J-Zero), a unified Challenger--Solver--Judge co-evolution framework that supports self-improvement across both domains. The Challenger and Solver co-evolve through an adversarial interaction: the Challenger generates increasingly difficult tasks, while the Solver learns to produce higher-quality responses to them. In parallel, the Judge co-adapts using preference pairs whose ordering is known in advance from how each response was produced, i.e., the Solver&#x27;s answer over the Challenger&#x27;s, and its decomposed-and-recombined answer over its one-shot answer, rather than from the Judge&#x27;s own scores. J-Zero outperforms the baselines by an average of 4.2 points on verifiable and 8.0 points on unverifiable domains, and continues to improve through at least ten iterations, whereas the baselines degrade after two.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://huggingface.co/papers/2608.26582'>page</a> · <a href='https://arxiv.org/pdf/2608.26582'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Puro-2B: Poor Lab&#x27;s Qwen2-1.5B Trained on RTX 5090 within $5090</title>
-      <link>https://huggingface.co/papers/2608.27370</link>
-      <guid isPermaLink="false">arxiv:2608.27370</guid>
-      <pubDate>Tue, 01 Sep 2026 09:03:45 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Kairong Luo, Jiarui Cui, Yaorui Yin, Shengqi Chen, Yiming Yang, Linxiang Gao, Yanmohan Wang, Mingzhe Zhang, … <i>(+4 more)</i></p>
-<p>Language model pretraining has become almost synonymous with prohibitive cost, placing it out of reach for much of the academic and open-source communities. Although strong open-source efforts already exist, including open-weight models and open-source training recipes, a cost-efficient, hardware-accessible, and open-source pretraining recipe has long been missing. Even at a small scale, training Llama-3.2-3B costs over \1.5M, and reproducing SmolLM3-3B needs over 700K. In this report, we present an open pretraining recipe designed to lower this barrier. Using this recipe, we train a collection of Puro-2B models from scratch on up to 1.4 trillion tokens with FP8 precision on consumer-grade RTX 5090 GPUs. The models in the collection differ in token budgets and selected recipe variants. Our best model is trained at a compute cost of less than \6.9K and approaches Qwen2.5-1.5B performance under our evaluation protocol. This cost efficiency is enabled by a combination of approaches, including hardware selection, low-precision training, hyperball optimization, curriculum model averaging, and the data recipe. Beyond the recipe itself, we provide two additional results. First, across the Puro-2B collection, we derive a Puro Cost Scaling Law that relates training cost to average model performance; the fitted law suggests that about 4.4K, less than \$5,090, is sufficient to reach the performance of Qwen2-1.5B. Second, as an end-to-end case study, we examine how pretraining data curricula shape downstream performance after post-training. Such controlled studies are enabled by having access to the full pretraining pipeline rather than model weights alone. We release the full training recipe for Puro-2B, including data, code, and model weights under Apache 2.0 at https://huggingface.co/collections/thu-pacman/puro-2b.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://huggingface.co/papers/2608.27370'>page</a> · <a href='https://arxiv.org/pdf/2608.27370'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Normalized Low-Rank Adaptation</title>
-      <link>https://huggingface.co/papers/2608.31036</link>
-      <guid isPermaLink="false">arxiv:2608.31036</guid>
-      <pubDate>Tue, 01 Sep 2026 09:03:45 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Jiale Kang, Ziyin Yue, Zheng Zhan, Yangyi Huang, Weiyang Liu, Hugging Face Daily Papers (curated)</p>
-<p>While low-rank adaptation (LoRA) is widely used for parameter-efficient model adaptation, how to regularize its training dynamics for stable and effective optimization remains underexplored. Because LoRA initializes the up-projection to zero, its early optimization dynamics are largely governed by the down-projection. Building on this observation, we introduce Normalized Low-Rank Adaptation (NoRA), a simple yet effective method that normalizes the down-projection matrices during training. We further show that the same normalization can be applied only at initialization, improving standard LoRA without requiring repeated normalization throughout training. Across pretraining, supervised finetuning, and reinforcement learning, NoRA consistently accelerates convergence, improves performance and training stability, and mitigates catastrophic forgetting. These benefits require neither additional trainable parameters nor inference-time computation, making NoRA a simple and broadly applicable enhancement to LoRA.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-31 · <a href='https://huggingface.co/papers/2608.31036'>page</a> · <a href='https://arxiv.org/pdf/2608.31036'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PaperGym: Rubric-Centered Evolution for Research-Plan Generation</title>
-      <link>https://huggingface.co/papers/2608.31119</link>
-      <guid isPermaLink="false">arxiv:2608.31119</guid>
-      <pubDate>Tue, 01 Sep 2026 09:03:45 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yuhan Wang, Zhengxi Lu, Yuchen Yan, Kaitao Song, Wenqi Zhang, Weiming Lu, Jun Xiao, Yueting Zhuang, … <i>(+2 more)</i></p>
-<p>Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic. Rubrics extracted from scientific papers can supply the critic. Existing pipelines, however, draw the question and the criteria from the same content, so the reward can be earned by paraphrase. The rubric is further compressed into a single scalar per rollout. We introduce PaperGym, a unified framework that turns each research paper into a complete training environment. PaperGym exploits the structure of a paper: the question is synthesized from the research goal and background, while the criteria are derived from the method and experiments. The criteria span methodological innovation and experimental design, and criterion leakage falls to 3.7%, versus 11.90% to 34.10% in existing datasets. Training uses the rubric twice: first as privileged context for OPSD&#x27;s self-teacher, then as the reward for GRPO. Across Qwen3-1.7B/4B/8B, this schedule outperforms supervised fine-tuning, either stage alone, and the reverse ordering, improving five-benchmark averages by +5.6, +5.0, and +4.8 points. With the recipe held fixed, models trained on PaperGym-20k win 58.1% of three-way comparisons, against 28.2% for RubricHub Science. The trained Qwen3-8B reaches 73.48 on ResearchQA, above the far larger Kimi K2.6. We release the pipeline, the 20,000-instance corpus PaperGym-20k, and the benchmarks PaperGym-Innov and PaperGym-Design.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-31 · <a href='https://huggingface.co/papers/2608.31119'>page</a> · <a href='https://arxiv.org/pdf/2608.31119'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Evaluating the Performance of Large Language Models on GAOKAO Benchmark</title>
-      <link>https://arxiv.org/abs/2305.12474</link>
-      <guid isPermaLink="false">arxiv:2305.12474</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Shanghai AI Lab · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
-<p><b>Authors:</b> Xiaotian Zhang, Chunyang Li, Yi Zong, Zhengyu Ying, Liang He, Xipeng Qiu, Tianxiang Sun, Peng Li, … <i>(+7 more)</i></p>
-<p>Large Language Models(LLMs) have demonstrated remarkable performance across various natural language processing tasks; however, how to comprehensively and accurately assess their performance becomes an urgent issue to be addressed. This paper introduces GAOKAO-Bench, an intuitive benchmark that employs questions from the Chinese GAOKAO examination as test samples, including both subjective and objective questions. To align with human examination methods, we design a method based on zero-shot settings to evaluate the performance of LLMs. With human evaluation, we obtain the converted total score of LLMs, including GPT-4, ChatGPT and ERNIE-Bot.Our findings reveal that LLMs have achieved competitive scores in Chinese GAOKAO examination, while they exhibit significant performance disparities across various subjects. We also use LLMs to grade the subjective questions, and find that model scores achieve a moderate level of consistency with human scores. In conclusion, this research contributes a robust evaluation benchmark for future large language models and offers valuable insights into the advantages and limitations of such models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2305.12474'>page</a> · <a href='https://arxiv.org/pdf/2305.12474'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Cognitive Chain-of-Thought (CoCoT): Structured Multimodal Reasoning about Social Situations</title>
-      <link>https://arxiv.org/abs/2507.20409</link>
-      <guid isPermaLink="false">arxiv:2507.20409</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.CY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> CMU — Maarten Sap</p>
-<p><b>Authors:</b> Eunkyu Park, Wesley Hanwen Deng, Gunhee Kim, Motahhare Eslami, Maarten Sap</p>
-<p>Chain-of-Thought (CoT) prompting helps models think step by step. But naive CoT breaks down in visually grounded social tasks, where models must perceive, understand, and judge all at once; bridging perception with norm-grounded reasoning. Recent work has introduced structured reasoning for multi-turn agent planning and visual QA, decomposing tasks into sequential sub-goals. To extend this to single-shot multimodal social reasoning, we introduce Cognitive Chain-of-Thought (CoCoT), a reasoning framework that structures vision-language-model (VLM) reasoning through three cognitively inspired stages: Perception (extract grounded facts), Situation (infer situations), and Norm (applying social norms). Evaluation across multiple distinct tasks such as multimodal intent disambiguation, multimodal theory of mind, social commonsense reasoning, and safety instruction following, shows consistent improvements (5.9% to 4.6% on average). We further explore the utility of CoCoT for improving models&#x27; reasoning through training and show that supervised fine-tuning on CoCoT-structured traces yields 5-6% improvements without explicit CoCoT prompting at inference, demonstrating that models internalize the structured reasoning pattern rather than merely following instructions. We show that structuring model reasoning through cognitively grounded stages enhances interpretability and social alignment, laying the groundwork for more reliable multimodal systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2507.20409'>page</a> · <a href='https://arxiv.org/pdf/2507.20409'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Talk in Pieces, See in Whole: Disentangled and Hierarchical Representation Learning in Language-based Object Detection</title>
-      <link>https://arxiv.org/abs/2509.24192</link>
-      <guid isPermaLink="false">arxiv:2509.24192</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST, UC Berkeley — Donghyun Kim</p>
-<p><b>Authors:</b> Sojung An, Kwanyong Park, Yong Jae Lee, Donghyun Kim</p>
-<p>Vision-language models (VLMs) have advanced multimodal perception, demonstrated by open-vocabulary object detection with simple language queries. State-of-the-art VLMs still struggle to handle complex queries involving descriptive attributes and relational clauses. To address this problem, we propose restructuring linguistic representations according to the hierarchical relations within sentences for language-based object detection. A key insight is that textual tokens should be disentangled into core components-objects, attributes, and relations-and aggregated into hierarchically structured sentence-level representations. Building on this principle, we introduce the TaSe (Talk in Pieces, See in Whole) framework with three main contributions: (1) a hierarchical synthetic captioning dataset spanning three tiers from category names to descriptive sentences; (2) the three-component disentanglement module guided by a novel disentanglement loss function, transforms text embeddings into subspace compositions; and (3) aggregating disentangled components into hierarchically structured embeddings guided by the proposed hierarchical objectives. Experimental results under the OmniLabel benchmark show a 24% performance improvement, demonstrating the importance of linguistic compositionality.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2509.24192'>page</a> · <a href='https://arxiv.org/pdf/2509.24192'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OceanGym: A Benchmark Environment for Underwater Embodied Agents</title>
-      <link>https://arxiv.org/abs/2509.26536</link>
-      <guid isPermaLink="false">arxiv:2509.26536</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> U Edinburgh, U Washington — (senior)</p>
-<p><b>Authors:</b> Yida Xue, Mingjun Mao, Xiangyuan Ru, Yuqi Zhu, Baochang Ren, Shuofei Qiao, Mengru Wang, Shumin Deng, … <i>(+4 more)</i></p>
-<p>We introduce OceanGym, the first comprehensive benchmark for ocean underwater embodied agents, designed to advance AI in one of the most demanding real-world environments. Unlike terrestrial or aerial domains, underwater settings present extreme perceptual and decision-making challenges, including low visibility, dynamic ocean currents, making effective agent deployment exceptionally difficult. OceanGym encompasses eight realistic task domains and a unified agent framework driven by Multi-modal Large Language Models (MLLMs), which integrates perception, memory, and sequential decision-making. Agents are required to comprehend optical and sonar data, autonomously explore complex environments, and accomplish long-horizon objectives under these harsh conditions. Extensive experiments reveal substantial gaps between state-of-the-art MLLM-driven agents and human experts, highlighting the persistent difficulty of perception, planning, and adaptability in ocean underwater environments. By providing a high-fidelity, rigorously designed platform, OceanGym establishes a testbed for developing robust embodied AI and transferring these capabilities to real-world autonomous ocean underwater vehicles, marking a decisive step toward intelligent agents capable of operating in one of Earth&#x27;s last unexplored frontiers. The code and data are available at https://github.com/OceanGPT/OceanGym.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2509.26536'>page</a> · <a href='https://arxiv.org/pdf/2509.26536'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Aligning Agentic World Models via Knowledgeable Experience Learning</title>
-      <link>https://arxiv.org/abs/2601.13247</link>
-      <guid isPermaLink="false">arxiv:2601.13247</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <category>cs.MM</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Tencent AI Lab · <b>Tier-2 senior:</b> U Edinburgh — (senior)</p>
-<p><b>Authors:</b> Baochang Ren, Yunzhi Yao, Rui Sun, Shuofei Qiao, Ningyu Zhang, Huajun Chen</p>
-<p>Current Large Language Models (LLMs) exhibit a critical modal disconnect: they possess vast semantic knowledge but lack the procedural grounding to respect the immutable laws of the physical world. Consequently, while these agents implicitly function as world models, their simulations often suffer from physical hallucinations-generating plans that are logically sound but physically unexecutable. Existing alignment strategies predominantly rely on resource-intensive training or fine-tuning, which attempt to compress dynamic environmental rules into static model parameters. However, such parametric encapsulation is inherently rigid, struggling to adapt to the open-ended variability of physical dynamics without continuous, costly retraining. To bridge this gap, we introduce WorldMind, a framework that autonomously constructs a symbolic World Knowledge Repository by synthesizing environmental feedback. Specifically, it unifies Process Experience to enforce physical feasibility via prediction errors and Goal Experience to guide task optimality through successful trajectories. Experiments on EB-ALFRED and EB-Habitat demonstrate that WorldMind achieves superior performance compared to baselines with remarkable cross-model and cross-environment transferability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.CV, cs.LG, cs.MM · <b>arXiv submitted:</b> 2026-08-28 · <a href='https://arxiv.org/abs/2601.13247'>page</a> · <a href='https://arxiv.org/pdf/2601.13247'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond Pixels: Visual Metaphor Transfer via Schema-Driven Agentic Reasoning</title>
-      <link>https://arxiv.org/abs/2602.01335</link>
-      <guid isPermaLink="false">arxiv:2602.01335</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard, Peking U — Yu Xu</p>
-<p><b>Authors:</b> Yu Xu, Yuxin Zhang, Lin Gao, Oliver Deussen, Tong-Yee Lee, Fan Tang</p>
-<p>A visual metaphor constitutes a high-order form of human creativity, employing cross-domain semantic fusion to transform abstract concepts into impactful visual rhetoric. Despite the remarkable progress of generative AI, existing models remain largely confined to pixel-level instruction alignment and surface-level appearance preservation, failing to capture the underlying abstract logic necessary for genuine metaphorical generation. To bridge this gap, we introduce the task of Visual Metaphor Transfer (VMT), which challenges models to autonomously decouple the &quot;creative essence&quot; from a reference image and re-materialize that abstract logic onto a user-specified target subject. We propose a cognitive-inspired, multi-agent framework that operationalizes Conceptual Blending Theory (CBT) through a novel Schema Grammar (&quot;G&quot;). This structured representation decouples relational invariants from specific visual entities, providing a rigorous foundation for cross-domain logic re-instantiation. Our pipeline executes VMT through a collaborative system of specialized agents: a perception agent that distills the reference into a schema, a transfer agent that maintains generic space invariance to discover apt carriers, a generation agent for high-fidelity synthesis and a hierarchical diagnostic agent that mimics a professional critic, performing closed-loop backtracking to identify and rectify errors across abstract logic, component selection, and prompt encoding. Extensive experiments and human evaluations demonstrate that our method significantly outperforms SOTA baselines in metaphor consistency, analogy appropriateness, and visual creativity, paving the way for automated high-impact creative applications in advertising and media. Project page with source code and self-contained skills is at https://yuci-gpt.github.io/Beyond-Pixels/.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-08-27 · <a href='https://arxiv.org/abs/2602.01335'>page</a> · <a href='https://arxiv.org/pdf/2602.01335'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report</title>
-      <link>https://huggingface.co/papers/2608.15763</link>
-      <guid isPermaLink="false">arxiv:2608.15763</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> TaoLive AIGC LLM Team, Yuhan Sun, Wenhao Lin, Yongdong Luo, Yibo Hu, Meiguang Jin, Junfeng Ma, Weihang Pan, … <i>(+3 more)</i></p>
-<p>AI-powered digital avatar streamers must answer product questions, engage viewers, and execute marketing strategies in real time, demanding low latency, frequent strategy updates, and accurate yet effective responses. Evolvable Harnesses, whose Skills, Hooks, prompts, and tools can be updated independently of model weights, enable rapid iteration but expose a trade-off: large models adapt zero-shot yet are too slow, whereas compact models meet latency targets but overfit to fixed Harness configurations. We propose Harness-Aware Training (HAT), which trains compact models to adapt to changing Harnesses. Its key component, Harness-State Augmentation (HSA), applies task-preserving transformations to Skill identifiers and content, tool schemas, prompt structures, and Hook functions. Training proceeds in three stages: HSA-SFT learns reasoning and tool use from strong-model trajectories across diverse environments; General On-Policy Distillation restores generalization lost during SFT; and HSA-RL improves robustness to changing Harnesses through reinforcement learning in augmented environments. Across four evaluation sets, HAT achieves 94.8 on Live-Stream QA (base: 80.3; strongest general LLM: 93.0) and 94.6 on Harness-Variant QA (base: 75.4). Unlike Fixed-Harness SFT, which lowers IFEval by 7.7 points from the base model, HAT avoids this regression and reaches 83.5. On one NVIDIA H20 GPU, the optimized system delivers P50 and P95 latencies of 3.4 s and 8.1 s. Deployed in Taobao Live&#x27;s digital-avatar service, it also yields positive online A/B test results for GMV and item-page views.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-22 · <a href='https://huggingface.co/papers/2608.15763'>page</a> · <a href='https://arxiv.org/pdf/2608.15763'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DART-SD: Diamond-topology Aware Retrieval and Tuning for Self-Distillation of Multi-Turn Tool-Calling Agents</title>
-      <link>https://huggingface.co/papers/2608.18524</link>
-      <guid isPermaLink="false">arxiv:2608.18524</guid>
-      <pubDate>Mon, 31 Aug 2026 10:19:48 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Hangrui Xu, Jiarui Wang, Yang Yang, Chuanbo Zhu, Fangda Chen, Ziqi Wu, Jingming Cai, Yan Song, … <i>(+1 more)</i></p>
-<p>Equipping Large Language Models (LLMs) with multi-turn tool-calling capabilities is essential for building autonomous agents. However, progress is fundamentally limited by the reliance on full-length trajectory imitation. For tasks involving multiple order-independent sub-goals, the optimal solution space forms a vast combinatorial diamond lattice. Forcing this rich topology into monolithic trajectories causes a severe topological collapse, indiscriminately penalizing valid alternative explorations and severely degrading policy diversity. To address this, we propose DART-SD (Diamond-topology Aware Retrieval and Tuning for Self-Distillation), a novel framework that shifts the paradigm from global forcing to topology-guided localized correction. DART-SD first models the execution process as a converging Interaction-State Transition Graph (ISTG), faithfully capturing the inherent diamond topology of successful and failed exploratory paths. During autonomous rollouts, the framework identifies the Critical Topological Breakpoint (CTB) and retrieves success-supported recovery references. Finally, we introduce a progressive self-distillation paradigm through CTB-guided localized supervision, ensuring that the training loss is calculated exclusively on the generated recovery steps while strictly protecting the valid reasoning prefix from destructive gradient updates. Experiments on complex multi-turn tool-calling benchmarks demonstrate that DART-SD significantly outperforms traditional full-trajectory baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-08-19 · <a href='https://huggingface.co/papers/2608.18524'>page</a> · <a href='https://arxiv.org/pdf/2608.18524'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
