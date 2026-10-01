@@ -5,8 +5,22 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Wed, 30 Sep 2026 10:10:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 10:38:46 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>3D Software Synthesis Driven by Constraint-Expressive Intermediate Representation</title>
+      <link>https://arxiv.org/abs/2507.18625</link>
+      <guid isPermaLink="false">arxiv:2507.18625</guid>
+      <pubDate>Thu, 01 Oct 2026 10:38:46 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.MM</category>
+      <category>cs.SE</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK — Michael R. Lyu</p>
+<p><b>Authors:</b> Shuqing Li, Anson Y. Lam, Yun Peng, Wenxuan Wang, Michael R. Lyu</p>
+<p>Graphical user interface (UI) software has undergone a fundamental transformation from traditional two-dimensional (2D) desktop/web/mobile interfaces to spatial three-dimensional (3D) environments. While existing work has made remarkable success in automated 2D software generation, such as HTML/CSS and mobile app interface code synthesis, the generation of 3D software still remains under-explored. Current methods for 3D software generation usually generate the 3D environments as a whole and cannot modify or control specific elements in the software. Furthermore, these methods struggle to handle the complex spatial and semantic constraints inherent in the real world. To address the challenges, we present Scenethesis, a novel requirement-sensitive 3D software synthesis approach that maintains formal traceability between user specifications and generated 3D software. Scenethesis is built upon ScenethesisLang, a domain-specific language that serves as a granular constraint-aware intermediate representation (IR) to bridge natural language requirements and executable 3D software. It serves both as a comprehensive scene description language enabling fine-grained modification of 3D software elements and as a formal constraint-expressive specification language capable of expressing complex spatial constraints. By decomposing 3D software synthesis into stages operating on ScenethesisLang, Scenethesis enables independent verification, targeted modification, and systematic constraint satisfaction. Our evaluation demonstrates that Scenethesis accurately captures over 80% of user requirements and satisfies more than 90% of hard constraints while handling over 100 constraints simultaneously. Furthermore, Scenethesis achieves a 42.8% improvement in BLIP-2 visual evaluation scores compared to the state-of-the-art method.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.MM, cs.SE · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://arxiv.org/abs/2507.18625'>page</a> · <a href='https://arxiv.org/pdf/2507.18625'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Building Intelligent Agents with Neuro-Symbolic Concepts</title>
       <link>https://arxiv.org/abs/2505.06191</link>
@@ -2556,20 +2570,6 @@
 <p><b>Authors:</b> Chenhao Zheng, Jieyu Zhang, Mohammadreza Salehi, Ziqi Gao, Vishnu Iyengar, Norimasa Kobori, Quan Kong, Ranjay Krishna</p>
 <p>Effective video tokenization is critical for scaling transformer models for long videos. Current approaches tokenize videos using space-time patches, leading to excessive tokens and computational inefficiencies. The best token reduction strategies degrade performance and barely reduce the number of tokens when the camera moves. We introduce grounded video tokenization, a paradigm that organizes tokens based on panoptic sub-object trajectories rather than fixed patches. Our method aligns with fundamental perceptual principles, ensuring that tokenization reflects scene complexity rather than video duration. We propose TrajViT, a video encoder that extracts object trajectories and converts them into semantically meaningful tokens, significantly reducing redundancy while maintaining temporal coherence. Trained with contrastive learning, TrajViT significantly outperforms space-time ViT (ViT3D) across multiple video understanding benchmarks, e.g., TrajViT outperforms ViT3D by a large margin of 6% top-5 recall in average at video-text retrieval task with 10x token deduction. We also show TrajViT as a stronger model than ViT3D for being the video encoder for modern VideoLLM, obtaining an average of 5.2% performance improvement across 6 VideoQA benchmarks while having 4x faster training time and 18x less inference FLOPs. TrajViT is the first efficient encoder to consistently outperform ViT3D across diverse video analysis tasks, making it a robust and scalable solution.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.GR, cs.LG · <a href='https://arxiv.org/abs/2505.23617'>page</a> · <a href='https://arxiv.org/pdf/2505.23617'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PLD: A Choice-Theoretic List-Wise Knowledge Distillation</title>
-      <link>https://arxiv.org/abs/2506.12542</link>
-      <guid isPermaLink="false">arxiv:2506.12542</guid>
-      <pubDate>Mon, 18 May 2026 13:57:16 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>stat.ML</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Kaigui Bian</p>
-<p><b>Authors:</b> Ejafa Bassam, Dawei Zhu, Kaigui Bian</p>
-<p>Knowledge distillation is a model compression technique in which a compact &quot;student&quot; network is trained to replicate the predictive behavior of a larger &quot;teacher&quot; network. In logit-based knowledge distillation, it has become the de facto approach to augment cross-entropy with a distillation term. Typically, this term is either a KL divergence that matches marginal probabilities or a correlation-based loss that captures intra- and inter-class relationships. In every case, it acts as an additional term to cross-entropy. This term has its own weight, which must be carefully tuned. In this paper, we adopt a choice-theoretic perspective and recast knowledge distillation under the Plackett-Luce model by interpreting teacher logits as &quot;worth&quot; scores. We introduce &quot;Plackett-Luce Distillation (PLD)&quot;, a weighted list-wise ranking loss. In PLD, the teacher model transfers knowledge of its full ranking of classes, weighting each ranked choice by its own confidence. PLD directly optimizes a single &quot;teacher-optimal&quot; ranking. The true label is placed first, followed by the remaining classes in descending teacher confidence. This process yields a convex and translation-invariant surrogate that subsumes weighted cross-entropy. Empirically, across CIFAR-100, ImageNet-1K, and MS-COCO, PLD achieves consistent gains across diverse architectures and distillation objectives, including divergence-based, correlation-based, and feature-based methods, in both homogeneous and heterogeneous teacher-student pairs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV, stat.ML · <a href='https://arxiv.org/abs/2506.12542'>page</a> · <a href='https://arxiv.org/pdf/2506.12542'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
