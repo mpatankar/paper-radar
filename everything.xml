@@ -5,8 +5,106 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Fri, 02 Oct 2026 10:13:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 09:35:25 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics</title>
+      <link>https://huggingface.co/papers/2609.35259</link>
+      <guid isPermaLink="false">arxiv:2609.35259</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> U Cambridge — (senior)</p>
+<p><b>Authors:</b> Julianna Piskorz, Antonin Berthon, Mihaela van der Schaar, Hugging Face Daily Papers (curated)</p>
+<p>On-policy learning has been argued to reduce catastrophic forgetting, produce sparser parameter updates, and improve generalisation. However, existing comparisons between supervised fine-tuning and reinforcement learning vary many factors simultaneously, making the contribution of rollout policy difficult to isolate. We study the effect of rollout policy in a controlled strong-to-weak distillation setting, by independently varying rollout policy, token-level KL direction, and learning rate across the Llama3 and Qwen2.5 model families and reasoning tasks spanning scientific, medical, and arithmetic domains. Our analysis reveals a nuanced picture of distillation dynamics in which rollout policy does not necessarily play a central role. Instead, token-level KL direction more clearly shapes task performance and output coverage, while learning rate governs forgetting and update sparsity. Analysis of KL gradients and experiments along a continuous student-teacher rollout-policy spectrum explain this pattern: forward KL is remarkably robust to rollout policy, with its performance stable and strong despite changes to the rollout policy, whereas reverse KL is substantially more sensitive and favours student-generated rollouts. On-policy data nevertheless improves generalisation to harder variants of the Countdown arithmetic task under both KL directions, although this advantage does not reliably persist after subsequent RLVR. Our broader conclusions remain robust to removing gradient clipping, using sampled KL estimators, and training on tasks requiring longer reasoning chains. Overall, our results challenge the view that on-policy rollouts are inherently preferable and show that their value depends critically on the objective, evaluation setting, and optimisation hyperparameters.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.35259'>page</a> · <a href='https://arxiv.org/pdf/2609.35259'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Transformers Stop Thinking Too Early, and a Tiny LoRA Fixes It</title>
+      <link>https://huggingface.co/papers/2609.36585</link>
+      <guid isPermaLink="false">arxiv:2609.36585</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> U Michigan — (senior)</p>
+<p><b>Authors:</b> Zehao Jin, Ruixuan Deng, Junran Wang, Hugging Face Daily Papers (curated)</p>
+<p>Pretrained transformers use little of their depth to follow references in context. Thirteen base models reliably follow only 1.4-3.6 lines, and extra pretrained loops add little. A task-trained rank-8 LoRA at one early layer extends this computation with all model weights frozen. Qwen3-8B improves from 15.5% to 99% exact accuracy on 24-line chains; a longer-trained LoRA reaches 50 lines. Ouro-1.4B reaches 60 lines after four loops and at least 160 after eight. The LoRA starts a relay: program lines pass on their chain identity through a short range of middle layers. Frozen heads read progressively further up the chain, and removing parent-line attention stops the relay. A frozen-model measurement locates the last useful intervention layer within tolerance in three of four held-out models. Task-specific LoRAs also improve MuSiQue. Default answers therefore understate the computation accessible through a tiny edit. Code and an interactive demo are available at https://lunamos.github.io/stop-thinking-too-early/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://huggingface.co/papers/2609.36585'>page</a> · <a href='https://arxiv.org/pdf/2609.36585'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>E-MoE: Enhanced Mixture-of-Experts for Non-Factorized Diffusion Language Models</title>
+      <link>https://huggingface.co/papers/2609.37533</link>
+      <guid isPermaLink="false">arxiv:2609.37533</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> MIT — (senior)</p>
+<p><b>Authors:</b> Arseny Ivanov, Alexander Kolesov, Alexander Korotin, Ivan Oseledets, Mikhail Goncharov, Hugging Face Daily Papers (curated)</p>
+<p>Masked diffusion models (MDMs) generate sequences by progressively unmasking several tokens per denoising step, but their reverse process is typically factorized over positions, limiting sample quality in the few-step regime where diffusion&#x27;s speed advantage over autoregressive decoding matters most. A recent line of work introduces a continuous Gaussian latent, trained as a variational autoencoder, to capture correlations across positions, but such approaches are prone to posterior collapse, where the latent is silently ignored. We propose Enhanced Mixture-of-Experts (E-MoE), which builds the reverse process as a mixture of factorized distributions over a discrete shared latent given by the expert-routing decisions of a Mixture-of-Experts (MoE) backbone, without increasing active parameters over the factorized baseline. Across synthetic multi-modal benchmarks, binarized MNIST, and LM1B, E-MoE improves few-step generation over factorized baselines.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://huggingface.co/papers/2609.37533'>page</a> · <a href='https://arxiv.org/pdf/2609.37533'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation</title>
+      <link>https://huggingface.co/papers/2610.02196</link>
+      <guid isPermaLink="false">arxiv:2610.02196</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhuo Lin, Sirui Xu, Liuyu Bian, Yu-Xiong Wang, Liang-Yan Gui, Hugging Face Daily Papers (curated)</p>
+<p>We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining what it learns, without retraining. Our key insight is that a broad controller already holds much of the competence a new task needs, and that this competence becomes accessible through an interface between planning and control that is expressive enough to specify contact-rich, multi-stage interactions, yet executable and measurable enough that execution feedback can guide planning from experience. InterEvolve realizes this interface with two components. First, we develop an object-aware forward-backward (FB) behavioral foundation model, whose object residuals on a frozen body prior turn a new reward about the body or objects into loco-manipulation behavior at test time. Second, we specify tasks as reward programs: staged rewards with completion conditions and tunable constants. A large language model (LLM) agent revises the program structure in context, drawing on execution feedback and a skill library of verified programs, while a numerical optimizer tunes its constants. With every candidate verified across parallel simulation scenarios, the program explores new ways to induce, repurpose, and compose the controller&#x27;s existing motor competence for the task at hand, and thus improves over iterations. Experiments show that human-designed rewards leave much of the FB model&#x27;s loco-manipulation competence untapped, whereas the programs InterEvolve evolves release it, sometimes through novel strategies. It further produces behaviors for diverse tasks, complex scenes, and long-horizon compositions in simulation, and evolved skills run autonomously on a physical Unitree G1 from egocentric onboard perception.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.02196'>page</a> · <a href='https://arxiv.org/pdf/2610.02196'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Video Generation Models: A Survey of Post-Training and Alignment</title>
+      <link>https://huggingface.co/papers/2610.00812</link>
+      <guid isPermaLink="false">arxiv:2610.00812</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Stanford — (senior)</p>
+<p><b>Authors:</b> Chaoyu Li, Xiaoyi Gu, Yogesh Kulkarni, Eun Woo Im, Mohammadmahdi Honarmand, Zeyu Wang, Juntong Song, Fei Du, … <i>(+6 more)</i></p>
+<p>Video generation has rapidly progressed from short, low-quality clips to high-resolution, long-duration sequences with complex spatiotemporal dynamics. Despite strong generative priors learned through large-scale pretraining, pretrained video models often fail to reliably follow human intent, maintain temporal coherence, or satisfy physical and safety constraints. Compared with image and text generation, alignment in video generation presents unique challenges, including error accumulation over time, motion-appearance coupling, multi-objective trade-offs, and limited supervision for temporal properties. These challenges motivate systematic post-training strategies that adapt pretrained models without retraining them from scratch. In this survey, we present the first comprehensive review of post-training and alignment in video generation models. We frame post-training as a unifying framework and distinguish between implicit alignment and explicit alignment based on how alignment signals are enforced. From this perspective, we organize existing approaches into four broad categories: supervised fine-tuning methods, self-training and distillation methods, preference- and reward-based methods, and inference-time methods. This taxonomy provides a coherent view of how alignment signals shape model behavior across both training and deployment. Beyond methodological advances, we review commonly used datasets, benchmarks, and evaluation practices, and discuss open challenges such as scalable reward design, long-horizon temporal consistency, stability-expressiveness trade-offs, and safety-aware generation. This survey aims to provide a structured conceptual foundation and practical guidance for advancing controllable and reliable video generation models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://huggingface.co/papers/2610.00812'>page</a> · <a href='https://arxiv.org/pdf/2610.00812'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens</title>
+      <link>https://huggingface.co/papers/2610.01939</link>
+      <guid isPermaLink="false">arxiv:2610.01939</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CUHK, Peking U — (senior)</p>
+<p><b>Authors:</b> Ruiyang Si, Jianxin Bi, Shunyu Yang, Rui Ni, Wenbo Huang, Qiang Wang, Shulong Jiang, Duomin Wang, … <i>(+5 more)</i></p>
+<p>Vision language model (VLM) agents can control robots through visual feedback and action primitives, but repeated model invocations and redundant observations incur substantial token overhead. We introduce PyRUA-Lean, an interactive code-execution framework that couples feedback-driven primitive composition with selective observation: the agent composes classical robot primitives and learned vision-language-action (VLA) policies into Python cells that perform conditional checks and local retries, returning only explicitly requested images and state feedback for replanning. Across 700 simulated task instances from LIBERO-PRO, RoboTwin 2.0, and RoboCasa365, we compare PyRUA-Lean with a tool-calling baseline using the same GPT-6 Astra planner and underlying robot primitives. Under equal LLM-call budgets, PyRUA-Lean increases overall success from 63.1% to 71.7%. On instances solved by both agents, it uses 49% fewer LLM calls and 65% fewer input tokens.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01939'>page</a> · <a href='https://arxiv.org/pdf/2610.01939'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Open-sourcing AstaBrief, the fast report-generation model in Asta</title>
+      <link>https://allenai.org/blog/astabrief</link>
+      <guid isPermaLink="false">ai2:d59de4d941</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Allen Institute for AI</p>
+<p><b>Authors:</b> Allen Institute for AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://allenai.org/blog/astabrief'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Language Discrimination Improves Linguistic Learning in Multilingual Speech Models</title>
+      <link>https://machinelearning.apple.com/research/language-discrimination-multilingual-learning</link>
+      <guid isPermaLink="false">apple_ml:be81ec2d11</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Multilingual self-supervised speech models can benefit from sharing information across languages, but under a matched total pretraining data budget they still fall short of monolingual models. We show that strengthening the modelâs ability to discriminate languages during pretraining reduces and, on some measures, closes this multilingual gap on continuous phonetic and higher-level linguistic measures, while preserving substantial cross-language sharing. Using a controlled English/French HuBERT setting, we test two interventions which strengthen language discrimination: an auxiliary languageâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-02 · <a href='https://machinelearning.apple.com/research/language-discrimination-multilingual-learning'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Limits of Confidence in Diffusion</title>
+      <link>https://machinelearning.apple.com/research/limits-confidence-diffusion</link>
+      <guid isPermaLink="false">apple_ml:600d36562e</guid>
+      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Discrete diffusion, including remasking and uniform-state samplers, generate a sequence by writing multiple token positions per step, drawing each from a per-position distribution and choosing which positions to write from those same distributions. For domains of general interest (pixels, phonemes, or words) there are inherent dependencies between tokens. We show that a step matches the training distribution only when the positions it writes are conditionally independent given the tokens already fixed, that no product of per-position distributions can match a dependent group, and thatâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-02 · <a href='https://machinelearning.apple.com/research/limits-confidence-diffusion'>page</a></p>]]></description>
+    </item>
     <item>
       <title>LLM-based Agentic Reasoning Frameworks: A Survey from Methods to Scenarios</title>
       <link>https://arxiv.org/abs/2508.17692</link>
@@ -2185,113 +2283,6 @@
 <p><b>Authors:</b> Xingxuan Zhang, Gang Ren, Hao Yuan, Hao Zou, Hongze Tan, Hui Wang, Jianhao Song, Jiansheng Li, … <i>(+53 more)</i></p>
 <p>We introduce LimiX-2, a new model in the LimiX family, developed through model and data scaling guided by our previously established scaling laws. LimiX-2 adopts the Contextual Mechanism Networks (CMNs) paradigm and is pretrained with Context-Conditional Masked Modeling (CCMM). CMNs shifts the organizing principle of in-context learning from target-centric prediction to mechanism-oriented joint modeling. Rather than centering the network on the p(y mid x, D_{context}) objective of conventional tabular PFNs, it is designed around learning p(x, y mid D_{context}), a context-dependent representation of the joint structure underlying data generation. Pretraining uses synthetic datasets generated by structural causal models (SCMs) spanning diverse graph structures, functional mechanisms, and observation processes. Evaluations on TabArena, TALENT, and BCCO show that LimiX-2 outperforms current dataset-specific models and tabular foundation models. Beyond predictive performance, the CMN paradigm also promotes causal awareness in LimiX-2: its feature attention encodes direct causal relationships, enabling accurate causal skeleton recovery.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-15 · <a href='https://huggingface.co/papers/2609.17488'>page</a> · <a href='https://arxiv.org/pdf/2609.17488'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Shared Selective Persistent Memory for Agentic LLM Systems</title>
-      <link>https://machinelearning.apple.com/research/shared-selective-persistent-memory</link>
-      <guid isPermaLink="false">apple_ml:c9ae0ec010</guid>
-      <pubDate>Thu, 17 Sep 2026 09:04:39 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Agentic LLM systems that generate code through multi-turn tool use face a fundamental context problem: each session starts from zero, discarding the configuration choices, domain constraints, data schemas, and tool-use patterns that made previous sessions productive. Naively persisting entire conversation histories is both token-inefficient and counterproductiveâirrelevant context degrades generation quality. We introduce shared selective persistent memory, a memory architecture for agentic systems that identifies and retains four categories of reusable contextâtask specifications, dataâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://machinelearning.apple.com/research/shared-selective-persistent-memory'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Glyph: A Multi-Strategy Agentic System for Column Description and Sensitivity-Ontology Tagging of Enterprise Data Catalogs</title>
-      <link>https://machinelearning.apple.com/research/glyph-column-description-tagging</link>
-      <guid isPermaLink="false">apple_ml:3194d6c72a</guid>
-      <pubDate>Thu, 17 Sep 2026 09:04:39 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Enterprise data lakes accumulate tables faster than human stewards can document or classify them, leaving columns with missing descriptions and unassigned governance labels. This documentation debt undermines data discovery, access control, and regulatory compliance. We present Glyph, a production system that frames two coupled problems, column description generation and column type annotation for data classification, as cooperating LLM agents orchestrated as stateful graphs. The Descriptor grounds generation in the pipeline source code that produces each column, retrieved on demand from anâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://machinelearning.apple.com/research/glyph-column-description-tagging'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>DACA-GRPO: Denoising-Aware Credit Assignment for Reinforcement Learning in Diffusion Language Models</title>
-      <link>https://machinelearning.apple.com/research/denoising-aware-credit-assignment</link>
-      <guid isPermaLink="false">apple_ml:81c5723cde</guid>
-      <pubDate>Thu, 17 Sep 2026 09:04:39 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Diffusion large language models are a compelling alternative to autoregressive models, yet existing RL methods for diffusion treat all denoising steps as equally important and rely on biased, high-variance likelihood estimates. We identify two fundamental weaknesses: the absence of temporal credit assignment across the denoising trajectory, and the systematic bias of mean-field likelihood estimates used for policy optimization. To address these, we propose Denoising-Aware Credit Assignment for GRPO (DACA-GRPO), a lightweight, plug-and-play enhancement for any GRPO-style trainer. DACA-GRPOâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://machinelearning.apple.com/research/denoising-aware-credit-assignment'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Trajectory as the Teacher: Few-Step Discrete Flow Matching via Energy-Navigated Distillation</title>
-      <link>https://machinelearning.apple.com/research/trajectory-teacher-flow-matching</link>
-      <guid isPermaLink="false">apple_ml:9f221e95a9</guid>
-      <pubDate>Thu, 17 Sep 2026 09:04:39 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Discrete flow matching generates text by iteratively transforming noise tokens into coherent language, but may require hundreds of forward passes. Distillation uses the multi-step trajectory to train a student to reproduce the process in a few steps. When the student underperforms, the usual explanation is insufficient capacity. We argue the opposite: the trajectory is the bottleneck, not the student. Each training trajectory is built through a chain of blind stochastic jumps with no evaluation of sequence quality; a single bad decision at an early midpoint propagates through subsequent stepsâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://machinelearning.apple.com/research/trajectory-teacher-flow-matching'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>How Value Induction Reshapes LLM Behaviour</title>
-      <link>https://machinelearning.apple.com/research/value-induction-llm-behaviour</link>
-      <guid isPermaLink="false">apple_ml:212bd47546</guid>
-      <pubDate>Thu, 17 Sep 2026 09:04:39 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Conversational Large Language Models are post-trained on language that expresses specific behavioural traits, such as curiosity, open-mindedness, and empathy, and values, such as helpfulness, harmlessness, and honesty. This is done to increase utility, ensure safety, and improve the experience of the people interacting with the model. However, values are complex and inter-related â inducing one could modify behaviour on another. Further, inducing certain values can make models more addictive or sycophantic through language used in the generations, with a potential detrimental effect on theâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-09-16 · <a href='https://machinelearning.apple.com/research/value-induction-llm-behaviour'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>EVINCE: Optimizing Multi-LLM Dialogues Using Conditional Statistics and Information Theory</title>
-      <link>https://arxiv.org/abs/2408.14575</link>
-      <guid isPermaLink="false">arxiv:2408.14575</guid>
-      <pubDate>Wed, 16 Sep 2026 09:01:58 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Edward Y. Chang</p>
-<p><b>Authors:</b> Edward Y. Chang</p>
-<p>EVINCE (Entropy and Variation IN Conditional Exchanges) is a novel framework for optimizing multi-LLM dialogues using conditional statistics and information theory. It addresses limitations in multi-agent debate (MAS) frameworks, where multiple LLMs chat without behavior modulation or mutual information quality assessment. Using dual entropy optimization to balance perspective diversity and prior knowledge, EVINCE provides quantitative tools to dynamically regulate LLM linguistic behaviors. When mutual information is low and both cross-entropy and Wasserstein distance are high, EVINCE promotes contentious dialogues to expose diverse perspectives and uncover inconsistencies. Conversely, as cross-entropy decreases and mutual information stabilizes, it transitions discussions into a conciliatory phase, encouraging compromise and acknowledgment of valid points. Using information-theoretic metrics and optimizing mutual information, EVINCE emerges as a structured and highly effective framework for multi-LLM collaboration.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-14 · <a href='https://arxiv.org/abs/2408.14575'>page</a> · <a href='https://arxiv.org/pdf/2408.14575'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>CBW: Towards Dataset Ownership Verification for Speaker Verification via Clustering-based Backdoor Watermarking</title>
-      <link>https://arxiv.org/abs/2503.05794</link>
-      <guid isPermaLink="false">arxiv:2503.05794</guid>
-      <pubDate>Wed, 16 Sep 2026 09:01:58 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <category>cs.SD</category>
-      <category>eess.AS</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Yiming Li</p>
-<p><b>Authors:</b> Yiming Li, Kaiying Yan, Jiawen Diao, Shuo Shao, Tongqing Zhai, Shu-Tao Xia, Dacheng Tao</p>
-<p>Speaker verification models are trained on large-scale public datasets whose licenses usually prohibit unauthorized commercial use, yet such infringement is difficult to detect or deter. Dataset ownership verification (DOV) is the mainstream countermeasure: it can watermark a dataset with backdoor attacks so that models trained on it exhibit owner-specified behaviors. However, existing DOV methods presuppose a closed label space fixed at watermarking time, whereas in open-set speaker verification the identities that a deployed model accepts are enrolled by third parties after release and are never observed by the dataset owner. We show that straightforward adaptations fail in two characteristic modes, and accordingly distill three requirements for an effective watermark, namely identity agnosticism, coverage, and fidelity, together with an intrinsic tension between the latter two. Our clustering-based backdoor watermark (CBW) resolves this tension by partitioning training speakers into clusters by feature similarity and implanting a distinct trigger for each cluster, so that each trigger covers one region of the speaker embedding space while the trigger set is designed to jointly cover it. We further develop paired hypothesis tests for ownership verification under both the similarity-available and the decision-only black-box settings at the 1-to-1 and 1-to-$N$ enrollment scales, and theoretically characterize when the audit succeeds, including an exact small-sample certificate and the effect of the enrollment size. Extensive experiments on benchmark datasets and representative models verify the effectiveness of our CBW, its resistance to watermark-removal attacks, and its transferability across model structures. Code is at https://github.com/Radiant0726/CBW/tree/master.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI, cs.LG, cs.SD, eess.AS · <b>arXiv submitted:</b> 2026-09-15 · <a href='https://arxiv.org/abs/2503.05794'>page</a> · <a href='https://arxiv.org/pdf/2503.05794'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DoubleAgents: Human-Agent Alignment in a Socially Embedded Workflow</title>
-      <link>https://arxiv.org/abs/2509.12626</link>
-      <guid isPermaLink="false">arxiv:2509.12626</guid>
-      <pubDate>Wed, 16 Sep 2026 09:01:58 GMT</pubDate>
-      <category>cs.HC</category>
-      <category>cs.AI</category>
-      <category>cs.CY</category>
-      <category>cs.ET</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Lydia B Chilton</p>
-<p><b>Authors:</b> Tao Long, Xuanming Zhang, Sitong Wang, Zhou Yu, Lydia B Chilton</p>
-<p>Aligning agentic AI with user intent is critical for delegating complex, socially embedded tasks, yet user preferences are often implicit, evolving, and difficult to specify upfront. We present DoubleAgents, a system for human-agent alignment in coordination tasks, grounded in distributed cognition. DoubleAgents integrates three components: (1) a coordination agent that maintains state and proposes plans and actions, (2) a dashboard visualization that makes the agent&#x27;s reasoning legible for user evaluation, and (3) a policy module that transforms user edits into reusable alignment artifacts, including coordination policies, email templates, and stop hooks, which improve system behavior over time. We evaluate DoubleAgents through a two-day in-lab interactive simulation study (n=10), three real-world deployments, and a technical evaluation. Participants&#x27; comfort in offloading tasks and reliance on DoubleAgents both increased over time, correlating with the three distributed cognition components. Participants still required control at points of uncertainty - edge-case flagging and context-dependent actions. We contribute a distributed cognition approach to human-agent alignment in socially embedded tasks. We further introduce interactive simulation as a methodological testbed for rapid iteration and alignment testing of agentic systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.CY, cs.ET · <b>arXiv submitted:</b> 2026-09-14 · <a href='https://arxiv.org/abs/2509.12626'>page</a> · <a href='https://arxiv.org/pdf/2509.12626'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Dual Randomized Smoothing: Beyond Global Noise Variance</title>
-      <link>https://arxiv.org/abs/2512.01782</link>
-      <guid isPermaLink="false">arxiv:2512.01782</guid>
-      <pubDate>Wed, 16 Sep 2026 09:01:58 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Martin Vechev</p>
-<p><b>Authors:</b> Chenhao Sun, Yuhao Mao, Martin Vechev</p>
-<p>Randomized Smoothing (RS) is a prominent technique for certifying the robustness of neural networks against adversarial perturbations. With RS, achieving high accuracy at small radii requires a small noise variance, while achieving high accuracy at large radii requires a large noise variance. However, the global noise variance used in the standard RS formulation leads to a fundamental limitation: there exists no global noise variance that simultaneously achieves strong performance at both small and large radii. To break through the global variance limitation, we propose a dual RS framework which enables input-dependent noise variances. To achieve that, we first prove that RS remains valid with input-dependent noise variances, provided the variance is locally constant around each input. Building on this result, we introduce two components: (i) a variance estimator predicts an optimal noise variance for each input, (ii) this estimated variance is then used by a standard RS classifier. The variance estimator is independently smoothed via RS to ensure local constancy, enabling flexible design. We also introduce training strategies to iteratively optimize the two components. Experiments on CIFAR-10 demonstrate that our dual RS method provides strong performance for both small and large radii-unattainable with global noise variance-while incurring only a 60% computational overhead at inference. Moreover, it outperforms prior input-dependent noise approaches across most radii, with gains at radii 0.5, 0.75, and 1.0 of 15.6%, 20.0%, and 15.7%. On ImageNet, dual RS remains effective across all radii, with advantages of 8.6%, 17.1%, and 9.1% at radii 0.5, 1.0, and 1.5. Additionally, the dual RS framework provides a routing perspective for certified robustness, improving the accuracy-robustness trade-off with off-the-shelf expert RS models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-09-15 · <a href='https://arxiv.org/abs/2512.01782'>page</a> · <a href='https://arxiv.org/pdf/2512.01782'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
