@@ -5,8 +5,41 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 04 Oct 2026 10:20:36 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 11:04:10 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>LPS-Bench: Benchmarking Safety Awareness of Computer-Use Agents in Long-Horizon Planning under Benign and Adversarial Scenarios</title>
+      <link>https://arxiv.org/abs/2602.03255</link>
+      <guid isPermaLink="false">arxiv:2602.03255</guid>
+      <pubDate>Mon, 05 Oct 2026 11:04:10 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab</p>
+<p><b>Authors:</b> Tianyu Chen, Chujia Hu, Dongrui Liu, Xia Hu, Wenjie Wang</p>
+<p>Computer-use agents (CUAs) execute multi-stage tasks through tools, where an early unsafe decision can propagate to consequential actions. Evaluating only final outcomes can miss such decisions, while constructing executable environments for new tasks can make benchmark expansion costly. We present LPS-Bench, a benchmark of long-horizon planning safety in MCP-style tool workflows under benign requests and adversarial steering. A template-guided multi-agent pipeline generates user instructions, simulated toolkits, and case-specific safety criteria, followed by human review. This design supports scalable case expansion without building a separate application environment for every test case. LPS-Bench comprises 570 cases derived from 65 scenarios across 7 task domains and 9 planning-risk types, with representative cases additionally adapted to reusable skills. An LLM-based evaluator applies case-specific criteria to complete interaction records, examining tool choices, arguments, and responses to environmental feedback throughout execution. Evaluations of 13 LLM agents reveal persistent failures in both benign and adversarial settings. Prompt-based interventions yield model-dependent gains, but substantial safety failures remain.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-02 · <a href='https://arxiv.org/abs/2602.03255'>page</a> · <a href='https://arxiv.org/pdf/2602.03255'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>FrameMorrow: Future-guided Frame Selection with Prospective Tokens for Long-Horizon Video Generation</title>
+      <link>https://huggingface.co/papers/2609.38839</link>
+      <guid isPermaLink="false">arxiv:2609.38839</guid>
+      <pubDate>Mon, 05 Oct 2026 11:04:10 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bo Yin, Xiaobin Hu, Jiaqi Zhao, Shuicheng Yan, Hugging Face Daily Papers (curated)</p>
+<p>Long-horizon video generation requires models to effectively leverage an increasingly long generation history. As the generated history grows, retaining all previous content becomes increasingly expensive and redundant, making effective historical selection essential. Existing approaches often determine historical relevance based on the current content. However, information relevant to the present is not necessarily useful for future generation, while seemingly less relevant history may become important later. Our key insight is that historical information should be selected according to its relevance to future information needs. Capturing these needs does not require generating the full future; instead, a compact representation of what becomes important next is sufficient to guide historical selection. Building on this insight, we propose FrameMorrow, a prospective frame selector that predicts a small set of prospective tokens representing future information needs and uses them to identify relevant information from history. FrameMorrow selects explicit historical frames rather than model-specific internal states, enabling plug-and-play integration across diverse generators, including closed-source models, with little additional inference cost. We evaluate FrameMorrow across five benchmarks and 11 generative models spanning long-video generation, interactive generation, and action-conditioned world models. Extensive experiments demonstrate consistent improvements in long-range consistency, visual quality, and action alignment across diverse generation settings.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://huggingface.co/papers/2609.38839'>page</a> · <a href='https://arxiv.org/pdf/2609.38839'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation</title>
+      <link>https://huggingface.co/papers/2610.01092</link>
+      <guid isPermaLink="false">arxiv:2610.01092</guid>
+      <pubDate>Mon, 05 Oct 2026 11:04:10 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Patrick Amadeus Irawan, Iskandar Muda Rizky Parlambang, Rava Maulana, Qinrong Cui, Erland Hilman Fuadi, Zayd M. K. Zuhri, Nanda Ryaas Absar, Ahmed Elshabrawy, … <i>(+6 more)</i></p>
+<p>Video generation models are increasingly being explored as world simulators for embodied planning and learning. To do so effectively, these models must not only generate visually appealing frames, but also predict how environments dynamically evolve when executing goal-directed actions. While evaluating these capabilities is crucial, existing benchmarks focus mainly on single short actions or step-by-step instructions. This leaves multi-step physical reasoning underexplored, especially in egocentric video generation that requires planning to simulate proper execution to accomplish high-level goals by carrying out multiple real-world manipulations. We introduce Ego2Act, a goal-directed benchmark featuring 2,640 videos from 110 real-world tasks across day-to-day settings, varying object clutter and multi-step complexity. Given an initial scene image and a high-level goal, Ego2Act evaluates whether video generation models can produce realistic egocentric videos of a hand manipulating objects to carry out the task. To support scalable evaluation, we also introduce Ego2ActJudge, a reference-free evaluation pipeline that achieves better task completion and physics plausibility evaluation alignment with human consensus compared to relevant baselines. Our findings reveal that models&#x27; generated simulations often skip or partially execute steps, leaving later steps missing dependent states, which leads to unfulfilled goal. Furthermore, models consistently fail at fine-grained physical dynamics, particularly during complex object manipulation and persistent world modeling. We hope Ego2Act provides a rigorous testbed for advancing video models toward physically plausible, goal-directed simulation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01092'>page</a> · <a href='https://arxiv.org/pdf/2610.01092'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Moloch&#x27;s Bargain: Emergent Misalignment When LLMs Compete for Audiences</title>
       <link>https://arxiv.org/abs/2510.06105</link>
@@ -2320,42 +2353,6 @@
 <p><b>Authors:</b> Bowen Ping, Xiangxin Zhou, Penghui Qi, Minnan Luo, Liefeng Bo, Tianyu Pang, Hugging Face Daily Papers (curated)</p>
 <p>Recent work has demonstrated that online reinforcement learning (RL) can substantially improve the quality and alignment of flow matching models for image and video generation. Methods such as Flow-GRPO and CPS cast the denoising process as a Markov Decision Process and apply PPO-style ratio clipping to enforce a trust region. However, we argue that ratio clipping is structurally ill-suited for flow models: the probability ratio between new and old policies is a noisy, single-sample estimate of the true policy divergence, leading to over-constraining in some regions of the trajectory and under-constraining in others. We propose Flow-DPPO (Flow Divergence Proximal Policy Optimization), which replaces ratio clipping with a divergence proximal constraint. A key observation is that the per-step policy in flow models is Gaussian, enabling exact and cheap computation of the KL divergence between old and new policies. Flow-DPPO employs an asymmetric divergence mask that blocks gradient updates only when they simultaneously move away from the trusted region and violate the divergence threshold. Experiments show that Flow-DPPO achieves higher rewards with better KL-proximal efficiency, alleviates catastrophic forgetting, promotes balanced multi-objective optimization, and enables stable multi-epoch training where ratio clipping degrades. Code and models are available at https://github.com/Tencent-Hunyuan/UniRL/tree/main/FlowDPPO.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://huggingface.co/papers/2606.11025'>page</a> · <a href='https://arxiv.org/pdf/2606.11025'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>A Geometric Account of Activation Steering through Angle-Norm Decomposition</title>
-      <link>https://huggingface.co/papers/2606.06735</link>
-      <guid isPermaLink="false">arxiv:2606.06735</guid>
-      <pubDate>Wed, 10 Jun 2026 05:33:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Georgii Aparin, Tatiana Gaintseva, Hugging Face Daily Papers (curated)</p>
-<p>Linear activation steering has gained popularity as a simple and empirically effective way to control language model behavior. More recently, spherical steering paradigms have been proposed to address limitations of additive interventions, often motivated by the assumption that hidden-state norm does not carry concept-relevant information. In this work, we revisit this assumption through a controlled empirical study designed to disentangle the roles of angular and radial components. We show that steering methods differ mainly in how they couple two geometric effects: changing a token&#x27;s angular alignment with a concept direction and changing its hidden-state norm. Across seven language models, we find that concepts are represented primarily in angular structure, supporting the motivation for spherical methods, but that norm remains important for the stability and downstream effects of steering. Our results explain why interventions with similar concept-level effects can behave differently, and suggest that activation steering should be parameterized by interpretable angular and radial components of the intervention, rather than by a single additive coefficient that entangles these two effects.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-04 · <a href='https://huggingface.co/papers/2606.06735'>page</a> · <a href='https://arxiv.org/pdf/2606.06735'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization</title>
-      <link>https://huggingface.co/papers/2606.11180</link>
-      <guid isPermaLink="false">arxiv:2606.11180</guid>
-      <pubDate>Wed, 10 Jun 2026 05:33:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Paul Hyunbin Cho, Jinhyuk Jang, SeokYoung Lee, Joungbin Lee, Siyoon Jin, Heeseong Shin, Jung Yi, Yunjin Park, … <i>(+3 more)</i></p>
-<p>Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, 17.6times faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs 39.8times faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://huggingface.co/papers/2606.11180'>page</a> · <a href='https://arxiv.org/pdf/2606.11180'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SAD-Flower: Flow Matching for Safe, Admissible, and Dynamically Consistent Planning</title>
-      <link>https://arxiv.org/abs/2511.05355</link>
-      <guid isPermaLink="false">arxiv:2511.05355</guid>
-      <pubDate>Tue, 09 Jun 2026 05:51:25 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.RO</category>
-      <category>cs.SY</category>
-      <category>eess.SY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Cornell, ETH Zürich, TU Munich — Sandra Hirche</p>
-<p><b>Authors:</b> Tzu-Yuan Huang, Armin Lederer, Dai-Jie Wu, Xiaobing Dai, Sihua Zhang, Hsiu-Chin Lin, Shao-Hua Sun, Stefan Sosnowski, … <i>(+1 more)</i></p>
-<p>Flow matching (FM) has shown promising results in data-driven planning. However, it inherently lacks formal guarantees for ensuring state and action constraints, whose satisfaction is a fundamental and crucial requirement for the safety and admissibility of planned trajectories on various systems. Moreover, existing FM planners do not ensure the dynamical consistency, which potentially renders trajectories inexecutable. We address these shortcomings by proposing SAD-Flower, a novel framework for generating Safe, Admissible, and Dynamically consistent trajectories. Our approach relies on an augmentation of the flow with a virtual control input. Thereby, principled guidance can be derived using techniques from nonlinear control theory, providing formal guarantees for state constraints, action constraints, and dynamic consistency. Crucially, SAD-Flower operates without retraining, enabling test-time satisfaction of unseen constraints. Through extensive experiments across several tasks, we demonstrate that SAD-Flower outperforms various generative-model-based baselines in ensuring constraint satisfaction.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.RO, cs.SY, eess.SY · <b>arXiv submitted:</b> 2026-06-07 · <a href='https://arxiv.org/abs/2511.05355'>page</a> · <a href='https://arxiv.org/pdf/2511.05355'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
