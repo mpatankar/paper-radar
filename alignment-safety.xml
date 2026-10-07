@@ -5,8 +5,67 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 06 Oct 2026 10:58:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 10:46:18 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Time-o1: Time-Series Forecasting Needs Transformed Label Alignment</title>
+      <link>https://arxiv.org/abs/2505.17847</link>
+      <guid isPermaLink="false">arxiv:2505.17847</guid>
+      <pubDate>Wed, 07 Oct 2026 10:46:18 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.SY</category>
+      <category>eess.SY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, Peking U — Zhouchen Lin</p>
+<p><b>Authors:</b> Hao Wang, Licheng Pan, Zhichao Chen, Xu Chen, Qingyang Dai, Lei Wang, Haoxuan Li, Zhouchen Lin</p>
+<p>Training time-series forecasting models poses unique challenges in loss function design. Most existing approaches adopt temporal mean squared error, but this study reveals two critical limitations: (1) it ignores the presence of label autocorrelation, which biases it from the true label sequence likelihood; (2) it involves excessive number of tasks, which complicates optimization, especially for long-term forecasting. To address these issues, we introduce Time-o1, a transform-enhanced loss function for time-series forecasting. The central idea is to transform the label sequence into decorrelated components with discriminated significance. Models are then trained to align the most significant components, thereby effectively mitigating label autocorrelation and reducing task amount. Experiments demonstrate that Time-o1 achieves state-of-the-art performance and is compatible with various forecast models. Code is available at https://github.com/Master-PLC/Time-o1.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.SY, eess.SY · <b>arXiv submitted:</b> 2026-10-06 · <a href='https://arxiv.org/abs/2505.17847'>page</a> · <a href='https://arxiv.org/pdf/2505.17847'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>FedCoT: Communication-Efficient Federated Reasoning Enhancement for Large Language Models</title>
+      <link>https://arxiv.org/abs/2508.10020</link>
+      <guid isPermaLink="false">arxiv:2508.10020</guid>
+      <pubDate>Wed, 07 Oct 2026 10:46:18 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua, U Montreal — Chuan Li</p>
+<p><b>Authors:</b> Chuan Li, Qianyi Zhao, Fengran Mo, Cen Chen</p>
+<p>Enhancing LLM reasoning in federated settings is nontrivial due to stringent computational, communication, and privacy constraints, especially in healthcare, where clinically consequential decisions require not only accuracy but also interpretable, auditable rationales to meet safety, accountability, and regulatory requirements. Conventional federated fine-tuning largely imitates final answers rather than cultivating step-by-step reasoning, often relying on privacy-sensitive centralized distillation and still incurring substantial communication overhead. We address this gap with \textbf{\ours{}}, a federated reasoning framework that combines lightweight chain-of-thought resampling with a compact discriminator for selection, and client-aware LoRA stacking with weighted classifier aggregation to accommodate heterogeneity while reducing aggregation noise and communication; clients generate candidate chains and supervision locally, and only lightweight modules are aggregated on the server. Experiments on medical reasoning benchmarks show consistent gains under tight resource budgets while keeping data local and respecting privacy, offering an interpretable and resource-efficient solution. Our code is made publicly available at https://github.com/DIaacKr/FedCoT</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-10-06 · <a href='https://arxiv.org/abs/2508.10020'>page</a> · <a href='https://arxiv.org/pdf/2508.10020'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability</title>
+      <link>https://huggingface.co/papers/2610.08448</link>
+      <guid isPermaLink="false">arxiv:2610.08448</guid>
+      <pubDate>Wed, 07 Oct 2026 10:46:18 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bingxi Hou, Guochao Jiang, Guofeng Quan, Weiqing Li, Wenfeng Feng, Guohua Liu, Yuewei Zhang, Hugging Face Daily Papers (curated)</p>
+<p>On-Policy Distillation (OPD) trains a student on its own generations using teacher feedback. With different tokenizers, comparing teacher and student predictions requires alignment at both sequence and vocabulary levels. In this paper, we examine whether expanding this alignment coverage improves learning. Across three heterogeneous teacher--student pairs on mathematical reasoning and code generation, strict 1:1 groups already cover most student-generated tokens despite substantial vocabulary mismatch. On responses sampled from the students before distillation, the shared vocabulary retains nearly all teacher and student probability mass at strictly aligned positions on average. Restricting reverse KL to a student-selected top-16 subset of the shared vocabulary at each strict position achieves accuracy comparable to full shared-vocabulary OPD, outperforming the evaluated cross-tokenizer baselines. Adding mean squared error supervision on span log-probabilities in mismatch groups gives complete supervision coverage, yet reduces accuracy. At checkpoints from training with only the strict loss, the span gradients show weak or negative directional agreement with the strict gradients and grow in magnitude relative to them. These diagnostics may help explain the accuracy drop from adding span supervision. Our findings motivate a shift from maximizing alignment coverage to prioritizing supervision reliability: compact supervision at strict positions can be more effective than broader coverage that introduces weakly aligned or conflicting training signals.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-06 · <a href='https://huggingface.co/papers/2610.08448'>page</a> · <a href='https://arxiv.org/pdf/2610.08448'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DuoMatching: Joint-Marginal Distribution Matching for Few-Step Video Generation</title>
+      <link>https://huggingface.co/papers/2610.03543</link>
+      <guid isPermaLink="false">arxiv:2610.03543</guid>
+      <pubDate>Wed, 07 Oct 2026 10:46:18 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiahao Zhan, Yan Wang, Yongrui Ma, Qunliang Xing, Ruchang Yao, Runtao Liu, Shijie Zhao, Tianfan Xue, … <i>(+1 more)</i></p>
+<p>Streaming video generation has benefited from distribution matching distillation (DMD), which matches the joint distribution of video frames to a video teacher&#x27;s approximation of the real video distribution. Although this joint matching mitigates drift during autoregressive rollouts, limitations remain in visual quality and semantic alignment. To address these limitations, we propose DuoMatching, a distribution matching framework that approximates the real video distribution through a unified joint-marginal formulation. On top of existing joint matching formulations, the additional marginal matching objective provides dedicated frame-level supervision from an image generator, transferring complementary visual and semantic priors from it. To apply this frame-level supervision in video generation, we introduce LatentBridge to resolve the latent representation mismatch between the video student and the image teacher. Latent Variation Sampling further distributes such frame-level supervision across distinct temporal segments, reducing redundancy. Experiments demonstrate that DuoMatching improves visual quality, composition, and semantic alignment while largely preserving motion dynamics. Human evaluations show overall preference rates above 80% against all evaluated baselines. The project page is available at https://johnzhan2023.github.io/DuoMatching/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-02 · <a href='https://huggingface.co/papers/2610.03543'>page</a> · <a href='https://arxiv.org/pdf/2610.03543'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models</title>
+      <link>https://huggingface.co/papers/2610.07767</link>
+      <guid isPermaLink="false">arxiv:2610.07767</guid>
+      <pubDate>Wed, 07 Oct 2026 10:46:18 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xin Wang, Hao Yu, Zhengyang Zhuge, Bochao Mao, Zheng Li, Junda Feng, Yuyan Luo, Yi Zhang, … <i>(+5 more)</i></p>
+<p>Reinforcement learning (RL) for post-training large language models (LLMs) incurs substantial computation and memory overhead during rollout generation, which motivates low-precision rollout for efficient RL training. However, existing FP4 RL methods suffer from a key limitation: they primarily optimize quantization accuracy on the training and rollout paths independently rather than directly reducing the discrepancy between the two quantized execution paths. In this work, we propose TRACE (Train-Rollout Quantization Alignment via Compact GuidancE), an FP4 quantization framework for RL training of Mixture-of-Experts (MoE) language models that addresses the limitation of existing FP4 RL methods. TRACE incorporates rollout-guided quantization-aware training that uses rollout-side quantization outcomes to guide training-side FP4 rounding decisions, directly reducing train-rollout discrepancy. Moreover, TRACE adopts an efficient quantization-information caching scheme that selectively retains mantissa and scale information from deeper layers to reduce the storage and communication overhead introduced by rollout guidance. We evaluate TRACE on four large-scale MoE language models across reasoning, coding, and long-horizon RL tasks. Our results demonstrate that TRACE enables joint FP4 weight/activation and FP4 KV-cache rollout with RL performance comparable to BF16 rollout, while achieving up to 5.4xrollout speedup and strong final FP4 performance compared with post-hoc FP4 quantization of BF16-trained policies.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-06 · <a href='https://huggingface.co/papers/2610.07767'>page</a> · <a href='https://arxiv.org/pdf/2610.07767'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Decoding-time Realignment of Language Models</title>
       <link>https://arxiv.org/abs/2402.02992</link>
@@ -2299,61 +2358,6 @@
 <p><b>Authors:</b> Yuqi Zhang, Di Zhang</p>
 <p>Retrieval-augmented generation (RAG) systems inject external knowledge to improve LLM outputs, yet the format of injected content -- distinct from its semantic relevance -- can independently distort the model&#x27;s attention distribution. We identify and formalise a phenomenon we term the structural attention tax: knowledge graph (KG) triples, due to their relational delimiters and repeated slot patterns, capture 2-3x more attention per token than semantically equivalent natural-language text ($\hat{o}$(KG) $\approx$ 0.70 vs. $\hat{o}$(neutral) $\approx$ 0.25), compressing demonstration attention by up to 42% -- regardless of whether the triples are relevant or noise. We develop a formal framework decomposing attention scores into semantic and structural components (Eq. 2), derive a compression bound (Proposition 1) connecting token-level format bias to demonstration attention loss, and show that the structural term governs how much attention is diverted while the semantic term governs whether this helps or hurts. This decoupling reveals two orthogonal axes for improving retrieval-augmented ICL: optimising retrieval quality (semantic axis) and reducing format-driven attention capture (structural axis). Empirically, across two model families (Mistral-7B, LLaMA-3-8B) and three QA benchmarks, we observe that source-task alignment dominates: task-matched BM25 retrieval achieves 58-62% on HotpotQA vs. ConceptNet&#x27;s 25-27%, a &gt;30 pp gap that dwarfs all gating strategies ($\leq$2 pp). We derive five structure-aware mitigation strategies from the framework, ranging from zero-cost prompt modifications to training-time regularisation; format flattening (S3) is validated by both accuracy and attention-level evidence from a verbalized-triple control, while structural dispersal (S1) yields mixed results that illuminate the challenges of format-level intervention.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-04-21 · <a href='https://arxiv.org/abs/2606.11198'>page</a> · <a href='https://arxiv.org/pdf/2606.11198'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation</title>
-      <link>https://arxiv.org/abs/2606.11559</link>
-      <guid isPermaLink="false">arxiv:2606.11559</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Haoran Liu</p>
-<p><b>Authors:</b> Haoran Liu, Yuwei Zhang, Xiyao Li, Bohan Lyu, Jingbo Shang</p>
-<p>Reinforcement learning typically improves multi-turn agent capabilities through the terminal outcome of the trajectories, which makes it difficult to determine credit assignments for each intermediate turns. Recent on-policy self-distillation methods offer a promising alternative by converting privileged feedback into dense token-level supervision through a self-teacher. Our study is motivated by the unexpected performance degradation observed when naively extending this paradigm to multi-turn settings, which we attribute to a lack of alignment between privileged feedback, such as successful trajectories or terminal outcomes, and the student&#x27;s current decision context. We introduce HERO, a hindsight-enhanced self-distillation framework that uses next environment observations as locally aligned feedback. After each rollout, HERO reflects on the completed interaction to convert each observation into a compact turn-level diagnosis, that captures actionable feedback about the original action such as its necessity, validity or failure cause. On TauBench and WebShop, HERO improves task success and reduces unnecessary turns over environment-feedback-only self-distillation and GRPO. It is especially effective under limited training turn budgets, where successful rollouts are rare and GRPO provides weak reward-contrast signals.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2606.11559'>page</a> · <a href='https://arxiv.org/pdf/2606.11559'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Do What You Say: Steering Vision-Language-Action Models via Runtime Reasoning-Action Alignment Verification</title>
-      <link>https://research.nvidia.com/publication/2026-06_do-what-you-say-steering-vision-language-action-models-runtime-reasoning-action</link>
-      <guid isPermaLink="false">nvidia_research:b5488e1bd2</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> NVIDIA Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-06_do-what-you-say-steering-vision-language-action-models-runtime-reasoning-action'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Kwai Keye-VL-2.0 Technical Report</title>
-      <link>https://huggingface.co/papers/2606.10651</link>
-      <guid isPermaLink="false">arxiv:2606.10651</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Kwai Keye Team, Bin Wen, Changyi Liu, Chengru Song, Chongling Rao, Guowang Zhang, Han Li, Haonan Fan, … <i>(+46 more)</i></p>
-<p>We introduce Kwai Keye-VL-2.0-30B-A3B, an open-source Mixture-of-Experts (MoE) multimodal foundation model designed to advance long-video understanding and agentic intelligence. To address the challenges of ultra-long contexts, information redundancy, and prohibitive computational costs inherent in hour-level videos, Keye-VL-2.0 is the first to adapt DeepSeek Sparse Attention (DSA) to GQA-based multimodal architectures, enabling lossless 256K context processing while capturing critical frames and long-range temporal dependencies. This architecture is underpinned by a highly optimized training and inference infrastructure, including scalable video I/O, heterogeneous ViT-LM parallelism, and custom DSA kernels that significantly maximize throughput and minimize computational overhead. Furthermore, to overcome the algorithmic dilemma of catastrophic forgetting during multi-task alignment, we introduce Cross-Modal Multi-Teacher On-Policy Distillation (MOPD) paired with Context-RL and Video-RL. By distilling dense token-level teacher feedback from on-policy rollouts back into the MoE backbone, which activates only 3B parameters, Keye-VL-2.0 natively empowers advanced agent collaboration across Code, Tool, and Search scenarios with multimodal self-correction. Extensive evaluations across video understanding, temporal grounding, reasoning, STEM, and agent benchmarks demonstrate that Keye-VL-2.0-30B-A3B achieves state-of-the-art performance among models of similar scale, particularly excelling in fine-grained temporal localization on TimeLens and long-video comprehension on Video-MME-v2 and LongVideoBench. We release our model checkpoints to accelerate community progress toward scalable and robust multimodal agentic applications.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://huggingface.co/papers/2606.10651'>page</a> · <a href='https://arxiv.org/pdf/2606.10651'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution</title>
-      <link>https://huggingface.co/papers/2606.10917</link>
-      <guid isPermaLink="false">arxiv:2606.10917</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xucong Wang, Ziyu Ma, Shidong Yang, Tongwen Huang, Pengkun Wang, Yong Wang, Xiangxiang Chu, Hugging Face Daily Papers (curated)</p>
-<p>Although Large Language Model (LLM) agents have demonstrated strong performance on complex tasks, their learning is often limited by inefficient interaction feedback and static training environments, which hinder broader generalization. To address these limitations, this paper introduces Role-Agent, black{a framework} that harnesses a single LLM to function concurrently as both the agent and the environment, enabling a bootstrapped co-evolution. Role-Agent comprises two synergistic components: World-In-Agent (WIA) and Agent-In-World (AIW). In WIA, the LLM acts as the agent and predicts future states after each action; the alignment between predicted and actual states is then used as a process reward, encouraging environment-aware reasoning. In AIW, the LLM analyzes failure modes from failed trajectories and retrieves tasks with similar failure patterns, thereby reshaping the training data distribution for targeted practice. Experiments on multiple benchmarks show that Role-Agent consistently improves performance, yielding an average gain of over 4\% over strong baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://huggingface.co/papers/2606.10917'>page</a> · <a href='https://arxiv.org/pdf/2606.10917'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AMix-1: A Pathway to Test-Time Scalable Protein Foundation Model</title>
-      <link>https://arxiv.org/abs/2507.08920</link>
-      <guid isPermaLink="false">arxiv:2507.08920</guid>
-      <pubDate>Wed, 10 Jun 2026 05:33:37 GMT</pubDate>
-      <category>q-bio.BM</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK, HKUST, NUS, Peking U, Stanford, Tsinghua, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Changze Lv, Jiang Zhou, Siyu Long, Lihao Wang, Jiangtao Feng, Dongyu Xue, Yu Pei, Hao Wang, … <i>(+17 more)</i></p>
-<p>We introduce AMix-1, a powerful protein foundation model built on Bayesian Flow Networks and empowered by a systematic training methodology, encompassing pretraining scaling laws, emergent capability analysis, in-context learning mechanism, and test-time scaling algorithm. To guarantee robust scalability, we establish a predictive scaling law and reveal the progressive emergence of structural understanding via loss perspective, culminating in a strong 1.7-billion model. Building on this foundation, we devise a multiple sequence alignment (MSA)-based in-context learning strategy to unify protein design into a general framework, where AMix-1 recognizes deep evolutionary signals among MSAs and consistently generates structurally and functionally coherent proteins. This framework enables the successful design of a dramatically improved AmeR variant with an up to $50\times$ activity increase over its wild type. Pushing the boundaries of protein engineering, we further empower AMix-1 with an evolutionary test-time scaling algorithm for in silico directed evolution that delivers substantial, scalable performance gains as verification budgets are intensified, laying the groundwork for next-generation lab-in-the-loop protein design.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.BM, cs.AI · <b>arXiv submitted:</b> 2026-06-05 · <a href='https://arxiv.org/abs/2507.08920'>page</a> · <a href='https://arxiv.org/pdf/2507.08920'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
