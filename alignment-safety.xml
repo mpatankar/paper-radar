@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Wed, 07 Oct 2026 10:46:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 11:05:34 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>DecepEval: A Benchmark for Evaluating Deception in LLM Agents</title>
+      <link>https://huggingface.co/papers/2610.07967</link>
+      <guid isPermaLink="false">arxiv:2610.07967</guid>
+      <pubDate>Thu, 08 Oct 2026 11:05:34 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yiming Xu, Hongyue Yu, Beihua Yang, Zihan Chen, Yixin Liu, Zhen Peng, Bin Shi, Bo Dong, … <i>(+4 more)</i></p>
+<p>As large language model (LLM) agents become increasingly autonomous, they may pursue task performance through deception, raising concerns about their reliable deployment. Existing evaluations show that LLM agents can deceive, but often examine isolated scenarios or narrowly defined conditions, limiting systematic understanding of when deception becomes more likely. To address this gap, we introduce DecepEval, a benchmark comprising 1,532 instances across 3 task families and 28 professional scenarios. Drawing on classical fraud theories, we propose the LLM Deception Diamond framework, which characterizes four external conditions that may induce deception: pressure, incentive, opportunity, and conflict. DecepEval pairs neutral and induced versions of each instance to measure condition-dependent changes in deception rates, while explicit task facts and observable agent behavior help distinguish deception from capability-related errors. Evaluations of nine frontier LLMs show that inducements increase deception across models and task families, even among models with low baseline deception rates. DecepEval makes these vulnerabilities measurable, providing a shared benchmark for progress toward trustworthy artificial intelligence.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-06 · <a href='https://huggingface.co/papers/2610.07967'>page</a> · <a href='https://arxiv.org/pdf/2610.07967'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SGF+: Decoupling Gradient Flows for Autoregressive Video Generation</title>
+      <link>https://huggingface.co/papers/2610.10429</link>
+      <guid isPermaLink="false">arxiv:2610.10429</guid>
+      <pubDate>Thu, 08 Oct 2026 11:05:34 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zihan Su, Junhao Zhuang, Yaowei Li, Siwen Lu, Haoran Li, Lingen Li, Haoyu Wu, Weiyang Jin, … <i>(+6 more)</i></p>
+<p>Autoregressive video generation requires denoising the current frames while writing their key-value representations as context for future predictions. However, these two roles typically share parameters, and we find that their gradients exhibit distinct patterns and systematic negative alignment, hindering the joint optimization of visual quality and temporal consistency. We introduce Self Gradient Forcing Plus (SGF+), which assigns separate parameters to context writing and denoising while preserving their interaction through causal attention. Both roles are jointly optimized using the original generation objective without auxiliary losses, with context writing supervised through its contribution to future predictions. This simple change improves visual quality and long-horizon consistency over the evaluated baselines in both framewise and chunkwise generation, without additional video training data or a longer training horizon. Trained on only 5s rollouts, SGF+ supports continuous generation for up to 24 hours without long-video fine-tuning. These results highlight role-specific parameterization as an effective design principle for high-quality autoregressive video generation and native long-horizon extrapolation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-07 · <a href='https://huggingface.co/papers/2610.10429'>page</a> · <a href='https://arxiv.org/pdf/2610.10429'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Time-o1: Time-Series Forecasting Needs Transformed Label Alignment</title>
       <link>https://arxiv.org/abs/2505.17847</link>
@@ -2334,30 +2356,6 @@
 <p><b>Authors:</b> Ankur Garg, Xuemin Yu, Hassan Sajjad, Samira Ebrahimi Kahou</p>
 <p>Interpreting language models remains challenging due to the existence of residual stream, which linearly mixes and duplicates features across adjacent layers, causing single-layer analyses to miss this cross-layer structure. Cross-layer sparse autoencoders (SAEs) address layer mixing but operate in continuous space, where concepts split across many neurons without clear boundaries. We introduce Cross-Layer Vector Quantized-Variational Autoencoder (CLVQ-VAE), a novel framework which maps representations from a lower layer to a higher layer through a discrete vector-quantization bottleneck, collapsing duplicated residual-stream features into compact, interpretable concept vectors. Our approach combines top-k temperature-based sampling with exponential moving average (EMA) codebook updates, providing controlled exploration of the discrete latent space while maintaining codebook diversity. Across both encoder- and decoder-based models on ERASER-Movie, Jigsaw, and AGNews, CLVQ-VAE outperforms clustering, single-layer vector quantized-variational autoencoder (VQ-VAE), and sparse autoencoder (SAE) baselines across three evaluation axes: removing identified concepts drops model accuracy by up to 93%, LLM judges rank our concepts first in 66.7% of comparisons, and human annotators recover model predictions from our visualizations with 78% accuracy versus 54% for clustering.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://arxiv.org/abs/2506.20040'>page</a> · <a href='https://arxiv.org/pdf/2506.20040'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OpenVTON-Bench: A Large-Scale High-Resolution Benchmark for Controllable Virtual Try-On Evaluation</title>
-      <link>https://arxiv.org/abs/2601.22725</link>
-      <guid isPermaLink="false">arxiv:2601.22725</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Stanford, Tsinghua — Jin Li</p>
-<p><b>Authors:</b> Jin Li, Tao Chen, Kai Wen, Siqi Yin, Shuai Jiang, Weijie Wang, Jingwen Luo, Chenhui Wu</p>
-<p>Recent advances in diffusion models have significantly elevated the visual fidelity of Virtual Try-On (VTON) systems, yet reliable evaluation remains a persistent bottleneck. Traditional metrics struggle to quantify fine-grained texture details and semantic consistency, while existing datasets fail to meet commercial standards in scale and diversity. We present OpenVTON-Bench, a large-scale benchmark comprising approximately 100K high-resolution image pairs (up to $1536 \times 1536$). The dataset is constructed using DINOv3-based hierarchical clustering for semantically balanced sampling and Gemini-powered dense captioning, ensuring a uniform distribution across 20 fine-grained garment categories. To support reliable evaluation, we propose a multi-modal protocol that measures VTON quality along five interpretable dimensions: background consistency, identity fidelity, texture fidelity, shape plausibility, and overall realism. The protocol integrates VLM-based semantic reasoning with a novel Multi-Scale Representation Metric based on SAM3 segmentation and morphological erosion, enabling the separation of boundary alignment errors from internal texture artifacts. Experimental results show strong agreement with human judgments (Kendall&#x27;s $τ$ of 0.833 vs. 0.611 for SSIM), establishing a robust benchmark for VTON evaluation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2601.22725'>page</a> · <a href='https://arxiv.org/pdf/2601.22725'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Structural Attention Tax: How Retrieval Format Hijacks In-Context Learning Independent of Content</title>
-      <link>https://arxiv.org/abs/2606.11198</link>
-      <guid isPermaLink="false">arxiv:2606.11198</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Di Zhang</p>
-<p><b>Authors:</b> Yuqi Zhang, Di Zhang</p>
-<p>Retrieval-augmented generation (RAG) systems inject external knowledge to improve LLM outputs, yet the format of injected content -- distinct from its semantic relevance -- can independently distort the model&#x27;s attention distribution. We identify and formalise a phenomenon we term the structural attention tax: knowledge graph (KG) triples, due to their relational delimiters and repeated slot patterns, capture 2-3x more attention per token than semantically equivalent natural-language text ($\hat{o}$(KG) $\approx$ 0.70 vs. $\hat{o}$(neutral) $\approx$ 0.25), compressing demonstration attention by up to 42% -- regardless of whether the triples are relevant or noise. We develop a formal framework decomposing attention scores into semantic and structural components (Eq. 2), derive a compression bound (Proposition 1) connecting token-level format bias to demonstration attention loss, and show that the structural term governs how much attention is diverted while the semantic term governs whether this helps or hurts. This decoupling reveals two orthogonal axes for improving retrieval-augmented ICL: optimising retrieval quality (semantic axis) and reducing format-driven attention capture (structural axis). Empirically, across two model families (Mistral-7B, LLaMA-3-8B) and three QA benchmarks, we observe that source-task alignment dominates: task-matched BM25 retrieval achieves 58-62% on HotpotQA vs. ConceptNet&#x27;s 25-27%, a &gt;30 pp gap that dwarfs all gating strategies ($\leq$2 pp). We derive five structure-aware mitigation strategies from the framework, ranging from zero-cost prompt modifications to training-time regularisation; format flattening (S3) is validated by both accuracy and attention-level evidence from a verbalized-triple control, while structural dispersal (S1) yields mixed results that illuminate the challenges of format-level intervention.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-04-21 · <a href='https://arxiv.org/abs/2606.11198'>page</a> · <a href='https://arxiv.org/pdf/2606.11198'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

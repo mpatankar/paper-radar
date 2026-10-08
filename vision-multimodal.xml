@@ -5,8 +5,33 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Wed, 07 Oct 2026 10:46:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 11:05:34 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Geometry-Centered 3D Latent World Models for Growing Surfaces</title>
+      <link>https://arxiv.org/abs/2506.03173</link>
+      <guid isPermaLink="false">arxiv:2506.03173</guid>
+      <pubDate>Thu, 08 Oct 2026 11:05:34 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Hao Tang</p>
+<p><b>Authors:</b> Xiaoyi Liu, Hao Tang</p>
+<p>Many physical systems do not merely move or deform; they grow, adding material and changing the geometry that a world model must represent. Existing world models are typically optimized for pixel prediction, reward prediction, or fixed-support physical dynamics, leaving open how to model systems whose underlying physical support expands over time and whose future morphology depends on hidden material response. We introduce FOLIAGE, a geometry-centered latent world model for growing surfaces. Within a fixed state budget, FOLIAGE represents mature regions as a compact scaffold while allocating higher-resolution state to regions predicted to drive near-future growth. This focuses representation and computation where new material and geometric change occur while retaining compact global context. FOLIAGE further separates observation, action, and privileged physics: heterogeneous RGB, point-cloud, and mesh observations are fused into a deployable geometric state; material controls condition the latent dynamics; and hidden physical energies guide training but are not required at deployment. To evaluate this setting, we introduce SURF-GARDEN and SURF-BENCH, providing controlled counterfactual branches, dense cross-modal correspondences, hidden physical signals, and stress tests for growing-geometry state learning. FOLIAGE reduces inverse-material error by $\approx40\%$ and 5-step mesh forecasting Chamfer error by $\approx30\%$ relative to strong baselines, while improving cross-modal retrieval by +14 mAP points. Stress tests show graceful degradation under sensor loss and correspondence corruption. On temporal 3D plant scans, FOLIAGE also improves passive future-geometry forecasting, while transfer experiments show that the learned geometry-centered state remains useful beyond the simulator.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-07 · <a href='https://arxiv.org/abs/2506.03173'>page</a> · <a href='https://arxiv.org/pdf/2506.03173'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>NovaPlan: Zero-Shot Long-Horizon Manipulation via Closed-Loop Video Language Planning</title>
+      <link>https://arxiv.org/abs/2602.20119</link>
+      <guid isPermaLink="false">arxiv:2602.20119</guid>
+      <pubDate>Thu, 08 Oct 2026 11:05:34 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CMU, NUS — Jiahui Fu</p>
+<p><b>Authors:</b> Jiahui Fu, Junyu Nan, Lingfeng Sun, Hongyu Li, Jianing Qian, Benjamin Yang, Yilun Du, Jennifer L. Barry, … <i>(+2 more)</i></p>
+<p>Solving complex long-horizon robotic tasks requires joint reasoning over abstract task structure and low-level physical interaction. While combining Vision-Language Models (VLMs) and video generation models offers a promising path for zero-shot planning, their individual tendencies to hallucinate physics or violate geometric consistency often compound over time, preventing reliable real-world execution. We introduce NovaPlan, a hierarchical framework that enables robust, zero-shot long-horizon manipulation by systematically proposing, verifying, and repairing visual plans. At the high level, a VLM planner decomposes tasks and filters out dynamically inconsistent futures by verifying multiple candidate video rollouts. To translate these imagined futures into reliable physical actions, NovaPlan utilizes a hybrid geometric representation that adaptively switches between object-centric flow and human hand flow. Finally, NovaPlan closes the loop by continuously monitoring execution to verify outcomes and synthesize local, non-prehensile corrective behaviors, such as fingertip poking, when failures occur. Across diverse multi-stage tasks, NovaPlan substantially outperforms prior zero-shot systems, achieving complex assembly and dexterous error recovery entirely without task-specific training or demonstrations. Please visit our project website for additional results: https://nova-plan.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-10-07 · <a href='https://arxiv.org/abs/2602.20119'>page</a> · <a href='https://arxiv.org/pdf/2602.20119'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>VIDiff: Translating Videos via Multi-Modal Instructions with Diffusion Models</title>
       <link>https://arxiv.org/abs/2311.18837</link>
@@ -2546,30 +2571,6 @@
 <p><b>Authors:</b> Yifan Zhang, Yifeng Liu, Mengdi Wang, Quanquan Gu</p>
 <p>Transformer residual streams evolve by additive accumulation: each layer appends a feature update to a shared hidden state, but has no direct mechanism for replacing content that has become obsolete or conflicting. We introduce Deep Delta Learning (DDL), a residual update rule that preserves the identity path while giving every layer the ability to selectively rewrite residual content. DDL reads the current state along a learned direction, compares it with a learned target value, and writes back a gated correction along the same direction. When the gate is closed, the update reduces to the identity; when the gate is fully open, the selected component is overwritten, yielding a depth-wise delta-rule generalization of standard residual addition. We integrate DDL in decoder-only language models with both scalar and expanded residual states, while keeping attention and MLP sublayers at the original compute width. Controlled pretraining and downstream evaluations show that residual rewrite operations improve language modeling quality relative to pure additive accumulation introduced in ResNet, suggesting that a learned delta-rule update is an effective mechanism for managing Transformer residual streams.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL, cs.CV · <a href='https://arxiv.org/abs/2601.00417'>page</a> · <a href='https://arxiv.org/pdf/2601.00417'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Selective LoRA for Visual Tokens and Attention Heads</title>
-      <link>https://arxiv.org/abs/2512.19219</link>
-      <guid isPermaLink="false">arxiv:2512.19219</guid>
-      <pubDate>Mon, 18 May 2026 14:12:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Michigan — Honglak Lee</p>
-<p><b>Authors:</b> Tiange Luo, Lajanugen Logeswaran, Jaekyeom Kim, Justin Johnson, Honglak Lee</p>
-<p>Low-rank adaptation (LoRA) is widely used for parameter-efficient fine-tuning, but its standard all-token, all-head design ignores the heterogeneous structure of vision language model (VLM) inputs. We introduce \emph{Image-LoRA}, a vision-oriented PEFT recipe that views LoRA as a token-level residual update and applies this update only to visual tokens. Image-LoRA further restricts adaptation to the value path of a compact subset of attention heads, selected using a one-pass influence estimate from a rank-1 visual-token-only probe. This token-, head-, and value-selective design reduces trainable parameters and adapter-only training FLOPs while leaving the pure-text forward pass of the frozen backbone unchanged when no visual tokens are present. Across visual localization benchmarks with controlled text:image token ratios, Image-LoRA matches or closely approaches standard LoRA, while showing especially favorable trade-offs in image-token-heavy regimes. We further validate its generality on TextVQA and VideoQA, verify pure-text preservation on GSM8K, and show on ViLP that a stronger information bottleneck can yield gains over standard LoRA.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2512.19219'>page</a> · <a href='https://arxiv.org/pdf/2512.19219'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beta Sampling is All You Need: Efficient Image Generation Strategy for Diffusion Models using Stepwise Spectral Analysis</title>
-      <link>https://arxiv.org/abs/2407.12173</link>
-      <guid isPermaLink="false">arxiv:2407.12173</guid>
-      <pubDate>Mon, 18 May 2026 14:07:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Junmo Kim</p>
-<p><b>Authors:</b> Haeil Lee, Hansang Lee, Seoyeon Gye, Junmo Kim</p>
-<p>Generative diffusion models have emerged as a powerful tool for high-quality image synthesis, yet their iterative nature demands significant computational resources. This paper proposes an efficient time step sampling method based on an image spectral analysis of the diffusion process, aimed at optimizing the denoising process. Instead of the traditional uniform distribution-based time step sampling, we introduce a Beta distribution-like sampling technique that prioritizes critical steps in the early and late stages of the process. Our hypothesis is that certain steps exhibit significant changes in image content, while others contribute minimally. We validated our approach using Fourier transforms to measure frequency response changes at each step, revealing substantial low-frequency changes early on and high-frequency adjustments later. Experiments with ADM and Stable Diffusion demonstrated that our Beta Sampling method consistently outperforms uniform sampling, achieving better FID and IS scores, and offers competitive efficiency relative to state-of-the-art methods like AutoDiffusion. This work provides a practical framework for enhancing diffusion model efficiency by focusing computational resources on the most impactful steps, with potential for further optimization and broader application.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2407.12173'>page</a> · <a href='https://arxiv.org/pdf/2407.12173'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
