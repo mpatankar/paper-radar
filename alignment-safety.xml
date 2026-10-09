@@ -5,8 +5,32 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 08 Oct 2026 11:05:34 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 11:04:49 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Policy Learning with a Language Bottleneck</title>
+      <link>https://arxiv.org/abs/2405.04118</link>
+      <guid isPermaLink="false">arxiv:2405.04118</guid>
+      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MIT, Stanford — Jacob Andreas</p>
+<p><b>Authors:</b> Megha Srivastava, Cedric Colas, Dorsa Sadigh, Jacob Andreas</p>
+<p>Modern AI systems such as self-driving cars and game-playing agents can achieve superhuman performance, but often lack human-like generalization, interpretability, and inter-operability with human users. Inspired by the rich interactions between language and decision-making in humans, we introduce Policy Learning with a Language Bottleneck (PLLB), a framework enabling AI agents to generate linguistic rules that capture the high-level strategies underlying rewarding behaviors. PLLB alternates between a *rule generation* step guided by language models, and an *update* step where agents learn new policies guided by rules, even when a rule is insufficient to describe an entire complex policy. Across five diverse tasks, including a two-player signaling game, maze navigation, image reconstruction, and robot grasp planning, we show that PLLB agents are not only able to learn more interpretable and generalizable behaviors, but can also share the learned rules with human users, enabling more effective human-AI coordination. We provide source code for our experiments at https://github.com/meghabyte/bottleneck .</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://arxiv.org/abs/2405.04118'>page</a> · <a href='https://arxiv.org/pdf/2405.04118'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Proof-of-Use: Mitigating Tool-Call Hacking in Deep Research Agents</title>
+      <link>https://arxiv.org/abs/2510.10931</link>
+      <guid isPermaLink="false">arxiv:2510.10931</guid>
+      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Jun wang</p>
+<p><b>Authors:</b> Shengjie Ma, Chenlong Deng, Jiaxin Mao, Jiadeng Huang, Teng Wang, Junjie Wu, Changwang Zhang, Jun wang</p>
+<p>While reinforcement learning (RL) enhances their ability to plan and reason across retrieval steps, we identify a critical failure mode in this setting: Tool-Call Hacking. Unlike execution-based tools (e.g., code or math), whose effects are directly observable, the weak observability of causal dependencies between retrieved evidence and reasoning under format- and outcome-level supervision enables agents to maximize surface-level reward signals without genuinely grounding their reasoning in the returned evidence. This leads to distinctive pathologies, including mode collapse via tool overuse and hallucinated tool usage where tool calls are largely decorative. To address this issue, we propose Proof-of-Use (PoU), an evidence grounded RL framework that explicitly optimizes the causal dependency from retrieval to reasoning and final answers. PoU re-fomulate a fine-grained stepwise interaction protocol in which agents must auditably cite normalized evidence identifiers. We operationalize this via a multi-objective reward design consisting of: (1) two progressive process rewards that constrain citation validity at intermediate steps; (2) a global Answer--Support Alignment reward that enforces consistency between final answers and retrieved evidence; and (3) a curriculum-style adaptive reward mixing mechanism that smoothly transitions agents from dense process supervision to sparse outcome-based objectives. Extensive experiments show the strong performance of PoU and demonstrate the effectiveness in mitigating tool-call hacking. Beyond this, PoU exhibits a notable emergent property: adaptive and robust tool-usage patterns naturally arise under domain and tool shifts, even though PoU does not explicitly optimize for tool adaptation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://arxiv.org/abs/2510.10931'>page</a> · <a href='https://arxiv.org/pdf/2510.10931'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>DecepEval: A Benchmark for Evaluating Deception in LLM Agents</title>
       <link>https://huggingface.co/papers/2610.07967</link>
@@ -2332,30 +2356,6 @@
 <p><b>Authors:</b> Google DeepMind</p>
 <p>Google DeepMind and partners announce a $10M funding call for multi-agent safety research.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Redesign Mixture-of-Experts Routers with Manifold Power Iteration</title>
-      <link>https://huggingface.co/papers/2606.12397</link>
-      <guid isPermaLink="false">arxiv:2606.12397</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Songhao Wu, Ang Lv, Ruobing Xie, Yankai Lin, Hugging Face Daily Papers (curated)</p>
-<p>Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a &quot;Power-then-Retract&quot; paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://huggingface.co/papers/2606.12397'>page</a> · <a href='https://arxiv.org/pdf/2606.12397'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Cross-Layer Discrete Concept Discovery for Interpreting Language Models</title>
-      <link>https://arxiv.org/abs/2506.20040</link>
-      <guid isPermaLink="false">arxiv:2506.20040</guid>
-      <pubDate>Thu, 11 Jun 2026 05:36:31 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MILA — Samira Ebrahimi Kahou</p>
-<p><b>Authors:</b> Ankur Garg, Xuemin Yu, Hassan Sajjad, Samira Ebrahimi Kahou</p>
-<p>Interpreting language models remains challenging due to the existence of residual stream, which linearly mixes and duplicates features across adjacent layers, causing single-layer analyses to miss this cross-layer structure. Cross-layer sparse autoencoders (SAEs) address layer mixing but operate in continuous space, where concepts split across many neurons without clear boundaries. We introduce Cross-Layer Vector Quantized-Variational Autoencoder (CLVQ-VAE), a novel framework which maps representations from a lower layer to a higher layer through a discrete vector-quantization bottleneck, collapsing duplicated residual-stream features into compact, interpretable concept vectors. Our approach combines top-k temperature-based sampling with exponential moving average (EMA) codebook updates, providing controlled exploration of the discrete latent space while maintaining codebook diversity. Across both encoder- and decoder-based models on ERASER-Movie, Jigsaw, and AGNews, CLVQ-VAE outperforms clustering, single-layer vector quantized-variational autoencoder (VQ-VAE), and sparse autoencoder (SAE) baselines across three evaluation axes: removing identified concepts drops model accuracy by up to 93%, LLM judges rank our concepts first in 66.7% of comparisons, and human annotators recover model predictions from our visualizations with 78% accuracy versus 54% for clustering.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-09 · <a href='https://arxiv.org/abs/2506.20040'>page</a> · <a href='https://arxiv.org/pdf/2506.20040'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
