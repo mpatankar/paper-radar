@@ -5,8 +5,44 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 11 Oct 2026 10:29:14 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 11:31:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>UniConFlow: A Unified Constrained Flow-Matching Framework for Certified Motion Planning</title>
+      <link>https://arxiv.org/abs/2506.02955</link>
+      <guid isPermaLink="false">arxiv:2506.02955</guid>
+      <pubDate>Mon, 12 Oct 2026 11:31:44 GMT</pubDate>
+      <category>cs.RO</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich — Sami Haddadin</p>
+<p><b>Authors:</b> Zewen Yang, Xiaobing Dai, Dian Yu, Zhijun Li, Majid Khadiv, Sandra Hirche, Sami Haddadin</p>
+<p>Generative models have become increasingly powerful tools for robot motion generation, enabling flexible and multimodal trajectory generation across various tasks. Yet, most existing approaches remain limited in handling multiple types of constraints, such as collision avoidance, actuation limits, and dynamic consistency, which are typically addressed individually or heuristically. In this work, we propose UniConFlow, a unified constrained flow matching-based framework for trajectory generation that systematically incorporates both equality and inequality constraints. Moreover, UniConFlow introduces a novel prescribed-time zeroing function that shapes a time-varying guidance field during inference, allowing the generation process to adapt to varying system models and task requirements. Furthermore, to further address the computational challenges of long-horizon and high-dimensional trajectory generation, we propose two practical strategies for the terminal constraint enforcement and inference process: a violation-segment extraction protocol that precisely localizes and refines only the constraint-violating portions of trajectories, and a trajectory compression method that accelerates optimization in a reduced-dimensional space while preserving high-fidelity reconstruction after decoding. Empirical validation across three experiments, including a double inverted pendulum, a real-to-sim car racing task, and a sim-to-real manipulation task, demonstrates that UniConFlow outperforms state-of-the-art generative planners and conventional optimization baselines, achieving superior performance on certified motion planning metrics such as safety, kinodynamic consistency, and action feasibility. Project page is available at: https://uniconflow.github.io.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://arxiv.org/abs/2506.02955'>page</a> · <a href='https://arxiv.org/pdf/2506.02955'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LLMail-Inject: A Dataset from a Realistic Adaptive Prompt Injection Challenge</title>
+      <link>https://arxiv.org/abs/2506.09956</link>
+      <guid isPermaLink="false">arxiv:2506.09956</guid>
+      <pubDate>Mon, 12 Oct 2026 11:31:44 GMT</pubDate>
+      <category>cs.CR</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> Imperial College, Max Planck — (senior)</p>
+<p><b>Authors:</b> Sahar Abdelnabi, Aideen Fay, Ahmed Salem, Egor Zverev, Kai-Chieh Liao, Chi-Huang Liu, Chun-Chih Kuo, Jannis Weigend, … <i>(+17 more)</i></p>
+<p>Indirect prompt injection attacks exploit a fundamental weakness of LLMs: executing unauthorized tasks from untrusted sources. Despite the practical significance of this attack vector, existing benchmarks rely on small sets of template-based attacks (100-1,000 examples) that fail to capture the diversity and adaptiveness of real-world adversaries. Consequently, benchmarks are saturated and overfit to static attacks. We introduce LLMail-Inject, a large-scale benchmark of 208,095 distinct human-written attack prompts collected through a public red-teaming challenge with 839 participants. LLMail-Inject evaluates the attack&#x27;s complete chain of execution: prompts must be retrieved from an email database, evade production-level defenses, and trigger unauthorized tool calls with correct arguments. Evaluation reveals that models that achieve 5% attack success rate (ASR) on existing benchmarks fail more on LLMail-Inject: Meta SecAlign--specifically trained against prompt injection--still yields 32% ASR, GPT-4o exhibits 58% ASR, and GPT-5 mini 47% ASR. We further demonstrate that attacks transfer across domains, achieving 37% ASR on proof-of-concept coding tasks and 28-45% ASR on file management tasks. We release our challenge platform and curated evaluation subsets at multiple difficulty tiers and the full dataset with rich annotations.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-10-09 · <a href='https://arxiv.org/abs/2506.09956'>page</a> · <a href='https://arxiv.org/pdf/2506.09956'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Here the World in Stereo: Learning Dynamic Spatial Correspondence for Immersive Joint Video-Audio Generation</title>
+      <link>https://huggingface.co/papers/2609.38748</link>
+      <guid isPermaLink="false">arxiv:2609.38748</guid>
+      <pubDate>Mon, 12 Oct 2026 11:31:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Hanmo Chen, Chengcheng Liu, Tianxiao Chen, Zheyu Zhang, Siming Zheng, Jinwei Chen, Xu Yang, Cheng Deng, … <i>(+3 more)</i></p>
+<p>Recent joint video-audio generation models have achieved strong semantic correspondence and temporal synchronization. However, applications such as AR/VR and interactive gaming further require stereo audio to provide an immersive sense, which remains largely overlooked. Effective stereo audio requires the perceived sound location to evolve consistently with the motion of its corresponding visual source. We refer to this property as Dynamic Spatial Correspondence and propose StereoBind, a framework that binds visual source motion to stereo sound generation. StereoBind uses motion tracks to coordinate visual motion and stereo audio through three complementary mechanisms. Visual Motion Binding establishes source-aware audiovisual correspondence, the Spatial Track Encoder captures absolute source positions, and Residual Track RoPE models relative motion. For supervision and evaluation, we construct StereoWorld-29K, a large-scale stereo audio-video dataset with paired motion tracks, and StereoWorldBench for measuring audiovisual spatial consistency. Experiments show that StereoBind substantially improves spatial alignment in stereo audio generation over existing models while preserving overall audiovisual quality.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://huggingface.co/papers/2609.38748'>page</a> · <a href='https://arxiv.org/pdf/2609.38748'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Investigating unintended model actions in our evaluations and internal use</title>
       <link>https://www.anthropic.com/research/investigating-unintended-model-actions</link>
@@ -2320,41 +2356,6 @@
 <p><b>Authors:</b> Jiaqi Tang, Jianmin Chen, Youyang Zhai, Wei Wei, Runtao Liu, Mengjie Zhao, Xiangyu Wu, Qingfa Xiao, … <i>(+2 more)</i></p>
 <p>Multimodal Large Language Models (MLLMs) have demonstrated remarkable success in visual understanding, yet their performance degrades significantly under real-world visual corruptions. While existing robustness enhancement approaches exist, they are limited: black-box feature alignment lacks interpretability, and white-box text-based reasoning cannot restore lost pixel-level details. This work investigates a fundamental research question: Can MLLMs recover corrupted visual content by themselves? To address this, we propose Robust-U1, a novel framework that equips MLLMs with explicit visual self-recovery capability for robust understanding. The approach comprises three core stages: supervised fine-tuning for initial reconstruction, reinforcement learning with dual rewards (pixel-level SSIM and semantic-level CLIP similarity) for aligning high visual quality, and multimodal reasoning that jointly considers both the corrupted input and the recovered image. Extensive experiments demonstrate that Robust-U1 achieves state-of-the-art robustness on the real-world corruption benchmark and maintains superior performance under adversarial corruptions on general VQA benchmarks. Analysis confirms that high-quality visual recovery directly enhances reasoning performance, establishing self-recovery as a critical mechanism for robust visual understanding. The source code is available at https://github.com/jqtangust/Robust-U1.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-06 · <a href='https://huggingface.co/papers/2606.08063'>page</a> · <a href='https://arxiv.org/pdf/2606.08063'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Cross-Model Disagreement as a Label-Free Correctness Signal</title>
-      <link>https://arxiv.org/abs/2603.25450</link>
-      <guid isPermaLink="false">arxiv:2603.25450</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Columbia — Suman Jana</p>
-<p><b>Authors:</b> Matt Gorbett, Suman Jana</p>
-<p>Detecting when a language model is wrong without ground truth labels is a fundamental challenge for safe deployment. Existing approaches rely on a model&#x27;s own uncertainty -- such as token entropy or confidence scores -- but these signals fail critically on the most dangerous failure mode: confident errors, where a model is wrong but certain. In this work we introduce cross-model disagreement as a correctness indicator -- a simple, training-free signal that can be dropped into existing production systems, routing pipelines, and deployment monitoring infrastructure without modification. Given a model&#x27;s generated answer, cross-model disagreement computes how surprised or uncertain a second verifier model is when reading that answer via a single forward pass. No generation from the verifying model is required, and no correctness labels are needed. We instantiate this principle as Cross-Model Perplexity (CMP), which measures the verifying model&#x27;s surprise at the generating model&#x27;s answer tokens, and Cross-Model Entropy (CME), which measures the verifying model&#x27;s uncertainty at those positions. Both CMP and CME outperform within-model uncertainty baselines across benchmarks spanning reasoning, retrieval, and mathematical problem solving (MMLU, TriviaQA, and GSM8K). On MMLU, CMP achieves a mean AUROC of 0.75 against a within-model entropy baseline of 0.59. These results establish cross-model disagreement as a practical, training-free approach to label-free correctness estimation, with direct applications in deployment monitoring, model routing, selective prediction, data filtering, and scalable oversight of production language model systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-11 · <a href='https://arxiv.org/abs/2603.25450'>page</a> · <a href='https://arxiv.org/pdf/2603.25450'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Muse Spark Safety &amp; Preparedness Report</title>
-      <link>https://arxiv.org/abs/2606.12429</link>
-      <guid isPermaLink="false">arxiv:2606.12429</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.CY</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CMU, CUHK, Columbia, Georgia Tech, MIT, Tsinghua, U Michigan, U Oxford, U Toronto, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Cristina Menghini, Peter Ney, Hamza Kwisaba, Zifan, Wang, Miles Turpin, Felix Binder, Jean-Christophe Testud, … <i>(+112 more)</i></p>
-<p>Muse Spark is the latest large language model developed by Meta. In this report, we first present evaluations for catastrophic risk domains under Meta&#x27;s Advanced AI Scaling Framework, along with the evidence that informed our launch decision. We then discuss additional considerations, such as Muse Spark&#x27;s broader content safety and behavioral profile, that are relevant to overall safety but fall outside the catastrophic risk domains governed by the Framework. Our preparedness results covering Chemical and Biological, Cybersecurity, and Loss of Control risks assess Muse Spark&#x27;s deployment within Meta AI as presenting acceptable levels of residual risks under our Advanced AI Scaling Framework. We conducted a broad set of evaluations targeting dual-use and high-risk capabilities across these catastrophic risk domains. Those evaluations identified elevated risks prior to mitigations, with Chemical and Biological capabilities assessed as likely reaching the &quot;high risk&quot; category under the Advanced AI Scaling Framework before safeguards were applied. We have implemented a multi-layered set of mitigations that address the identified risks, and Muse Spark demonstrates state-of-the-art refusal across a range of benchmarks related to hazardous workflows in chemistry and biology. We therefore release Muse Spark as the underlying model of Meta AI.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CY, cs.AI · <b>arXiv submitted:</b> 2026-05-14 · <a href='https://arxiv.org/abs/2606.12429'>page</a> · <a href='https://arxiv.org/pdf/2606.12429'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>PI-Hunter: Automated Red-Teaming for Exposing and Localizing Prompt Injections</title>
-      <link>https://arxiv.org/abs/2606.12737</link>
-      <guid isPermaLink="false">arxiv:2606.12737</guid>
-      <pubDate>Fri, 12 Jun 2026 05:36:44 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Long T. Le</p>
-<p><b>Authors:</b> Pengfei He, Lesly Miculicich, Vishesh Sharma, Ash Fox, George Lee, Jiliang Tang, Tomas Pfister, Long T. Le</p>
-<p>Large Language Models (LLMs) are rapidly evolving into agentic systems that interact with external tools and environments, introducing new security risks such as indirect prompt injection attacks through untrusted external sources. Existing defenses mainly focus on blocking malicious content at inference time, and current red-teaming methods primarily optimize attack success. As a result, developers have limited visibility into how latent prompt injections emerge and propagate through agents. We propose PI-Hunter, an automated agentic auditing framework for proactive vulnerability exposure in LLM agents. PI-Hunter constructs realistic source-aware test cases and iteratively evolves them through feedback-driven exploration to induce agents to retrieve and reveal latent malicious instructions embedded within external environments. Extensive experiments across multiple benchmarks, agent architectures, attacks, and defenses demonstrate that PI-Hunter substantially improves vulnerability exposure and attack-surface coverage over strong automated red-teaming baselines, while remaining effective under existing prompt injection defenses.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://arxiv.org/abs/2606.12737'>page</a> · <a href='https://arxiv.org/pdf/2606.12737'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
