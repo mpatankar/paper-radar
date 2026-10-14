@@ -5,8 +5,20 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 13 Oct 2026 11:20:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 09:12:04 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>TRACE: Temporal Risk Assessment and Concept Editing for Safer Language Generation</title>
+      <link>https://arxiv.org/abs/2610.15365</link>
+      <guid isPermaLink="false">arxiv:2610.15365</guid>
+      <pubDate>Wed, 14 Oct 2026 09:12:04 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MILA — Samira Ebrahimi Kahou</p>
+<p><b>Authors:</b> Ankur Garg, Xuemin Yu, Hassan Sajjad, Samira Ebrahimi Kahou</p>
+<p>Large language models (LLMs) can produce harmful content while generating a response. A useful safeguard should not only detect this risk during generation but also intervene while leaving safe responses largely unchanged and provide an auditable record of the internal patterns supporting its decisions. We propose TRACE (Temporal Risk Assessment and Concept Editing), a framework that tracks harmful-response risk during generation, selectively edits token activations, and leaves an auditable trace of its detection and steering decisions. TRACE learns a codebook of recurring activation patterns, with each codebook vector representing a latent concept. At inference time, it assigns each token activation to the nearest codebook vector to obtain the corresponding concept. A gated recurrent unit (GRU) processes the activations and their assigned concept features to predict completed-response harmfulness and a monotone cumulative streaming risk. During steering, activations assigned to harmful concepts are steered along directions defined by nearby benign targets. An external LLM labels the learned concepts post hoc, making detection sequences and harmful-to-benign edit records interpretable. Experiments across three generators and the WildGuard and S-Eval benchmarks show that TRACE improves streaming F1 over Kelp in five of six comparisons while remaining competitive on completed-response detection. TRACE&#x27;s selective steering reduces Harmbench attack success with little change in refusal on originally safe responses. The post-hoc audit reveals recurring semantic structure in the learned concepts and distinct traces associated with harmful detection, safe generation, and activation edits.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-11 · <a href='https://arxiv.org/abs/2610.15365'>page</a> · <a href='https://arxiv.org/pdf/2610.15365'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>UniConFlow: A Unified Constrained Flow-Matching Framework for Certified Motion Planning</title>
       <link>https://arxiv.org/abs/2506.02955</link>
@@ -2345,17 +2357,6 @@
 <p><b>Authors:</b> Xucong Wang, Ziyu Ma, Yong Wang, Yuxiang Ji, Shidong Yang, Guanhua Chen, Pengkun Wang, Xiangxiang Chu, … <i>(+1 more)</i></p>
 <p>Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit over coarse heuristic units, such as tool-call boundaries or fixed workflows, making it difficult to identify which intermediate decisions influence downstream outcomes. In this work, we study agentic RL from two perspectives: where to branch and how to assign credit after branching. Our pilot analysis shows that influential decision points are broadly distributed throughout the generated sequence rather than concentrated at tool calls, while token entropy alone does not reliably reflect their impact on final outcomes. Motivated by these observations, we propose Agentic Procedural Policy Optimization (APPO), which shifts branching and credit assignment from coarse interaction units to fine-grained decision points in the sequence. APPO selects branching locations using a Branching Score that combines token uncertainty with policy-induced likelihood gains of subsequent continuations, enabling more targeted exploration while filtering out spurious high-entropy positions. It further introduces procedure-level advantage scaling to better distribute credit across branched rollouts. Experiments on 13 benchmarks show that APPO consistently improves strong agentic RL baselines by nearly 4 points, while keeping efficient tool-calls and maintaining behavior interpretability.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://huggingface.co/papers/2606.12384'>page</a> · <a href='https://arxiv.org/pdf/2606.12384'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?</title>
-      <link>https://huggingface.co/papers/2606.08063</link>
-      <guid isPermaLink="false">arxiv:2606.08063</guid>
-      <pubDate>Sat, 13 Jun 2026 05:31:27 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> HKUST — (senior)</p>
-<p><b>Authors:</b> Jiaqi Tang, Jianmin Chen, Youyang Zhai, Wei Wei, Runtao Liu, Mengjie Zhao, Xiangyu Wu, Qingfa Xiao, … <i>(+2 more)</i></p>
-<p>Multimodal Large Language Models (MLLMs) have demonstrated remarkable success in visual understanding, yet their performance degrades significantly under real-world visual corruptions. While existing robustness enhancement approaches exist, they are limited: black-box feature alignment lacks interpretability, and white-box text-based reasoning cannot restore lost pixel-level details. This work investigates a fundamental research question: Can MLLMs recover corrupted visual content by themselves? To address this, we propose Robust-U1, a novel framework that equips MLLMs with explicit visual self-recovery capability for robust understanding. The approach comprises three core stages: supervised fine-tuning for initial reconstruction, reinforcement learning with dual rewards (pixel-level SSIM and semantic-level CLIP similarity) for aligning high visual quality, and multimodal reasoning that jointly considers both the corrupted input and the recovered image. Extensive experiments demonstrate that Robust-U1 achieves state-of-the-art robustness on the real-world corruption benchmark and maintains superior performance under adversarial corruptions on general VQA benchmarks. Analysis confirms that high-quality visual recovery directly enhances reasoning performance, establishing self-recovery as a critical mechanism for robust visual understanding. The source code is available at https://github.com/jqtangust/Robust-U1.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-06 · <a href='https://huggingface.co/papers/2606.08063'>page</a> · <a href='https://arxiv.org/pdf/2606.08063'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
