@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Wed, 14 Oct 2026 09:12:04 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 08:44:55 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>ActionOPD: Distilling Decisions, Not Tokens</title>
+      <link>https://huggingface.co/papers/2610.19820</link>
+      <guid isPermaLink="false">arxiv:2610.19820</guid>
+      <pubDate>Thu, 15 Oct 2026 08:44:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Huining Yuan, Xiangmin Yi, Zelai Xu, Zixu Wang, Xinlei Chen, Xiao-Ping Zhang, Yu Wang, Chao Yu, … <i>(+1 more)</i></p>
+<p>Distilling capable language-model agents into smaller models requires aligning the student&#x27;s behavior with the teacher&#x27;s. This raises a fundamental question: at which states and at what granularity should this alignment be performed? Offline imitation provides dense but token-specific supervision and can suffer from state-distribution mismatch. Token-level on-policy distillation (OPD) addresses this mismatch but typically requires teacher token probabilities and compatible tokenization. We argue that semantic actions provide a natural unit of supervision for agent distillation. We introduce ActionOPD, an action-level on-policy distillation method motivated by maximizing expected teacher-action likelihood at student-encountered states. At each such state, ActionOPD samples actions from both the student and a black-box teacher, rewarding student actions according to their semantic agreement with the sampled teacher actions. Through policy optimization, ActionOPD aligns the student&#x27;s action-level behavior with the teacher&#x27;s decisions without requiring reproduction of teacher-written reasoning or access to teacher token probabilities. Training Qwen3-4B and Qwen3-8B with two teachers on diverse, curated tool-use tasks yields average gains of 3.3-6.9 percentage points across four out-of-distribution benchmarks. ActionOPD scales favorably with student size and teacher capability, without requiring the teacher and student to share a model family or tokenizer. On τ^2-bench, ActionOPD achieves competitive performance against offline distillation and token-level OPD. We further explore Self-ActionOPD with a same-model teacher and privileged context. These results establish ActionOPD as a promising approach to agent distillation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.19820'>page</a> · <a href='https://arxiv.org/pdf/2610.19820'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Apertus 1.5: From Open Text Models to Open Multimodal Reasoners</title>
+      <link>https://huggingface.co/papers/2610.15542</link>
+      <guid isPermaLink="false">arxiv:2610.15542</guid>
+      <pubDate>Thu, 15 Oct 2026 08:44:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Project Apertus, Yixuan Xu, Yassine Turki, Vinko Sabolčec, Valentina Pyatkin, Tommy Chu, Sven Najem-Meyer, Sean F. Carroll, … <i>(+125 more)</i></p>
+<p>Language models are becoming infrastructure, and infrastructure built in the open, by public institutions, on documented data, is the alternative to dependence on a few providers; Apertus shows this is viable at scale. Apertus 1.5 extends the fully open Apertus family from text to multimodal reasoning. Continued pretraining of the Apertus 1.0 models, on 4T additional tokens for the 8B and 2T for the 70B, adds image and audio understanding and extends the context window fourfold to 262,144 tokens; multimodality enters through the tokenizer, the language-model head remains restricted to text, and the architecture is unchanged. Supervised finetuning, long-context finetuning, reinforcement learning with verifiable rewards, and preference alignment complete the released models. Thinking is a flag of the chat template rather than a separate model, and lifts mathematical reasoning by up to 20 points on the 8B model. The released models improve over their predecessors on nearly every benchmark; among fully open models of its class, the 8B leads on knowledge, instruction following, and cultural benchmarks, and its instruction following surpasses all compared models, including open-weight ones. On image and audio understanding, a first for the family, the models are competitive with fully open multimodal models, strongest on document understanding and long-form and lower-resource speech recognition, while specialized vision and audio models remain ahead on perception and transcription of English and other high-resource languages. As in Apertus 1.0, we train only on openly available data, respect crawler opt-outs retroactively, and exclude restrictively licensed material. We release the model weights, data preparation and training recipes, and evaluation suites under permissive licenses; openness extends to values, with the Apertus charter guiding alignment stages published alongside the models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-11 · <a href='https://huggingface.co/papers/2610.15542'>page</a> · <a href='https://arxiv.org/pdf/2610.15542'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>TRACE: Temporal Risk Assessment and Concept Editing for Safer Language Generation</title>
       <link>https://arxiv.org/abs/2610.15365</link>
@@ -2333,30 +2355,6 @@
 <p><b>Authors:</b> Xuhui Zhou, Weiwei Sun, Weihua Du, Jiarui Liu, Haojia Sun, Qianou Ma, Tongshuang Wu, Yiming Yang, … <i>(+1 more)</i></p>
 <p>Large language models are increasingly deployed as human simulators for interactive evaluation and social simulation. Yet helpfulness-driven post-training pulls them toward a homogeneous, overly agreeable assistant register, creating a behavioral Sim2Real gap. We present OdysSim, the largest open systematic investigation of behavioral foundation models, i.e., models trained to simulate human behavior at scale. We propose SOUL, a taxonomy of five capability axes (CONV, SS, COG, ROLE, EVAL) that unifies 62 datasets and 23 benchmark tasks under one framework. Specifically, we curate the OdysSim corpus (21.4M interactions, 10B tokens, retrofitted with back-generated social contexts), construct the SOUL-Index benchmark, and develop an end-to-end training recipe combining midtraining, task-specific RL, and expert distillation. The resulting open 8B OSim model ranks first or tied-first on 8 of 23 tasks, outperforming any individual frontier model by this count, with the strongest gains on conversational and social tasks. Its outputs are also more human-like in length, formatting, and word choice, and it transfers zero-shot to out-of-distribution user simulation on $τ$-bench, nearly matching real users on reaction alignment (93.2 vs. 93.5). We further show that LLM-as-judge RL induces reward-hacking patterns, and that our detectors can mitigate them during post-training. Together, our findings suggest that behavioral foundation models require rethinking the LLM training paradigm. We release all artifacts to support future research.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2606.14199'>page</a> · <a href='https://arxiv.org/pdf/2606.14199'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Discovery under Hypothesis Redundancy: A Geometric Theory of Discovery Bottlenecks</title>
-      <link>https://arxiv.org/abs/2606.14386</link>
-      <guid isPermaLink="false">arxiv:2606.14386</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>q-fin.PM</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab</p>
-<p><b>Authors:</b> Li Xia, Baoxun Wang</p>
-<p>Scientific discovery saturates when new hypotheses cease to provide independent information, even if the nominal hypothesis space remains large. We study hybrid discovery systems that combine structured local search with LLM-generated non-local proposals and pose the Search Compression Hypothesis: non-local exploration helps only when three geometric conditions co-occur: spectral compression, orthogonal escape from the explored span, and residual signal alignment with the target. We formalize these conditions, derive necessary conditions for hybrid advantage, and test the mechanism in controlled synthetic environments, large-scale A-share factor discovery, and symbolic-regression benchmarks; a public tabular operational sanity check tests the associated budget-allocation implication. Signal-planting and directed-versus-random experiments show that novelty alone is insufficient: random orthogonal jumps expand coverage but do not improve yield without predictive alignment. Across compression sweeps, real factor archives, and LLM-SRBench tasks, hybrid gains concentrate in weakly represented but target-bearing directions and vanish as the hypothesis space approaches full rank. The framework turns LLM-guided discovery from generic novelty search into a diagnostic procedure for deciding when directed non-local exploration is warranted.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, q-fin.PM · <b>arXiv submitted:</b> 2026-06-12 · <a href='https://arxiv.org/abs/2606.14386'>page</a> · <a href='https://arxiv.org/pdf/2606.14386'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>APPO: Agentic Procedural Policy Optimization</title>
-      <link>https://huggingface.co/papers/2606.12384</link>
-      <guid isPermaLink="false">arxiv:2606.12384</guid>
-      <pubDate>Mon, 15 Jun 2026 05:48:15 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xucong Wang, Ziyu Ma, Yong Wang, Yuxiang Ji, Shidong Yang, Guanhua Chen, Pengkun Wang, Xiangxiang Chu, … <i>(+1 more)</i></p>
-<p>Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit over coarse heuristic units, such as tool-call boundaries or fixed workflows, making it difficult to identify which intermediate decisions influence downstream outcomes. In this work, we study agentic RL from two perspectives: where to branch and how to assign credit after branching. Our pilot analysis shows that influential decision points are broadly distributed throughout the generated sequence rather than concentrated at tool calls, while token entropy alone does not reliably reflect their impact on final outcomes. Motivated by these observations, we propose Agentic Procedural Policy Optimization (APPO), which shifts branching and credit assignment from coarse interaction units to fine-grained decision points in the sequence. APPO selects branching locations using a Branching Score that combines token uncertainty with policy-induced likelihood gains of subsequent continuations, enabling more targeted exploration while filtering out spurious high-entropy positions. It further introduces procedure-level advantage scaling to better distribute credit across branched rollouts. Experiments on 13 benchmarks show that APPO consistently improves strong agentic RL baselines by nearly 4 points, while keeping efficient tool-calls and maintaining behavior interpretability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-10 · <a href='https://huggingface.co/papers/2606.12384'>page</a> · <a href='https://arxiv.org/pdf/2606.12384'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
