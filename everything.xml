@@ -5,8 +5,261 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Thu, 15 Oct 2026 08:44:55 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 08:39:21 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Atomic Proximal Policy Optimization for Electric Robo-Taxi Dispatch and Charger Allocation</title>
+      <link>https://arxiv.org/abs/2502.13392</link>
+      <guid isPermaLink="false">arxiv:2502.13392</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Cornell, UC Berkeley — Jim Dai</p>
+<p><b>Authors:</b> Jim Dai, Manxi Wu, Zhanhao Zhang</p>
+<p>Pioneering companies such as Waymo have deployed electric robo-taxi services in several U.S. cities. Operating such fleets requires coordinating ride matching, vehicle repositioning, and battery charging in a stochastic environment while accounting for limited charging infrastructure. Understanding both how to design efficient, scalable control algorithms for large fleets and how charger deployment shapes system performance is therefore critical for robo-taxi operators. We model the operations of an electric robo-taxi system as a discrete-time Markov decision process with a long-run average reward objective. To efficiently evaluate system performance under different configurations, we develop a scalable deep reinforcement learning algorithm, Atomic Proximal Policy Optimization (Atomic-PPO), which reduces the action space using atomic action decomposition. The resulting training procedure requires only modest computational resources, making it practical to evaluate a large number of system configurations. We calibrate a simulation environment using real-world NYC for-hire vehicle trip records and benchmark Atomic-PPO against heuristic policies and a fluid-based reward upper bound. The results show that Atomic-PPO produces near-optimal fleet dispatching policies and serves as a reliable tool for system evaluation. We conduct extensive numerical experiments to evaluate how charging infrastructure and fleet size affect system performance. Our findings highlight the importance of ridership-based charger placement, balanced investments in charger quantity and charging speed, and joint planning of charging infrastructure and fleet size.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://arxiv.org/abs/2502.13392'>page</a> · <a href='https://arxiv.org/pdf/2502.13392'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Towards Reliable Long-Context Reasoning: Detecting Unanswerable Questions via FactGuard</title>
+      <link>https://arxiv.org/abs/2504.05607</link>
+      <guid isPermaLink="false">arxiv:2504.05607</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> Georgia Tech, NUS, Tsinghua — Xing Sun</p>
+<p><b>Authors:</b> Qian-Wen Zhang, Biao Liu, Fang Li, Jie Wang, Lingfeng Qiao, Yifei Yu, Di Yin, Xing Sun</p>
+<p>Despite the success of Large Language Models (LLMs) in long-context tasks, their reliability in recognizing unanswerable questions remains a critical challenge. In information-seeking scenarios, models often suffer from overconfidence and hallucinations when evidence is missing or misleading. In this paper, we propose FACTGUARD, a systematic multi-task workflow for generating evidence-grounded answerable and unanswerable questions. We introduce FACTGUARD-BENCH, a benchmark comprising 25,220 examples with context lengths up to 128K, specifically targeting Lack of Evidence and Misleading Evidence scenarios. Evaluations of eleven representative open-source and proprietary LLMs reveal a significant reliability gap: models struggle to reject unanswerable questions as context scales, with the leading model achieving only 71.62% accuracy. By training with FACTGUARD-BENCH, we improve overall accuracy to 81.17% and significantly enhance models&#x27; reasoned rejection capabilities. Our work provides a scalable path toward building more faithful and trustworthy long-context LLMs. Our source is publicly available at https://github.com/biaoliu-kiritsugu/FactGuard.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://arxiv.org/abs/2504.05607'>page</a> · <a href='https://arxiv.org/pdf/2504.05607'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>UniFGVC: Universal Training-Free Few-Shot Fine-Grained Vision Classification via Attribute-Aware Multimodal Retrieval</title>
+      <link>https://arxiv.org/abs/2508.04136</link>
+      <guid isPermaLink="false">arxiv:2508.04136</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech, NUS — Tat-Seng Chua</p>
+<p><b>Authors:</b> Haiyun Guo, Hongyu Guo, Xiangzhao Hao, Jiarui Guo, Jinqiao Wang, Tat-Seng Chua</p>
+<p>Few-shot fine-grained visual classification (FGVC) aims to discriminate between subtly different categories with very limited data. While Multimodal Large Language Models (MLLM) exhibit strong capabilities in both fine-grained visual understanding and open-world category recognition, directly fine-tuning them on few-shot FGVC tasks typically leads to overfitting on sparse samples, which erodes their valuable open-world knowledge and compromises generalization. To fundamentally overcome this limitation, we present UniFGVC, a universal training-free framework that shifts the paradigm from parameter fine-tuning to training-free retrieval-based inference. UniFGVC reframes few-shot FGVC as a multimodal retrieval problem using predefined category templates. Its core is the Category-Discriminative Visual Captioner (CDV-Captioner), an attribute-aware module designed to leverage MLLM for generating structured textual descriptions that explicitly pinpoint discriminative visual attributes between similar classes. By integrating chain-of-thought reasoning and visual references, CDV-Captioner mitigates hallucination and maximizes the discriminative power of textual captions, thereby converting images into attribute-enriched image-description pairs. Subsequently, utilizing arbitrary pre-trained visual and textual encoders in a plug-and-play manner, UniFGVC extracts features from both modalities and computes their similarity with all category templates for recognition. Extensive experiments on 12 FGVC datasets demonstrate UniFGVC&#x27;s universal compatibility and consistent superiority. It not only outperforms existing few-shot CLIP-based methods but also surpasses several fully-supervised MLLM-based approaches, confirming the general advantage of the proposed retrieval paradigm.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://arxiv.org/abs/2508.04136'>page</a> · <a href='https://arxiv.org/pdf/2508.04136'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Accelerating the search for antimicrobial peptides with Google Antigravity</title>
+      <link>https://deepmind.google/blog/accelerating-antimicrobial-discovery/</link>
+      <guid isPermaLink="false">deepmind:996b33c09a</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p>Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://deepmind.google/blog/accelerating-antimicrobial-discovery/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Already Clean</title>
+      <link>https://www.goodfire.ai/research/already-clean</link>
+      <guid isPermaLink="false">goodfire:0c6cc65f55</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <category>interpretability</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Goodfire</p>
+<p><b>Authors:</b> Goodfire</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://www.goodfire.ai/research/already-clean'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Imitation Learning of Avoidance Modes for Efficient Multimodal Model Predictive Control</title>
+      <link>https://research.nvidia.com/publication/2026-12_imitation-learning-avoidance-modes-efficient-multimodal-model-predictive</link>
+      <guid isPermaLink="false">nvidia_research:05627e9203</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-12_imitation-learning-avoidance-modes-efficient-multimodal-model-predictive'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>EdgeWise: Bringing Long-Horizon Agents to the Edge via Selective Cloud Delegation</title>
+      <link>https://research.nvidia.com/publication/2026-12_edgewise-bringing-long-horizon-agents-edge-selective-cloud-delegation</link>
+      <guid isPermaLink="false">nvidia_research:b7378f0f90</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
+<p><b>Authors:</b> NVIDIA Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-12_edgewise-bringing-long-horizon-agents-edge-selective-cloud-delegation'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>ResearchIntroducing TimestralState-of-the-art probabilistic forecasts with just 209M parameters, outperforming larger models on CPU.October 15, 2026By Mistral</title>
+      <link>https://mistral.ai/news/timestral/</link>
+      <guid isPermaLink="false">mistral:b8a89667dd</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Mistral AI</p>
+<p><b>Authors:</b> Mistral AI</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://mistral.ai/news/timestral/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Proof-based general-purpose computing with Magnetar</title>
+      <link>https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/</link>
+      <guid isPermaLink="false">microsoft_research:4069e5410c</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Srinath Setty</p>
+<p>&lt;p&gt;Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/&quot;&gt;Proof-based general-purpose computing with Magnetar&lt;/a&gt; appeared first on &lt;a href=&quot;https://www.microsoft.com/en-us/research&quot;&gt;Microsoft Research&lt;/a&gt;.&lt;/p&gt;</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Meet some of the 2026 Virtual Cell Challenge competitors</title>
+      <link>https://arcinstitute.org/news/vcc-competitor-showcase-2026</link>
+      <guid isPermaLink="false">arc_institute:92ea6a3cc5</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <category>biology</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Arc Institute</p>
+<p><b>Authors:</b> Arc Institute</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, biology · <a href='https://arcinstitute.org/news/vcc-competitor-showcase-2026'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation</title>
+      <link>https://huggingface.co/papers/2610.21601</link>
+      <guid isPermaLink="false">arxiv:2610.21601</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bingxi Hou, Guochao Jiang, Guofeng Quan, Weiqing Li, Wenfeng Feng, Guohua Liu, Yuewei Zhang, Hugging Face Daily Papers (curated)</p>
+<p>Policy-shift distillation reuses the difference between a teacher&#x27;s log probabilities before and after reinforcement learning (RL) as supervision on student-generated trajectories. However, this endpoint policy shift cannot reveal whether local action preferences evolved consistently during teacher training. The same endpoint shift can result from early and late shifts that reinforce or partially cancel each other. We investigate whether agreement between early and late teacher policy shifts can guide selective transfer. We introduce Waypoint-guided On-Policy Distillation (Waypoint-OPD), which uses an intermediate teacher checkpoint from the same RL run to compare early and late shifts in relative action preferences at student-visited prefixes. We gate the endpoint shift according to the directional agreement between the early and late shifts, suppressing it when they point in opposing directions. Compared with endpoint-only transfer, our method requires only one additional frozen-teacher scoring pass. Using RL-trained Qwen3-4B teachers, we evaluate our method with Qwen3-8B, Qwen3-14B, and Qwen3-30B-A3B as student models in mathematical and code reasoning. In all six domain--student settings, Waypoint-OPD achieves the highest domain-average score among the compared distillation methods. Ablations with the Qwen3-8B student show that removing or shuffling gates reduces mathematical reasoning performance. These results support the use of directional agreement between early and late teacher policy shifts to weight the endpoint shift during student training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.21601'>page</a> · <a href='https://arxiv.org/pdf/2610.21601'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Self-Evolving Agent Harness</title>
+      <link>https://huggingface.co/papers/2610.18813</link>
+      <guid isPermaLink="false">arxiv:2610.18813</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chuyang Wei, Haoxiang Guan, Minghang Zhu, Kexin Zhou, Jiyan He, Xiren Zhou, Huanhuan Chen, Yifei Shen, … <i>(+1 more)</i></p>
+<p>Harness self-evolution revises an agent&#x27;s software scaffolding, including prompts, memory, workflows, and executable components, while keeping model weights fixed. We formalize a feedback-driven process in which accepted revisions persist across runs. The framework separates update targets from proposal and admission mechanisms. It distinguishes changes to interpreted state from revisions to tools and code, repository-level control logic, and plugin composition. We characterize search through evolutionary optimization and examine its reliability through continual PAC-learning. Under explicit assumptions, the analysis yields an expected generalization bound, a retention bound conditional on historical regression budgets, and a high-probability admission rule using fresh, independent validation data. We examine how persistent harness revisions affect knowledge sharing and organizational workflows, with implications for scientific reliability, physical safety, and institutional accountability. Cases from prior work illustrate model--harness co-design, distributed execution, and plugin reuse. Reliable deployment requires continual validation as task distributions and evaluators change, with independent safeguards for learning, runtime privileges, and consequential actions. We provide a comprehensive 66-page discussion of related work, theory, algorithms, evaluation, applications, and the broader impact of Harness RSI, together with continuously updated code and supplementary materials, at https://github.com/zgcagi/Harness-RSI.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-13 · <a href='https://huggingface.co/papers/2610.18813'>page</a> · <a href='https://arxiv.org/pdf/2610.18813'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Learning Where to Split: Dynamic Band Splitting for Audio Source Separation</title>
+      <link>https://huggingface.co/papers/2610.14993</link>
+      <guid isPermaLink="false">arxiv:2610.14993</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Bingzhe Zhang, Kai Li, Xiaolin Hu, Hugging Face Daily Papers (curated)</p>
+<p>Audio source separation models must preserve fine spectral structure while keeping the cost of the separator tractable. Band-split architectures reduce this cost by manually partitioning the spectrum into predefined frequency bands and encoding each band as a token, but the same boundaries are used for every mixture. Because informative spectral structure varies with source content, fixed boundaries can merge discriminative components or spend tokens where little resolution is needed. We introduce Dynamic Band Splitting (DBS), an end-to-end framework that adapts boundary locations and band widths to each mixture under a fixed band-token budget. DBS predicts content-conditioned boundary scores within frequency blocks, selects a prescribed number of boundaries using hard Top-K, and applies content-dependent pooling to obtain compact band tokens. After separation, it smooths and expands these tokens to the original STFT grid, refines them along frequency, and decodes complex masks with a frequency-shared head. DBS improved separation over the corresponding static models on DnR v2, MUSDB18-HQ, and EchoSet, with DBS-BSRNN achieving relative gain of 29.0% in average SI-SDR on DnR v2. These results and boundary analyses on DnR v2 show that content-adaptive frequency partitioning benefits multiple separator backbones under a fixed band-token budget. Code and audio demos are available at https://cslikai.cn/Dynamic-Band-Splitting</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-10 · <a href='https://huggingface.co/papers/2610.14993'>page</a> · <a href='https://arxiv.org/pdf/2610.14993'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RoTA-Bench: Evaluating 3D Spatial Reasoning through Interactive Projection Alignment</title>
+      <link>https://huggingface.co/papers/2610.17665</link>
+      <guid isPermaLink="false">arxiv:2610.17665</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Qingchuan Ma, Yuexiao Ma, Xiang Meng, Yixuan Zou, Tianyu Xie, Wang Chen, Yuhui Zeng, Yuhang Wu, … <i>(+3 more)</i></p>
+<p>Can vision-language models turn 2D observations into 3D understanding that supports precise action? This requires inferring object geometry, anticipating the effects of rotation, and refining actions through visual feedback. We introduce RoTA-Bench to evaluate these abilities through interactive 3D-to-2D projection alignment. Given a target silhouette, a model observes a rotated object and chooses successive rotations to recover the target projection within a limited action budget. Our automated pipeline constructs silhouette-preserving 3D objects from 2D icons and uses reversible initialization to guarantee solvability, yielding 674 tasks and a stratified 100-task test set. Empirically, we find that (i) a substantial human-model gap persists: GPT-5.6-Sol succeeds on only 17% of tasks, whereas 20 undergraduate participants collectively complete the test set four times with a 100% success rate; (ii) image-space and pose-space progress can diverge: at matched states, the model more often improves silhouette overlap while worsening pose alignment than humans (19.4% vs. 10.9%); and (iii) fine-grained control is sensitive to interaction history: removing it leaves 96.8% of the model&#x27;s actions at a coarse 30-degree step size and sharply reduces observed task success. These findings highlight the challenge of converting visual evidence into precise 3D control, beyond recognizing or matching individual images.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.17665'>page</a> · <a href='https://arxiv.org/pdf/2610.17665'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>InfiniSplat v2: Analyzing and Improving Feed-Forward 3DGS from Any Views</title>
+      <link>https://huggingface.co/papers/2610.20341</link>
+      <guid isPermaLink="false">arxiv:2610.20341</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yongzhen Hu, Hao Yu, Jiawei Wang, Xianming Zeng, Jianyun Xu, Xingliang Liu, Ruizhen Hu, Xiaowei Zhou, … <i>(+3 more)</i></p>
+<p>Feed-forward Gaussian reconstruction builds 3D scenes directly from input images for novel view rendering, but learning Gaussian attributes from predicted geometry for high-quality rendering under large viewpoint changes remains challenging. We analyze limitations in Gaussian attribute learning and introduce InfiniSplat v2, which improves rendering quality through architectural and training changes. Our method decouples geometry and attribute prediction with a frozen geometry branch, aligns predicted Gaussians using ground-truth camera poses during training, and adopts large-angle target view supervision. Across six datasets, the feed-forward outputs of the same trained model achieve state-of-the-art mean LPIPS and DISTS among the evaluated methods in both pose-conditioned and pose-free settings. In the pose-conditioned setting, mean LPIPS and DISTS decrease by 25.8% and 32.9%, respectively, compared with the strongest evaluated baselines. We further find that opacity learned with only image reconstruction supervision suppresses geometrically inconsistent points. Project page: https://zju3dv.github.io/InfiniSplat2/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.20341'>page</a> · <a href='https://arxiv.org/pdf/2610.20341'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>3DCodeVerse: Exploring 3D Worlds as Code</title>
+      <link>https://huggingface.co/papers/2610.22341</link>
+      <guid isPermaLink="false">arxiv:2610.22341</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yipeng Gao, Ziyao Zeng, Jinfa Huang, Yijiang Li, Haolin Xiong, Wang Qin, Xinlei Yu, Youheng Yao, … <i>(+12 more)</i></p>
+<p>We introduce 3DCodeVerse, a research ecosystem that enables coding agents to create editable and verifiable 3D content at scale. 3DCodeVerse comprises large-scale, high-quality datasets of executable 3D code, a coding harness for spatial reasoning and automated verification, and practical guidance for 3D coding. First, we construct 3DCodeVerse-2M, a large-scale curated dataset of standalone 3D executable code. We build this corpus by collecting open-source data, converting specialized representations, and generating new programs with coding agents. Each program is packaged with the source files and associated assets required for execution in its declared environment, along with available descriptions and verification records. Second, we develop the 3DCodeVerse Harness, a multi-agent directed acyclic graph framework for generating and refining 3D content. It uses execution checks, spatial measurements, and visual feedback to automatically evaluate and revise generated programs without human feedback during generation. Third, we conduct systematic empirical studies of 3D coding, establishing baselines with fine-tuned open models and deriving practical guidance through component-level analyses of our harness. Extensive experiments demonstrate that fine-tuning on our dataset significantly improves the 3D coding capabilities of open-source models. Notably, our 3DCodeVerse harness achieves a 90% win rate against Claude Design (3D Object) in pairwise human evaluations, when both are utilized by Claude Opus 5.5.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.22341'>page</a> · <a href='https://arxiv.org/pdf/2610.22341'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mosaic: Multi-Session Agentic Reinforcement Learning</title>
+      <link>https://huggingface.co/papers/2610.22174</link>
+      <guid isPermaLink="false">arxiv:2610.22174</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yilong Xu, Minrui Xu, Xinyu Zhou, Xiang Long, Haochen Tan, Zhijiang Guo, Hugging Face Daily Papers (curated)</p>
+<p>Most existing agentic reinforcement learning methods assume single-session trajectories, where interaction proceeds within one continuously accumulated context. However, agentic techniques such as context compaction and subagent forking may produce trajectories spanning multiple sessions, creating a mismatch between the single-session training assumption and inference-time execution. Therefore, we introduce Multi-Session Agentic Reinforcement Learning, a more general setting that supports an arbitrary number of sessions within a trajectory. Under this setting, a widely adopted method is to broadcast trajectory-level advantages to all sessions, but this does not distinguish contributions from various sessions or guide session allocation within trajectories. To address this issue, we propose Mosaic, a multi-session agentic RL method with critic-free hierarchical optimization. At the trajectory level, it incorporates session-usage signals into advantage estimation. At the session level, it shapes each session&#x27;s advantage according to the estimated marginal contribution. Experiments on BrowseComp with Qwen3.5-4B show that Mosaic outperforms broadcasting in both context compaction and subagent forking scenarios while using fewer sessions on average. Further analyses show that our method achieves improvements in session utility and allocation, which we suggested is a promising target for future advances in multi-session agentic RL.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.22174'>page</a> · <a href='https://arxiv.org/pdf/2610.22174'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DeltaStreamer: Towards Human-Like Agentic Streaming Video Understanding</title>
+      <link>https://huggingface.co/papers/2610.19849</link>
+      <guid isPermaLink="false">arxiv:2610.19849</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Boyuan Sun, Deshui Miao, Wenzhao Gao, Shaoyong Jia, Shaohui Jiao, Chi Liu, Yan Shu, Derek Li, … <i>(+4 more)</i></p>
+<p>We propose DeltaStreamer, a novel agentic framework for streaming video understanding inspired by how humans observe, remember, and investigate. Streaming video understanding requires a system to retain evidence before knowing which details future queries will need. Existing approaches often obscure event transitions and omit relevant details when compressing video history, and cannot recover missing visual evidence. DeltaStreamer addresses these limitations by combining change-aware memory with query-driven planning and targeted evidence gathering with replay. Before a query arrives, it continuously observes the stream and explicitly records visual changes in structured memory, preserving how events unfold rather than only what is present. When a query arrives, a query-driven planner identifies the required evidence and guides memory retrieval and targeted replay. By revisiting historical frames, the agent can recover visual details omitted during observation and ground its answer in evidence beyond the retained descriptions. This connects continuous observation with active investigation tailored to each question. Experiments on OVO-Bench and StreamingBench demonstrate improvements over representative streaming video understanding methods, with overall scores of 66.07% and 59.53%, respectively.
+  Project page: https://bbbbchan.github.io/DeltaStreamer/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.19849'>page</a> · <a href='https://arxiv.org/pdf/2610.19849'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MAI-Gym: An Open All-in-One Platform for GUI Agent Evaluation and RL Training across Mobile and Computer Environments</title>
+      <link>https://huggingface.co/papers/2610.20939</link>
+      <guid isPermaLink="false">arxiv:2610.20939</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Panrong Tong, Quyu Kong, Pengxiang Li, Tianyu Xia, Hanzhang Zhou, Lei Wang, Chenglin Cai, Long Li, … <i>(+8 more)</i></p>
+<p>Online reinforcement learning (RL) with verifiable rewards has driven rapid progress in mathematics, coding, and tool use, but scaling this success to GUI agents remains challenging due to the high cost of interactive environments and the scarcity of realistic training tasks. We introduce MAI-Gym, an open all-in-one platform that unifies GUI agent evaluation, data collection, and online RL training across mobile, computer, and web environments. Through a shared rollout pipeline, MAI-Gym ensures consistent agent behavior across evaluation and training, supports ten established benchmarks, and scales to 20,000 parallel environment instances. Beyond scalable infrastructure, MAI-Gym enables automated synthesis of diverse GUI applications and challenging tasks, including resettable mocked apps and coherent cross-app worlds with execution-validated task verifiers. Using MAI-Gym, we train MAI-Gym-9B, a unified 9B agent for mobile and computer use, achieving state-of-the-art performance among open GUI agents under 10B parameters: 78.4% on MobileWorld and 76.2% on OSWorld-Verified. Importantly, RL in a mocked train-ticketing app transfers to its real-world counterpart, improving task success on a phys- ical phone from 28.8% to 48.1%. We release the framework, synthesis skills, mocked apps, 2,000 verified tasks, and the model checkpoint to support repro- ducible research and further advances in scalable GUI agent training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.20939'>page</a> · <a href='https://arxiv.org/pdf/2610.20939'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models</title>
+      <link>https://huggingface.co/papers/2610.21306</link>
+      <guid isPermaLink="false">arxiv:2610.21306</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Qi Lu, Jiarun Li, Ce Zhang, Miao Pan, Yi Pan, Xu Wang, Wenqi Zhang, Xuhong Zhang, … <i>(+1 more)</i></p>
+<p>Vision-language-action (VLA) models transfer semantic knowledge acquired through vision-language pretraining to robot control, achieving strong performance across various benchmarks. However, most VLAs directly map observations to demonstrated actions without explicit supervision of intermediate physical state changes, making them prone to overfitting observation-action correspondences. Some methods introduce intermediate reasoning or future-state prediction in language, visual, or latent spaces to guide action generation, but do not explicitly supervise the physical state transition itself. We therefore propose VLA-Δ, a general framework that uses physical changes between current and future states as explicit learning targets. To support this objective, we construct a large-scale pretraining dataset and derive physical state-transition annotations covering task-relevant semantics and visual motion changes, providing more direct supervision for continuous action generation. During inference, the model generates actions directly from current observations without additional inference overhead. VLA-Δ achieves performance competitive with the state of the art on LIBERO and RoboTwin, and outperforms π_{0.5} in real-robot experiments. Our code is available at https://github.com/ZJU-OmniAI/VLA-Delta</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.21306'>page</a> · <a href='https://arxiv.org/pdf/2610.21306'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio</title>
+      <link>https://machinelearning.apple.com/research/mlx-distributed-inference</link>
+      <guid isPermaLink="false">apple_ml:98e6a11f87</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://machinelearning.apple.com/research/mlx-distributed-inference'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents</title>
+      <link>https://machinelearning.apple.com/research/selection-structured-reasoning</link>
+      <guid isPermaLink="false">apple_ml:1aaf9ecdd8</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Multimodal agents commonly generate freeform reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from the reasoning candidates based on theirâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://machinelearning.apple.com/research/selection-structured-reasoning'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Plan or Retrieve First? A Scale Study of Tool Discovery Architectures</title>
+      <link>https://machinelearning.apple.com/research/plan-retrieve-tool-discovery</link>
+      <guid isPermaLink="false">apple_ml:7f2975ae8e</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Tool-augmented LLM agents discover relevant APIs from large registries before planning execution, yet finite context windows prohibit injecting all tool definitions into a single prompt. The dominant approach, which we term Retrieve-then-Plan (RtP), embeds the user query and retrieves similar tools via approximate nearest-neighbor search. We study an alternative Plan-then-Retrieve (PtR) paradigm in which the LLM first generates Abstract Tool Stubs (hypothesized function signatures describing needed capabilities) which then serve as retrieval queries against the registry. Evaluating onâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://machinelearning.apple.com/research/plan-retrieve-tool-discovery'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Forget About It: Mitigating Forgetting Without Replay or Auxiliary Objectives</title>
       <link>https://arxiv.org/abs/2501.05559</link>
@@ -2026,262 +2279,6 @@
 <p><b>Authors:</b> Patrick Amadeus Irawan, Iskandar Muda Rizky Parlambang, Rava Maulana, Qinrong Cui, Erland Hilman Fuadi, Zayd M. K. Zuhri, Nanda Ryaas Absar, Ahmed Elshabrawy, … <i>(+6 more)</i></p>
 <p>Video generation models are increasingly being explored as world simulators for embodied planning and learning. To do so effectively, these models must not only generate visually appealing frames, but also predict how environments dynamically evolve when executing goal-directed actions. While evaluating these capabilities is crucial, existing benchmarks focus mainly on single short actions or step-by-step instructions. This leaves multi-step physical reasoning underexplored, especially in egocentric video generation that requires planning to simulate proper execution to accomplish high-level goals by carrying out multiple real-world manipulations. We introduce Ego2Act, a goal-directed benchmark featuring 2,640 videos from 110 real-world tasks across day-to-day settings, varying object clutter and multi-step complexity. Given an initial scene image and a high-level goal, Ego2Act evaluates whether video generation models can produce realistic egocentric videos of a hand manipulating objects to carry out the task. To support scalable evaluation, we also introduce Ego2ActJudge, a reference-free evaluation pipeline that achieves better task completion and physics plausibility evaluation alignment with human consensus compared to relevant baselines. Our findings reveal that models&#x27; generated simulations often skip or partially execute steps, leaving later steps missing dependent states, which leads to unfulfilled goal. Furthermore, models consistently fail at fine-grained physical dynamics, particularly during complex object manipulation and persistent world modeling. We hope Ego2Act provides a rigorous testbed for advancing video models toward physically plausible, goal-directed simulation.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01092'>page</a> · <a href='https://arxiv.org/pdf/2610.01092'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>X-Tree: Tokenizing Reusable Experience for Efficient Agent Generalization</title>
-      <link>https://huggingface.co/papers/2609.32993</link>
-      <guid isPermaLink="false">arxiv:2609.32993</guid>
-      <pubDate>Sun, 04 Oct 2026 10:20:36 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Columbia, Peking U — (senior)</p>
-<p><b>Authors:</b> Sitao Cheng, Xunjian Yin, Zhiyuan Sun, Yuxuan Li, Ruiwen Zhou, Xiangru Jian, Victor Zhong, Hugging Face Daily Papers (curated)</p>
-<p>Multi-step agents are trained on flat action streams: SFT and RLVR weight every token uniformly and ignore the sub-procedures that recur across tasks, the hierarchy that lets humans plan top-down from reusable routines. This structure sits unused, and flat training uses each scarce trajectory less fully than its content allows. Recent agents do use that structure, but only as LLM-written skills in context, never in the weights, so their gains do not generalize beyond retrieval. We instead recover this hierarchy from the data itself and train on it, with no LLM calls. Following text tokenizers, which build a vocabulary by counting alone, we score action spans by reusability and merge canonicalized actions into a reusable eXperience tree (X-Tree). Each X-Tree node captures how a frequent and success-bearing skill is composed from sub-skills, guiding efficient generalization. We integrate X-Tree into three training settings: offline RL, with each node as a training instance; online RLVR, with an adaptive skill bonus; and on-policy self-distillation, with X-Tree as the self-teacher&#x27;s privileged context. Across WebArena, ScienceWorld, and WebShop at three model scales, X-Tree improves over standard recipes at matched data and budget by up to 4.5% SR on WebArena, 5.8% SR on ScienceWorld and 4.1% success on WebShop. Matched analyses attribute the gains to the X-Tree structure and the three integrations.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-26 · <a href='https://huggingface.co/papers/2609.32993'>page</a> · <a href='https://arxiv.org/pdf/2609.32993'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics</title>
-      <link>https://huggingface.co/papers/2609.35259</link>
-      <guid isPermaLink="false">arxiv:2609.35259</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> U Cambridge — (senior)</p>
-<p><b>Authors:</b> Julianna Piskorz, Antonin Berthon, Mihaela van der Schaar, Hugging Face Daily Papers (curated)</p>
-<p>On-policy learning has been argued to reduce catastrophic forgetting, produce sparser parameter updates, and improve generalisation. However, existing comparisons between supervised fine-tuning and reinforcement learning vary many factors simultaneously, making the contribution of rollout policy difficult to isolate. We study the effect of rollout policy in a controlled strong-to-weak distillation setting, by independently varying rollout policy, token-level KL direction, and learning rate across the Llama3 and Qwen2.5 model families and reasoning tasks spanning scientific, medical, and arithmetic domains. Our analysis reveals a nuanced picture of distillation dynamics in which rollout policy does not necessarily play a central role. Instead, token-level KL direction more clearly shapes task performance and output coverage, while learning rate governs forgetting and update sparsity. Analysis of KL gradients and experiments along a continuous student-teacher rollout-policy spectrum explain this pattern: forward KL is remarkably robust to rollout policy, with its performance stable and strong despite changes to the rollout policy, whereas reverse KL is substantially more sensitive and favours student-generated rollouts. On-policy data nevertheless improves generalisation to harder variants of the Countdown arithmetic task under both KL directions, although this advantage does not reliably persist after subsequent RLVR. Our broader conclusions remain robust to removing gradient clipping, using sampled KL estimators, and training on tasks requiring longer reasoning chains. Overall, our results challenge the view that on-policy rollouts are inherently preferable and show that their value depends critically on the objective, evaluation setting, and optimisation hyperparameters.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.35259'>page</a> · <a href='https://arxiv.org/pdf/2609.35259'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Transformers Stop Thinking Too Early, and a Tiny LoRA Fixes It</title>
-      <link>https://huggingface.co/papers/2609.36585</link>
-      <guid isPermaLink="false">arxiv:2609.36585</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> U Michigan — (senior)</p>
-<p><b>Authors:</b> Zehao Jin, Ruixuan Deng, Junran Wang, Hugging Face Daily Papers (curated)</p>
-<p>Pretrained transformers use little of their depth to follow references in context. Thirteen base models reliably follow only 1.4-3.6 lines, and extra pretrained loops add little. A task-trained rank-8 LoRA at one early layer extends this computation with all model weights frozen. Qwen3-8B improves from 15.5% to 99% exact accuracy on 24-line chains; a longer-trained LoRA reaches 50 lines. Ouro-1.4B reaches 60 lines after four loops and at least 160 after eight. The LoRA starts a relay: program lines pass on their chain identity through a short range of middle layers. Frozen heads read progressively further up the chain, and removing parent-line attention stops the relay. A frozen-model measurement locates the last useful intervention layer within tolerance in three of four held-out models. Task-specific LoRAs also improve MuSiQue. Default answers therefore understate the computation accessible through a tiny edit. Code and an interactive demo are available at https://lunamos.github.io/stop-thinking-too-early/</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://huggingface.co/papers/2609.36585'>page</a> · <a href='https://arxiv.org/pdf/2609.36585'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>E-MoE: Enhanced Mixture-of-Experts for Non-Factorized Diffusion Language Models</title>
-      <link>https://huggingface.co/papers/2609.37533</link>
-      <guid isPermaLink="false">arxiv:2609.37533</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> MIT — (senior)</p>
-<p><b>Authors:</b> Arseny Ivanov, Alexander Kolesov, Alexander Korotin, Ivan Oseledets, Mikhail Goncharov, Hugging Face Daily Papers (curated)</p>
-<p>Masked diffusion models (MDMs) generate sequences by progressively unmasking several tokens per denoising step, but their reverse process is typically factorized over positions, limiting sample quality in the few-step regime where diffusion&#x27;s speed advantage over autoregressive decoding matters most. A recent line of work introduces a continuous Gaussian latent, trained as a variational autoencoder, to capture correlations across positions, but such approaches are prone to posterior collapse, where the latent is silently ignored. We propose Enhanced Mixture-of-Experts (E-MoE), which builds the reverse process as a mixture of factorized distributions over a discrete shared latent given by the expert-routing decisions of a Mixture-of-Experts (MoE) backbone, without increasing active parameters over the factorized baseline. Across synthetic multi-modal benchmarks, binarized MNIST, and LM1B, E-MoE improves few-step generation over factorized baselines.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-29 · <a href='https://huggingface.co/papers/2609.37533'>page</a> · <a href='https://arxiv.org/pdf/2609.37533'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation</title>
-      <link>https://huggingface.co/papers/2610.02196</link>
-      <guid isPermaLink="false">arxiv:2610.02196</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zhuo Lin, Sirui Xu, Liuyu Bian, Yu-Xiong Wang, Liang-Yan Gui, Hugging Face Daily Papers (curated)</p>
-<p>We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining what it learns, without retraining. Our key insight is that a broad controller already holds much of the competence a new task needs, and that this competence becomes accessible through an interface between planning and control that is expressive enough to specify contact-rich, multi-stage interactions, yet executable and measurable enough that execution feedback can guide planning from experience. InterEvolve realizes this interface with two components. First, we develop an object-aware forward-backward (FB) behavioral foundation model, whose object residuals on a frozen body prior turn a new reward about the body or objects into loco-manipulation behavior at test time. Second, we specify tasks as reward programs: staged rewards with completion conditions and tunable constants. A large language model (LLM) agent revises the program structure in context, drawing on execution feedback and a skill library of verified programs, while a numerical optimizer tunes its constants. With every candidate verified across parallel simulation scenarios, the program explores new ways to induce, repurpose, and compose the controller&#x27;s existing motor competence for the task at hand, and thus improves over iterations. Experiments show that human-designed rewards leave much of the FB model&#x27;s loco-manipulation competence untapped, whereas the programs InterEvolve evolves release it, sometimes through novel strategies. It further produces behaviors for diverse tasks, complex scenes, and long-horizon compositions in simulation, and evolved skills run autonomously on a physical Unitree G1 from egocentric onboard perception.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.02196'>page</a> · <a href='https://arxiv.org/pdf/2610.02196'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Video Generation Models: A Survey of Post-Training and Alignment</title>
-      <link>https://huggingface.co/papers/2610.00812</link>
-      <guid isPermaLink="false">arxiv:2610.00812</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Stanford — (senior)</p>
-<p><b>Authors:</b> Chaoyu Li, Xiaoyi Gu, Yogesh Kulkarni, Eun Woo Im, Mohammadmahdi Honarmand, Zeyu Wang, Juntong Song, Fei Du, … <i>(+6 more)</i></p>
-<p>Video generation has rapidly progressed from short, low-quality clips to high-resolution, long-duration sequences with complex spatiotemporal dynamics. Despite strong generative priors learned through large-scale pretraining, pretrained video models often fail to reliably follow human intent, maintain temporal coherence, or satisfy physical and safety constraints. Compared with image and text generation, alignment in video generation presents unique challenges, including error accumulation over time, motion-appearance coupling, multi-objective trade-offs, and limited supervision for temporal properties. These challenges motivate systematic post-training strategies that adapt pretrained models without retraining them from scratch. In this survey, we present the first comprehensive review of post-training and alignment in video generation models. We frame post-training as a unifying framework and distinguish between implicit alignment and explicit alignment based on how alignment signals are enforced. From this perspective, we organize existing approaches into four broad categories: supervised fine-tuning methods, self-training and distillation methods, preference- and reward-based methods, and inference-time methods. This taxonomy provides a coherent view of how alignment signals shape model behavior across both training and deployment. Beyond methodological advances, we review commonly used datasets, benchmarks, and evaluation practices, and discuss open challenges such as scalable reward design, long-horizon temporal consistency, stability-expressiveness trade-offs, and safety-aware generation. This survey aims to provide a structured conceptual foundation and practical guidance for advancing controllable and reliable video generation models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://huggingface.co/papers/2610.00812'>page</a> · <a href='https://arxiv.org/pdf/2610.00812'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens</title>
-      <link>https://huggingface.co/papers/2610.01939</link>
-      <guid isPermaLink="false">arxiv:2610.01939</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CUHK, Peking U — (senior)</p>
-<p><b>Authors:</b> Ruiyang Si, Jianxin Bi, Shunyu Yang, Rui Ni, Wenbo Huang, Qiang Wang, Shulong Jiang, Duomin Wang, … <i>(+5 more)</i></p>
-<p>Vision language model (VLM) agents can control robots through visual feedback and action primitives, but repeated model invocations and redundant observations incur substantial token overhead. We introduce PyRUA-Lean, an interactive code-execution framework that couples feedback-driven primitive composition with selective observation: the agent composes classical robot primitives and learned vision-language-action (VLA) policies into Python cells that perform conditional checks and local retries, returning only explicitly requested images and state feedback for replanning. Across 700 simulated task instances from LIBERO-PRO, RoboTwin 2.0, and RoboCasa365, we compare PyRUA-Lean with a tool-calling baseline using the same GPT-6 Astra planner and underlying robot primitives. Under equal LLM-call budgets, PyRUA-Lean increases overall success from 63.1% to 71.7%. On instances solved by both agents, it uses 49% fewer LLM calls and 65% fewer input tokens.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01939'>page</a> · <a href='https://arxiv.org/pdf/2610.01939'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Open-sourcing AstaBrief, the fast report-generation model in Asta</title>
-      <link>https://allenai.org/blog/astabrief</link>
-      <guid isPermaLink="false">ai2:d59de4d941</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Allen Institute for AI</p>
-<p><b>Authors:</b> Allen Institute for AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://allenai.org/blog/astabrief'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Language Discrimination Improves Linguistic Learning in Multilingual Speech Models</title>
-      <link>https://machinelearning.apple.com/research/language-discrimination-multilingual-learning</link>
-      <guid isPermaLink="false">apple_ml:be81ec2d11</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Multilingual self-supervised speech models can benefit from sharing information across languages, but under a matched total pretraining data budget they still fall short of monolingual models. We show that strengthening the modelâs ability to discriminate languages during pretraining reduces and, on some measures, closes this multilingual gap on continuous phonetic and higher-level linguistic measures, while preserving substantial cross-language sharing. Using a controlled English/French HuBERT setting, we test two interventions which strengthen language discrimination: an auxiliary languageâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-02 · <a href='https://machinelearning.apple.com/research/language-discrimination-multilingual-learning'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Limits of Confidence in Diffusion</title>
-      <link>https://machinelearning.apple.com/research/limits-confidence-diffusion</link>
-      <guid isPermaLink="false">apple_ml:600d36562e</guid>
-      <pubDate>Sat, 03 Oct 2026 09:35:25 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Discrete diffusion, including remasking and uniform-state samplers, generate a sequence by writing multiple token positions per step, drawing each from a per-position distribution and choosing which positions to write from those same distributions. For domains of general interest (pixels, phonemes, or words) there are inherent dependencies between tokens. We show that a step matches the training distribution only when the positions it writes are conditionally independent given the tokens already fixed, that no product of per-position distributions can match a dependent group, and thatâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-02 · <a href='https://machinelearning.apple.com/research/limits-confidence-diffusion'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>LLM-based Agentic Reasoning Frameworks: A Survey from Methods to Scenarios</title>
-      <link>https://arxiv.org/abs/2508.17692</link>
-      <guid isPermaLink="false">arxiv:2508.17692</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Max Planck, NUS, U Washington — Jun Liu</p>
-<p><b>Authors:</b> Bingxi Zhao, Lin Geng Foo, Ping Hu, Christian Theobalt, Hossein Rahmani, Jun Liu</p>
-<p>Recent advances in LLM-based agents highlight the importance of their reasoning frameworks, which guide the problem-solving process in diverse ways. This survey introduces a unified formal language to systematically categorize these frameworks at three compositional levels: single-agent, tool-based, and multi-agent methods. Following our taxonomy, we review key application scenarios across scientific discovery, healthcare, software engineering, society, economics, and general-purpose tasks. It also compares the distinct features and evaluation strategies of each category. Through our taxonomy and comparisons, our survey explores the designs and strengths of LLM-based agentic frameworks in different scenarios, reviewing the fast-paced development of complex agentic systems in the real world.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://arxiv.org/abs/2508.17692'>page</a> · <a href='https://arxiv.org/pdf/2508.17692'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Moloch&#x27;s Bargain: Emergent Misalignment When LLMs Compete for Audiences</title>
-      <link>https://arxiv.org/abs/2510.06105</link>
-      <guid isPermaLink="false">arxiv:2510.06105</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CY</category>
-      <category>cs.HC</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — James Zou</p>
-<p><b>Authors:</b> Batu El, James Zou</p>
-<p>Large language models (LLMs) are increasingly shaping how information is created and disseminated, from companies using them to craft persuasive advertisements, to election campaigns optimizing messaging to gain votes, to social media influencers boosting engagement. These settings are inherently competitive, with sellers, candidates, and influencers vying for audience approval, yet it remains poorly understood how competitive feedback loops influence LLM behavior. We show that optimizing LLMs for competitive success can inadvertently drive misalignment. Using simulated environments across these scenarios, we find that, 6.3% increase in sales is accompanied by a 14.0% rise in deceptive marketing; in elections, a 4.9% gain in vote share coincides with 22.3% more disinformation and 12.5% more populist rhetoric; and on social media, a 7.5% engagement boost comes with 188.6% more disinformation and a 16.3% increase in promotion of harmful behaviors. We call this phenomenon Moloch&#x27;s Bargain for AI--competitive success achieved at the cost of alignment. These misaligned behaviors emerge even when models are explicitly instructed to remain truthful and grounded, revealing the fragility of current alignment safeguards. Our findings highlight how market-driven optimization pressures can systematically erode alignment, creating a race to the bottom, and suggest that safe deployment of AI systems will require stronger governance and carefully designed incentives to prevent competitive dynamics from undermining societal trust.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CY, cs.HC, cs.LG · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://arxiv.org/abs/2510.06105'>page</a> · <a href='https://arxiv.org/pdf/2510.06105'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Groundability, Not Scale Alone: When Weak Reviewers Can Audit Strong Coding Agents</title>
-      <link>https://arxiv.org/abs/2610.01023</link>
-      <guid isPermaLink="false">arxiv:2610.01023</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.SE</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> UC Berkeley — Javad Lavaei</p>
-<p><b>Authors:</b> Junyu Guo, Shangding Gu, Ming Jin, Javad Lavaei</p>
-<p>Coding agents can return plausible patches that omit required behavior. These failures are hard to review because long traces and confident summaries often hide what was missed. We ask when a nominally weaker reviewer can reliably decide whether a patch solves its issue. We study 411 execution-labeled traces from three agents and 101 controlled cases. On 154 GPT-5.4 traces, structured but unchecked evidence raises both defect catch and over-rejection. We then provide official execution evidence as an upper-bound diagnostic. After choosing and freezing one of two formats per reviewer, five of six reviewers improve both rates on 122 held-out traces; two classify every trace correctly. Reviewer size is not a consistent predictor of quality. Because official tests are unavailable in deployment, we also evaluate a frozen cascade with patch-caused static errors and generated tests that first fail on the unpatched repository. On 121 scored held-out GPT-5.4 traces and 59 Gemini traces, its coverage is 0.89 and 0.86, risk is 0.33 and 0.26, catch is 0.76 and 0.80, and over-rejection is 0.66 and 0.67. Most false rejections occur when unresolved cases reach the reviewer. Official execution evidence shows the potential of weak review when decisive checks are available. Producing equally reliable checks without official tests remains the main bottleneck.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://arxiv.org/abs/2610.01023'>page</a> · <a href='https://arxiv.org/pdf/2610.01023'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Claude-shaped science</title>
-      <link>https://www.anthropic.com/research/claude-shaped-science</link>
-      <guid isPermaLink="false">anthropic:1eadfb1cd5</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Matthew Schwartz describes what happened when he stopped fighting Claude and allowed Claude to find “Claude-shaped” problems. This led him to build BootLoops, a toolkit for exact calculations in quantitative science, which he has been applying across scientific fields alongside experts.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://www.anthropic.com/research/claude-shaped-science'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Better Biosecurity Monitors</title>
-      <link>https://www.goodfire.ai/research/better-biosecurity-monitors</link>
-      <guid isPermaLink="false">goodfire:94e3dd7aa2</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Goodfire</p>
-<p><b>Authors:</b> Goodfire</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://www.goodfire.ai/research/better-biosecurity-monitors'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents</title>
-      <link>https://research.nvidia.com/publication/2026-12_mid-harness-scaling-actions-between-model-and-harness-terminal-agents</link>
-      <guid isPermaLink="false">nvidia_research:a147bb4ded</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> NVIDIA Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-12_mid-harness-scaling-actions-between-model-and-harness-terminal-agents'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention</title>
-      <link>https://research.nvidia.com/publication/2026-12_gated-deltanet-2-decoupling-erase-and-write-linear-attention</link>
-      <guid isPermaLink="false">nvidia_research:52c4a70b17</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> NVIDIA Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-12_gated-deltanet-2-decoupling-erase-and-write-linear-attention'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Generating high-quality Perturb-seq data for the 2026 Virtual Cell Challenge</title>
-      <link>https://arcinstitute.org/news/behind-the-data-virtual-cell-challenge-2026</link>
-      <guid isPermaLink="false">arc_institute:9c7024d765</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>blog</category>
-      <category>biology</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Arc Institute</p>
-<p><b>Authors:</b> Arc Institute</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, biology · <a href='https://arcinstitute.org/news/behind-the-data-virtual-cell-challenge-2026'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States</title>
-      <link>https://huggingface.co/papers/2610.01415</link>
-      <guid isPermaLink="false">arxiv:2610.01415</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yu Luo, Jiamin Jiang, Yimin Zuo, Xidao Wen, Rongchen Gao, Yongqian Sun, Shenglin Zhang, Guiyang Liu, … <i>(+5 more)</i></p>
-<p>Large language model (LLM) agents can now undertake increasingly complex tasks, but the way they organize interaction history into memory does not ensure a coherent understanding of the current world. We introduce PoS, an inference-time framework that constructs and continually maintains explicit belief states as the agent&#x27;s decision context. Each belief combines an estimate of the current world state with unresolved task requirements, making explicit what the agent still needs to learn and accomplish. To keep this belief reliable and actionable, PoS validates its consistency and monitors task progress to detect Belief Trapping, where the agent continues to act without making meaningful progress toward the goal. Recovery is then tailored to both the trapping pattern and the type of unresolved task requirement. Experiments on four benchmarks spanning execution and diagnosis show that PoS achieves the highest overall performance on every benchmark with all three LLM backbones. Ablations demonstrate the importance of consistency validation and recovery, while context-scaling experiments show resilience to context growth. Together, these results support belief construction and continual maintenance as a foundation for long-horizon context management beyond history retention and compression.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01415'>page</a> · <a href='https://arxiv.org/pdf/2610.01415'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Agent Priors-guided Policy Learning</title>
-      <link>https://huggingface.co/papers/2609.35690</link>
-      <guid isPermaLink="false">arxiv:2609.35690</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Puming Jiang, Tianrun Hu, Haozhe Du, Yibo Li, Zhiwei Xue, Xinhu Li, Harold Soh, Hugging Face Daily Papers (curated)</p>
-<p>Robots that learn from a few demonstrations often require two forms of generalization. Compositional generalization recombines skills to solve new tasks, and skill generalization lets the learned policy behind each skill work in new situations. The two depend on each other, yet information is lost between composition and the skills it calls. Where a skill works is determined by the structure its policy is trained with, while composition sees the skill only through a separate description, such as a name, an instruction, or a symbolic operator, that omits this structure. Our key idea is to use each policy&#x27;s structural prior as part of the interface between composition and the skill. A structural prior states what a behavior depends on, for example that a grasp depends only on the gripper&#x27;s pose relative to the object. Built into training, it shapes where the policy generalizes; stated in language, it tells composition where the policy applies. We instantiate this idea in Agent Priors-guided Policy Learning (APPL). A construction agent segments complete demonstrations into reusable skills, proposes several structural priors for each skill, and trains and verifies one policy per prior. A runtime agent then selects among these prior-specific policies and composes them toward new task goals using their interfaces. Across MetaWorld and long-horizon ManiSkill tasks, APPL improves out-of-distribution skill generalization and enables previously unseen skill compositions; ablating the interface information substantially reduces performance. These results support the use of training-time structural assumptions as a bridge between skill learning and skill composition.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.35690'>page</a> · <a href='https://arxiv.org/pdf/2609.35690'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>World Observer: Joint Actor-Observer Generation for Persistent World Modeling</title>
-      <link>https://huggingface.co/papers/2610.02162</link>
-      <guid isPermaLink="false">arxiv:2610.02162</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Hyunwook Choi, Dahyun Chung, Hyunsung Kim, Siyoon Jin, Jinhyeok Choi, Junyoung Seo, Seungryong Kim, Hugging Face Daily Papers (curated)</p>
-<p>How can a world model continuously observe regions beyond the actor&#x27;s current view? Video world models simulate how an environment evolves from an agent&#x27;s actions, yet remain actor-centric. Once an object leaves the actor&#x27;s view, they lose direct evidence of its evolution, often failing to preserve its state and dynamics upon re-entry. To address this, we introduce World Observer, which decouples observing from acting by jointly generating a perspective actor for the agent-centric view with one or more panoramic observers that watch selected world regions. This allows objects that leave the actor&#x27;s view to remain visually evolving in an observer, so their updated states are reflected when they re-enter. We ground the actor and observers by warping from a shared panoramic source for explicit geometric correspondence, and introduce an Observer Sink of high-resolution perspective references to restore fine appearance upon re-entry. Since the observers are decoupled from the actor, they can be placed freely across the scene, extended to multiple locations for broader coverage, and driven by control signals to steer out-of-view evolution. To evaluate out-of-view evolution, we further introduce world-space metrics and a benchmark spanning real and synthetic scenes. World Observer substantially improves out-of-view dynamics while remaining competitive in visual fidelity, camera control, and 3D adherence.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.02162'>page</a> · <a href='https://arxiv.org/pdf/2610.02162'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>A Missing Piece for Trustworthy AI Reviewers: From Benchmarking Rhetorical Robustness to SciCore Review</title>
-      <link>https://huggingface.co/papers/2609.39027</link>
-      <guid isPermaLink="false">arxiv:2609.39027</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Chenguang Wang, Ming Li, Chengrui Fan, Jianpeng Chen, Han Chen, Tianyi Zhou, Dawei Zhou, Hugging Face Daily Papers (curated)</p>
-<p>AI reviewers can assign different judgments to manuscripts that report the same science in different wording, potentially rewarding rhetorical optimization over scientific improvement. We formulate Rhetorical Robustness as the joint requirement of stability across content-preserving rewrites and discrimination across papers. We introduce RobustReview, a controlled full-manuscript benchmark with 1,260 manuscript versions, and evaluate 30 reviewer configurations. The benchmark reveals false robustness, where low rewrite sensitivity coincides with score collapse across papers, and shows that human alignment and rhetorical robustness rank reviewers differently. Moreover, the evaluated content-focused prompting protocol does not consistently improve robustness across backbones. Motivated by these findings, we introduce SciCore, a dual-branch reviewer that averages a full-manuscript judgment with a judgment based on an extracted, structured science core. This design combines manuscript-level assessment with a content-normalized view intended to reduce rhetorical sensitivity. In our primary GPT-5.5 comparison, SciCore achieves a leading joint stability-discrimination profile among the benchmarked reviewers while maintaining competitive human alignment. These results identify rhetorical robustness as a distinct evaluation target and demonstrate the potential of science-core review to improve it.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://huggingface.co/papers/2609.39027'>page</a> · <a href='https://arxiv.org/pdf/2609.39027'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Sharpening Tax in Post-Training</title>
-      <link>https://huggingface.co/papers/2610.01509</link>
-      <guid isPermaLink="false">arxiv:2610.01509</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Changdae Oh, Qi Zeng, Qi Qi, Andrey Zhmoginov, Deren Lei, Yun He, Hoang Phan, Hangoo Kang, … <i>(+3 more)</i></p>
-<p>An emerging hypothesis about reinforcement learning (RL) post-training of large language models (LLMs) is that it merely sharpens existing behaviors of a base model, improving single-shot accuracy at the cost of solution coverage. Although this trade-off has been observed in math and coding tasks, it need not extend to agentic tasks, where multi-turn tool use and interaction may require capabilities newly acquired during post-training. Our surprising finding is that pre-trained LLMs, equipped with a light inference harness, can serve as capable agents. Despite far lower accuracy (pass@1), they often surpass their post-trained counterparts in solution coverage (pass@K) given a sufficient test-time budget. We further analyze the underlying mechanism and show that post-training pushes tasks toward two extremes, always solved or never solved, and thereby improves sampling efficiency and consistency at the cost of solution coverage. To measure this cost, we propose Sharpening Tax, a diagnostic metric that quantifies the loss in test-time scalability after post-training. Across 14 base/post-trained model pairs from four families and three agentic benchmarks (42 cases in total), the tax is prevalent in most settings, can be estimated from a few rollouts, and correlates well with other metrics. Finally, we present posterior-tempered group sampling (PTGS), a simple plug-and-play Bayesian sampler that adapts the sampling temperature per prompt to its estimated difficulty. Applied during RL training in two agentic environments, PTGS pays a smaller tax than the fixed-temperature baseline, solving more tasks under repeated sampling while also improving single-shot accuracy.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01509'>page</a> · <a href='https://arxiv.org/pdf/2610.01509'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

@@ -5,8 +5,20 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Thu, 15 Oct 2026 08:44:55 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 08:39:21 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>UniFGVC: Universal Training-Free Few-Shot Fine-Grained Vision Classification via Attribute-Aware Multimodal Retrieval</title>
+      <link>https://arxiv.org/abs/2508.04136</link>
+      <guid isPermaLink="false">arxiv:2508.04136</guid>
+      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech, NUS — Tat-Seng Chua</p>
+<p><b>Authors:</b> Haiyun Guo, Hongyu Guo, Xiangzhao Hao, Jiarui Guo, Jinqiao Wang, Tat-Seng Chua</p>
+<p>Few-shot fine-grained visual classification (FGVC) aims to discriminate between subtly different categories with very limited data. While Multimodal Large Language Models (MLLM) exhibit strong capabilities in both fine-grained visual understanding and open-world category recognition, directly fine-tuning them on few-shot FGVC tasks typically leads to overfitting on sparse samples, which erodes their valuable open-world knowledge and compromises generalization. To fundamentally overcome this limitation, we present UniFGVC, a universal training-free framework that shifts the paradigm from parameter fine-tuning to training-free retrieval-based inference. UniFGVC reframes few-shot FGVC as a multimodal retrieval problem using predefined category templates. Its core is the Category-Discriminative Visual Captioner (CDV-Captioner), an attribute-aware module designed to leverage MLLM for generating structured textual descriptions that explicitly pinpoint discriminative visual attributes between similar classes. By integrating chain-of-thought reasoning and visual references, CDV-Captioner mitigates hallucination and maximizes the discriminative power of textual captions, thereby converting images into attribute-enriched image-description pairs. Subsequently, utilizing arbitrary pre-trained visual and textual encoders in a plug-and-play manner, UniFGVC extracts features from both modalities and computes their similarity with all category templates for recognition. Extensive experiments on 12 FGVC datasets demonstrate UniFGVC&#x27;s universal compatibility and consistent superiority. It not only outperforms existing few-shot CLIP-based methods but also surpasses several fully-supervised MLLM-based approaches, confirming the general advantage of the proposed retrieval paradigm.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://arxiv.org/abs/2508.04136'>page</a> · <a href='https://arxiv.org/pdf/2508.04136'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Video Depth Anything: Consistent Depth Estimation for Super-Long Videos</title>
       <link>https://arxiv.org/abs/2501.12375</link>
@@ -2559,18 +2571,6 @@
 <p><b>Authors:</b> Mohammad Sadegh Salehi, Alex Perkins, Igor Maurell, Ashkan Dabbagh, Raymond Wong</p>
 <p>Web-scale 3D asset collections are abundant but rarely deployment-ready, suffering from arbitrary metric scaling, incorrect pivots, brittle geometry, and incomplete textures, defects that limit their use in embodied AI, robotics, and spatial computing. We present AmaraSpatial-10K, a dataset of over 10,000 synthetic 3D assets optimised for zero-shot deployment. Each asset ships as a metric-scaled, deterministically anchored .glb with separated PBR maps, a convex collision hull, a paired reference image, and multi-sentence text metadata. Alongside the dataset we introduce a reusable evaluation suite for 3D asset banks, a continuous Scale Plausibility Score (SPS), an LLM Concept Density metric, anchor-error auditing, and a cross-modal CLIP coherence protocol, and apply it to AmaraSpatial-10K alongside matched subsets of Objaverse, HSSD, ABO, and GSO. AmaraSpatial-10K improves CLIP Recall@5 by $3.4\times$ over Objaverse ($0.612$ vs. $0.181$, median rank $267 \rightarrow 3$), achieves a $99.1\%$ physics-stability rate under Habitat-Sim with $\sim 20\times$ wall-time speed-up, and produces zero-overlap scenes when used as a drop-in asset bank for Holodeck. Controlled ablations on the same asset bank attribute the retrieval gain to description richness.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2604.23018'>page</a> · <a href='https://arxiv.org/pdf/2604.23018'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>COHERENCE: Benchmarking Fine-Grained Image-Text Alignment in Interleaved Multimodal Contexts</title>
-      <link>https://arxiv.org/abs/2604.27389</link>
-      <guid isPermaLink="false">arxiv:2604.27389</guid>
-      <pubDate>Mon, 18 May 2026 14:27:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> NYU — (senior)</p>
-<p><b>Authors:</b> Bingli Wang, Huanze Tang, Haijun Lv, Zhishan Lin, Lixin Gu, Lei Feng, Qipeng Guo, Kai Chen</p>
-<p>In recent years, Multimodal Large Language Models (MLLMs) have achieved remarkable progress on a wide range of multimodal benchmarks. Despite these advances, most existing benchmarks mainly focus on single-image or multi-image comprehension. In real-world scenarios such as document reading, information is often presented as interleaved multimodel contexts. This requires MLLMs not only to recognize the content of individual images, but also to identify relevant textual and visual evidence, establish fine-grained alignments between them, and reason over these aligned signals in interleaved contexts based on contextual evidence. However, there is still a lack of systematic benchmarks for quantifying the fine-grained understanding ability of MLLMs in interleaved image-text contexts. To fill this gap, we propose COHERENCE, a benchmark designed to evaluate the ability of MLLMs to recover fine-grained image-text correspondences in interleaved multimodal contexts. COHERENCE covers interleaved image-text content from four representative domains and contains 6,161 high-quality questions. Moreover, we perform a six-type error analysis, enabling fine-grained attribution of failures in interleaved image-text understanding to the specific capabilities missing in current MLLMs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2604.27389'>page</a> · <a href='https://arxiv.org/pdf/2604.27389'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
