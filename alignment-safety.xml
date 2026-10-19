@@ -5,8 +5,68 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 18 Oct 2026 08:27:28 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 09:29:16 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>GVPO: Group Variance Policy Optimization for Large Language Model Post-Training</title>
+      <link>https://arxiv.org/abs/2504.19599</link>
+      <guid isPermaLink="false">arxiv:2504.19599</guid>
+      <pubDate>Mon, 19 Oct 2026 09:29:16 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI · <b>Tier-2 senior:</b> HKUST — (senior)</p>
+<p><b>Authors:</b> Kaichen Zhang, Yuzhong Hong, Junwei Bao, Hongfei Jiang, Yang Song, Dingqian Hong, Hui Xiong</p>
+<p>Post-training plays a crucial role in refining and aligning large language models to meet specific tasks and human preferences. While recent advancements in post-training techniques, such as Group Relative Policy Optimization (GRPO), leverage increased sampling with relative reward scoring to achieve superior performance, these methods often suffer from training instability that limits their practical adoption. As a next step, we present Group Variance Policy Optimization (GVPO). GVPO incorporates the analytical solution to KL-constrained reward maximization directly into its gradient weights, ensuring alignment with the optimal policy. The method provides intuitive physical interpretations: its gradient mirrors the mean squared error between the central distance of implicit rewards and that of actual rewards. GVPO offers two key advantages: (1) it guarantees a unique optimal solution, exactly the KL-constrained reward maximization objective, (2) it supports flexible sampling distributions that avoids on-policy and importance sampling limitations. By unifying theoretical guarantees with practical adaptability, GVPO establishes a new paradigm for reliable and versatile LLM post-training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-16 · <a href='https://arxiv.org/abs/2504.19599'>page</a> · <a href='https://arxiv.org/pdf/2504.19599'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Two Minds Better Than One: Collaborative Reward Modeling for LLM Alignment</title>
+      <link>https://arxiv.org/abs/2505.10597</link>
+      <guid isPermaLink="false">arxiv:2505.10597</guid>
+      <pubDate>Mon, 19 Oct 2026 09:29:16 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab</p>
+<p><b>Authors:</b> Jiazheng Zhang, Wenqing Jing, Zizhuo Zhang, Zhiheng Xi, Shihan Dou, Rongxiang Weng, Jiahuan Li, Jingang Wang, … <i>(+7 more)</i></p>
+<p>Reward models (RMs) are central to aligning large language models (LLMs) with human values, yet noisy preference feedback can induce reward misgeneralization through spurious correlations and overfitting. We characterize the training dynamics of preference pairs and uncover a distinctive optimization signature of noise: persistently high losses, sharp temporal fluctuations, and irregular gradient updates. Our analyses further show that excluding such pairs improves downstream alignment. In practice, however, reliable preferences are not known a priori, and self-filtering based on a model&#x27;s own training signals can amplify confirmation bias. To address this challenge, we introduce Collaborative Reward Modeling (CRM), an online framework for identifying reliable preferences. CRM couples cross-model peer review with curriculum learning: two RMs evaluate each other&#x27;s sample selections, while curriculum keeps their learning progress synchronized. Across extensive experiments, CRM improves RM generalization by up to 9.94 points on RewardBench under 40% preference noise. CRM further generalizes to implicit-reward alignment, offering a robust and broadly applicable approach to learning from imperfect feedback.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-16 · <a href='https://arxiv.org/abs/2505.10597'>page</a> · <a href='https://arxiv.org/pdf/2505.10597'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Safety Alignment via Constrained Knowledge Unlearning</title>
+      <link>https://arxiv.org/abs/2505.18588</link>
+      <guid isPermaLink="false">arxiv:2505.18588</guid>
+      <pubDate>Mon, 19 Oct 2026 09:29:16 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua, UC Berkeley — Jing Li</p>
+<p><b>Authors:</b> Zesheng Shi, Yucheng Zhou, Jing Li</p>
+<p>Despite significant progress in safety alignment, large language models (LLMs) remain susceptible to jailbreak attacks. Existing defense mechanisms have not fully deleted harmful knowledge in LLMs, which allows such attacks to bypass safeguards and produce harmful outputs. To address this challenge, we propose a novel safety alignment strategy, Constrained Knowledge Unlearning (CKU), which focuses on two primary objectives: knowledge localization and retention, and unlearning harmful knowledge. CKU works by scoring neurons in specific multilayer perceptron (MLP) layers to identify a subset U of neurons associated with useful knowledge. During the unlearning process, CKU prunes the gradients of neurons in U to preserve valuable knowledge while effectively mitigating harmful content. Experimental results demonstrate that CKU significantly enhances model safety without compromising overall performance, offering a superior balance between safety and utility compared to existing methods. Additionally, our analysis of neuron knowledge sensitivity across various MLP layers provides valuable insights into the mechanics of safety alignment and model knowledge editing.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-10-16 · <a href='https://arxiv.org/abs/2505.18588'>page</a> · <a href='https://arxiv.org/pdf/2505.18588'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PRIME: Towards Verifiable Evidence-Grounded Reasoning in LLM Agents</title>
+      <link>https://arxiv.org/abs/2610.22426</link>
+      <guid isPermaLink="false">arxiv:2610.22426</guid>
+      <pubDate>Mon, 19 Oct 2026 09:29:16 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Xiaoming Huo</p>
+<p><b>Authors:</b> Hamed Khosravi, Xiaoming Huo</p>
+<p>LLM agents are used to check records against an organization&#x27;s requirements, for example whether a vulnerability report is ready for investigation. Requirements often allow several ways to be met, such as a severity rating with a curator-reviewed advisory or a published advisory link. Agents fail by accepting a report after a required check has failed, or by settling for a weaker conclusion without trying another way that could still succeed. We introduce PRIME (Precommitted Rules for Inference from Minimal Evidence). Before checking, it fixes evidence routes specifying how each conclusion may be justified. A separate program records each check result and refuses any conclusion the results do not justify. It also points the agent to checks that could justify a stronger conclusion, or runs them itself. PRIME reports only conclusions authorized by its rules and ledger. With correct requirements, exact checks at known locations, and sufficient budget at stopping, completion reaches the strongest supported conclusion. On 480 public-record tasks, an agent shown the requirements reported unjustified conclusions on 26.7% of tasks, while PRIME reported none. Its directions and added checks raised the average score for justified conclusions from 30.1, with refusal alone, to the maximum of 59.2 out of 100.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://arxiv.org/abs/2610.22426'>page</a> · <a href='https://arxiv.org/pdf/2610.22426'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Agentic In-Context Learning: What Algorithms Can Transformers Learn in Closed-Loop Interaction?</title>
+      <link>https://arxiv.org/abs/2610.23051</link>
+      <guid isPermaLink="false">arxiv:2610.23051</guid>
+      <pubDate>Mon, 19 Oct 2026 09:29:16 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Tsinghua — Quanming Yao</p>
+<p><b>Authors:</b> Shiguang Wu, Yaqing Wang, Quanming Yao</p>
+<p>The learning algorithm view of in-context learning (ICL) studies how fixed-parameter Transformers learn from supplied examples. Language model agents extend this setting through interaction: their actions determine what evidence enters context next. We call this regime Agentic In-Context Learning (Agentic ICL). Existing studies largely depend on externally supplied contexts or reward-bearing interaction histories, while work on general tool-using agents lacks a learning algorithm view. We represent an interactive learner by its state, update, and decision rule, covering active learning, bandits, and online reinforcement learning (RL). For expressivity, we construct causal Transformers that approximate these algorithms over a finite horizon, and bound the resulting loss in return. For training, we characterize when optimizing process rewards preserves behavior that maximizes the final outcome. Distillation experiments show that Transformers can learn to execute three representative recursions. We then train models from outcome or process rewards without oracle action or state targets, as in RL post-training. Different rewards yield distinct decision policies. Improving the alignment of process supervision with outcome-optimal action preferences shifts learned decisions accordingly. Such behavioral differences persist in a pretrained language model across textual paraphrases.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-16 · <a href='https://arxiv.org/abs/2610.23051'>page</a> · <a href='https://arxiv.org/pdf/2610.23051'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Designing more efficient quantum circuits with Claude</title>
       <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
@@ -2283,72 +2343,6 @@
 <p><b>Authors:</b> Viktor Kewenig, Andrew Lampinen, Samuel A. Nastase, Christopher Edwards, Quitterie Lacome D&#x27;Elascombe, Akilles Rechardt, Jeremy I Skipper, Gabriella Vigliocco</p>
 <p>Humans routinely draw on visual context to predict upcoming words. To what extent current vision-language models produce comparable behaviour is unclear. Here we placed five state-of-the-art pretrained systems side-by-side with 600 human participants in a web-based Visual-World Paradigm. On each of 100 six-second movie clips, models and participants received either text only or synchronised video and text and judged how likely a specified target word was to appear next; human eye movements were tracked throughout. Adding visual context increased model-human alignment in predictability ratings across all architectures (average Delta r = 0.18) with no impact of parameter size. When visual context was informative, transformer attention significantly increased alignment. Attention maps from two transformer models corresponded with human gaze, explaining up to 70% of the inter-participant variance when the scene contained informative cues. Notably, cross-modal attention reliably tracked anticipatory human fixations on semantic cues. These results suggest that current transformer-based vision-language models can approximate human behaviour exploiting visual context during language prediction - and that selective attention to informative cues, not sheer model scale, is the principal driver of this alignment.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-13 · <a href='https://arxiv.org/abs/2308.06035'>page</a> · <a href='https://arxiv.org/pdf/2308.06035'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>FOUNDv2: Learning Unified User Quantized Tokenizers for User Representation</title>
-      <link>https://arxiv.org/abs/2508.00956</link>
-      <guid isPermaLink="false">arxiv:2508.00956</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.IR</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> NUS — (senior)</p>
-<p><b>Authors:</b> Chuan He, Yang Chen, Bin Dou, Wuliang Huang, Baokun Wang, Yongchao Liu, Xing Fu, Yu Cheng, … <i>(+5 more)</i></p>
-<p>User representation learning serves as a fundamental pillar for personalized services on large-scale web platforms. Despite its importance, conventional continuous embedding methods face significant challenges, including the lack of a unified paradigm for multi-source data integration, prohibitive storage overhead due to low information density, and the lack of multi-scale modeling granularity. To overcome these limitations, we introduce FOUNDv2, a comprehensive user representation scheme centered on the Unified User Quantized Tokenizer U2QT) framework. FOUNDv2 transforms heterogeneous user data into a standardized discrete token space through a robust two-stage architecture. Specifically, the framework first extracts compact feature representations and subsequently employs a multi-view RQ-VAE to discretize them into storage-efficient tokens using shared and source-specific codebooks. To empower these representations with predictive intelligence, we further design multi-scale alignment objectives to capture both fine-grained behavioral dependencies and macro-temporal periodicity. Extensive experiments on various benchmarks demonstrate that FOUNDv2 consistently outperforms task-specific baselines while achieving substantial reductions in storage and computational costs. Finally, the large-scale deployment of FOUNDv2 on Alipay validates its practical scalability and efficiency across diverse industrial scenarios. The main code is available at: https://github.com/chuanhe1999/FOUNDv2.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.IR · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2508.00956'>page</a> · <a href='https://arxiv.org/pdf/2508.00956'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond Rebalancing: Benchmarking Binary Classifiers Under Class Imbalance Without Rebalancing Techniques</title>
-      <link>https://arxiv.org/abs/2509.07605</link>
-      <guid isPermaLink="false">arxiv:2509.07605</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.IT</category>
-      <category>math.IT</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Toronto — Shehroz S. Khan</p>
-<p><b>Authors:</b> Ali Nawaz, Amir Ahmad, Shehroz S. Khan</p>
-<p>Class imbalance poses a significant challenge to supervised classification, particularly in critical domains like medical diagnostics and anomaly detection where minority class instances are rare. While numerous studies have explored rebalancing techniques to address this issue, less attention has been given to evaluating the performance of binary classifiers under imbalance when no such techniques are applied. Therefore, the goal of this study is to assess the performance of binary classifiers &quot;as-is&quot;, without performing any explicit rebalancing. Specifically, we systematically evaluate the robustness of a diverse set of binary classifiers across both real-world and synthetic datasets, under progressively reduced minority class sizes, using one-shot and few-shot scenarios as baselines. Our approach also explores varying data complexities through synthetic decision boundary generation to simulate real-world conditions. In addition to standard classifiers, we include experiments using undersampling, oversampling strategies, and one-class classification (OCC) methods to examine their behavior under severe imbalance. The results confirm that classification becomes more difficult as data complexity increases and the minority class size decreases. While traditional classifiers deteriorate under extreme imbalance, advanced models like TabPFN and boosting-based ensembles retain relatively higher performance and better generalization compared to traditional classifiers. Visual interpretability and evaluation metrics further validate these findings. Our work offers valuable guidance on model selection for imbalanced learning, providing insights into classifier robustness without dependence on explicit rebalancing techniques.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.IT, math.IT · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2509.07605'>page</a> · <a href='https://arxiv.org/pdf/2509.07605'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Safe Exploration via Policy Priors</title>
-      <link>https://arxiv.org/abs/2601.19612</link>
-      <guid isPermaLink="false">arxiv:2601.19612</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Andreas Krause</p>
-<p><b>Authors:</b> Manuel Wendl, Yarden As, Manish Prajapat, Anton Pollak, Stelian Coros, Andreas Krause</p>
-<p>Safe exploration is a key requirement for reinforcement learning (RL) agents to learn and adapt online, beyond controlled (e.g. simulated) environments. In this work, we tackle this challenge by utilizing suboptimal yet conservative policies (e.g., obtained from offline data or simulators) as priors. Our approach, SOOPER, uses probabilistic dynamics models to optimistically explore, yet pessimistically fall back to the conservative policy prior if needed. We prove that SOOPER guarantees safety throughout learning, and establish convergence to an optimal policy by bounding its cumulative regret. Extensive experiments on key safe RL benchmarks and real-world hardware demonstrate that SOOPER is scalable, outperforms the state-of-the-art and validate our theoretical guarantees in practice.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.RO · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2601.19612'>page</a> · <a href='https://arxiv.org/pdf/2601.19612'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RoTRAG: Rule of Thumb Reasoning for Conversation Harm Detection with Retrieval-Augmented Generation</title>
-      <link>https://arxiv.org/abs/2604.17301</link>
-      <guid isPermaLink="false">arxiv:2604.17301</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.HC</category>
-      <category>cs.IR</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yi Bu</p>
-<p><b>Authors:</b> Juhyeon Lee, Wonduk Seo, Junseo Koh, Seunghyun Lee, Haihua Chen, Yi Bu</p>
-<p>Detecting harmful content in multi turn dialogue requires reasoning over the full conversational context rather than isolated utterances. However, most existing methods rely mainly on models internal parametric knowledge, without explicit grounding in external normative principles. This often leads to inconsistent judgments in socially nuanced contexts, limited interpretability, and redundant reasoning across turns. To address this, we propose RoTRAG, a retrieval augmented framework that incorporates concise human written moral norms, called Rules of Thumb (RoTs), into LLM based harm assessment. For each turn, RoTRAG retrieves relevant RoTs from an external corpus and uses them as explicit normative evidence for turn level reasoning and final severity classification. To improve efficiency, we further introduce a lightweight binary routing classifier that decides whether a new turn requires retrieval grounded reasoning or can reuse existing context. Experiments on ProsocialDialog and Safety Reasoning Multi Turn Dialogue show that RoTRAG consistently improves both harm classification and severity estimation over competitive baselines, with an average relative gain of around 40% in F1 across benchmark datasets and an average relative reduction of 8.4% in distributional error, while reducing redundant computation without sacrificing performance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.HC, cs.IR, cs.LG · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://arxiv.org/abs/2604.17301'>page</a> · <a href='https://arxiv.org/pdf/2604.17301'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DreamX-World 1.0: A General-Purpose Interactive World Model</title>
-      <link>https://huggingface.co/papers/2606.16993</link>
-      <guid isPermaLink="false">arxiv:2606.16993</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> DreamX Team, Yancheng Bai, Rui Chen, Xiangxiang Chu, Rujing Dang, Hao Dou, Bingjie Gao, Qiwen Gu, … <i>(+16 more)</i></p>
-<p>DreamX-World 1.0 is a general-purpose interactive text/image-to-video world model for controllable long-horizon generation. It supports camera navigation, revisits to previously observed regions, and promptable events across photorealistic, game-style, and stylized domains. Our data engine combines camera-accurate Unreal Engine rendering, action-rich gameplay recordings, and real-world videos with recovered camera geometry. For camera control, we introduce E-PRoPE, a lightweight variant of projective positional encoding that retains PRoPE&#x27;s projective camera geometry while applying camera-aware attention to spatially reduced tokens. We convert a bidirectional video generator into a few-step autoregressive world model using causal forcing, DMD-style distillation, and long-rollout training. Training on self-generated long-horizon contexts exposes the model to its own generated history and reduces the style and color drift that accumulates across autoregressive chunks. Memory-Conditioned Scene Persistence retrieves earlier views through camera-geometry-based retrieval, while residual recycling makes the conditioning path less sensitive to imperfect memory latents. Event Instruction Tuning adds composable event control, and reinforcement learning alignment recovers camera control and visual quality after distillation. With mixed-precision DiT execution, residual reuse, 75\%-pruned VAE decoding, and asynchronous pipeline parallelism, DreamX-World 1.0 reaches up to 16\,FPS on eight RTX\,5090 GPUs. On our 5-second basic evaluation, DreamX-World 1.0 achieves a camera-control score of 73.75 and an overall score of 84.76, outperforming HY-WorldPlay 1.5 and LingBot-World in overall score, which achieve 80.79 and 80.45, respectively.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-15 · <a href='https://huggingface.co/papers/2606.16993'>page</a> · <a href='https://arxiv.org/pdf/2606.16993'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
