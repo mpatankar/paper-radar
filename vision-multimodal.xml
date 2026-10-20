@@ -5,8 +5,47 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Mon, 19 Oct 2026 09:29:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 09:02:58 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>A Generalist Model for Diverse Text-Guided Medical Image Synthesis</title>
+      <link>https://arxiv.org/abs/2405.09806</link>
+      <guid isPermaLink="false">arxiv:2405.09806</guid>
+      <pubDate>Tue, 20 Oct 2026 09:02:58 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Joseph Cho</p>
+<p><b>Authors:</b> Joseph Cho, Mrudang Mathur, Cyril Zakka, Dhamanpreet Kaur, Matthew Leipzig, Alex Dalal, Aravind Krishnan, Eubee Koo, … <i>(+10 more)</i></p>
+<p>Deep learning algorithms require extensive data to achieve robust performance. However, data availability is often restricted in the medical domain due to patient privacy concerns. Synthetic data presents a possible solution to these challenges. Image generative models have found increasing use for medical applications, but are often task-specific, thus limiting their scalability. Moreover, existing models frequently rely on private datasets for training, which constrain their reproducibility. To address this, we introduce MediSyn: an open-access, generalist, text-guided latent diffusion model capable of generating synthetic images across 6 medical specialties and 10 imaging modalities, while being trained exclusively on publicly available data. Through extensive experimentation, we provide several key contributions. First, we demonstrate that training a generative model on visually diverse medical images does not degrade synthetic image quality. Second, we show that this generalist approach is substantially more computationally efficient than a coordinated suite of task-specific models. Third, we establish that a generalist model can produce realistic, text-aligned synthetic images across visually and medically distinct modalities, as validated by expert physicians. Fourth, we provide empirical evidence that these synthetic images are visually distinct from their corresponding real patient images, alleviating concerns about data memorization in image generative models. Finally, we demonstrate that a generalist model can produce synthetic images that improve classifier performance in data-limited settings across multiple medical specialties. Altogether, our findings highlight the immense potential of generalist image generative models to accelerate algorithmic research and development in medicine.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL, cs.LG · <b>arXiv submitted:</b> 2026-04-21 · <a href='https://arxiv.org/abs/2405.09806'>page</a> · <a href='https://arxiv.org/pdf/2405.09806'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>GaussTrap: Stealthy Backdoor Attacks on 3D Gaussian Splatting for Targeted Scene Misperception</title>
+      <link>https://arxiv.org/abs/2504.20829</link>
+      <guid isPermaLink="false">arxiv:2504.20829</guid>
+      <pubDate>Tue, 20 Oct 2026 09:02:58 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Jiawei Li</p>
+<p><b>Authors:</b> Jiaxin Hong, Sixu Chen, Shuoyang Sun, Hongyao Yu, Hao Fang, Yuxin Peng, Bin Chen, Jiawei Li</p>
+<p>3D Gaussian Splatting (3DGS) has recently emerged as a powerful paradigm for real-time scene representation and novel view synthesis, gaining traction in safety-critical applications such as autonomous driving and AR/VR systems. However, the security vulnerabilities of 3DGS remain largely unexplored. In this paper, we conduct a comprehensive study of backdoor threats in 3DGS pipelines. We uncover an inherent security vulnerability in the adaptive density control mechanism of 3DGS, originally designed for detailed reconstruction, which enables attackers to induce localized gaussian proliferation, effectively embedding malicious backdoors into the scene geometry while remaining invisible from other viewpoints. To expose this threat, we propose GaussTrap, a novel stealthy poisoning framework tailored for 3DGS. GaussTrap operates in three stages (adversarial injection, geometric stabilization, and global fidelity restoration) to embed imperceptible yet adversarial Gaussian components into the reconstruction. It ensures consistent poisoning effects at specific viewpoints while preserving photorealism in benign views, thereby achieving high attack efficacy with low detectability. Extensive experiments on both synthetic and real-world benchmarks demonstrate that GaussTrap reliably induces targeted visual corruption under trigger conditions while maintaining high rendering fidelity elsewhere, highlighting a critical security blind spot in modern 3D rendering systems. The code is available at https://github.com/acang425/GaussTrap.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://arxiv.org/abs/2504.20829'>page</a> · <a href='https://arxiv.org/pdf/2504.20829'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>To Trust Or Not To Trust Your Vision-Language Model&#x27;s Prediction</title>
+      <link>https://arxiv.org/abs/2505.23745</link>
+      <guid isPermaLink="false">arxiv:2505.23745</guid>
+      <pubDate>Tue, 20 Oct 2026 09:02:58 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich, TU Munich — Hao Dong</p>
+<p><b>Authors:</b> Hao Dong, Moru Liu, Jian Liang, Eleni Chatzi, Olga Fink</p>
+<p>Vision-Language Models (VLMs) have demonstrated strong capabilities in aligning visual and textual modalities, enabling a wide range of applications in multimodal understanding and generation. While they excel in zero-shot and transfer learning scenarios, VLMs remain susceptible to misclassification, often yielding confident yet incorrect predictions. This limitation poses a significant risk in safety-critical domains, where erroneous predictions can lead to severe consequences. In this work, we introduce TrustVLM, a training-free framework designed to address the critical challenge of estimating when VLM&#x27;s predictions can be trusted. Motivated by the observed modality gap in VLMs and the insight that certain concepts are more distinctly represented in the image embedding space, we propose a novel confidence-scoring function that leverages this space to improve misclassification detection. We rigorously evaluate our approach across 17 diverse datasets, employing 4 architectures and 2 VLMs, and demonstrate state-of-the-art performance, with improvements of up to 51.87% in AURC, 9.14% in AUROC, and 32.42% in FPR95 compared to existing baselines. By improving the reliability of the model without requiring retraining, TrustVLM paves the way for safer deployment of VLMs in real-world applications. The code is available at https://github.com/EPFL-IMOS/TrustVLM.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-16 · <a href='https://arxiv.org/abs/2505.23745'>page</a> · <a href='https://arxiv.org/pdf/2505.23745'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>UniFGVC: Universal Training-Free Few-Shot Fine-Grained Vision Classification via Attribute-Aware Multimodal Retrieval</title>
       <link>https://arxiv.org/abs/2508.04136</link>
@@ -2533,44 +2572,6 @@
 <p><b>Authors:</b> Valentin Gabeur, Shangbang Long, Songyou Peng, Paul Voigtlaender, Shuyang Sun, Yanan Bao, Karen Truong, Zhicheng Wang, … <i>(+17 more)</i></p>
 <p>Recent works show that image and video generators exhibit zero-shot visual understanding behaviors, in a way reminiscent of how LLMs develop emergent capabilities of language understanding and reasoning from generative pretraining. While it has long been conjectured that the ability to create visual content implies an ability to understand it, there has been limited evidence that generative vision models have developed strong understanding capabilities. In this work, we demonstrate that image generation training serves a role similar to LLM pretraining, and lets models learn powerful and general visual representations that enable SOTA performance on various vision tasks. We introduce Vision Banana, a generalist model built by instruction-tuning Nano Banana Pro (NBP) on a mixture of its original training data alongside a small amount of vision task data. By parameterizing the output space of vision tasks as RGB images, we seamlessly reframe perception as image generation. Our generalist model, Vision Banana, achieves SOTA results on a variety of vision tasks involving both 2D and 3D understanding, beating or rivaling zero-shot domain-specialists, including Segment Anything Model 3 on segmentation tasks, and the Depth Anything series on metric depth estimation. We show that these results can be achieved with lightweight instruction-tuning without sacrificing the base model&#x27;s image generation capabilities. The superior results suggest that image generation pretraining is a generalist vision learner. It also shows that image generation serves as a unified and universal interface for vision tasks, similar to text generation&#x27;s role in language understanding and reasoning. We could be witnessing a major paradigm shift for computer vision, where generative vision pretraining takes a central role in building Foundational Vision Models for both generation and understanding.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2604.20329'>page</a> · <a href='https://arxiv.org/pdf/2604.20329'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Aligning Forest and Trees in Images &amp; Long Captions for Visually Grounded Understanding</title>
-      <link>https://arxiv.org/abs/2602.02977</link>
-      <guid isPermaLink="false">arxiv:2602.02977</guid>
-      <pubDate>Mon, 18 May 2026 14:42:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Michigan — Stella X. Yu</p>
-<p><b>Authors:</b> Byeongju Woo, Zilin Wang, Byeonghyun Pak, Sangwoo Mo, Stella X. Yu</p>
-<p>Vision-language models such as CLIP often struggle to faithfully understand long, detail-rich captions, relying on dominant scene cues while overlooking fine-grained visual evidence. We propose a hierarchical vision-language learning principle for understanding scenes as part-to-whole compositions: before forming a whole-scene representation, a model should uncover what semantic parts appear where in the image. To this end, we propose CAFT (Cross-domain Alignment of Forests and Trees), a vision-language model that jointly learns local text-region alignment at intermediate representations and global image-text alignment at the final representation. Exploiting the organization of long captions, where local descriptions often correspond to scene parts, CAFT employs a fine-to-coarse image encoder and a part-whole text encoder to discover localized part semantics and progressively compose them into a global image-text representation. Trained on 30M image-text pairs, CAFT achieves state-of-the-art performance on six long-text retrieval benchmarks and exhibits strong scaling behavior. Experiments show that CAFT learns fine-grained representations that localize textual semantics in image regions without explicit region-level supervision.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2602.02977'>page</a> · <a href='https://arxiv.org/pdf/2602.02977'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Skill-Conditioned Visual Geolocation for Vision-Language Models</title>
-      <link>https://arxiv.org/abs/2604.09025</link>
-      <guid isPermaLink="false">arxiv:2604.09025</guid>
-      <pubDate>Mon, 18 May 2026 14:37:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Chenjie Yang</p>
-<p><b>Authors:</b> Chenjie Yang, Yutian Jiang, Yutong Deng, Chenyu Wu</p>
-<p>Vision-language models (VLMs) have shown a promising ability in image geolocation, but they still lack structured geographic reasoning and the capacity for autonomous self-evolution. Existing methods predominantly rely on implicit parametric memory, which often exploits outdated knowledge and generates hallucinated reasoning. Furthermore, current inference is a &quot;one-off&quot; process, lacking the feedback loops necessary for self-evolution based on reasoning outcomes. To address these issues, we propose GeoSkill, a training-free framework based on an evolving Skill-Graph. We first initialize the graph by refining human expert trajectories into atomic, natural-language skills. For execution, GeoSkill employs an inference model to perform direct reasoning guided by the current Skill-Graph. For continuous growth, an Autonomous Evolution mechanism leverages a larger model to conduct multiple reasoning rollouts on image-coordinate pairs sourced from web-scale data and verified real-world reasoning. By analyzing both successful and failed trajectories from these rollouts, the mechanism iteratively synthesizes and prunes skills, effectively expanding the Skill-Graph and correcting geographic biases without any parameter updates. Experiments demonstrate that GeoSkill achieves promising performance in both geolocation accuracy and reasoning faithfulness on GeoRC, while maintaining superior generalization across diverse external datasets. Furthermore, our autonomous evolution fosters the emergence of novel, verifiable skills, significantly enhancing the system&#x27;s cognition of real-world geographic knowledge beyond isolated case studies.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2604.09025'>page</a> · <a href='https://arxiv.org/pdf/2604.09025'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>AmaraSpatial-10K: A Spatially and Semantically Aligned 3D Dataset for Spatial Computing and Embodied AI</title>
-      <link>https://arxiv.org/abs/2604.23018</link>
-      <guid isPermaLink="false">arxiv:2604.23018</guid>
-      <pubDate>Mon, 18 May 2026 14:32:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CUHK, Imperial College — Raymond Wong</p>
-<p><b>Authors:</b> Mohammad Sadegh Salehi, Alex Perkins, Igor Maurell, Ashkan Dabbagh, Raymond Wong</p>
-<p>Web-scale 3D asset collections are abundant but rarely deployment-ready, suffering from arbitrary metric scaling, incorrect pivots, brittle geometry, and incomplete textures, defects that limit their use in embodied AI, robotics, and spatial computing. We present AmaraSpatial-10K, a dataset of over 10,000 synthetic 3D assets optimised for zero-shot deployment. Each asset ships as a metric-scaled, deterministically anchored .glb with separated PBR maps, a convex collision hull, a paired reference image, and multi-sentence text metadata. Alongside the dataset we introduce a reusable evaluation suite for 3D asset banks, a continuous Scale Plausibility Score (SPS), an LLM Concept Density metric, anchor-error auditing, and a cross-modal CLIP coherence protocol, and apply it to AmaraSpatial-10K alongside matched subsets of Objaverse, HSSD, ABO, and GSO. AmaraSpatial-10K improves CLIP Recall@5 by $3.4\times$ over Objaverse ($0.612$ vs. $0.181$, median rank $267 \rightarrow 3$), achieves a $99.1\%$ physics-stability rate under Habitat-Sim with $\sim 20\times$ wall-time speed-up, and produces zero-overlap scenes when used as a drop-in asset bank for Holodeck. Controlled ablations on the same asset bank attribute the retrieval gain to description richness.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <a href='https://arxiv.org/abs/2604.23018'>page</a> · <a href='https://arxiv.org/pdf/2604.23018'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

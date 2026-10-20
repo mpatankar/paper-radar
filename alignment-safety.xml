@@ -5,8 +5,55 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 19 Oct 2026 09:29:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 09:02:58 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>GaussTrap: Stealthy Backdoor Attacks on 3D Gaussian Splatting for Targeted Scene Misperception</title>
+      <link>https://arxiv.org/abs/2504.20829</link>
+      <guid isPermaLink="false">arxiv:2504.20829</guid>
+      <pubDate>Tue, 20 Oct 2026 09:02:58 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Jiawei Li</p>
+<p><b>Authors:</b> Jiaxin Hong, Sixu Chen, Shuoyang Sun, Hongyao Yu, Hao Fang, Yuxin Peng, Bin Chen, Jiawei Li</p>
+<p>3D Gaussian Splatting (3DGS) has recently emerged as a powerful paradigm for real-time scene representation and novel view synthesis, gaining traction in safety-critical applications such as autonomous driving and AR/VR systems. However, the security vulnerabilities of 3DGS remain largely unexplored. In this paper, we conduct a comprehensive study of backdoor threats in 3DGS pipelines. We uncover an inherent security vulnerability in the adaptive density control mechanism of 3DGS, originally designed for detailed reconstruction, which enables attackers to induce localized gaussian proliferation, effectively embedding malicious backdoors into the scene geometry while remaining invisible from other viewpoints. To expose this threat, we propose GaussTrap, a novel stealthy poisoning framework tailored for 3DGS. GaussTrap operates in three stages (adversarial injection, geometric stabilization, and global fidelity restoration) to embed imperceptible yet adversarial Gaussian components into the reconstruction. It ensures consistent poisoning effects at specific viewpoints while preserving photorealism in benign views, thereby achieving high attack efficacy with low detectability. Extensive experiments on both synthetic and real-world benchmarks demonstrate that GaussTrap reliably induces targeted visual corruption under trigger conditions while maintaining high rendering fidelity elsewhere, highlighting a critical security blind spot in modern 3D rendering systems. The code is available at https://github.com/acang425/GaussTrap.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://arxiv.org/abs/2504.20829'>page</a> · <a href='https://arxiv.org/pdf/2504.20829'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>To Trust Or Not To Trust Your Vision-Language Model&#x27;s Prediction</title>
+      <link>https://arxiv.org/abs/2505.23745</link>
+      <guid isPermaLink="false">arxiv:2505.23745</guid>
+      <pubDate>Tue, 20 Oct 2026 09:02:58 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich, TU Munich — Hao Dong</p>
+<p><b>Authors:</b> Hao Dong, Moru Liu, Jian Liang, Eleni Chatzi, Olga Fink</p>
+<p>Vision-Language Models (VLMs) have demonstrated strong capabilities in aligning visual and textual modalities, enabling a wide range of applications in multimodal understanding and generation. While they excel in zero-shot and transfer learning scenarios, VLMs remain susceptible to misclassification, often yielding confident yet incorrect predictions. This limitation poses a significant risk in safety-critical domains, where erroneous predictions can lead to severe consequences. In this work, we introduce TrustVLM, a training-free framework designed to address the critical challenge of estimating when VLM&#x27;s predictions can be trusted. Motivated by the observed modality gap in VLMs and the insight that certain concepts are more distinctly represented in the image embedding space, we propose a novel confidence-scoring function that leverages this space to improve misclassification detection. We rigorously evaluate our approach across 17 diverse datasets, employing 4 architectures and 2 VLMs, and demonstrate state-of-the-art performance, with improvements of up to 51.87% in AURC, 9.14% in AUROC, and 32.42% in FPR95 compared to existing baselines. By improving the reliability of the model without requiring retraining, TrustVLM paves the way for safer deployment of VLMs in real-world applications. The code is available at https://github.com/EPFL-IMOS/TrustVLM.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-16 · <a href='https://arxiv.org/abs/2505.23745'>page</a> · <a href='https://arxiv.org/pdf/2505.23745'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation</title>
+      <link>https://huggingface.co/papers/2610.25690</link>
+      <guid isPermaLink="false">arxiv:2610.25690</guid>
+      <pubDate>Tue, 20 Oct 2026 09:02:58 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yihui Yang, Yuanhong Yu, Jiawei Wang, Zhongrui Yu, Jia Shi, Kun Zhan, Ruizhen Hu, Xiaowei Zhou, … <i>(+3 more)</i></p>
+<p>We study language-conditioned local navigation, where a robot must navigate to a text-specified target visible in its initial observation and stop at the described location. End-to-end navigation policies require diverse training data to generalize across scenes, yet real-robot data is costly to collect and simulated data leaves a sim-to-real gap. Internet egocentric videos offer a scalable source of real-world navigation experience. Our key insight is to learn goal-directed visual dynamics from Internet egocentric videos, and use these dynamics to support robot action generation. To this end, we propose ScaleNav, a unified world-action framework with three-stage training. We first perform instruction-conditioned video pretraining on these videos to learn how observations evolve as the camera approaches instructed targets across diverse real-world scenes. Action alignment then uses action-labeled simulated data to train the model to predict executable action chunks. Joint fine-tuning subsequently optimizes all trainable components together for navigation. ScaleNav achieves success rates of 86.5% on a single-view adaptation of Short-Horizon OVON and 94.9% on our HabitatGS-LN benchmark, outperforming the evaluated baselines on both benchmarks. We further deploy and evaluate ScaleNav on a real quadruped robot, with results supporting the model&#x27;s ability to generalize to real-world navigation. Code and videos are available at https://zju3dv.github.io/ScaleNav/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://huggingface.co/papers/2610.25690'>page</a> · <a href='https://arxiv.org/pdf/2610.25690'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience</title>
+      <link>https://huggingface.co/papers/2610.26625</link>
+      <guid isPermaLink="false">arxiv:2610.26625</guid>
+      <pubDate>Tue, 20 Oct 2026 09:02:58 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xinhao Ji, Hui En Pang, Hao Li, Kairui Hu, Jiner Wang, Mingze Sun, Ziang Cao, Yalun Dai, … <i>(+8 more)</i></p>
+<p>Reconstructing human activity from egocentric video requires more than recovering individual 3D components: the observer&#x27;s motion, surrounding geometry, and hand-object interactions must fit together in a consistent world. Achieving this coherence requires both joint reconstruction and aligned supervision, yet existing methods and datasets offer limited support for either. We present EgoXperience, a full-stack paradigm that addresses these needs through data collection, automatic annotation, unified modeling, and benchmarking. Central to EgoXperience is an automatic annotation engine, EgoX-Engine, that couples geometrically verified object tracking with SLAM-based world alignment, yielding consistent supervision for the camera, scene, hands, and objects. This yields EgoX-Data-6M, a 50-hour dataset of task-driven manipulation and locomotion within and across indoor and outdoor environments, with second-level task captions. We carefully select one hour across these activity categories as EgoX-Bench to evaluate joint reconstruction. To translate this supervision into reconstruction, we introduce EgoX, trained with EgoX-Data-6M and complementary annotations from additional public datasets. Given monocular egocentric video and first-frame object masks, our model achieves joint metric reconstruction of the camera, scene, hands, and objects in a shared world coordinate frame with a single forward pass. Extensive experiments demonstrate state-of-the-art performance across scene estimation and world-space hand-object pose recovery. Against the strongest evaluated baselines, EgoX reduces camera, hand, and depth errors by 68.9%, 65.6%, and 42.9%, and improves object pose scores by 28.0%.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://huggingface.co/papers/2610.26625'>page</a> · <a href='https://arxiv.org/pdf/2610.26625'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>GVPO: Group Variance Policy Optimization for Large Language Model Post-Training</title>
       <link>https://arxiv.org/abs/2504.19599</link>
@@ -2297,52 +2344,6 @@
 <p><b>Authors:</b> Kexin Chen, Yi Liu, Haonan Zhang, Yanhui Li, Xinyu Deng, Dongxia Wang</p>
 <p>As LLMs acquire stronger reasoning capabilities, deceptive behavior becomes an increasingly serious safety concern. Existing deception monitors either score visible transcripts or derive scalar probe scores from representation vectors, leaving little inspectable evidence about why a response is suspicious. We introduce STATEWITNESS, an activation explainer for deception auditing. A separate decoder reads a target model&#x27;s hidden states, then answers natural-language queries or emits structured reports about them. We evaluate STATEWITNESS on two target reasoning LLMs across seven deception datasets. STATEWITNESS reaches 0.916 mean AUROC, a relative gain of 11.6% over the best black-box text monitor and 25.0% over the best activation-probe baseline under the same evaluation protocol. When combined with existing monitors, STATEWITNESS reduces missed deceptive examples in simple threshold ensembles. Beyond scalar detection, the decoder returns query-level answers, schema reports, and token- or sentence-level evidence traces for human inspection. We view this interface as a potential building block for broader interpretability and alignment tools.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17478'>page</a> · <a href='https://arxiv.org/pdf/2606.17478'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Reinforcing Dual-Path Reasoning in Spatial Vision Language Models</title>
-      <link>https://arxiv.org/abs/2606.17539</link>
-      <guid isPermaLink="false">arxiv:2606.17539</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> MIT, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Yatai Ji, An-Chieh Cheng, Yang Fu, Yukang Chen, Han Zhang, Zhaojing Yang, Wei Huang, Ka Chun Cheung, … <i>(+8 more)</i></p>
-<p>Spatial VLMs have made substantial progress in geometric perception, yet complex spatial reasoning requiring multi-step inference over depth, distance, and scene relations remains challenging. Moreover, different spatial queries call for fundamentally different strategies: some are best addressed through purely linguistic, step-by-step deduction, while others require explicit 3D grounding before quantitative inference. We present Dual-Path Spatial Reasoning via Reinforcement Learning for Spatial VLMs (SR-REAL), a unified framework that equips a spatial VLM with two complementary reasoning paths: Language-Only Reasoning (LOR), which performs step-by-step linguistic deduction, and Detect-Then-Reason (DTR), which detects 3D geometric cues (e.g., centers or bounding boxes) via region tokens before explicit geometric inference. SR-REAL begins with a cold-start supervised fine-tuning stage that constructs LOR and DTR chain-of-thought supervision and exposes a region-to-3D interface, followed by RL that optimizes the policy model with accuracy and format rewards; for DTR, a discrete center-based detection reward further refines geometric alignment. Across diverse spatial benchmarks, SR-REAL significantly outperforms spatial VLM baselines: (i) a single RL-trained model supports both reasoning paths, with DTR excelling in region-aware tasks through precise 3D localization and LOR enhancing general spatial reasoning; (ii) jointly training both paths fosters mutual reinforcement; (iii) high-quality, blended cold-start data is crucial for stable RL optimization; and (iv) the model generalizes across datasets and domains without per-task tuning, demonstrating positive transfer between LOR and DTR.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-06-16 · <a href='https://arxiv.org/abs/2606.17539'>page</a> · <a href='https://arxiv.org/pdf/2606.17539'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Agentic coding and persistent returns to expertise</title>
-      <link>https://www.anthropic.com/research/claude-code-expertise</link>
-      <guid isPermaLink="false">anthropic:6bbeb682cd</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/claude-code-expertise'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale</title>
-      <link>https://huggingface.co/papers/2606.15079</link>
-      <guid isPermaLink="false">arxiv:2606.15079</guid>
-      <pubDate>Wed, 17 Jun 2026 05:40:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Ang Li, Ben Liu, Bin Han, Bin Hu, Bin Jing, Binbin Hu, Bing Li, Cai Chen, … <i>(+211 more)</i></p>
-<p>Efficient and scalable agentic intelligence requires models that can deliver both low-latency responses and strong reasoning capabilities while remaining practical to train, serve, and deploy. In this report, we present Ling-2.6 and Ring-2.6, a family of models designed to address this challenge at scale. Ling-2.6 is optimized for instant response generation and high capability per output token, whereas Ring-2.6 is tailored for deeper reasoning and more advanced agentic workflows. Instead of training from scratch, we upgrade the Ling-2.0 base model through architectural migration pre-training and large-scale post-training. This upgrade is guided by a unified co-design of model architecture, optimization objectives, serving systems, and agent training environments, enabling improvements in both model capability and deployment efficiency. At the architectural level, we introduce a hybrid linear attention design that integrates Lightning Attention with MLA, improving the efficiency of long-context training and decoding. To further enhance token efficiency, we optimize capability per output token through Evolutionary Chain-of-Thought, Linguistic Unit Policy Optimization, bidirectional preference alignment, and shortest-correct-response distillation. For agentic capabilities, we propose KPop, a reinforcement learning framework designed to support stable training of Ring-2.6-1T on large-scale environment-grounded data. KPop improves training efficiency through asynchronous scheduling across coding, search, tool use, and workflow execution, enabling scalable learning from complex agent-environment interactions. Together, Ling-2.6 and Ring-2.6 provide a practical pathway toward efficient, scalable, and open agentic systems. We open-source all checkpoints in the 2.6 family to support further research and development in practical agentic intelligence.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-13 · <a href='https://huggingface.co/papers/2606.15079'>page</a> · <a href='https://arxiv.org/pdf/2606.15079'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Attention, not scale, drives human-AI alignment in multimodal language prediction</title>
-      <link>https://arxiv.org/abs/2308.06035</link>
-      <guid isPermaLink="false">arxiv:2308.06035</guid>
-      <pubDate>Tue, 16 Jun 2026 05:50:51 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Princeton — (senior)</p>
-<p><b>Authors:</b> Viktor Kewenig, Andrew Lampinen, Samuel A. Nastase, Christopher Edwards, Quitterie Lacome D&#x27;Elascombe, Akilles Rechardt, Jeremy I Skipper, Gabriella Vigliocco</p>
-<p>Humans routinely draw on visual context to predict upcoming words. To what extent current vision-language models produce comparable behaviour is unclear. Here we placed five state-of-the-art pretrained systems side-by-side with 600 human participants in a web-based Visual-World Paradigm. On each of 100 six-second movie clips, models and participants received either text only or synchronised video and text and judged how likely a specified target word was to appear next; human eye movements were tracked throughout. Adding visual context increased model-human alignment in predictability ratings across all architectures (average Delta r = 0.18) with no impact of parameter size. When visual context was informative, transformer attention significantly increased alignment. Attention maps from two transformer models corresponded with human gaze, explaining up to 70% of the inter-participant variance when the scene contained informative cues. Notably, cross-modal attention reliably tracked anticipatory human fixations on semantic cues. These results suggest that current transformer-based vision-language models can approximate human behaviour exploiting visual context during language prediction - and that selective attention to informative cues, not sheer model scale, is the principal driver of this alignment.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-06-13 · <a href='https://arxiv.org/abs/2308.06035'>page</a> · <a href='https://arxiv.org/pdf/2308.06035'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
