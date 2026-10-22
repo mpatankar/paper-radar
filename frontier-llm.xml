@@ -5,8 +5,99 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Wed, 21 Oct 2026 09:02:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 09:04:38 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Optimized Conformal Selection: Powerful Selective Inference After Data-Dependent Score Construction</title>
+      <link>https://arxiv.org/abs/2411.17983</link>
+      <guid isPermaLink="false">arxiv:2411.17983</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>stat.ME</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>stat.ML</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Ying Jin</p>
+<p><b>Authors:</b> Tian Bai, Ying Jin</p>
+<p>We study data-driven score construction in conformal selection, which uses conformal p-values and multiple testing to select &quot;interesting&quot; instances with large unobserved labels from a pool of unlabeled data, while controlling the FDR in finite sample. While existing solutions require the score function to be constructed independent of the calibration and test data, it is desirable to select or construct powerful conformity score in a data-driven manner and to leverage all labeled data for score training when presented with many score choices and limited labeled data. We propose Optimized Conformal Selection (OptCS), a general framework that allows valid multiple testing after flexible data-driven score construction. We introduce general conditions under which OptCS constructs valid conformal p-values despite substantial data reuse and handles complex p-value dependencies to maintain finite-sample FDR control. We instantiate this general recipe to propose three FDR-controlling procedures, each optimizing the models differently: (i) selecting a powerful score function among multiple candidates, (ii) training the score with all labeled data without sample splitting, and (iii) combining full-sample training and model selection. We demonstrate the efficacy of our methods via simulation studies and real applications in drug discovery and large language models.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> stat.ME, cs.AI, cs.LG, stat.ML · <b>arXiv submitted:</b> 2026-10-21 · <a href='https://arxiv.org/abs/2411.17983'>page</a> · <a href='https://arxiv.org/pdf/2411.17983'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Using thousands of AI agents to uncover new leads in biological data</title>
+      <link>https://openai.com/index/scaling-ai-research-for-complex-biological-data/</link>
+      <guid isPermaLink="false">openai:e3212a9c93</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
+<p><b>Authors:</b> OpenAI</p>
+<p>See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/scaling-ai-research-for-complex-biological-data/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Cache Engineering for Agents</title>
+      <link>https://huggingface.co/papers/2610.28577</link>
+      <guid isPermaLink="false">arxiv:2610.28577</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Tianyu Fu, Ruoxi Wang, Zihan Min, Zhongqi Ren, Zhihao Li, Tengxuan Liu, Shengxu Mu, Hanling Zhang, … <i>(+2 more)</i></p>
+<p>Large Language Model (LLM) agents can handle increasingly complex tasks, navigating long trajectories of observations and actions. As these trajectories grow, key-value (KV) cache I/O and storage become the dominant cost. Trajectories can also exceed the LLM&#x27;s maximum context length, requiring control over active cache growth. Prior work uses context engineering to reduce cache size by trimming or summarizing history. However, modifying the trajectory prefix invalidates subsequent cached states and triggers costly re-prefilling of retained context. Task accuracy can also suffer when too little context is retained to limit re-prefill costs. We propose cache engineering as a new scheme. It allows agents to directly control their active KV cache without modifying the trajectory or re-prefilling retained context. Specifically, agents can proactively use drop to exclude selected cache from future attention and repos to adjust retained keys&#x27; position encodings. We formalize these cache operations and identify history dependence as a serving challenge: identical token sequences can yield different cache states under different cache operation sequences, making prefix matching insufficient for correct cache reuse. Thus, we co-design the AKV serving engine. It provides a stateless interface compatible with existing serving APIs, while internally managing stateful cache reuse, eviction, and restoration. Experiments show that a tool-response rolling-drop cache policy improves average benchmark scores by 1.7 points and reduces average cost by 27.7%, compared with conventional threshold-triggered summarization. With AKV, it achieves up to 1.2x the output throughput and a 1.5x speedup in P95 request latency. Recursive self-improvement of cache policies further reduces cost by 7.1% over expert design. Our code is at https://github.com/thu-nics/AKV.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-20 · <a href='https://huggingface.co/papers/2610.28577'>page</a> · <a href='https://arxiv.org/pdf/2610.28577'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Agent World Model in the Wild: Computer-Use Agent Environment Synthesis</title>
+      <link>https://huggingface.co/papers/2610.26828</link>
+      <guid isPermaLink="false">arxiv:2610.26828</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhaoyang Wang, Qianhui Wu, Haorui Wang, Simon Yu, Baolin Peng, Canwen Xu, Hao Cheng, Wenlin Yao, … <i>(+5 more)</i></p>
+<p>Agent learning is shifting from learning from human data toward learning through interaction with the world. However, scaling such learning directly in real-world computer systems is challenging and can introduce substantial security risks. We therefore propose Agent World Model in the Wild (WildAWM), a scalable pipeline for synthesizing controllable environments and tasks for training general computer-use agents (CUAs). Whereas existing approaches typically specialize in a single agent interaction interface, we construct executable environments that jointly support graphical user interfaces, model context protocol services, and command-line interfaces, allowing agents to flexibly combine visual interaction, tool use, and code execution. WildAWM is entirely powered by open-source models, demonstrating that high-quality computer-use environments can be generated without proprietary frontier models. Beyond environments, we address three recurring challenges in task synthesis: ensuring solvability, maintaining sufficient difficulty, and producing reliable verifiers, by introducing execution-based quality gates that combine heterogeneous agent rollouts, cross-judge consistency checks, and counterfactual probes of judgment robustness. The resulting pipeline synthesizes 341 long-horizon environment-task pairs that can require over 100 agent steps to solve and remain challenging even for frontier models, with GPT-6-Astra solving only 60% of them. We train two Qwen models of different sizes exclusively in these synthetic worlds. Both models achieve substantial gains across 8 out-of-distribution benchmarks spanning web, claw, and computer-use agents, demonstrating that learning in WildAWM&#x27;s synthesized worlds generalizes broadly to unseen computer-use tasks. The code is publicly available at https://github.com/MSR-Orchard/WildAWM.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://huggingface.co/papers/2610.26828'>page</a> · <a href='https://arxiv.org/pdf/2610.26828'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?</title>
+      <link>https://huggingface.co/papers/2610.26659</link>
+      <guid isPermaLink="false">arxiv:2610.26659</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zhaoxi Zhang, Hao Liang, Linxuan Wu, Yiming Wu, Yifu Yuan, Kun Liang, Chenming Tang, Meiyi Qiang, … <i>(+3 more)</i></p>
+<p>Spatial intelligence requires agents to actively acquire visual evidence and integrate observations into a coherent representation of the three-dimensional world. Yet spatial question answering offers limited evidence of whether models can construct accurate metric maps through autonomous exploration. We introduce SpatialScout, a benchmark for evaluating vision-language model (VLM) agents on active object-level 3D mapping. SpatialScout comprises 80 diverse indoor scenes containing 3,140 target objects. Given an object inventory, RGB observations, camera calibration, and camera poses, agents control a camera to explore each scene and estimate object centers in a shared coordinate frame. The task requires coordinating viewpoint selection, cross-view association, geometric estimation, and map revision under bounded interaction budgets. Evaluation jointly measures localization accuracy and target coverage through object-scale overlap scores that penalize missing predictions. Experiments with frontier VLMs reveal substantial limitations: the strongest evaluated model, Claude Opus 5.5, achieves a mean overlap score of 41.71%, with 47.23% of targets exceeding an intersection-over-union (IoU) threshold of 0.5 and only 3.25% exceeding 0.9. These results reveal a substantial gap between recovering coarse object layouts and constructing complete, precise metric maps. SpatialScout provides a quantitative testbed for developing agents that build reliable 3D spatial representations through active perception. Code is available at https://github.com/JesseZZZZZ/SpatialScout.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://huggingface.co/papers/2610.26659'>page</a> · <a href='https://arxiv.org/pdf/2610.26659'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>StreamEval: Evaluating Interactive Streaming Video Generation Models</title>
+      <link>https://huggingface.co/papers/2610.28402</link>
+      <guid isPermaLink="false">arxiv:2610.28402</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> StreamEval Team, Hugging Face Daily Papers (curated)</p>
+<p>As streaming video generation advances, enabling real-time interaction with generated video is becoming increasingly important. We introduce StreamEval, a unified benchmark for interactive streaming video generation spanning five tasks: avatar dialogue, avatar performance, world generation, instruction editing, and reference editing. StreamEval comprises 300 scripted test cases lasting 15-300s, each specifying initial assets, incrementally arriving multimodal requests, and explicit requirements for state changes and content preservation. Performance is assessed along four evaluation dimensions: task execution, state consistency, visual fidelity, and audiovisual coordination, instantiated through ten task-specific metrics on a 0-100 scale. Evaluating 37 distinct models across 300 test cases, we find that high visual quality and identity retention do not necessarily coincide with reliable request execution or sustained state consistency. In particular, request execution remains challenging: the highest task-specific scores are 36.90 for Following among seven avatar-performance models, 25.93 for Following in text-conditioned world generation, and 15.00 for Edit Success among three reported reference-editing models. These findings identify reliable request execution under timing and preservation constraints as a central challenge for advancing omni-modal real-time interactive systems. The leaderboard is available at https://streameval.ai</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-20 · <a href='https://huggingface.co/papers/2610.28402'>page</a> · <a href='https://arxiv.org/pdf/2610.28402'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Socratic Skill Learning: Interleaving Teaching and Practice for Transferable Agent Skills</title>
+      <link>https://huggingface.co/papers/2610.17860</link>
+      <guid isPermaLink="false">arxiv:2610.17860</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Letian Zhu, Han Li, Yifan Yao, Xinping Lei, Xinyu Che, Jiahao Wang, Dianyi Wang, Yucheng Fu, … <i>(+5 more)</i></p>
+<p>Agent Skills improve LLM agents by making task knowledge reusable across sessions. Learning transferable Skills requires evidence about a procedure and its conditions of use, which a successful task attempt can leave untested. We introduce Socratic Skill Learning (SSL), which interleaves expert teaching with Student practice. An Educator guides investigation while the Student remains the sole environment operator and Skill author, able to question, test, and adapt advice. To test reuse beyond the learning task, we construct SkillTransferBench, with 35 task families and 408 executable cases, pairing public variation specifications with held-out evaluation in fresh solver sessions. On the main 22-family, 155-case cohort, Fixed-Window SSL reaches 0.801 utility, versus 0.723 without a Skill, 0.761 for adapted Trace2Skill (trajectory distillation), and 0.751 for adapted SKILL-KD (contrastive distillation). Across three model pairs on shared families, interleaved guidance outperforms expert authoring and post-hoc teaching. Process analysis links guidance to Student writing and package revision; a case study shows the Student testing and refining a proposed procedure for later reuse. As demand for new lessons falls, the cost of fixed-window review grows. Issue-Guided SSL tracks unresolved questions across Skill revisions to select and focus review, reaching 0.805 utility with 61.7% fewer Educator tokens and 16.9% fewer total acquisition tokens than Fixed-Window SSL on the main cohort.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-13 · <a href='https://huggingface.co/papers/2610.17860'>page</a> · <a href='https://arxiv.org/pdf/2610.17860'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds</title>
+      <link>https://huggingface.co/papers/2610.28698</link>
+      <guid isPermaLink="false">arxiv:2610.28698</guid>
+      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Kuan Zhang, Yukun Chen, Zhihao Yang, Yue Su, Xiangnan Wu, Zirong Chen, Run Luo, Jinkun Hou, … <i>(+4 more)</i></p>
+<p>Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours, and five mixtures ranging from Minecraft-only data to diverse multi-world corpora. We assess performance and generalization using three-level validation losses and gameplay benchmarks from in-corpus worlds to unseen worlds. Our results show: (1) more data improves in-corpus performance, diversity improves transfer to related worlds with limited gains in distant worlds, and model size improves data efficiency but generalizes worse to distant worlds under single-world training; (2) we observe an early interface phase with broad cross-world benefits and a later world phase with gains narrowed to in-corpus and related worlds, and fit an empirical scaling law relating validation loss to data volume, diversity and model size; and (3) our models are competitive with Minecraft specialists and frontier models in 3D worlds, and perform best in real-time settings. However, the limits of imitation and persistent gaps in distant worlds suggest that building generalist embodied agents requires richer training stages beyond continued pre-training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-20 · <a href='https://huggingface.co/papers/2610.28698'>page</a> · <a href='https://arxiv.org/pdf/2610.28698'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Gibson Env: Real-World Perception for Embodied Agents</title>
       <link>https://arxiv.org/abs/1808.10654</link>
@@ -2196,93 +2287,6 @@
 <p><b>Authors:</b> Junyu Guo, Shangding Gu, Ming Jin, Javad Lavaei</p>
 <p>Coding agents can return plausible patches that omit required behavior. These failures are hard to review because long traces and confident summaries often hide what was missed. We ask when a nominally weaker reviewer can reliably decide whether a patch solves its issue. We study 411 execution-labeled traces from three agents and 101 controlled cases. On 154 GPT-5.4 traces, structured but unchecked evidence raises both defect catch and over-rejection. We then provide official execution evidence as an upper-bound diagnostic. After choosing and freezing one of two formats per reviewer, five of six reviewers improve both rates on 122 held-out traces; two classify every trace correctly. Reviewer size is not a consistent predictor of quality. Because official tests are unavailable in deployment, we also evaluate a frozen cascade with patch-caused static errors and generated tests that first fail on the unpatched repository. On 121 scored held-out GPT-5.4 traces and 59 Gemini traces, its coverage is 0.89 and 0.86, risk is 0.33 and 0.26, catch is 0.76 and 0.80, and over-rejection is 0.66 and 0.67. Most false rejections occur when unresolved cases reach the reviewer. Official execution evidence shows the potential of weak review when decisive checks are available. Producing equally reliable checks without official tests remains the main bottleneck.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.SE, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://arxiv.org/abs/2610.01023'>page</a> · <a href='https://arxiv.org/pdf/2610.01023'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents</title>
-      <link>https://research.nvidia.com/publication/2026-12_mid-harness-scaling-actions-between-model-and-harness-terminal-agents</link>
-      <guid isPermaLink="false">nvidia_research:a147bb4ded</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> NVIDIA Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-12_mid-harness-scaling-actions-between-model-and-harness-terminal-agents'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States</title>
-      <link>https://huggingface.co/papers/2610.01415</link>
-      <guid isPermaLink="false">arxiv:2610.01415</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yu Luo, Jiamin Jiang, Yimin Zuo, Xidao Wen, Rongchen Gao, Yongqian Sun, Shenglin Zhang, Guiyang Liu, … <i>(+5 more)</i></p>
-<p>Large language model (LLM) agents can now undertake increasingly complex tasks, but the way they organize interaction history into memory does not ensure a coherent understanding of the current world. We introduce PoS, an inference-time framework that constructs and continually maintains explicit belief states as the agent&#x27;s decision context. Each belief combines an estimate of the current world state with unresolved task requirements, making explicit what the agent still needs to learn and accomplish. To keep this belief reliable and actionable, PoS validates its consistency and monitors task progress to detect Belief Trapping, where the agent continues to act without making meaningful progress toward the goal. Recovery is then tailored to both the trapping pattern and the type of unresolved task requirement. Experiments on four benchmarks spanning execution and diagnosis show that PoS achieves the highest overall performance on every benchmark with all three LLM backbones. Ablations demonstrate the importance of consistency validation and recovery, while context-scaling experiments show resilience to context growth. Together, these results support belief construction and continual maintenance as a foundation for long-horizon context management beyond history retention and compression.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01415'>page</a> · <a href='https://arxiv.org/pdf/2610.01415'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Agent Priors-guided Policy Learning</title>
-      <link>https://huggingface.co/papers/2609.35690</link>
-      <guid isPermaLink="false">arxiv:2609.35690</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Puming Jiang, Tianrun Hu, Haozhe Du, Yibo Li, Zhiwei Xue, Xinhu Li, Harold Soh, Hugging Face Daily Papers (curated)</p>
-<p>Robots that learn from a few demonstrations often require two forms of generalization. Compositional generalization recombines skills to solve new tasks, and skill generalization lets the learned policy behind each skill work in new situations. The two depend on each other, yet information is lost between composition and the skills it calls. Where a skill works is determined by the structure its policy is trained with, while composition sees the skill only through a separate description, such as a name, an instruction, or a symbolic operator, that omits this structure. Our key idea is to use each policy&#x27;s structural prior as part of the interface between composition and the skill. A structural prior states what a behavior depends on, for example that a grasp depends only on the gripper&#x27;s pose relative to the object. Built into training, it shapes where the policy generalizes; stated in language, it tells composition where the policy applies. We instantiate this idea in Agent Priors-guided Policy Learning (APPL). A construction agent segments complete demonstrations into reusable skills, proposes several structural priors for each skill, and trains and verifies one policy per prior. A runtime agent then selects among these prior-specific policies and composes them toward new task goals using their interfaces. Across MetaWorld and long-horizon ManiSkill tasks, APPL improves out-of-distribution skill generalization and enables previously unseen skill compositions; ablating the interface information substantially reduces performance. These results support the use of training-time structural assumptions as a bridge between skill learning and skill composition.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-28 · <a href='https://huggingface.co/papers/2609.35690'>page</a> · <a href='https://arxiv.org/pdf/2609.35690'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>World Observer: Joint Actor-Observer Generation for Persistent World Modeling</title>
-      <link>https://huggingface.co/papers/2610.02162</link>
-      <guid isPermaLink="false">arxiv:2610.02162</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Hyunwook Choi, Dahyun Chung, Hyunsung Kim, Siyoon Jin, Jinhyeok Choi, Junyoung Seo, Seungryong Kim, Hugging Face Daily Papers (curated)</p>
-<p>How can a world model continuously observe regions beyond the actor&#x27;s current view? Video world models simulate how an environment evolves from an agent&#x27;s actions, yet remain actor-centric. Once an object leaves the actor&#x27;s view, they lose direct evidence of its evolution, often failing to preserve its state and dynamics upon re-entry. To address this, we introduce World Observer, which decouples observing from acting by jointly generating a perspective actor for the agent-centric view with one or more panoramic observers that watch selected world regions. This allows objects that leave the actor&#x27;s view to remain visually evolving in an observer, so their updated states are reflected when they re-enter. We ground the actor and observers by warping from a shared panoramic source for explicit geometric correspondence, and introduce an Observer Sink of high-resolution perspective references to restore fine appearance upon re-entry. Since the observers are decoupled from the actor, they can be placed freely across the scene, extended to multiple locations for broader coverage, and driven by control signals to steer out-of-view evolution. To evaluate out-of-view evolution, we further introduce world-space metrics and a benchmark spanning real and synthetic scenes. World Observer substantially improves out-of-view dynamics while remaining competitive in visual fidelity, camera control, and 3D adherence.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.02162'>page</a> · <a href='https://arxiv.org/pdf/2610.02162'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Sharpening Tax in Post-Training</title>
-      <link>https://huggingface.co/papers/2610.01509</link>
-      <guid isPermaLink="false">arxiv:2610.01509</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Changdae Oh, Qi Zeng, Qi Qi, Andrey Zhmoginov, Deren Lei, Yun He, Hoang Phan, Hangoo Kang, … <i>(+3 more)</i></p>
-<p>An emerging hypothesis about reinforcement learning (RL) post-training of large language models (LLMs) is that it merely sharpens existing behaviors of a base model, improving single-shot accuracy at the cost of solution coverage. Although this trade-off has been observed in math and coding tasks, it need not extend to agentic tasks, where multi-turn tool use and interaction may require capabilities newly acquired during post-training. Our surprising finding is that pre-trained LLMs, equipped with a light inference harness, can serve as capable agents. Despite far lower accuracy (pass@1), they often surpass their post-trained counterparts in solution coverage (pass@K) given a sufficient test-time budget. We further analyze the underlying mechanism and show that post-training pushes tasks toward two extremes, always solved or never solved, and thereby improves sampling efficiency and consistency at the cost of solution coverage. To measure this cost, we propose Sharpening Tax, a diagnostic metric that quantifies the loss in test-time scalability after post-training. Across 14 base/post-trained model pairs from four families and three agentic benchmarks (42 cases in total), the tax is prevalent in most settings, can be estimated from a few rollouts, and correlates well with other metrics. Finally, we present posterior-tempered group sampling (PTGS), a simple plug-and-play Bayesian sampler that adapts the sampling temperature per prompt to its estimated difficulty. Applied during RL training in two agentic environments, PTGS pays a smaller tax than the fixed-temperature baseline, solving more tasks under repeated sampling while also improving single-shot accuracy.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01509'>page</a> · <a href='https://arxiv.org/pdf/2610.01509'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Make Sparse Rewards Count: Density-Aware Reward Aggregation for Multi-Reward RL</title>
-      <link>https://huggingface.co/papers/2610.00574</link>
-      <guid isPermaLink="false">arxiv:2610.00574</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Tong Zheng, Skylar Zhai, Zhan Cheng, TianMing Sha, Youling Huang, Shuo Zhou, Shaotong Qi, Jingcheng Liang, … <i>(+3 more)</i></p>
-<p>Multi-reward reinforcement learning trains large language models to satisfy multiple behavioral objectives simultaneously. Reward-wise normalization, as used in GDPO, preserves reward-specific relative information within rollout groups, but different objectives can still exhibit uneven learning progress. We study this behavior through advantage energy, the sum of a reward&#x27;s squared advantages over a batch. Under idealized GDPO normalization, we show that this energy is proportional to active-group density: the fraction of rollout groups in which the reward provides nonzero relative advantages. This reveals a residual batch-level signal imbalance and provides a basis for calibrating reward contributions. Based on this relation, we propose Density-Aware Reward Aggregation (DARA). We derive an inverse-square-root density correction that gives greater weight to signals from less frequently active rewards. DARA computes its weights from each rollout batch, adapting to changes in reward activity throughout training without modifying the underlying policy optimization objective. Experiments on tool calling and mathematical reasoning show that DARA learns the targeted behaviors faster than GDPO, reaching high format compliance in up to 26% fewer training steps on tool calling and near-saturated length compliance in up to 65% fewer steps on mathematical reasoning, while remaining competitive in final performance. Our code is available at https://github.com/zhaihaotian/DARA.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://huggingface.co/papers/2610.00574'>page</a> · <a href='https://arxiv.org/pdf/2610.00574'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction</title>
-      <link>https://huggingface.co/papers/2610.01762</link>
-      <guid isPermaLink="false">arxiv:2610.01762</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xiangyu Zeng, Yuandong Yang, Zhiqiu Zhang, Yuhan Zhu, Xinhao Li, Qingyi Si, Dingyu Yao, Changlian Ma, … <i>(+17 more)</i></p>
-<p>Streaming video LLMs must retain evidence before its relevance to future tasks is known and respond when sufficient evidence becomes available. The challenge is to form reusable factual memory without compromising real-time perception. We introduce OneStreamer, which jointly learns query-independent evidence recording and task response through a shared proactive generation process. Its Proactive Hierarchical Caption Memory (PHCM) produces time-grounded local-detail captions and summaries of completed events. Streaming caption targets supervise the interpretation of observed video prefixes during training. At inference, model-generated records complement a recent visual window, providing reusable factual context without revisiting historical visual features. Proactive State Transition Learning (PSTL) reduces the dominance of repeated waiting states by preserving supervision at all output anchors and selecting representative state-change and state-persistence tokens. We further develop a streaming data synthesis pipeline that aligns output content and timing with available evidence. Combining the resulting streaming captions and QA with cleaned open-source data yields OneStreamer-1M, a broad-coverage streaming video interaction dataset with over one million records spanning diverse tasks. Our 4B model achieves the best results among the compared methods across all eight evaluated streaming video understanding benchmarks. Ablations show that retaining generated captions improves historical QA without degrading real-time perception. PSTL also outperforms dense state supervision while supervising only 27.5% of annotated state tokens. Together, these results support proactive generation as a shared learning interface connecting perception, memory formation, and timely response in streaming video interaction.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-01 · <a href='https://huggingface.co/papers/2610.01762'>page</a> · <a href='https://arxiv.org/pdf/2610.01762'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>EgoTools: Towards Tool-Centric Reasoning in Real-World Egocentric Videos</title>
-      <link>https://huggingface.co/papers/2609.39378</link>
-      <guid isPermaLink="false">arxiv:2609.39378</guid>
-      <pubDate>Fri, 02 Oct 2026 10:13:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Shulin Tian, Junsu Kim, Shuai Liu, Hao Li, Yujiao Shen, Sihan Li, Zhe Yang, Yeongon Kim, … <i>(+13 more)</i></p>
-<p>Real-world embodied tasks, from everyday activities to professional procedures, require agents to act under physical constraints while tracking evolving object and task states. Tool use sits at the heart of such tasks, as many everyday and professional activities are tool-mediated. Understanding them requires reasoning about affordances, hand-tool-object geometry, procedural progress, and causal effects on target objects. Yet despite strong performance on perception-oriented video tasks such as captioning and general video QA, current multimodal video models remain limited in this form of tool-centric embodied reasoning. Progress in this direction has been limited by the lack of real-world egocentric data and diagnostic benchmarks. To address this gap, we introduce EgoTools, the first comprehensive suite for egocentric tool-use understanding. It consists of two complementary components: EgoTools-Data, a large-scale corpus of 100 hours of tool-centric egocentric recordings with synchronized audio, dense captions, reasoning-heavy narrations, and supplementary 3D information; and EgoTools-Bench, a diagnostic benchmark of 1,000 QA pairs across four tracks that cover tool-use understanding from perception and geometry to procedure and causal reasoning. Experimental results show that current models still struggle to ground tool use in visual evidence: Gemini-3.1-Pro achieves 66.9% overall accuracy but only 51.7% on Perception &amp; Grounding. Beyond evaluation, we validate EgoTools-Data as a training resource. On the full 1,000-question benchmark, full supervised fine-tuning improves Qwen3-VL-8B-Instruct from 50.0% to 60.9%, under strict source-video separation. Together, these results establish EgoTools as a unified resource for both training and diagnostic evaluation of real-world egocentric tool-use understanding.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-09-30 · <a href='https://huggingface.co/papers/2609.39378'>page</a> · <a href='https://arxiv.org/pdf/2609.39378'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
