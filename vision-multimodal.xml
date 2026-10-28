@@ -5,8 +5,22 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Tue, 27 Oct 2026 09:29:56 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 10:14:57 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>An Embarrassingly Simple Data Selection Strategy for Million-Scale Multi-Modal Instruction-Tuning</title>
+      <link>https://arxiv.org/abs/2503.13383</link>
+      <guid isPermaLink="false">arxiv:2503.13383</guid>
+      <pubDate>Wed, 28 Oct 2026 10:14:57 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> ByteDance Seed · <b>Tier-2 senior:</b> Harvard, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Mengyao Lyu, Yan Li, Huasong Zhong, Hui Chen, Jungong Han, Guiguang Ding, Zhenheng Yang</p>
+<p>Recent research demonstrates that pretrained large language models (LLMs) require minimal but carefully curated data for instruction-tuning. Building on LLMs, multi-modal models further contend with far larger data volumes, heterogeneous sources, and cross-modal alignment, amplifying both the necessity and the complexity of data selection. However, existing methods rely on deeply extracted embeddings, gradients or narrow quality scores that are time-consuming to compute and limited in expressiveness, frequently failing to surpass a simple random-sampling baseline. To overcome these limitations, we step back from complex embedding spaces and target the fundamental objective of instruction tuning: how and what knowledge should be elicited from the pretrained model and exposed to users. We leverage interaction \underline{S}tyles as a proxy for structural diversity, and decompose data quality into capability-specific \underline{S}cores, yielding an explicit yet \underline{R}ich (SSR) profile for each sample. We further cast the selection as submodular coverage maximization over the capability--style grid, providing an approximation guarantee. SSR consistently delivers superior performance across two distinct architecture stacks, LLaVA-1.5 (Vicuna + CLIP) and LLaVA-OneVision (Qwen2 + SigLIP), two large-scale data pools, six data budget settings, and 14 multi-modal benchmarks. To our knowledge, SSR is the first data selection method validated at million-scale, achieving 99.1% of full-data performance using only 30% of a 2.6M pool. Furthermore, the SSR profile models and selected subsets transfer training-free across data pools and model architectures with capability extensibility.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL, cs.LG · <b>arXiv submitted:</b> 2026-10-27 · <a href='https://arxiv.org/abs/2503.13383'>page</a> · <a href='https://arxiv.org/pdf/2503.13383'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Identity-Duplication Auditing in National-Scale Neuroimaging Repositories</title>
       <link>https://arxiv.org/abs/2610.09614</link>
@@ -2565,17 +2579,6 @@
 <p><b>Authors:</b> Jianke Zhang, Yuanfei Luo, Yucheng Hu, Xiaoyu Chen, Yanjiang Guo, Ziyang Liu, Hongbin Xu, Tian Lan, … <i>(+1 more)</i></p>
 <p>Vision--language--action (VLA) models are typically built by fine-tuning a pretrained vision--language model (VLM) on action data. However, we show that this standard recipe systematically erodes the VLM&#x27;s multimodal competence, a side effect we call the embodiment tax. But do VLAs have to forget? Inspired by the two-stream organization of biological vision, we trace this degradation to a structural bottleneck: current VLAs ask a single encoder to support both language-grounded semantics and control-relevant visual features, whereas biological vision separates recognition and visuomotor control into distinct pathways. Building on this view, we propose the Unified Action Model (UAM), which adds a parallel Dorsal Expert, an analog of the brain&#x27;s dorsal pathway. To make the Dorsal Expert an effective second pathway and reduce the control-learning burden on the VLM, we initialize it from a pretrained generative model and train it with a mid-level reasoning objective that predicts visual dynamics. This design allows us to train the whole VLA end-to-end on action data alone: with no parameter freezing, no gradient stopping, and no auxiliary VL co-training, UAM retains over $95\%$ of the underlying VLM&#x27;s multimodal capability and at the same time achieves the highest average success rate among baselines on a variety of manipulation tasks that probe out-of-distribution generalization, including unseen objects, novel object--target compositions, and instruction variation. Together, these results suggest that semantic preservation in VLAs can emerge from architectural separation itself, rather than being enforced by frozen weights or auxiliary data replay, and that this preserved semantic capability can naturally transfer from VLMs to semantic generalization in actions.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2605.15735'>page</a> · <a href='https://arxiv.org/pdf/2605.15735'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Attribute-Grounded Selective Reasoning for Artwork Emotion Understanding with Multimodal Large Language Models</title>
-      <link>https://arxiv.org/abs/2605.15755</link>
-      <guid isPermaLink="false">arxiv:2605.15755</guid>
-      <pubDate>Mon, 18 May 2026 15:17:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford — Cheng Zhang</p>
-<p><b>Authors:</b> Cheng Zhang, Yuer Liu, Zhiyu Zhou, Hongxia Xie, Wen-Huang Cheng</p>
-<p>Multimodal large language models (MLLMs) can produce fluent artwork emotion explanations, but they often suffer from attribute flooding: they enumerate many visible formal attributes without identifying which cues actually support the affective judgment. We therefore formulate artwork emotion understanding as Attribute-Grounded Selective Reasoning (AGSR), where predefined formal attributes serve as evidence units and only emotionally operative attributes should enter the final interpretation. To make this problem measurable, we extend EmoArt, originally introduced at ACM MM 2025 as a 132,664-artwork resource with content, formal-attribute, valence-arousal, and emotion annotations, by adding a 1,400-artwork human salience extension annotated by 15 art-trained annotators. This extension provides instance-level supervision for distinguishing attributes that are merely present from those that are emotionally salient. We further propose FAB-G (Formal-Attribute Bottleneck-Guided reasoning), a supervised multi-agent framework that first predicts attribute-level salience and then constrains downstream emotional analysis to the retained cues. Experiments show that FAB-G yields consistent gains in emotion, arousal, and valence prediction, achieves stronger agreement with human-marked salient attributes under Dice and Tversky metrics, and produces substantially more compact final explanations than prompting-based baselines. Cross-dataset evaluation further suggests that attribute-grounded salience selection transfers beyond the source distribution of EmoArt, while also revealing attribute-specific boundary cases. The dataset and project page are available at https://zhiliangzhang.github.io/EmoArt-130k/</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV · <a href='https://arxiv.org/abs/2605.15755'>page</a> · <a href='https://arxiv.org/pdf/2605.15755'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

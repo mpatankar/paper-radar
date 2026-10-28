@@ -5,8 +5,22 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 27 Oct 2026 09:29:56 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 10:14:57 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>An Embarrassingly Simple Data Selection Strategy for Million-Scale Multi-Modal Instruction-Tuning</title>
+      <link>https://arxiv.org/abs/2503.13383</link>
+      <guid isPermaLink="false">arxiv:2503.13383</guid>
+      <pubDate>Wed, 28 Oct 2026 10:14:57 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> ByteDance Seed · <b>Tier-2 senior:</b> Harvard, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Mengyao Lyu, Yan Li, Huasong Zhong, Hui Chen, Jungong Han, Guiguang Ding, Zhenheng Yang</p>
+<p>Recent research demonstrates that pretrained large language models (LLMs) require minimal but carefully curated data for instruction-tuning. Building on LLMs, multi-modal models further contend with far larger data volumes, heterogeneous sources, and cross-modal alignment, amplifying both the necessity and the complexity of data selection. However, existing methods rely on deeply extracted embeddings, gradients or narrow quality scores that are time-consuming to compute and limited in expressiveness, frequently failing to surpass a simple random-sampling baseline. To overcome these limitations, we step back from complex embedding spaces and target the fundamental objective of instruction tuning: how and what knowledge should be elicited from the pretrained model and exposed to users. We leverage interaction \underline{S}tyles as a proxy for structural diversity, and decompose data quality into capability-specific \underline{S}cores, yielding an explicit yet \underline{R}ich (SSR) profile for each sample. We further cast the selection as submodular coverage maximization over the capability--style grid, providing an approximation guarantee. SSR consistently delivers superior performance across two distinct architecture stacks, LLaVA-1.5 (Vicuna + CLIP) and LLaVA-OneVision (Qwen2 + SigLIP), two large-scale data pools, six data budget settings, and 14 multi-modal benchmarks. To our knowledge, SSR is the first data selection method validated at million-scale, achieving 99.1% of full-data performance using only 30% of a 2.6M pool. Furthermore, the SSR profile models and selected subsets transfer training-free across data pools and model architectures with capability extensibility.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL, cs.LG · <b>arXiv submitted:</b> 2026-10-27 · <a href='https://arxiv.org/abs/2503.13383'>page</a> · <a href='https://arxiv.org/pdf/2503.13383'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>WorldCast: World-Consistent Character Video Generation with Large-Angle Camera Control</title>
       <link>https://huggingface.co/papers/2610.33135</link>
@@ -2330,18 +2344,6 @@
 <p><b>Authors:</b> Fang Wang, Ernesto Damiani</p>
 <p>Structurally constrained event sequence generation remains challenging because generated paths must preserve transition feasibility, temporal order, termination, and attribute consistency. In predictive process monitoring (PPM), this challenge appears as full event sequence generation, whereas existing work mainly addresses component tasks such as next activity, remaining time, outcome, and attribute prediction. This paper proposes the Graph Grounded Cross Attention Transformer Neural Network (GGATN) for this unified PPM task. GGATN uses a global process graph as structured activity memory, contextualizes sequence positions through Transformer self attention, and injects process topology through graph grounded cross attention. Unlike autoregressive decoding, GGATN generates activities, timestamps, length, and event level and sequence level attributes in a single pass, followed by Viterbi style graph constrained decoding for feasible paths and explicit termination. Experiments on six benchmark event logs show more reliable generation quality than local instruction prompted LLM baselines. GGATN achieves strong performance on sequence similarity, Damerau Levenshtein similarity, bigram based control flow similarity, and duration distribution, while maintaining zero hallucinated activities and zero sequence level attribute inconsistency. Ablation analyses confirm the global graph encoder as a stable structural prior. Interpretability analyses show how graph structure, sequence context, feedback refinement, and constrained decoding shape generation.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.18726'>page</a> · <a href='https://arxiv.org/pdf/2606.18726'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SciRisk-Bench: A Risk-Dimension-Aware Benchmark for AI4Science Safety</title>
-      <link>https://arxiv.org/abs/2606.18936</link>
-      <guid isPermaLink="false">arxiv:2606.18936</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, Tsinghua — Yi Zeng</p>
-<p><b>Authors:</b> Linghao Feng, Yinqian Sun, Dongqi Liang, Sicheng Shen, Chenfei Yan, Yuxuan Peng, Yilin Zhao, Haibo Tong, … <i>(+3 more)</i></p>
-<p>Large language models (LLMs) are increasingly embedded in AI for Science (AI4Science) workflows, from scientific question answering and literature analysis to laboratory planning and autonomous discovery. This progress creates an urgent need for safety benchmarks that evaluate not only scientific competence, but also whether models recognize and avoid risks in high-stakes scientific contexts. Existing AI4Science safety datasets cover several disciplines and task formats, leaving the underlying risk dimensions underspecified. We introduce \textbf{SciRisk-Bench}, a benchmark designed to evaluate AI4Science safety from two complementary perspectives: explicit risk dimensions and scientific disciplines. SciRisk-Bench covers 7 disciplines, 31 subdisciplines and 10 risk dimensions. In the experimental section, we evaluate both mainstream LLMs and science-oriented LLMs across risk dimensions, disciplines, and sub-disciplines, enabling fine-grained diagnosis of where scientific models remain unsafe.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2606.18936'>page</a> · <a href='https://arxiv.org/pdf/2606.18936'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
