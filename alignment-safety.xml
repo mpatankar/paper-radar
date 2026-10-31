@@ -5,8 +5,30 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Fri, 30 Oct 2026 10:39:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 10:38:56 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities</title>
+      <link>https://huggingface.co/papers/2610.39301</link>
+      <guid isPermaLink="false">arxiv:2610.39301</guid>
+      <pubDate>Sat, 31 Oct 2026 10:38:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Tencent AI Lab · <b>Tier-2 senior:</b> CUHK, Peking U, Stanford, Tsinghua, U Edinburgh, U Washington — (senior)</p>
+<p><b>Authors:</b> Yunhang Shen, Zhangquan Chen, Xiaotian Li, Zhongpeng Cai, Qing Zhou, Zekai Zhang, Kun Zhang, Zezhong Wu, … <i>(+23 more)</i></p>
+<p>We present Youtu-Parsing-Omni, an omni-modal parser that converts documents, images, audio, and video into structured records grounded in space and time, providing a perception layer for agents that read, locate, and cite evidence across modalities. Its design rests on one encoder for every modality and one schema for every task. Youtu-Omni-Encoder, initialized from a pre-trained language model to strengthen text reading, encodes all modalities with shared weights in a unified space-time coordinate system, and a few fusion layers let video frames attend to concurrent audio, bringing cross-modal fusion and temporal alignment into perception itself. OmniSchema unifies the outputs of all ten parsing tasks, allowing a single self-evolving post-training procedure, OmniSchema-Aware On-Policy Distillation (OSAD), to provide a shared token-role-based objective across tasks. In each round, the model is trained on its own rollouts against token-level targets from a reference-conditioned copy of itself, which is then refreshed with the trained weights, so that the parser and its supervision co-evolve. With a single 5 B-parameter checkpoint, Youtu-Parsing-Omni achieves state-of-the-art performance on OmniDocBench v1.6 (96.96 Overall) and leads all open-weight models on OmniParsingBench (75.08 Avg.), with its advantage concentrated on audio and video. It also achieves the best overall chart-parsing score (95.02) and the highest exact chemical-fingerprint agreement among compared systems, and matches a dedicated optical-music model in character-level transcription of typeset sheet music while staying far ahead of general-purpose systems. Code and model weights are publicly available.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-29 · <a href='https://huggingface.co/papers/2610.39301'>page</a> · <a href='https://arxiv.org/pdf/2610.39301'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Proving and Improving the Platonic Representation Hypothesis with JEPAs</title>
+      <link>https://huggingface.co/papers/2610.39302</link>
+      <guid isPermaLink="false">arxiv:2610.39302</guid>
+      <pubDate>Sat, 31 Oct 2026 10:38:56 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NYU — (senior)</p>
+<p><b>Authors:</b> Randall Balestriero, Yann LeCun, Hugging Face Daily Papers (curated)</p>
+<p>Whether models trained on different modalities converge to the same representation of the world is central to AI. The Platonic Representation Hypothesis (PRH) conjectures that they do as they scale, but without a proof it offers neither a guarantee nor a recipe. We turn the hypothesis into a theorem. First, we prove a Platonic Representation Theorem: Joint-Embedding Predictive Architectures (JEPAs) trained separately on any number of modalities learn the same representation up to one rotation whenever their positive pairs are two observations of one scene--good views--and their misalignment is bounded otherwise. Second, we show that next-token prediction is a JEPA with bad views, parts of a single document, which explains why language models align with vision only through scale. Third, we validate the theory from 145k captions to the texts of 940M web images, and uncover a scaling law of alignment that predicts unseen runs within seed noise. Good views need 42 times fewer training samples than next-token prediction on the same corpus to reach the same alignment, and a 109M-parameter text JEPA aligns with DINOv2 and CLIP&#x27;s image encoders better than every language model we evaluated, up to 72B parameters, and than CLIP&#x27;s text encoder: next-token prediction is a remarkably inefficient route to platonic representations. As a showcase, one rotation turns separately trained encoders into an image captioner (CIDEr .838 on COCO). Even that rotation needs no pair: on the latest pair-free benchmark, our text JEPA beats every zero-shot accuracy reported with language models up to 8B parameters, e.g., 64\% against at most 56\% top-5 on ImageNet-100. Positive views, and not scale alone, are thus the lever to build platonic representations.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-29 · <a href='https://huggingface.co/papers/2610.39302'>page</a> · <a href='https://arxiv.org/pdf/2610.39302'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>How we detect frontier model misalignment</title>
       <link>https://openai.com/index/how-we-detect-frontier-model-misalignment/</link>
@@ -2315,30 +2337,6 @@
 <p><b>Authors:</b> Ji Li, Bo Wang, Jing Xia, Mingyi Li, Shiyan Hu</p>
 <p>Deploying Multimodal Large Language Models as the brain of embodied agents remains challenging, particularly under long-horizon observations and limited context budgets. Existing memory assisted methods often rely on textual summaries, which discard rich visual and spatial details and remain brittle in non-stationary environments. In this work, we propose a non-parametric memory framework that explicitly disentangles episodic and semantic memory for embodied exploration and question answering. Our retrieval-first, reasoning-assisted paradigm recalls episodic experiences via semantic similarity and verifies them through visual reasoning, enabling robust reuse of past observations without rigid geometric alignment. In parallel, we introduce a program-style rule extraction mechanism that converts experiences into structured, reusable semantic memory, facilitating cross-environment generalization. Extensive experiments demonstrate state-of-the-art performance on embodied question answering and exploration benchmarks, yielding a 7.3% gain in LLM-Match and an 11.4% gain in LLM MatchXSPL on A-EQA, as well as +7.7% success rate and +6.8% SPL on GOAT-Bench. Analyses reveal that our episodic memory primarily improves exploration efficiency, while semantic memory strengthens complex reasoning of embodied agents.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI · <b>arXiv submitted:</b> 2026-03-02 · <a href='https://arxiv.org/abs/2602.15513'>page</a> · <a href='https://arxiv.org/pdf/2602.15513'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Practical Anonymous Two-Party Gradient Boosting Decision Tree</title>
-      <link>https://arxiv.org/abs/2605.26903</link>
-      <guid isPermaLink="false">arxiv:2605.26903</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> CUHK, HKUST, NUS — Chenyu Huang</p>
-<p><b>Authors:</b> Chenyu Huang, Fan Zhang, Minxin Du, Sherman S. M. Chow, Huangxun Chen, Huaming Rao, Danqing Huang, Bo Qian, … <i>(+1 more)</i></p>
-<p>Structured data is well handled by gradient-boosted decision trees (GBDT), which are usually trained on vertically partitioned features across mutually distrustful parties. High speed and interpretability make GBDTs popular in finance and healthcare, where neural networks may fall short. Enabling secure computation for GBDTs poses unique challenges, requiring secure record alignment for comparison. Relying on private set intersection (PSI) is a de facto approach. Mistaking PSI for a safety measure actually exposes which record identifiers (IDs) are shared between the datasets. Although circuit-PSI could help, it is costly for generic uses. New ideas are needed to efficiently train in a &quot;dark forest&quot;. Aiming to hide the IDs, we initiate the study of anonymous GBDT training on split data held by two parties. Dual circuit-PSI in our design lets the parties alternate as receiver to run pick-then-sum over local features. Via oblivious programmable pseudorandom functions, we propagate circuit-PSI outputs as shared state across runs. Avoiding universal alignment, we resolve the neglected dilemma that ID hiding incurs a cost that scales with domain size. Next, we halve the cost of ciphertext packing used to convert single-instruction multiple-data homomorphic encryption from (ring) learning with errors in prior secure GBDT (Usenix Security&#x27; 23) and related secure machine-learning computations. Comparative experiments show our protocol remains competitive with leaky approaches in efficiency. Enabling ID-hiding aggregation, our techniques can extend to other vertically partitioned analytics.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-06-17 · <a href='https://arxiv.org/abs/2605.26903'>page</a> · <a href='https://arxiv.org/pdf/2605.26903'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Caring Without Feeling: Affective Dynamics as the Control Layer of Human-AI Agent Collaboration</title>
-      <link>https://arxiv.org/abs/2606.18259</link>
-      <guid isPermaLink="false">arxiv:2606.18259</guid>
-      <pubDate>Thu, 18 Jun 2026 05:37:08 GMT</pubDate>
-      <category>cs.HC</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CUHK, NUS, Tsinghua — Junjie Xu, Liang He</p>
-<p><b>Authors:</b> Junjie Xu, Xingjiao Wu, Zihao Zhang, Yujia Xu, Yuzhe Yang, Jin Zhu, Luwei Xiao, Wen Wu, … <i>(+1 more)</i></p>
-<p>AI agents that plan, retain memory across sessions, invoke external tools and act with partial autonomy are transforming human--AI collaboration. Research on affective computing, simulated empathy in large language models, trust in automation and AI safety has illuminated important design principles, yet these literatures remain fragmented. No integrated account explains how affective cues operate within agentic collaboration -- settings in which humans delegate, monitor and correct consequential tasks. This Review synthesises computational and interactional mechanisms of affective dynamics: the processes through which affective cues, emotion-like behaviour and perceived agent affect shape trust calibration, delegation decisions, error correction, dependence and governance. We trace how model-generated affective signals enter interaction loops that govern reliance, repair and oversight, and propose a framework that treats affect not as an internal property of AI but as a coordination layer through which humans and agents negotiate capability, uncertainty and responsibility. The framework provides a foundation for calibrated measurement, purposeful design and informed governance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI · <b>arXiv submitted:</b> 2026-05-08 · <a href='https://arxiv.org/abs/2606.18259'>page</a> · <a href='https://arxiv.org/pdf/2606.18259'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
