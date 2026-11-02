@@ -5,8 +5,33 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Sun, 01 Nov 2026 10:56:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 11:55:29 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>VisualSphinx: Large-Scale Synthetic Vision Logic Puzzles for RL</title>
+      <link>https://arxiv.org/abs/2505.23977</link>
+      <guid isPermaLink="false">arxiv:2505.23977</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, U Washington — Radha Poovendran</p>
+<p><b>Authors:</b> Yichen Feng, Zhangchen Xu, Fengqing Jiang, Yuetai Li, Bhaskar Ramasubramanian, Luyao Niu, Bill Yuchen Lin, Radha Poovendran</p>
+<p>Vision language models (VLMs) are expected to perform effective multimodal reasoning and make logically coherent decisions, which is critical to tasks such as diagram understanding and spatial problem solving. However, current VLM reasoning lacks large-scale and well-structured training datasets. To bridge this gap, we propose VisualSphinx, a first-of-its-kind large-scale synthetic visual logical reasoning training dataset. To tackle the challenge of image synthesis with grounded answers, we propose a rule-to-image synthesis pipeline that extracts and expands puzzle rules from seed questions and generates executable rendering programs for puzzle assembly. Using standard GRPO with binary correctness rewards as a validation recipe, experiments show that VLMs trained on VisualSphinx benefit from the logical coherence and readability of our dataset and exhibit improved performance on logical reasoning tasks. The enhanced reasoning capabilities developed from VisualSphinx also benefit other reasoning tasks such as algebraic reasoning, arithmetic reasoning and geometry reasoning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://arxiv.org/abs/2505.23977'>page</a> · <a href='https://arxiv.org/pdf/2505.23977'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>On the Faithfulness of Visual Thinking: Measurement and Enhancement</title>
+      <link>https://arxiv.org/abs/2510.23482</link>
+      <guid isPermaLink="false">arxiv:2510.23482</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> ByteDance Seed</p>
+<p><b>Authors:</b> Zujing Liu, Junwen Pan, Qi She, Yuan Gao, Guisong Xia</p>
+<p>Recent large vision-language models (LVLMs) can generate vision-text multimodal chain-of-thought (MCoT) traces after reinforcement fine-tuning (RFT). However, we observe that the visual information in MCoT is often inaccurate even when answers are correct, and task accuracy remains nearly unchanged despite the visual information being corrupted. This indicates a lack of faithfulness in the vision part of MCoT reasoning. We attribute this to the RL reward design in RFT, which solely incentivizes the format of interleaved vision-text cues, encouraging the model to incorporate visual information into its text reasoning steps without considering its correctness. In this paper, we first probe MCoT faithfulness by measuring how much the prediction changes when its visual and textual thoughts are intervened. Surprisingly, the model&#x27;s predictions remain nearly unchanged under visual intervention but change significantly under textual intervention, indicating that the visual evidence is largely ignored. To further analyze the visual information, we introduce an automated LVLM-based evaluation metric that quantifies the faithfulness of visual cues from two perspectives: relevance and sufficiency. Our evaluation reveals that the visual information in current MCoT traces is simultaneously irrelevant and insufficient. To address this issue, we propose Sufficient-Component Cause Model (SCCM) learning. This approach encourages the MCoT to generate sufficient yet minimal visual components that are independently capable of leading to the correct answer. The proposed SCCM is annotation-free and plug-and-play, compatible with various RFT for MCoT. Empirical results demonstrate that SCCM substantially improves the visual faithfulness across a suite of fine-grained perception and reasoning benchmarks. Code is available at https://github.com/EugeneLiu01/Faithful_Thinking_with_Image.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://arxiv.org/abs/2510.23482'>page</a> · <a href='https://arxiv.org/pdf/2510.23482'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>An Embarrassingly Simple Data Selection Strategy for Million-Scale Multi-Modal Instruction-Tuning</title>
       <link>https://arxiv.org/abs/2503.13383</link>
@@ -2555,30 +2580,6 @@
 <p><b>Authors:</b> Xiaolong Fu, Lichen Ma, Zipeng Guo, ShiPing Dong, Lan Yang, Tan Lit Sin, Gaojing Zhou, Yu He, … <i>(+4 more)</i></p>
 <p>The integration of Reinforcement Learning (RL) into flow matching models for text-to-image (T2I) generation has driven substantial advances in generation quality. However, these gains often come at the cost of exhaustive exploration and inefficient sampling strategies due to slight variation in the sampling group. Building on this insight, we propose Dynamic-TreeRPO, which implements the sliding-window sampling strategy as a tree-structured search with dynamic noise intensities along depth. We perform GRPO-guided optimization and constrained Stochastic Differential Equation (SDE) sampling within this tree structure. By sharing prefix paths of the tree, our design effectively amortizes the computational overhead of trajectory search. With well-designed noise intensities for each tree layer, Dynamic-TreeRPO can enhance the variation of exploration without any extra computational cost. Furthermore, we seamlessly integrate Supervised Fine-Tuning (SFT) and RL paradigm within Dynamic-TreeRPO to construct our proposed LayerTuning-RL, reformulating the loss function of SFT as a dynamically weighted Progress Reward Model (PRM) rather than a separate pretraining method. By associating this weighted PRM with dynamic-adaptive clipping bounds, the disruption of exploration process in Dynamic-TreeRPO is avoided. Benefiting from the tree-structured sampling and the LayerTuning-RL paradigm, our model dynamically explores a diverse search space along effective directions. Compared to existing baselines, our approach demonstrates significant superiority in terms of semantic consistency, visual fidelity, and human preference alignment on established benchmarks, including HPS-v2.1, PickScore, and ImageReward. In particular, our model outperforms SoTA by $4.9\%$, $5.91\%$, and $8.66\%$ on those benchmarks, respectively, while improving the training efficiency by nearly $50\%$.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2509.23352'>page</a> · <a href='https://arxiv.org/pdf/2509.23352'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Tuning-free Instruction-based Video Editing Via Structural Noise Initialization and Guidance</title>
-      <link>https://arxiv.org/abs/2605.15533</link>
-      <guid isPermaLink="false">arxiv:2605.15533</guid>
-      <pubDate>Mon, 18 May 2026 15:27:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Song Wu</p>
-<p><b>Authors:</b> Song Wu, Xinyu Chen, Qian Wang, Liang Li, Zili Yi, Junlan Feng</p>
-<p>Video editing poses a significant challenge. While a series of tuning-free methods circumvent the need for extensive data collection and model training, they often underutilize the rich information embedded within noisy latent, leading to unsatisfactory results. To address this, we propose a \textit{tuning-free, instruction-based} video editing framework. We approach video editing from the perspective of noisy latent: we design a Structural Noise Initialization Strategy (SNIS) to secure a superior editing starting point by assigning higher noise levels to edited regions (to facilitate content change) and lower noise levels to unedited regions (to maintain content consistency). We introduce a Noise Guidance Mechanism (NGM), which leverages the video prior in the generative model and effectively integrates rich information within the noisy latent to guide the denoising process, thereby preserving unedited content and overall visual coherence. Experiments show that our proposed method achieves better visual quality and state-of-the-art performance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2605.15533'>page</a> · <a href='https://arxiv.org/pdf/2605.15533'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>UAM: A Dual-Stream Perspective on Forgetting in VLA Training</title>
-      <link>https://arxiv.org/abs/2605.15735</link>
-      <guid isPermaLink="false">arxiv:2605.15735</guid>
-      <pubDate>Mon, 18 May 2026 15:22:16 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST — Jianyu Chen</p>
-<p><b>Authors:</b> Jianke Zhang, Yuanfei Luo, Yucheng Hu, Xiaoyu Chen, Yanjiang Guo, Ziyang Liu, Hongbin Xu, Tian Lan, … <i>(+1 more)</i></p>
-<p>Vision--language--action (VLA) models are typically built by fine-tuning a pretrained vision--language model (VLM) on action data. However, we show that this standard recipe systematically erodes the VLM&#x27;s multimodal competence, a side effect we call the embodiment tax. But do VLAs have to forget? Inspired by the two-stream organization of biological vision, we trace this degradation to a structural bottleneck: current VLAs ask a single encoder to support both language-grounded semantics and control-relevant visual features, whereas biological vision separates recognition and visuomotor control into distinct pathways. Building on this view, we propose the Unified Action Model (UAM), which adds a parallel Dorsal Expert, an analog of the brain&#x27;s dorsal pathway. To make the Dorsal Expert an effective second pathway and reduce the control-learning burden on the VLM, we initialize it from a pretrained generative model and train it with a mid-level reasoning objective that predicts visual dynamics. This design allows us to train the whole VLA end-to-end on action data alone: with no parameter freezing, no gradient stopping, and no auxiliary VL co-training, UAM retains over $95\%$ of the underlying VLM&#x27;s multimodal capability and at the same time achieves the highest average success rate among baselines on a variety of manipulation tasks that probe out-of-distribution generalization, including unseen objects, novel object--target compositions, and instruction variation. Together, these results suggest that semantic preservation in VLAs can emerge from architectural separation itself, rather than being enforced by frozen weights or auxiliary data replay, and that this preserved semantic capability can naturally transfer from VLMs to semantic generalization in actions.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <a href='https://arxiv.org/abs/2605.15735'>page</a> · <a href='https://arxiv.org/pdf/2605.15735'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

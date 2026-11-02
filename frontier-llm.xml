@@ -5,8 +5,152 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Sun, 01 Nov 2026 10:56:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 11:55:29 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Optimizing Anytime Reasoning via Budget Relative Policy Optimization</title>
+      <link>https://arxiv.org/abs/2505.13438</link>
+      <guid isPermaLink="false">arxiv:2505.13438</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> HKUST, NUS — (senior)</p>
+<p><b>Authors:</b> Penghui Qi, Zichen Liu, Tianyu Pang, Chao Du, Wee Sun Lee, Min Lin</p>
+<p>Scaling test-time compute is crucial for enhancing the reasoning capabilities of large language models (LLMs). Existing approaches typically employ reinforcement learning (RL) to maximize a verifiable reward obtained at the end of reasoning traces. However, such methods optimize only the final performance under a large and fixed token budget, which hinders efficiency in both training and deployment. In this work, we present a novel framework, AnytimeReasoner, to optimize anytime reasoning performance, which aims to improve token efficiency and the flexibility of reasoning under varying token budget constraints. To achieve this, we truncate the complete thinking process to fit within sampled token budgets from a prior distribution, compelling the model to summarize the optimal answer for each truncated thinking for verification. This introduces verifiable dense rewards into the reasoning process, facilitating more effective credit assignment in RL optimization. We then optimize the thinking and summary policies in a decoupled manner to maximize the cumulative reward. Additionally, we introduce a novel variance reduction technique, Budget Relative Policy Optimization (BRPO), to enhance the robustness and efficiency of the learning process when reinforcing the thinking policy. Empirical results in mathematical reasoning tasks demonstrate that our method consistently outperforms GRPO across all thinking budgets under various prior distributions, enhancing both training and token efficiency.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://arxiv.org/abs/2505.13438'>page</a> · <a href='https://arxiv.org/pdf/2505.13438'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>VisualSphinx: Large-Scale Synthetic Vision Logic Puzzles for RL</title>
+      <link>https://arxiv.org/abs/2505.23977</link>
+      <guid isPermaLink="false">arxiv:2505.23977</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, U Washington — Radha Poovendran</p>
+<p><b>Authors:</b> Yichen Feng, Zhangchen Xu, Fengqing Jiang, Yuetai Li, Bhaskar Ramasubramanian, Luyao Niu, Bill Yuchen Lin, Radha Poovendran</p>
+<p>Vision language models (VLMs) are expected to perform effective multimodal reasoning and make logically coherent decisions, which is critical to tasks such as diagram understanding and spatial problem solving. However, current VLM reasoning lacks large-scale and well-structured training datasets. To bridge this gap, we propose VisualSphinx, a first-of-its-kind large-scale synthetic visual logical reasoning training dataset. To tackle the challenge of image synthesis with grounded answers, we propose a rule-to-image synthesis pipeline that extracts and expands puzzle rules from seed questions and generates executable rendering programs for puzzle assembly. Using standard GRPO with binary correctness rewards as a validation recipe, experiments show that VLMs trained on VisualSphinx benefit from the logical coherence and readability of our dataset and exhibit improved performance on logical reasoning tasks. The enhanced reasoning capabilities developed from VisualSphinx also benefit other reasoning tasks such as algebraic reasoning, arithmetic reasoning and geometry reasoning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://arxiv.org/abs/2505.23977'>page</a> · <a href='https://arxiv.org/pdf/2505.23977'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Leaner Training, Lower Leakage: Revisiting Memorization in LLM Fine-Tuning with LoRA</title>
+      <link>https://arxiv.org/abs/2506.20856</link>
+      <guid isPermaLink="false">arxiv:2506.20856</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.CR</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST, U Toronto — Baochun Li</p>
+<p><b>Authors:</b> Fei Wang, Baochun Li</p>
+<p>Memorization in large language models (LLMs) makes them vulnerable to data extraction attacks. While pre-training memorization has been extensively studied, fewer works have explored its impact in fine-tuning, particularly for LoRA fine-tuning, a widely adopted parameter-efficient method. In this work, we re-examine memorization in fine-tuning and uncover a surprising divergence from prior findings across different fine-tuning strategies. Factors such as model scale and data duplication, which strongly influence memorization in pre-training and full fine-tuning, do not follow the same trend in LoRA fine-tuning. Using a more relaxed similarity-based memorization metric, we demonstrate that LoRA significantly reduces memorization risks compared to full fine-tuning, while still maintaining strong task performance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL, cs.CR · <b>arXiv submitted:</b> 2025-06-25 · <a href='https://arxiv.org/abs/2506.20856'>page</a> · <a href='https://arxiv.org/pdf/2506.20856'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MLLMEraser: Achieving Test-Time Unlearning in Multimodal Large Language Models through Activation Steering</title>
+      <link>https://arxiv.org/abs/2510.04217</link>
+      <guid isPermaLink="false">arxiv:2510.04217</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> ByteDance Seed, NVIDIA Research · <b>Tier-2 senior:</b> NUS, Peking U — (senior)</p>
+<p><b>Authors:</b> Chenlu Ding, Jiancan Wu, Leheng Sheng, Fan Zhang, Yancheng Yuan, Xiang Wang, Xiangnan He</p>
+<p>Multimodal large language models (MLLMs) have demonstrated remarkable capabilities across vision-language tasks, yet their large-scale deployment raises pressing concerns about memorized private data, outdated knowledge, and harmful content. Existing unlearning approaches for MLLMs typically adapt training-based strategies such as gradient ascent or preference optimization, but these methods are computationally expensive, irreversible, and often distort retained knowledge. In this work, we propose MLLMEraser, an input-aware, training-free framework for test-time unlearning. Our approach leverages activation steering to enable dynamic knowledge erasure without parameter updates. Specifically, we construct a multimodal erasure direction by contrasting adversarially perturbed, knowledge-recall image-text pairs with knowledge-erasure counterparts, capturing both textual and visual discrepancies. To prevent unnecessary interference, we further design an input-aware steering mechanism that adaptively determines when and how the erasure direction should be applied, preserving utility on retained knowledge while enforcing forgetting on designated content. Experiments on LLaVA-1.5 and Qwen-2.5-VL demonstrate that MLLMEraser consistently outperforms state-of-the-art MLLM unlearning baselines, achieving stronger forgetting performance with lower computational cost and minimal utility degradation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://arxiv.org/abs/2510.04217'>page</a> · <a href='https://arxiv.org/pdf/2510.04217'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>On the Faithfulness of Visual Thinking: Measurement and Enhancement</title>
+      <link>https://arxiv.org/abs/2510.23482</link>
+      <guid isPermaLink="false">arxiv:2510.23482</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> ByteDance Seed</p>
+<p><b>Authors:</b> Zujing Liu, Junwen Pan, Qi She, Yuan Gao, Guisong Xia</p>
+<p>Recent large vision-language models (LVLMs) can generate vision-text multimodal chain-of-thought (MCoT) traces after reinforcement fine-tuning (RFT). However, we observe that the visual information in MCoT is often inaccurate even when answers are correct, and task accuracy remains nearly unchanged despite the visual information being corrupted. This indicates a lack of faithfulness in the vision part of MCoT reasoning. We attribute this to the RL reward design in RFT, which solely incentivizes the format of interleaved vision-text cues, encouraging the model to incorporate visual information into its text reasoning steps without considering its correctness. In this paper, we first probe MCoT faithfulness by measuring how much the prediction changes when its visual and textual thoughts are intervened. Surprisingly, the model&#x27;s predictions remain nearly unchanged under visual intervention but change significantly under textual intervention, indicating that the visual evidence is largely ignored. To further analyze the visual information, we introduce an automated LVLM-based evaluation metric that quantifies the faithfulness of visual cues from two perspectives: relevance and sufficiency. Our evaluation reveals that the visual information in current MCoT traces is simultaneously irrelevant and insufficient. To address this issue, we propose Sufficient-Component Cause Model (SCCM) learning. This approach encourages the MCoT to generate sufficient yet minimal visual components that are independently capable of leading to the correct answer. The proposed SCCM is annotation-free and plug-and-play, compatible with various RFT for MCoT. Empirical results demonstrate that SCCM substantially improves the visual faithfulness across a suite of fine-grained perception and reasoning benchmarks. Code is available at https://github.com/EugeneLiu01/Faithful_Thinking_with_Image.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://arxiv.org/abs/2510.23482'>page</a> · <a href='https://arxiv.org/pdf/2510.23482'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TIRx: A Unified Tile Primitive ML Compiler Across Heterogeneous Backends</title>
+      <link>https://arxiv.org/abs/2601.19092</link>
+      <guid isPermaLink="false">arxiv:2601.19092</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.DC</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <category>cs.PL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research · <b>Tier-2 senior:</b> CMU, U Toronto — (senior)</p>
+<p><b>Authors:</b> Bohan Hou, Hongyi Jin, Guanjie Wang, Shushi Hong, Jinqi Chen, Yaxing Cai, Lijie Yang, Zihao Ye, … <i>(+4 more)</i></p>
+<p>Modern ML kernels evolve rapidly with new optimizations and hardware features. ML compiler abstractions must accommodate richer memory hierarchies, more forms of thread cooperation, and increasingly heterogeneous backends while retaining the control required for peak performance. We present TIRx, an ML compiler for GPUs and AI accelerators that exposes these ingredients through explicit interfaces. TIRx introduces an explicit execution-scope abstraction that captures participating hardware teams at multiple granularities. It also uses tensor layouts to map logical tensors to heterogeneous hardware spaces through named axes and shard/replica/offset semantics. Finally, it introduces tile-primitive dispatch, which lowers high-level operations to efficient implementations according to scope, layout, and backend. This design preserves native-level control while automating recurring address calculation, operand preparation, and instruction-loop generation. Our evaluation shows vendor-level performance across the latest GPUs and AI accelerators, while native-code case studies show substantial reductions in low-level implementation code.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.DC, cs.AI, cs.LG, cs.PL · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://arxiv.org/abs/2601.19092'>page</a> · <a href='https://arxiv.org/pdf/2601.19092'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>R^2Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop</title>
+      <link>https://huggingface.co/papers/2610.22740</link>
+      <guid isPermaLink="false">arxiv:2610.22740</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Mingda Zhang, Yun Huang, Qiang Huang, Yanjin Li, Rui Qian, Qichao Zhao, Tiesunlong Shen, Na Zhao, … <i>(+3 more)</i></p>
+<p>In recent years, agentic orchestration has been widely applied to solve complex human tasks. However, existing orchestration learning still faces key challenges, including hand-designed curricula, advantage collapse when a task&#x27;s rollouts all reach the same outcome, and unreliable evaluation signals that judge each skill by one noisy score. To address these challenges, we propose R^2Orch, a new paradigm of Recursive Self-Play Orchestration: an inner loop of self-play that improves the orchestrator on self-chosen tasks, and an outer loop that improves how the inner loop improves. To support this paradigm, we introduce Recursive Learnability, a training objective that rewards a Proposer for choosing tasks whose rollouts keep reaching different outcomes as skills are withdrawn. Built on this objective, we further propose Skill Withdrawal, in which the outer loop withdraws each skill once a controlled evaluation within self-play shows that the orchestrator performs as well without it. Moreover, the two loops form one cycle: failures are distilled into skills, skills into parameters, and withdrawals lead the Proposer to new failures, so the orchestrator moves toward zero-skill deployment. Experimental results on twelve datasets show that R^2Orch consistently outperforms baselines across question answering, math, code, and interactive tasks. Our code is available at https://github.com/beita6969/R2Orch.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.22740'>page</a> · <a href='https://arxiv.org/pdf/2610.22740'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Does Scaling Toward AGI Depend on What System-1 Lets System-2 Execute?</title>
+      <link>https://huggingface.co/papers/2610.39497</link>
+      <guid isPermaLink="false">arxiv:2610.39497</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Qi Wang, Yun Qu, Lizhou Cai, Heming Zou, Haoang Chi, Yiqin Lv, Xiang Li, Haiyan Feng, … <i>(+6 more)</i></p>
+<p>Progress toward artificial general intelligence (AGI) has largely relied on scaling a resource-intensive executive, System-2, through larger models, more data and compute, longer reasoning, and more agents. We ask whether the next stage may come instead from co-designing it with System-1, a lightweight, semantically aware predictor that evaluates candidate interactions before execution, so that System-2 acts only on those worth their cost. Our answer is a qualified yes. We study conditional interaction, a predict--gate--execute--update loop: System-1 estimates each candidate&#x27;s utility, System-2 executes those admitted by an adaptive threshold, and the outcomes update System-1. The loop spans training, test-time reasoning, adaptive decision-making, and agentic tool use, with utility and cost defined by the application. Under ideal screening and equal execution costs, execution compute falls by a factor approaching 1/ρ_u, where ρ_u is the density of utility-relevant interactions (cost-weighted when costs differ); prediction errors, exploration, and distribution shift reduce the saving. We bound selection regret by predictor error and the utility margin. These results motivate our central hypothesis: ρ_u is a measurable coordinate of scaling efficiency and makes informative compute a better description of scaling than total compute.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-29 · <a href='https://huggingface.co/papers/2610.39497'>page</a> · <a href='https://arxiv.org/pdf/2610.39497'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>FrameForge: Harnessing Priors of Video Foundation Models for Unified Image Generation</title>
+      <link>https://huggingface.co/papers/2610.36545</link>
+      <guid isPermaLink="false">arxiv:2610.36545</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yijing Lin, Zhendong Mao, Mengqi Huang, Yuxin Wang, Yongdong Zhang, Hugging Face Daily Papers (curated)</p>
+<p>Unified conditional image generation requires a single model to preserve different aspects of a visual input while producing a target image that follows textual guidance. Pretrained video models provide a promising foundation by encoding visual transformations across time, yet existing approaches typically assign the condition and target to fixed temporal positions. We observe that condition-target relationships vary substantially across generation tasks, while video models naturally encode visual transformations at different temporal scales. This motivates us to model conditional generation through input-adaptive virtual temporal relations. We propose FrameForge, which captures two complementary aspects of such relations. Mixture of Temporal Experts (MoTE) models how far the target lies from the condition by dynamically selecting temporal RoPE experts with different virtual intervals. Chain of Temporal Reasoning (CoTR) models how the condition is transformed into the target through a latent intermediate state, with a reasoning-bottleneck attention mask encouraging information propagation through this pathway. Experiments on DreamBench, COCO2017, and GEdit-Bench show that FrameForge achieves superior performance in subject-driven generation, canny-to-image generation, and image editing among the compared methods.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-27 · <a href='https://huggingface.co/papers/2610.36545'>page</a> · <a href='https://arxiv.org/pdf/2610.36545'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Wizard: Manipulate Any World in Real Time via Agentic Control</title>
+      <link>https://huggingface.co/papers/2610.40339</link>
+      <guid isPermaLink="false">arxiv:2610.40339</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuzhe Wu, Zijun Lin, Yeying Jin, Hugging Face Daily Papers (curated)</p>
+<p>Recent advances in video world models have enabled the generation of increasingly realistic and interactive virtual environments, opening new possibilities for player-customizable gameplay. Agentic frameworks further advance this direction by decoupling explicit game logic and controllable world representations from visual generation. However, existing approaches support only simple game settings and predefined motion patterns, generalize poorly to unseen environments and characters, and offer limited real-time interactivity. In this paper, we introduce Wizard, an agentic game world model that enables real-time, precise control over character motions while generalizing zero-shot across novel scenes, characters, and actions. To achieve this, we construct a diverse dataset spanning 750 scenes and 178 characters, incorporating skeleton and geometry information as structured representations. We leverage these representations as intermediate proxies to condition a video generation model, together with an adaptive masking mechanism that improves alignment between the conditioning signals and generated video rollouts. Furthermore, we introduce an agentic framework that explicitly maintains and updates game states, allowing players to freely configure their virtual worlds and exercise fine-grained control over character motions while preserving visual quality and gameplay consistency. By combining agentic control with structured proxy-based generation, our framework unlocks new possibilities for player-driven game creation with real-time, generalizable, and mechanically consistent world simulation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-29 · <a href='https://huggingface.co/papers/2610.40339'>page</a> · <a href='https://arxiv.org/pdf/2610.40339'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Latent Reasoning in Continuous Space for Unified Multimodal Models</title>
+      <link>https://huggingface.co/papers/2610.42149</link>
+      <guid isPermaLink="false">arxiv:2610.42149</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Byungwoo Jeon, Yoonwoo Jeong, Hyunseok Lee, Minsu Cho, Jinwoo Shin, Hugging Face Daily Papers (curated)</p>
+<p>Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-30 · <a href='https://huggingface.co/papers/2610.42149'>page</a> · <a href='https://arxiv.org/pdf/2610.42149'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multi-Token Prediction Done Right</title>
+      <link>https://huggingface.co/papers/2610.38331</link>
+      <guid isPermaLink="false">arxiv:2610.38331</guid>
+      <pubDate>Mon, 02 Nov 2026 11:55:29 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jayden Teoh, Hugging Face Daily Papers (curated)</p>
+<p>Multi-Token Prediction (MTP) is now a common ingredient in language-model pre-training, as it improves downstream performance and enables faster inference through speculative decoding. We identify a flaw in standard MTP training, in which a residual component of the MTP gradient interferes with both next-token and multi-token learning, increasingly so with scale. Specifically, the MTP cross-entropy gradient can be decomposed exactly into a KL self-distillation term that pulls each MTP head toward the model&#x27;s own next-token prediction (NTP) distribution and improves speculative decoding, and a residual that has a low signal-to-noise ratio and buries the useful KL signal. We introduce the KL gradient-recovery trick: when two distributions share a linear output head, the gradient of their KL divergence can be recovered exactly by combining their cross-entropy gradients through straight-through gradient routing. Unlike minimizing the KL directly, this trick requires no vocabulary-sized logit matrices and is compatible with standard fused cross-entropy kernels. This enables Soft Multi-Token Prediction (Soft-MTP), a one-line code change to MTP that removes the noisy residual and backpropagates only the KL self-distillation signal by reusing the existing NTP and MTP cross-entropy computations. Soft-MTP supports both DeepSeek- and Meta-style MTP, adds no parameters, and incurs no measurable overhead. From 167M to 1.2B parameters, Soft-MTP improves over standard MTP with lower NTP perplexity, faster speculative decoding and higher zero-shot accuracy at every scale, lower MTP perplexity from 689M onward, and stronger math and code reasoning after fine-tuning at 1.2B. Soft-MTP also matches, if not exceeds, direct KL divergence minimization on most metrics. Soft-MTP is, in effect, a free lunch for MTP optimization. Our code can be found at https://github.com/JaydenTeoh/Soft-MTP.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-28 · <a href='https://huggingface.co/papers/2610.38331'>page</a> · <a href='https://arxiv.org/pdf/2610.38331'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>DiLaDiff: Distilled Latent-Augmented Diffusion for Language Modeling</title>
       <link>https://research.nvidia.com/publication/2026-12_diladiff-distilled-latent-augmented-diffusion-language-modeling</link>
@@ -2136,142 +2280,6 @@
 <p><b>Authors:</b> Hanchen Xia, Baoyou Chen, Yutang Ge, Naihao Deng, Senqiao Yang, Zilong Dong, Weihao Yuan, Siyu Zhu, … <i>(+1 more)</i></p>
 <p>Long-horizon agents compact their history to continue within a finite context window, but a textual summary alone may not support every subsequent decision. We introduce REMORY, a neural memory network that supplements the summary with a bounded sequence of soft memory tokens. Given the history and summary, the network learns to generate tokens that help a frozen LLM approximate the continuation it would produce with the full history. The tokens are conditioned on the summary and appended after it, forming an analogue of a residual connection along the sequence dimension. On SummHay, REMORY improves source attribution at nearly unchanged insight coverage and approaches the full-context joint score using only 5.2% of the input positions. Across long-horizon agent benchmarks, Qwen3.8-27B and GLM-5.3-Flash show consistent gains with residual memory. Both models also exhibit substantially fewer repeated tool outputs and tool errors on BrowseComp and Terminal-Bench 2.1.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://huggingface.co/papers/2610.11287'>page</a> · <a href='https://arxiv.org/pdf/2610.11287'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Foundations of Large Language Models</title>
-      <link>https://huggingface.co/papers/2501.09223</link>
-      <guid isPermaLink="false">arxiv:2501.09223</guid>
-      <pubDate>Sat, 10 Oct 2026 10:20:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Tong Xiao, Jingbo Zhu, Hugging Face Daily Papers (curated)</p>
-<p>This is a book about large language models. As indicated by the title, it primarily focuses on foundational concepts rather than comprehensive coverage of all cutting-edge technologies. The book is structured into six main chapters, each exploring a key area: pre-training, generative models, prompting, alignment, inference, and reasoning. It is intended for college students, professionals, and practitioners in natural language processing and related fields, and can serve as a reference for anyone interested in large language models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://huggingface.co/papers/2501.09223'>page</a> · <a href='https://arxiv.org/pdf/2501.09223'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>U-Space: Uncovering When and Why Uncertainty Arises in Language Models</title>
-      <link>https://huggingface.co/papers/2610.09087</link>
-      <guid isPermaLink="false">arxiv:2610.09087</guid>
-      <pubDate>Sat, 10 Oct 2026 10:20:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> MILA — (senior)</p>
-<p><b>Authors:</b> Tobias Braun, Nils Loose, Alexander Herzog, Virginia Ceccatelli, Marcus Rohrbach, Thomas Eisenbarth, Lorenzo Cavallaro, Hugging Face Daily Papers (curated)</p>
-<p>Large language models are informing decisions with ever-higher stakes. As the consequences of their errors grow, a central question becomes harder to ignore: how much can we trust an individual answer? Yet recognizing when to defer remains difficult because language models can present incorrect conclusions with fluent explanations and an authoritative tone. Uncertainty quantification seeks to address this disconnect by estimating the reliability of individual predictions. However, many existing methods require repeated generations or separately trained components, and their scalar estimates do not reveal where uncertainty arises or how it evolves during reasoning. Recent work has also shown that generation length can be strongly associated with uncertainty estimates and correctness, raising the question of how much of an estimator&#x27;s predictive power comes from uncertainty-specific information rather than output length alone. Mechanistic interpretability offers a way to address these limitations by connecting human-interpretable concepts to intermediate model states. Building on this capability, we introduce the U-Space, a low-dimensional subspace that makes a model&#x27;s evolving uncertainty measurable and interpretable. We identify semantic anchors for doubt and certainty, map their unembedding directions back into the residual space, and combine their contrasts into an orthogonal basis. The U-Lens projects each token state onto these basis vectors, yielding an interpretable token-level uncertainty map that can be inspected directly or aggregated into a scalar uncertainty score. Our approach requires no correctness labels, repeated generations, or training. Across reasoning benchmarks, its confidence score outperforms established baselines under both standard and length-controlled evaluation and transfers more reliably than supervised estimators. Code: https://github.com/s2labres/U-Space.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-06 · <a href='https://huggingface.co/papers/2610.09087'>page</a> · <a href='https://arxiv.org/pdf/2610.09087'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>TestPrism: Rethinking Test Evaluation Beyond a Single Reference</title>
-      <link>https://huggingface.co/papers/2610.12289</link>
-      <guid isPermaLink="false">arxiv:2610.12289</guid>
-      <pubDate>Sat, 10 Oct 2026 10:20:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Caltech, Peking U — Han Li</p>
-<p><b>Authors:</b> Han Li, Lingxiang Hu, Jiacheng Huang, Ziqian Jiang, Jingkai Luo, Wei Gao, Yunfan Tan, Zun Wang, … <i>(+2 more)</i></p>
-<p>Large language model (LLM) coding agents have advanced test generation across diverse programming tasks. However, the common practice of evaluating tests against a single reference solution overlooks alternative valid implementations and can overstate test quality. We introduce TestPrism, comprising 300 test tasks from 17 sources and 3000 candidate implementations, evenly split between valid and invalid solutions. Its primary metric, Joint Success Function, requires the generated tests to fail on the initial program state, accept every valid candidate, and reject every invalid candidate. Across fourteen baseline coding agent configurations, Joint Success Function reaches only 28.00%, whereas single reference success reaches 59.67%. Our analysis reveals missed behaviors, unsupported assertions, and faulty test construction. To address these weaknesses, we introduce TestHelix, which combines heterogeneous synthesis of test and repair pairs with peer cross validation and recursive self improvement (RSI). Across two models, TestHelix improves Joint Success Function by 8.67 to 9.00 percentage points over the native harness comparators in the TestHelix evaluation</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://huggingface.co/papers/2610.12289'>page</a> · <a href='https://arxiv.org/pdf/2610.12289'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks</title>
-      <link>https://huggingface.co/papers/2610.11794</link>
-      <guid isPermaLink="false">arxiv:2610.11794</guid>
-      <pubDate>Sat, 10 Oct 2026 10:20:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Georgia Tech — (senior)</p>
-<p><b>Authors:</b> Haoyu Zhao, Zhengxu Yu, Zhiyuan He, Meng Fang, Rasul Tutunov, Haitham Bou-Ammar, Weilin Luo, Jun Wang, … <i>(+1 more)</i></p>
-<p>Learning to act in unfamiliar environments requires agents to infer how the world works and revise that understanding as new evidence arrives. Yet limited observations can support multiple world models that explain past interactions but predict different outcomes in unseen states. We introduce Memento 3, building on the Memento series to enable frozen LLM agents to continually learn explicit world models through external memory. The agent maintains a natural-language rulebook as persistent semantic memory, recording revisable hypotheses about environment dynamics while leaving unknown aspects underspecified. It compiles this rulebook into executable code for prediction and planning. Through a continual loop of observation, reflection, rule revision, compilation, and verification, the agent uses prediction errors to refine both the rulebook and its code. Updated code is accepted only when the LLM judges it faithful to the rulebook and cell-exact replay reproduces the observed transitions. We investigate this process as a model-based route to recursive self-improvement (RSI): the agent autonomously explores the environment, revises its world model, and uses verified updates to guide subsequent interaction and learning, while the underlying LLM remains fixed. A population extension maintains multiple world models in parallel, sharing interaction evidence and using their predictions to guide exploration. On ARC-AGI-3, the single-model agent clears every level of all 25 public games, achieves a mean Relative Human Action Efficiency (RHAE) of 100.0, and uses 44% of the human action count. In an Atari Pong case study, a learned feedback controller wins 21:0 in each of three evaluated episodes with different openings, without further LLM calls.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://huggingface.co/papers/2610.11794'>page</a> · <a href='https://arxiv.org/pdf/2610.11794'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Post-Training Frontier Text-to-Image Models by Composing Preference and Rubric Rewards</title>
-      <link>https://huggingface.co/papers/2610.02967</link>
-      <guid isPermaLink="false">arxiv:2610.02967</guid>
-      <pubDate>Sat, 10 Oct 2026 10:20:50 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Yuanhao Ban, I-Hung Hsu, Anastasios Angelopoulos, Wei-Lin Chiang, Ion Stoica, Cho-Jui Hsieh, Hugging Face Daily Papers (curated)</p>
-<p>Recent text-to-image generation models have achieved remarkable visual quality, but improving them through post-training remains challenging because no single reward signal captures the full range of human preference. In this work, we develop a simple and effective post-training recipe for open-domain text-to-image generation based on the composition of complementary reward signals. Our reward system consists of two main components: a preference reward, trained on large-scale human preference data using a Bradley-Terry objective to capture overall human aesthetic and perceptual preferences, and rubric-based rewards, which explicitly evaluate prompt faithfulness and other desirable properties while providing safeguards against reward hacking. A key challenge is how to combine these heterogeneous reward signals. We show that a naive weighted average leads to suboptimal optimization behavior, and propose a simple reward composition strategy that more effectively balances preference optimization with rubric satisfaction. In the Arena text-to-image leaderboard (https://arena.ai/), our RL-trained Flux2dev achieves an Elo rating 69 points above the base model, and our post-trained Ideogram-4 surpasses every open-source model on the leaderboard, reaching an Elo of 1223.5. (Claims of state-of-the-art performance are based on the Arena leaderboard snapshot as of September 4, 2026.) Our results suggest that effective rewards for frontier generative-model training require broad coverage of user intent and robustness to exploitation under optimization. To support reproducible research, we release Arena-T2I-Training, a 1K subset of training data that recovers some gains of full-scale training, providing a resource that we hope will facilitate future work on post-training for text-to-image models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-02 · <a href='https://huggingface.co/papers/2610.02967'>page</a> · <a href='https://arxiv.org/pdf/2610.02967'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Machine learning and information theory concepts towards an AI Mathematician</title>
-      <link>https://arxiv.org/abs/2403.04571</link>
-      <guid isPermaLink="false">arxiv:2403.04571</guid>
-      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, MILA, U Edinburgh, U Montreal — Yoshua Bengio</p>
-<p><b>Authors:</b> Yoshua Bengio, Esmeralda S. Whitammer</p>
-<p>The current state-of-the-art in artificial intelligence is impressive, especially in terms of mastery of language, but not so much in terms of mathematical reasoning. What could be missing? Can we learn something useful about that gap from how the brains of mathematicians go about their craft? This essay builds on the idea that current deep learning mostly succeeds at system 1 abilities -- which correspond to our intuition and habitual behaviors -- but still lacks something important regarding system 2 abilities -- which include reasoning and robust uncertainty estimation. It takes an information-theoretical posture to ask questions about what constitutes an interesting mathematical statement, which could guide future work in crafting an AI mathematician. The focus is not on proving a given theorem but on discovering new and interesting conjectures. The central hypothesis is that a desirable body of theorems better summarizes the set of all provable statements, for example by having a small description length while at the same time being close (in terms of number of derivation steps) to many provable statements.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://arxiv.org/abs/2403.04571'>page</a> · <a href='https://arxiv.org/pdf/2403.04571'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Policy Learning with a Language Bottleneck</title>
-      <link>https://arxiv.org/abs/2405.04118</link>
-      <guid isPermaLink="false">arxiv:2405.04118</guid>
-      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> MIT, Stanford — Jacob Andreas</p>
-<p><b>Authors:</b> Megha Srivastava, Cedric Colas, Dorsa Sadigh, Jacob Andreas</p>
-<p>Modern AI systems such as self-driving cars and game-playing agents can achieve superhuman performance, but often lack human-like generalization, interpretability, and inter-operability with human users. Inspired by the rich interactions between language and decision-making in humans, we introduce Policy Learning with a Language Bottleneck (PLLB), a framework enabling AI agents to generate linguistic rules that capture the high-level strategies underlying rewarding behaviors. PLLB alternates between a *rule generation* step guided by language models, and an *update* step where agents learn new policies guided by rules, even when a rule is insufficient to describe an entire complex policy. Across five diverse tasks, including a two-player signaling game, maze navigation, image reconstruction, and robot grasp planning, we show that PLLB agents are not only able to learn more interpretable and generalizable behaviors, but can also share the learned rules with human users, enabling more effective human-AI coordination. We provide source code for our experiments at https://github.com/meghabyte/bottleneck .</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://arxiv.org/abs/2405.04118'>page</a> · <a href='https://arxiv.org/pdf/2405.04118'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Attention when you need</title>
-      <link>https://arxiv.org/abs/2501.07440</link>
-      <guid isPermaLink="false">arxiv:2501.07440</guid>
-      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
-      <category>q-bio.NC</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research · <b>Tier-2 senior:</b> CMU, Columbia — (senior)</p>
-<p><b>Authors:</b> Grayson Matthew, Lokesh Boominathan, Yizhou Chen, Matthew McGinley, Xaq Pitkow</p>
-<p>Paying attention improves performance, but attention is metabolically costly, so how should a resource-efficient agent allocate it? We study optimal allocation strategies using a normative model of a signal detection task in which attention comes at a cost. The model reveals that optimal attention is temporally structured in one of two patterns depending on task conditions: when attention costs penalize intense focus, optimal attention ramps up as evidence for the signal accumulates, but with less prohibitive attention costs, optimal attention fluctuates rhythmically. In cases with rhythmic attention, allocation frequency increases with task parameters such as reward magnitude for successful detection, signal brevity, and signal frequency. We argue that rhythmic attention emerges naturally in an agent whose belief updates are dominated by a stable temporal prior and not by the likelihood of new sensory observations. Our results characterize the conditions under which rhythmic vs. ramping attention is optimal and offer a normative account of attentional fluctuations observed in sustained attention tasks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> q-bio.NC, cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://arxiv.org/abs/2501.07440'>page</a> · <a href='https://arxiv.org/pdf/2501.07440'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Measuring Combinatorial Creativity in Large Language Models and Humans</title>
-      <link>https://arxiv.org/abs/2509.21043</link>
-      <guid isPermaLink="false">arxiv:2509.21043</guid>
-      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Princeton, Stanford, U Michigan — James A. Evans</p>
-<p><b>Authors:</b> Samuel Schapiro, Akshay K. Jagadish, Alexi Gladstone, Qiawen Ella Liu, Sumuk Shashidhar, Jonah Black, Royce Moon, Dilek Hakkani-Tur, … <i>(+6 more)</i></p>
-<p>Combinatorial creativity, the process of combining familiar ideas in unfamiliar ways, is one of the foremost engines of scientific, technological, and artistic progress. This work introduces Kombine, an LLM benchmark for combinatorial creativity tasking models to discover surprising, original, and useful associations, analogies, and blends between unrelated entities, and to use those analogies and blends to invent novel concepts by re-combining the parts of existing ones. In a large-scale study across 35 LLMs, we find that: (1) LLMs are 10-16 percentage points better at discovering associations and analogies than blends, and (2) exhibit an abstraction bottleneck on blending, in which even frontier LLMs struggle to find a shared abstraction between inputs and instantiate a coherent blended space. (3) LLMs also exhibit inventive homogeneity, in which one in five concepts invented for a given item reuses properties invented by another model. Moreover, (4) models are $14\times$ more likely to reuse other invented properties on blends than analogies, and (5) models from the same provider are $2.3\times$ more likely to reuse properties than those from different providers. Next, in a comparative study involving 75 humans on the same tasks, we find that (6) humans score below nearly every LLM on each task and (7) both humans and LLMs find blending most difficult, but association is easier than analogy for LLMs, while analogy is easier than association for humans. Lastly, (8) humans and LLMs access distinct regions of semantic space on each task, suggesting that combinatorial creativity could benefit from systematic human-AI collaboration to enhance conceptual diversity. In summary, we provide a framework to assess progress towards LLMs, AI systems, and human-AI collaborations more broadly, that can elicit combinatorial creativity in a setting relevant to scientific and technological innovation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-07 · <a href='https://arxiv.org/abs/2509.21043'>page</a> · <a href='https://arxiv.org/pdf/2509.21043'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Proof-of-Use: Mitigating Tool-Call Hacking in Deep Research Agents</title>
-      <link>https://arxiv.org/abs/2510.10931</link>
-      <guid isPermaLink="false">arxiv:2510.10931</guid>
-      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Jun wang</p>
-<p><b>Authors:</b> Shengjie Ma, Chenlong Deng, Jiaxin Mao, Jiadeng Huang, Teng Wang, Junjie Wu, Changwang Zhang, Jun wang</p>
-<p>While reinforcement learning (RL) enhances their ability to plan and reason across retrieval steps, we identify a critical failure mode in this setting: Tool-Call Hacking. Unlike execution-based tools (e.g., code or math), whose effects are directly observable, the weak observability of causal dependencies between retrieved evidence and reasoning under format- and outcome-level supervision enables agents to maximize surface-level reward signals without genuinely grounding their reasoning in the returned evidence. This leads to distinctive pathologies, including mode collapse via tool overuse and hallucinated tool usage where tool calls are largely decorative. To address this issue, we propose Proof-of-Use (PoU), an evidence grounded RL framework that explicitly optimizes the causal dependency from retrieval to reasoning and final answers. PoU re-fomulate a fine-grained stepwise interaction protocol in which agents must auditably cite normalized evidence identifiers. We operationalize this via a multi-objective reward design consisting of: (1) two progressive process rewards that constrain citation validity at intermediate steps; (2) a global Answer--Support Alignment reward that enforces consistency between final answers and retrieved evidence; and (3) a curriculum-style adaptive reward mixing mechanism that smoothly transitions agents from dense process supervision to sparse outcome-based objectives. Extensive experiments show the strong performance of PoU and demonstrate the effectiveness in mitigating tool-call hacking. Beyond this, PoU exhibits a notable emergent property: adaptive and robust tool-usage patterns naturally arise under domain and tool shifts, even though PoU does not explicitly optimize for tool adaptation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://arxiv.org/abs/2510.10931'>page</a> · <a href='https://arxiv.org/pdf/2510.10931'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>From Traces to Agentic Worlds: Agentic Language World Models for Interactive Environment Simulation</title>
-      <link>https://huggingface.co/papers/2610.06100</link>
-      <guid isPermaLink="false">arxiv:2610.06100</guid>
-      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Quanyu Long, Xiao Chen, Jianda Chen, Haozhen Zhang, Qisheng Hu, Jianzhu Bao, Wenya Wang, Hugging Face Daily Papers (curated)</p>
-<p>Realistic environment replicas are increasingly valuable for training and evaluating LLM agents, yet the original systems may be inaccessible or impractical to reproduce. We explore agentic language world modeling: rather than rebuilding an executable environment, a world model agent serves as the environment for a task agent and supports faithful and stateful simulation. We instantiate this paradigm with Trace2Env, a learning-free framework for settings where the original system is unavailable but historical interaction traces remain accessible. Trace2Env reconstructs these traces into a reusable environment worldbook containing environment schemas, grounded evidence, and induced behavioral knowledge. At runtime, the world model agent actively consults the worldbook together with persistent episodic state to infer each action&#x27;s observation and lasting state effects. Across nine environments, Trace2Env improves both next-observation fidelity and long-horizon interaction consistency over conventional prompt-based LWMs. In multi-turn interaction, task agent actions generated against Trace2Env remain valid more often when replayed in the real environment, indicating that its simulated dynamics better preserve the consequences of earlier actions across successive turns. These results establish agentic language world modeling as an alternative direction for building realistic environment replicas without reconstructing the original executable system.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-05 · <a href='https://huggingface.co/papers/2610.06100'>page</a> · <a href='https://arxiv.org/pdf/2610.06100'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments?</title>
-      <link>https://huggingface.co/papers/2610.08215</link>
-      <guid isPermaLink="false">arxiv:2610.08215</guid>
-      <pubDate>Fri, 09 Oct 2026 11:04:49 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yibo Li, Jinhang Qiu, Zhi Zheng, Qianyun Guo, Jiaying Wu, Shuo Ji, Bryan Hooi, Hugging Face Daily Papers (curated)</p>
-<p>Learning from experience is essential for LLM agents to adapt to unfamiliar and dynmaic environments. Evaluating this ability is therefore important for understanding how effectively agents acquire and use new knowledge. Existing benchmarks have sought to evaluate this ability, but they primarily evaluate tasks whose rules are provided in the instructions or already familiar to pretrained models, making it difficult to distinguish learning from interactions from reasoning with existing knowledge. To address this, we introduce Learn2Play Bench, a benchmark of newly designed text-based games, whose rules are novel or counterintuitive, requiring agents to acquire knowledge through interaction rather than rely solely on pretrained knowledge. These games provide reproducible feedback and automatic scoring, enabling controlled evaluation of learning across repeated attempts. We also vary game instances to test whether agents can apply what they have learned to new situations. Therefore, we evaluate how backbone models, self-evolving methods, and agent harnesses affect agents&#x27; learning ability, revealing three findings: (1) Experience retention: Retaining complete records of actions and feedback can support more effective learning than summarizing these experiences into rules or strategies. (2) Human agent gap: Top-performing human players achieve higher peak scores than the evaluated agents. Human explore more varied strategies, and repeat actions less. (3) Harness matters: With the backbone fixed, changing the harness can improve performance while reducing estimated inference cost. Together, these findings provide insights into how LLM agents learn from experience and suggest directions for future work to improve their learning ability. Project website: https://liushiliushi.github.io/learn2play-bench-website/</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-08 · <a href='https://huggingface.co/papers/2610.08215'>page</a> · <a href='https://arxiv.org/pdf/2610.08215'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
