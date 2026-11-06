@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 05 Nov 2026 12:47:28 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 12:48:21 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Halley: A Predictive Control Plane for Optical AI Data Center Networks</title>
+      <link>https://huggingface.co/papers/2611.04408</link>
+      <guid isPermaLink="false">arxiv:2611.04408</guid>
+      <pubDate>Fri, 06 Nov 2026 12:48:21 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Manav Mishra, Krishna M. Sivalingam, Hugging Face Daily Papers (curated)</p>
+<p>A frontier AI model is trained in an AI data center, on tens of thousands of accelerators joined by a dedicated network, and every training step ends with all of them exchanging data at once. Between racks, that network is optical, and each of its four layers, from lasers to switches, runs a fixed or after-the-fact policy. Lasers sharing an enclosure, cooling, and power can fail together. At a fixed spare ratio, correlated failure provably caps a pool&#x27;s availability however large it grows. In this paper, we present a comprehensive predictive control plane framework, called Halley, that reads each resource&#x27;s next state and acts before the failure occurs. It has four components, each carrying a formal guarantee: LightReserve that sizes the laser pool to provide a coverage bound, FoldFit that schedules the switch within 11/9 of the optimal, ThermaLead that holds a microring with one-step-ahead control, and TriageGuard that protects the highest-risk modules first. Halley gives each layer a predictive controller that defers to the deployed policy when unsure. Composed from simulations at that point, effective goodput, the share of ideal throughput kept, rises from 65.2\% to 76.5\% if a window that exhausts its spares is lost. If only the dark channels&#x27; bandwidth is lost, it reaches 67.4\%. Per megawatt, that is up to 1.03--1.17 times the training; for the same training, up to 3.3--14.7\% less data center capacity. Halley&#x27;s fallback circuits are formally verified and are shown to achieve close timing on a commercial FPGA, and pass a 130~nm signoff.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-03 · <a href='https://huggingface.co/papers/2611.04408'>page</a> · <a href='https://arxiv.org/pdf/2611.04408'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Fundamental ResearchMechanistic AlignmentShaping and Monitoring Models Through Their Internal RepresentationsFel et al.Â·November 5, 2026</title>
       <link>https://www.goodfire.ai/research/mechanistic-shaping</link>
@@ -2322,18 +2333,6 @@
 <p><b>Authors:</b> Jinghong Lan, Wei Cheng, Yunuo Chen, Ziqi Ye, Peng Xing, Yixiao Fang, Rui Wang, Yufeng Yang, … <i>(+6 more)</i></p>
 <p>Style-content dual-reference generation aims to synthesize an image that preserves the structure and semantics of a content reference while adopting the style of a separate style reference.Despite recent progress, this setting remains challenging because models must balance content fidelity, style alignment, and instruction following avoiding semantic leakage from the style reference.A key bottleneck is the lack of large-scale triplet data with clean content-style separation and broad long-tail style coverage.In this work, we propose FreeStyle, a scalable dual-reference generation framework based on community LoRA mining.We treat community LoRAs as compositional anchors for style and content, and design a rigorous generation and filtering pipeline to construct large-scale Style-Reference and Content-Reference triplets across multiple base models.To address content leakage, we adopt a two-stage curriculum with stage-specific disentanglement mechanisms: an attention-level enrichment constraint that suppresses style-reference leakage in the style-transfer stage, and a frequency-aware RoPE modulation strategy that targets positional-correspondence-based leakage in the harder dual-reference stage.We also introduce a benchmark covering both style-reference and dual-reference generation, with evaluations on style similarity, content preservation, aesthetics, instruction following, and leakage rejection. The benchmark incorporates a style-invariant Content Alignment Score (CAS) and introduces a calibrated VLM-based Rejection Score for evaluating generation reliability and leakage suppression.Extensive experiments show that our model achieves a strong balance among style alignment, content preservation, and leakage suppression.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://huggingface.co/papers/2606.20506'>page</a> · <a href='https://arxiv.org/pdf/2606.20506'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>One Probe Won&#x27;t Catch Them All: Towards Targeted Deception Detection</title>
-      <link>https://arxiv.org/abs/2602.01425</link>
-      <guid isPermaLink="false">arxiv:2602.01425</guid>
-      <pubDate>Fri, 19 Jun 2026 05:45:29 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research · <b>Tier-2 senior:</b> UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Vikram Natarajan, Devina Jain, Shivam Arora, Satvik Golechha, Joseph Bloom</p>
-<p>Linear probes are a promising approach for monitoring AI systems for deceptive behaviour. Previous work has shown that a linear classifier trained on a contrastive instruction pair and a simple dataset can achieve good performance. However, these probes exhibit notable failures even in straightforward scenarios, including spurious correlations and false positives on non-deceptive responses. In this paper, we demonstrate that deception detection is inherently heterogeneous: while a single universal probe achieves modest improvements (+0.032 AUC), post-hoc oracle analysis reveals substantially higher potential (+0.108 AUC) when probes are matched to specific deception types, and synthetic validation experiments suggest this ceiling is achievable a priori when the deception type is known in advance. Our findings reveal that instruction pairs capture deceptive intent rather than content-specific patterns, explaining why prompt choice dominates probe performance (70.6% of variance). Given this heterogeneity, we conclude that organizations should define their specific threat models and deploy appropriately matched probes rather than seeking a universal deception detector.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-06-18 · <a href='https://arxiv.org/abs/2602.01425'>page</a> · <a href='https://arxiv.org/pdf/2602.01425'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
