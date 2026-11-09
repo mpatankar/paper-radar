@@ -5,8 +5,21 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Sun, 08 Nov 2026 12:00:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 12:43:09 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Align Your Query: Representation Alignment for Multimodality Medical Object Detection</title>
+      <link>https://arxiv.org/abs/2510.02789</link>
+      <guid isPermaLink="false">arxiv:2510.02789</guid>
+      <pubDate>Mon, 09 Nov 2026 12:43:09 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Jong Chul Ye</p>
+<p><b>Authors:</b> Ara Seo, Bryan Sangwoo Kim, Hyungjin Chung, Jong Chul Ye</p>
+<p>Medical object detection suffers when a single detector is trained on mixed medical modalities (e.g., CXR, CT, MRI) due to heterogeneous statistics and disjoint representation spaces. To address this challenge, we turn to representation alignment, an approach that has proven effective for bringing features from different sources into a shared space. Specifically, we target the representations of DETR-style object queries and propose a simple, detector-agnostic framework to align them with modality context. First, we define modality tokens: compact, text-derived embeddings encoding imaging modality that are lightweight and require no extra annotations. We integrate the modality tokens into the detection process via Multimodality Context Attention (MoCA), mixing object-query representations via self-attention to propagate modality context within the query set. This preserves DETR-style architectures and adds negligible latency while injecting modality cues into object queries. We further introduce QueryREPA, a short pretraining stage that aligns query representations to their modality tokens using a task-specific contrastive objective with modality-balanced batches. Together, MoCA and QueryREPA produce modality-aware, class-faithful queries that transfer effectively to downstream training. Across diverse modalities trained altogether, the proposed approach consistently improves AP with minimal overhead and no architectural modifications, offering a practical path toward robust multimodality medical object detection.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-11-06 · <a href='https://arxiv.org/abs/2510.02789'>page</a> · <a href='https://arxiv.org/pdf/2510.02789'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>LSD-3D: Large-Scale 3D Driving Scene Generation with Geometry Grounding</title>
       <link>https://arxiv.org/abs/2508.19204</link>
@@ -2568,18 +2581,6 @@
 <p><b>Authors:</b> Yujie Xiao, Qinghao Zhao, Gongzheng Tang, Hao Zhang, Zhuoran Kan, Deyun Zhang, Jun Li, Guangkun Nie, … <i>(+7 more)</i></p>
 <p>CAD remains a major global public health burden, yet scalable screening tools are limited. Although CCTA is a first-line non-invasive diagnostic modality, its use is constrained by resource requirements and radiation exposure. AI-ECG may offer a complementary approach for CAD risk stratification. In this multicenter study, we developed and validated an AI-ECG model using CCTA as the anatomical reference standard to predict vessel-specific coronary stenosis. In internal validation, the model achieved AUC values of 0.683-0.744 across vessels and showed consistent external performance. Discrimination was maintained in clinically normal ECGs and remained broadly stable across subgroups. Model-predicted probabilities increased monotonically with CCTA-defined stenosis severity. Model probabilities were converted into vessel-specific low-, intermediate-, and high-risk strata using predefined sensitivity- and specificity-based thresholds. Calibration analysis showed agreement between predicted and observed risk, while DCA indicated net clinical benefit over treat-all and treat-none strategies. Integrating AI-derived risk strata with guideline-based PTP categories improved rule-out performance, reduced the gray-zone proportion, and achieved positive NRI compared with PTP alone. In a longitudinal follow-up cohort, Kaplan-Meier analysis showed clear separation of major adverse cardiovascular event risk across model-defined risk groups. Waveform- and attribution-based analyses further identified structured ECG morphology differences and physiologically meaningful signal regions associated with high-risk predictions. These findings support AI-ECG as a feasible tool for complementary CAD screening, anatomical risk estimation, and clinical triage, while prospective studies are needed to confirm its clinical impact.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2512.05136'>page</a> · <a href='https://arxiv.org/pdf/2512.05136'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Watching, Reasoning, and Searching: A Video Deep Research Benchmark on Open Web for Agentic Video Reasoning</title>
-      <link>https://arxiv.org/abs/2601.06943</link>
-      <guid isPermaLink="false">arxiv:2601.06943</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab · <b>Tier-2 senior:</b> Peking U, TU Munich — (senior)</p>
-<p><b>Authors:</b> Chengwen Liu, Xiaomin Yu, Zhuoyue Chang, Zhe Huang, Shuo Zhang, Heng Lian, Jisheng Dang, Rui Xu, … <i>(+10 more)</i></p>
-<p>In real-world video question answering scenarios, videos often provide only localized visual cues, while verifiable answers are distributed across the open web; models therefore need to jointly perform cross-frame clue extraction, iterative retrieval, and multi-hop reasoning-based verification. To bridge this gap, we construct the first video deep research benchmark, VideoDR. VideoDR centers on video-conditioned open-domain video question answering, requiring cross-frame visual anchor extraction, interactive web retrieval, and multi-hop reasoning over joint video-web evidence; through rigorous human annotation and quality control, we obtain high-quality video deep research samples spanning six semantic domains. We evaluate multiple closed-source and open-source multimodal large language models under both the Workflow and Agentic paradigms, and the results show that Agentic is not consistently superior to Workflow: its gains depend on a model&#x27;s ability to maintain the initial video anchors over long retrieval chains. Further analysis indicates that goal drift and long-horizon consistency are the core bottlenecks. In sum, VideoDR provides a systematic benchmark for studying video agents in open-web settings and reveals the key challenges for next-generation video deep research agents.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2601.06943'>page</a> · <a href='https://arxiv.org/pdf/2601.06943'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
