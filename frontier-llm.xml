@@ -5,8 +5,135 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Mon, 09 Nov 2026 12:43:09 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 12:29:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>HARDTESTGEN: A High-Quality RL Verifier Generation Pipeline for LLM Algorithmic Coding</title>
+      <link>https://arxiv.org/abs/2505.24098</link>
+      <guid isPermaLink="false">arxiv:2505.24098</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU — Lei Li</p>
+<p><b>Authors:</b> Zhongmou He, Yee Man Choi, Kexun Zhang, Jiabao Ji, Junting Zhou, Dejia Xu, Ivan Bercovich, Aidan Zhang, … <i>(+2 more)</i></p>
+<p>Verifiers provide important reward signals for reinforcement learning of large language models (LLMs). However, it is challenging to develop or create reliable verifiers, especially for code generation tasks. A well-disguised wrong solution program may only be detected by carefully human-written edge cases that are difficult to synthesize automatically. To address this issue, we propose HARDTESTGEN, an approach to synthesize high-quality test cases for algorithmic coding problems. We curate a comprehensive algorithmic programming dataset HARDTESTS with 26.6k problems and high-quality synthetic tests. Compared with existing tests, HARDTESTGEN tests demonstrate significantly higher accuracy in verifying LLM-generated code (+11.22 percentage points in precision, the percentage of actually correct code within the predicted correct ones). We also show that downstream post-training -- including rejection sampling and reinforcement learning (RL) -- using HARDTESTS verifier results in improved performance of LLM code generation. We open-source our dataset and synthesis pipeline at https://leililab.github.io/HardTests/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL · <b>arXiv submitted:</b> 2026-11-08 · <a href='https://arxiv.org/abs/2505.24098'>page</a> · <a href='https://arxiv.org/pdf/2505.24098'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Stabilizing Knowledge, Promoting Reasoning: Dual-Token Constraints for RLVR</title>
+      <link>https://arxiv.org/abs/2507.15778</link>
+      <guid isPermaLink="false">arxiv:2507.15778</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Peking U, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Runze Liu, Jiakang Wang, Fuzheng Zhang, Xiu Li, Guorui Zhou, Kun Gai, Ling Pan</p>
+<p>Reinforcement Learning with Verifiable Rewards (RLVR) has become an effective post-training method for improving the reasoning abilities of Large Language Models (LLMs). However, existing methods mainly apply uniform optimization constraints across all tokens, ignoring their heterogeneous roles. Prior work shows that high-entropy tokens are closely tied to reasoning, while low-entropy tokens primarily encode factual knowledge, and recent approaches attempt to exploit this distinction by isolating token updates via masking or asynchronous training. We argue that retaining training signals across token types can lead to more effective learning. To address this, we propose Archer, an entropy-aware RLVR framework with dual-token constraints that preserves joint optimization while modulating update strength across token types. Our method introduces response-level entropy normalization for stable token classification and applies differentiated clipping ranges and KL regularization to encourage exploration on reasoning tokens while preserving knowledge tokens. Experiments on mathematical reasoning and code generation benchmarks show that Archer consistently outperforms strong baselines across multiple model scales, improving both pass@1 and pass@K performance. These results highlight the importance of respecting sequence-level dependencies when designing fine-grained RL optimization strategies for LLMs. The code is available at https://github.com/wizard-III/ArcherCodeR.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL · <b>arXiv submitted:</b> 2026-11-07 · <a href='https://arxiv.org/abs/2507.15778'>page</a> · <a href='https://arxiv.org/pdf/2507.15778'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MaPPO: Maximum a Posteriori Preference Optimization with Prior Knowledge</title>
+      <link>https://arxiv.org/abs/2507.21183</link>
+      <guid isPermaLink="false">arxiv:2507.21183</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> ByteDance Seed</p>
+<p><b>Authors:</b> Guangchen Lan, Sipeng Zhang, Tianle Wang, Yuwei Zhang, Daoan Zhang, Xinpeng Wei, Xiaoman Pan, Hongming Zhang, … <i>(+2 more)</i></p>
+<p>As the era of large language models (LLMs) unfolds, Preference Optimization (PO) methods have become a central approach to aligning LLMs with human preferences and improving performance. We propose Maximum a Posteriori Preference Optimization (MaPPO), a methodology for learning from preferences that explicitly incorporates prior reward knowledge into the optimization objective. Building on the paradigm employed by Direct Preference Optimization (DPO) and its variants of treating preference learning as a Maximum Likelihood Estimation (MLE) problem, MaPPO integrates prior reward estimates into a principled Maximum a Posteriori (MaP) objective. This not only generalizes DPO and its variants, but also enhances alignment by mitigating the oversimplified binary classification of responses. Additionally, MaPPO introduces no additional hyperparameters, and supports preference optimization in both offline and online settings. In addition, MaPPO can be used as a plugin for DPO variants, including widely used SimPO, IPO, and CPO, and produce consistent improvements. Extensive empirical evaluations of different model sizes and model series on three standard benchmarks (MT-Bench, AlpacaEval 2.0, and Arena-Hard) demonstrate consistent improvements in alignment performance without sacrificing computational efficiency.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-11-08 · <a href='https://arxiv.org/abs/2507.21183'>page</a> · <a href='https://arxiv.org/pdf/2507.21183'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ChartHal: A Fine-grained Framework Evaluating Hallucination of Large Vision Language Models in Chart Understanding</title>
+      <link>https://arxiv.org/abs/2509.17481</link>
+      <guid isPermaLink="false">arxiv:2509.17481</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Xingqi Wang</p>
+<p><b>Authors:</b> Xingqi Wang, Yiming Cui, Xin Yao, Shijin Wang, Guoping Hu, Xiaoyu Qin</p>
+<p>Large Vision-Language Models (LVLMs) have recently demonstrated remarkable progress, yet hallucination remains a critical barrier, particularly in chart understanding, which requires sophisticated perceptual and cognitive abilities as well as rigorous factual accuracy. While prior work has investigated hallucinations and chart comprehension independently, their intersection remains largely unexplored. To address this gap, we present ChartHal, a benchmark that features a fine-grained taxonomy of hallucination scenarios in chart understanding, along with a human-validated dataset of 1,062 samples. Our evaluation shows that state-of-the-art LVLMs suffer from severe hallucinations on ChartHal, including proprietary models such as GPT-5 and o4-mini, which achieve only 34.46% and 22.79% accuracy, respectively. Further analysis reveals that questions involving information absent from or contradictory to charts are especially likely to trigger hallucinations, underscoring the urgent need for more robust mitigation strategies. Code and data are available at https://github.com/ymcui/ChartHal</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-11-07 · <a href='https://arxiv.org/abs/2509.17481'>page</a> · <a href='https://arxiv.org/pdf/2509.17481'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Web World Models</title>
+      <link>https://arxiv.org/abs/2512.23676</link>
+      <guid isPermaLink="false">arxiv:2512.23676</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Allen Institute for AI · <b>Tier-2 senior:</b> Princeton — (senior)</p>
+<p><b>Authors:</b> Jichen Feng, Yifan Zhang, Chenggong Zhang, Yifu Lu, Shilong Liu, Mengdi Wang</p>
+<p>Language agents increasingly require persistent worlds in which they can act, remember, and learn. Existing approaches sit at two extremes: conventional web frameworks provide reliable but fixed contexts backed by databases, while fully generative world models aim for unlimited environments, but the world is constructed primarily through generation, making it harder to maintain a fixed, deterministic global framework and reducing controllability. In this work, we introduce the Web World Model (WWM), a middle ground where world state and ``physics&#x27;&#x27; are implemented in ordinary web code to ensure logical consistency, while large language models generate context, narratives, and high-level decisions on top of this structured latent state. We build a suite of WWMs on a realistic web stack, including an infinite travel atlas grounded in real geography, fictional galaxy explorers, web-scale encyclopedic and narrative worlds, and simulation- and game-like environments. Across these systems, we identify practical design principles for WWMs: separating code-defined rules from model-driven imagination, representing latent state as typed web interfaces, and utilizing deterministic generation to achieve unlimited but structured exploration. Our results suggest that web stacks themselves can serve as a scalable substrate for world models, enabling controllable yet open-ended environments.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-11-09 · <a href='https://arxiv.org/abs/2512.23676'>page</a> · <a href='https://arxiv.org/pdf/2512.23676'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Introducing AlphaProof Code: a breakthrough in verifying complex software at depth</title>
+      <link>https://deepmind.google/blog/introducing-alphaproof-code/</link>
+      <guid isPermaLink="false">deepmind:428ac4b42c</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
+<p><b>Authors:</b> Google DeepMind</p>
+<p>AlphaProof Code agents wrote three  million lines of proofs in Lean to verify Signal’s core encryption.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-10 · <a href='https://deepmind.google/blog/introducing-alphaproof-code/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Toward the Era of Agentic Embodied Intelligence</title>
+      <link>https://huggingface.co/papers/2611.09124</link>
+      <guid isPermaLink="false">arxiv:2611.09124</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Chao Liang, Ke Chen, Fengxiaoxiao Li, Shibo Huang, Yufeng Sun, Zhaokai Yin, Jianhuan Lai, Haozhe Feng, … <i>(+3 more)</i></p>
+<p>Foundation models increasingly guide robot actions, yet sustained autonomy requires efficient control and failure recovery. We introduce A2-MEAS, an embodied multi-agent framework built around code as a scaling interface. Learned correction codes combine corrective language, spatial evidence, execution history, and action proposals. MetaBrain provides training supervision and runtime guidance. A correction encoder and adapter absorb this knowledge into policy weights during training, while fresh codes adapt behavior with frozen weights at deployment. The action model, A2-WLA, adds motion-aware history and a latent world model to a vision-language-action policy. Surprisingly, this simple design with action pretraining and task specialization reaches 0.5755 Q-score on the 50-task BEHAVIOR 2026 public subset before online correction, 2.21x the 2025 winner&#x27;s reported 0.2605 across different benchmark editions and training configurations. On all 100 BEHAVIOR 2026 public tasks, A2-MEAS achieves 0.6411 Q-score and 45.40% task success. On RoboTwin 2.0, A2-WLA achieves 93.98% average success, rising to 95.05% with the complete system. Across 12 real-robot tasks in five household settings, A2-WLA achieves 57.92% average success versus 26.67% for pi0.5. In long-horizon pour-over coffee preparation, a history-conditioned adapter raises post-failure completion at two filter-handling steps from 14% to 94% and from 8% to 82%, compared with A2-WLA retries. Our training infrastructure delivers 427.1 samples per second, 4.03x the throughput of a pi0.5 reference implementation on matched hardware. We will release the system, models, training scripts, and infrastructure to support efficient embodied learning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-06 · <a href='https://huggingface.co/papers/2611.09124'>page</a> · <a href='https://arxiv.org/pdf/2611.09124'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers?</title>
+      <link>https://huggingface.co/papers/2611.08175</link>
+      <guid isPermaLink="false">arxiv:2611.08175</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yue Zhang, Jilei Sun, Liqiang Jing, Yijie Wei, Ruohan Yang, Hugging Face Daily Papers (curated)</p>
+<p>Automating printed circuit board (PCB) routing requires coordinating board-level connectivity decisions with geometric execution under strict design rules. Although recent agents can interact with native routing tools, reliable routing on complex boards remains challenging. We present PCBRouteAgent, a multimodal PCB routing agent inspired by how human engineers coordinate global strategy with local execution. A Global Routing Planner combines board images and structured electrical and geometric information to specify connection topology, routing order, corridors, and layer transitions. A Detailed Routing Executor realizes these guides through KiCad&#x27;s native routing engine and performs bounded local recovery. Unresolved failures are returned as structured feedback, enabling targeted guide revisions while preserving accepted routes. We evaluate PCBRouteAgent on 247 synthetic and real-world boards from four PCBWorld-Bench test splits. It achieves clean-pass rates of 100%, 94.9%, 100%, and 40% on D2, D3-A, D3-B, and D3-C, respectively. On the three real-world subsets, PCBRouteAgent outperforms the best evaluated baseline in clean-pass rate by 13.9, 36, and 10 percentage points, respectively.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-05 · <a href='https://huggingface.co/papers/2611.08175'>page</a> · <a href='https://arxiv.org/pdf/2611.08175'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LLMs Don&#x27;t Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting</title>
+      <link>https://huggingface.co/papers/2611.06808</link>
+      <guid isPermaLink="false">arxiv:2611.06808</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Lingfei Qian, Yan Wang, Xueqing Peng, Yupeng Cao, Yuechen Jiang, Zhuohan Xie, Anke Xu, Wenbo Cao, … <i>(+8 more)</i></p>
+<p>Financial backtests of large language models (LLMs) are meaningful only if the model did not already know the outcomes it is asked to predict. Practitioners guard against this by trusting a vendor&#x27;s stated knowledge cutoff, by asking the model what it knows, or by instructing it to answer as of a past date. To verify whether any of these safeguards can be trusted, we introduce FinDendro, a benchmark of 2,226 dated U.S. facts from 1999 to 2026, covering monthly macroeconomic series, month-end stock prices and Federal Reserve decisions. Each fact yields four prompts: a value question, Recall and Predict questions that pair each candidate value with a claim of knowing or guessing without a declared date, and a Predict question with a historical declared date. Controls for persistence and dominant outcomes keep chance accuracy near 0.27. Results show that for most frontier models, self-reports understate knowledge. GPT-5 answers 76% of controlled facts correctly but claims to know 38%, and answers 61% of the facts it says it does not know. Knowledge claims can persist beyond the measured knowledge boundary, by up to seven quarters, and a declared date removes most of the claims of prior knowledge while leaving accuracy unchanged. Backtests inside a model&#x27;s training window therefore cannot be certified leak-free by self-report, instruction or stated cutoff. These findings motivate behavioral measurement of temporal knowledge boundaries, and FinDendro provides a benchmark and procedure for selecting backtest periods based on demonstrated factual knowledge.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-04 · <a href='https://huggingface.co/papers/2611.06808'>page</a> · <a href='https://arxiv.org/pdf/2611.06808'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning</title>
+      <link>https://huggingface.co/papers/2611.12886</link>
+      <guid isPermaLink="false">arxiv:2611.12886</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haozhi Yuan, Handong Li, Yifan Zhang, Qianshan Wei, Hugging Face Daily Papers (curated)</p>
+<p>Agentic reinforcement learning (RL) and multi-teacher on-policy distillation (MOPD) offer complementary routes to post-training. For visual agents, however, tool use presents two related challenges. Models may overlook useful tool-returned observations, while poorly grounded actions can limit the evidence available for subsequent distillation. We introduce Reframe, a post-training framework that treats the observation state, rather than only the output distribution, as an object of alignment. First, Ground-Drop-GRPO (GD-GRPO) trains spatial and temporal specialists with evidence-aware rewards and stochastic removal of the original visual input, encouraging them to acquire grounded evidence and use the returned observations. Second, Observation-Gated-MOPD (OG-MOPD) replaces deficient tool actions with canonical ones mid-rollout and resumes distillation from the repaired observation. The two stages complement each other, as learning to rely on tool-returned observations can help the policy benefit from observation repair. Neither stage requires a task-specific SFT cold start. Extensive experiments over 14 image and video benchmarks demonstrate that Reframe outperforms both Mix-RL and vanilla MOPD. Ablation results show that GD-GRPO increases observation dependence and tool gain compared with outcome-based GRPO.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-09 · <a href='https://huggingface.co/papers/2611.12886'>page</a> · <a href='https://arxiv.org/pdf/2611.12886'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery</title>
+      <link>https://huggingface.co/papers/2611.12762</link>
+      <guid isPermaLink="false">arxiv:2611.12762</guid>
+      <pubDate>Tue, 10 Nov 2026 12:29:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Weida Wang, Benteng Chen, Yigeng Jiang, Shuchen Pu, Weiping Shen, Zichao Liu, Yulin Su, Zitong Wang, … <i>(+83 more)</i></p>
+<p>We introduce Sage-Taiyi, a metacognition-inspired architecture that uses accumulated scientific understanding to guide what to investigate next and how to investigate it. Through explicit monitoring and control, the system revises its understanding of evidence, assumptions, and unresolved questions, then uses these assessments to adapt research targets and select reusable reasoning methods. On Taiyi-Bench, an AI co-scientist ideation benchmark comprising 265 tasks from 50 papers across ten disciplines, Sage-Taiyi ranks first on all eight metrics of historical rediscovery and open-ended ideation, achieving an Overall score of 54.0 compared with 47.9 for the strongest baseline, AI Scientist-v2. It also performs well on two external scientific ideation benchmarks. Five expert-guided collaborations further connect its proposals to experimental and computational validation across chemistry, materials science, and engineering. In chemistry, reaction-condition optimization raises the yield of cobalt-catalyzed carbonylation from trace amounts to 84% and photocatalytic allylic amination from 13% to 69%. These results support metacognitive regulation as an approach to scientific ideation and its progression toward practical validation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-09 · <a href='https://huggingface.co/papers/2611.12762'>page</a> · <a href='https://arxiv.org/pdf/2611.12762'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Align Your Query: Representation Alignment for Multimodality Medical Object Detection</title>
       <link>https://arxiv.org/abs/2510.02789</link>
@@ -2162,126 +2289,6 @@
 <p><b>Authors:</b> Haiyun Guo, Hongyu Guo, Xiangzhao Hao, Jiarui Guo, Jinqiao Wang, Tat-Seng Chua</p>
 <p>Few-shot fine-grained visual classification (FGVC) aims to discriminate between subtly different categories with very limited data. While Multimodal Large Language Models (MLLM) exhibit strong capabilities in both fine-grained visual understanding and open-world category recognition, directly fine-tuning them on few-shot FGVC tasks typically leads to overfitting on sparse samples, which erodes their valuable open-world knowledge and compromises generalization. To fundamentally overcome this limitation, we present UniFGVC, a universal training-free framework that shifts the paradigm from parameter fine-tuning to training-free retrieval-based inference. UniFGVC reframes few-shot FGVC as a multimodal retrieval problem using predefined category templates. Its core is the Category-Discriminative Visual Captioner (CDV-Captioner), an attribute-aware module designed to leverage MLLM for generating structured textual descriptions that explicitly pinpoint discriminative visual attributes between similar classes. By integrating chain-of-thought reasoning and visual references, CDV-Captioner mitigates hallucination and maximizes the discriminative power of textual captions, thereby converting images into attribute-enriched image-description pairs. Subsequently, utilizing arbitrary pre-trained visual and textual encoders in a plug-and-play manner, UniFGVC extracts features from both modalities and computes their similarity with all category templates for recognition. Extensive experiments on 12 FGVC datasets demonstrate UniFGVC&#x27;s universal compatibility and consistent superiority. It not only outperforms existing few-shot CLIP-based methods but also surpasses several fully-supervised MLLM-based approaches, confirming the general advantage of the proposed retrieval paradigm.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://arxiv.org/abs/2508.04136'>page</a> · <a href='https://arxiv.org/pdf/2508.04136'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>EdgeWise: Bringing Long-Horizon Agents to the Edge via Selective Cloud Delegation</title>
-      <link>https://research.nvidia.com/publication/2026-12_edgewise-bringing-long-horizon-agents-edge-selective-cloud-delegation</link>
-      <guid isPermaLink="false">nvidia_research:b7378f0f90</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
-<p><b>Authors:</b> NVIDIA Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-12_edgewise-bringing-long-horizon-agents-edge-selective-cloud-delegation'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation</title>
-      <link>https://huggingface.co/papers/2610.21601</link>
-      <guid isPermaLink="false">arxiv:2610.21601</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Bingxi Hou, Guochao Jiang, Guofeng Quan, Weiqing Li, Wenfeng Feng, Guohua Liu, Yuewei Zhang, Hugging Face Daily Papers (curated)</p>
-<p>Policy-shift distillation reuses the difference between a teacher&#x27;s log probabilities before and after reinforcement learning (RL) as supervision on student-generated trajectories. However, this endpoint policy shift cannot reveal whether local action preferences evolved consistently during teacher training. The same endpoint shift can result from early and late shifts that reinforce or partially cancel each other. We investigate whether agreement between early and late teacher policy shifts can guide selective transfer. We introduce Waypoint-guided On-Policy Distillation (Waypoint-OPD), which uses an intermediate teacher checkpoint from the same RL run to compare early and late shifts in relative action preferences at student-visited prefixes. We gate the endpoint shift according to the directional agreement between the early and late shifts, suppressing it when they point in opposing directions. Compared with endpoint-only transfer, our method requires only one additional frozen-teacher scoring pass. Using RL-trained Qwen3-4B teachers, we evaluate our method with Qwen3-8B, Qwen3-14B, and Qwen3-30B-A3B as student models in mathematical and code reasoning. In all six domain--student settings, Waypoint-OPD achieves the highest domain-average score among the compared distillation methods. Ablations with the Qwen3-8B student show that removing or shuffling gates reduces mathematical reasoning performance. These results support the use of directional agreement between early and late teacher policy shifts to weight the endpoint shift during student training.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.21601'>page</a> · <a href='https://arxiv.org/pdf/2610.21601'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Self-Evolving Agent Harness</title>
-      <link>https://huggingface.co/papers/2610.18813</link>
-      <guid isPermaLink="false">arxiv:2610.18813</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Chuyang Wei, Haoxiang Guan, Minghang Zhu, Kexin Zhou, Jiyan He, Xiren Zhou, Huanhuan Chen, Yifei Shen, … <i>(+1 more)</i></p>
-<p>Harness self-evolution revises an agent&#x27;s software scaffolding, including prompts, memory, workflows, and executable components, while keeping model weights fixed. We formalize a feedback-driven process in which accepted revisions persist across runs. The framework separates update targets from proposal and admission mechanisms. It distinguishes changes to interpreted state from revisions to tools and code, repository-level control logic, and plugin composition. We characterize search through evolutionary optimization and examine its reliability through continual PAC-learning. Under explicit assumptions, the analysis yields an expected generalization bound, a retention bound conditional on historical regression budgets, and a high-probability admission rule using fresh, independent validation data. We examine how persistent harness revisions affect knowledge sharing and organizational workflows, with implications for scientific reliability, physical safety, and institutional accountability. Cases from prior work illustrate model--harness co-design, distributed execution, and plugin reuse. Reliable deployment requires continual validation as task distributions and evaluators change, with independent safeguards for learning, runtime privileges, and consequential actions. We provide a comprehensive 66-page discussion of related work, theory, algorithms, evaluation, applications, and the broader impact of Harness RSI, together with continuously updated code and supplementary materials, at https://github.com/zgcagi/Harness-RSI.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-13 · <a href='https://huggingface.co/papers/2610.18813'>page</a> · <a href='https://arxiv.org/pdf/2610.18813'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RoTA-Bench: Evaluating 3D Spatial Reasoning through Interactive Projection Alignment</title>
-      <link>https://huggingface.co/papers/2610.17665</link>
-      <guid isPermaLink="false">arxiv:2610.17665</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Qingchuan Ma, Yuexiao Ma, Xiang Meng, Yixuan Zou, Tianyu Xie, Wang Chen, Yuhui Zeng, Yuhang Wu, … <i>(+3 more)</i></p>
-<p>Can vision-language models turn 2D observations into 3D understanding that supports precise action? This requires inferring object geometry, anticipating the effects of rotation, and refining actions through visual feedback. We introduce RoTA-Bench to evaluate these abilities through interactive 3D-to-2D projection alignment. Given a target silhouette, a model observes a rotated object and chooses successive rotations to recover the target projection within a limited action budget. Our automated pipeline constructs silhouette-preserving 3D objects from 2D icons and uses reversible initialization to guarantee solvability, yielding 674 tasks and a stratified 100-task test set. Empirically, we find that (i) a substantial human-model gap persists: GPT-5.6-Sol succeeds on only 17% of tasks, whereas 20 undergraduate participants collectively complete the test set four times with a 100% success rate; (ii) image-space and pose-space progress can diverge: at matched states, the model more often improves silhouette overlap while worsening pose alignment than humans (19.4% vs. 10.9%); and (iii) fine-grained control is sensitive to interaction history: removing it leaves 96.8% of the model&#x27;s actions at a coarse 30-degree step size and sharply reduces observed task success. These findings highlight the challenge of converting visual evidence into precise 3D control, beyond recognizing or matching individual images.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.17665'>page</a> · <a href='https://arxiv.org/pdf/2610.17665'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>3DCodeVerse: Exploring 3D Worlds as Code</title>
-      <link>https://huggingface.co/papers/2610.22341</link>
-      <guid isPermaLink="false">arxiv:2610.22341</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yipeng Gao, Ziyao Zeng, Jinfa Huang, Yijiang Li, Haolin Xiong, Wang Qin, Xinlei Yu, Youheng Yao, … <i>(+12 more)</i></p>
-<p>We introduce 3DCodeVerse, a research ecosystem that enables coding agents to create editable and verifiable 3D content at scale. 3DCodeVerse comprises large-scale, high-quality datasets of executable 3D code, a coding harness for spatial reasoning and automated verification, and practical guidance for 3D coding. First, we construct 3DCodeVerse-2M, a large-scale curated dataset of standalone 3D executable code. We build this corpus by collecting open-source data, converting specialized representations, and generating new programs with coding agents. Each program is packaged with the source files and associated assets required for execution in its declared environment, along with available descriptions and verification records. Second, we develop the 3DCodeVerse Harness, a multi-agent directed acyclic graph framework for generating and refining 3D content. It uses execution checks, spatial measurements, and visual feedback to automatically evaluate and revise generated programs without human feedback during generation. Third, we conduct systematic empirical studies of 3D coding, establishing baselines with fine-tuned open models and deriving practical guidance through component-level analyses of our harness. Extensive experiments demonstrate that fine-tuning on our dataset significantly improves the 3D coding capabilities of open-source models. Notably, our 3DCodeVerse harness achieves a 90% win rate against Claude Design (3D Object) in pairwise human evaluations, when both are utilized by Claude Opus 5.5.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.22341'>page</a> · <a href='https://arxiv.org/pdf/2610.22341'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Mosaic: Multi-Session Agentic Reinforcement Learning</title>
-      <link>https://huggingface.co/papers/2610.22174</link>
-      <guid isPermaLink="false">arxiv:2610.22174</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yilong Xu, Minrui Xu, Xinyu Zhou, Xiang Long, Haochen Tan, Zhijiang Guo, Hugging Face Daily Papers (curated)</p>
-<p>Most existing agentic reinforcement learning methods assume single-session trajectories, where interaction proceeds within one continuously accumulated context. However, agentic techniques such as context compaction and subagent forking may produce trajectories spanning multiple sessions, creating a mismatch between the single-session training assumption and inference-time execution. Therefore, we introduce Multi-Session Agentic Reinforcement Learning, a more general setting that supports an arbitrary number of sessions within a trajectory. Under this setting, a widely adopted method is to broadcast trajectory-level advantages to all sessions, but this does not distinguish contributions from various sessions or guide session allocation within trajectories. To address this issue, we propose Mosaic, a multi-session agentic RL method with critic-free hierarchical optimization. At the trajectory level, it incorporates session-usage signals into advantage estimation. At the session level, it shapes each session&#x27;s advantage according to the estimated marginal contribution. Experiments on BrowseComp with Qwen3.5-4B show that Mosaic outperforms broadcasting in both context compaction and subagent forking scenarios while using fewer sessions on average. Further analyses show that our method achieves improvements in session utility and allocation, which we suggested is a promising target for future advances in multi-session agentic RL.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.22174'>page</a> · <a href='https://arxiv.org/pdf/2610.22174'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DeltaStreamer: Towards Human-Like Agentic Streaming Video Understanding</title>
-      <link>https://huggingface.co/papers/2610.19849</link>
-      <guid isPermaLink="false">arxiv:2610.19849</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Boyuan Sun, Deshui Miao, Wenzhao Gao, Shaoyong Jia, Shaohui Jiao, Chi Liu, Yan Shu, Derek Li, … <i>(+4 more)</i></p>
-<p>We propose DeltaStreamer, a novel agentic framework for streaming video understanding inspired by how humans observe, remember, and investigate. Streaming video understanding requires a system to retain evidence before knowing which details future queries will need. Existing approaches often obscure event transitions and omit relevant details when compressing video history, and cannot recover missing visual evidence. DeltaStreamer addresses these limitations by combining change-aware memory with query-driven planning and targeted evidence gathering with replay. Before a query arrives, it continuously observes the stream and explicitly records visual changes in structured memory, preserving how events unfold rather than only what is present. When a query arrives, a query-driven planner identifies the required evidence and guides memory retrieval and targeted replay. By revisiting historical frames, the agent can recover visual details omitted during observation and ground its answer in evidence beyond the retained descriptions. This connects continuous observation with active investigation tailored to each question. Experiments on OVO-Bench and StreamingBench demonstrate improvements over representative streaming video understanding methods, with overall scores of 66.07% and 59.53%, respectively.
-  Project page: https://bbbbchan.github.io/DeltaStreamer/</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.19849'>page</a> · <a href='https://arxiv.org/pdf/2610.19849'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MAI-Gym: An Open All-in-One Platform for GUI Agent Evaluation and RL Training across Mobile and Computer Environments</title>
-      <link>https://huggingface.co/papers/2610.20939</link>
-      <guid isPermaLink="false">arxiv:2610.20939</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Panrong Tong, Quyu Kong, Pengxiang Li, Tianyu Xia, Hanzhang Zhou, Lei Wang, Chenglin Cai, Long Li, … <i>(+8 more)</i></p>
-<p>Online reinforcement learning (RL) with verifiable rewards has driven rapid progress in mathematics, coding, and tool use, but scaling this success to GUI agents remains challenging due to the high cost of interactive environments and the scarcity of realistic training tasks. We introduce MAI-Gym, an open all-in-one platform that unifies GUI agent evaluation, data collection, and online RL training across mobile, computer, and web environments. Through a shared rollout pipeline, MAI-Gym ensures consistent agent behavior across evaluation and training, supports ten established benchmarks, and scales to 20,000 parallel environment instances. Beyond scalable infrastructure, MAI-Gym enables automated synthesis of diverse GUI applications and challenging tasks, including resettable mocked apps and coherent cross-app worlds with execution-validated task verifiers. Using MAI-Gym, we train MAI-Gym-9B, a unified 9B agent for mobile and computer use, achieving state-of-the-art performance among open GUI agents under 10B parameters: 78.4% on MobileWorld and 76.2% on OSWorld-Verified. Importantly, RL in a mocked train-ticketing app transfers to its real-world counterpart, improving task success on a phys- ical phone from 28.8% to 48.1%. We release the framework, synthesis skills, mocked apps, 2,000 verified tasks, and the model checkpoint to support repro- ducible research and further advances in scalable GUI agent training.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.20939'>page</a> · <a href='https://arxiv.org/pdf/2610.20939'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models</title>
-      <link>https://huggingface.co/papers/2610.21306</link>
-      <guid isPermaLink="false">arxiv:2610.21306</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Qi Lu, Jiarun Li, Ce Zhang, Miao Pan, Yi Pan, Xu Wang, Wenqi Zhang, Xuhong Zhang, … <i>(+1 more)</i></p>
-<p>Vision-language-action (VLA) models transfer semantic knowledge acquired through vision-language pretraining to robot control, achieving strong performance across various benchmarks. However, most VLAs directly map observations to demonstrated actions without explicit supervision of intermediate physical state changes, making them prone to overfitting observation-action correspondences. Some methods introduce intermediate reasoning or future-state prediction in language, visual, or latent spaces to guide action generation, but do not explicitly supervise the physical state transition itself. We therefore propose VLA-Δ, a general framework that uses physical changes between current and future states as explicit learning targets. To support this objective, we construct a large-scale pretraining dataset and derive physical state-transition annotations covering task-relevant semantics and visual motion changes, providing more direct supervision for continuous action generation. During inference, the model generates actions directly from current observations without additional inference overhead. VLA-Δ achieves performance competitive with the state of the art on LIBERO and RoboTwin, and outperforms π_{0.5} in real-robot experiments. Our code is available at https://github.com/ZJU-OmniAI/VLA-Delta</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://huggingface.co/papers/2610.21306'>page</a> · <a href='https://arxiv.org/pdf/2610.21306'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio</title>
-      <link>https://machinelearning.apple.com/research/mlx-distributed-inference</link>
-      <guid isPermaLink="false">apple_ml:98e6a11f87</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://machinelearning.apple.com/research/mlx-distributed-inference'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents</title>
-      <link>https://machinelearning.apple.com/research/selection-structured-reasoning</link>
-      <guid isPermaLink="false">apple_ml:1aaf9ecdd8</guid>
-      <pubDate>Fri, 16 Oct 2026 08:39:21 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Multimodal agents commonly generate freeform reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from the reasoning candidates based on theirâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-15 · <a href='https://machinelearning.apple.com/research/selection-structured-reasoning'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
