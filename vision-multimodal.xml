@@ -5,8 +5,21 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Thu, 12 Nov 2026 12:01:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 11:47:17 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>DataCook: Exploring Anti-Adversarial Fingerprints for Healthcare Data Usage Control</title>
+      <link>https://arxiv.org/abs/2403.17755</link>
+      <guid isPermaLink="false">arxiv:2403.17755</guid>
+      <pubDate>Fri, 13 Nov 2026 11:47:17 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CR</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU, EPFL — Jiancheng Yang</p>
+<p><b>Authors:</b> Sihan Shang, Jun Yan, Danli Shi, Haizhong Zheng, Shuangjia Zheng, Wei Zhao, Jiancheng Yang</p>
+<p>Purpose: Healthcare AI increasingly relies on high-quality datasets, yet medical data are scarce, costly to curate, and tightly regulated in terms of data access. More critically, once medical data are leaked or accessed without authorization, data owners have limited means to prevent such data from being used to train and deploy downstream models. To address this gap, we propose DataCook, a deployment-stage usage-control framework based on anti-adversarial fingerprints. Materials and Methods: Specifically, DataCook transforms raw samples through a private cooking procedure that embeds anti-adversarial fingerprints. Models trained on the cooked data retain strong utility when evaluated on similarly cooked inputs, while their performance on raw inputs is reduced, making downstream model utility dependent on access to the private cooking function. We evaluate DataCook on 2D, 3D, and high-resolution medical images, as well as structured healthcare tabular data, across multiple model architectures and adaptive attack settings. Results: Across the evaluated settings, DataCook generally preserves authorized model utility while reducing performance on unauthorized raw inputs. The authorization-dependent behavior is observed across multiple medical imaging settings, model architectures, and adaptive attack conditions, supporting the feasibility of the proposed deployment-stage usage-control mechanism. Conclusion: These results demonstrate the feasibility of authorization-dependent model use at deployment, while the effectiveness of the current framework remains dependent on the specific task and evaluation metric.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CR, cs.CV · <b>arXiv submitted:</b> 2026-11-11 · <a href='https://arxiv.org/abs/2403.17755'>page</a> · <a href='https://arxiv.org/pdf/2403.17755'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Deep Tensor Network</title>
       <link>https://arxiv.org/abs/2311.11091</link>
@@ -2571,19 +2584,6 @@
 <p><b>Authors:</b> Huanyu Wang, Jushi Kai, Haoli Bai, Lu Hou, Bo Jiang, Ziwei He, Zhouhan Lin</p>
 <p>Vision-Language Models (VLMs) incur substantial computational overhead and inference latency due to the large number of vision tokens introduced by high-resolution image and video inputs. Existing parameter-free token compression methods typically rely on token selection or merging, yet they risk discarding substantial visual information or distorting the original representation distribution, resulting in pronounced performance degradation at high compression ratios. In response, we aim to explore a more effective and efficient visual token compression strategy, with a promising direction in the frequency domain. Motivated by the success of frequency-domain transforms in image compression (e.g., JPEG), we systematically analyze the frequency redundancy in visual representations and uncover a non-uniform distribution of semantic information across frequency bands. Building upon this, we introduce Fourier Compressor, an effective, parameter-free, and highly generalizable module that removes redundancy from visual representations within the frequency domain. Implemented via FFT with $\mathcal{O}(n^2 \log n)$ complexity and no additional parameters, Fourier Compressor introduces negligible computational overhead while preserving semantic fidelity. Extensive experiments on image-based benchmarks demonstrate that our method achieves a favorable performance-efficiency trade-off, retaining over 96% of the original accuracy while reducing inference FLOPs by up to 83.8% and boosting generation speed by 31.2%. It consistently outperforms existing parameter-free methods and even surpasses some parameterized approaches. Importantly, Fourier Compressor generalizes consistently across both LLaVA and Qwen-VL architectures, and further extends to video understanding tasks, highlighting its practical applicability for efficient VLMs.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2508.06038'>page</a> · <a href='https://arxiv.org/pdf/2508.06038'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>EndoCogniAgent: Closed-Loop Agentic Reasoning with Self-Consistency Validation for Endoscopic Diagnosis</title>
-      <link>https://arxiv.org/abs/2508.07292</link>
-      <guid isPermaLink="false">arxiv:2508.07292</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CL</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yi Tang</p>
-<p><b>Authors:</b> Yi Tang, Kai-Ni Wang, Yang Chen, Xiaopu He, Guangquan Zhou</p>
-<p>Endoscopic diagnosis is an iterative process in which clinicians progressively acquire, compare, and verify local visual evidence before reaching a conclusion. Current AI systems do not adequately support this process because fine-grained evidence acquisition and multi-step reasoning remain weakly coupled. This gives rise to two failure modes, hallucinated evidence and uncorrected error accumulation, that undermine diagnostic reliability. We propose EndoCogniAgent, a closed-loop agentic framework that formulates endoscopic diagnosis as a controlled state update process. At each reasoning round, a central planner selects the next evidence acquisition action, specialized expert tools extract the corresponding observation, and a self-consistency validation mechanism examines the observation along two dimensions, knowledge consistency against the input image and temporal consistency with prior validated findings, before updating the diagnostic state. Validated observations are admitted into the evolving state to condition subsequent planning, while insufficiently supported findings are retained with corrective feedback that redirects the planner toward additional verification. We further introduce EndoAgentBench, a workflow-oriented benchmark comprising 6,132 question-answer pairs from 11 endoscopic datasets, designed to evaluate diagnostic agents across a comprehensive diagnostic chain, from fine-grained visual perception to high-level diagnostic reasoning. Experiments show that EndoCogniAgent achieves 85.23\% average accuracy on perception tasks and 71.13\% clinical acceptance rate on reasoning tasks, with ablation analysis confirming that self-consistency validation and episodic state maintenance are individually critical to these gains.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2508.07292'>page</a> · <a href='https://arxiv.org/pdf/2508.07292'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

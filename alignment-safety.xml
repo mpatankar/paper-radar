@@ -5,8 +5,34 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Thu, 12 Nov 2026 12:01:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 11:47:17 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Let&#x27;s Think in Two Steps: Mitigating Agreement Bias in MLLMs with Self-Grounded Verification</title>
+      <link>https://arxiv.org/abs/2507.11662</link>
+      <guid isPermaLink="false">arxiv:2507.11662</guid>
+      <pubDate>Fri, 13 Nov 2026 11:47:17 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.LG</category>
+      <category>cs.MA</category>
+      <category>cs.RO</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Zsolt Kira</p>
+<p><b>Authors:</b> Moises Andrade, Joonhyuk Cha, Brandon Ho, Vriksha Srihari, Karmesh Yadav, Zsolt Kira</p>
+<p>Verifiers--functions assigning rewards to agent behavior--have been key to AI progress in math, code, and games. However, extending gains to domains without clear-cut success criteria (e.g., computer use) remains a challenge: while humans can recognize desired outcomes, translating this intuition into scalable rules is nontrivial. Multimodal LLMs (MLLMs) offer a promising solution, given their world knowledge, human-preference alignment, and reasoning skills. We evaluate MLLM verifiers across web navigation, computer use, and robotics, spanning 13 models, 28 judge designs, diverse agent trajectories, and distinct downstream applications. We identify a critical limitation: a strong tendency for MLLMs to over-validate agent behavior, a phenomenon we term agreement bias. This bias is pervasive across models, is resilient to test-time scaling, and harms pipelines relying on MLLM judgments (e.g., self-improvement). We discuss principles for design and evaluation of verifiers, and introduce SGV, a method that improves verification by harnessing MLLMs&#x27; own capabilities via modulation of (un)conditional generation. First, an MLLM generates broad priors about desired behavior, independent of the data under evaluation. Then, conditioned on generated priors, it reasons over and judges a candidate trajectory. Our methods yield more human-aligned verifiers, with gains of up to 25pp in failure detection, 14pp in accuracy, and benefits extending to downstream applications. In self-improvement and online supervision, our verifiers boost task completion of a GUI specialist in OSWorld, a diffusion policy in robomimic, and a ReAct agent in VisualWebArena--surpassing the previous SOTA by 20pp. Finally, we release an updated version of VisualWebArena, featuring improved evaluators, high-fidelity environment parallelism with &gt;10x speedups, and VWA-Lite, a 1/3-scale subset with comparable evaluation fidelity.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.LG, cs.MA, cs.RO · <b>arXiv submitted:</b> 2026-11-11 · <a href='https://arxiv.org/abs/2507.11662'>page</a> · <a href='https://arxiv.org/pdf/2507.11662'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Theoretical Limits of Language Model Alignment</title>
+      <link>https://machinelearning.apple.com/research/theoretical-limits-alignment</link>
+      <guid isPermaLink="false">apple_ml:7ca0fec9fc</guid>
+      <pubDate>Fri, 13 Nov 2026 11:47:17 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Language model (LM) alignment improves model outputs to reflect human preferences while preserving the capabilities of the base model. The most common alignment approaches are (i) reinforcement learning, which maximizes the expected reward under a KL-divergence constraint, and (ii) best-of-NNN alignment, which selects the highest-reward output among NNN independent samples. Despite their widespread use, the fundamental limits of reward improvement under a KL budget remain poorly understood. We characterize the information-theoretic limits of KL-regularized alignment by deriving the maximumâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-12 · <a href='https://machinelearning.apple.com/research/theoretical-limits-alignment'>page</a></p>]]></description>
+    </item>
     <item>
       <title>Gemini Robotics 2.5 accelerates real-world general dexterity</title>
       <link>https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/</link>
@@ -2315,29 +2341,6 @@
       <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> NVIDIA Research</p>
 <p><b>Authors:</b> NVIDIA Research</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://research.nvidia.com/publication/2026-05_gpuarmor-hardware-software-co-design-efficient-and-scalable-memory-safety-gpus'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation</title>
-      <link>https://huggingface.co/papers/2606.26087</link>
-      <guid isPermaLink="false">arxiv:2606.26087</guid>
-      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> JoungBin Lee, Jaewoo Jung, Jongmin Lee, Tongmin Kim, Hyunsung Kim, Takuya Narihira, Kazumi Fukuda, Jahyeok Koo, … <i>(+4 more)</i></p>
-<p>Synthesizing a novel-view video from a monocular reference video along a target camera trajectory requires both geometric consistency and motion fidelity with respect to the reference video. Existing methods based on explicit 3D representations are limited by the accuracy of off-the-shelf reconstruction modules, which often produce inaccurate geometry for dynamic objects in monocular videos. In contrast, camera-conditioning-only methods can achieve high visual quality but often struggle to preserve geometric and motion consistency. In this work, we introduce MVTrack4Gen (Multi-View point Tracking for Novel-View Generation), a motion-aware training framework that leverages multi-view point tracking as an additional geometric and motion supervision signal for camera-conditioning-only novel-view video diffusion models. Our key finding is that specific attention layers encode strong correspondence cues, where query features attend to key features at geometrically corresponding locations across views and over time, and the misalignment of these correspondences causes motion inconsistency. Based on this observation, we route these features into an auxiliary multi-view tracking head and jointly train the diffusion model with a point-tracking objective. By explicitly strengthening these motion-aware correspondences, MVTrack4Gen improves existing models to better follow the motion in the reference view and maintain cross-view geometric consistency. Across diverse benchmarks, our method achieves state-of-the-art geometric consistency and competitive camera accuracy.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://huggingface.co/papers/2606.26087'>page</a> · <a href='https://arxiv.org/pdf/2606.26087'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Towards Understanding The Calibration Benefits of Sharpness-Aware Minimization</title>
-      <link>https://arxiv.org/abs/2505.23866</link>
-      <guid isPermaLink="false">arxiv:2505.23866</guid>
-      <pubDate>Thu, 25 Jun 2026 05:21:47 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Yong Xu</p>
-<p><b>Authors:</b> Chengli Tan, Yubo Zhou, Haishan Ye, Guang Dai, Junmin Liu, Zengjie Song, Jiangshe Zhang, Zixiang Zhao, … <i>(+2 more)</i></p>
-<p>Deep neural networks have been increasingly used in safety-critical applications such as medical diagnosis and autonomous driving. However, many studies suggest that they are prone to being poorly calibrated and have a propensity for overconfidence, which may have disastrous consequences. In this paper, unlike standard training such as stochastic gradient descent, we show that the recently proposed sharpness-aware minimization (SAM) counteracts this tendency towards overconfidence. The theoretical analysis suggests that SAM allows us to learn models that are already well-calibrated by implicitly maximizing the entropy of the predictive distribution. Inspired by this finding, we further propose a variant of SAM, coined as CSAM, to ameliorate model calibration. Extensive experiments on various datasets, including ImageNet-1K, demonstrate the benefits of SAM in reducing calibration error. Meanwhile, CSAM performs even better than SAM and consistently achieves lower calibration error than other approaches</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://arxiv.org/abs/2505.23866'>page</a> · <a href='https://arxiv.org/pdf/2505.23866'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
