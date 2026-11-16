@@ -5,8 +5,21 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Sun, 15 Nov 2026 11:42:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 12:20:05 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Vision-language models lag human performance on physical dynamics and intent reasoning</title>
+      <link>https://arxiv.org/abs/2601.01547</link>
+      <guid isPermaLink="false">arxiv:2601.01547</guid>
+      <pubDate>Mon, 16 Nov 2026 12:20:05 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
+<p><b>Authors:</b> Tianjun Gu, Jingyu Gong, Zhizhong Zhang, Yuan Xie, Lizhuang Ma, Xin Tan, Athanasios V. Vasilakos</p>
+<p>Spatial intelligence is central to embodied cognition, yet contemporary AI systems still struggle to reason about physical interactions in open-world human environments. Despite strong performance on controlled benchmarks, vision-language models often fail to jointly model physical dynamics, reference frames, and the latent human intentions that drive spatial change. We introduce Teleo-Spatial Intelligence (TSI), which captures an important aspect of spatial reasoning: integrating physical dynamics and action goals to reason about actions and their spatial consequences. To evaluate TSI, we present EscherVerse, a large-scale open-world resource built from 11,328 real-world videos, including an 8,000-example benchmark and a 35,963-example instruction-tuning set. Across 27 state-of-the-art vision-language models and an independent analysis of first-pass human responses from 11 annotators, we identify a persistent teleo-spatial reasoning gap: the strongest proprietary model achieves 57.26% overall accuracy, far below first-pass human performance, which ranges from 84.81% to 95.14% with a mean of 90.62%. Fine-tuning on real-world, intent-aware data narrows this gap for open-weight models, but does not close it. EscherVerse provides a diagnostic testbed for purpose-aware spatial reasoning and highlights a critical gap between pattern recognition and human-level understanding in embodied AI.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-11-13 · <a href='https://arxiv.org/abs/2601.01547'>page</a> · <a href='https://arxiv.org/pdf/2601.01547'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>DataCook: Exploring Anti-Adversarial Fingerprints for Healthcare Data Usage Control</title>
       <link>https://arxiv.org/abs/2403.17755</link>
@@ -2572,18 +2585,6 @@
 <p><b>Authors:</b> Zeyi Liu, Shuang Li, Eric Cousineau, Siyuan Feng, Benjamin Burchfiel, Shuran Song</p>
 <p>Understanding and predicting dynamics of the physical world can enhance a robot&#x27;s ability to plan and interact effectively in complex environments. While recent video generation models have shown strong potential in modeling dynamic scenes, generating videos that are both temporally coherent and geometrically consistent across camera views remains a significant challenge. To address this, we propose a 4D video generation model that enforces multi-view 3D consistency of generated videos by supervising the model with cross-view pointmap alignment during training. Through this geometric supervision, the model learns a shared 3D scene representation, enabling it to generate spatio-temporally aligned future video sequences from novel viewpoints given a single RGB-D image per view, and without relying on camera poses as input. Compared to existing baselines, our method produces more visually stable and spatially aligned predictions across multiple simulated and real-world robotic datasets. We further show that the predicted 4D videos can be used to recover robot end-effector trajectories using an off-the-shelf 6DoF pose tracker, yielding robot manipulation policies that generalize well to novel camera viewpoints.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2507.01099'>page</a> · <a href='https://arxiv.org/pdf/2507.01099'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Fourier Compressor: Frequency-Domain Visual Token Compression for Vision-Language Models</title>
-      <link>https://arxiv.org/abs/2508.06038</link>
-      <guid isPermaLink="false">arxiv:2508.06038</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS — Zhouhan Lin</p>
-<p><b>Authors:</b> Huanyu Wang, Jushi Kai, Haoli Bai, Lu Hou, Bo Jiang, Ziwei He, Zhouhan Lin</p>
-<p>Vision-Language Models (VLMs) incur substantial computational overhead and inference latency due to the large number of vision tokens introduced by high-resolution image and video inputs. Existing parameter-free token compression methods typically rely on token selection or merging, yet they risk discarding substantial visual information or distorting the original representation distribution, resulting in pronounced performance degradation at high compression ratios. In response, we aim to explore a more effective and efficient visual token compression strategy, with a promising direction in the frequency domain. Motivated by the success of frequency-domain transforms in image compression (e.g., JPEG), we systematically analyze the frequency redundancy in visual representations and uncover a non-uniform distribution of semantic information across frequency bands. Building upon this, we introduce Fourier Compressor, an effective, parameter-free, and highly generalizable module that removes redundancy from visual representations within the frequency domain. Implemented via FFT with $\mathcal{O}(n^2 \log n)$ complexity and no additional parameters, Fourier Compressor introduces negligible computational overhead while preserving semantic fidelity. Extensive experiments on image-based benchmarks demonstrate that our method achieves a favorable performance-efficiency trade-off, retaining over 96% of the original accuracy while reducing inference FLOPs by up to 83.8% and boosting generation speed by 31.2%. It consistently outperforms existing parameter-free methods and even surpasses some parameterized approaches. Importantly, Fourier Compressor generalizes consistently across both LLaVA and Qwen-VL architectures, and further extends to video understanding tasks, highlighting its practical applicability for efficient VLMs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2508.06038'>page</a> · <a href='https://arxiv.org/pdf/2508.06038'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

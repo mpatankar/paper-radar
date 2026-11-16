@@ -5,8 +5,19 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 15 Nov 2026 11:42:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 12:20:05 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models</title>
+      <link>https://huggingface.co/papers/2611.17331</link>
+      <guid isPermaLink="false">arxiv:2611.17331</guid>
+      <pubDate>Mon, 16 Nov 2026 12:20:05 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Columbia — (senior)</p>
+<p><b>Authors:</b> Chin-Yang Lin, Ryo Hachiuma, Jaesung Choe, Min-Hung Chen, Yu-Chiang Frank Wang, Yen-Yu Lin, Wei-Chen Chiu, Yu-Lun Liu, … <i>(+2 more)</i></p>
+<p>Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while Test-Time Training (TTT) layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), a strategy that learns to bake global scene information from cross-view attention into a lightweight MLP, enabling fast and high-fidelity novel-view decoding. The first key is to repurpose the fast-weight MLP of TTT to learn the cross-view attention mapping explicitly from its input-output pairs, rather than replacing attention entirely, achieving the same rendering efficiency as TTT while delivering substantially higher quality. The second key addresses a modality misalignment between context prefilling and novel-view rendering: we disentangle context tokens into camera-only context rendering tokens to serve as TTB input, and context ground-truth tokens with image content to serve as the TTB mapping target, ensuring the baked MLPs are relieved of the modality generalization challenge between context and novel-view processing. Our method achieves up to **23x** rendering speedup with quality on par with the state-of-the-art across several benchmarks. Project page: https://test-time-baking.github.io</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-12 · <a href='https://huggingface.co/papers/2611.17331'>page</a> · <a href='https://arxiv.org/pdf/2611.17331'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Building strong safety evaluations</title>
       <link>https://www.anthropic.com/research/building-strong-safety-evaluations</link>
@@ -2330,18 +2341,6 @@
 <p><b>Authors:</b> Haoyan Luo, Lucia Specia</p>
 <p>Transformer-based Large Language Models (LLMs) traditionally rely on final-layer loss for finetuning and final-layer representations for predictions, potentially overlooking the predictive power embedded in late layers. Interpretability tools such as the logit lens show that late-layer representations already carry largely formed, task-relevant predictions; here we ask whether that observation can be turned into an actionable training signal. We find that focusing tuning effort on these layers can yield losses comparable to those of the final layer, with complementary test-time behaviour. Building on this, we introduce a tuning framework, Mixture-of-Depths Ensemble (MoDE), which treats the late layers as an ensemble that contributes to the final logits through learned routing weights. MoDE can be applied on top of any existing tuning method (e.g., LoRA) and, in our experiments, modestly improves reasoning performance at a small parameter overhead. We present MoDE as a mechanism study showing that late-layer logits can be made directly useful for tuning, and that they can substitute for substantially larger trainable modules with comparable performance.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://arxiv.org/abs/2410.13077'>page</a> · <a href='https://arxiv.org/pdf/2410.13077'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Human-AI Complementarity: A Goal for Amplified Oversight</title>
-      <link>https://arxiv.org/abs/2510.26518</link>
-      <guid isPermaLink="false">arxiv:2510.26518</guid>
-      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.HC</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Rishub Jain, Sophie Bridgers, Lili Janzer, Rory Greig, Tian Huey Teh, Vladimir Mikulik</p>
-<p>Human feedback is critical for aligning AI systems to human values. As AI capabilities improve and AI is used to tackle more challenging tasks, verifying quality and safety becomes increasingly challenging. This paper explores how we can leverage AI to improve the quality of human oversight. We focus on an important safety problem that is already challenging for humans: fact-verification of AI outputs. We find that combining AI ratings and human ratings based on AI rater confidence is better than relying on either alone. Giving humans an AI fact-verification assistant further improves their accuracy, but the type of assistance matters. Displaying AI explanation, confidence, and labels leads to over-reliance, but just showing search results and evidence fosters more appropriate trust. These results have implications for Amplified Oversight -- the challenge of combining humans and AI to supervise AI systems even as they surpass human expert performance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.HC · <b>arXiv submitted:</b> 2026-06-25 · <a href='https://arxiv.org/abs/2510.26518'>page</a> · <a href='https://arxiv.org/pdf/2510.26518'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
