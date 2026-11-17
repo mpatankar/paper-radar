@@ -5,8 +5,41 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 16 Nov 2026 12:20:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 12:41:28 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters</title>
+      <link>https://huggingface.co/papers/2611.21607</link>
+      <guid isPermaLink="false">arxiv:2611.21607</guid>
+      <pubDate>Tue, 17 Nov 2026 12:41:28 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Ruixi Yu, Dairu Liu, Xuchuan Chen, Zekun Qi, Zekai Li, Zhuo Cao, Luyang Niu, Yingsheng Zhang, … <i>(+5 more)</i></p>
+<p>Frontier Vision-Language Models (VLMs) such as GPT-6 Astra have demonstrated remarkable capabilities in robot control, suggesting that broad pretraining provides knowledge valuable for physical action. Yet most Vision-Language-Action (VLA) policies still rely on much smaller VLM backbones, leaving this potential largely untapped. We ask whether frontier-scale representations can provide a stronger foundation for robot learning. We introduce ScaleVLA, which connects a 552B DeepSeek-V4.1-Flash backbone to a trainable action DiT, and systematically compare VLMs from 2B to 552B under a shared training setup. We evaluate three fundamental capabilities of robot foundation models. In sample efficiency, just 10 demonstrations outperform a 2B backbone trained with 50 (87.8% vs. 85.6%). In generalization, LIBERO-PRO success reaches 45.1%, compared with at most 31.3% for smaller backbones. In precise manipulation, real-world charger insertion improves from 4/10 to 9/10 successes, with gains concentrated in contact-sensitive alignment. Despite its scale, ScaleVLA achieves 216 ms median latency per action chunk. Our findings suggest that frontier VLMs can serve not only as reasoning agents, but also as powerful representational foundations for efficient and generalizable robot policies.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-16 · <a href='https://huggingface.co/papers/2611.21607'>page</a> · <a href='https://arxiv.org/pdf/2611.21607'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection</title>
+      <link>https://huggingface.co/papers/2611.07222</link>
+      <guid isPermaLink="false">arxiv:2611.07222</guid>
+      <pubDate>Tue, 17 Nov 2026 12:41:28 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Woosang Lim, Yeseul Chang, Jaewoo Lee, Hugging Face Daily Papers (curated)</p>
+<p>Tool-using agents act on email, files, and payments, so an instruction hidden in a web page or a shared document can make an agent send data or money to an attacker. Many runtime defenses put a language model on the decision that lets an action through, so the decision depends on a model that may read the attacker&#x27;s text and adds model calls to every step. Provenance defenses keep the model off the final check but need a model to plan or route each task first. Where an action goes can instead be read from the tools&#x27; typed returns: an email&#x27;s sender or a payment&#x27;s account arrives in a typed field, while injected instructions arrive as free text. SPILLWAY turns this observation into a deterministic floor with no per-task plan. The check admits a call when each target value that appears in tool output but not in the user&#x27;s task was returned by a read-only tool in a typed field or is covered by a fixed delegation rule. A deterministic sanitizer removes instruction-like regions its fixed rules match before the model reads them and retains the removed spans as evidence, and a local judge may restore a refused call, never one whose target lies in the removed text. Across three backbones, and seven task suites on one of them, no standard templated injection redirects an action to an attacker&#x27;s target under SPILLWAY, at the highest observed mean utility and composite scores (NRP, ERS) of the defenses we run under that attack. A forged chat template also produces a raw zero, and mean in-scope attack success under a released reinforcement-learning attacker is .007. SPILLWAY reaches this floor with no defense-triggered backbone re-run and almost no added model call. As personal AI agents act on users&#x27; email, files, and payments, SPILLWAY gives them an auditable refusal floor on where their actions go that keeps them useful and holds across backbones.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-04 · <a href='https://huggingface.co/papers/2611.07222'>page</a> · <a href='https://arxiv.org/pdf/2611.07222'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Toward a Theory of Evaluability</title>
+      <link>https://machinelearning.apple.com/research/theory-evaluability</link>
+      <guid isPermaLink="false">apple_ml:f59968fc45</guid>
+      <pubDate>Tue, 17 Nov 2026 12:41:28 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Machine learning models, particularly large foundation models, are increasingly evaluated along multiple axes that are relevant for their usage. In addition to accuracy measures appropriate for the specific task of interest, measures capturing safety, calibration and fairness properties are often of interest. The classical approach to these problems assumes that the test set has been held out from the training process, an assumption that is increasingly harder to justify for large foundation models. In this work, we formalize a notion of evaluability without this assumption, and ask if it isâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-10 · <a href='https://machinelearning.apple.com/research/theory-evaluability'>page</a></p>]]></description>
+    </item>
     <item>
       <title>TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models</title>
       <link>https://huggingface.co/papers/2611.17331</link>
@@ -2304,43 +2337,6 @@
 <p><b>Authors:</b> Thomas Chen</p>
 <p>We derive explicit equations governing the cumulative biases and weights in Deep Learning with ReLU activation function, based on gradient descent for the Euclidean loss in the input layer, and under the assumption that the weights are, in a precise sense, adapted to the coordinate system distinguished by the activations. We show that gradient descent corresponds to a dynamical process in the input layer, whereby clusters of data are progressively reduced in complexity (&quot;truncated&quot;) at an exponential rate that increases with the number of data points that have already been truncated. We provide a detailed discussion of several types of solutions to the gradient flow equations. A main motivation for this work is to shed light on the interpretability question in supervised learning.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, math.AP, math.OC, stat.ML · <b>arXiv submitted:</b> 2026-06-26 · <a href='https://arxiv.org/abs/2501.07400'>page</a> · <a href='https://arxiv.org/pdf/2501.07400'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SIDA: Synthetic Image Driven Zero-shot Domain Adaptation</title>
-      <link>https://arxiv.org/abs/2507.18632</link>
-      <guid isPermaLink="false">arxiv:2507.18632</guid>
-      <pubDate>Mon, 29 Jun 2026 05:35:13 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <category>cs.MM</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Stanford, U Toronto — Ye-Chan Kim</p>
-<p><b>Authors:</b> Ye-Chan Kim, SeungJu Cha, Si-Woo Kim, Taewhan Kim, Dong-Jin Kim</p>
-<p>Zero-shot domain adaptation is a method for adapting a model to a target domain without utilizing target domain image data. To enable adaptation without target images, existing studies utilize CLIP&#x27;s embedding space and text description to simulate target-like style features. Despite the previous achievements in zero-shot domain adaptation, we observe that these text-driven methods struggle to capture complex real-world variations and significantly increase adaptation time due to their alignment process. Instead of relying on text descriptions, we explore solutions leveraging image data, which provides diverse and more fine-grained style cues. In this work, we propose SIDA, a novel and efficient zero-shot domain adaptation method leveraging synthetic images. To generate synthetic images, we first create detailed, source-like images and apply image translation to reflect the style of the target domain. We then utilize the style features of these synthetic images as a proxy for the target domain. Based on these features, we introduce Domain Mix and Patch Style Transfer modules, which enable effective modeling of real-world variations. In particular, Domain Mix blends multiple styles to expand the intra-domain representations, and Patch Style Transfer assigns different styles to individual patches. We demonstrate the effectiveness of our method by showing state-of-the-art performance in diverse zero-shot adaptation scenarios, particularly in challenging domains. Moreover, our approach achieves high efficiency by significantly reducing the overall adaptation time.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.MM · <b>arXiv submitted:</b> 2026-06-26 · <a href='https://arxiv.org/abs/2507.18632'>page</a> · <a href='https://arxiv.org/pdf/2507.18632'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Previewing GPT-5.6 Sol: a next-generation model</title>
-      <link>https://openai.com/index/previewing-gpt-5-6-sol/</link>
-      <guid isPermaLink="false">openai:0077efc5b4</guid>
-      <pubDate>Sat, 27 Jun 2026 05:18:57 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
-<p><b>Authors:</b> OpenAI</p>
-<p>OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/previewing-gpt-5-6-sol/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Tuning Language Models by Mixture-of-Depths Ensemble</title>
-      <link>https://arxiv.org/abs/2410.13077</link>
-      <guid isPermaLink="false">arxiv:2410.13077</guid>
-      <pubDate>Fri, 26 Jun 2026 05:28:55 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Imperial College — Lucia Specia</p>
-<p><b>Authors:</b> Haoyan Luo, Lucia Specia</p>
-<p>Transformer-based Large Language Models (LLMs) traditionally rely on final-layer loss for finetuning and final-layer representations for predictions, potentially overlooking the predictive power embedded in late layers. Interpretability tools such as the logit lens show that late-layer representations already carry largely formed, task-relevant predictions; here we ask whether that observation can be turned into an actionable training signal. We find that focusing tuning effort on these layers can yield losses comparable to those of the final layer, with complementary test-time behaviour. Building on this, we introduce a tuning framework, Mixture-of-Depths Ensemble (MoDE), which treats the late layers as an ensemble that contributes to the final logits through learned routing weights. MoDE can be applied on top of any existing tuning method (e.g., LoRA) and, in our experiments, modestly improves reasoning performance at a small parameter overhead. We present MoDE as a mechanism study showing that late-layer logits can be made directly useful for tuning, and that they can substitute for substantially larger trainable modules with comparable performance.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI · <b>arXiv submitted:</b> 2026-06-24 · <a href='https://arxiv.org/abs/2410.13077'>page</a> · <a href='https://arxiv.org/pdf/2410.13077'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
