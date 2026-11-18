@@ -5,8 +5,143 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Tue, 17 Nov 2026 12:41:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 12:32:50 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Building verifiable databases at scale from the chemical literature via a multi-agent system</title>
+      <link>https://arxiv.org/abs/2507.20230</link>
+      <guid isPermaLink="false">arxiv:2507.20230</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.MA</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> HKUST — (senior)</p>
+<p><b>Authors:</b> Yufan Chen, Ching Ting Leung, Bowen Yu, Haifan Zhou, Jianwei Sun, Yong Huang, Linyan Li, Hao Chen, … <i>(+1 more)</i></p>
+<p>Accelerating chemical research with artificial intelligence requires high-quality databases. However, many reactions exist only as graphics drawn for human readers, which machines must read exactly. Specialist software is precise but rigid, whereas multimodal language models are flexible yet often write incorrect structures; neither flags errors. We present ChemEAGLE, a multi-agent system where tools supply structures and a language model extends their reach through judgments that programs apply. On 424 published graphics, its F1 score for exactly correct reactions was 82.2%, against 47.7% for a tool-equipped generalist agent, and calibrated confidence limited review to 35% of reactions at 96.6% accuracy. Without review, it built a 60,103-reaction photochemistry database whose records trained models to rank conditions and predict products. Verifiable databases can thus be built at scale.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CV, cs.MA · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://arxiv.org/abs/2507.20230'>page</a> · <a href='https://arxiv.org/pdf/2507.20230'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Strategy Search to Policy Learning: MCTS-Guided Adversarial Co-Evolution for LLM Safety Alignment</title>
+      <link>https://arxiv.org/abs/2511.19218</link>
+      <guid isPermaLink="false">arxiv:2511.19218</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.CR</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
+<p><b>Authors:</b> Xurui Li, Kaisong Song</p>
+<p>Large Language Models (LLMs) increasingly power web-facing applications, including conversational assistants and content services, where open user interaction exposes them to diverse safety threats and adaptive attacks. In particular, jailbreak attackers repeatedly reformulate harmful requests to bypass safety alignment. Although existing studies have concentrated on defending dynamic jailbreaks, they often retain discovered attacks as flat samples and discard information about how those attacks were found. In this paper, we introduce MACE, an MCTS-guided adversarial co-evolution framework that turns search into policy-learning signals for both an attacker and a defender. Its search component, GS-MCTS, explores multi-step compositions of rewriting operators and associates discovered attacks with empirical success frequency and path depth. Its optimization component, AC-TGPO, uses these statistics for difficulty-aware group-relative credit assignment and constructs a temporally asymmetric curriculum from current interactions, pairings between the latest attacker and preceding defender, and attacks that survive a defense update. Thus, MACE connects search structure to both within-round policy optimization and cross-round memory, rather than using MCTS only to generate attacks or treating each round as a flat adversarial dataset. Removing difficulty-aware weighting, asymmetric samples, or persistent hard samples increases defense ASR-LR by 3.7 %, 6.0 %, and 5.0 %, respectively. Across evaluated models, the resulting attacker achieves the highest ASR-LR in all six model--dataset settings, while the defender reduces average ASR-LR from 11.9 % for the best baseline to 8.8 %.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://arxiv.org/abs/2511.19218'>page</a> · <a href='https://arxiv.org/pdf/2511.19218'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Evaluating and Understanding Scheming Propensity in LLM Agents</title>
+      <link>https://arxiv.org/abs/2603.01608</link>
+      <guid isPermaLink="false">arxiv:2603.01608</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> TU Munich — (senior)</p>
+<p><b>Authors:</b> Mia Hopman, Jannes Elstner, Maria Avramidou, Amritanshu Prasad, David Lindner</p>
+<p>As frontier language models are increasingly deployed as autonomous agents pursuing complex, long-term objectives, there is increased risk of scheming: agents covertly pursuing misaligned goals. Prior work has focused on showing agents are capable of scheming, but their propensity to scheme in realistic scenarios remains underexplored. To understand when agents scheme, we decompose scheming incentives into agent factors and environmental factors. We develop realistic settings allowing us to systematically vary these factors, each with scheming opportunities for agents that pursue instrumentally convergent goals such as self-preservation, resource acquisition, and goal-guarding. Across 11 frontier models and four scenarios, we find almost no scheming despite high environmental incentives, and show this is unlikely to be explained by verbalized evaluation awareness. While inserting adversarially-designed prompt snippets that encourage agency and goal-directedness into an agent&#x27;s system prompt can induce high scheming rates, snippets used in real agent scaffolds rarely do. In model organisms built with these snippets, scheming behavior is brittle: removing a single tool can drop the scheming rate from 59% to 3%. Increasing oversight can raise rather than deter scheming by up to 25%, an effect that depends on the wording of the oversight sentence and does not appear in a second scenario, where the sabotage itself is reviewed. These results suggest that scheming propensity should be reported per agent configuration rather than as a single rate. Our incentive decomposition enables such systematic measurement in settings relevant for deployment, which is necessary as agents are entrusted with increasingly consequential tasks.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://arxiv.org/abs/2603.01608'>page</a> · <a href='https://arxiv.org/pdf/2603.01608'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Seeing with You: Perception-Reasoning Coevolution for Multimodal Reasoning</title>
+      <link>https://arxiv.org/abs/2603.28618</link>
+      <guid isPermaLink="false">arxiv:2603.28618</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab</p>
+<p><b>Authors:</b> Ziqi Miao, Haonan Jia, Lijun Li, Chen Qian, Yuan Xiong, Wenting Yan, Yongyao Wang, Zaoying Huang, … <i>(+2 more)</i></p>
+<p>Reinforcement learning with verifiable rewards (RLVR) has substantially enhanced the reasoning capabilities of multimodal large language models (MLLMs). However, existing RLVR approaches typically rely on outcome-driven optimization that updates both perception and reasoning using a shared reward based solely on the final answer. This shared reward blurs credit assignment, frequently improving reasoning patterns while failing to reliably enhance the accuracy of upstream visual evidence extraction. To address this perception bottleneck, we introduce PRCO (Perception-Reasoning Coevolution), a dual-role RLVR framework with a shared policy. PRCO consists of two cooperative roles: an Observer that generates an evidence caption tailored to the question and a Solver that predicts the final answer based on this caption. Crucially, PRCO employs role-specific reward signals: the Solver is optimized using verifiable outcome rewards on the final answer, while the Observer receives a utility reward derived from the Solver&#x27;s downstream success. Extensive experiments across eight challenging multimodal reasoning benchmarks demonstrate that PRCO yields consistent improvements across model scales by over 7 points on average accuracy compared to the base model, outperforming prior open-source RL-tuned baselines.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://arxiv.org/abs/2603.28618'>page</a> · <a href='https://arxiv.org/pdf/2603.28618'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Fundamental ResearchNeuron InterpretabilityDiscovering Neuron Communities in Language ModelsShilov et al.Â·November 17, 2026</title>
+      <link>https://www.goodfire.ai/research/neuron-communities</link>
+      <guid isPermaLink="false">goodfire:afd0b1a8b4</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>blog</category>
+      <category>interpretability</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Goodfire</p>
+<p><b>Authors:</b> Goodfire</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://www.goodfire.ai/research/neuron-communities'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks</title>
+      <link>https://huggingface.co/papers/2611.22115</link>
+      <guid isPermaLink="false">arxiv:2611.22115</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xingchen AGI Lab, Baotian Hu, Bingkai Yang, Boyang Wang, Changzai Pan, Chao Lyu, Chao Wang, Chen Li, … <i>(+132 more)</i></p>
+<p>We present Xing 4, a series of large language models that extends the TeleChat lineage through coordinated advances in model architecture and training infrastructure on Ascend. This report describes the design principles and systems engineering behind the series, spanning architecture selection, large-scale pretraining, and reasoning and agentic post-training. We study how sparse activation, attention design, model depth and width, and speculative decoding balance model capacity with computation, memory access, and execution overhead. Our pretraining infrastructure builds on MindSpore HyperParallel, combining topology-aware hybrid sharding, efficient distributed optimizer execution, and coordinated management of long-sequence workloads and activation memory. CPU affinity and core isolation further reduce host scheduling interference. Together, these mechanisms support the pretraining of a 285B-parameter model on 8,192 Ascend 910C cards, providing a concrete setting for the architectural and systems studies. For post-training, we introduce TeleGym, a unified agent execution platform that connects execution, evaluation, and trajectory construction to policy optimization. Disaggregated asynchronous execution, bounded oversampling, and partial rollout accommodate heterogeneous task durations while preserving trajectory continuity across policy updates. Together, these advances establish an Ascend-oriented training foundation for the continued development of Xing 4 across model scales and increasingly demanding reasoning and agent workloads.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://huggingface.co/papers/2611.22115'>page</a> · <a href='https://arxiv.org/pdf/2611.22115'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs</title>
+      <link>https://huggingface.co/papers/2611.17621</link>
+      <guid isPermaLink="false">arxiv:2611.17621</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> AI Training Platform Team, Bingwei Zhang, Jing Li, Amir Abdullin, Sihang Chen, Xin Chen, Liangjun Feng, Yingmeng Gao, … <i>(+20 more)</i></p>
+<p>Kernel optimization is essential for efficient large language model (LLM) training and inference on Ascend NPUs. Existing Ascend kernel benchmarks primarily focus on kernel generation, with less emphasis on the ability of agents to optimize existing implementations under input configurations drawn from real workloads. To address this requirement, we introduce AscendGYM, a benchmark whose initial suite comprises 48 kernels across three difficulty levels. Each kernel is paired with test cases whose data types and tensor shapes are collected from real-world training and inference tasks. Consequently, performance improvements on AscendGYM map directly to the corresponding workloads. In terms of usability, two evaluation modes are supported in AscendGYM: model evaluation and model-harness evaluation. The kernel optimization capabilities of both trained models and custom agents are allowed to be measured. It provides a complete execution environment that closely reproduces how Ascend kernels are invoked in practical pipelines. For model evaluation, it additionally includes a built-in harness equipped with search orchestration and experience accumulation. Finally, we propose a new metric, the Speedup-Token Score (STS), which quantifies performance gains relative to token cost. By jointly considering speedup and cost, STS enables the assessment of practical kernel optimization capability of a model or harness under an acceptable budget. AscendGYM is available at https://github.com/SLAI-AITP/AscendGYM.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-13 · <a href='https://huggingface.co/papers/2611.17621'>page</a> · <a href='https://arxiv.org/pdf/2611.17621'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Weight-Space Programming Doesn&#x27;t Need Transformers</title>
+      <link>https://huggingface.co/papers/2611.22055</link>
+      <guid isPermaLink="false">arxiv:2611.22055</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Hyunjong Ok, Jaeho Lee, Hugging Face Daily Papers (curated)</p>
+<p>Standard neural architectures such as the Transformer were chosen because they train well with gradient descent and run fast on GPUs. In weight-space programming, a large language model (LLM) writes target weights by hand without gradient-based training, so those reasons no longer apply. Should we keep the Transformer? Given minimal guidance, ten labeled examples, and a sandbox, mainly on multiple-choice questions, we task three frontier LLMs with either generating the weights of a fixed architecture or designing the architecture themselves. When free to design, all three compile plain-text facts into a sparse table queried by a fixed procedure, reaching up to 54.4% test accuracy. An LLM-designed model achieves higher test accuracy than the most accurate released Transformer that the same LLM wrote while using about 1,800x fewer parameters. Without gradients, they choose a table, in which the LLM can state what each weight means and can find and rewrite a wrong one. Each wrong answer points to one row, and removing a row changes about one other answer. From this, we propose an associative-memory-based model up to 17x faster on GPUs than a same-sized Transformer. We also test pretrained weights, other benchmarks, and tasks where models generate answers. Pretrained LLMs remain more accurate; the claim concerns which structure to build when writing weights.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://huggingface.co/papers/2611.22055'>page</a> · <a href='https://arxiv.org/pdf/2611.22055'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Multi-Branch Transformer</title>
+      <link>https://huggingface.co/papers/2611.19800</link>
+      <guid isPermaLink="false">arxiv:2611.19800</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Gaotang Li, Lingjie Chen, Chunyuan Deng, Zhiwei Xu, Hongzheng Chen, Christopher De Sa, Jingrui He, Yingheng Wang, … <i>(+2 more)</i></p>
+<p>Transformer language models are commonly scaled by making their blocks wider or stacking them deeper. In this work, we explore a complementary path: branching, the parallel composition of full Transformer blocks. We introduce the Multi-Branch Transformer (MBT), which processes the input through shared initial layers, executes independently parameterized branches of sequential blocks in parallel, and fuses their outputs before shared final layers. At comparable training compute, we study three MBT variants: Wide-Shallow preserves block width, Narrow-Deep preserves sequential depth, and Balanced interpolates between them. In controlled pretraining experiments at four mixture-of-experts scales (0.8B to 2.1B total parameters), 2-branch Wide-Shallow MBTs consistently outperform sequential Transformers under matched parameter and training-compute budgets. Balanced MBTs improve further and retain comparable quality as the number of branches increases. To improve inference efficiency at long contexts, we introduce Joint-KV, which constructs a shared KV cache from branch representations at each depth. Our final recipe combines Balanced MBTs with Joint-KV, supported by an inference engine that exploits branch grouping and shared-cache reuse. Fitted scaling curves indicate that standard Transformers require up to 1.26x as much training body compute to match our final models&#x27; validation loss. These models reduce full-model KV-cache storage by up to 34% and deliver up to 51.4% higher decoding throughput on a single H200 GPU. Ablation studies show that branching yields gains beyond changes in width and depth, enables an effective KV-sharing strategy (Joint-KV), remains robust across fusion functions, and performs best in the middle layers. These findings show that branching offers a practical path for scaling language models toward both better modeling quality and faster inference.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-15 · <a href='https://huggingface.co/papers/2611.19800'>page</a> · <a href='https://arxiv.org/pdf/2611.19800'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Beyond Answering: Learning to Speak First and Act in Streaming Video</title>
+      <link>https://huggingface.co/papers/2611.17048</link>
+      <guid isPermaLink="false">arxiv:2611.17048</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Shuhan Li, Huankang Guan, Xintong Guo, Yang Bo, Yuyang He, Dunyuan Xu, Jingyan Chen, Fang Liu, … <i>(+11 more)</i></p>
+<p>Most AI assistants respond only when prompted, remaining silent even when events in the video stream offer meaningful opportunities for conversation. To move beyond purely user-driven interaction, we present AURA 2.0, a streaming video large language model that introduces three core upgrades to AURA. The key advance is Model-Initiated Conversation (MIC), which enables the model to identify topics worth discussing in the evolving visual stream and initiate conversations at appropriate moments without a user query. Stream-Aware Tool Calling (SATC) lets the model act on what it sees by invoking external tools using the current visual and conversational context and incorporating returned information into the ongoing interaction. Interactive Visual Grounding (IVG) supports visual grounding in both user inputs and model outputs. The model can identify objects marked by users on video frames and produce frame-aligned bounding boxes to link its responses to specific objects and regions. To develop these capabilities, we construct a dedicated streaming interaction dataset and adopt a three-stage training scheme to integrate the new behaviors with AURA&#x27;s existing streaming interaction abilities. We further incorporate Long-Horizon Interaction Memory (LHIM) to maintain contextual continuity over extended video streams. Evaluations on public streaming benchmarks show that AURA 2.0 achieves leading performance among open-source streaming models, while targeted evaluations further validate its new interaction capabilities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-15 · <a href='https://huggingface.co/papers/2611.17048'>page</a> · <a href='https://arxiv.org/pdf/2611.17048'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation</title>
+      <link>https://huggingface.co/papers/2611.23143</link>
+      <guid isPermaLink="false">arxiv:2611.23143</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haosong Peng, Xiangyang Liu, Zhengshen Zhang, Yunfeng Fan, Tianyu Qi, Xin Xia, Yufeng Zhan, Wenchao Xu, … <i>(+1 more)</i></p>
+<p>Robot manipulation videos provide a rich visual experience, yet recovering robot action and gripper-state annotations from RGB observations still remains challenging. Using the embodiment-agnostic tool-center-point (TCP) pose as the action space, we present TCP4D, a unified model in which a shared 4D scene representation both tracks observed TCP motion and generates future TCP trajectories. Given a monocular video and initial 2D TCP queries, the tracker directly recovers metric TCP poses in SE(3) and gripper states alongside scene geometry and camera parameters. The generator samples local features from the same 4D representation along the recovered TCP tracks, then combines them with robot observations and language instructions to predict future TCP states. Our new cross-embodiment augmentation pipeline converts existing RGB videos into demonstrations for alternative embodiments by retargeting the recovered motion and synthesizing the corresponding observations, without recorded source-robot states. Experiments show that the tracker achieves absolute trajectory errors of 7.60 and 16.07 mm on DROID and RoboLab and adapts to a new embodiment with only ten demonstrations. The generator achieves 69.19% mean success on RoboTwin and outperforms well-established policy models on two real-world tasks, while joint training on source and augmented demonstrations improves target-robot success by 41.5% over augmented-only training.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://huggingface.co/papers/2611.23143'>page</a> · <a href='https://arxiv.org/pdf/2611.23143'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Split-and-Scale Latent 3D Representations</title>
+      <link>https://machinelearning.apple.com/research/split-scale-latent-3d</link>
+      <guid isPermaLink="false">apple_ml:24e843e375</guid>
+      <pubDate>Wed, 18 Nov 2026 12:32:50 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
+<p><b>Authors:</b> Apple ML Research</p>
+<p>Latent 3D representations have significantly expanded the capabilities of modern shape modeling, enabling compact encoding of 3D scenes and supporting powerful 3D generative models. Despite this progress, current representations struggle to capture the fine details of complex objects, fundamentally limited by the capacity of their latents. However, scaling latent capacity at training time is computationally expensive and often infeasible under memory limits, and naively increasing the number of latents at inference fails to make effective use of the added capacity. In this paper, we addressâ¦</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-16 · <a href='https://machinelearning.apple.com/research/split-scale-latent-3d'>page</a></p>]]></description>
+    </item>
     <item>
       <title>The Sharpness Disparity Principle in Transformers for Accelerating Language Model Pre-Training</title>
       <link>https://arxiv.org/abs/2502.19002</link>
@@ -2164,140 +2299,6 @@ We evaluate how good large language model (LLM) judges are for personalized writ
 <p><b>Authors:</b> A. Jian Yang, An Huang, Bo Dan, Chen Mu, Chengran Yang, Chuan Shi, Feng Chang, Hongxin Li, … <i>(+170 more)</i></p>
 <p>We present IQuest-Q1, a sparse Mixture-of-Experts (MoE) agentic foundation model with 320B total parameters (15B activated). IQuest-Q1 is developed through a three-stage process: (1) stable and efficient pre-training, combining Stable SplitNorm, Muon, and muP with a two-stage curriculum whose second stage increases the coding-data mixture, preserving a wide stability margin between safe and optimal learning rates; (2) fine-grained mid-training, expanding the data mixture across domains and formats and progressively extending the context; and (3) multi-scaffold with multi-version post-training, combining SFT, domain-specialized RL, and MOPD across various scaffolds to integrate complementary training signals and strengthen agentic coding capabilities. Furthermore, model merging combines different experts and checkpoints from different stages while mitigating conflicts among their parameter updates. The resulting IQuest-Q1 demonstrates capabilities in both coding and general tasks. We release IQuest-Q1 as an open-source model to support community research and development.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.30949'>page</a> · <a href='https://arxiv.org/pdf/2610.30949'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>What Generation Knows: Unlocking Fine-Grained Understanding in Unified Multimodal Models</title>
-      <link>https://huggingface.co/papers/2610.23987</link>
-      <guid isPermaLink="false">arxiv:2610.23987</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Tengju Ru, Weitong Lian, Zecong Tang, Zhiheng Liu, Lingyi Meng, Haoran Li, Kaixuan Wang, Bohao Li, … <i>(+2 more)</i></p>
-<p>Fine-grained visual understanding requires distinguishing subtle differences in local attributes and spatial relations, yet remains challenging for existing vision-language models. Unified multimodal models (UMMs) offer a new opportunity through generation pathways that preserve rich visual information complementary to understanding. However, existing generation-assisted understanding methods mainly rely on generative supervision or explicit generation and have not systematically explored direct use of native generation-side representations. To address this gap, we systematically analyze what generation-side representations offer for fine-grained understanding, finding that they are more sensitive to fine-grained semantic changes, capture task-relevant changes missed by understanding-side representations, and depend on correct spatial organization for this advantage. Guided by these findings, we design GAFU, a post-training framework that unlocks native generation-side information for fine-grained understanding. It compresses generation-side visual representations into compact \(G\) tokens that preserve fine-grained visual details, enabling task-conditioned retrieval by the understanding pathway. Experiments show that GAFU consistently outperforms SFT baselines trained on the same data across diverse visual understanding tasks and UMM architectures, with maximum relative improvements of 20.00\%, 17.94\%, and 8.62\% on VStar-Bench, OmniSpatial, and VSR-Bench, respectively. Overall, GAFU converts complementary information from the generation pathway into gains in fine-grained visual understanding, providing an effective path toward synergy between generation and understanding in UMMs.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-14 · <a href='https://huggingface.co/papers/2610.23987'>page</a> · <a href='https://arxiv.org/pdf/2610.23987'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LaLa-World: Scaling Latent World Models with Natural Language Actions</title>
-      <link>https://huggingface.co/papers/2610.27851</link>
-      <guid isPermaLink="false">arxiv:2610.27851</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Junha Song, Geonmo Gu, Jeongeun Park, Heejeong Nam, Lucas Maes, Byeongho Heo, Dongyoon Han, Sangdoo Yun, … <i>(+1 more)</i></p>
-<p>This paper shows that JEPA-style latent world models (LWMs) can learn across diverse domains and data sources by adopting the language-conditioned interface of video generation models. We establish this approach as an effective and efficient basis for planning with imagination and downstream policy fine-tuning. To this end, we introduce LaLa-World, a Language-conditioned Latent World model that learns from simulation and robot trajectories together with broader image and video data. Two designs make this work. First, we describe both numerical actions and visual changes in language, enabling joint training of a single future predictor across heterogeneous datasets. Second, we build the predictor on a language model, allowing it to interpret language conditions while predicting future latent states. The resulting predictor achieves higher average MPC planning performance than existing LWMs trained separately for each domain or task. Adding image and video data further improves average planning performance and robustness to action phrasing. In a matched comparison with an RAEv2-based video generation model baseline, LaLa-World reaches comparable planning performance with 6times less training cost and 13.9times faster planning. Beyond planning, the pretrained LaLa-World serves as an initialization for LaLa-Policy, which jointly predicts actions and future visual representations. LaLa-Policy performs competitively with Cosmos Policy on LIBERO and RoboCasa, with up to 5.5times faster inference.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-21 · <a href='https://huggingface.co/papers/2610.27851'>page</a> · <a href='https://arxiv.org/pdf/2610.27851'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Editing Images into Reusable Layers via Compositional Edit-Prior Distillation</title>
-      <link>https://huggingface.co/papers/2610.24738</link>
-      <guid isPermaLink="false">arxiv:2610.24738</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Wen Xue, Yong Liu, Xueheng Li, Si Wu, Yong Xu, Yipeng Sun, Yan Li, Simiu Gu, … <i>(+1 more)</i></p>
-<p>High-quality image editing requires precise modification of target regions while preserving the content of unrelated regions. Existing editing models produce flattened outputs that limit precise local manipulation and layer reuse, while decomposition methods typically optimize layer recovery separately from instruction-driven editing. To this end, we introduce LayerEditor, a unified framework that couples instruction-guided image editing with controllable generation of reusable RGBA layers. At its core, In-Context RGB-Alpha Token Modeling jointly represents the edited canvas and an ordered sequence of RGB-Alpha layers within a single token sequence, enabling semantic edits and explicit control over individual layer content. To retain the pretrained model&#x27;s editing capability during adaptation to layered outputs, we propose Compositional Edit-Prior Distillation, which transfers its editing prior to both the edited canvas and the image composed from the predicted layers. To support training and evaluation, we construct LayerEditor-100K, a large-scale paired image-editing dataset with ordered RGBA layer annotations, and introduce dedicated benchmarks for layered editing. Extensive experiments demonstrate that LayerEditor maintains strong editing fidelity while generating accurate RGBA layers, supporting both flexible layer-level manipulation and multi-layer decomposition.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-17 · <a href='https://huggingface.co/papers/2610.24738'>page</a> · <a href='https://arxiv.org/pdf/2610.24738'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Meta Expert: Cross-Layer Expert Sharing for Storage- and Retrieval-Efficient MoE</title>
-      <link>https://huggingface.co/papers/2610.27598</link>
-      <guid isPermaLink="false">arxiv:2610.27598</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Ermo Hua, Xiangyu Hong, Baiting Wu, Che Jiang, Haozheng Hou, Yicheng Gu, Hanjing Wang, Qirui Zeng, … <i>(+7 more)</i></p>
-<p>As model parameters scale up, sparsely activated Mixture-of-Experts (MoE) approaches have become essential for model scaling. However, mainstream models currently adopt hierarchical architectures, where experts in different layers, although topologically independent, exhibit substantial similarity and redundancy in their stored content. Compared to the hierarchically arranged Local Expert in existing mainstream models, we hypothesize that inter-layer shared Meta Expert hold greater potential. To this end, we conduct a multi-dimensional empirical comparison between Local and Meta Experts, and find that models incorporating Meta Experts exhibit lower parameter redundancy, together with lower cross-entropy loss and higher downstream task accuracy. With the activated quantity and the expert granularity held fixed, our model matches the performance of Vanilla MoE using only 70--80\% of the experts, substantially improving the model&#x27;s scaling potential. Beyond removing inter-layer redundancy among experts and improving information storage efficiency, our theoretical analysis further shows that, compared with Local Experts, Meta Experts provide hidden states with more flexible residual pathways, thereby improving information retrieval efficiency.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-20 · <a href='https://huggingface.co/papers/2610.27598'>page</a> · <a href='https://arxiv.org/pdf/2610.27598'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>OlmoEarth v1.3: State-of-the-art embeddings for the whole planet</title>
-      <link>https://allenai.org/blog/olmoearth-v1-3</link>
-      <guid isPermaLink="false">ai2:fd1fd66f68</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Allen Institute for AI</p>
-<p><b>Authors:</b> Allen Institute for AI</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://allenai.org/blog/olmoearth-v1-3'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Optimized Conformal Selection: Powerful Selective Inference After Data-Dependent Score Construction</title>
-      <link>https://arxiv.org/abs/2411.17983</link>
-      <guid isPermaLink="false">arxiv:2411.17983</guid>
-      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
-      <category>stat.ME</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <category>stat.ML</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Ying Jin</p>
-<p><b>Authors:</b> Tian Bai, Ying Jin</p>
-<p>We study data-driven score construction in conformal selection, which uses conformal p-values and multiple testing to select &quot;interesting&quot; instances with large unobserved labels from a pool of unlabeled data, while controlling the FDR in finite sample. While existing solutions require the score function to be constructed independent of the calibration and test data, it is desirable to select or construct powerful conformity score in a data-driven manner and to leverage all labeled data for score training when presented with many score choices and limited labeled data. We propose Optimized Conformal Selection (OptCS), a general framework that allows valid multiple testing after flexible data-driven score construction. We introduce general conditions under which OptCS constructs valid conformal p-values despite substantial data reuse and handles complex p-value dependencies to maintain finite-sample FDR control. We instantiate this general recipe to propose three FDR-controlling procedures, each optimizing the models differently: (i) selecting a powerful score function among multiple candidates, (ii) training the score with all labeled data without sample splitting, and (iii) combining full-sample training and model selection. We demonstrate the efficacy of our methods via simulation studies and real applications in drug discovery and large language models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> stat.ME, cs.AI, cs.LG, stat.ML · <b>arXiv submitted:</b> 2026-10-21 · <a href='https://arxiv.org/abs/2411.17983'>page</a> · <a href='https://arxiv.org/pdf/2411.17983'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Using thousands of AI agents to uncover new leads in biological data</title>
-      <link>https://openai.com/index/scaling-ai-research-for-complex-biological-data/</link>
-      <guid isPermaLink="false">openai:e3212a9c93</guid>
-      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
-<p><b>Authors:</b> OpenAI</p>
-<p>See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/scaling-ai-research-for-complex-biological-data/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Cache Engineering for Agents</title>
-      <link>https://huggingface.co/papers/2610.28577</link>
-      <guid isPermaLink="false">arxiv:2610.28577</guid>
-      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Tianyu Fu, Ruoxi Wang, Zihan Min, Zhongqi Ren, Zhihao Li, Tengxuan Liu, Shengxu Mu, Hanling Zhang, … <i>(+2 more)</i></p>
-<p>Large Language Model (LLM) agents can handle increasingly complex tasks, navigating long trajectories of observations and actions. As these trajectories grow, key-value (KV) cache I/O and storage become the dominant cost. Trajectories can also exceed the LLM&#x27;s maximum context length, requiring control over active cache growth. Prior work uses context engineering to reduce cache size by trimming or summarizing history. However, modifying the trajectory prefix invalidates subsequent cached states and triggers costly re-prefilling of retained context. Task accuracy can also suffer when too little context is retained to limit re-prefill costs. We propose cache engineering as a new scheme. It allows agents to directly control their active KV cache without modifying the trajectory or re-prefilling retained context. Specifically, agents can proactively use drop to exclude selected cache from future attention and repos to adjust retained keys&#x27; position encodings. We formalize these cache operations and identify history dependence as a serving challenge: identical token sequences can yield different cache states under different cache operation sequences, making prefix matching insufficient for correct cache reuse. Thus, we co-design the AKV serving engine. It provides a stateless interface compatible with existing serving APIs, while internally managing stateful cache reuse, eviction, and restoration. Experiments show that a tool-response rolling-drop cache policy improves average benchmark scores by 1.7 points and reduces average cost by 27.7%, compared with conventional threshold-triggered summarization. With AKV, it achieves up to 1.2x the output throughput and a 1.5x speedup in P95 request latency. Recursive self-improvement of cache policies further reduces cost by 7.1% over expert design. Our code is at https://github.com/thu-nics/AKV.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-20 · <a href='https://huggingface.co/papers/2610.28577'>page</a> · <a href='https://arxiv.org/pdf/2610.28577'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Agent World Model in the Wild: Computer-Use Agent Environment Synthesis</title>
-      <link>https://huggingface.co/papers/2610.26828</link>
-      <guid isPermaLink="false">arxiv:2610.26828</guid>
-      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zhaoyang Wang, Qianhui Wu, Haorui Wang, Simon Yu, Baolin Peng, Canwen Xu, Hao Cheng, Wenlin Yao, … <i>(+5 more)</i></p>
-<p>Agent learning is shifting from learning from human data toward learning through interaction with the world. However, scaling such learning directly in real-world computer systems is challenging and can introduce substantial security risks. We therefore propose Agent World Model in the Wild (WildAWM), a scalable pipeline for synthesizing controllable environments and tasks for training general computer-use agents (CUAs). Whereas existing approaches typically specialize in a single agent interaction interface, we construct executable environments that jointly support graphical user interfaces, model context protocol services, and command-line interfaces, allowing agents to flexibly combine visual interaction, tool use, and code execution. WildAWM is entirely powered by open-source models, demonstrating that high-quality computer-use environments can be generated without proprietary frontier models. Beyond environments, we address three recurring challenges in task synthesis: ensuring solvability, maintaining sufficient difficulty, and producing reliable verifiers, by introducing execution-based quality gates that combine heterogeneous agent rollouts, cross-judge consistency checks, and counterfactual probes of judgment robustness. The resulting pipeline synthesizes 341 long-horizon environment-task pairs that can require over 100 agent steps to solve and remain challenging even for frontier models, with GPT-6-Astra solving only 60% of them. We train two Qwen models of different sizes exclusively in these synthetic worlds. Both models achieve substantial gains across 8 out-of-distribution benchmarks spanning web, claw, and computer-use agents, demonstrating that learning in WildAWM&#x27;s synthesized worlds generalizes broadly to unseen computer-use tasks. The code is publicly available at https://github.com/MSR-Orchard/WildAWM.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://huggingface.co/papers/2610.26828'>page</a> · <a href='https://arxiv.org/pdf/2610.26828'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?</title>
-      <link>https://huggingface.co/papers/2610.26659</link>
-      <guid isPermaLink="false">arxiv:2610.26659</guid>
-      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zhaoxi Zhang, Hao Liang, Linxuan Wu, Yiming Wu, Yifu Yuan, Kun Liang, Chenming Tang, Meiyi Qiang, … <i>(+3 more)</i></p>
-<p>Spatial intelligence requires agents to actively acquire visual evidence and integrate observations into a coherent representation of the three-dimensional world. Yet spatial question answering offers limited evidence of whether models can construct accurate metric maps through autonomous exploration. We introduce SpatialScout, a benchmark for evaluating vision-language model (VLM) agents on active object-level 3D mapping. SpatialScout comprises 80 diverse indoor scenes containing 3,140 target objects. Given an object inventory, RGB observations, camera calibration, and camera poses, agents control a camera to explore each scene and estimate object centers in a shared coordinate frame. The task requires coordinating viewpoint selection, cross-view association, geometric estimation, and map revision under bounded interaction budgets. Evaluation jointly measures localization accuracy and target coverage through object-scale overlap scores that penalize missing predictions. Experiments with frontier VLMs reveal substantial limitations: the strongest evaluated model, Claude Opus 5.5, achieves a mean overlap score of 41.71%, with 47.23% of targets exceeding an intersection-over-union (IoU) threshold of 0.5 and only 3.25% exceeding 0.9. These results reveal a substantial gap between recovering coarse object layouts and constructing complete, precise metric maps. SpatialScout provides a quantitative testbed for developing agents that build reliable 3D spatial representations through active perception. Code is available at https://github.com/JesseZZZZZ/SpatialScout.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://huggingface.co/papers/2610.26659'>page</a> · <a href='https://arxiv.org/pdf/2610.26659'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>StreamEval: Evaluating Interactive Streaming Video Generation Models</title>
-      <link>https://huggingface.co/papers/2610.28402</link>
-      <guid isPermaLink="false">arxiv:2610.28402</guid>
-      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> StreamEval Team, Hugging Face Daily Papers (curated)</p>
-<p>As streaming video generation advances, enabling real-time interaction with generated video is becoming increasingly important. We introduce StreamEval, a unified benchmark for interactive streaming video generation spanning five tasks: avatar dialogue, avatar performance, world generation, instruction editing, and reference editing. StreamEval comprises 300 scripted test cases lasting 15-300s, each specifying initial assets, incrementally arriving multimodal requests, and explicit requirements for state changes and content preservation. Performance is assessed along four evaluation dimensions: task execution, state consistency, visual fidelity, and audiovisual coordination, instantiated through ten task-specific metrics on a 0-100 scale. Evaluating 37 distinct models across 300 test cases, we find that high visual quality and identity retention do not necessarily coincide with reliable request execution or sustained state consistency. In particular, request execution remains challenging: the highest task-specific scores are 36.90 for Following among seven avatar-performance models, 25.93 for Following in text-conditioned world generation, and 15.00 for Edit Success among three reported reference-editing models. These findings identify reliable request execution under timing and preservation constraints as a central challenge for advancing omni-modal real-time interactive systems. The leaderboard is available at https://streameval.ai</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-20 · <a href='https://huggingface.co/papers/2610.28402'>page</a> · <a href='https://arxiv.org/pdf/2610.28402'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Socratic Skill Learning: Interleaving Teaching and Practice for Transferable Agent Skills</title>
-      <link>https://huggingface.co/papers/2610.17860</link>
-      <guid isPermaLink="false">arxiv:2610.17860</guid>
-      <pubDate>Thu, 22 Oct 2026 09:04:38 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Letian Zhu, Han Li, Yifan Yao, Xinping Lei, Xinyu Che, Jiahao Wang, Dianyi Wang, Yucheng Fu, … <i>(+5 more)</i></p>
-<p>Agent Skills improve LLM agents by making task knowledge reusable across sessions. Learning transferable Skills requires evidence about a procedure and its conditions of use, which a successful task attempt can leave untested. We introduce Socratic Skill Learning (SSL), which interleaves expert teaching with Student practice. An Educator guides investigation while the Student remains the sole environment operator and Skill author, able to question, test, and adapt advice. To test reuse beyond the learning task, we construct SkillTransferBench, with 35 task families and 408 executable cases, pairing public variation specifications with held-out evaluation in fresh solver sessions. On the main 22-family, 155-case cohort, Fixed-Window SSL reaches 0.801 utility, versus 0.723 without a Skill, 0.761 for adapted Trace2Skill (trajectory distillation), and 0.751 for adapted SKILL-KD (contrastive distillation). Across three model pairs on shared families, interleaved guidance outperforms expert authoring and post-hoc teaching. Process analysis links guidance to Student writing and package revision; a case study shows the Student testing and refining a proposed procedure for later reuse. As demand for new lessons falls, the cost of fixed-window review grows. Issue-Guided SSL tracks unresolved questions across Skill revisions to select and focus review, reaching 0.805 utility with 61.7% fewer Educator tokens and 16.9% fewer total acquisition tokens than Fixed-Window SSL on the main cohort.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-13 · <a href='https://huggingface.co/papers/2610.17860'>page</a> · <a href='https://arxiv.org/pdf/2610.17860'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
