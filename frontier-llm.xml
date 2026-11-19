@@ -5,8 +5,133 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Wed, 18 Nov 2026 12:32:50 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 12:23:19 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Mixtures of In-Context Learners</title>
+      <link>https://arxiv.org/abs/2411.02830</link>
+      <guid isPermaLink="false">arxiv:2411.02830</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> TU Munich, U Edinburgh — Pasquale Minervini</p>
+<p><b>Authors:</b> Giwon Hong, Emile van Krieken, Edoardo Ponti, Esmeralda S. Whitammer, Pasquale Minervini</p>
+<p>In-context learning (ICL) adapts LLMs by providing demonstrations without fine-tuning the model parameters; however, it does not differentiate between demonstrations and quadratically increases the complexity of Transformer LLMs, exhausting the memory. As a solution, we propose Mixtures of In-Context Learners (MoICL), a novel approach to treat subsets of demonstrations as experts and learn a weighting function to merge their output distributions based on a training set. In our experiments, we show performance improvements on 5 out of 7 classification datasets compared to a set of strong baselines (up to +13\% compared to ICL and LENS). Moreover, we enhance the Pareto frontier of ICL by reducing the inference time needed to achieve the same performance with fewer demonstrations. Finally, MoICL is more robust to out-of-domain (up to +11\%), imbalanced (up to +49\%), or noisy demonstrations (up to +38\%) or can filter these out from datasets. Overall, MoICL is a more expressive approach to learning from demonstrations without exhausting the context window or memory.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://arxiv.org/abs/2411.02830'>page</a> · <a href='https://arxiv.org/pdf/2411.02830'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>MARBLE: An Agentic Benchmark for Spatial Reasoning and Visual Abstraction</title>
+      <link>https://arxiv.org/abs/2506.22992</link>
+      <guid isPermaLink="false">arxiv:2506.22992</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich, Stanford — Michael Moor</p>
+<p><b>Authors:</b> Yulun Jiang, Naël Ouerghemi, Yekun Chai, Maria Brbić, Michael Moor</p>
+<p>A central challenge for multimodal language models (MLLMs) in real-world tasks is to abstract visual observations into structured spatial states and reason over how those states change under actions over long horizons. Existing multimodal benchmarks often focus on static question answering, where answers can be directly extracted from images, or assume symbolic states are available and bypass the visual-to-spatial abstraction process. We present MARBLE, a diagnostic benchmark for spatially grounded multimodal reasoning and planning across three agent environments: CUBE, MAZE, and BLOX. MARBLE spans 2D and 3D spatial puzzles under geometric constraints, dynamic layouts, and spatial transformations, with difficulty systematically controlled along two axes: observation format and planning horizon. Extensive evaluations show that frontier MLLMs struggle on MARBLE, with the strongest model GPT-5.4 achieving only a 7.3% average success rate across the three environments in the hardest setting. Pairwise ablations on the open-weight models identify visual-to-spatial abstraction as the major bottleneck: when models must infer spatial states from images instead of receiving human-annotated states, success drops from 50.7% to 3.7% for Gemma-4-31B and from 87.9% to 6.5% for Kimi-K2.6. The results indicate that models often fail to construct precise spatial states from visual observations before planning, a task that is straightforward for humans. Overall, MARBLE reveals the gap in reliable visual-to-spatial abstraction for frontier MLLMs and provides a controlled testbed for measuring progress in spatially grounded multimodal reasoning and planning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://arxiv.org/abs/2506.22992'>page</a> · <a href='https://arxiv.org/pdf/2506.22992'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>CXReasonAgent: Evidence-Grounded Diagnostic Reasoning Agent for Chest X-rays</title>
+      <link>https://arxiv.org/abs/2602.23276</link>
+      <guid isPermaLink="false">arxiv:2602.23276</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST — Edward Choi</p>
+<p><b>Authors:</b> Hyungyung Lee, Hangyul Yoon, Edward Choi</p>
+<p>Chest X-ray plays a central role in thoracic diagnosis, and its interpretation inherently requires multi-step, evidence-grounded reasoning. However, large vision-language models (LVLMs) often generate plausible responses that are not faithfully grounded in diagnostic evidence and provide limited visual evidence for verification, while also requiring costly retraining to support new diagnostic tasks, limiting their reliability and adaptability in clinical settings. To address these limitations, we present CXReasonAgent, a diagnostic agent that integrates a large language model (LLM) with clinically grounded diagnostic tools to perform evidence-grounded diagnostic reasoning using image-derived diagnostic and visual evidence. To evaluate these capabilities, we introduce CXReasonDail, a multi-turn dialogue benchmark with 1,946 dialogues across 12 diagnostic tasks, and show that CXReasonAgent produces more faithfully grounded responses than LVLMs. These findings highlight the importance of integrating clinically grounded diagnostic tools to enable reliable and verifiable diagnostic reasoning. The demo is available \href{https://ttumyche.github.io/CXReasonAgent_Demo/}{here}.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://arxiv.org/abs/2602.23276'>page</a> · <a href='https://arxiv.org/pdf/2602.23276'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Research acceleration: The jagged frontier</title>
+      <link>https://openai.com/index/research-acceleration-jagged-frontier/</link>
+      <guid isPermaLink="false">openai:45d1c40451</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>blog</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
+<p><b>Authors:</b> OpenAI</p>
+<p>OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/research-acceleration-jagged-frontier/'>page</a></p>]]></description>
+    </item>
+    <item>
+      <title>Jeveration: System One Models Now Generate</title>
+      <link>https://huggingface.co/papers/2611.24738</link>
+      <guid isPermaLink="false">arxiv:2611.24738</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuhe Liu, Qi Li, Shihua Zhang, Xinchao Wang, Hugging Face Daily Papers (curated)</p>
+<p>System One models such as Jev return decisions through fast, parallel prediction. In this paper, we introduce Jeveration, showing that the same decision paradigm can also generate high-quality images in a single forward pass. Jeveration builds on a frozen vision-language model, repurposing its visual-semantic knowledge for holistic image generation. The key challenge is to maintain global consistency. A single prompt admits many valid images, yet parallel predictions must converge on a coherent whole. We therefore condition all positions on a shared random state to coordinate parallel predictions, so that each draw yields a different but coherent image. Since the model tends to ignore this state under direct image supervision, we first learn a distribution over discrete image codes to guide single-pass generation. Beyond text-to-image generation, we further unify image-to-image generation and dense prediction within the same architecture, so that one checkpoint supports all three tasks, each in one forward pass. Experiments show that Jeveration generates a 512x512 image in 78 ms, up to 122x faster than existing unified models, while maintaining competitive image quality and dense prediction performance.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://huggingface.co/papers/2611.24738'>page</a> · <a href='https://arxiv.org/pdf/2611.24738'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>PROLA: Principal-Orthogonal Low-rank Adaptation for Predictive Spatiotemporal Weather Downscaling</title>
+      <link>https://huggingface.co/papers/2611.11318</link>
+      <guid isPermaLink="false">arxiv:2611.11318</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Minseo Yoon, Minseong Bae, Sojin Lee, Hyunwoo J. Kim, Hugging Face Daily Papers (curated)</p>
+<p>High-resolution weather prediction is important for resolving local atmospheric patterns missed by coarse global forecasts. Large pretrained weather backbones have improved global forecasting, but adapting them to produce future high-resolution fields from recent coarse states remains challenging and costly. We formulate this setting as Predictive Spatiotemporal Weather Downscaling (PSWD), a task that jointly refines spatial and temporal resolution while predicting future high-resolution trajectories. To this end, we propose a framework that decomposes prediction into spatial and temporal stages using a shared pretrained backbone, fixed numerical scaffolds, and lightweight residual heads. For backbone adaptation, we introduce PROLA (PRincipal-Orthogonal Low-rank Adaptation), which allocates a fixed low-rank budget between pretrained weights&#x27; principal directions and their orthogonal complement. PROLA further rescales rank-1 optimizer updates using gradient signals, improving adaptation without increasing trainable rank. Experiments in the PSWD setting show that PROLA outperforms representative low-rank adaptation baselines. Further experiments across diverse datasets and tasks support the broader applicability of PROLA, showing that its benefits extend beyond the primary weather downscaling setting.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-08 · <a href='https://huggingface.co/papers/2611.11318'>page</a> · <a href='https://arxiv.org/pdf/2611.11318'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Game2Player: Scaling Gameplay Experience for Visual Agents through Environment-Player Co-Development</title>
+      <link>https://huggingface.co/papers/2611.24154</link>
+      <guid isPermaLink="false">arxiv:2611.24154</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xirui Jiang, Yuxi Chen, Rui Yang, Feng Luo, Pengcheng Wang, Bingxuan Li, Zihao Zhao, Yushan Li, … <i>(+7 more)</i></p>
+<p>Games are a rich testbed for visual agents, demanding perception, long-horizon planning, and precise control. However, collecting human gameplay is costly, and learning from gameplay videos requires inferring missing actions. Existing datasets also cover a limited range of games, often without explicit tasks or verifiable outcomes. To address these gaps, we introduce Game2Player, a framework that co-develops game environments and players to collect diverse and verifiable gameplay experience at scale. In the Game2Player loop, a Builder agent adapts existing web games, exposes their internal state, and defines tasks with state-based progress measures and success checks. A Coding Player and a VLM Player then attempt the tasks and report problems to the Builder for repair, so that play serves as both environment validation and training data collection. With Game2Player, we build 568 verified web games with 3,436 tasks, collect 15.7K trajectories (307 hours of gameplay), and hold out 50 games as the benchmark PlayerBench. To evaluate the collected experience as training data, we train VLM agents with progress-weighted SFT, assigning greater weight to steps that advance task progress. Game2Player-9B improves progress from 14.3% to 31.2% on PlayerBench and from 30.0% to 53.1% on the external GameWorld benchmark. More broadly, our work suggests a path for visual agents to scale their gameplay experience by building, verifying, and learning from existing game worlds.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://huggingface.co/papers/2611.24154'>page</a> · <a href='https://arxiv.org/pdf/2611.24154'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ALIVE: Making Streaming Video Models Interactive</title>
+      <link>https://huggingface.co/papers/2611.21366</link>
+      <guid isPermaLink="false">arxiv:2611.21366</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jinzhao Li, Yuan Xu, Jinxuan Wu, Yukun Wang, Yijia Lei, Hanyu Ji, Yinuo Chen, Zining Huang, … <i>(+9 more)</i></p>
+<p>Streaming video LLMs can continuously observe the world, yet often handle user requests in isolation. We introduce ALIVE, an interactive streaming video model supporting proactive monitoring, streaming task coordination, and feedback-seeking interaction. We construct ALIVE-SFT-288K and ALIVE-RL-3K for two-stage training. Contrastive supervised fine-tuning teaches when and how to respond, while reinforcement learning with Behavior-Aligned Credit Assignment (BACA) combines trajectory-level and local advantages to refine decisions, responses, and silence across multi-turn interactions. We also introduce FSI-Bench to evaluate feedback seeking and subsequent task completion. ALIVE achieves the highest overall scores among the compared models on four public benchmarks and FSI-Bench, demonstrating strong streaming understanding and interactive capabilities.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-16 · <a href='https://huggingface.co/papers/2611.21366'>page</a> · <a href='https://arxiv.org/pdf/2611.21366'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning</title>
+      <link>https://huggingface.co/papers/2611.24654</link>
+      <guid isPermaLink="false">arxiv:2611.24654</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zeguan Xiao, Zhuocheng Liang, Yun Chen, Yong Wang, Guanhua Chen, Pinyan Lu, Hugging Face Daily Papers (curated)</p>
+<p>A central challenge in adapting large language models (LLMs) is capability preservation: an adaptation can achieve its target while degrading general capabilities. We introduce CurvDelta, a scalable framework that incorporates the preservation constraint into the parameterization of the model update. By analyzing the local geometry of the preservation constraint around the pre-adaptation model, CurvDelta constructs a low-curvature space in which parameter updates leave the preservation loss nearly invariant. We make its construction practical for LLMs through Kronecker-factored approximate curvature (K-FAC) and a factorized projection. We also introduce CurvLoRA, a low-rank variant within the same preservation geometry, designed for more efficient adaptation. Both methods apply to preservation-constrained adaptation tasks such as capability learning and selective unlearning. We evaluate our methods on mathematical reasoning, code generation, and knowledge unlearning. For mathematical reasoning and code generation, our approaches achieve competitive downstream performance while better preserving general capabilities, offering a favorable acquisition--retention trade-off relative to the baselines. For knowledge unlearning, our main results on TOFU and MUSE show a better balance between targeted forgetting and knowledge retention than the baselines, with retention performance close to the from-scratch retraining reference.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://huggingface.co/papers/2611.24654'>page</a> · <a href='https://arxiv.org/pdf/2611.24654'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>The Resolution Hypothesis: Agent Evolution&#x27;s Key Is Identifying Improvements</title>
+      <link>https://huggingface.co/papers/2611.23068</link>
+      <guid isPermaLink="false">arxiv:2611.23068</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuanhao Zeng, Shaocheng Lan, Ao Lu, Kuang Yan, Heng Lin, Xinang Xu, Yuan Luo, Yueting Wang, … <i>(+4 more)</i></p>
+<p>Agent evolution follows a simple loop: a proposer writes candidate artifacts (prompts, skills, memories) and selection accepts those that score higher. This loop has shown promise, yet practitioners face a puzzle: methods trade wins across papers, and evolution often fails to bootstrap on certain tasks. We trace this puzzle to the Resolution Hypothesis: agent evolution stalls not because methods fail to propose better artifacts, but because noisy evaluations cannot reliably identify them. Across seven evolution methods and six models (over 10M LLM calls), we find support for the hypothesis at both levels where evaluation scores are used. At the candidate level (choosing artifacts), helpful candidate artifacts exist, but selection is no better than random at telling them from harmful ones, so errors accumulate across rounds. At the method level (ranking methods), typical margins of a few percentage points are smaller than the difference between two independent runs of the same method, so published rankings often rest on luck. Together, these findings indicate that agent evolution is often bottlenecked by reliably identifying improvements. This calls for a shift in how we develop and evaluate self-improving agents, from designing ever more candidate improvement systems to making true improvements detectable and accumulable.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-17 · <a href='https://huggingface.co/papers/2611.23068'>page</a> · <a href='https://arxiv.org/pdf/2611.23068'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HINT-WAM: Hindsight-Informed Training for World Action Models</title>
+      <link>https://huggingface.co/papers/2611.24789</link>
+      <guid isPermaLink="false">arxiv:2611.24789</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Phuong Tuan Dat, Qi Li, Xinchao Wang, Hugging Face Daily Papers (curated)</p>
+<p>World action models (WAMs) have shown promising generalization and data efficiency in robot manipulation by coupling action generation with predictions of future visual dynamics. Translating these capabilities into reliable task execution, however, remains a challenge for existing post-training methods. Offline supervised fine-tuning provides dense supervision on expert trajectories, but its flow-matching action expert is trained only on noised demonstration actions and never on the intermediate states produced by its own sampler; task-specific adaptation can also compromise pretrained capabilities. On-policy reinforcement learning trains on the policy&#x27;s own behavior, yet sparse task rewards make exploration and credit assignment difficult, while dense reward shaping still provides scalar evaluations rather than direct action targets. We introduce HINT-WAM, the first on-policy self-distillation framework that supervises the action expert on its own sampling trajectories using hindsight, the future video of the demonstration, as privileged information available to the WAM itself. For each demonstration observation, the student generates its action through its own denoising trajectory, and at the states along this trajectory the same model acts as a teacher conditioned additionally on this hindsight, providing a conditional action distribution as a dense training target, while the student sees only deployment-time inputs and needs no environmental rewards or simulator interaction. To transfer this supervision to a flow-matching action expert, HINT-WAM distills the teacher into the student with an energy score, a distribution-level objective that matches the teacher&#x27;s action distribution from the student&#x27;s own samples rather than regressing its velocity field. The project web is available in https://tuandattt.github.io/hintwam/.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://huggingface.co/papers/2611.24789'>page</a> · <a href='https://arxiv.org/pdf/2611.24789'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Building verifiable databases at scale from the chemical literature via a multi-agent system</title>
       <link>https://arxiv.org/abs/2507.20230</link>
@@ -2169,136 +2294,6 @@ We evaluate how good large language model (LLM) judges are for personalized writ
 <p><b>Authors:</b> Zhen Zhu, Yiming Gong, Yao Xiao, Yaoyao Liu, Derek Hoiem</p>
 <p>How can we teach large multimodal models (LMMs) new skills without erasing prior abilities? We study sequential fine-tuning on five target skills while monitoring general ability on eight held-out benchmarks across three model families. Surprisingly, we find that performance lost on held-out tasks after fine-tuning on one skill can partly recover when the model is subsequently tuned on a different skill. We trace this behavior to a measurable shift in the output token distribution, manifested through a simple counting-bias probe that shows the shift co-varies with forgetting. Guided by this insight, we identify two simple, robust tuning recipes that learn strongly while limiting drift: (i) updating only the self-attention projection layers (SA Proj., $Δ$ learning +24.9 / $Δ$ held-out forgetting -0.6), and (ii) updating only the MLP Gate&amp;Up while freezing the Down projection (+30.5 / -2.1). Both substantially outperform full-LLM tuning (+31.8 / -23.3) in the learning-forgetting trade-off. We also compare against common forgetting mitigation methods: Learning without Forgetting (LwF), LoRA, Mixture-of-Experts, and weight-space interpolation (WiSE-FT), and find that our selective tuning recipes match or exceed their learning-stability balance while remaining simpler, requiring no replay, auxiliary parameters, or per-stage tuning. These results hold across LLaVA-OneVision, LLaVA-NeXT, and Qwen2.5-VL, confirming that the key to teaching LMMs new skills without forgetting lies in controlling output distribution shift by choosing which components to tune. Code will be made available.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://arxiv.org/abs/2510.08564'>page</a> · <a href='https://arxiv.org/pdf/2510.08564'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>FLAWS: A Benchmark for Error Identification and Localization in Scientific Papers</title>
-      <link>https://arxiv.org/abs/2511.21843</link>
-      <guid isPermaLink="false">arxiv:2511.21843</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.DL</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU — Nihar B. Shah</p>
-<p><b>Authors:</b> Sarina Xi, Vishisht Rao, Justin Payan, Nihar B. Shah</p>
-<p>The identification and localization of errors is a core task in peer review, yet the exponential growth of scientific output has made it increasingly difficult for human reviewers to reliably detect errors given the limited pool of experts. Recent advances in Large Language Models (LLMs) have sparked interest in their potential to support such evaluation tasks, from academic peer review to automated scientific assessment. However, despite the growing use of LLMs in review systems, their capabilities to pinpoint errors remain underexplored. In this work, we introduce Fault Localization Across Writing in Science (FLAWS), an automated benchmark consisting of 713 paper-error pairs designed to evaluate how effectively LLMs detect errors that undermine key claims in research papers. We construct the benchmark by systematically inserting claim-invalidating errors into peer-reviewed papers using LLMs, paired with an automated evaluation metric that measures whether models can identify and localize these errors. Developing such a benchmark presents unique challenges that we overcome: ensuring that the inserted errors are well-defined, challenging, and relevant to the content of the paper, avoiding artifacts that would make identification trivial, and designing a scalable, automated evaluation metric. On the resulting benchmark, we evaluate five frontier LLMs: Claude Sonnet 4.5, DeepSeek Reasoner v3.1, Gemini 2.5 Pro, GPT 5, and Grok 4. Among these, GPT 5 is the top-performing model, achieving 39.1% identification accuracy when k=10, where k is the number of top-ranked error text candidates generated by the LLM.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.DL, cs.LG · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://arxiv.org/abs/2511.21843'>page</a> · <a href='https://arxiv.org/pdf/2511.21843'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LLM-Auction: Generative Auction towards LLM-Native Advertising</title>
-      <link>https://arxiv.org/abs/2512.10551</link>
-      <guid isPermaLink="false">arxiv:2512.10551</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.GT</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
-<p><b>Authors:</b> Chujie Zhao, Qun Hu, Shiping Song, Dagui Chen, Han Zhu, Jian Xu, Bo Zheng</p>
-<p>The commercialization of LLM applications is the next frontier in online advertising, with LLM-native advertising emerging as a promising paradigm by integrating ads into LLM-generated content. However, classic mechanisms are no longer applicable in this setting where the auction object is shifted from discrete ad slots to distributions over LLM outputs, and existing methods are impractical in industrial scenarios due to ignored externalities or high inference costs. To address these issues, we propose LLM-Auction, the first learning-based generative auction mechanism that integrates auction and generation. By formulating the allocation as preference alignment between LLM outputs and a mechanism objective that balances advertisers&#x27; value and user experience, we optimize the LLMs to inherently model allocation externalities without extra inference cost. Theoretically, we identify the allocation monotonicity and continuity of the optimal allocation rule of LLM-Auction, and prove that a simple first-price payment rule exhibits favorable incentive properties under this allocation rule. Furthermore, we build an LLM-as-a-judge simulation environment for quantitative evaluation, and experiments demonstrate that LLM-Auction achieves the state-of-the-art allocation efficiency while approximately satisfying key mechanism properties.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.GT, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://arxiv.org/abs/2512.10551'>page</a> · <a href='https://arxiv.org/pdf/2512.10551'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Sci-CoE: Co-evolving Scientific Reasoning LLMs via Geometric Consensus with Sparse Supervision</title>
-      <link>https://arxiv.org/abs/2602.12164</link>
-      <guid isPermaLink="false">arxiv:2602.12164</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab</p>
-<p><b>Authors:</b> Xiaohan He, Shiyang Feng, Songtao Huang, Zongsheng Cao, Bin Wang, Bo Zhang</p>
-<p>Large language models (LLMs) have demonstrated exceptional reasoning capabilities, and co-evolving paradigms have shown promising results in domains with verifiable reward signals, such as code and math. However, in unverifiable domains, such as scientific reasoning, these methods remain fragile due to unreliable solution evaluation and limited diversity in verification strategies. In this work, we propose Sci-CoE, a two-stage co-evolving framework for domains without verifiable feedback. The framework enables models to self-evolve as both solvers and verifiers by transitioning from sparse supervision to unsupervised learning. In the first stage, the model uses a small set of annotated data to establish fundamental correctness judgment anchors for the Verifier. In the second stage, we introduce a geometric reward mechanism that jointly considers consensus, reliability, and diversity, driving large-scale self-iteration on unlabeled data. Experiments on several general scientific benchmarks demonstrate that Sci-CoE enhances complex reasoning capabilities and exhibits strong scalability, facilitating the construction of more robust and diverse evaluation systems. Codes are available at https://github.com/InternScience/Sci-CoE.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://arxiv.org/abs/2602.12164'>page</a> · <a href='https://arxiv.org/pdf/2602.12164'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>TerraTransfer++: Demonstration-Free End-to-End Planner</title>
-      <link>https://arxiv.org/abs/2610.30319</link>
-      <guid isPermaLink="false">arxiv:2610.30319</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U, UC Berkeley — Wei Zhan</p>
-<p><b>Authors:</b> Zikang Xiong, Weixin Li, Zhouchonghao Wu, Akshay Rangesh, Saarth Bonde, Grantland Hall, Chen Tang, Yihan Hu, … <i>(+1 more)</i></p>
-<p>End-to-end autonomous driving has achieved state-of-the-art performance on benchmarks and real-world deployments. Its standard training recipe, however, is expensive across all existing paradigms: imitation learning requires fleet-scale driving logs whose behavior distribution only thinly covers the safety-critical tail; closed-loop reinforcement learning in a photorealistic simulator, while offering diverse behaviors, is bottlenecked by sample-efficiency, per-step cost of rendering, and a forward pass through a large vision backbone. Self-play in vectorized simulators changes the economics: at millions of rollout steps per second, one can obtain a state distribution with natural diversity in collisions, near-misses, and recoveries that no driving log contains, and a highly reactive policy emerges from a basic driving-quality reward. Our approach exploits this asymmetry. We pretrain a single policy by self-play, distill its rollouts into a flow-matching trajectory teacher that also plans, and train lightweight adapters on a frozen pretrained vision backbone to reproduce the latent space of either teacher through the action KL divergence, a batch-relational low-rank structural loss, and, for the planner, a trajectory-matching loss. Every target traces back to the self-play policy, so alignment never supervises against a logged trajectory: a paired dataset of (image, scene-state) frames suffices, with no need for the curated expert demonstrations that imitation pretraining is built on. From this one self-play teacher we obtain two end-to-end students: a closed-loop policy that outperforms every published imitation-based end-to-end method on the photorealistic 3D Gaussian splatting closed-loop benchmark HUGSim, and a planner that reaches 59.4 EPDMS on NAVSIM navhard, above every published method including DriveZero-Scale (57.1), and 95.5 PDMS on navtest, without human demonstrations.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-10-21 · <a href='https://arxiv.org/abs/2610.30319'>page</a> · <a href='https://arxiv.org/pdf/2610.30319'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>LLMs are making formal software verification feasible at a much larger scale</title>
-      <link>https://www.anthropic.com/research/formal-verification</link>
-      <guid isPermaLink="false">anthropic:1360bd8eb5</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Claude formally proved security properties in the compiled code of 123 open-source libraries. Along the way, it found bugs that had eluded detection for years.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://www.anthropic.com/research/formal-verification'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Flint-interactive: A language for creating interactive data visualizations</title>
-      <link>https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/</link>
-      <guid isPermaLink="false">microsoft_research:ef05d9c57c</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
-<p><b>Authors:</b> Chenglong Wang, Yuwei  Xiao, Alper Sarikaya, Michel Galley, Chris Quirk, Jianfeng Gao</p>
-<p>&lt;p&gt;Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose.&lt;/p&gt;
-&lt;p&gt;The post &lt;a href=&quot;https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/&quot;&gt;Flint-interactive: A language for creating interactive data visualizations&lt;/a&gt; appeared first on &lt;a href=&quot;https://www.microsoft.com/en-us/research&quot;&gt;Microsoft Research&lt;/a&gt;.&lt;/p&gt;</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Deep Search in Real-World Web Environments</title>
-      <link>https://huggingface.co/papers/2610.30181</link>
-      <guid isPermaLink="false">arxiv:2610.30181</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Xiaomin Yu, Hongliang Chen, Zhe Huang, Shilin Yan, Shao-Rong Su, Xuqiao Ma, Feiyang Wang, Jiayu Chen, … <i>(+18 more)</i></p>
-<p>Despite substantial progress in Deep Search agents, their ability to conduct end-to-end research in real-world open Web environments remains insufficiently evaluated. Unlike static retrieval settings, information on the real-world Web is distributed across diverse sources, modalities, and heterogeneous formats, often involving complex interaction mechanisms that require agents to autonomously search for, access, and integrate relevant evidence during execution. To address this gap, we introduce the OpenDS task, designed to evaluate agents&#x27; ability to perform multi-step deep search in the live, open Web. This task requires agents to autonomously explore the real Web, discover and connect relevant evidence from multiple independent sources through Web search, browser interaction, and evidence processing, and ultimately determine a unique factual answer. Building on this task formulation, we construct OpenDS-World, a benchmark comprising 200 challenging tasks spanning diverse information modalities, heterogeneous file formats, and interactive access requirements, with independent human verification to ensure evidence validity and answer uniqueness. We evaluate 12 frontier models under a unified tool environment and execution protocol. The best-performing model achieves 39.0% accuracy, while human evaluation across 1,000 independent attempts yields 21.1% accuracy. Further analyses of tool usage, search cost, termination behavior, and failure recovery reveal substantial differences in research strategies across models, as well as persistent challenges in tool coordination and long-horizon search management. OpenDS-World provides a unified evaluation platform for systematically assessing and advancing agents&#x27; autonomous deep search capabilities in real-world open Web environments.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-19 · <a href='https://huggingface.co/papers/2610.30181'>page</a> · <a href='https://arxiv.org/pdf/2610.30181'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation</title>
-      <link>https://huggingface.co/papers/2610.30926</link>
-      <guid isPermaLink="false">arxiv:2610.30926</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Songlin Yang, Zhe Wang, Xiaotong Zhao, Xi Wang, Ran Zhang, Shuai Li, Taiyi Wu, Songlian Li, … <i>(+4 more)</i></p>
-<p>Cinematic video generation requires both temporal inference from limited inputs (i.e., sparse rather than frame-by-frame guidance) and factor-aware control of character, scene, action, and camera. Multimodal large language models (MLLMs) offer useful priors for both capabilities, but their representations are not automatically actionable for video generation: a Video Diffusion Transformer (DiT) may bypass them through native conditioning pathways, and using them does not ensure either factor-aware control or generation-compatible temporal prediction. We propose Factor-Aware Predictive Learning (FAPL), which establishes effective MLLM latent use as a shared prerequisite and then targets the two capabilities with complementary learning signals. First, latent-only generator grounding trains the DiT with a frozen MLLM and connector, strengthening the DiT&#x27;s use of MLLM latents for generation. Second, for factor-aware control, paired videos specify a target-factor change and non-target preservation, and factor-span replacement trains the DiT to realize this relationship in its output. Third, for temporal inference, text-only and text-plus-complete-video observations share a video target, and the trained DiT is then frozen while the MLLM and connector are optimized through it. This final stage trains limited-input representations for generation while retaining complete-observation reconstruction as a complementary training mode. Extensive experiments demonstrate our consistently better performance on three cinematic video generation tasks (i.e., sparse-to-video, factor-aware editing, and multi-shot generation) over baselines and validate FAPL&#x27;s contributions to MLLM feature use, temporal control, and factor coordination.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.30926'>page</a> · <a href='https://arxiv.org/pdf/2610.30926'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Toward Recursive Self-Improvement in Physical AI</title>
-      <link>https://huggingface.co/papers/2610.29677</link>
-      <guid isPermaLink="false">arxiv:2610.29677</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Meng Luo, Zechen Bai, Shanqing Xu, Yanlin Li, Kaixin Li, Mengchen Qian, Weifeng Lu, Ran Zhang, … <i>(+5 more)</i></p>
-<p>Recursive self-improvement (RSI) describes a system that improves not only its behavior but also the process by which it improves. Recent digital agents test this idea by rewriting their own code and checking each version with executable tests. Bringing these mechanisms into the physical world requires learning from partial observations through costly trials, while accounting for changing operating conditions and potentially irreversible consequences. We position RSI within robot learning and trace pathways from improving robot capabilities to improving the processes that generate them. We examine how physical experience can strengthen these improvement mechanisms and when the resulting gains can support further self-improvement of the mechanisms themselves. Gains carry forward only when feedback addresses remaining learning needs, the receiving component can use the change, its value survives changes in tasks or hardware, and continued practice remains safe and affordable. Existing studies, concentrated in manipulation, support behavioral improvement, benefits to later learning, and procedure improvement. Some systems also change the improver&#x27;s knowledge or tools, but the physical studies reviewed here have yet to isolate gains attributable to recursion. We synthesize these findings into evaluation principles and research directions for machines that, trial by trial, safely improve the way they improve.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-21 · <a href='https://huggingface.co/papers/2610.29677'>page</a> · <a href='https://arxiv.org/pdf/2610.29677'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Deep Fusion Memory: A Chunk-Level Parametric Memory for Large Language Models</title>
-      <link>https://huggingface.co/papers/2610.25100</link>
-      <guid isPermaLink="false">arxiv:2610.25100</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Rubin Wei, Siyuan Sun, Hao Sun, Yuliang Liu, Xiang Shi, Jiarui Wang, Junming Zhang, Zhouhan Lin, … <i>(+1 more)</i></p>
-<p>Large language models need effective ways to acquire and use external knowledge beyond what they retain from pretraining. Continued pretraining risks catastrophic forgetting, while retrieval at inference time can add substantial overhead. External parametric memory avoids online retrieval, but constructing its training data requires extensive offline search, and output-level interpolation provides only shallow fusion. We introduce Deep Fusion Memory (DFM), a parametric memory architecture that reduces this construction workload and incorporates learned memory into intermediate hidden states. A causal memory predictor learns to generate memory from the preceding context, using retrieved chunk embeddings from the corpus as supervision. The predicted memory is shared across tokens within each chunk and fused into their hidden states through gated cross-attention. Memory prediction and fusion are trained end to end with the backbone frozen, and inference requires no explicit retrieval. Compared with existing parametric memory approaches, which often construct token-level memory targets, DFM requires 32times fewer retrieval queries and 2048times fewer retrieved items to construct its training data. Across six QA tasks, DFM performs better over the strongest baseline by 12.71% on Mistral-7B-v0.3 and 11.19% on Qwen3-8B-Base. Beyond QA, domain adaptation yields average gains of 6.51 and 4.38 points over Qwen3-4B-Base and Qwen3-8B-Base, respectively.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-18 · <a href='https://huggingface.co/papers/2610.25100'>page</a> · <a href='https://arxiv.org/pdf/2610.25100'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems</title>
-      <link>https://huggingface.co/papers/2610.30949</link>
-      <guid isPermaLink="false">arxiv:2610.30949</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> A. Jian Yang, An Huang, Bo Dan, Chen Mu, Chengran Yang, Chuan Shi, Feng Chang, Hongxin Li, … <i>(+170 more)</i></p>
-<p>We present IQuest-Q1, a sparse Mixture-of-Experts (MoE) agentic foundation model with 320B total parameters (15B activated). IQuest-Q1 is developed through a three-stage process: (1) stable and efficient pre-training, combining Stable SplitNorm, Muon, and muP with a two-stage curriculum whose second stage increases the coding-data mixture, preserving a wide stability margin between safe and optimal learning rates; (2) fine-grained mid-training, expanding the data mixture across domains and formats and progressively extending the context; and (3) multi-scaffold with multi-version post-training, combining SFT, domain-specialized RL, and MOPD across various scaffolds to integrate complementary training signals and strengthen agentic coding capabilities. Furthermore, model merging combines different experts and checkpoints from different stages while mitigating conflicts among their parameter updates. The resulting IQuest-Q1 demonstrates capabilities in both coding and general tasks. We release IQuest-Q1 as an open-source model to support community research and development.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.30949'>page</a> · <a href='https://arxiv.org/pdf/2610.30949'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

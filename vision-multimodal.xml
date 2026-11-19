@@ -5,8 +5,32 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Wed, 18 Nov 2026 12:32:50 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 12:23:19 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>MARBLE: An Agentic Benchmark for Spatial Reasoning and Visual Abstraction</title>
+      <link>https://arxiv.org/abs/2506.22992</link>
+      <guid isPermaLink="false">arxiv:2506.22992</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich, Stanford — Michael Moor</p>
+<p><b>Authors:</b> Yulun Jiang, Naël Ouerghemi, Yekun Chai, Maria Brbić, Michael Moor</p>
+<p>A central challenge for multimodal language models (MLLMs) in real-world tasks is to abstract visual observations into structured spatial states and reason over how those states change under actions over long horizons. Existing multimodal benchmarks often focus on static question answering, where answers can be directly extracted from images, or assume symbolic states are available and bypass the visual-to-spatial abstraction process. We present MARBLE, a diagnostic benchmark for spatially grounded multimodal reasoning and planning across three agent environments: CUBE, MAZE, and BLOX. MARBLE spans 2D and 3D spatial puzzles under geometric constraints, dynamic layouts, and spatial transformations, with difficulty systematically controlled along two axes: observation format and planning horizon. Extensive evaluations show that frontier MLLMs struggle on MARBLE, with the strongest model GPT-5.4 achieving only a 7.3% average success rate across the three environments in the hardest setting. Pairwise ablations on the open-weight models identify visual-to-spatial abstraction as the major bottleneck: when models must infer spatial states from images instead of receiving human-annotated states, success drops from 50.7% to 3.7% for Gemma-4-31B and from 87.9% to 6.5% for Kimi-K2.6. The results indicate that models often fail to construct precise spatial states from visual observations before planning, a task that is straightforward for humans. Overall, MARBLE reveals the gap in reliable visual-to-spatial abstraction for frontier MLLMs and provides a controlled testbed for measuring progress in spatially grounded multimodal reasoning and planning.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://arxiv.org/abs/2506.22992'>page</a> · <a href='https://arxiv.org/pdf/2506.22992'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>One Affinity, Two Axes: Bidirectional Slot Attention for Iterative Aggregation across the Structure--Detail Spectrum in Visual Retrieval</title>
+      <link>https://arxiv.org/abs/2611.24371</link>
+      <guid isPermaLink="false">arxiv:2611.24371</guid>
+      <pubDate>Thu, 19 Nov 2026 12:23:19 GMT</pubDate>
+      <category>cs.CV</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Zihang Wang</p>
+<p><b>Authors:</b> Zihang Wang, Wenkai Zhu, Lingdong Kong, Teng Yan, Alan Liang, Shuyuan Li, Xieyuanli Chen, Dong Kong, … <i>(+1 more)</i></p>
+<p>Aggregating dense patch tokens into compact and discriminative global descriptors is central to visual retrieval. Although foundation models provide rich local features, existing aggregation heads still rely on single-pass mappings and lack an explicit mechanism to coordinate structural and fine-grained cues. Therefore, we propose Bidirectional Slot Attention (BiSA), which reformulates aggregation as an iterative coupled system. Cross-Axis Consensus (CAC) progressively refines learnable slots by interpreting a single shared token--slot affinity along two complementary axes. Along the competition axis, slots vie for each token under a temperature shared across all of them, determining token ownership and inducing a non-redundant scene decomposition. Along the selection axis, a slot-specific temperature governs the breadth of each slot&#x27;s response, spanning a spectrum from broad layouts to sparse fine-grained details. Their consensus couples non-redundant decomposition with multi-granular slot specialization. Furthermore, the two axes expose intrinsic token-reliability cues at no extra cost: a token&#x27;s claim strength under competition and its salience under selection. Progressive Token Filtering (PTF) converts these cues into a retention probability that down-weights unreliable tokens before the next CAC iteration, without any segmentation branch or external prior, forming a self-reinforcing loop of competitive decomposition, selective focusing, and feedback purification. Across all three retrieval tasks, BiSA leads on five of six place recognition benchmarks (+4.2 R@1 on Baidu Mall), tops all 16 metrics of drone--satellite geo-localization (+8.4 R@1 at 150 m), and improves instance-level retrieval on ROxford-Hard by 4.5 mAP points. Notably, the selection axis adds only 20 learnable scalars, yet improves average R@1 by 2.8 points.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://arxiv.org/abs/2611.24371'>page</a> · <a href='https://arxiv.org/pdf/2611.24371'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Building verifiable databases at scale from the chemical literature via a multi-agent system</title>
       <link>https://arxiv.org/abs/2507.20230</link>
@@ -2550,36 +2574,6 @@
 <p><b>Authors:</b> Xin Chen, Chuanyu Sun, Jiao Xu, Houwen Peng, Dong Wang, Huchuan Lu, Kede Ma</p>
 <p>Conventional visual object trackers localize targets using handcrafted spatial priors, often in the form of heatmaps. Such priors provide only surrogate supervision and are poorly aligned with tracking optimization and evaluation metrics, such as intersection over union (IoU) and area under the success curve (AUC). Here, we introduce RELO, a REinforcement-learning-to-LOcalize method for visual object tracking that formulates target localization as a Markov decision process. Specifically, RELO replaces handcrafted spatial priors with a localization policy learned over spatial positions via reinforcement learning, with rewards combining frame-level IoU and sequence-level AUC. We additionally introduce layer-aligned temporal token propagation to improve semantic consistency across frames, with negligible computational overhead. Across multiple benchmarks, RELO achieves superior results, attaining 57.5% AUC on LaSOText without template updates. This confirms that reward-driven localization provides an effective alternative to prior-driven localization for visual object tracking.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.07379'>page</a> · <a href='https://arxiv.org/pdf/2605.07379'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DarkLLM: Learning Language-Driven Adversarial Attacks with Large Language Models</title>
-      <link>https://arxiv.org/abs/2605.18868</link>
-      <guid isPermaLink="false">arxiv:2605.18868</guid>
-      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
-      <category>cs.CR</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> NUS, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Ye Sun, Xin Wang, Jiaming Zhang, Yifeng Gao, Yixu Wang, Yifan Ding, Qixian Zhang, Henghui Ding, … <i>(+2 more)</i></p>
-<p>While vision and multimodal foundation models underpin critical tasks from perception to complex reasoning, they remain highly vulnerable to adversarial attacks. However, traditional adversarial attacks are typically limited to single, predefined objectives, tightly coupling each attack to a specific model or task, which restricts their scalability and flexibility in real-world scenarios. In this work, we present DarkLLM, a novel attack framework that trains an LLM to translate natural-language attack instructions into latent attack vectors, which are then decoded into visual adversarial perturbations. By leveraging natural-language instruction tuning, DarkLLM not only unifies targeted, untargeted, segmentation, and multi-model attacks within a single framework, but also achieves flexible and controllable adversarial generation, enabling each instruction to produce a perturbation that induces desired behaviors across heterogeneous models. Through extensive experiments across 4 tasks, 13 datasets, and 15 models, we demonstrate that DarkLLM with only 1B parameters can follow attacker instructions and generate highly effective attacks against CLIP, SAM, and frontier LLMs, revealing a systemic vulnerability in modern foundation models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CR, cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-05-15 · <a href='https://arxiv.org/abs/2605.18868'>page</a> · <a href='https://arxiv.org/pdf/2605.18868'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies</title>
-      <link>https://arxiv.org/abs/2505.07813</link>
-      <guid isPermaLink="false">arxiv:2505.07813</guid>
-      <pubDate>Tue, 19 May 2026 05:23:37 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <category>cs.SY</category>
-      <category>eess.SY</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> CMU — Deepak Pathak</p>
-<p><b>Authors:</b> Tony Tao, Mohan Kumar Srirama, Jason Jingzhou Liu, Kenneth Shaw, Deepak Pathak</p>
-<p>Large-scale, diverse robot datasets have emerged as a promising path toward enabling dexterous manipulation policies to generalize to novel environments, but acquiring such datasets presents many challenges. While teleoperation provides high-fidelity datasets, its high cost limits its scalability. Instead, what if people could use their own hands, just as they do in everyday life, to collect data? In DexWild, a diverse team of data collectors uses their hands to collect hours of interactions across a multitude of environments and objects. To record this data, we create DexWild-System, a low-cost, mobile, and easy-to-use device. The DexWild learning framework co-trains on both human and robot demonstrations, leading to improved performance compared to training on each dataset individually. This combination results in robust robot policies capable of generalizing to novel environments, tasks, and embodiments with minimal additional robot-specific data. Experimental results demonstrate that DexWild significantly improves performance, achieving a 68.5% success rate in unseen environments-nearly four times higher than policies trained with robot data only-and offering 5.8x better cross-embodiment generalization. Video results, codebases, and instructions at https://dexwild.github.io</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.CV, cs.LG, cs.SY, eess.SY · <b>arXiv submitted:</b> 2026-05-17 · <a href='https://arxiv.org/abs/2505.07813'>page</a> · <a href='https://arxiv.org/pdf/2505.07813'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
