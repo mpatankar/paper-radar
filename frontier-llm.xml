@@ -5,8 +5,119 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/frontier-llm.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>New foundation models, scaling, training methods, reasoning advances.</description>
-    <lastBuildDate>Thu, 19 Nov 2026 12:23:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 12:23:44 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Agentic Systems in Radiology: Design, Applications, Evaluation, and Challenges</title>
+      <link>https://arxiv.org/abs/2510.09404</link>
+      <guid isPermaLink="false">arxiv:2510.09404</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich, Stanford — Christian Bluethgen</p>
+<p><b>Authors:</b> Christian Bluethgen, Dave Van Veen, Daniel Truhn, Jakob Nikolas Kather, Michael Moor, Malgorzata Polacin, Akshay Chaudhari, Thomas Frauenfelder, … <i>(+3 more)</i></p>
+<p>Building agents, systems that perceive and act upon their environment with a degree of autonomy, has long been a focus of AI research. This pursuit has recently become vastly more practical with the emergence of large language models (LLMs) capable of using natural language to integrate information, follow instructions, and perform forms of &quot;reasoning&quot; and planning across a wide range of tasks. With its multimodal data streams and orchestrated workflows spanning multiple systems, radiology is uniquely suited to benefit from agents that can adapt to context and automate repetitive yet complex tasks. In radiology, LLMs and their multimodal variants have already demonstrated promising performance for individual tasks such as information extraction and report summarization. However, using LLMs in isolation underutilizes their potential to support complex, multi-step workflows where decisions depend on evolving context from multiple information sources. Equipping LLMs with external tools and feedback mechanisms enables them to drive systems that exhibit a spectrum of autonomy, ranging from semi-automated workflows to more adaptive agents capable of managing complex processes. This review examines the design of such LLM-driven agentic systems, highlights key applications, discusses evaluation methods for planning and tool use, and outlines challenges such as error cascades, tool-use efficiency, and health IT integration.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2025-10-13 · <a href='https://arxiv.org/abs/2510.09404'>page</a> · <a href='https://arxiv.org/pdf/2510.09404'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL</title>
+      <link>https://arxiv.org/abs/2602.04417</link>
+      <guid isPermaLink="false">arxiv:2602.04417</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Toronto — Jimmy Ba</p>
+<p><b>Authors:</b> Lunjun Zhang, Jimmy Ba</p>
+<p>Reinforcement Learning (RL) has enabled Large Language Models (LLMs) to acquire increasingly complex reasoning and agentic behaviors. In this work, we propose two simple techniques to improve policy gradient algorithms for LLMs. First, we replace the fixed anchor policy during RL with an Exponential Moving Average (EMA), similar to a target network in deep Q-learning. Second, we introduce Top-$k$ KL estimator, which allows for flexible interpolation between exact KL and sampled KL. We derive the stability conditions for using EMA anchor; moreover, we show that our Top-$k$ KL estimator yields both unbiased KL values and unbiased gradients at any $k$, while bringing the benefits of exact KL. When combined with GRPO, the two techniques (EMA-PG) lead to a significant performance boost. On math reasoning, it allows R1-distilled Qwen-1.5B to reach 53.9% on OlympiadBench compared to 50.8% by GRPO. On agentic RL domains, with Qwen-3B base, EMA-PG improves GRPO by an average of 35.6% across 7 datasets of Q&amp;A with search engines, including 29.7% $\rightarrow$ 45.8% on HotpotQA, 27.4% $\rightarrow$ 40.5% on 2WikiMultiHopQA. Overall, we show that EMA-PG is a simple, principled, and powerful approach to scaling RL for LLMs. Code: https://github.com/LunjunZhang/ema-pg</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://arxiv.org/abs/2602.04417'>page</a> · <a href='https://arxiv.org/pdf/2602.04417'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation</title>
+      <link>https://huggingface.co/papers/2611.26444</link>
+      <guid isPermaLink="false">arxiv:2611.26444</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuzhi Huang, Jie Wu, Fanding Huang, Junchao Lin, Weichen Zhang, Ziyi Xiong, Yang Li, Zhengwei Xie, … <i>(+36 more)</i></p>
+<p>Embodied intelligence aims to let robots perform complex physical tasks with human-like adaptability and reliability, which requires three complementary capabilities: history-based cognitive reasoning, precise and timely physical execution, and the composition of reasoning and execution through environmental feedback. Yet existing benchmarks either evaluate reasoning and execution within the same tasks or assess them separately without their composition, so they reveal little about whether a failure comes from reasoning, execution, or their composition. We introduce Mind2Act World, a diagnostic benchmark of 30 simulated manipulation tasks from five real-world application domains. Each task has three difficulty levels and two scene settings (Clean and Random), yielding 180 configurations. The tasks form three views: Mind tests decisions based on past observations, Act tests precise and timely execution, and Mind2Act combines both in closed-loop tasks where action outcomes guide later decisions. Comparing the three views shows whether a system lacks a capability or fails to compose capabilities it already has. A diagnosis harness further attributes the failed episodes of three representative systems to Mind, Act, or their composition and summarizes each system in a profile card. Our evaluation of multimodal agents, vision-language-action models (VLAs), and world-action models (WAMs) shows that competence in a single view does not carry over to Mind2Act tasks. Even the strongest agent succeeds in 52.7% of Mind and 39.0% of Act episodes but in only 12.0% of Mind2Act episodes. The strongest agent retains task state but struggles with sustained contact, whereas end-to-end policies execute practiced motions but retain little task state. These findings point to composing reasoning and execution through environmental feedback as the main open problem.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26444'>page</a> · <a href='https://arxiv.org/pdf/2611.26444'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>WeVisForensics: Self-Evolving Agent for Omni AI-Generated Video Detection</title>
+      <link>https://huggingface.co/papers/2611.21373</link>
+      <guid isPermaLink="false">arxiv:2611.21373</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yipeng Du, Yuxi Li, Ying Zhang, Chong Sun, Chen Li, Jing Lyu, Ying Tai, Hugging Face Daily Papers (curated)</p>
+<p>Recent advances in video generation call for reliable detection grounded in explicit forensic evidence. However, current methods primarily depend on single-pass chain-of-thought reasoning that overlooks brief or localized artifacts, or on predefined multi-agent workflows that offer limited flexibility in selecting relevant inspections. Even with adaptive investigation, optimizing the investigation policy alone does not directly improve the forensic capabilities of fixed experts. We introduce WeVisForensics, an agentic framework in which a main investigator agent coordinates a self-evolving library of forensic inspector sub-agents spanning visual and audio cues. The investigator learns which artifact type to examine, over which window, and when to conclude, and these interactions provide shared feedback for both levels of agents. Our dual-timescale policy optimization strategy, DTPO, closes this loop through fast reinforcement learning of the investigator and slower refinement of the inspectors, guided by annotated artifact intervals, to report subtle artifacts they once dismissed. Furthermore, we curate ForenCue-30K, combining role-specific forensic annotations and interaction trajectories to supervise individual inspections and their coordination, with an accompanying reinforcement-learning pool. Experiments show that WeVisForensics averages 95.2% detection accuracy across in-domain, out-of-domain and agentic benchmarks, 9.0% above the strongest prior detector, while grounding its verdicts in localized evidence.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-16 · <a href='https://huggingface.co/papers/2611.21373'>page</a> · <a href='https://arxiv.org/pdf/2611.21373'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding</title>
+      <link>https://huggingface.co/papers/2611.26409</link>
+      <guid isPermaLink="false">arxiv:2611.26409</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Changli Tang, Jie Yang, Tianyi Wang, Lei Li, Daoze Zhang, Zijie Xin, Zhan Liu, Li Li, … <i>(+5 more)</i></p>
+<p>Video understanding, particularly with accompanying audio, remains a central challenge in multimodal intelligence. In this report, we introduce WeMM-Video, a family of Chinese-English bilingual omni-modal foundation models spanning 2B, 4B, 9B, and 35B-A3B variants. Centering on joint audio-visual perception and reasoning, WeMM-Video unifies text, image, audio, and video processing within a hybrid-thinking paradigm, seamlessly supporting both a non-thinking instruct mode for fast, direct responses and a thinking mode for explicit step-by-step reasoning. The models are trained on a large-scale multimodal corpus of approximately 1.2 trillion tokens through progressive pre-training and a multi-stage post-training pipeline incorporating multi-teacher OPD, anti-repetition MrDPO, and specialist RL. Evaluated across more than 120 benchmarks, WeMM-Video demonstrates superior performance in omni-modal video understanding and reasoning, while maintaining highly competitive capabilities across general audio, silent video, image, and text tasks. Specifically, in omni-modal video evaluations, our flagship WeMM-Video-35B-A3B establishes a new open-source state of the art, substantially outperforming proprietary models such as Qwen3.5-Omni-Flash and Seed2.0-Mini-0428 while narrowing the gap with the strong Gemini-3.0-Flash, and our compact WeMM-Video-9B surpasses the larger open-source Qwen3-Omni-30B-A3B-Instruct. We publicly release the WeMM-Video family along with our evaluation and reproduction pipeline to foster further research and development in the open-source community.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26409'>page</a> · <a href='https://arxiv.org/pdf/2611.26409'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Coda-DaVinci: Reimagining Video Generation with Code2Video</title>
+      <link>https://huggingface.co/papers/2611.26595</link>
+      <guid isPermaLink="false">arxiv:2611.26595</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yiyan Ji, Qixun Wang, Yang Shi, Zhuoran Zhang, Yifan Xu, Tengfei Liu, Yuqi Tang, Xiaohan Zhang, … <i>(+16 more)</i></p>
+<p>Code2Video uses agent-authored 3D proxies to guide video generation, enabling explicit control over structure and dynamics. However, how to construct proxies and prompts for optimal downstream quality remains underexplored, as do the capabilities and limitations of this paradigm. Through controlled experiments and blinded human evaluation, we study proxy granularity, physics simulation, and prompting. The results reveal task-dependent trade-offs: coarse proxies favor natural motion, while medium-grained proxies favor consistency. Physics simulation and proxy-aligned prompting further improve average quality. Guided by these findings, we introduce Coda-DaVinci, a task-adaptive agentic framework for Code2Video generation that selects between proxy-guided and direct generation, adapts modeling granularity to each entity, and coordinates simulation with proxy-grounded prompting. Its multi-agent harness preserves scene assets and guides repairs through visual inspection and independent review. Experiments demonstrate leading instruction following on VTR and scene consistency on R2M, improved physical plausibility over direct generation, and higher visual realism than the compared Code2Video baselines. Long-video evaluations further show gains in event structure and consistency across successive interactions, while revealing limitations in transition stability and adherence to scene settings.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26595'>page</a> · <a href='https://arxiv.org/pdf/2611.26595'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HiUni: Harmonizing Understanding and Generation in Shared Visual Space</title>
+      <link>https://huggingface.co/papers/2611.26107</link>
+      <guid isPermaLink="false">arxiv:2611.26107</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiahao Hu, Jingdong Du, Yichen Zhang, Yi Song, Zhenyu Zhang, Jiaxin Niu, Ruihang Li, Xiangzhao Hao, … <i>(+6 more)</i></p>
+<p>Unified multimodal models aim to support visual understanding and generation within a single framework. However, prevailing approaches often separate their visual representations or backbone computation to accommodate the different requirements of these two tasks, which limits the degree of unification. In this paper, we present HiUni, which revisits this design choice and explores whether a pretrained vision language model can be directly extended into a unified model with extensive parameter sharing. Specifically, HiUni reuses the same language-aligned ViT and dense Transformer backbone for both capabilities, while confining task-specific computation to the output side. Yet such a design introduces two key challenges. Generation in pixel space is difficult to optimize, and semantic abstraction in pretrained ViT discards fine spatial details required for synthesis. To address these challenges, HiUni introduces a Pixel Diffusion Head tailored to direct pixel-space optimization and a lightweight HiGate pathway that provides fine-grained spatial details near the output stage. Extensive experiments show that HiUni achieves a similar average understanding score to the pretrained VLM while attaining competitive performance on image generation and editing. Controlled comparisons and analyses further demonstrate that a single dense backbone can effectively support both capabilities without task-specific backbone computation, highlighting a simpler path toward unified multimodal modeling.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26107'>page</a> · <a href='https://arxiv.org/pdf/2611.26107'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning</title>
+      <link>https://huggingface.co/papers/2611.26380</link>
+      <guid isPermaLink="false">arxiv:2611.26380</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuqi Tang, Yang Shi, Yuran Wang, Tengfei Liu, Rundong Wang, Zongyang Qiu, Qixun Wang, Zhuoran Zhang, … <i>(+10 more)</i></p>
+<p>Egocentric video captioning requires fine-grained detail and accurate timing, yet current multimodal large language models (MLLMs) often miss brief actions, confuse their order, or misinterpret the wearer&#x27;s motion. Existing caption formats also offer limited support for combining detailed narration with precise timing. We present EgoCaptioner, which pairs a video-level overview of the setting, participants, and the wearer&#x27;s overall activity with timed steps whose narration adapts to varying perceptual demands and marks key moments at specific timestamps. We develop a coarse-to-fine annotation pipeline that establishes event structure before expanding step descriptions, yielding 50,000 training examples from eight egocentric video sources. Complementary rewards assess factual accuracy and coverage, measure step-level temporal alignment, and penalize fragmented or redundant narration, guiding caption refinement through Group Relative Policy Optimization (GRPO). To improve the reliability of factual supervision, we supplement caption references with pose-derived motion facts when sensor data are available. Across five egocentric benchmarks, EgoCaptioner achieves leading performance among evaluated open-source models in caption quality, caption-conditioned question answering, and temporal alignment. It also surpasses Gemini 3.1 Pro on PhysCapBench and all evaluated proprietary baselines on Minerva-Ego under the caption-to-QA protocol. Ablations support the complementary roles of factual and temporal rewards and show that coarse-to-fine annotation provides more effective supervision than single-pass annotation.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26380'>page</a> · <a href='https://arxiv.org/pdf/2611.26380'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs</title>
+      <link>https://huggingface.co/papers/2611.25387</link>
+      <guid isPermaLink="false">arxiv:2611.25387</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Xuwei Ding, Skylar Zhai, Linxin Song, Jiarui Feng, Dongqi Fu, Huajun Xi, Junnan Li, Jingcheng Liang, … <i>(+5 more)</i></p>
+<p>Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models (MLLMs) do the same? CAPTCHAs offer a natural test, since humans solve them through this very loop, clicking and dragging on the screen and adjusting after each result. Yet existing CAPTCHA benchmarks are largely solved and rarely spatial, while spatial benchmarks rarely require action. We therefore present TuringSpace, a synthetic web environment of 125 interactive CAPTCHAs that span five spatial abilities and must be solved through clicks and drags on the screen. Every task is a program that generates new instances with a checker and an oracle, so the tasks also form a scalable training gym. Humans solve 94.1% of the tasks, whereas the best model, GPT-6 Astra, still fails 25.9% of them, and the best open-weight model, Kimi K3, fails 68.0%. Our further analysis shows that most failures come from misreading the screenshot, and that model reasoning rarely corrects a wrong belief but hallucinates evidence to defend it. To test whether such spatial abilities can be learned, we fine-tune Qwen3.5-9B on this gym. Its success rate rises from 1.6% to 33.1%, above Kimi K3, and it improves on all seven out-of-distribution benchmarks, including a 9.9-point gain on the real-world indoor videos of VSI-Bench. These results show that grounding spatial intelligence in screen actions exposes what MLLMs lack and offers a scalable way to teach it, with gains that transfer to real-world scenes. We will release TuringSpace to support further study.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.25387'>page</a> · <a href='https://arxiv.org/pdf/2611.25387'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain</title>
+      <link>https://huggingface.co/papers/2611.26414</link>
+      <guid isPermaLink="false">arxiv:2611.26414</guid>
+      <pubDate>Fri, 20 Nov 2026 12:23:44 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Zixuan Huang, Yang Zhou, Guli Zhang, Sunzhu Li, Hongyan Xie, Zehao Chen, Fuzhen Zhuang, Kaixuan Wang, … <i>(+4 more)</i></p>
+<p>Representative vision-language navigation (VLN) methods typically couple a vision-language model (VLM) brain with a learnable action head and fine-tune the VLM brain on navigation-domain data to predict geometric goals. However, such adaptation can substantially alter base VLM weights and degrade general visual capabilities. We introduce ZeroVLN, a slow-fast navigation framework that achieves effective navigation with zero navigation-domain SFT of the VLM brain. Rather than teaching the brain to predict geometric goals, we equip it with a semantic tool-calling interface for conveying movement decisions to an action expert in natural language. We first adapt the action expert to carry out these movement requests, then jointly improve the brain&#x27;s movement decisions and the action expert&#x27;s continuous execution through closed-loop reinforcement learning (RL). Trained on the same navigation episodes, ZeroVLN substantially outperforms representative SFT-based hierarchical VLN methods on standard VLN-CE (continuous environments) benchmarks, while inducing only minor changes to the brain&#x27;s weights and largely preserving its general capabilities. To our knowledge, ZeroVLN is the first slow-fast VLN framework with zero navigation-domain SFT of the VLM brain, and the first to jointly optimize its slow and fast policies through closed-loop agentic RL in VLN-CE.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26414'>page</a> · <a href='https://arxiv.org/pdf/2611.26414'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Mixtures of In-Context Learners</title>
       <link>https://arxiv.org/abs/2411.02830</link>
@@ -2181,119 +2292,6 @@ We evaluate how good large language model (LLM) judges are for personalized writ
 <p><b>Authors:</b> Kiran Tomlinson, Sonia Jaffe, Will Wang, Scott Counts, Siddharth Suri</p>
 <p>With generative AI emerging as a general-purpose technology, understanding its economic effects is among society&#x27;s most pressing questions. Earlier work on AI impact largely relied on predictions of AI capabilities or focused narrowly on individual firms. Drawing instead on real-world AI usage, we analyze a dataset of 200k anonymized conversations with Microsoft Bing Copilot to measure AI applicability to occupations. We use an LLM-based pipeline to classify the O*NET work activities assisted or performed by AI in each conversation. We find that the most common and successful AI-assisted work activities involve information work--the creation, processing, and communication of information. At the occupation level, we find widespread AI applicability cutting across sectors, as most occupations have information work components. Our methodology also allows us to predict which occupations are more likely to delegate tasks to AI and which are more likely to use AI to assist existing workflows. Finally, we see an increase in occupation-level AI applicability over our 9-month data period, driven primarily by people using AI for more varied tasks. AI applicability scores and component usage and success metrics are available at https://github.com/microsoft/working-with-ai.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CY, econ.GN, q-fin.EC · <b>arXiv submitted:</b> 2026-10-23 · <a href='https://arxiv.org/abs/2507.07935'>page</a> · <a href='https://arxiv.org/pdf/2507.07935'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MedInsightBench: Evaluating Medical Analytics Agents Through Multi-Step Insight Discovery in Multimodal Medical Data</title>
-      <link>https://arxiv.org/abs/2512.13297</link>
-      <guid isPermaLink="false">arxiv:2512.13297</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> ByteDance Seed · <b>Tier-2 senior:</b> HKUST — (senior)</p>
-<p><b>Authors:</b> Zhenghao Zhu, Chuxue Cao, Sirui Han, Yuanfeng Song, Xing Chen, Caleb Chen Cao, Yike Guo</p>
-<p>In medical data analysis, extracting deep insights from complex, multi-modal datasets is essential for improving patient care, increasing diagnostic accuracy, and optimizing healthcare operations. However, there is currently a lack of high-quality datasets specifically designed to evaluate the ability of large multi-modal models (LMMs) to discover medical insights. In this paper, we introduce MedInsightBench, the first benchmark that comprises 332 carefully curated medical cases, each annotated with thoughtfully designed insights. This benchmark is intended to evaluate the ability of LMMs and agent frameworks to analyze multi-modal medical image data, including posing relevant questions, interpreting complex findings, and synthesizing actionable insights and recommendations. Our analysis indicates that existing LMMs exhibit limited performance on MedInsightBench, which is primarily attributed to their challenges in extracting multi-step, deep insights and the absence of medical expertise. Therefore, we propose MedInsightAgent, an automated agent framework for medical data analysis, composed of three modules: Visual Root Finder, Analytical Insight Agent, and Follow-up Question Composer. Experiments on MedInsightBench highlight pervasive challenges and demonstrate that MedInsightAgent can improve the performance of general LMMs in medical data insight discovery.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-10-23 · <a href='https://arxiv.org/abs/2512.13297'>page</a> · <a href='https://arxiv.org/pdf/2512.13297'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>On the Runway Cascade of Transformers for Language Modeling</title>
-      <link>https://arxiv.org/abs/2601.14522</link>
-      <guid isPermaLink="false">arxiv:2601.14522</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Corey Clark</p>
-<p><b>Authors:</b> Hunjae Lee, Corey Clark</p>
-<p>In decoder-only (causal) transformers, the computation graph created by causal masking routes information through both direct-path attention and indirect paths formed by intermediate tokens. We denote these indirect paths between token pairs as their runways. We argue that certain failure modes of causal transformers as observed by a growing body of recent works are likely exacerbated by a misalignment between these two information propagation modes. We formalize runway cascade as a phenomenon whereby this misalignment results in redundancies and irrelevant information cascading to token representations despite adequately learned attention patterns. As a solution, we propose runway-aware rewiring as a more explicit way of incorporating runway context directly into each token&#x27;s direct-path attention. This mechanism re-wires the attention pattern for each token based on a summary of its runway landscape, enabling awareness of accumulating representational influences and allowing for more balanced information propagation. Our proposed methodology introduces no additional parameters and can seamlessly be integrated into standard attention mechanism. Empirically, our rewired transformer results in steady improvements in general language modeling as well as noticeably stronger information retrieval and extrapolation abilities compared to standard transformers.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://arxiv.org/abs/2601.14522'>page</a> · <a href='https://arxiv.org/pdf/2601.14522'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents</title>
-      <link>https://huggingface.co/papers/2610.30932</link>
-      <guid isPermaLink="false">arxiv:2610.30932</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Jujia Zhao, Jiakai Tang, Jing Yu, Wen Chen, Jian Wu, Han Zhu, Fei Sun, Suzan Verberne, … <i>(+2 more)</i></p>
-<p>Agentic recommendation pursues shopper goals through sequences of context-dependent decisions. Developing and evaluating such policies requires faithful recommendation world models that capture both the interactive shopping environment and users&#x27; behavioral responses over long interactions. Existing resources rarely provide long-horizon, fine-grained real-user trajectories or support trajectory-level evaluation and offline validation against production A/B results. We introduce UserArena, a real-world e-commerce interactive benchmark containing 64,729 session trajectories from 11,010 users, spanning 566,102 items and 13 action types. UserArena pairs these trajectories with an interactive environment and supports offline validation against outcomes from a controlled production A/B test, enabling five-level evaluation from output validity and local decisions to sequential behavior, personalization, and outcomes. To improve simulator fidelity over these long-horizon interactions, we further propose On-Policy Trajectory Distillation (OPTD), which uses trajectory-level intent to provide dense teacher targets on student-generated rollouts. Experiments show that OPTD achieves the strongest overall fidelity among the evaluated simulators under UserArena&#x27;s evaluation protocol and most closely reproduces the production policy effect in offline simulation.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.30932'>page</a> · <a href='https://arxiv.org/pdf/2610.30932'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>FilmFlow: Agentic System for 3D Virtual Film Cinematography</title>
-      <link>https://huggingface.co/papers/2610.30753</link>
-      <guid isPermaLink="false">arxiv:2610.30753</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Yiming Zhang, Jiarui Guo, Haojia Wei, Yifei Liu, Yifan Yang, Hongjie Zhang, Xue Yang, Zhihang Zhong, … <i>(+1 more)</i></p>
-<p>Complex camera motion is central to visual storytelling, yet translating cinematographic intent into controllable, executable camera trajectories remains challenging. We introduce FilmFlow, an agentic framework that converts natural-language instructions or reference videos into explicit camera trajectories for dynamic 3D environments. To generate these trajectories, a Director agent constructs executable camera plans by composing high-level motions from concurrent atomic operations that jointly control translation, rotation, and framing. The Director is supported by three specialized agents: an Interpreter that extracts scene-grounded cinematographic intent, a Scout that selects initial viewpoints, and a Critic that evaluates rendered results and provides visual feedback for iterative plan refinement. We also introduce CinemaBench, comprising 150 Blender scenes from self-created and licensed sources, with five camera instructions per scene for 750 text-directed tasks and 60 reference videos associated with a subset of scenes. CinemaBench supports evaluation of both text-directed camera generation and video reference-directed camera generation. Across a diverse set of evaluated baselines, FilmFlow achieves the strongest benchmark performance and the highest user preference, demonstrating effective spatial reasoning, temporal coordination, and visual composition for executable 3D cinematography.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.30753'>page</a> · <a href='https://arxiv.org/pdf/2610.30753'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>HiSTEVE 1.0: Harnessing Human-Interface VLA Agents for Open-World Games</title>
-      <link>https://huggingface.co/papers/2610.31162</link>
-      <guid isPermaLink="false">arxiv:2610.31162</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zecong Tang, Zian Guan, Yuncheng Guo, Zhanqiu Zhang, Yiwen Guo, Bo Dai, Hugging Face Daily Papers (curated)</p>
-<p>Building virtual embodied agents that operate in open-ended games like human players is a long-standing goal requiring both long-horizon autonomy and reliable native-interface control. As a procedurally generated open world, Minecraft provides a natural testbed for studying the integration of these capabilities. Existing agents typically provide either native visuomotor control without long-horizon autonomy or high-level planning executed through environment APIs or predefined skills. To bridge this gap, we propose HiSTEVE, a hierarchical VLA agent with a capability-aware agent harness. At the orchestration level, we equip the harness with structured memory for tracking progress and a VLM planner for selecting subtasks within the VLA&#x27;s capabilities. To reliably determine subtask completion, we further introduce a policy-coupled task completion state detector that conditions on VLA policy context to signal candidate completion. At the control level, a single VLA executes all subtasks with vision-only perception and native keyboard-and-mouse actions. To mitigate interference between heterogeneous GUI and non-GUI interactions, we introduce regime-specific RMSNorm branches and separate mouse-movement token embeddings. We also train the VLA through world knowledge injection, imitation learning, and reinforcement learning with environment feedback to improve reliability and recovery. HiSTEVE achieves state-of-the-art atomic-task performance, scoring 85.0% on MineStudio Bench and a 37.4% average success rate on OpenHA, while also completing long-horizon tasks such as crafting an iron pickaxe from scratch like human players.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.31162'>page</a> · <a href='https://arxiv.org/pdf/2610.31162'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RSIHub: A Composable Framework for Agent-Evolution Methods</title>
-      <link>https://huggingface.co/papers/2610.32253</link>
-      <guid isPermaLink="false">arxiv:2610.32253</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zimu Wang, Xiaobo Wang, Siyu Ye, Jiaqi Li, Silin Chen, Yuling Shi, Ruobing Wang, Jingjing Zhang, … <i>(+7 more)</i></p>
-<p>Agent-evolution methods use execution feedback to improve prompts, skills, tools, and orchestration, but their implementations often rebuild the same experimental machinery. We present RSIHub, an open-source framework for building, comparing, and extending these methods on shared infrastructure. Recipes compose reusable operators and declare mutable resources; RSIHub supplies execution, evaluation, recovery, and lineage. Researchers can focus on evolution policy while evaluation stays outside the mutable surface and results remain tied to candidates and evaluation conditions. We instantiate AHE, Hyperagents, A-Evolve, and GEPA without modifying the framework core, keeping method-specific logic in recipes and operators. We evaluate them with MiniSWE and Codex on Terminal Bench 2 and τ^3 Banking under fixed model and evaluator configurations. The largest observed overall pass@1 gain is 13.5 percentage points, while method rankings vary across settings and optimization gains do not always transfer to held-out tasks. RSIHub provides a common protocol for comparing evolution policies, inspectable candidate histories, and reusable components for developing new methods.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-23 · <a href='https://huggingface.co/papers/2610.32253'>page</a> · <a href='https://arxiv.org/pdf/2610.32253'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RynnUnify: Towards Unified Embodied Brain</title>
-      <link>https://huggingface.co/papers/2610.32965</link>
-      <guid isPermaLink="false">arxiv:2610.32965</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Minghao Zhu, Bohan Hou, Kun Xiang, Zixuan Wang, Yinzhou Tang, Yifei Yang, Zhikai Wang, Tianyi Zhang, … <i>(+16 more)</i></p>
-<p>We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities spanning spatial reasoning, physical prediction, and grounding, RynnUnify connects an understanding of the physical world with visual anticipation of how it evolves across successive subtasks. Building on these capabilities, we further develop an agentic extension through reinforcement learning to selectively use video predictions for reasoning about unobserved states and interaction outcomes. We also develop a world-action extension of the full RynnUnify model, translating its understanding and prediction capabilities into robot control. To evaluate these capabilities, we introduce Rynn-VP and Rynn-GEU for long-horizon visual planning and anticipatory reasoning. Experiments show that RynnUnify achieves the highest average embodied understanding score among the evaluated unified multimodal models and improves the Rynn-VP overall score by 9.75 points over Cosmos 3 Nano. Its agentic extension improves the Rynn-GEU average by 6.0 points over direct reasoning, while the world-action extension achieves 51.5\% success on 20 selected composite RoboCasa365 tasks and 46.7\% average success across three real-robot tasks. Together, these results establish RynnUnify as a shared foundation for embodied understanding, visual planning, and robot control, taking a step toward a unified embodied brain.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-23 · <a href='https://huggingface.co/papers/2610.32965'>page</a> · <a href='https://arxiv.org/pdf/2610.32965'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Different Tasks, Different Timesteps: Temporal Task-Aware Quantization for Diffusion Language Models</title>
-      <link>https://huggingface.co/papers/2610.31198</link>
-      <guid isPermaLink="false">arxiv:2610.31198</guid>
-      <pubDate>Mon, 26 Oct 2026 09:33:01 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Ofek Avivi, Eliron Rahimi, Avi Mendelson, Chaim Baskin, Hugging Face Daily Papers (curated)</p>
-<p>Diffusion Language Models (DLMs) introduce unique quantization challenges due to their iterative denoising process. In this work, we reveal that quantization sensitivity is both taskand time-dependent, with different downstream tasks exhibiting distinct precision requirements across denoising steps. We further show that these patterns can be predicted without groundtruth labels or task-specific evaluation metrics. Building on these findings, we introduce T 2Quant, a task and time-aware mixedprecision quantization framework that uses a label-free sensitivity signal to optimally allocate activation precision across denoising steps under a fixed bit-width budget. Extensive experiments across three DLMs and six benchmarks demonstrate that T 2Quant consistently improves the average accuracy of existing quantization methods, achieving gains of up to 6.7 percentage points under the same budget.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.31198'>page</a> · <a href='https://arxiv.org/pdf/2610.31198'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>WeVisOne-VL: Unified Visual Perception from Objects to Pixels</title>
-      <link>https://huggingface.co/papers/2610.31329</link>
-      <guid isPermaLink="false">arxiv:2610.31329</guid>
-      <pubDate>Sat, 24 Oct 2026 08:32:34 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Tencent AI Lab · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
-<p><b>Authors:</b> Tianming Liang, Junyi Pan, Yuxi Li, Canmiao Fu, Zhipeng Huang, Chong Sun, Chen Li, Jing Lyu, … <i>(+1 more)</i></p>
-<p>Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special &lt;OBJ&gt; token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://huggingface.co/papers/2610.31329'>page</a> · <a href='https://arxiv.org/pdf/2610.31329'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>How to Teach Large Multimodal Models New Skills</title>
-      <link>https://arxiv.org/abs/2510.08564</link>
-      <guid isPermaLink="false">arxiv:2510.08564</guid>
-      <pubDate>Fri, 23 Oct 2026 08:59:16 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> CMU — (senior)</p>
-<p><b>Authors:</b> Zhen Zhu, Yiming Gong, Yao Xiao, Yaoyao Liu, Derek Hoiem</p>
-<p>How can we teach large multimodal models (LMMs) new skills without erasing prior abilities? We study sequential fine-tuning on five target skills while monitoring general ability on eight held-out benchmarks across three model families. Surprisingly, we find that performance lost on held-out tasks after fine-tuning on one skill can partly recover when the model is subsequently tuned on a different skill. We trace this behavior to a measurable shift in the output token distribution, manifested through a simple counting-bias probe that shows the shift co-varies with forgetting. Guided by this insight, we identify two simple, robust tuning recipes that learn strongly while limiting drift: (i) updating only the self-attention projection layers (SA Proj., $Δ$ learning +24.9 / $Δ$ held-out forgetting -0.6), and (ii) updating only the MLP Gate&amp;Up while freezing the Down projection (+30.5 / -2.1). Both substantially outperform full-LLM tuning (+31.8 / -23.3) in the learning-forgetting trade-off. We also compare against common forgetting mitigation methods: Learning without Forgetting (LwF), LoRA, Mixture-of-Experts, and weight-space interpolation (WiSE-FT), and find that our selective tuning recipes match or exceed their learning-stability balance while remaining simpler, requiring no replay, auxiliary parameters, or per-stage tuning. These results hold across LLaVA-OneVision, LLaVA-NeXT, and Qwen2.5-VL, confirming that the key to teaching LMMs new skills without forgetting lies in controlling output distribution shift by choosing which components to tune. Code will be made available.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CV, cs.LG · <b>arXiv submitted:</b> 2026-10-22 · <a href='https://arxiv.org/abs/2510.08564'>page</a> · <a href='https://arxiv.org/pdf/2510.08564'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
