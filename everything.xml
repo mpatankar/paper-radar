@@ -5,8 +5,111 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 12:10:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 13:55:55 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Verify Before You Generate: Sketch-Guided Efficient Motion-Planning for Video Generation</title>
+      <link>https://arxiv.org/abs/2511.17450</link>
+      <guid isPermaLink="false">arxiv:2511.17450</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
+<p><b>Authors:</b> Yidong Huang, Zun Wang, Han Lin, Dong-Ki Kim, Shayegan Omidshafiei, Jaehong Yoon, Yue Zhang, Mohit Bansal</p>
+<p>Recent video generation approaches increasingly rely on planning intermediate control signals like object trajectories to improve temporal coherence and motion fidelity. However, these methods mostly employ single-shot plans that are typically limited to simple motion instructions, leading to suboptimal motion quality, or iterative refinement which requires multiple calls to the video generator and incurs high computational cost. To address this trade-off, we propose SketchVerify, a training-free framework whose key insight is to verify motion plans using lightweight video sketches before invoking the expensive video generator. This lightweight planning space enables efficient comparison of multiple candidate trajectories and bounded iterative refinement before a single final video-generation pass. Given a prompt and a reference image, SketchVerify samples multiple candidate trajectories and renders each as a lightweight video sketch by compositing the moving objects over a static background. A vision-language verifier then ranks these sketches according to instruction alignment and visual motion consistency, allowing unsuitable trajectories to be rejected before full video synthesis. The motion plan is iteratively refined until a satisfactory one is identified, then passed to a trajectory-conditioned generator for final synthesis. Experiments on WORLDMODELBENCH and PHYWORLDBENCH demonstrate consistent improvements in instruction following and temporally coherent, visually plausible motion. Using the same ATI-14B generator, SketchVerify improves the aggregate WorldModelBench score from 7.71 to 8.71. Compared with full-video iterative refinement, it achieves a 13.1x planning-stage speedup and a 3.6x end-to-end speedup.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-11-20 · <a href='https://arxiv.org/abs/2511.17450'>page</a> · <a href='https://arxiv.org/pdf/2511.17450'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mosaic: Efficient CPU-GPU Coordinated Block-Sparse Attention</title>
+      <link>https://arxiv.org/abs/2605.07719</link>
+      <guid isPermaLink="false">arxiv:2605.07719</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.LG</category>
+      <category>cs.AI</category>
+      <category>cs.PF</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Microsoft Research</p>
+<p><b>Authors:</b> Feiyu Yao, Zhixiong Niu, Xiaqing Li, Yongqiang Xiong, Juan Fang, Qian Wang</p>
+<p>Long-context LLM serving increasingly relies on CPU-resident context KV cache, driven by KV offloading and disaggregated prefill--decode execution. Although block-sparse attention reduces KV access, existing designs remain inefficient: GPU-centralized execution fetches selected KV blocks from CPU memory at each decoding step, making it PCIe-bound, while CPU--GPU partitioned execution places CPU-side sparse attention on the critical path, leaving substantial GPU time idle. This paper presents Mosaic, a CPU--GPU coordinated block-sparse attention system for efficient long-context decoding with CPU-resident context KV. Mosaic builds on three key insights: output-contribution-aware KV budgeting, head-specific and granularity-aware sparse configuration, and cross-device coordinated scheduling for sparse tasks over CPU-resident KV. Guided by these insights, Mosaic integrates a lightweight head-property predictor, a granularity--budget selector, and a priority-based scheduler to automatically configure and coordinate sparse attention, preserving output quality while improving efficiency on heterogeneous architectures. Across 2 models, 3 benchmarks, and 40 tasks, Mosaic preserves near-FULL quality while achieving a better overall quality--efficiency tradeoff than the evaluated baselines. Compared with the best-quality fixed Quest configuration, Mosaic improves TPOT by up to 3.7$\times$. We further validate Mosaic across four hardware configurations and in a large-model multi-GPU deployment.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.PF · <b>arXiv submitted:</b> 2026-11-20 · <a href='https://arxiv.org/abs/2605.07719'>page</a> · <a href='https://arxiv.org/pdf/2605.07719'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction</title>
+      <link>https://huggingface.co/papers/2611.27193</link>
+      <guid isPermaLink="false">arxiv:2611.27193</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Haowei He, Ziwen Zhao, Chenshuo Pan, Gang Lin, Zhihao Yang, Chao Wang, Xinzhang Liu, Kaidong Yu, … <i>(+6 more)</i></p>
+<p>Manifold-constrained Hyper-Connections (mHC) extends residual connections to multiple streams and stabilizes residual propagation by constraining stream-mixing residual matrices to the Birkhoff polytope, the set of doubly stochastic matrices. In this work, we investigate how to effectively mix residual streams within the Birkhoff polytope. We reveal a mixing trade-off: when under-mixed residual matrices stay close to the vertices of the Birkhoff polytope, hyper-connections will degenerate into a set of nearly independent streams; when over-mixed residual matrices are concentrated around the uniform barycenter of the polytope, streams will become less distinguishable from each other. We theoretically validate our findings by bounding the cumulative residual mixing, stream difference and gradient difference of mixing coefficients across layers. Motivated by these findings, we propose Contraction for Manifold-Constrained Hyper-Connections (cmHC), an exact doubly stochastic method which geometrically contracts the Birkhoff polytope toward its interior. This contraction mitigates under-mixing by forcing the residual matrices to explore deeper into the polytope, with a provable stream mixing bound and no new parameterization. Moreover, we apply a moderate contraction at the shallow layers to prevent over-mixing, enabling stable gradient propagation on extremely large-scale model pretraining. Extensive experiments across dense and mixture-of-experts models at various parameter scales demonstrate the effectiveness and scalability of cmHC. We also develop fused operators for cmHC on Ascend NPUs, reducing hyper-connection execution latency by up to 44.8%.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-20 · <a href='https://huggingface.co/papers/2611.27193'>page</a> · <a href='https://arxiv.org/pdf/2611.27193'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Non-penetrating World Models</title>
+      <link>https://huggingface.co/papers/2611.27963</link>
+      <guid isPermaLink="false">arxiv:2611.27963</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Yuhang Dai, Yinwei Wu, Ziyue Lin, Han Ji, Xingyi Yang, Hugging Face Daily Papers (curated)</p>
+<p>We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the open-source models can reliably prevent such failures. Surprisingly, however, these models already encode the information needed to predict such violations. We find that the hidden states of diffusion transformers (DiTs) can predict whether a candidate action will penetrate an obstacle. Building on this, we introduce NoPeWorld, a lightweight framework that detects and prevents penetration. Specifically, we train a small prediction head on top of a frozen DiT&#x27;s hidden states to read out if a candidate action is safe or not. Unsafe actions are then replaced with safe ones that best preserve the original intent. Despite its simplicity, NoPeWorld substantially reduces the physical violation rate, averaged over six video world models, from 74% to 16%. Remarkably, our method shows zero-shot generalization to open-domain imagery, third-person viewpoints, and moving obstacles. We publicly release our code, the NoPeBench benchmark, and model weights. Project Page: https://nopeworld.github.io .</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-20 · <a href='https://huggingface.co/papers/2611.27963'>page</a> · <a href='https://arxiv.org/pdf/2611.27963'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Clover-35B-A3B-Preview Technical Report</title>
+      <link>https://huggingface.co/papers/2611.24636</link>
+      <guid isPermaLink="false">arxiv:2611.24636</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> DiffuSpace Technical Team, Hugging Face Daily Papers (curated)</p>
+<p>We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combining recurrent memory of previously generated context with bidirectional softmax attention inside the current block. Historical memory readout competes with current-block tokens in a shared softmax, with learnable block-size calibration and a separate, zero-initialized right-context convolution branch. Clover leads the seven evaluated agent metrics, including 73.6 on SWE-bench Verified and 51.7 on Terminal-Bench 2.1. On internal agent workloads, it reaches a reported generation speed of 680 tokens/s using one NVIDIA GB300 GPU at BF16 precision and batch size one. We organize the evaluation around model quality, drafting and verification costs, and deployment under constrained memory. We also describe a decision-model variant that generates answers to related questions in one denoising pass. On an internal set of 500 groups, joint prediction raises question accuracy from 90.37% to 93.88% and all-correct group accuracy from 65.4% to 77.0%.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-18 · <a href='https://huggingface.co/papers/2611.24636'>page</a> · <a href='https://arxiv.org/pdf/2611.24636'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>AltRA-Test: An Alternative Annotator Test for LLM Judges Without Shared Annotators</title>
+      <link>https://huggingface.co/papers/2611.26073</link>
+      <guid isPermaLink="false">arxiv:2611.26073</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Nagham Omar, Rotem Dror, Almog Gueta, Avigdor Gal, Roi Reichart, Nitay Calderon, Hugging Face Daily Papers (curated)</p>
+<p>Large language models (LLMs) are increasingly used as judges and graders to replace human annotators, raising the question of when such replacement is statistically justified. To support such decisions, the Alternative Annotator Test (Alt-Test) was introduced for dense settings where all items are annotated by the same annotators. However, in many large-scale annotation settings, items are annotated by different subsets of annotators. We therefore propose the Alternative Annotator Test with Resampled Annotations (AltRA-Test), a statistical test that does not require that all items are annotated by the same annotators. AltRA-Test uses a bootstrap that resamples items, draws k human annotations for each item, and substitutes one of them with an LLM annotation. This produces paired all-human and mixed human-LLM panels. A replacement is supported when the inter-annotator agreement (IAA) of the mixed panel is statistically non-inferior to the IAA of the all-human panel, i.e., when the LLM preserves the signal that the human annotators share. We establish that AltRA-Test is a consistent test of asymptotic level alpha. We then evaluate it through simulations and real-world experiments in which we test 18 LLMs and 5 prompting techniques on 20 datasets across text, image, audio, and video. Across these evaluations, about 100 items often suffice for the test. In simulations, where we know whether the LLM is a better or a worse annotator than the humans, AltRA-Test makes more correct replacement decisions than existing baselines. In real-world data experiments, LLMs pass the test in about half of the setups, depending mainly on the task. Since replacement is not always justified, we encourage researchers to test it for their task.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26073'>page</a> · <a href='https://arxiv.org/pdf/2611.26073'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>RL Post-Training in Diffusion Transformers Is Activation Steering</title>
+      <link>https://huggingface.co/papers/2611.26627</link>
+      <guid isPermaLink="false">arxiv:2611.26627</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Tuna Han Salih Meral, Kaan Oktay, Alec Helbling, Atakan Kara, Duen Horng Chau, Pinar Yanardag, Hugging Face Daily Papers (curated)</p>
+<p>Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base model. On SD3.5-M, these vectors hold 65x fewer parameters than the RL-tuned LoRA (0.29M against 18.8M). We fit them to match the velocity predictions of public RL-tuned checkpoints, with no reward in the objective. Although the vectors are identical for every prompt, token, and sampling seed, they recover 90.0-96.3% of the reward gains of six RL-tuned image models, and 89.8% and 111.9% on two RL-tuned video models. Initialized at zero and trained with online RL, the vectors alone exceed the reward gains of weight-based RL on text rendering (OCR) and human preference (PickScore) on SD3.5-M. A constant shift thus suffices for most of the gain of policy-gradient RL post-training: without new input-dependent transformations, it steers the pretrained generator toward what it can already compute.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.26627'>page</a> · <a href='https://arxiv.org/pdf/2611.26627'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning</title>
+      <link>https://huggingface.co/papers/2611.15449</link>
+      <guid isPermaLink="false">arxiv:2611.15449</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jaeseong Lee, Jinwoo Kim, Jinho Jeong, Seon Joo Kim, Hugging Face Daily Papers (curated)</p>
+<p>Text-aware image super-resolution (TAISR) aims to recover high-resolution images from low-resolution inputs while preserving textual content. Existing methods treat this as a visual restoration problem, yet severely degraded text often cannot be read from local visual evidence alone. Humans instead read it by reasoning over image context, logical patterns, and prior knowledge. This raises a fundamental question: Does TAISR need reasoning? To answer this, we introduce two diagnostic tools. The first, ReasonText, is a human-curated benchmark that separates reasoning-required text from locally recoverable text. The second, Ground-Truth Text-Crop Accuracy (GTTCA), is a recognition-based metric that measures text restoration quality without text detection errors. Evaluating twelve recent super-resolution (SR) models, we find a consistent and substantial performance drop on reasoning-required text, revealing a systematic blind spot. Two observations point to a remedy. One is that text-conditioned SR models restore text substantially better when given ground-truth text. The other is that multimodal large language models (MLLMs) can read degraded text in low-resolution images through reasoning. We therefore propose Reasoning Transfer via Captioning (RTC), a training-free plug-in that uses an external MLLM to infer the degraded text and feeds the resulting caption to a text-conditioned SR model. RTC consistently improves all six text-conditioned SR models we evaluate, especially on reasoning-required text. Surprisingly, a real-world SR model with RTC can even outperform the TAISR model with RTC, suggesting that reasoning should be a core design axis for future TAISR.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-11 · <a href='https://huggingface.co/papers/2611.15449'>page</a> · <a href='https://arxiv.org/pdf/2611.15449'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Language Models Can Rewrite Their Own Weights</title>
+      <link>https://huggingface.co/papers/2611.21885</link>
+      <guid isPermaLink="false">arxiv:2611.21885</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Jiajun Fan, Neil He, Changyi Yang, Andy Mao, Xi Zhu, Chaoran Cheng, Kaiqu Liang, Shuaike Shen, … <i>(+4 more)</i></p>
+<p>Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and edits the weights behind it. It surpasses itself: its own edit makes it 6.6 points more accurate on 490 problems it never saw, in a test fixed in advance, and another session&#x27;s edit also makes it significantly better. It keeps getting better: it submits an edit only when its own tests support it, each edit replacing the last, and over its first eight such sessions its accuracy only rises. Unlike test-time scaling, the gain persists in its weights and adds no cost per answer; unlike training, it needs no pre- or post-training infrastructure, only an open model and hours on one GPU. It repairs a damaged copy of itself: it locates the corrupted matrix and rewrites it with values of its own, never reading the undamaged weights; found on text math problems alone, the repair lifts the copy on six image benchmarks it never saw from 7% to 70% accuracy, 83% of the undamaged model&#x27;s. And the ability emerges with scale: across four sizes of one family, the 2B model makes no edit and the 4B and 9B models break themselves; only the 27B model works on itself as a human would, comparing its hidden states on answers that finish and on answers that run out of tokens, weakening the direction that separates them. Like a human, a model need not separate training from inference; improving a language model may come to take a conversation rather than a training run.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-16 · <a href='https://huggingface.co/papers/2611.21885'>page</a> · <a href='https://arxiv.org/pdf/2611.21885'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Can AI help scientists identify promising drug candidates?</title>
       <link>https://openai.com/index/introducing-medchembench/</link>
@@ -2172,105 +2275,6 @@ As the number of keys grows to millions and vector dimensions reach thousands, t
 <p><b>Authors:</b> Anthropic</p>
 <p>We’re sharing another finding from Anthropic’s biology research lab: the first 3D structure of a vault particle found in prokaryotic cells.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-04 · <a href='https://www.anthropic.com/research/investigating-vault-particles-with-claude'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>A thousand fewer paths to root</title>
-      <link>https://openai.com/index/a-thousand-fewer-paths-to-root/</link>
-      <guid isPermaLink="false">openai:f730feda13</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
-<p><b>Authors:</b> OpenAI</p>
-<p>OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/a-thousand-fewer-paths-to-root/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Introducing Images 2.6</title>
-      <link>https://openai.com/index/introducing-images-2-6/</link>
-      <guid isPermaLink="false">openai:9320bcda5f</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> OpenAI</p>
-<p><b>Authors:</b> OpenAI</p>
-<p>Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://openai.com/index/introducing-images-2-6/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Fundamental ResearchMechanistic AlignmentShaping and Monitoring Models Through Their Internal RepresentationsFel et al.Â·November 5, 2026</title>
-      <link>https://www.goodfire.ai/research/mechanistic-shaping</link>
-      <guid isPermaLink="false">goodfire:18d66a5f38</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>blog</category>
-      <category>interpretability</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Goodfire</p>
-<p><b>Authors:</b> Goodfire</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog, interpretability · <a href='https://www.goodfire.ai/research/mechanistic-shaping'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Turns Matter: Advancing Streaming Video RL via Turn-Level Credit</title>
-      <link>https://huggingface.co/papers/2611.06728</link>
-      <guid isPermaLink="false">arxiv:2611.06728</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> HKUST, Peking U — (senior)</p>
-<p><b>Authors:</b> Shuai Dong, Kanghui Tian, Linghan Chen, Wenqi Shao, Hongrui Wu, Haowen Hou, Yongfu Zhu, Xuehui Wang, … <i>(+16 more)</i></p>
-<p>Streaming video understanding requires models to repeatedly decide whether to respond or continue observing. Recently, Group Relative Policy Optimization (GRPO) has been applied to this setting, with existing approaches emphasizing reward design while retaining a single trajectory-level advantage across turns. Such shared credit can reinforce redundant replies after earlier successes and discourage useful follow-ups after earlier failures. We propose TurnWise, a turn-level GRPO framework that aligns learning with individual streaming decisions. TurnWise addresses the mismatch between trajectory-level feedback and turn-level interaction, promoting informative responses and reducing redundancy. Specifically, turn-level credit assignment uses silence-completed prefix scoring to construct group-relative advantages from each decision&#x27;s remaining return, separating its learning signal from earlier rewards. Turn-mean policy optimization averages token losses within each turn and then across turns, giving response and waiting decisions equal weight regardless of output length. These complementary designs improve streaming policy learning without a learned critic or additional rollouts. Extensive experiments show our method outperforms prior RL approaches for streaming video understanding.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-04 · <a href='https://huggingface.co/papers/2611.06728'>page</a> · <a href='https://arxiv.org/pdf/2611.06728'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Think Less, Locally: Local Preference Learning for Reasoning Compression</title>
-      <link>https://huggingface.co/papers/2611.04814</link>
-      <guid isPermaLink="false">arxiv:2611.04814</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
-<p><b>Authors:</b> Muyao Yuan, Liyan Xu, Weizhan Zhang, Muyan Jiao, Jiangnan Li, Jinchao Zhang, Jie Zhou, Hugging Face Daily Papers (curated)</p>
-<p>Large reasoning models achieve strong performance on challenging tasks, but their long chain-of-thought often incurs substantial inference costs by continuing to deliberate after sufficient information has been obtained. Existing reasoning compression methods primarily operate on reasoning trajectories, paying less attention to the local decision of whether further reasoning is necessary given the current state. We propose LoCo, a local preference learning method for reasoning compression. LoCo detects candidate overthinking states from the model&#x27;s own traces, freezes the corresponding reasoning prefixes, regenerates shorter verified continuations from the same states, and trains on the resulting state-conditioned preference pairs with DPO. This formulation teaches the model when to continue reasoning and when to conclude, rather than simply encouraging shorter trajectories overall. We construct training data entirely from self-generated mathematical traces and evaluate LoCo on five mathematical and three code generation benchmarks. LoCo reduces completion length by 41.7\%--45.4\% on mathematics and 23.4\%--36.3\% on code, while maintaining or improving accuracy and achieving the best AUC across all code benchmarks. LoCo consistently improves the accuracy-efficiency trade-off on mathematics and transfers effectively to code generation despite math-only training, demonstrating the cross-domain generality of local preference learning for reasoning compression. The code and model will be publicly released at https://github.com/MuyaoYuan/LoCo.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-03 · <a href='https://huggingface.co/papers/2611.04814'>page</a> · <a href='https://arxiv.org/pdf/2611.04814'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>From Pixels to Actions - Towards Native Vision-Language-Action Policies</title>
-      <link>https://huggingface.co/papers/2611.06918</link>
-      <guid isPermaLink="false">arxiv:2611.06918</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Weichen Fan, Haiwen Diao, Penghao Wu, Siyuan Hu, Ziqi Huang, Tianqi Liu, Mingze Sun, Ziyi Wang, … <i>(+10 more)</i></p>
-<p>Vision-language-action models are typically built on a simple premise: perception is first compressed by visual encoders, and action reasoning begins only afterwards. Yet manipulation often hinges on precisely the visual signals most vulnerable to this abstraction, e.g., local geometry, boundaries, depth, and subtle state changes. This raises a fundamental question: should action policies inherit a fixed visual endpoint, or directly access evolving visual computation? We introduce NEO-VLA, a structurally encoder-free vision-language-action framework. Images are tokenized by lightweight patch convolutional layers and evolve jointly with language throughout the backbone, allowing a flow-matching action expert to draw from instruction-conditioned visual representations at different depths. This simple change reveals a consistent pattern. Native architectures outperform encoder-based counterparts under controlled comparisons; full fine-tuning reduces but does not erase the gap, and additional scale alone cannot recover it. More strikingly, layer-wise probing shows that the action-critical signals often peak well before the final visual representation. Across diverse manipulation settings and distribution shifts, NEO-VLA consequently achieves stronger and more robust control. Together, these results suggest that embodied control benefits from access to visual representations across the computational hierarchy, rather than a fixed encoder output.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-04 · <a href='https://huggingface.co/papers/2611.06918'>page</a> · <a href='https://arxiv.org/pdf/2611.06918'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Factorized MLLM Embeddings for Composed Image Retrieval</title>
-      <link>https://huggingface.co/papers/2611.05193</link>
-      <guid isPermaLink="false">arxiv:2611.05193</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind, Hugging Face Daily Papers · <b>Tier-2 senior:</b> KAIST — (senior)</p>
-<p><b>Authors:</b> WonJun Moon, Seongchan Kim, Dahun Kim, Seungryong Kim, Hugging Face Daily Papers (curated)</p>
-<p>Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have shown significant progress, we argue that the MLLM&#x27;s compositional understanding remains underutilized. This stems from directly mapping composed queries into a retrieval embedding via contrastive supervision alone, without explicitly resolving the intended visual modifications. In this work, we introduce Factorized MLLM Embeddings (FactEmbed), which decouples compositional query comprehension from building discriminative embeddings. Rather than directly projecting the composed query into a single embedding without internal reasoning, FactEmbed employs a set of factorized latents that simulate the intended visual modifications via an intermediate target imagination objective. This process encourages the latents to ground into target semantics before forming discriminative representations for retrieval. Subsequently, to propagate these factorized representations throughout the model for retrieval, we optimize a factor-level contrastive loss while distilling the decomposed representations into a deeper attention layer of the MLLM. Finally, for efficient inference, we retain the [EOS] token to establish a global-level embedding on top of these factorized latents, while we exploit the mean-pooled factorized latents to rerank a short candidate list at negligible cost, as both are produced by the same forward pass. Extensive evaluations demonstrate that FactEmbed outperforms prior works across CIR benchmarks.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-03 · <a href='https://huggingface.co/papers/2611.05193'>page</a> · <a href='https://arxiv.org/pdf/2611.05193'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>GameVerse: A Minute-Scale Gameplay Dataset for Long-Horizon Interactive World Modeling</title>
-      <link>https://huggingface.co/papers/2610.37257</link>
-      <guid isPermaLink="false">arxiv:2610.37257</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers, Shanghai AI Lab · <b>Tier-2 senior:</b> Imperial College, Tsinghua — (senior)</p>
-<p><b>Authors:</b> Kang He, Wenshuo Peng, Chuanhao Li, Zihui Gao, Xiaojie Xu, Zhengyuan Lin, Yuzhe Ding, Donghong Ji, … <i>(+3 more)</i></p>
-<p>Recent advances in interactive world models have made it possible to generate controllable, dynamic environments from action inputs. Yet current models struggle to maintain coherence beyond roughly one minute of rollout, a limitation rooted not in model capacity but in the scarcity of long-horizon training data. Existing gameplay video datasets typically consist of clips under ten seconds, with captions that describe whole clips in coarse and undifferentiated text, which is insufficient for controllable long-horizon generation. We address this with GameVerse, a minute-scale gameplay video dataset purpose-built for long-horizon interactive world modeling. GameVerse contains 69.7K clips spanning 1,655 hours and 349.6 million frames across diverse first- and third-person gameplay, including 1,358 hours of continuous two-minute sequences, an order of magnitude longer than prior datasets. Clips pass through a unified pipeline of scene-consistent segmentation, quality filtering, camera pose estimation, and event-based caption annotation. Each clip is paired with a temporally stable camera trajectory that remains coherent across minutes, together with captions that separate static scene context from dynamic foreground events and align to event boundaries rather than fixed time windows. Comprehensive analysis shows that GameVerse surpasses existing public datasets in scale, diversity, and annotation quality. Experiments further demonstrate that training on GameVerse substantially extends the temporal horizon of interactive world models.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-10-31 · <a href='https://huggingface.co/papers/2610.37257'>page</a> · <a href='https://arxiv.org/pdf/2610.37257'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>FrontierPhysics: Evaluating Agents for End-to-End Physics Research</title>
-      <link>https://huggingface.co/papers/2611.06910</link>
-      <guid isPermaLink="false">arxiv:2611.06910</guid>
-      <pubDate>Thu, 05 Nov 2026 12:47:28 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, Peking U, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Bingran You, Wenjun Ke, Ria Rosenauer, Bo Liu, Wenbo Chen, Min Chen, Shuqi Xu, Yue Ma, … <i>(+65 more)</i></p>
-<p>AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents&#x27; research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents&#x27; main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-04 · <a href='https://huggingface.co/papers/2611.06910'>page</a> · <a href='https://arxiv.org/pdf/2611.06910'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

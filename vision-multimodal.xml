@@ -5,8 +5,21 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 12:10:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 13:55:55 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Verify Before You Generate: Sketch-Guided Efficient Motion-Planning for Video Generation</title>
+      <link>https://arxiv.org/abs/2511.17450</link>
+      <guid isPermaLink="false">arxiv:2511.17450</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
+<p><b>Authors:</b> Yidong Huang, Zun Wang, Han Lin, Dong-Ki Kim, Shayegan Omidshafiei, Jaehong Yoon, Yue Zhang, Mohit Bansal</p>
+<p>Recent video generation approaches increasingly rely on planning intermediate control signals like object trajectories to improve temporal coherence and motion fidelity. However, these methods mostly employ single-shot plans that are typically limited to simple motion instructions, leading to suboptimal motion quality, or iterative refinement which requires multiple calls to the video generator and incurs high computational cost. To address this trade-off, we propose SketchVerify, a training-free framework whose key insight is to verify motion plans using lightweight video sketches before invoking the expensive video generator. This lightweight planning space enables efficient comparison of multiple candidate trajectories and bounded iterative refinement before a single final video-generation pass. Given a prompt and a reference image, SketchVerify samples multiple candidate trajectories and renders each as a lightweight video sketch by compositing the moving objects over a static background. A vision-language verifier then ranks these sketches according to instruction alignment and visual motion consistency, allowing unsuitable trajectories to be rejected before full video synthesis. The motion plan is iteratively refined until a satisfactory one is identified, then passed to a trajectory-conditioned generator for final synthesis. Experiments on WORLDMODELBENCH and PHYWORLDBENCH demonstrate consistent improvements in instruction following and temporally coherent, visually plausible motion. Using the same ATI-14B generator, SketchVerify improves the aggregate WorldModelBench score from 7.71 to 8.71. Compared with full-video iterative refinement, it achieves a 13.1x planning-stage speedup and a 3.6x end-to-end speedup.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-11-20 · <a href='https://arxiv.org/abs/2511.17450'>page</a> · <a href='https://arxiv.org/pdf/2511.17450'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>MARBLE: An Agentic Benchmark for Spatial Reasoning and Visual Abstraction</title>
       <link>https://arxiv.org/abs/2506.22992</link>
@@ -2562,18 +2575,6 @@
 <p><b>Authors:</b> Zhifeng Gu, Yuqi Wang, Bing Wang</p>
 <p>Relative spatial relations provide a compact representation of spatial structure and are fundamental to relative spatial reasoning in 3D layout generation. Recent works leverage Multimodal Large Language Models (MLLMs) to infer such relations, but the inferred relations are often unreliable and are typically handled with post-hoc heuristics. In this paper, we propose R$^3$L, a general framework that improves the reliability and consistency of relative spatial reasoning for 3D layout generation. Our key motivation is that multi-hop reasoning requires repeated reference-frame transformations, which accumulate errors in inferred relations and lead to semantic and metric drift. To mitigate this, we propose invariant spatial decomposition to break coupled relation chains, and consistent spatial imagination to promote self-consistency through an imagine-and-revise loop. We further introduce supportive spatial optimization to ease pose optimization via global-to-local coordinate re-parameterization. Extensive experiments across diverse scene types and instructions demonstrate that R$^3$L produces more physically feasible and semantically consistent layouts. Notably, our analysis shows that resolving frame-induced inconsistencies is crucial for reliable multi-hop relative spatial reasoning. The code is available at https://github.com/Neal2020GitHub/R3L.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.06758'>page</a> · <a href='https://arxiv.org/pdf/2605.06758'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>RELO: Reinforcement Learning to Localize for Visual Object Tracking</title>
-      <link>https://arxiv.org/abs/2605.07379</link>
-      <guid isPermaLink="false">arxiv:2605.07379</guid>
-      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Tencent AI Lab</p>
-<p><b>Authors:</b> Xin Chen, Chuanyu Sun, Jiao Xu, Houwen Peng, Dong Wang, Huchuan Lu, Kede Ma</p>
-<p>Conventional visual object trackers localize targets using handcrafted spatial priors, often in the form of heatmaps. Such priors provide only surrogate supervision and are poorly aligned with tracking optimization and evaluation metrics, such as intersection over union (IoU) and area under the success curve (AUC). Here, we introduce RELO, a REinforcement-learning-to-LOcalize method for visual object tracking that formulates target localization as a Markov decision process. Specifically, RELO replaces handcrafted spatial priors with a localization policy learned over spatial positions via reinforcement learning, with rewards combining frame-level IoU and sequence-level AUC. We additionally introduce layer-aligned temporal token propagation to improve semantic consistency across frames, with negligible computational overhead. Across multiple benchmarks, RELO achieves superior results, attaining 57.5% AUC on LaSOText without template updates. This confirms that reward-driven localization provides an effective alternative to prior-driven localization for visual object tracking.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.07379'>page</a> · <a href='https://arxiv.org/pdf/2605.07379'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

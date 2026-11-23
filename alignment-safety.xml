@@ -5,8 +5,21 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 12:10:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 13:55:55 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Verify Before You Generate: Sketch-Guided Efficient Motion-Planning for Video Generation</title>
+      <link>https://arxiv.org/abs/2511.17450</link>
+      <guid isPermaLink="false">arxiv:2511.17450</guid>
+      <pubDate>Mon, 23 Nov 2026 13:55:55 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> Tsinghua — (senior)</p>
+<p><b>Authors:</b> Yidong Huang, Zun Wang, Han Lin, Dong-Ki Kim, Shayegan Omidshafiei, Jaehong Yoon, Yue Zhang, Mohit Bansal</p>
+<p>Recent video generation approaches increasingly rely on planning intermediate control signals like object trajectories to improve temporal coherence and motion fidelity. However, these methods mostly employ single-shot plans that are typically limited to simple motion instructions, leading to suboptimal motion quality, or iterative refinement which requires multiple calls to the video generator and incurs high computational cost. To address this trade-off, we propose SketchVerify, a training-free framework whose key insight is to verify motion plans using lightweight video sketches before invoking the expensive video generator. This lightweight planning space enables efficient comparison of multiple candidate trajectories and bounded iterative refinement before a single final video-generation pass. Given a prompt and a reference image, SketchVerify samples multiple candidate trajectories and renders each as a lightweight video sketch by compositing the moving objects over a static background. A vision-language verifier then ranks these sketches according to instruction alignment and visual motion consistency, allowing unsuitable trajectories to be rejected before full video synthesis. The motion plan is iteratively refined until a satisfactory one is identified, then passed to a trajectory-conditioned generator for final synthesis. Experiments on WORLDMODELBENCH and PHYWORLDBENCH demonstrate consistent improvements in instruction following and temporally coherent, visually plausible motion. Using the same ATI-14B generator, SketchVerify improves the aggregate WorldModelBench score from 7.71 to 8.71. Compared with full-video iterative refinement, it achieves a 13.1x planning-stage speedup and a 3.6x end-to-end speedup.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL · <b>arXiv submitted:</b> 2026-11-20 · <a href='https://arxiv.org/abs/2511.17450'>page</a> · <a href='https://arxiv.org/pdf/2511.17450'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Probing the &quot;Conscious&quot; Mind: Selective Access and Global Workspace in Vision-Language Models</title>
       <link>https://huggingface.co/papers/2611.26590</link>
@@ -2321,17 +2334,6 @@
 <p><b>Authors:</b> Zhishang Xiang, Zerui Chen, Yunbo Tang, Zhimin Wei, Ruqin Ning, Yujie Lin, Qinggang Zhang, Jinsong Su, … <i>(+1 more)</i></p>
 <p>Memory has emerged as a cornerstone of modern LLM-based agents, supporting their evolution from single-turn assistants to long-term collaborators. However, memory is not always beneficial: retrieved memories often induce a critical issue of sycophancy, causing agents to over-align with the user at the cost of factual accuracy or objective reasoning. Despite this emerging risk, existing memory benchmarks primarily evaluate whether memories are correctly stored, retrieved, or updated, while overlooking how retrieved memories influence downstream reasoning and decision-making. To bridge this gap, we propose MemSyco-Bench, a comprehensive benchmark for evaluating memory-induced sycophancy in agent systems. MemSyco-Bench measures when memory should influence a decision and how valid memory should be used. Specifically, it covers five tasks that assess whether agents can reject memory as factual evidence, respect its applicable scope, resolve conflicts between memory and objective evidence, track memory updates, and use valid memory for personalization. All related resources are collected for the community at https://github.com/XMUDeepLIT/MemSyco-Bench.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-01 · <a href='https://huggingface.co/papers/2607.01071'>page</a> · <a href='https://arxiv.org/pdf/2607.01071'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts</title>
-      <link>https://huggingface.co/papers/2607.00666</link>
-      <guid isPermaLink="false">arxiv:2607.00666</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Taewook Kang, Taeheon Kim, Donghyun Shin, Jonghyun Choi, Hugging Face Daily Papers (curated)</p>
-<p>Vision-Language-Action (VLA) models often fail to perform the same learned tasks under environmental shifts, such as changes in camera pose and shifts to a different but similar robot (e.g., from Panda to UR5e). Adapting these models to the shifted environment (i.e., target domain) often requires training on multiple demonstrations for each task, which are costly to collect. To reduce the burden of data curation and training, we propose an analogy-based method that adapts VLA models under environmental shifts through weight vector arithmetic with domain-specific information addition, named Domain ARiThmetic (DART). Unlike prior approaches, DART requires collecting only a single demonstration, enabling efficient adaptation. To accurately isolate domain-specific information for addition, DART performs subspace alignment between singular components in weight vectors to filter out noisy components. In both simulated and real-world experiments, DART outperforms existing VLA adaptation methods in one-shot scenarios across diverse visual and embodiment shifts. Code is available at https://github.com/snumprlab/dart.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-01 · <a href='https://huggingface.co/papers/2607.00666'>page</a> · <a href='https://arxiv.org/pdf/2607.00666'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
