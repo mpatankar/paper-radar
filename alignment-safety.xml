@@ -5,8 +5,37 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Mon, 23 Nov 2026 13:55:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 14:29:03 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Let Androids Dream: From Visual Elements to Emergent Implications via Contextual Alignment</title>
+      <link>https://arxiv.org/abs/2505.17019</link>
+      <guid isPermaLink="false">arxiv:2505.17019</guid>
+      <pubDate>Tue, 24 Nov 2026 14:29:03 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK — (senior)</p>
+<p><b>Authors:</b> Chenhao Zhang, Yazhe Niu</p>
+<p>Image metaphor understanding differs from general VQA: the implied meaning is rarely explicit in pixels and instead emerges from the compositional interaction of visual elements together with social intent and culture-specific background. We identify missing context, namely conventions already in a model&#x27;s weights that single-pass inference leaves unused and external facts absent from the weights, as a failure mode of multimodal large language models (MLLMs). We formalize Contextual Alignment as inference over a latent context: selecting background knowledge relevant to the image&#x27;s composition and useful for inferring its implication. We then propose Let Androids Dream (LAD), a training-free framework that operationalizes contextual alignment through test-time computation: (1) Perception extracts compositional visual structure, (2) Search adaptively acquires context from parametric knowledge or web search, and (3) Reasoning aligns compositions with context to derive emergent implications. On the bilingual S100 benchmark, LAD raises the lightweight GPT-4o-mini from 44% to 74% (English) and from 42% to 52% (Chinese) Multiple-Choice Question (MCQ) accuracy, on par with the closed-book GPT-5.4 in English, and from 2.98 to 4.02 and from 3.36 to 3.66 on Open-Style Questions (OSQ). LAD improves all five backbones we test, including the open-source Qwen2.5-VL-7B (+18 MCQ and +1.30 OSQ points in English) and Gemini-3.0-Pro, where it obtains the highest OSQ scores (4.30 and 4.46), and its gains hold on the full II-Bench and CII-Bench. Adding other search tools raises MCQ accuracy in five of six cases but changes OSQ scores by -0.48 to +0.01, whereas LAD&#x27;s search stage improves both, suggesting that how context is acquired matters beyond access to search. LAD with web search also improves MMMU, SeedBench, and MMStar. We open-sourced all code and datasets at https://ming-zch.github.io/lad.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-11-21 · <a href='https://arxiv.org/abs/2505.17019'>page</a> · <a href='https://arxiv.org/pdf/2505.17019'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SpA2V: Harnessing Spatial Auditory Cues for Audio-driven Spatially-aware Video Generation</title>
+      <link>https://arxiv.org/abs/2508.00782</link>
+      <guid isPermaLink="false">arxiv:2508.00782</guid>
+      <pubDate>Tue, 24 Nov 2026 14:29:03 GMT</pubDate>
+      <category>cs.GR</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.MM</category>
+      <category>cs.SD</category>
+      <category>eess.AS</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST — Long Chen</p>
+<p><b>Authors:</b> Kien T. Pham, Yingqing He, Yazhou Xing, Qifeng Chen, Long Chen</p>
+<p>Audio-driven video generation aims to synthesize realistic videos that align with input audio recordings, akin to the human ability to visualize scenes from auditory input. However, existing approaches predominantly focus on exploring semantic information, such as the classes of sounding sources present in the audio, limiting their ability to generate videos with accurate content and spatial composition. In contrast, we humans can not only naturally identify the semantic categories of sounding sources but also determine their deeply encoded spatial attributes, including locations and movement directions. This useful information can be elucidated by considering specific spatial indicators derived from the inherent physical properties of sound, such as loudness or frequency. As prior methods largely ignore this factor, we present SpA2V, the first framework explicitly exploits these spatial auditory cues from audios to generate videos with high semantic and spatial correspondence. SpA2V decomposes the generation process into two stages: 1) Audio-guided Video Planning: We meticulously adapt a state-of-the-art MLLM for a novel task of harnessing spatial and semantic cues from input audio to construct Video Scene Layouts (VSLs). This serves as an intermediate representation to bridge the gap between the audio and video modalities. 2) Layout-grounded Video Generation: We develop an efficient and effective approach to seamlessly integrate VSLs as conditional guidance into pre-trained diffusion models, enabling VSL-grounded video generation in a training-free manner. Extensive experiments demonstrate that SpA2V excels in generating realistic videos with semantic and spatial alignment to the input audios.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.GR, cs.AI, cs.CV, cs.MM, cs.SD, eess.AS · <b>arXiv submitted:</b> 2026-11-22 · <a href='https://arxiv.org/abs/2508.00782'>page</a> · <a href='https://arxiv.org/pdf/2508.00782'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Verify Before You Generate: Sketch-Guided Efficient Motion-Planning for Video Generation</title>
       <link>https://arxiv.org/abs/2511.17450</link>
@@ -2310,30 +2339,6 @@
 <p><b>Authors:</b> Jing Liang, Hongyao Tang, Yi Ma, Yancheng He, Weixun Wang, Xiaoyang Li, Ju Huang, Wenbo Su, … <i>(+5 more)</i></p>
 <p>Reinforcement learning (RL) has gained growing attention in large language model (LLM) post-training, yet RL training remains fragile and can suffer from instability or collapse. One vital cause is training-inference mismatch: LLM adopts separate inference and training engines for generation efficiency and training precision, which in practice exhibits inconsistent probabilities for the same trajectories on training and inference sides, even with synchronized model parameters. This naturally induces a special type of off-policyness ever existing and poisoning the training. Prior works have made various efforts in addressing the off-policyness to stabilize the training policies under the mismatch. In this paper, we point out the objective misalignment neglected by existing works that an effective update to the policy in the training engine not necessarily ensures the improvement of the inference policy, i.e., the one used in deployment. To this end, we propose a new policy optimization objective for LLM RL, named Monotonic Inference Policy Improvement (MIPI). Following this principle, we introduce Monotonic Inference Policy Update (MIPU), a two-step LLM RL framework that constructs sampler-referenced candidate updates and selectively accepts synchronized candidates using an inference-side gap proxy. Experiments conducted on two model scales under high mismatch show that MIPU improves average reasoning performance and training stability.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-28 · <a href='https://huggingface.co/papers/2606.29526'>page</a> · <a href='https://arxiv.org/pdf/2606.29526'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Navigating the Alignment-Calibration Trade-off: A Pareto-Superior Frontier via Model Merging</title>
-      <link>https://arxiv.org/abs/2510.17426</link>
-      <guid isPermaLink="false">arxiv:2510.17426</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.CL</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> U Cambridge — Nigel Collier</p>
-<p><b>Authors:</b> Tiancheng Hu, Benjamin Minixhofer, Nigel Collier</p>
-<p>The &quot;alignment tax&quot; of post-training is typically framed as a drop in task accuracy. We show it also involves a severe loss of calibration, making models overconfident, less reliable, and model outputs less diverse. We show that this trade-off can be navigated effectively via a simple post-hoc intervention: interpolating between a model&#x27;s weights before and after alignment. Crucially, this is not a strict trade-off. We find that the process consistently reveals Pareto-optimal interpolations - models that improve accuracy beyond both parents while substantially recovering the calibration lost during alignment. Our work demonstrates that simple model merging provides a computationally efficient method for mitigating the full scope of the alignment tax, yielding models that are more capable and more reliable.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CL, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-07-02 · <a href='https://arxiv.org/abs/2510.17426'>page</a> · <a href='https://arxiv.org/pdf/2510.17426'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>MemSyco-Bench: Benchmarking Sycophancy in Agent Memory</title>
-      <link>https://huggingface.co/papers/2607.01071</link>
-      <guid isPermaLink="false">arxiv:2607.01071</guid>
-      <pubDate>Fri, 03 Jul 2026 06:57:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
-<p><b>Authors:</b> Zhishang Xiang, Zerui Chen, Yunbo Tang, Zhimin Wei, Ruqin Ning, Yujie Lin, Qinggang Zhang, Jinsong Su, … <i>(+1 more)</i></p>
-<p>Memory has emerged as a cornerstone of modern LLM-based agents, supporting their evolution from single-turn assistants to long-term collaborators. However, memory is not always beneficial: retrieved memories often induce a critical issue of sycophancy, causing agents to over-align with the user at the cost of factual accuracy or objective reasoning. Despite this emerging risk, existing memory benchmarks primarily evaluate whether memories are correctly stored, retrieved, or updated, while overlooking how retrieved memories influence downstream reasoning and decision-making. To bridge this gap, we propose MemSyco-Bench, a comprehensive benchmark for evaluating memory-induced sycophancy in agent systems. MemSyco-Bench measures when memory should influence a decision and how valid memory should be used. Specifically, it covers five tasks that assess whether agents can reject memory as factual evidence, respect its applicable scope, resolve conflicts between memory and objective evidence, track memory updates, and use valid memory for personalization. All related resources are collected for the community at https://github.com/XMUDeepLIT/MemSyco-Bench.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-07-01 · <a href='https://huggingface.co/papers/2607.01071'>page</a> · <a href='https://arxiv.org/pdf/2607.01071'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

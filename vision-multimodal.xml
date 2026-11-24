@@ -5,8 +5,77 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Mon, 23 Nov 2026 13:55:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 14:29:03 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Mamba-3D as Masked Autoencoders for Accurate and Data-Efficient Analysis of Medical Ultrasound Videos</title>
+      <link>https://arxiv.org/abs/2503.20258</link>
+      <guid isPermaLink="false">arxiv:2503.20258</guid>
+      <pubDate>Tue, 24 Nov 2026 14:29:03 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO</p>
+<p><b>Authors:</b> Jiaheng Zhou, Yanfeng Zhou, Wei Fang, Yuxing Tang, Le Lu, Ge Yang</p>
+<p>Ultrasound videos are an important form of clinical imaging data, and deep learning-based automated analysis can improve diagnostic accuracy and clinical efficiency. However, the scarcity of labeled data and the inherent challenges of video analysis have impeded the advancement of related methods. In this work, we introduce E-ViM$^3$, a data-efficient Vision Mamba network that preserves the 3D structure of video data, enhancing long-range dependencies and inductive biases to better model space-time correlations. With our design of Enclosure Global Tokens (EGT), the model captures and aggregates global features more effectively than competing methods. To further improve data efficiency, we employ masked video modeling for self-supervised pre-training, with the proposed Spatial-Temporal Chained (STC) masking strategy designed to adapt to various video scenarios. Experiments demonstrate that E-ViM$^3$ performs as the state-of-the-art in two high-level semantic analysis tasks across four datasets of varying sizes: EchoNet-Dynamic, CAMUS, MICCAI-BUV, and WHBUS. Furthermore, our model achieves competitive performance with limited labels, highlighting its potential impact on real-world clinical applications.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-11-23 · <a href='https://arxiv.org/abs/2503.20258'>page</a> · <a href='https://arxiv.org/pdf/2503.20258'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>HierSum: A Global and Local Attention Mechanism for Video Summarization</title>
+      <link>https://arxiv.org/abs/2504.18689</link>
+      <guid isPermaLink="false">arxiv:2504.18689</guid>
+      <pubDate>Tue, 24 Nov 2026 14:29:03 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind · <b>Tier-2 senior:</b> Georgia Tech — Irfan Essa</p>
+<p><b>Authors:</b> Apoorva Beedu, Irfan Essa</p>
+<p>Video summarization creates an abridged version (i.e., a summary) that provides a quick overview of the video while retaining pertinent information. In this work, we focus on summarizing instructional videos and propose a method for breaking down a video into meaningful segments, each corresponding to essential steps in the video. We propose **HierSum**, a hierarchical approach that integrates fine-grained local cues from subtitles with global contextual information provided by video-level instructions. Our approach utilizes the &quot;most replayed&quot; statistic as a supervisory signal to identify critical segments, thereby improving the effectiveness of the summary. We evaluate on benchmark datasets such as TVSum, BLiSS, Mr.HiSum, and the WikiHow test set, and show that HierSum consistently outperforms existing methods in key metrics such as F1-score and rank correlation. We also curate a new multi-modal dataset using WikiHow and EHow videos, and associated articles containing step-by-step instructions. Through extensive ablation studies, we demonstrate that training on this dataset significantly enhances summarization on the target datasets. The code and dataset will be available at https://github.com/ApoorvaBeedu/HierSum.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG · <b>arXiv submitted:</b> 2026-11-23 · <a href='https://arxiv.org/abs/2504.18689'>page</a> · <a href='https://arxiv.org/pdf/2504.18689'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Let Androids Dream: From Visual Elements to Emergent Implications via Contextual Alignment</title>
+      <link>https://arxiv.org/abs/2505.17019</link>
+      <guid isPermaLink="false">arxiv:2505.17019</guid>
+      <pubDate>Tue, 24 Nov 2026 14:29:03 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CY</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Shanghai AI Lab · <b>Tier-2 senior:</b> CUHK — (senior)</p>
+<p><b>Authors:</b> Chenhao Zhang, Yazhe Niu</p>
+<p>Image metaphor understanding differs from general VQA: the implied meaning is rarely explicit in pixels and instead emerges from the compositional interaction of visual elements together with social intent and culture-specific background. We identify missing context, namely conventions already in a model&#x27;s weights that single-pass inference leaves unused and external facts absent from the weights, as a failure mode of multimodal large language models (MLLMs). We formalize Contextual Alignment as inference over a latent context: selecting background knowledge relevant to the image&#x27;s composition and useful for inferring its implication. We then propose Let Androids Dream (LAD), a training-free framework that operationalizes contextual alignment through test-time computation: (1) Perception extracts compositional visual structure, (2) Search adaptively acquires context from parametric knowledge or web search, and (3) Reasoning aligns compositions with context to derive emergent implications. On the bilingual S100 benchmark, LAD raises the lightweight GPT-4o-mini from 44% to 74% (English) and from 42% to 52% (Chinese) Multiple-Choice Question (MCQ) accuracy, on par with the closed-book GPT-5.4 in English, and from 2.98 to 4.02 and from 3.36 to 3.66 on Open-Style Questions (OSQ). LAD improves all five backbones we test, including the open-source Qwen2.5-VL-7B (+18 MCQ and +1.30 OSQ points in English) and Gemini-3.0-Pro, where it obtains the highest OSQ scores (4.30 and 4.46), and its gains hold on the full II-Bench and CII-Bench. Adding other search tools raises MCQ accuracy in five of six cases but changes OSQ scores by -0.48 to +0.01, whereas LAD&#x27;s search stage improves both, suggesting that how context is acquired matters beyond access to search. LAD with web search also improves MMMU, SeedBench, and MMStar. We open-sourced all code and datasets at https://ming-zch.github.io/lad.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CY · <b>arXiv submitted:</b> 2026-11-21 · <a href='https://arxiv.org/abs/2505.17019'>page</a> · <a href='https://arxiv.org/pdf/2505.17019'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Cross-modal RAG: Sub-dimensional Text-to-Image Retrieval-Augmented Generation</title>
+      <link>https://arxiv.org/abs/2505.21956</link>
+      <guid isPermaLink="false">arxiv:2505.21956</guid>
+      <pubDate>Tue, 24 Nov 2026 14:29:03 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> DeepSeek · <b>Tier-2 senior:</b> U Michigan — (senior)</p>
+<p><b>Authors:</b> Mengdan Zhu, Senhao Cheng, Guangji Bai, Yifei Zhang, Liang Zhao</p>
+<p>Text-to-image generation increasingly demands access to domain-specific, fine-grained, and rapidly evolving knowledge that pretrained models cannot fully capture, necessitating the integration of retrieval methods. Existing Retrieval-Augmented Generation (RAG) methods attempt to address this by retrieving globally relevant images, but they fail when no single image contains all desired elements from a complex user query. We propose Cross-modal RAG, a novel framework that decomposes both queries and images into sub-dimensional components, enabling subquery-aware retrieval and generation. Our method introduces a hybrid retrieval strategy, combining a sub-dimensional sparse retriever with a dense retriever, to identify a Pareto-optimal set of images, each contributing complementary aspects of the query. During generation, a multimodal large language model is guided to selectively condition on relevant visual features aligned to specific subqueries for subquery-aware image synthesis. Extensive experiments on MS-COCO, Flickr30K, WikiArt, CUB, and ImageNet-LT demonstrate that Cross-modal RAG significantly outperforms existing baselines in the retrieval and further contributes to generation quality, while maintaining high efficiency.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL, cs.LG · <b>arXiv submitted:</b> 2026-11-23 · <a href='https://arxiv.org/abs/2505.21956'>page</a> · <a href='https://arxiv.org/pdf/2505.21956'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>SpA2V: Harnessing Spatial Auditory Cues for Audio-driven Spatially-aware Video Generation</title>
+      <link>https://arxiv.org/abs/2508.00782</link>
+      <guid isPermaLink="false">arxiv:2508.00782</guid>
+      <pubDate>Tue, 24 Nov 2026 14:29:03 GMT</pubDate>
+      <category>cs.GR</category>
+      <category>cs.AI</category>
+      <category>cs.CV</category>
+      <category>cs.MM</category>
+      <category>cs.SD</category>
+      <category>eess.AS</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST — Long Chen</p>
+<p><b>Authors:</b> Kien T. Pham, Yingqing He, Yazhou Xing, Qifeng Chen, Long Chen</p>
+<p>Audio-driven video generation aims to synthesize realistic videos that align with input audio recordings, akin to the human ability to visualize scenes from auditory input. However, existing approaches predominantly focus on exploring semantic information, such as the classes of sounding sources present in the audio, limiting their ability to generate videos with accurate content and spatial composition. In contrast, we humans can not only naturally identify the semantic categories of sounding sources but also determine their deeply encoded spatial attributes, including locations and movement directions. This useful information can be elucidated by considering specific spatial indicators derived from the inherent physical properties of sound, such as loudness or frequency. As prior methods largely ignore this factor, we present SpA2V, the first framework explicitly exploits these spatial auditory cues from audios to generate videos with high semantic and spatial correspondence. SpA2V decomposes the generation process into two stages: 1) Audio-guided Video Planning: We meticulously adapt a state-of-the-art MLLM for a novel task of harnessing spatial and semantic cues from input audio to construct Video Scene Layouts (VSLs). This serves as an intermediate representation to bridge the gap between the audio and video modalities. 2) Layout-grounded Video Generation: We develop an efficient and effective approach to seamlessly integrate VSLs as conditional guidance into pre-trained diffusion models, enabling VSL-grounded video generation in a training-free manner. Extensive experiments demonstrate that SpA2V excels in generating realistic videos with semantic and spatial alignment to the input audios.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.GR, cs.AI, cs.CV, cs.MM, cs.SD, eess.AS · <b>arXiv submitted:</b> 2026-11-22 · <a href='https://arxiv.org/abs/2508.00782'>page</a> · <a href='https://arxiv.org/pdf/2508.00782'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Verify Before You Generate: Sketch-Guided Efficient Motion-Planning for Video Generation</title>
       <link>https://arxiv.org/abs/2511.17450</link>
@@ -2512,69 +2581,6 @@
 <p><b>Authors:</b> Tianwei Lin, Zhongwei Qiu, Jie Cao, Jiang Liu, Wenjie Yan, Bo Zhang, Yu Zhong, Wenqiao Zhang, … <i>(+2 more)</i></p>
 <p>Medical vision-language models (VLMs) have rapidly advanced as general-purpose multimodal assistants, yet their deployment in 3D Computed Tomography (CT) analysis remains constrained by a persistent mismatch between optimization objectives and clinical rigor. Current Reinforcement Learning (RL) paradigms still rely on lexical proxy signals that induce ``\textit{Evaluation Hallucinations}&#x27;&#x27;, where models optimize linguistic fluency rather than factual clinical correctness, leading to diagnostically critical errors. To bridge this gap, we introduce the \textbf{Clinical Abnormality Benchmarking Substrate (CABS)}, a structured system that decomposes radiology reports into verifiable clinical semantic units. Using CABS, we identify a ``\textit{Mechanistic Divergence}&#x27;&#x27; in standard RL, where surface-similarity rewards drive policy gradients to bypass medical facts. We therefore propose \textbf{Trajectory-Integral Feedback GRPO (TIF-GRPO)}, a novel framework integrating control-theoretic principles into policy optimization. By formulating clinical reasoning as a pseudo-temporal trajectory for anomaly discovery, TIF-GRPO regulates anatomy-aware rewards via an integral feedback loop that penalizes persistent omissions as cumulative state errors and suppresses hallucinations as excessive control effort. Experiments on 3D CT benchmarks demonstrate that our approach significantly enhances abnormality detection and clinical faithfulness, establishing a new paradigm for fine-grained regulation in medical VLMs. Our project is available at \href{https://github.com/ZJU4HealthCare/TIF-GRPO}{GitHub}.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.20277'>page</a> · <a href='https://arxiv.org/pdf/2605.20277'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>ClaimDiff-RL: Fine-Grained Caption Reinforcement Learning through Visual Claim Comparison</title>
-      <link>https://arxiv.org/abs/2605.20278</link>
-      <guid isPermaLink="false">arxiv:2605.20278</guid>
-      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> NUS, Peking U — Yu Cheng</p>
-<p><b>Authors:</b> Tianle Li, Xuyang Shen, Yan Ma, Rongxin Guo, Shaoxiang Chen, Jiacheng Chen, Haochen Wang, Hongyang Tang, … <i>(+2 more)</i></p>
-<p>Long-form image captioning exposes a reward granularity problem in RL: captions are judged as whole sequences, while the important errors occur at the level of individual visual claims. A good dense caption should be both faithful and informative, avoiding hallucination without omitting salient details. Yet pairwise preferences, reference-based metrics, and holistic scalar rewards compress these local errors into a single sequence-level signal, obscuring the tradeoff between factuality and coverage. We introduce ClaimDiff-RL, a framework that uses reference-conditioned atomic claim differences as the reward unit for caption RL. Given an image, an actor caption, and a reference caption, a multimodal judge enumerates visually grounded differences, verifies each difference against the image, assigns open-vocabulary error types and severity levels, and produces per-difference statistics for reward composition. This makes hallucinated claims and omitted salient facts separately measurable and tunable. Experiments show that holistic scalar rewards can reduce hallucination by increasing missing facts, while ClaimDiff-RL exposes this faithfulness and coverage tradeoff and enables more balanced operating points. On a 160-image human-labeled diagnostic benchmark, public captioning benchmarks, and VQA benchmarks, ClaimDiff-RL improves the hallucination--missing-fact balance, preserves general capability, and even surpasses Gemini-3-Pro-Preview on several fine-grained Capability dimensions such as object counting, spatial relations, and scene recognition. These results suggest that typed, verifiable claim differences are an effective reward unit for fine-grained and diagnosable caption RL.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.20278'>page</a> · <a href='https://arxiv.org/pdf/2605.20278'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Slot-MLLM: Object-Centric Visual Tokenization for Multimodal LLM</title>
-      <link>https://arxiv.org/abs/2505.17726</link>
-      <guid isPermaLink="false">arxiv:2505.17726</guid>
-      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> KAIST, U Washington, UC Berkeley — Sungwoong Kim</p>
-<p><b>Authors:</b> Donghwan Chi, Hyomin Kim, Yoonjin Oh, Yongjin Kim, Donghoon Lee, Daejin Jo, Jongmin Kim, Junyeob Baek, … <i>(+2 more)</i></p>
-<p>Recently, multimodal large language models (MLLMs) have emerged as a key approach in achieving artificial general intelligence. In particular, vision-language MLLMs have been developed to generate not only text but also visual outputs from multimodal inputs. This advancement requires efficient image tokens that LLMs can process effectively both in input and output. However, existing image tokenization methods for MLLMs typically capture only global abstract concepts or uniformly segmented image patches, restricting MLLMs&#x27; capability to effectively understand or generate detailed visual content, particularly at the object level. To address this limitation, we propose an object-centric visual tokenizer based on Slot Attention specifically for MLLMs. In particular, based on the Q-Former encoder, diffusion decoder, and residual vector quantization, our proposed discretized slot tokens can encode local visual details while maintaining high-level semantics, and also align with textual data to be integrated seamlessly within a unified next-token prediction framework of LLMs. The resulting Slot-MLLM demonstrates significant performance improvements over baselines with previous visual tokenizers across various vision-language tasks that entail local detailed comprehension and generation. Notably, this work is the first demonstration of the feasibility of object-centric slot attention performed with MLLMs and in-the-wild natural images.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2505.17726'>page</a> · <a href='https://arxiv.org/pdf/2505.17726'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Enabling Real-Time Colonoscopic Polyp Segmentation on Commodity CPUs via Ultra-Lightweight Architecture</title>
-      <link>https://arxiv.org/abs/2602.04381</link>
-      <guid isPermaLink="false">arxiv:2602.04381</guid>
-      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Tsinghua — Lan Ma</p>
-<p><b>Authors:</b> Weihao Gao, Zhuo Deng, Zheng Gong, Lan Ma</p>
-<p>Real-time polyp segmentation is essential for early colorectal cancer detection, yet clinical deployment remains blocked by GPU dependency. We introduce the UltraSeg family, a set of CPU-native segmentation models operating below 0.3M parameters. UltraSeg-108K (0.108M) establishes the extreme-compression frontier, while UltraSeg-130K (0.130M) integrates cross-layer lightweight fusion for enhanced multi-center generalization. The architecture replaces parameter-heavy components with grouped multi-rate dilated convolutions and attention-gated cross-layer fusion, achieving real-time throughput on a single CPU core (exceeding 50 FPS at 256*256 and 30 FPS at 352*352) without sacrificing clinical-grade accuracy. Evaluated on seven public datasets, UltraSeg-130K attains Dice scores exceeding 0.8 at both resolutions, substantially outperforming all existing sub-0.3M competitors. Notably, it approaches or exceeds UNet-Medium (7.76M parameters) on zero-shot external validations while using only 1.7% of its parameters, establishing the first strong baseline for CPU-native real-time polyp segmentation. When scaled to 4.38M parameters, UltraSeg achieves accuracy competitive with heavyweight state-of-the-art models while maintaining an order-of-magnitude parameter advantage, demonstrating that the proposed design principles yield intrinsic representational gains across the entire efficiency spectrum. By delivering the first clinically deployable, CPU-native real-time solution, this work provides an immediately usable tool for resource-limited settings and a reproducible blueprint for real-time medical AI beyond endoscopy. Source code is publicly available.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2602.04381'>page</a> · <a href='https://arxiv.org/pdf/2602.04381'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>DLEBench: Evaluating Small-scale Object Editing Ability for Instruction-based Image Editing Model</title>
-      <link>https://arxiv.org/abs/2602.23622</link>
-      <guid isPermaLink="false">arxiv:2602.23622</guid>
-      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> HKUST — Yixin Cao</p>
-<p><b>Authors:</b> Shibo Hong, Boxian Ai, Jun Kuang, Wei Wang, FengJiao Chen, Zhongyuan Peng, Chenhao Huang, Yixin Cao</p>
-<p>Significant progress has been made in the field of Instruction-based Image Editing Models (IIEMs). However, while these models demonstrate plausible adherence to instructions and strong reasoning ability on current benchmarks, their ability to edit small objects remains underexplored, despite its importance for precise local editing and refining details in both real and generated images. In this paper, we introduce DeepLookEditBench (DLEBench), the first benchmark dedicated to assessing the abilities of IIEMs in editing small-scale objects. Specifically, we construct a challenging testbed comprising 1889 samples across seven instruction types. In these samples, target objects occupy only 1%-10% of the image area, covering complex scenarios such as partial occlusion and multi-object editing. To ensure robust evaluation on this benchmark, we propose an evaluation protocol with refined score rubrics to minimize subjectivity and ambiguity in two criteria: Instruction Following and Visual Consistency. This protocol also introduces a dual-mode evaluation framework (Tool-driven and Oracle-guided Modes) addressing the misalignment between LMM-as-a-Judge and human judgements on DLEBench. Empirical results on 10 IIEMs reveal significant performance gaps in small-scale object editing, highlighting the need for specialized benchmarks to advance this ability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2602.23622'>page</a> · <a href='https://arxiv.org/pdf/2602.23622'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>R$^3$L: Reasoning 3D Layouts from Relative Spatial Relations</title>
-      <link>https://arxiv.org/abs/2605.06758</link>
-      <guid isPermaLink="false">arxiv:2605.06758</guid>
-      <pubDate>Wed, 20 May 2026 05:23:54 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <category>cs.RO</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Peking U — Bing Wang</p>
-<p><b>Authors:</b> Zhifeng Gu, Yuqi Wang, Bing Wang</p>
-<p>Relative spatial relations provide a compact representation of spatial structure and are fundamental to relative spatial reasoning in 3D layout generation. Recent works leverage Multimodal Large Language Models (MLLMs) to infer such relations, but the inferred relations are often unreliable and are typically handled with post-hoc heuristics. In this paper, we propose R$^3$L, a general framework that improves the reliability and consistency of relative spatial reasoning for 3D layout generation. Our key motivation is that multi-hop reasoning requires repeated reference-frame transformations, which accumulate errors in inferred relations and lead to semantic and metric drift. To mitigate this, we propose invariant spatial decomposition to break coupled relation chains, and consistent spatial imagination to promote self-consistency through an imagine-and-revise loop. We further introduce supportive spatial optimization to ease pose optimization via global-to-local coordinate re-parameterization. Extensive experiments across diverse scene types and instructions demonstrate that R$^3$L produces more physically feasible and semantically consistent layouts. Notably, our analysis shows that resolving frame-induced inconsistencies is crucial for reliable multi-hop relative spatial reasoning. The code is available at https://github.com/Neal2020GitHub/R3L.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.LG, cs.RO · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.06758'>page</a> · <a href='https://arxiv.org/pdf/2605.06758'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
