@@ -5,8 +5,43 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/alignment-safety.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>RLHF, interpretability, evaluations, red-teaming, model behavior.</description>
-    <lastBuildDate>Tue, 24 Nov 2026 14:29:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 13:47:13 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>A Risk Taxonomy and Reflection Tool for Large Language Model Adoption in Public Health</title>
+      <link>https://arxiv.org/abs/2411.02594</link>
+      <guid isPermaLink="false">arxiv:2411.02594</guid>
+      <pubDate>Wed, 25 Nov 2026 13:47:13 GMT</pubDate>
+      <category>cs.HC</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Jiawei Zhou, Munmun De Choudhury</p>
+<p><b>Authors:</b> Jiawei Zhou, Amy Z. Chen, Darshi Shah, Laura M. Schwab Reese, Munmun De Choudhury</p>
+<p>Recent breakthroughs in large language models (LLMs) have generated both interest and concern about their potential adoption as information sources or communication tools across different domains. In public health, where stakes are high and impacts extend across diverse populations, adopting LLMs poses unique challenges that require thorough evaluation. However, structured approaches for assessing potential risks in public health remain under-explored. To address this gap, we conducted focus groups with public health professionals and individuals with lived experience to unpack their concerns, situated across three distinct and critical public health issues that demand high-quality information: infectious disease prevention (vaccines), chronic and well-being care (opioid use disorder), and community health and safety (intimate partner violence). We synthesize participants&#x27; perspectives into a risk taxonomy, identifying and contextualizing the potential harms LLMs may introduce when positioned alongside traditional health communication. This taxonomy highlights four dimensions of risk to individuals, human-centered care, information ecosystem, and technology accountability. For each dimension, we unpack specific risks and offer example reflection questions to help practitioners adopt a risk-reflexive approach. By summarizing distinctive LLM characteristics and linking them to identified risks, we discuss the need to revisit prior mental models of information behaviors and complement evaluations with external validity and domain expertise through lived experience and real-world practices. Together, this work contributes a shared vocabulary and reflection tool for people in both computing and public health to collaboratively anticipate, evaluate, and mitigate risks in deciding when to employ LLM capabilities (or not) and how to mitigate harm.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.HC, cs.AI, cs.CL · <b>arXiv submitted:</b> 2025-10-14 · <a href='https://arxiv.org/abs/2411.02594'>page</a> · <a href='https://arxiv.org/pdf/2411.02594'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Rewirable Circuits in Transformers with Loom Attention</title>
+      <link>https://huggingface.co/papers/2611.30634</link>
+      <guid isPermaLink="false">arxiv:2611.30634</guid>
+      <pubDate>Wed, 25 Nov 2026 13:47:13 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Da Xiao, Qingye Meng, Shengping Li, Xingyuan Yuan, Hugging Face Daily Papers (curated)</p>
+<p>We propose loom attention, which allows a Transformer to dynamically rewire its circuits at every token by interweaving a head&#x27;s vertical attention over the outputs of earlier heads (to obtain its query, key and value) with its horizontal attention over tokens. We instantiate vertical attention efficiently with normalized and gated linear attention over a per-token matrix memory, which stores the compressed head outputs and serves as a second residual stream. This yields LoomFormer, a dual-stream architecture that splits control and content between the vector and matrix streams. Across model sizes and training token budgets in language modeling and downstream tasks, LoomFormer matches Transformers trained with over 3x compute and recent residual-stream baselines (HC/mHC, MUDDFormer, AttnRes) trained with ~1.7-2.8x. For example, trained on the same 300B tokens with only 2% extra FLOPs, LoomPythia-2.8B achieves ~1.6x the average downstream gain of mHC-Pythia-2.8B over Pythia-2.8B, and matches (0-shot) or surpasses (5-shot) Pythia-12B. Code is available at https://github.com/Caiyun-AI/LoomFormer</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-23 · <a href='https://huggingface.co/papers/2611.30634'>page</a> · <a href='https://arxiv.org/pdf/2611.30634'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>LingSante MedGuard Technical Report</title>
+      <link>https://huggingface.co/papers/2611.25509</link>
+      <guid isPermaLink="false">arxiv:2611.25509</guid>
+      <pubDate>Wed, 25 Nov 2026 13:47:13 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> LingSante MedGuard Team, Hugging Face Daily Papers (curated)</p>
+<p>As medical AI is increasingly used for patient consultation and clinical decision support, identifying harmful, non-compliant, or ethically problematic responses is essential for responsible deployment. Assessing these risks requires checking clinical claims against relevant evidence, verifying calculations, and applying medical requirements under their intended conditions. We introduce LingSante MedGuard, a capability-enhanced guardrail that integrates supervision from a medical guardrail teacher model and six specialized medical capability experts into a unified model. The guardrail teacher supervises risk decisions and explanations across medical safety, compliance, and ethics, while the capability experts support medical rule understanding, numerical reasoning, multimodal hallucination detection, agentic safety verification, risk localization, and multimodal entity understanding. We consolidate these sources of supervision through offline supervised fine-tuning on teacher-generated demonstrations, followed by multi-teacher on-policy distillation using feedback on student-generated responses. We further introduce LingSante MedGuardBench, a benchmark comprising 11 risk-detection subsets spanning medical safety, compliance, and ethics. At 4B, 9B, and 27B scales, LingSante MedGuard achieves mean benchmark F1 scores of 82.3%, 82.4%, and 87.4%, respectively. The 4B model also achieves 73.9% mean accuracy across MedHallu and MedHALT-NOTA under retrieval-enabled evaluation. Additional evaluations of the verification components show improvements in evidence-supported consistency, source traceability, and rule-guided rationale quality across model scales. These results support the integration of specialized medical capabilities into a unified guardrail for medical risk assessment and evidence-based medical safety verification.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-19 · <a href='https://huggingface.co/papers/2611.25509'>page</a> · <a href='https://arxiv.org/pdf/2611.25509'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Let Androids Dream: From Visual Elements to Emergent Implications via Contextual Alignment</title>
       <link>https://arxiv.org/abs/2505.17019</link>
@@ -2306,39 +2341,6 @@
 <p><b>Authors:</b> Apple ML Research</p>
 <p>Safety alignment in language models operates through two mechanistically distinct systems: refusal neurons that gate whether harmful knowledge is expressed, and concept neurons that encode the harmful knowledge itself. By targeting a single neuron in each system, we demonstrate both directions of failure â bypassing safety on explicit harmful requests via suppression, and inducing harmful content from innocent prompts via amplification â across seven models spanning two families and 1.7B to 70B parameters, without any training or prompt engineering. Our findings suggest that safety alignmentâ¦</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-07 · <a href='https://machinelearning.apple.com/research/single-neuron-safety-alignment'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>A global workspace in language models</title>
-      <link>https://www.anthropic.com/research/global-workspace</link>
-      <guid isPermaLink="false">anthropic:22b32121ee</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Anthropic</p>
-<p><b>Authors:</b> Anthropic</p>
-<p>Interpretability research on Claude&#x27;s internal thoughts.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <a href='https://www.anthropic.com/research/global-workspace'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Understanding Annotator Safety Policy with Interpretability</title>
-      <link>https://machinelearning.apple.com/research/annotator-safety-policy-interpretability</link>
-      <guid isPermaLink="false">apple_ml:0afff12e7c</guid>
-      <pubDate>Tue, 07 Jul 2026 07:33:56 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Apple ML Research</p>
-<p><b>Authors:</b> Apple ML Research</p>
-<p>Safety policies define what constitutes safe and unsafe AI outputs, guiding data annotation and model development. However, annotation disagreement is pervasive and can stem from multiple sources such as operational failures (annotators misunderstand or misexecute the task), policy ambiguity (policy wording leaves room for interpretation), or value pluralism (different annotators hold different perspectives on safety). Distinguishing these sources matters. For example, operational failures call for quality control, ambiguity calls for policy clarification, and pluralism calls for deliberationâ¦</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-07-06 · <a href='https://machinelearning.apple.com/research/annotator-safety-policy-interpretability'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning</title>
-      <link>https://huggingface.co/papers/2606.29526</link>
-      <guid isPermaLink="false">arxiv:2606.29526</guid>
-      <pubDate>Mon, 06 Jul 2026 08:15:37 GMT</pubDate>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NUS, UC Berkeley — (senior)</p>
-<p><b>Authors:</b> Jing Liang, Hongyao Tang, Yi Ma, Yancheng He, Weixun Wang, Xiaoyang Li, Ju Huang, Wenbo Su, … <i>(+5 more)</i></p>
-<p>Reinforcement learning (RL) has gained growing attention in large language model (LLM) post-training, yet RL training remains fragile and can suffer from instability or collapse. One vital cause is training-inference mismatch: LLM adopts separate inference and training engines for generation efficiency and training precision, which in practice exhibits inconsistent probabilities for the same trajectories on training and inference sides, even with synchronized model parameters. This naturally induces a special type of off-policyness ever existing and poisoning the training. Prior works have made various efforts in addressing the off-policyness to stabilize the training policies under the mismatch. In this paper, we point out the objective misalignment neglected by existing works that an effective update to the policy in the training engine not necessarily ensures the improvement of the inference policy, i.e., the one used in deployment. To this end, we propose a new policy optimization objective for LLM RL, named Monotonic Inference Policy Improvement (MIPI). Following this principle, we introduce Monotonic Inference Policy Update (MIPU), a two-step LLM RL framework that constructs sampler-referenced candidate updates and selectively accepts synchronized candidates using an inference-side gap proxy. Experiments conducted on two model scales under high mismatch show that MIPU improves average reasoning performance and training stability.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-06-28 · <a href='https://huggingface.co/papers/2606.29526'>page</a> · <a href='https://arxiv.org/pdf/2606.29526'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>

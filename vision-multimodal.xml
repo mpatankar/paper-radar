@@ -5,8 +5,22 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/vision-multimodal.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>VLMs, diffusion, video gen, 3D, perception.</description>
-    <lastBuildDate>Tue, 24 Nov 2026 14:29:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 13:47:13 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>MMGenBench: An Automated Pipeline for Evaluating LMMs from a Text-to-Image Generation Perspective</title>
+      <link>https://arxiv.org/abs/2411.14062</link>
+      <guid isPermaLink="false">arxiv:2411.14062</guid>
+      <pubDate>Wed, 25 Nov 2026 13:47:13 GMT</pubDate>
+      <category>cs.CV</category>
+      <category>cs.AI</category>
+      <category>cs.CL</category>
+      <category>cs.LG</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> Caltech, Tsinghua — Xiangxiang Chu</p>
+<p><b>Authors:</b> Hailang Huang, Yong Wang, Zixuan Huang, Huaqiu Li, Tongwen Huang, Xiangxiang Chu</p>
+<p>Existing benchmarks often rely on predefined questions or reference captions, limiting their flexibility for evaluating detailed descriptions on new image collections. We present MMGenBench, an automated benchmark framework for evaluating Large Multimodal Models (LMMs) from raw images without per-image questions or reference captions. The pipeline generates descriptions, reconstructs images with a frozen text-to-image model, and compares the original and reconstructed images using a frozen image encoder. It produces reusable per-image scores and inspectable reconstructions, supporting both model comparison and diagnosis of reconstructible visual information. We construct MMGenBench-Domain with 10,000 generated images and MMGenBench-Test with 1,284 images spanning 13 overlapping visual patterns. Evaluation of 68 LMMs reveals pattern-specific differences in reconstruction quality that overall scores can obscure. On 1,000 human-labeled caption pairs from six models, the default score achieves 90.00\% sample-level agreement. Factual perturbations and component analyses characterize the score&#x27;s sensitivity under the evaluated pipeline, while a COCO study provides initial validation on natural photographs. MMGenBench complements existing benchmarks by linking automated comparisons to visual evidence of the information preserved in LMM descriptions. Project page: https://github.com/lerogo/MMGenBench.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI, cs.CL, cs.LG · <b>arXiv submitted:</b> 2026-11-24 · <a href='https://arxiv.org/abs/2411.14062'>page</a> · <a href='https://arxiv.org/pdf/2411.14062'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Mamba-3D as Masked Autoencoders for Accurate and Data-Efficient Analysis of Medical Ultrasound Videos</title>
       <link>https://arxiv.org/abs/2503.20258</link>
@@ -2569,18 +2583,6 @@
 <p><b>Authors:</b> Yang Liu, Toan Nguyen, Flora D. Salim</p>
 <p>Catastrophic forgetting remains a major obstacle to continual learning in large language models (LLMs) and vision--language models (VLMs). Although Mixture-of-Experts (MoE) architectures offer an efficient path to scaling, existing LoRA-based MoE continual learning methods still face a fundamental trade-off: they either isolate experts too aggressively, limiting knowledge transfer across tasks, or allow task-specific updates to overwrite important existing parameters, leading to severe forgetting. To address this, we propose CP-MoE, a continual learning framework built around a transient expert that captures early task-specific updates and guides their integration into stable experts. CP-MoE introduces a consistency-preserving routing bias, which uses the transient expert to estimate representation similarity with stable experts and steer routing towards more compatible expert selection, and a transient expert-guided regularisation mechanism, which selectively protects important historical parameters during merging. Together, these components reduce parameter interference and forgetting while preserving cross-task knowledge transfer. We validate CP-MoE on both unimodal and multimodal continual learning benchmarks with LLM-based and VLM-based MoE models. On SuperNI benchmark, spanning diverse sequential language tasks, CP-MoE achieves state-of-the-art performance and stronger zero-shot transfer to unseen tasks. On VQA v2 dataset, it scales effectively to multimodal visual reasoning, consistently reduces forgetting, and outperforms strong MoE baselines.</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CL, cs.CV · <b>arXiv submitted:</b> 2026-05-18 · <a href='https://arxiv.org/abs/2605.20247'>page</a> · <a href='https://arxiv.org/pdf/2605.20247'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Regulating Anatomy-Aware Rewards via Trajectory-Integral Feedback for Volumetric Computed Tomography Analysis</title>
-      <link>https://arxiv.org/abs/2605.20277</link>
-      <guid isPermaLink="false">arxiv:2605.20277</guid>
-      <pubDate>Thu, 21 May 2026 05:26:44 GMT</pubDate>
-      <category>cs.CV</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO · <b>Tier-2 senior:</b> Cornell, Harvard, NUS — Ling Zhang</p>
-<p><b>Authors:</b> Tianwei Lin, Zhongwei Qiu, Jie Cao, Jiang Liu, Wenjie Yan, Bo Zhang, Yu Zhong, Wenqiao Zhang, … <i>(+2 more)</i></p>
-<p>Medical vision-language models (VLMs) have rapidly advanced as general-purpose multimodal assistants, yet their deployment in 3D Computed Tomography (CT) analysis remains constrained by a persistent mismatch between optimization objectives and clinical rigor. Current Reinforcement Learning (RL) paradigms still rely on lexical proxy signals that induce ``\textit{Evaluation Hallucinations}&#x27;&#x27;, where models optimize linguistic fluency rather than factual clinical correctness, leading to diagnostically critical errors. To bridge this gap, we introduce the \textbf{Clinical Abnormality Benchmarking Substrate (CABS)}, a structured system that decomposes radiology reports into verifiable clinical semantic units. Using CABS, we identify a ``\textit{Mechanistic Divergence}&#x27;&#x27; in standard RL, where surface-similarity rewards drive policy gradients to bypass medical facts. We therefore propose \textbf{Trajectory-Integral Feedback GRPO (TIF-GRPO)}, a novel framework integrating control-theoretic principles into policy optimization. By formulating clinical reasoning as a pseudo-temporal trajectory for anomaly discovery, TIF-GRPO regulates anatomy-aware rewards via an integral feedback loop that penalizes persistent omissions as cumulative state errors and suppresses hallucinations as excessive control effort. Experiments on 3D CT benchmarks demonstrate that our approach significantly enhances abnormality detection and clinical faithfulness, establishing a new paradigm for fine-grained regulation in medical VLMs. Our project is available at \href{https://github.com/ZJU4HealthCare/TIF-GRPO}{GitHub}.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CV, cs.AI · <b>arXiv submitted:</b> 2026-05-19 · <a href='https://arxiv.org/abs/2605.20277'>page</a> · <a href='https://arxiv.org/pdf/2605.20277'>pdf</a></p>]]></description>
     </item>
   </channel>
 </rss>
