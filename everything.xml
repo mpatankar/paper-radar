@@ -5,8 +5,85 @@
     <atom:link href="https://example.github.io/paper-radar/feeds_out/everything.xml" rel="self" type="application/rss+xml" />
     <link>https://example.github.io/paper-radar/feeds_out</link>
     <description>Every accepted paper. Firehose.</description>
-    <lastBuildDate>Thu, 26 Nov 2026 13:26:21 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 13:22:57 GMT</lastBuildDate>
     <generator>paper-radar 0.1</generator>
+    <item>
+      <title>Stable Gated DeltaNet-2: Understanding and Mitigating Recurrent State Instability</title>
+      <link>https://huggingface.co/papers/2611.34051</link>
+      <guid isPermaLink="false">arxiv:2611.34051</guid>
+      <pubDate>Fri, 27 Nov 2026 13:22:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> HKUST — (senior)</p>
+<p><b>Authors:</b> Xichong Zhang, Xixuan Hao, Zhichen Liu, Le Zhou, Zeyu Zhang, Boyu Chen, Mingfei Lu, Zehao Lin, … <i>(+7 more)</i></p>
+<p>Linear attention offers an efficient solution for long-sequence modeling via linear complexity and fixed-size recurrent states. Gated DeltaNet-2 (GDN-2) introduces independent channel-wise control over erasure and writing, enhancing state-update expressiveness and in-context retrieval, yet it suffers from training failures during long-context training. We trace these failures to the asymmetry between reading and modification directions during erasure, which yields non-normal erase operators whose directional gains accumulate across tokens, triggering exponential state growth even without new writes. To resolve this, we propose , employing symmetric erasure to ensure non-expansive state propagation and decay-regulated residual writing to preserve writing flexibility. Theoretically, we establish an O(T) upper bound on recurrent state growth while retaining chunkwise parallel computation. Experiments on ~1.6B parameter models show that  achieves stable training alongside improved long-context retrieval. Compared to GDN-2, it boosts the 128K average RULER score by 6.80 points in the recurrent setting and average accuracy across nine downstream tasks by 0.62 points in the hybrid setting.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-25 · <a href='https://huggingface.co/papers/2611.34051'>page</a> · <a href='https://arxiv.org/pdf/2611.34051'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms</title>
+      <link>https://huggingface.co/papers/2611.34232</link>
+      <guid isPermaLink="false">arxiv:2611.34232</guid>
+      <pubDate>Fri, 27 Nov 2026 13:22:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Hugging Face Daily Papers · <b>Tier-2 senior:</b> CMU, Harvard, Princeton, Stanford, Tsinghua, U Edinburgh, U Michigan, U Washington — (senior)</p>
+<p><b>Authors:</b> Hui Shen, Yunta Hsieh, Jianing Ma, Zhuoran Yin, Zhuhan Bao, Ziyuan Liu, Qi Han, Xiuqi Xu, … <i>(+69 more)</i></p>
+<p>Computer-using agents are increasingly expected to complete realistic user goals rather than isolated GUI actions. However, existing benchmarks typically isolate web, mobile, or desktop environments, leaving it unclear whether a single generalist agent can execute long-horizon workflows that span multiple operating systems and persistent application states. We introduce OS-Omni, a live cross-platform benchmark and execution environment for evaluating computer-using agents across Windows, Ubuntu, macOS, iOS, Android, and Web environments. OS-Omni is released in versioned waves of 300 tasks each; this paper focuses on the first release, v1, which contains 48 tasks per platform and 12 cross-platform workflows that pair a desktop with an Android phone. OS-Omni provides reproducible initialization, platform-specific adapters, trajectory logging, and executable final-state evaluators, and includes controlled service-backed applications for workflows involving account, cart, budget, calendar, message, and other persistent state. Human studies show that OS-Omni tasks require 67.54 interaction steps, substantially exceeding OSWorld references of 15.0 steps. On v1, the strongest evaluated agent, Claude Opus 5.5, reaches 68.5% average success, trailing the 77.3% human reference by 8.8 points; the gap is uneven across platforms, with frontier models exceeding humans on Linux but trailing them by more than 25 points on iOS and macOS. These results indicate that current agents remain far from platform-robust, long-horizon computer use, especially when success requires sustained state tracking and durable final-state changes.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-25 · <a href='https://huggingface.co/papers/2611.34232'>page</a> · <a href='https://arxiv.org/pdf/2611.34232'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models</title>
+      <link>https://huggingface.co/papers/2611.31619</link>
+      <guid isPermaLink="false">arxiv:2611.31619</guid>
+      <pubDate>Fri, 27 Nov 2026 13:22:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Arya Sikder, Sriram Pillutla, Hugging Face Daily Papers (curated)</p>
+<p>A foundation model for time series is pretrained once and then asked to forecast series it has never seen, so the evidence for it is its score on held-out datasets. Such datasets are scarce, and a few public leaderboards carry most comparisons, yet none of them states how small a difference its datasets can detect. We call that quantity the resolution of a board and introduce Vernier, a tool that computes it from the files a board already publishes. Vernier also reports which entries a board cannot separate from its leader and whether its order changes when unrelated parties submit. GIFT-Eval resolves 6.8 rank places, and its displayed neighbours sit 0.91 apart. The ten places of its top ten hold fewer than two resolvable steps. fev-bench, Chronos Benchmark II and TIME show the same pattern: their resolution is 3.6 to 19 times the gap between neighbours. With each of its 2,554 series as an independent source, BOOM is the one board that resolves its top ten. Below the resolution the order depends on who else submitted: across four boards, rules that rank against the pool reversed 43 top-ten pairs with neither entry rerun, in one update in seven. Boards also do not record how much history a model receives. On 70 configurations, shortening it raised the error of three of four open models, two of them by 15%. We release Vernier, which runs this report with one command on any leaderboard that publishes per-dataset scores: https://github.com/therealram18/vernier</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-23 · <a href='https://huggingface.co/papers/2611.31619'>page</a> · <a href='https://arxiv.org/pdf/2611.31619'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>ProxyGenBench: Benchmarking Proxy-Guided Video Generation</title>
+      <link>https://huggingface.co/papers/2611.34457</link>
+      <guid isPermaLink="false">arxiv:2611.34457</guid>
+      <pubDate>Fri, 27 Nov 2026 13:22:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> Harvard — (senior)</p>
+<p><b>Authors:</b> Zhenchen Tang, Haolin Lu, Songlin Yang, Xiaotong Zhao, Ran Zhang, Bo Peng, Shuai Li, Haotian Fan, … <i>(+8 more)</i></p>
+<p>Recent video generators produce realistic videos, yet controlling how scenes unfold remains challenging. Structural proxies, such as animated 3D blockouts, guide generation by specifying scene layout, motion, camera behavior, and event order. However, these coarse inputs leave details unspecified and may contain artifacts that should not be reproduced. Successful proxy-guided generation must therefore Preserve intended structure, Complete missing content and correct proxy artifacts, and Bind text, image, and audio conditions to the right entities and events. We introduce ProxyGenBench to study these interacting requirements, with 312 evaluation cases from 60 scenes across three scene tasks and controlled variations in proxy fidelity, text detail, and multimodal inputs. We evaluate five video generators using verified, case-specific checklists. Experiments show that proxies improve spatiotemporal control, but greater proxy detail can coincide with poorer completion, while strong structural adherence does not ensure correct binding.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-25 · <a href='https://huggingface.co/papers/2611.34457'>page</a> · <a href='https://arxiv.org/pdf/2611.34457'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts</title>
+      <link>https://huggingface.co/papers/2611.28732</link>
+      <guid isPermaLink="false">arxiv:2611.28732</guid>
+      <pubDate>Fri, 27 Nov 2026 13:22:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> CMU, HKUST, Tsinghua — (senior)</p>
+<p><b>Authors:</b> Chendong Xiang, Chengwen Zhang, Ruowen Zhao, Zeyuan Wang, Shuhe Huang, Rongxu Cui, Min Zhao, Fan Bao, … <i>(+3 more)</i></p>
+<p>In-context learning (ICL) enables foundation models to perform unseen tasks from context without parameter updates. In robotic manipulation, a human video provides the context that specifies how a task should be performed. However, scaling human-video ICL on world-action models (WAMs) faces two challenges: task-level human-robot pairs are not temporally aligned with robot actions, and standard action losses allow policies to rely on initial-scene or task-identity shortcuts rather than tracking the context. We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. To scale temporally aligned training data, we convert recorded robot videos into matched human contexts via video-to-video generation, supplemented by real paired recordings. For model training, we combine variable-length video windows with an intra-task contrastive objective that distinguishes the paired action trajectory from other executions of the same task, preventing task-identity shortcuts. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points. Under Context-OOD, although trained only on scene-aligned pairs, Entangle transfers context-specified behaviors across rearranged layouts and substituted tools. Project page at https://entangle-robotics.github.io/</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-25 · <a href='https://huggingface.co/papers/2611.28732'>page</a> · <a href='https://arxiv.org/pdf/2611.28732'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents</title>
+      <link>https://huggingface.co/papers/2611.34852</link>
+      <guid isPermaLink="false">arxiv:2611.34852</guid>
+      <pubDate>Fri, 27 Nov 2026 13:22:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers</p>
+<p><b>Authors:</b> Han Huang, Yuchen Yan, Xingyu Wu, Yijun Li, Chao Deng, Jie Liu, Jin Ma, Yongliang Shen, … <i>(+1 more)</i></p>
+<p>Deep research agents gather information from multiple sources and synthesize it into reports on complex, open-ended questions. Existing benchmarks assess report quality along several dimensions, but lack a dedicated knowledge-centric evaluation of which research directions a report covers and how deeply it explores them. We introduce DRBench Pro, a benchmark that makes structured knowledge coverage the primary evaluation target. Our automated pipeline builds local knowledge trees from Wikipedia and uses sampled subgraphs to generate research queries and evidence-grounded rubrics. Each rubric corresponds to a relation in the tree, preserving the structure of the knowledge being evaluated. Agents receive only the research query. This structure allows us to measure breadth across major research directions and depth along related knowledge chains, with their geometric mean giving overall coverage. The benchmark includes 144 cases across 24 domains and 44,102 rubrics. Evaluating 16 deep research agents reveals different strengths in breadth and depth, with the best-performing agent reaching 57.04% overall coverage. Rubric judgments agree closely with human annotations, and agent rankings remain stable across the tested metric configurations.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-25 · <a href='https://huggingface.co/papers/2611.34852'>page</a> · <a href='https://arxiv.org/pdf/2611.34852'>pdf</a></p>]]></description>
+    </item>
+    <item>
+      <title>StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation</title>
+      <link>https://huggingface.co/papers/2611.34290</link>
+      <guid isPermaLink="false">arxiv:2611.34290</guid>
+      <pubDate>Fri, 27 Nov 2026 13:22:57 GMT</pubDate>
+      <category>cs.AI</category>
+      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Hugging Face Daily Papers · <b>Tier-2 senior:</b> NYU — (senior)</p>
+<p><b>Authors:</b> Modi Jin, Xuying Zhang, Yijing Guo, Haoran Li, Yanwen Ma, Jing Wang, Chenyu Ge, Ming-Ming Cheng, … <i>(+2 more)</i></p>
+<p>Modern video foundation models generate high-quality short clips, but preserving long-video consistency and correctly depicting event-driven state changes remain challenging. Existing agentic workflows face these challenges because continual planning and repair accumulate context, while reference updates remain limited. We introduce StateWeaver, which combines Active States and Hierarchical Collaboration to connect review-driven visual reference updates with cross-shot state inheritance. Active States translate state discrepancies identified during review into concrete visual asset requirements that guide reference construction, validation, and regeneration, preserving identity and already-correct content while repairing target attributes. Confirmed generation results are linked to the corresponding asset states, story time, and reference versions for verification and reuse by subsequent shots. Hierarchical Collaboration isolates execution contexts by task, clip, and repair round, and uses hierarchical memory to organize this process across multiple sets. Across multiple benchmarks, StateWeaver outperforms existing methods and produces long videos with sustained cross-shot consistency under predefined and autonomously planned storyboards.</p>
+<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI · <b>arXiv submitted:</b> 2026-11-25 · <a href='https://huggingface.co/papers/2611.34290'>page</a> · <a href='https://arxiv.org/pdf/2611.34290'>pdf</a></p>]]></description>
+    </item>
     <item>
       <title>Neur2BiLO: Neural Bilevel Optimization</title>
       <link>https://arxiv.org/abs/2402.02552</link>
@@ -2211,92 +2288,6 @@ We evaluate how good large language model (LLM) judges are for personalized writ
 <p>This paper was accepted at the Workshop on Personalized, Aligned, Long-term Memory for AI Systems (PALM) at NeurIPS 2026.
 State space models (SSMs) combine fast inference and fixed state size with competitive language-modeling performance. Recently, state souping has been proposed as a procedure whereby an SSM independently encodes chunks of tokens like documents, tool definitions, or memory records. The resulting state encodings may be cached and recombined to cheaply construct a context for downstream queries. However, both state souping and vanilla SSMs deteriorate on long, crowdedâ¦</p>
 <p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-10 · <a href='https://machinelearning.apple.com/research/weighted-state-souping'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>How Bad is Selfish Driving? Bounding the Inefficiency of Equilibria in Urban Driving Games</title>
-      <link>https://arxiv.org/abs/2210.13064</link>
-      <guid isPermaLink="false">arxiv:2210.13064</guid>
-      <pubDate>Wed, 11 Nov 2026 11:39:04 GMT</pubDate>
-      <category>cs.RO</category>
-      <category>cs.AI</category>
-      <category>cs.GT</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> ETH Zürich — Emilio Frazzoli</p>
-<p><b>Authors:</b> Alessandro Zanardi, Pier Giuseppe Sessa, Nando Käslin, Saverio Bolognani, Andrea Censi, Emilio Frazzoli</p>
-<p>We consider the interaction among agents engaging in a driving task and we model it as general-sum game. This class of games exhibits a plurality of different equilibria posing the issue of equilibrium selection. While selecting the most efficient equilibrium (in term of social cost) is often impractical from a computational standpoint, in this work we study the (in)efficiency of any equilibrium players might agree to play. More specifically, we bound the equilibrium inefficiency by modeling driving games as particular type of congestion games over spatio-temporal resources. We obtain novel guarantees that refine existing bounds on the Price of Anarchy (PoA) as a function of problem-dependent game parameters. For instance, the relative trade-off between proximity costs and personal objectives such as comfort and progress. Although the obtained guarantees concern open-loop trajectories, we observe efficient equilibria even when agents employ closed-loop policies trained via decentralized multi-agent reinforcement learning.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.RO, cs.AI, cs.GT · <b>arXiv submitted:</b> 2022-10-24 · <a href='https://arxiv.org/abs/2210.13064'>page</a> · <a href='https://arxiv.org/pdf/2210.13064'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Deep Tensor Network</title>
-      <link>https://arxiv.org/abs/2311.11091</link>
-      <guid isPermaLink="false">arxiv:2311.11091</guid>
-      <pubDate>Wed, 11 Nov 2026 11:39:04 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <category>cs.CV</category>
-      <category>quant-ph</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Harvard — Yifan Zhang</p>
-<p><b>Authors:</b> Yifan Zhang</p>
-<p>The Deep Tensor Network is a family of sequence operators built from contractions of queries, keys, and values. Tensor Attention mixes tokens through the Gram operators $Q(K^\top K)Q^\top$ and $K(Q^\top Q)K^\top$; Tensor Interaction mixes channels through operators derived from $C=Q^\top K$. Associativity lets us evaluate these products exactly without forming $n\times n$ token matrices. For query/key width $d$ and value width $d_v$, the Gram constructions use $O(d^2+dd_v)$ work and summary state per causal token, or $O(d^2)$ when $d_v=O(d)$. We derive prefix recurrences and distinguish trace, diagonal, and row normalization, including the conditions under which the weights are nonnegative and row-stochastic. The unmasked token operators are positive semidefinite with rank at most $d$, but their entries can be negative. We also give exact evaluations and costs for Hadamard and matrix-exponential variants.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI, cs.CV, quant-ph · <b>arXiv submitted:</b> 2026-11-09 · <a href='https://arxiv.org/abs/2311.11091'>page</a> · <a href='https://arxiv.org/pdf/2311.11091'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Language in the Flow of Time: Time-Series-Paired Texts Weaved into a Unified Temporal Narrative</title>
-      <link>https://arxiv.org/abs/2502.08942</link>
-      <guid isPermaLink="false">arxiv:2502.08942</guid>
-      <pubDate>Wed, 11 Nov 2026 11:39:04 GMT</pubDate>
-      <category>cs.LG</category>
-      <category>cs.AI</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech, Stanford, Tsinghua — Zihao Li</p>
-<p><b>Authors:</b> Zihao Li, Xiao Lin, Zhining Liu, Jiaru Zou, Ziwei Wu, Lecheng Zheng, Dongqi Fu, Yada Zhu, … <i>(+3 more)</i></p>
-<p>While many advances in time series models focus exclusively on numerical data, research on multimodal time series, particularly those involving contextual textual information, remains in its infancy. With recent progress in large language models and time series learning, we revisit the integration of paired texts with time series through the Platonic Representation Hypothesis, which posits that representations of different modalities converge to shared spaces. In this context, we identify that time-series-paired texts may naturally exhibit periodic properties that closely mirror those of the original time series. Building on this insight, we propose a novel framework, Texts as Time Series (TaTS), which considers the time-series-paired texts to be auxiliary variables of the time series. TaTS can be plugged into any existing numerical-only time series models and effectively enable them to handle time series data with paired texts. Through extensive experiments on both multimodal time series forecasting and imputation tasks across benchmark datasets with various existing time series models, we demonstrate that TaTS can enhance multimodal predictive performance without modifying model architectures. Our Code is available at https://github.com/iDEA-iSAIL-Lab-UIUC/TaTS.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.LG, cs.AI · <b>arXiv submitted:</b> 2026-11-08 · <a href='https://arxiv.org/abs/2502.08942'>page</a> · <a href='https://arxiv.org/pdf/2502.08942'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Reduced-order structure-property linkages for stochastic metamaterials</title>
-      <link>https://arxiv.org/abs/2505.01283</link>
-      <guid isPermaLink="false">arxiv:2505.01283</guid>
-      <pubDate>Wed, 11 Nov 2026 11:39:04 GMT</pubDate>
-      <category>cs.CE</category>
-      <category>cs.AI</category>
-      <category>cs.LG</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-2 senior:</b> Georgia Tech — Surya R. Kalidindi</p>
-<p><b>Authors:</b> Hooman Danesh, Maruthi Annamaraju, Tim Brepols, Stefanie Reese, Surya R. Kalidindi</p>
-<p>The capabilities of additive manufacturing have facilitated the design and production of mechanical metamaterials with diverse unit cell geometries. Establishing linkages between the vast design space of unit cells and their effective mechanical properties is critical for the efficient design and performance evaluation of such metamaterials. However, physics-based simulations of metamaterial unit cells across the entire design space are computationally expensive, necessitating a materials informatics framework to efficiently capture complex structure-property relationships. In this work, principal component analysis of 2-point correlation functions is performed to extract the salient features from a large dataset of randomly generated 2D metamaterials. Physics-based simulations are performed using a fast Fourier transform (FFT)-based homogenization approach to efficiently compute the homogenized effective elastic stiffness across the extensive unit cell designs. Subsequently, Gaussian process regression is used to generate reduced-order surrogates, mapping unit cell designs to their homogenized effective elastic constant. It is demonstrated that the adopted workflow enables a high-value low-dimensional representation of the voluminous stochastic metamaterial dataset, facilitating the construction of robust structure-property maps. Finally, an uncertainty-based active learning framework is utilized to train a surrogate model with a significantly smaller number of data points compared to the original full dataset. It is shown that a dataset as small as $0.61\%$ of the entire dataset is sufficient to generate accurate and robust structure-property maps.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.CE, cs.AI, cs.LG · <b>arXiv submitted:</b> 2025-05-02 · <a href='https://arxiv.org/abs/2505.01283'>page</a> · <a href='https://arxiv.org/pdf/2505.01283'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Superplatforms are Strategically Compelled to Counteract AI Agents</title>
-      <link>https://arxiv.org/abs/2505.17861</link>
-      <guid isPermaLink="false">arxiv:2505.17861</guid>
-      <pubDate>Wed, 11 Nov 2026 11:39:04 GMT</pubDate>
-      <category>cs.AI</category>
-      <category>cs.CY</category>
-      <category>cs.IR</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Alibaba Qwen / DAMO, Shanghai AI Lab, Tencent AI Lab · <b>Tier-2 senior:</b> NUS, Peking U, Tsinghua, U Oxford — (senior)</p>
-<p><b>Authors:</b> Jianghao Lin, Jiachen Zhu, Zheli Zhou, Yunjia Xi, Weiwen Liu, Yong Yu, Weinan Zhang</p>
-<p>Over the past decades, superplatforms, digital companies that integrate a vast range of third-party services and applications into a single, unified ecosystem, have built their fortunes on monopolizing user attention through targeted advertising and algorithmic content curation. Yet the emergence of AI agents driven by large language models (LLMs) threatens to upend this business model. Agents can not only free user attention with autonomy across diverse platforms and therefore bypass the user-attention-based monetization, but might also become the new entrance for digital traffic. Hence, we argue that superplatforms have to attack AI agents to defend their centralized control of digital traffic entrance. Specifically, we analyze the fundamental conflict between user-attention-based monetization and agent-driven autonomy through the lens of our gatekeeping theory. We show how AI agents can disintermediate superplatforms and potentially become the next dominant gatekeepers, thereby forming the urgent necessity for superplatforms to proactively constrain and attack AI agents. Moreover, we go through the potential technologies for superplatform-initiated attacks, covering a brand-new, unexplored technical area with unique challenges. We have to emphasize that, despite our position, this paper does not advocate for adversarial attacks by superplatforms on AI agents, but rather offers an envisioned trend to highlight the emerging tensions between superplatforms and AI agents. Our aim is to raise awareness and encourage critical discussion for collaborative solutions, prioritizing user interests and perserving the openness of digital ecosystems in the age of AI agents.</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> cs.AI, cs.CY, cs.IR · <b>arXiv submitted:</b> 2026-11-09 · <a href='https://arxiv.org/abs/2505.17861'>page</a> · <a href='https://arxiv.org/pdf/2505.17861'>pdf</a></p>]]></description>
-    </item>
-    <item>
-      <title>Gemini 4 Carbon is now available</title>
-      <link>https://deepmind.google/blog/gemini-4-carbon-is-now-available/</link>
-      <guid isPermaLink="false">deepmind:0b2e1c02de</guid>
-      <pubDate>Wed, 11 Nov 2026 11:39:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-10 · <a href='https://deepmind.google/blog/gemini-4-carbon-is-now-available/'>page</a></p>]]></description>
-    </item>
-    <item>
-      <title>Gemini Robotics 2.5 accelerates real-world general dexterity</title>
-      <link>https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/</link>
-      <guid isPermaLink="false">deepmind:a98763b80c</guid>
-      <pubDate>Wed, 11 Nov 2026 11:39:04 GMT</pubDate>
-      <category>blog</category>
-      <description><![CDATA[<p style='color:#555;font-size:0.9em'><b>Tier-1:</b> Google DeepMind</p>
-<p><b>Authors:</b> Google DeepMind</p>
-<p>Our most capable vision-language-action model enhances robot dexterity, reliability, and safety</p>
-<p style='color:#888;font-size:0.85em'><b>Categories:</b> blog · <b>arXiv submitted:</b> 2026-11-09 · <a href='https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/'>page</a></p>]]></description>
     </item>
   </channel>
 </rss>
